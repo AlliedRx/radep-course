@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 5: Virginia Consequences — Law and Penalties | Virginia Commonwealth Driving Improvement Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Module 5 of 8 &middot; 30 minutes</span>Module 5: Virginia Consequences — Law and Penalties</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>Most drivers think of a traffic ticket as an annoyance: pay the fine, move on. Reckless driving in Virginia does not work that way. It is a criminal charge, it generally requires a court appearance, and a conviction can follow you on your driving record, your insurance bill, and your job applications for years. This module lays out the consequences plainly: what the law says, what the court can do, what the DMV does on its own, and what the real-world costs look like. The goal is not to frighten you, but to make sure your decisions are based on accurate information.</p>
+
+<div class="warning"><strong>Educational Purpose Only:</strong> This module is general education about Virginia traffic law. It is not legal advice, and it cannot tell you how your own case will turn out. Every case depends on its own facts, the court, and the judge. If you have a pending charge, talk with a licensed Virginia attorney about your specific situation.</div>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain why reckless driving and aggressive driving are criminal offenses in Virginia and state the maximum penalties for Class 1 and Class 2 misdemeanors.</li>
+<li>Describe the license suspension ranges a court may impose for reckless driving and for racing.</li>
+<li>Identify when racing or exhibition driving becomes a felony under Virginia law.</li>
+<li>Explain how Virginia's DMV demerit point system works, including point thresholds, record retention, and safe driving points.</li>
+<li>Describe what "improper driving" is and why it is the court's decision, not the driver's.</li>
+<li>Estimate the total real-world cost of a reckless driving conviction, including insurance, employment, and personal effects.</li>
+</ul></div>
+
+<h3>1. Two Separate Systems: The Court and the DMV</h3>
+<p>When you are charged with reckless or aggressive driving in Virginia, two different systems get involved, and it helps to keep them separate in your mind.</p>
+<p>The first is the <strong>criminal court system</strong>. A judge decides whether you are guilty and, if so, what penalty to impose. The court can order jail time, a fine, a license suspension, and completion of a program such as a driver improvement or aggressive driving course. These are penalties set by the Code of Virginia.</p>
+<p>The second is the <strong>Virginia Department of Motor Vehicles (DMV)</strong>. Once a conviction is reported, the DMV adds it to your driving record and assigns demerit points. The DMV then applies its own rules: advisory letters, required driver improvement clinics, probation, and suspensions when your points get too high. The DMV does not need a judge to tell it to do these things. They happen automatically based on your record.</p>
+
+<div class="highlight"><strong>Key Idea:</strong> Court penalties and DMV consequences are separate. Satisfying one does not cancel the other. A conviction triggers both.</div>
+
+<h3>2. Reckless Driving: A Class 1 Misdemeanor</h3>
+<p>Under Virginia Code <strong>§ 46.2-868</strong>, reckless driving is a <strong>Class 1 misdemeanor</strong>. It is a crime, not a simple traffic infraction like most speeding tickets.</p>
+<p>As you learned in earlier modules, a reckless driving charge can arise in several ways: the general rule in § 46.2-852, a vehicle not under proper control or with inadequate brakes (§ 46.2-853), speed too fast for conditions (§ 46.2-861), 20 mph or more over the limit or over 85 mph (§ 46.2-862), and other sections such as passing a stopped school bus or racing. However the charge arises, a conviction carries the same classification.</p>
+
+<table>
+<tr><th>Penalty Area</th><th>What Virginia Law Allows</th></tr>
+<tr><td><strong>Classification</strong></td><td>Class 1 misdemeanor (§ 46.2-868)</td></tr>
+<tr><td><strong>Jail</strong></td><td>Up to 12 months</td></tr>
+<tr><td><strong>Fine</strong></td><td>Up to $2,500</td></tr>
+<tr><td><strong>Jail and fine together</strong></td><td>The court may impose either one or both</td></tr>
+<tr><td><strong>License suspension</strong></td><td>Court may suspend for not less than 10 days nor more than 6 months (§ 46.2-392)</td></tr>
+<tr><td><strong>DMV demerit points</strong></td><td>6 points</td></tr>
+<tr><td><strong>Time on DMV record</strong></td><td>11 years</td></tr>
+<tr><td><strong>Court appearance</strong></td><td>Generally required; it cannot simply be prepaid like a routine speeding ticket</td></tr>
+</table>
+
+<p>Notice the word "up to." These are the maximums the law allows. A judge considers the facts of the case, such as how fast you were going, the road and weather conditions, whether anyone was put in danger, and your prior driving record. Outcomes vary widely, and you cannot predict which one you will get. That uncertainty is part of the risk you accept every time you drive recklessly.</p>
+
+<div class="warning"><strong>A Criminal Record:</strong> Because reckless driving is a Class 1 misdemeanor, a conviction is a criminal conviction. That is different from a traffic infraction. It can show up when employers, licensing boards, or others run a background check.</div>
+
+<h3>3. Aggressive Driving Under § 46.2-868.1</h3>
+<p>Virginia treats aggressive driving as its own offense, separate from reckless driving. Under <strong>§ 46.2-868.1</strong>, a person is guilty of aggressive driving when two things are true:</p>
+<ol>
+<li>The driver commits one or more of certain listed traffic offenses, such as following too closely, improper passing, failing to yield, evading traffic control devices, speeding, or stopping on a highway; <strong>and</strong></li>
+<li>The driver is a hazard to another person, <strong>or</strong> the driver commits the offense with the intent to harass, intimidate, injure, or obstruct another person.</li>
+</ol>
+<p>In plain terms, aggressive driving is a traffic violation plus either danger to someone else or a hostile purpose. Tailgating someone because you are late might be a traffic violation. Tailgating someone on purpose to scare them out of your lane, or doing it in a way that makes you a hazard, moves the behavior into aggressive driving.</p>
+
+<table>
+<tr><th>Version of the Offense</th><th>Classification</th><th>Maximum Penalty</th></tr>
+<tr><td>Aggressive driving (basic offense)</td><td>Class 2 misdemeanor</td><td>Up to 6 months in jail and/or a fine up to $1,000</td></tr>
+<tr><td>Aggressive driving with intent to injure another person</td><td>Class 1 misdemeanor</td><td>Up to 12 months in jail and/or a fine up to $2,500</td></tr>
+</table>
+
+<p>The law also allows the court to order the driver to complete an anger management or aggressive driving program.</p>
+
+<div class="highlight"><strong>Notice the Jump:</strong> The same behavior that is a Class 2 misdemeanor becomes a Class 1 misdemeanor when the driver intends to injure another person. Intent matters. Intent to injure doubles the maximum jail exposure, from 6 months to 12 months.</div>
+
+<div class="scenario"><h4>Scenario: The Lane Blocker</h4><p>Consider a driver we'll call Denise. She is on I-64 near Richmond when a pickup truck merges in front of her with very little space. Angry, she speeds up, pulls alongside the truck, then cuts back in front of it and brakes hard several times. The pickup driver has to swerve to avoid hitting her. A state trooper sees the whole thing.</p><details><summary>What should happen here?</summary><p>Denise committed traffic offenses (improper passing, stopping on a highway, and possibly speeding), and she did so with an apparent intent to intimidate or obstruct the other driver. That fits the description of aggressive driving under § 46.2-868.1. If the court found she intended to injure the other driver, the charge could rise to a Class 1 misdemeanor. Depending on the facts, she could also face a reckless driving charge. The better choice would have been to ease off, let the space open up, and move on. The pickup's merge cost her a few seconds; her reaction could cost her a criminal record.</p></details></div>
+
+<h3>4. License Suspension and Felony Consequences</h3>
+<p>For many people, a license is how they get to work, take children to school, and care for family. Losing it is one of the most disruptive consequences a driver can face.</p>
+<h4>Suspension for Reckless Driving</h4>
+<p>Under Virginia Code <strong>§ 46.2-392</strong>, when a person is convicted of reckless driving, the court may suspend the driver's license for <strong>not less than 10 days nor more than 6 months</strong>.</p>
+<h4>Suspension for Racing</h4>
+<p>Racing is treated even more seriously. Under <strong>§ 46.2-865</strong>, racing between two or more vehicles is reckless driving, and the license suspension range is <strong>not less than 6 months nor more than 2 years</strong>. Compare that to the general reckless driving suspension range: the minimum suspension for racing is the same as the maximum for ordinary reckless driving.</p>
+<h4>Exhibition Driving</h4>
+<p>The same statute also addresses exhibition driving. This includes things like burnouts or spinning the wheels, unnecessary zigzagging, and drag racing, when done near a group of two or more people. Exhibition driving can bring a license suspension of <strong>up to 6 months</strong>.</p>
+
+<table>
+<tr><th>Offense</th><th>Statute</th><th>License Suspension Range</th></tr>
+<tr><td>Reckless driving (general)</td><td>§ 46.2-392</td><td>Not less than 10 days nor more than 6 months (court may suspend)</td></tr>
+<tr><td>Racing</td><td>§ 46.2-865</td><td>Not less than 6 months nor more than 2 years</td></tr>
+<tr><td>Exhibition driving</td><td>§ 46.2-865</td><td>Up to 6 months</td></tr>
+<tr><td>Too many DMV demerit points (18 in 12 months or 24 in 24 months)</td><td>DMV point system</td><td>90 days</td></tr>
+</table>
+
+<div class="warning"><strong>Driving While Suspended:</strong> A suspension is not a suggestion. Driving during a suspension creates a new and separate legal problem. If your license is suspended, plan ahead for rides, public transit, or other options before the suspension begins.</div>
+
+<h4>When Driving Becomes a Felony</h4>
+<p>Most reckless and aggressive driving cases are misdemeanors. But Virginia law draws a clear line where the consequences become far more serious. Under <strong>§ 46.2-865.1</strong>, a person who engages in racing or exhibition driving with reckless disregard for human life and causes harm to someone who is not involved faces felony charges:</p>
+<ul>
+<li>If the conduct causes <strong>serious bodily injury</strong> to an uninvolved person, it is a <strong>Class 6 felony</strong>.</li>
+<li>If the conduct causes the <strong>death</strong> of another person, it is a felony punishable by <strong>1 to 20 years in prison</strong>.</li>
+</ul>
+<p>The key phrase in this statute is "uninvolved person." The pedestrian, the family in the oncoming car, and the driver waiting at the light never chose to race. The law reserves its harshest penalties for harm to people who made no such choice. A felony conviction can affect employment, licenses, and housing for years, and no sentence undoes the harm done.</p>
+
+<div class="scenario"><h4>Scenario: The Stoplight Challenge</h4><p>Two drivers we'll call Andre and Kevin pull up side by side at a red light on a four-lane road. They rev their engines. When the light turns green, both floor it. Half a mile later, a car pulls out of a side street. Kevin swerves and strikes a pedestrian waiting at a bus stop, who suffers serious injuries.</p><details><summary>What should happen here?</summary><p>This is racing between two vehicles, which is reckless driving under § 46.2-865. Because the racing involved reckless disregard for human life and caused serious bodily injury to an uninvolved person, it fits the felony provision of § 46.2-865.1, a Class 6 felony. Had the pedestrian died, the charge could carry 1 to 20 years in prison. Both drivers' licenses would also face suspension under the racing rules. The only safe response to a "stoplight challenge" is not to take it.</p></details></div>
+
+<h3>5. Improper Driving: A Possible Reduction, Not a Right</h3>
+<p>Virginia law includes a middle ground. Under <strong>§ 46.2-869</strong>, when the court finds that the driver's recklessness was <strong>slight</strong>, it may find the driver guilty of <strong>improper driving</strong> instead of reckless driving.</p>
+<p>Improper driving is a <strong>traffic infraction</strong>, not a criminal misdemeanor. The maximum fine is <strong>$500</strong>.</p>
+<p>Two points are essential to understand:</p>
+<ul>
+<li><strong>It is the court's discretion.</strong> The judge decides whether the facts show only slight recklessness. A driver cannot demand improper driving, and no course, apology, or promise guarantees it.</li>
+<li><strong>It depends on the facts.</strong> A case involving extremely high speed, danger to others, or aggressive conduct is less likely to be seen as "slight."</li>
+</ul>
+<div class="myth"><p><strong>Myth:</strong> "If I take a driving course, the judge has to reduce my charge to improper driving."</p><p><strong>Fact:</strong> Under § 46.2-869, reducing reckless driving to improper driving is at the court's discretion when the recklessness is slight. No course or document forces a judge to reduce a charge.</p></div>
+
+<div class="myth"><p><strong>Myth:</strong> "Reckless driving is basically a big speeding ticket. I can just pay it online."</p><p><strong>Fact:</strong> Reckless driving is a Class 1 misdemeanor. It is a criminal charge that generally requires a court appearance and cannot simply be prepaid like a routine speeding ticket.</p></div>
+
+<h3>6. The DMV Demerit Point System</h3>
+<p>Separate from what the court does, the Virginia DMV tracks your driving behavior with a demerit point system. Reckless driving is assigned <strong>6 demerit points</strong>.</p>
+<h4>How Long Things Last</h4>
+<p>Two different time periods matter, and drivers often confuse them:</p>
+<ul>
+<li><strong>Demerit points count for 2 years</strong> from the date of the violation. That is the window in which they add up toward DMV action.</li>
+<li><strong>The conviction itself stays on your DMV record for 11 years</strong> when it is a 6-point offense like reckless driving.</li>
+</ul>
+<p>So even after the points stop counting against you, the conviction remains visible on your record for over a decade.</p>
+
+<h4>DMV Point Thresholds</h4>
+<table>
+<tr><th>Points Accumulated</th><th>DMV Action</th></tr>
+<tr><td>8 points in 12 months, or 12 points in 24 months</td><td>Advisory letter</td></tr>
+<tr><td>12 points in 12 months, or 18 points in 24 months</td><td>Must complete a Driver Improvement Clinic within 90 days</td></tr>
+<tr><td>18 points in 12 months, or 24 points in 24 months</td><td>90-day license suspension; must complete a Driver Improvement Clinic before the license is restored; 6-month probation after restoration</td></tr>
+</table>
+
+<h4>Working Through the Math</h4>
+<p>Let's see how quickly points can stack up. Suppose a driver is convicted of reckless driving (6 points) and, within the same 12 months, picks up another 6-point conviction. That driver is now at 12 points in 12 months and must complete a Driver Improvement Clinic within 90 days. One more 6-point conviction in that period brings the total to 18 points in 12 months, which triggers a 90-day suspension, a clinic before restoration, and 6 months of probation after restoration.</p>
+<p>In other words, three reckless driving convictions within a year reach the DMV suspension threshold on their own, regardless of any court-ordered suspension.</p>
+
+<div class="highlight"><strong>Young Drivers:</strong> Drivers who are convicted of a demerit violation at age 18 or 19 must complete a driver improvement clinic.</div>
+
+<h4>Safe Driving Points</h4>
+<p>The point system is not only about penalties. Virginia also rewards good driving with <strong>safe driving points</strong>:</p>
+<ul>
+<li>You earn <strong>+1 safe driving point</strong> for each full calendar year you go without a violation, up to a maximum of <strong>+5</strong>.</li>
+<li>Completing a <strong>Driver Improvement Clinic</strong> can earn <strong>+5 safe driving points</strong>. If the clinic is court-ordered, documentation requirements apply.</li>
+<li>The standard Virginia Driver Improvement Clinic is <strong>8 hours</strong>.</li>
+</ul>
+<p>Safe driving points help offset demerit points. They do not erase a conviction from your record, but they can help keep you below the thresholds that trigger DMV action.</p>
+
+<div class="scenario"><h4>Scenario: Counting Points</h4><p>A driver we'll call Lena was convicted of reckless driving last March (6 points). In August of the same year, she was convicted of another 6-point offense. She has no safe driving points. She has just received a letter from the DMV.</p><details><summary>What should happen here?</summary><p>Lena has 12 points within 12 months. Under DMV rules, she must complete a Driver Improvement Clinic within 90 days. Both convictions will stay on her record for 11 years, though the points themselves count for 2 years from the violation dates. Going forward, each full violation-free calendar year earns her +1 safe driving point, up to +5. Her best strategy is to complete the clinic on time and change the driving habits that produced two serious convictions in five months.</p></details></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Class 1 misdemeanor</dt><dd>The most serious class of misdemeanor in Virginia; punishable by up to 12 months in jail and/or a fine up to $2,500. Reckless driving falls in this class.</dd>
+<dt>Class 2 misdemeanor</dt><dd>Punishable by up to 6 months in jail and/or a fine up to $1,000. Basic aggressive driving falls in this class.</dd>
+<dt>Traffic infraction</dt><dd>A non-criminal traffic violation. Improper driving is a traffic infraction with a fine up to $500.</dd>
+<dt>Improper driving</dt><dd>A lesser finding the court may make under § 46.2-869 when the driver's recklessness was slight.</dd>
+<dt>Demerit points</dt><dd>Points the DMV assigns to traffic convictions; they count for 2 years from the violation date.</dd>
+<dt>Safe driving points</dt><dd>Positive points earned for violation-free calendar years (+1 each, up to +5) or by completing a Driver Improvement Clinic (+5).</dd>
+</dl></div>
+
+<h3>7. Insurance, Employment, and the Real Total Cost</h3>
+<h4>Insurance</h4>
+<p>For many drivers, the biggest financial hit from a reckless driving conviction does not come from the court. It comes from the insurance company.</p>
+<p>Insurers set your premium based on how risky they believe you are to insure. A reckless driving conviction is a strong signal of risk. As a result, a conviction typically raises premiums substantially, often by hundreds to thousands of dollars per year, and the increase usually lasts for years. Some insurers may decide not to renew a policy at all, which can force a driver into a more expensive policy with a different company.</p>
+<p>A fine is paid once. An insurance increase is paid at every renewal, year after year, and over time it can easily exceed the court fine. On a family policy, the whole household may share that cost.</p>
+
+<h4>Employment and Everyday Life</h4>
+<p>The consequences reach well beyond driving:</p>
+<ul>
+<li><strong>Jobs that require driving.</strong> Anyone who drives for work or uses a company vehicle may be checked against their driving record. A reckless driving conviction may disqualify you from these positions or lead an employer's insurance carrier to refuse coverage for you.</li>
+<li><strong>Background checks.</strong> Because reckless driving is a criminal misdemeanor, a conviction can appear on criminal background checks for job applications, volunteer positions, and some housing applications.</li>
+<li><strong>Professional licensing.</strong> People in licensed fields, such as healthcare, education, security, and commercial driving, may have to report criminal convictions to a licensing board or employer.</li>
+<li><strong>Getting around.</strong> A suspension can mean depending on others for rides, paying for alternative transportation, or turning down work you cannot get to.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Promotion</h4><p>Consider a driver we'll call Marcus. He works for a medical supply company in Chesterfield and has just been offered a promotion to a regional territory role that includes a company car. Two months earlier, he was convicted of reckless driving for going 88 mph in a 70 mph zone. The company's insurance carrier reviews his driving record.</p><details><summary>What should happen here?</summary><p>Driving over 85 mph is reckless driving under § 46.2-862 regardless of the posted limit, so Marcus has a Class 1 misdemeanor conviction and 6 points on a record that will show the conviction for 11 years. The carrier may decline to cover him, and the company may withdraw the promotion or offer it only without the driving duties. His personal insurance is also likely to rise. A few minutes "saved" at 88 mph may cost him a career step.</p></details></div>
+
+<h4>Adding Up the Real Total Cost</h4>
+<p>When you think about the cost of a conviction, include every category, not just the fine.</p>
+<table>
+<tr><th>Cost Category</th><th>What It Can Include</th></tr>
+<tr><td>Court penalties</td><td>A fine up to $2,500, possible jail up to 12 months, possible license suspension</td></tr>
+<tr><td>Court-related costs</td><td>Court costs, and attorney fees if you hire a lawyer</td></tr>
+<tr><td>Required programs</td><td>Clinics or programs ordered by the court or required by the DMV, plus the time they take</td></tr>
+<tr><td>Insurance</td><td>Higher premiums, often hundreds to thousands of dollars per year, for years; possible non-renewal</td></tr>
+<tr><td>Lost income</td><td>Time off for court, missed shifts, lost driving jobs or promotions</td></tr>
+<tr><td>Transportation</td><td>Rides, transit, or other options during a suspension</td></tr>
+<tr><td>Record</td><td>A criminal conviction and a DMV record entry that remains for 11 years</td></tr>
+<tr><td>Human cost</td><td>Injuries, deaths, guilt, damaged relationships, and stress that no payment can fix</td></tr>
+</table>
+
+<p>Now compare all of that to what reckless driving usually "buys" you. As you saw in Module 2, the time saved by speeding on a typical trip is small. Driving 10 miles at 70 mph instead of 60 mph saves about 1 minute and 26 seconds. Weighed against months of court proceedings, years of higher insurance, and an 11-year record, the trade is never a good one.</p>
+
+<div class="highlight"><strong>Perspective:</strong> NHTSA reports that speeding is a factor in roughly 3 in 10 U.S. traffic fatalities, and driver behavior or error is the critical reason in the large majority of crashes. Virginia's penalties exist because these choices cost lives.</div>
+
+<h3>8. A General Overview of the Court Process</h3>
+<p>Every court and every case is different, so this section is only a general orientation. It is not legal advice, and it is not a substitute for talking with a licensed Virginia attorney.</p>
+<ol>
+<li><strong>The charge.</strong> An officer issues a summons that lists the charge and a court date. Read it carefully. The code section listed tells you which type of reckless or aggressive driving you are charged with.</li>
+<li><strong>Before court.</strong> Because reckless driving is a criminal charge that can carry jail time, many people choose to consult an attorney. An attorney can explain the charge, the possible outcomes, and what the court in your area may expect.</li>
+<li><strong>The court appearance.</strong> Reckless driving generally requires you to appear. Arrive early, dress respectfully, and be prepared to wait. The judge will hear the evidence and decide whether you are guilty.</li>
+<li><strong>The outcome.</strong> Possible outcomes include a dismissal, a finding of guilt on a lesser offense such as improper driving (at the court's discretion), or a reckless driving conviction with penalties within the legal limits described in this module.</li>
+<li><strong>After court.</strong> If you are convicted, the DMV will record the conviction and points. Follow any court orders exactly, such as completing a course, paying fines on time, and surrendering or not using your license during a suspension. Watch your mail for DMV notices.</li>
+</ol>
+
+<div class="warning"><strong>Consult an Attorney:</strong> If you have a pending reckless or aggressive driving charge, the information in this module cannot tell you what will happen in your case. A licensed Virginia attorney can review the facts and advise you. This course does not provide legal representation or legal advice.</div>
+
+<div class="scenario"><h4>Scenario: "It Was Only 20 Over"</h4><p>A driver we'll call Priya is stopped going 65 mph in a 45 mph zone on a suburban road in Henrico County. She assumes she will get a speeding ticket she can pay online. Instead, the summons says "reckless driving" and lists a court date.</p><details><summary>What should happen here?</summary><p>Under § 46.2-862, driving 20 mph or more over the applicable limit is reckless driving by speed. At 65 in a 45, Priya is exactly 20 over, which meets the threshold. That makes this a Class 1 misdemeanor charge that generally requires a court appearance. She should not ignore the date. Consulting an attorney would be a sensible step. Whether the court might find improper driving instead is entirely up to the court. Priya's real lesson is that the line between "speeding" and "criminal charge" in Virginia can be a single mile per hour.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4>
+<label>Which consequence in this module would affect your life the most: jail, a fine, a suspension, a criminal record, higher insurance, or a lost job? Why?</label><textarea></textarea>
+<label>List the people who depend on you being able to drive legally (family, employer, others). How would a 6-month suspension affect each of them?</label><textarea></textarea>
+<label>Think of the last time you drove faster or more aggressively than you should have. What were you trying to gain, and how does it compare to the costs described here?</label><textarea></textarea>
+</div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Reckless driving in Virginia is a Class 1 misdemeanor (§ 46.2-868), punishable by up to 12 months in jail and/or a fine up to $2,500, and it generally requires a court appearance.</li>
+<li>Aggressive driving (§ 46.2-868.1) is a Class 2 misdemeanor (up to 6 months and/or $1,000), rising to a Class 1 misdemeanor with intent to injure; the court may order an anger management or aggressive driving program.</li>
+<li>A court may suspend a license for reckless driving for 10 days to 6 months (§ 46.2-392); racing carries a suspension of 6 months to 2 years, and exhibition driving up to 6 months (§ 46.2-865).</li>
+<li>Racing or exhibition driving with reckless disregard for human life that seriously injures an uninvolved person is a Class 6 felony; causing a death is a felony punishable by 1 to 20 years in prison (§ 46.2-865.1).</li>
+<li>Improper driving (§ 46.2-869) is a traffic infraction with a fine up to $500, available only at the court's discretion when the recklessness is slight.</li>
+<li>Reckless driving carries 6 DMV demerit points; the points count for 2 years, but the conviction stays on the DMV record for 11 years.</li>
+<li>DMV thresholds: 8 points in 12 months (or 12 in 24) brings an advisory letter; 12 in 12 (or 18 in 24) requires a clinic within 90 days; 18 in 12 (or 24 in 24) brings a 90-day suspension, a clinic before restoration, and 6 months of probation.</li>
+<li>Safe driving points (+1 per violation-free calendar year, up to +5, or +5 for completing a Driver Improvement Clinic) can help offset demerit points.</li>
+<li>The real cost includes insurance increases that often run hundreds to thousands of dollars per year for years, lost work, and a criminal record, on top of court penalties.</li>
+<li>This module is general education, not legal advice. Anyone with a pending charge should consult a licensed Virginia attorney.</li>
+</ul>
+<p>Take the remaining time to review the tables and scenarios in this module. When the timer reaches 00:00, the Module 5 Exam will unlock. The exam has 15 questions, and you need a score of 80% to pass.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 5 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course to take the Module 5 Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-m5-remaining', DONE='rad-m5-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';go.removeAttribute('href');
+      msg.textContent='You have completed the required time for Module 5. Return to your course to take the Module 5 Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

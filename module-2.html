@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 2: Speed — When Fast Becomes Criminal | Virginia Commonwealth Driving Improvement Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Module 2 of 8 &middot; 30 minutes</span>Module 2: Speed — When Fast Becomes Criminal</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>Almost every driver has gone over the speed limit at some point. Most of the time nothing happens, and that quiet lack of consequences teaches a dangerous lesson: that speed is a small thing. In Virginia, speed is not a small thing. Under Virginia law, the gap between an ordinary speeding ticket and a criminal reckless driving charge can be a single mile per hour. This module explains exactly where that line is, why Virginia draws it where it does, what speed actually does to your ability to avoid a crash, and what you can do to keep your own speed under control even when you are late, frustrated, or surrounded by people driving faster than you.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Apply the two speed thresholds in Virginia Code § 46.2-862 (20 mph or more over the applicable limit, or over 85 mph) to real driving situations.</li>
+<li>Explain how § 46.2-861 makes it possible to be charged with reckless driving even while driving at or below the posted limit.</li>
+<li>Describe how speed affects perception-reaction distance, braking distance, and crash energy, and do simple calculations with these ideas.</li>
+<li>Calculate how much time speeding actually saves on a typical trip and explain why the savings are usually small.</li>
+<li>Identify the attitudes and emotions that push drivers to speed, including time pressure, the "good driver" belief, anger, and social norms.</li>
+<li>Build a personal set of practical strategies for managing your speed.</li>
+</ul></div>
+
+<h3>1. Speeding Ticket or Criminal Charge? Where Virginia Draws the Line</h3>
+<p>Many drivers who come to this course are surprised to learn that they were charged with a crime. They were "just speeding." In most states, that would mean a ticket, a fine, and maybe some points. Virginia is different. Virginia treats high-end speeding as <strong>reckless driving</strong>, and reckless driving is a <strong>Class 1 misdemeanor</strong> under § 46.2-868.</p>
+<p>Because reckless driving is a criminal charge, it generally requires a court appearance. You usually cannot simply prepay it online the way you would a routine speeding ticket. A judge decides the outcome.</p>
+<p>Virginia law gives several different ways to be charged with reckless driving. Module 1 introduced all of them. In this module we focus on the two that involve speed directly:</p>
+<ul>
+<li><strong>§ 46.2-862 — Reckless driving by speed.</strong> This is a "bright line" rule based on numbers. If your speed crosses either threshold, the offense is defined by the number itself.</li>
+<li><strong>§ 46.2-861 — Exceeding a reasonable speed under the circumstances.</strong> This is a judgment-based rule. It looks at whether your speed was reasonable for the conditions, regardless of the posted limit.</li>
+</ul>
+
+<div class="warning"><strong>Virginia Reality Check:</strong> A reckless driving conviction is a Class 1 misdemeanor. The maximum penalty is up to 12 months in jail and/or a fine of up to $2,500. The court may also suspend your license for not less than 10 days nor more than 6 months (§ 46.2-392). The DMV assigns 6 demerit points, and a 6-point conviction stays on your DMV record for 11 years. That is not a "speeding ticket." That is a criminal conviction.</div>
+
+<h3>2. The Two Speed Thresholds in § 46.2-862</h3>
+<p>Under § 46.2-862, you are guilty of reckless driving if you drive:</p>
+<ol>
+<li><strong>20 mph or more over the applicable maximum speed limit</strong>, OR</li>
+<li><strong>in excess of 85 mph</strong>, regardless of the posted limit.</li>
+</ol>
+<p>Either one is enough. You do not have to meet both.</p>
+
+<h4>The "20 or more over" rule</h4>
+<p>This rule is tied to the speed limit that applies where you are driving. Notice the wording: <em>20 mph or more</em>. That means exactly 20 over counts. Driving 45 mph in a 25 mph zone is 20 over, and that meets the threshold. Many drivers assume they need to be "more than 20 over." They are wrong by one mile per hour, and that one mile per hour can be the difference between a traffic infraction and a criminal charge.</p>
+<p>This rule matters most on lower-speed roads, where reckless driving can happen at speeds that do not feel fast at all.</p>
+
+<h4>The "over 85" rule</h4>
+<p>This rule does not care about the posted limit. Once you go above 85 mph, you have met the threshold, even on a highway posted at 70 mph, where 86 mph is "only" 16 over. This threshold took effect on <strong>July 1, 2020</strong>. Before that date, the number was 80 mph. Today it is <strong>over 85 mph</strong>.</p>
+
+<div class="highlight"><strong>Key Fact:</strong> The applicable limit is the limit that legally applies where and when you are driving. It is not the speed of the traffic around you, and it is not the limit on the road you just left. When a lower limit applies, the "20 or more over" math starts from that lower number.</div>
+
+<h3>3. Worked Examples: Applying the Thresholds</h3>
+<p>For each example, ask two questions: <em>Is the speed 20 or more over the applicable limit?</em> and <em>Is the speed over 85 mph?</em> If the answer to either question is yes, the speed meets the § 46.2-862 definition of reckless driving.</p>
+
+<table>
+<tr><th>Posted Limit</th><th>Your Speed</th><th>Amount Over</th><th>20+ Over?</th><th>Over 85?</th><th>Reckless by Speed?</th></tr>
+<tr><td>25 mph</td><td>44 mph</td><td>19</td><td>No</td><td>No</td><td>No (but still a speeding violation)</td></tr>
+<tr><td>25 mph</td><td>45 mph</td><td>20</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td>55 mph</td><td>74 mph</td><td>19</td><td>No</td><td>No</td><td>No (but still a speeding violation)</td></tr>
+<tr><td>55 mph</td><td>75 mph</td><td>20</td><td>Yes</td><td>No</td><td>Yes</td></tr>
+<tr><td>65 mph</td><td>86 mph</td><td>21</td><td>Yes</td><td>Yes</td><td>Yes (both rules)</td></tr>
+<tr><td>70 mph</td><td>85 mph</td><td>15</td><td>No</td><td>No (85 is not "over" 85)</td><td>No (but still a speeding violation)</td></tr>
+<tr><td>70 mph</td><td>86 mph</td><td>16</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+</table>
+
+<p>Look closely at the pattern. On lower-speed roads, the "20 or more over" rule is the one that catches you. On a highway posted at 70 mph, the "over 85" rule catches you first, because you cross 85 before you reach 20 over. On a 65 mph road, the two rules meet almost at the same point: 85 is 20 over, and anything faster than 85 breaks both rules at once.</p>
+
+<p>Also notice the rows marked "No." Driving 19 over is not reckless driving by speed under § 46.2-862, but it is still illegal speeding. And as the next section explains, it can still be reckless driving if it was unreasonable for the conditions.</p>
+
+<div class="scenario"><h4>Scenario: The "Only 16 Over" Defense</h4><p>Consider a driver we'll call Marcus. He is driving on a stretch of Virginia interstate posted at 70 mph. He is running late for a job interview. He sets his cruise control at 87 mph, telling himself, "That's only 17 over. Reckless is 20 over." A trooper stops him and charges him with reckless driving. Was the trooper wrong?</p><details><summary>What should happen here?</summary><p>The trooper was not wrong. Marcus knew one of the two thresholds but forgot the other. Under § 46.2-862, any speed over 85 mph is reckless driving regardless of the posted limit. At 87 mph, Marcus crossed that line even though he was less than 20 over. A better plan would have been to call ahead. As you will see later, the time he was "saving" was small, and the risk was very large.</p></details></div>
+
+<h3>4. Too Fast for Conditions: § 46.2-861</h3>
+<p>Under § 46.2-861, a person who drives faster than a <strong>reasonable speed under the circumstances and traffic conditions existing at the time</strong>, regardless of any posted maximum speed limit, is guilty of reckless driving.</p>
+<p>Think of the posted speed limit as the maximum speed allowed under <em>good</em> conditions: dry pavement, good visibility, normal traffic. When conditions are worse, the safe speed is lower, and the law expects you to adjust. Situations where the posted limit may be too fast include:</p>
+<ul>
+<li><strong>Rain, snow, sleet, or ice</strong> that reduces tire grip and increases stopping distance.</li>
+<li><strong>Fog, heavy rain, or darkness</strong> that limits how far ahead you can see.</li>
+<li><strong>Heavy or stop-and-go traffic</strong>, where vehicles ahead can stop suddenly.</li>
+<li><strong>Curves, hills, and narrow roads</strong>, where you cannot see what is ahead.</li>
+<li><strong>Areas with pedestrians, cyclists, or children</strong>, such as near schools, parks, and neighborhoods.</li>
+</ul>
+<p>A simple test: if you could not stop within the distance you can clearly see ahead of you, you are going too fast for the conditions. At night, that means stopping within the reach of your headlights.</p>
+
+<div class="scenario"><h4>Scenario: The Legal Speed That Wasn't</h4><p>Consider a driver we'll call Tanya. She is driving on a 55 mph divided highway during a heavy rainstorm. Visibility is poor, and water is pooling in the right lane. She stays at exactly 55 mph because "that's the speed limit." Traffic slows suddenly, her car hydroplanes, and she slides into a pickup truck. The officer charges her with reckless driving. Tanya points out that she was not speeding.</p><details><summary>What should happen here?</summary><p>Under § 46.2-861, the question is not whether Tanya was over the posted limit. The question is whether 55 mph was a reasonable speed for heavy rain, poor visibility, and standing water. It was not. The posted limit is a ceiling, not a target. The right choice would have been to slow down well below 55, increase her following distance, and stay out of the lane with standing water.</p></details></div>
+
+<div class="myth"><p><strong>Myth:</strong> "If I'm at or under the speed limit, I can't get a reckless driving charge."</p><p><strong>Fact:</strong> Virginia Code § 46.2-861 makes it reckless driving to exceed a reasonable speed for the circumstances and traffic conditions, regardless of the posted limit. You can be charged while driving at or below the number on the sign.</p></div>
+
+<h3>5. Special Zones: School Zones and Work Zones</h3>
+<h4>School zones</h4>
+<p>Many school zones have a reduced speed limit that applies during posted times or when signs or lights indicate that the reduced limit is in effect. When the reduced limit is in effect, it is the applicable limit. That means the "20 or more over" math starts from the lower school-zone number.</p>
+<p>More important than the legal math is what is in a school zone: children, who are smaller, harder to see, and may dart out between parked cars.</p>
+<h4>Work zones</h4>
+<p>Highway work zones often have reduced speed limits, narrow or shifted lanes, uneven pavement, sudden stops, and workers standing only a few feet from moving traffic. When a work zone limit is posted, treat it as the applicable limit. Watch for signs, merge early, and leave extra following distance.</p>
+<div class="highlight"><strong>Key Fact:</strong> Both school zones and work zones are places where § 46.2-861 (too fast for conditions) is especially relevant. Even when you are within the posted limit, the presence of children, workers, lane shifts, or stopped traffic may require an even lower speed.</div>
+
+<h3>6. Why Speed Kills: The Physics You Cannot Argue With</h3>
+<p>Laws can change. Physics does not. Three ideas explain most of what speed does to your safety: reaction distance, braking distance, and crash energy.</p>
+
+<h4>Reaction distance: the distance you travel before you even touch the brake</h4>
+<p>Before your car can begin to slow down, you have to see a hazard, recognize it as a hazard, decide to brake, and move your foot to the pedal. This is called <strong>perception-reaction time</strong>. A typical perception-reaction time is about <strong>1.5 seconds</strong> for an alert driver. If you are tired, distracted, or upset, it can be longer.</p>
+<p>During that time, your car keeps moving at full speed. At 60 mph, you travel about <strong>88 feet every second</strong>. In 1.5 seconds, that is about 132 feet, almost half the length of a football field, before your brakes even start to work.</p>
+<table>
+<tr><th>Speed</th><th>Feet per Second</th><th>Distance Traveled in 1.5 Seconds (Before Braking Begins)</th></tr>
+<tr><td>45 mph</td><td>66 ft/s</td><td>99 feet</td></tr>
+<tr><td>60 mph</td><td>88 ft/s</td><td>132 feet</td></tr>
+<tr><td>70 mph</td><td>about 103 ft/s</td><td>about 154 feet</td></tr>
+<tr><td>85 mph</td><td>about 125 ft/s</td><td>about 187 feet</td></tr>
+</table>
+<p>A handy shortcut: to estimate feet per second, multiply mph by about 1.47. At 60 mph, 60 × 1.47 ≈ 88 feet per second.</p>
+
+<h4>Braking distance: why doubling your speed is so dangerous</h4>
+<p>Once you press the brake, your car needs distance to stop. Braking distance does <strong>not</strong> increase in a straight line with speed. It increases with the <strong>square</strong> of speed. In practical terms, when you double your speed, your braking distance <strong>roughly quadruples</strong>. Going from 40 to 80 mph gives you about four times the braking distance.</p>
+<p>Reaction distance plus braking distance equals total stopping distance, and speed makes both parts bigger at the same time.</p>
+
+<h4>Crash energy: why a "little faster" hurts a lot more</h4>
+<p>When a crash happens, the damage to vehicles and bodies depends on the energy involved. That energy, like braking distance, increases with the square of speed. Compare a crash at 50 mph to a crash at 40 mph. The speed is only 25% higher, but the energy is about <strong>56% higher</strong> (because 50 × 50 = 2,500, 40 × 40 = 1,600, and 2,500 ÷ 1,600 ≈ 1.56).</p>
+<table>
+<tr><th>Speed Comparison</th><th>Speed Increase</th><th>Approximate Increase in Crash Energy</th></tr>
+<tr><td>40 mph vs. 50 mph</td><td>25%</td><td>about 56% more</td></tr>
+<tr><td>60 mph vs. 70 mph</td><td>about 17%</td><td>about 36% more</td></tr>
+<tr><td>40 mph vs. 80 mph</td><td>100% (double)</td><td>about 4 times as much</td></tr>
+</table>
+<p>Seat belts and airbags absorb crash energy, but they have limits. More energy means more of it reaches the people inside, or the pedestrian outside.</p>
+
+<div class="highlight"><strong>Research Finding:</strong> According to the National Highway Traffic Safety Administration (NHTSA), speeding is a factor in roughly 3 in 10 traffic fatalities in the United States. NHTSA also finds that driver behavior or error is the critical reason behind the large majority of crashes. Speed is one of the behaviors drivers can control most directly.</div>
+
+<div class="scenario"><h4>Scenario: The Ball in the Street</h4><p>Consider a driver we'll call James. He is driving through a residential neighborhood posted at 25 mph, but he is going 45 mph because he is late. A ball rolls into the street about 80 feet ahead, followed a moment later by a child. What does the physics say?</p><details><summary>What should happen here?</summary><p>At 45 mph, James travels about 66 feet per second. With a typical 1.5-second perception-reaction time, he covers about 99 feet before his foot even begins to press the brake. The child is only 80 feet away, so James reaches that spot before he starts braking at all. At 25 mph (about 37 feet per second), he would have covered about 55 feet during the same reaction time and would have had room to start braking before reaching the child. On top of that, James is exactly 20 mph over the 25 mph limit, which meets the § 46.2-862 threshold for reckless driving.</p></details></div>
+
+<h3>7. The Time-Saved Myth</h3>
+<p>The most common reason drivers give for speeding is saving time. The math is simple: time = distance ÷ speed.</p>
+<p>Take a 10-mile trip. At 60 mph, it takes exactly 10 minutes. At 70 mph, it takes about 8 minutes and 34 seconds. Speeding 10 mph faster for the whole trip saves you about <strong>1 minute and 26 seconds</strong>. That assumes no traffic lights, slow cars, or congestion.</p>
+<table>
+<tr><th>Trip Distance</th><th>Normal Speed</th><th>Faster Speed</th><th>Time "Saved" (Best Case)</th></tr>
+<tr><td>5 miles</td><td>35 mph</td><td>45 mph</td><td>about 1 minute 54 seconds</td></tr>
+<tr><td>10 miles</td><td>60 mph</td><td>70 mph</td><td>about 1 minute 26 seconds</td></tr>
+<tr><td>20 miles</td><td>65 mph</td><td>75 mph</td><td>about 2 minutes 28 seconds</td></tr>
+<tr><td>100 miles</td><td>70 mph</td><td>80 mph</td><td>about 10 minutes 43 seconds</td></tr>
+</table>
+<p>Look at the 20-mile example. Driving 75 in a 65 zone is a speeding violation, yet it saves less than two and a half minutes even in perfect conditions.</p>
+<p>Even on a 100-mile highway trip, the best case is less than 11 minutes saved. And at 80 mph on a 70 mph highway, you are only 6 mph away from the "over 85" threshold for reckless driving.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "If I drive faster, I'll make up a lot of lost time."</p><p><strong>Fact:</strong> On most everyday trips, speeding saves seconds to a few minutes at best, and traffic lights and congestion often erase even that. A 10-mile trip at 70 mph instead of 60 mph saves only about 1 minute and 26 seconds.</p></div>
+
+<div class="myth"><p><strong>Myth:</strong> "Keeping up with fast traffic is always safer, and police won't stop you if everyone is speeding."</p><p><strong>Fact:</strong> The law measures your speed against the applicable limit and the conditions, not against other drivers. Going 86 mph is reckless driving under § 46.2-862 whether or not other cars are going just as fast.</p></div>
+
+<h3>8. Speed and Attitude: Why Drivers Choose to Speed</h3>
+<p>Most people who speed already know it is risky. To manage your speed, you need to understand the thoughts and feelings that push your foot down.</p>
+
+<h4>Time pressure: "I'm late, so I need to make up time"</h4>
+<p>Running late creates stress, and stress makes the clock feel more important than safety. Psychologists describe a pattern called <strong>time discounting</strong>: people tend to give too much weight to an immediate reward (getting there sooner) and too little weight to a possible future cost (a crash, a charge, a conviction). As the math above shows, the reward is usually tiny.</p>
+
+<h4>The "I'm a good driver" belief</h4>
+<p>Most drivers rate themselves as above average. This is called <strong>optimism bias</strong>. Not everyone can be above average. And skill cannot change your reaction time by much, and it cannot change braking distance or crash energy at all.</p>
+<p>Psychologist Jerry Deffenbacher of Colorado State University studied drivers who are prone to anger behind the wheel. He found that high-anger drivers get angry faster, have more hostile and aggressive thoughts, and take more risks. These risks include speeding 10 to 20 mph over the limit, switching lanes rapidly, tailgating, and entering intersections on red. In driving simulations, high-anger drivers had about <strong>twice as many crashes</strong> as low-anger drivers.</p>
+
+<h4>Anger and frustration: "Get out of my way"</h4>
+<p>Emotional arousal pushes the gas pedal down. When you are angry at another driver, at your boss, or at your day, you are more likely to speed, follow too closely, and make sudden moves. Module 3 looks at anger and aggressive driving in depth.</p>
+
+<h4>Social norms: "Everyone speeds"</h4>
+<p>When you see other cars passing you, it is easy to feel that you are the one doing something wrong. This is sometimes called <strong>social proof</strong>: we look to others to decide what is normal. But not everyone speeds, and the fact that others are breaking the law does not change your legal exposure or the physics of your car.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4>
+<label>Think about the last time you drove noticeably over the speed limit. What was going on? Were you late, angry, distracted, or following traffic?</label><textarea></textarea>
+<label>Which attitude above (time pressure, the "good driver" belief, anger, or social norms) do you recognize most in yourself? Give a specific example.</label><textarea></textarea>
+</div>
+
+<h3>9. Strategies to Manage Your Speed</h3>
+<p>Understanding the law and the physics is the first step. The next step is building habits that keep your speed under control when you are stressed, late, or surrounded by faster traffic.</p>
+
+<h4>Before you drive</h4>
+<ul>
+<li><strong>Plan for the trip you will actually have.</strong> Check traffic and weather before you leave, and add a buffer for important appointments. Removing time pressure removes the most common reason to speed.</li>
+<li><strong>Decide in advance what you will do if you are running late.</strong> Call or text <em>before</em> you start driving, or pull over safely to do it. Arriving a few minutes late is far better than a crash or a criminal charge.</li>
+<li><strong>Check your emotional state.</strong> If you are angry or upset, take a few minutes and a few slow breaths before you start the car.</li>
+</ul>
+
+<h4>While you drive</h4>
+<ul>
+<li><strong>Check your speedometer regularly,</strong> especially after leaving a highway, entering a new speed zone, or going downhill. Speed creeps up without you noticing.</li>
+<li><strong>Use cruise control wisely</strong> on open highways in good conditions, set at or below the limit. Do not use it in rain, snow, ice, or heavy traffic.</li>
+<li><strong>Stay in the right lane</strong> when traffic is moving faster than the limit. Let others pass. Their speed is not your obligation.</li>
+<li><strong>Keep a safe following distance</strong> of at least 3 to 4 seconds in good conditions, and more in bad weather. At 60 mph, a 3-second gap is about 264 feet.</li>
+<li><strong>Know your thresholds by heart.</strong> On a 70 mph highway, 86 is reckless. On a 55 mph road, 75 is reckless. On a 25 mph street, 45 is reckless.</li>
+</ul>
+
+<h4>Self-talk that helps</h4>
+<table>
+<tr><th>Instead of thinking...</th><th>Try thinking...</th></tr>
+<tr><td>"I have to make up time."</td><td>"Speeding saves a minute or two at most. I'll call ahead."</td></tr>
+<tr><td>"I'm a good driver. I can handle this speed."</td><td>"Skill doesn't change my stopping distance. Physics applies to everyone."</td></tr>
+<tr><td>"Everyone else is going this fast."</td><td>"Their speed doesn't change the law or my risk. I'll stay right."</td></tr>
+</table>
+
+<div class="scenario"><h4>Scenario: The Late Morning</h4><p>Consider a driver we'll call Alicia. She overslept, and her 20-mile commute is mostly on a highway posted at 65 mph. Her heart is racing, and she thinks, "If I go 80 the whole way, I'll make it." What would a better plan look like?</p><details><summary>What should happen here?</summary><p>Even at a steady 75 mph instead of 65, a 20-mile drive saves only about 2 minutes and 28 seconds in perfect conditions. At 80 mph, Alicia is just 5 mph from the "over 85" threshold, and speed creep or a downhill stretch could push her into reckless driving under § 46.2-862. A better plan: she messages her supervisor that she is running a few minutes behind, takes a few slow breaths, sets cruise control at the limit, and accepts arriving a little late. Being late is a minor problem. A crash or a criminal record is a major one.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4>
+<label>List two situations where you are most likely to speed, and one strategy from this section you will use for each.</label><textarea></textarea>
+</div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Reckless driving by speed (§ 46.2-862)</dt><dd>Driving 20 mph or more over the applicable maximum speed limit, or in excess of 85 mph regardless of the posted limit.</dd>
+<dt>Exceeding a reasonable speed (§ 46.2-861)</dt><dd>Driving faster than is reasonable for the circumstances and traffic conditions, regardless of the posted limit.</dd>
+<dt>Applicable limit</dt><dd>The speed limit that legally applies where and when you are driving, including a reduced school-zone or work-zone limit.</dd>
+<dt>Perception-reaction time</dt><dd>The time it takes to notice a hazard, decide to act, and begin braking, typically about 1.5 seconds.</dd>
+<dt>Time discounting</dt><dd>Valuing an immediate reward (arriving sooner) more than a possible future cost (a crash or conviction).</dd>
+<dt>Optimism bias</dt><dd>Believing you are less likely than others to experience a bad outcome, such as most drivers rating themselves above average.</dd>
+
+<dt>Social proof</dt><dd>Judging what is normal or acceptable by watching what other people do, such as speeding because other drivers are speeding.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>In Virginia, high-end speeding is not just a ticket. Reckless driving is a Class 1 misdemeanor with up to 12 months in jail and/or a fine of up to $2,500, plus 6 demerit points that stay on your DMV record for 11 years.</li>
+<li>Under § 46.2-862, driving 20 mph or more over the applicable limit, or over 85 mph regardless of the limit, is reckless driving. Either threshold is enough.</li>
+<li>The 85 mph threshold took effect July 1, 2020; before that it was 80 mph.</li>
+<li>Under § 46.2-861, you can be charged with reckless driving for going too fast for conditions even when you are at or below the posted limit.</li>
+<li>In school zones and work zones, the reduced limit is the applicable limit, and conditions often call for an even lower speed.</li>
+<li>At 60 mph you travel about 88 feet per second, and a typical 1.5-second reaction time means about 132 feet before braking begins.</li>
+<li>Braking distance roughly quadruples when speed doubles, and crash energy increases with the square of speed (50 vs. 40 mph is about 56% more energy).</li>
+<li>Speeding saves far less time than most people think: 10 miles at 70 instead of 60 mph saves only about 1 minute and 26 seconds.</li>
+<li>Time pressure, optimism bias, anger, and social proof push drivers to speed. Recognizing them is the first step to controlling them.</li>
+<li>Practical strategies such as planning extra time, calling ahead, checking your speedometer, using cruise control wisely, staying right, and keeping a 3- to 4-second following distance help keep your speed in check.</li>
+</ul>
+<p>Take your time reviewing this material. When the timer reaches 00:00, the <strong>Module 2 Exam</strong> will unlock. The exam has 15 questions, and you need a score of 80% to pass.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 2 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course to take the Module 2 Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-m2-remaining', DONE='rad-m2-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';go.removeAttribute('href');
+      msg.textContent='You have completed the required time for Module 2. Return to your course to take the Module 2 Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

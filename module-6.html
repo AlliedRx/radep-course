@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 6: Attitude Change — Understanding Triggers | Virginia Commonwealth Driving Improvement Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Module 6 of 8 &middot; 30 minutes</span>Module 6: Attitude Change — Understanding Triggers</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>You can't change what you don't understand. Most drivers who end up with a reckless or aggressive driving charge did not set out that morning planning to break the law. Something happened on the road, or before they ever got in the car, and they reacted. In this module, you will slow that reaction down and look at it piece by piece. You will learn what sets you off, what your mind tells you in those moments, what your body does, and how all of it can turn into a choice that puts you, your passengers, and other people at risk. This module is the foundation for Module 7, where you will build specific strategies to change your patterns. The more honest you are with yourself here, the more useful Module 7 will be.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain the trigger-action gap and why widening it gives you more control over your driving.</li>
+<li>Identify the major categories of driving anger triggers, including obstruction, disrespect, time pressure, displaced stress, and environmental factors.</li>
+<li>Recognize four common thinking patterns that fuel driving anger: hostile attribution, catastrophizing, "should" statements, and personalization.</li>
+<li>Describe the early physical and emotional warning signs that anger is building.</li>
+<li>Explain displaced aggression, venting, and rumination, and why they make aggressive driving more likely.</li>
+<li>Build a personal trigger profile that you will use in Module 7 to create a change plan.</li>
+</ul></div>
+
+<h3>Why Attitude Matters More Than Skill</h3>
+<p>Most people who are charged with reckless or aggressive driving know how to drive. They can merge, brake, check mirrors, and handle a car in traffic. The problem is rarely a lack of skill. The problem is what the driver <em>chooses</em> to do with that skill when they are frustrated, rushed, or angry.</p>
+<p>Think about the behaviors that make up aggressive driving under Virginia law. Under <strong>§ 46.2-868.1</strong>, aggressive driving means committing certain traffic offenses, such as following too closely, improper passing, failing to yield, evading traffic control devices, speeding, or stopping on a highway, <em>and</em> either being a hazard to another person or intending to harass, intimidate, injure, or obstruct another person. Notice the second half of that definition. It is about intent and effect. It is about attitude. A skilled driver who tailgates someone to "teach them a lesson" is not making a skill error. They are making an attitude error.</p>
+<p>That is good news, because attitudes can change. Research supports this. Psychologist Jerry Deffenbacher at Colorado State University studied high-anger drivers and found that relaxation and cognitive-relaxation interventions reduced driving anger, and the gains were largely maintained about a year later.</p>
+
+<div class="highlight"><strong>Research Finding:</strong> In Deffenbacher's research, high-anger drivers got angrier faster, had more hostile and aggressive thoughts, and took more risks, such as speeding 10–20 mph over the limit, rapid lane changes, tailgating, and entering intersections on red. In driving simulations, they had about twice as many crashes as low-anger drivers. Anger is not just a feeling. It changes how you drive.</div>
+
+<h3>The Trigger-Action Gap</h3>
+<p>Between a trigger (someone cuts you off) and your action (tailgating them in response), there is a <strong>gap</strong>. In that gap lives your interpretation, your emotional response, and your choice. Most drivers react so quickly that they don't realize a choice is being made at all. It feels automatic: "He cut me off, so I got mad, so I sped up." But that is not really what happened. Several steps took place in between, very fast.</p>
+<p>Here is the chain broken into its parts:</p>
+<ol>
+<li><strong>Trigger:</strong> Something happens. A car merges in front of you with very little room.</li>
+<li><strong>Interpretation:</strong> Your mind instantly decides what it means. "That jerk did that on purpose."</li>
+<li><strong>Emotion and body response:</strong> You feel a surge of anger. Your grip tightens, your heart rate climbs, your face gets hot.</li>
+<li><strong>Urge:</strong> You feel a strong pull to do something. Honk, close the gap, pass them and cut back in.</li>
+<li><strong>Action:</strong> You either act on the urge or you don't.</li>
+<li><strong>Consequence:</strong> What happens next. Nothing, a near-miss, a confrontation, a crash, or a traffic stop.</li>
+</ol>
+<p>The most important step in this chain is step 2, the interpretation. The trigger is usually outside your control. You can't stop other people from merging badly. But the meaning you assign to it shapes everything that follows. If your interpretation is "they did that on purpose to disrespect me," your anger will be high and your urge to retaliate will be strong. If your interpretation is "they probably didn't see me," your reaction will be much smaller.</p>
+<p>The goal of attitude change is to <strong>widen the gap</strong>, which means creating enough space between trigger and action that conscious choice can happen. Even one or two extra seconds can be enough for you to notice what you are feeling and decide not to act on it.</p>
+
+<div class="scenario"><h4>Scenario: The Merge on I-64</h4><p>Consider a driver we'll call Marcus. He is driving east on I-64 near Richmond in moderate traffic. A pickup truck merges from an on-ramp and slides into Marcus's lane with only a car length to spare. Marcus brakes, swears, and immediately thinks, "This guy thinks he owns the road." Within seconds, Marcus has closed to a few feet behind the truck and is flashing his high beams. Walk through Marcus's trigger-action chain. Where was the gap, and what could have changed the outcome?</p><details><summary>What should happen here?</summary><p>The trigger was the tight merge. Marcus's interpretation, "This guy thinks he owns the road," assumed deliberate disrespect. That interpretation drove a fast surge of anger and an urge to retaliate, which became the action of tailgating and flashing lights. Following too closely is one of the offenses listed in Virginia's aggressive driving statute, and doing it to intimidate another driver fits the definition of aggressive driving. The gap was the moment right after Marcus braked. If he had noticed his anger rising and thought, "He might not have seen me in his mirror," the urge would have been weaker. Simply easing off the gas and letting the truck get ahead would have ended the situation safely. The merge was not Marcus's choice. The tailgating was.</p></details></div>
+
+<h3>Identifying Your Triggers</h3>
+<p>A trigger is any event or condition that sets off a strong emotional reaction while you drive. Triggers are not the same for everyone. One driver barely notices a slow car in the left lane, while another driver feels their blood pressure spike. Knowing <em>your</em> specific triggers is the first step to managing them.</p>
+<p>Monash University's Accident Research Centre developed a program called "Reducing Aggressive Driving" (RAD). It identified several common categories of triggers that participants reported again and again. Participants also said they valued practical take-home strategies and hearing from other drivers who had similar experiences. The table below summarizes those common triggers, plus two more that many drivers recognize: environmental conditions (heat, noise, construction) and your own physical state (hunger, fatigue, poor sleep). Disrespect triggers are often the most intense, because they touch on pride. Time pressure is one of the most powerful amplifiers, because when you are rushed, every red light feels like a personal attack and you feel pushed to "make up time." Environmental conditions and your physical state may not make you angry on their own, but they lower your tolerance so a smaller trigger can set you off.</p>
+
+<table>
+<tr><th>Trigger Category</th><th>Common Examples</th><th>Typical Thought</th></tr>
+<tr><td>Obstruction</td><td>Left-lane campers, slow drivers, car not moving at green light</td><td>"Get out of my way."</td></tr>
+<tr><td>Disrespect</td><td>Being cut off, tailgated, honked at, gestured at</td><td>"Who do they think they are?"</td></tr>
+<tr><td>Time pressure</td><td>Running late, traffic jams, unexpected detours</td><td>"I can't afford this delay."</td></tr>
+<tr><td>Displaced stress</td><td>Bad day at work, argument at home, money worries</td><td>"Everything is going wrong today."</td></tr>
+<tr><td>Environmental</td><td>Heat, noise, construction, congestion</td><td>"I can't stand this."</td></tr>
+<tr><td>Physical state</td><td>Hunger, fatigue, pain, poor sleep</td><td>"I just want to get home."</td></tr>
+</table>
+
+<p>Most drivers have two or three "top" triggers that cause most of their trouble. As you read, think about which categories fit you best. Be specific. "Traffic" is too vague to work with. "When someone tailgates me on I-95 during my morning commute" is specific enough to plan around.</p>
+
+<h3>Thinking Patterns That Fuel Driving Anger</h3>
+<p>Remember that the interpretation step in the trigger-action chain is the most important one. Psychologists have identified several common thinking patterns, sometimes called cognitive distortions or thinking traps, that make anger stronger and last longer. Everyone uses these patterns at times. The goal is not to never have these thoughts. The goal is to catch them when they happen, so they don't decide your actions for you.</p>
+
+<h4>Hostile Attribution Bias</h4>
+<p>High-anger drivers share a common pattern: they assume hostile intent behind ambiguous behavior. When someone cuts them off, they assume it was deliberate disrespect rather than a mistake, a distraction, or an emergency. This is called <strong>hostile attribution bias</strong>.</p>
+<p>Here's why it matters. Most of what other drivers do is ambiguous. You can't see inside their car or their head. A driver who drifts into your lane might be texting, might be lost, might have a crying child in the back seat, might have misjudged the distance, or might simply not have seen you. Usually, the other driver isn't thinking about you at all. But hostile attribution fills that blank with the worst possible explanation, and the worst possible explanation produces the worst possible anger.</p>
+<p>Research shows that teaching drivers to reinterpret other drivers' behavior as a neutral or innocent mistake rather than as something malicious reduces aggressive driving responses. This process is called <strong>cognitive reappraisal</strong>. It doesn't mean pretending bad driving is fine. It means choosing an explanation that doesn't push you toward escalation.</p>
+
+<div class="highlight"><strong>Practice:</strong> Next time someone cuts you off, try saying (out loud if needed): "They might be having an emergency. They might be lost. They might just be careless, not malicious." This isn't about excusing bad driving. It's about choosing not to escalate.</div>
+
+<h4>Catastrophizing</h4>
+<p><strong>Catastrophizing</strong> means blowing a situation up into something much worse than it really is. "If I'm late to this meeting, I'll get fired." "This traffic is going to ruin my whole day." "I'll never get out of this lane." When your mind treats a minor delay like a disaster, your body responds as if you're facing a real emergency. Stress hormones rise, and you feel justified in taking risks to escape the "disaster."</p>
+<p>Try asking yourself: "What is the realistic worst case here?" Usually the honest answer is that you'll arrive a few minutes late, which is unpleasant but survivable. It is far less serious than a crash, a criminal charge, or a license suspension.</p>
+
+<h4>"Should" Statements</h4>
+<p><strong>"Should" statements</strong> are rigid rules about how other people ought to behave. "People should know how to merge." "Slow drivers should stay out of the left lane." "He should have used his turn signal." Some of these rules may even be correct. But when you hold them rigidly, every driver who breaks one feels like an insult, and you can end up feeling like it's your job to enforce the rule. That is how drivers end up "teaching lessons" through tailgating, brake-checking, or blocking.</p>
+<p>A helpful shift is to change "should" to "I'd prefer." "I'd prefer that people use their turn signals, but some won't, and that's not mine to fix." This keeps your standards while letting go of the anger that comes from expecting everyone to meet them.</p>
+
+<h4>Personalization</h4>
+<p><strong>Personalization</strong> means treating events as if they are about you when they aren't. "Why does this always happen to me?" "Every light turns red when I get to it." "That driver singled me out." Personalization turns random traffic into a personal attack and makes you feel targeted. When you feel targeted, you feel more justified in fighting back.</p>
+<p>The reality is that traffic is impersonal. The light doesn't know you're there. The driver ahead doesn't know you're running late. Reminding yourself that "this isn't about me" can take a lot of heat out of the moment.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "My anger is caused by other drivers. If they drove better, I wouldn't get mad."</p><p><strong>Fact:</strong> Other drivers create the trigger, but your interpretation creates most of the anger. Two drivers can experience the same event and react completely differently based on what they tell themselves about it. That's why changing your thinking is one of the most effective ways to reduce driving anger.</p></div>
+
+<div class="scenario"><h4>Scenario: The Left-Lane Driver</h4><p>A driver we'll call Denise is running ten minutes late for a doctor's appointment. She is on Route 288 behind a car going exactly the speed limit in the left lane. Denise thinks, "People like this should be ticketed. They do this on purpose to control everyone else. Now I'm going to miss my appointment and have to reschedule, and this whole day is shot." She starts riding the car's bumper. Which thinking patterns can you spot, and what might a more balanced response look like?</p><details><summary>What should happen here?</summary><p>Denise is using several thinking traps at once. "People like this should be ticketed" is a "should" statement. "They do this on purpose to control everyone" is hostile attribution. "This whole day is shot" is catastrophizing. Time pressure is the trigger amplifying all of it. A more balanced response would be: "This driver probably doesn't realize they're holding people up. I'm late, but being a few minutes late to an appointment isn't a disaster. I'll call the office when I can do so safely and legally." Then Denise should drop back to a safe following distance of at least three to four seconds and wait for a safe, legal chance to pass on the right or for the driver to move over. Tailgating to pressure the driver is following too closely with intent to intimidate, which is exactly what Virginia's aggressive driving law targets.</p></details></div>
+
+<h3>Emotions and Body Signals: Your Early Warning System</h3>
+<p>Anger doesn't arrive all at once. It builds. The earlier you notice it, the easier it is to manage. By the time you are yelling or tailgating, you have already passed several warning signs. Learning to recognize these early signals is one of the most practical skills you can develop.</p>
+
+<h4>Physical Warning Signs</h4>
+<ul>
+<li>Tightening your grip on the steering wheel</li>
+<li>Clenching your jaw or grinding your teeth</li>
+<li>Faster heart rate or pounding in your chest</li>
+<li>Shallow, quick breathing</li>
+<li>Feeling hot, flushed, or sweaty</li>
+<li>Tense shoulders, neck, or stomach</li>
+<li>Pressing harder on the gas pedal without deciding to</li>
+<li>Leaning forward in your seat</li>
+</ul>
+
+<h4>The Anger Thermometer</h4>
+<p>One useful tool is to imagine your anger on a scale from 0 to 10. At 0, you are completely calm. At 10, you are in a full rage and not thinking clearly. Most people can make good decisions at 1 to 3. Between 4 and 6, judgment starts to slip, and you become more likely to speed, follow too closely, or make risky lane changes. At 7 and above, you are at serious risk of doing something you would never do when calm, such as chasing another car, brake-checking, or getting out of your vehicle to confront someone.</p>
+
+<p>The goal is to catch yourself in the 4–6 range and bring yourself back down before you reach 7. Remember Deffenbacher's finding that high-anger drivers get angrier <em>faster</em>. If you know you tend to escalate quickly, it's even more important to notice the early signs.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>What are the first two or three physical signs you notice when you start getting angry behind the wheel?</label><textarea></textarea><label>Think of a recent time you got angry while driving. On a 0–10 scale, how high did it go? What number were you at when you first noticed it?</label><textarea></textarea></div>
+
+<h3>Displaced Aggression: The Stress You Bring Along</h3>
+<p><strong>Displaced aggression</strong> means taking out frustration that started in one part of your life on people in a completely different situation. The RAD program identified displaced stress as a common trigger for aggressive driving. The car can feel like a safe place to unload stress. Other drivers are strangers, you'll probably never see them again, and you are inside a closed, private space. That combination makes it easy to direct anger at them that really belongs somewhere else.</p>
+<p>Think about the difference between two drivers stuck behind the same slow truck. One has had a calm, pleasant day. The other just got chewed out by a supervisor, has an overdue bill on their mind, and skipped lunch. The truck is the same. The reaction is completely different. The second driver isn't really angry at the truck. The truck is just the nearest target.</p>
+<p>One of the most valuable habits you can build is a quick "stress check" before you start the car. Ask yourself: "What am I carrying right now?" Just naming it, such as "I'm still upset about that meeting," helps separate it from the traffic you're about to face. In Module 7, you'll learn a pre-drive transition routine built around this idea.</p>
+
+<div class="scenario"><h4>Scenario: The Drive Home</h4><p>Consider a driver we'll call Andre. He works long shifts at a warehouse in Chesterfield County. Today, his manager criticized him in front of his co-workers, and he left without eating. On the drive home, a car in front of him slows down to look for an address. Andre lays on the horn, swerves around the car on the shoulder, and speeds off. Later, he tells a friend, "That guy was driving like an idiot." Was Andre's reaction really about the other driver?</p><details><summary>What should happen here?</summary><p>Andre's reaction was mostly about his day, not the other driver. The humiliation at work, plus hunger and fatigue, put him at a high anger level before he even started the car. A driver slowing down to find an address is a minor, common event. This is displaced aggression. Passing on the shoulder and speeding off in anger could easily result in a reckless driving charge under § 46.2-852, which covers driving in a manner that endangers life, limb, or property. A better approach would have been a few minutes in the parking lot before leaving: eating something, taking several slow breaths, and acknowledging, "I'm angry about work, not about traffic." That simple step could have kept a bad day from becoming a criminal charge.</p></details></div>
+
+<h3>Why Anger Grows: Venting and Rumination</h3>
+<p>Many people believe that anger is like steam in a pressure cooker, and that letting it out by yelling, honking, or pounding the steering wheel releases the pressure and helps you calm down. This idea is popular, but research does not support it.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "Yelling or honking at other drivers helps me blow off steam, so I calm down faster."</p><p><strong>Fact:</strong> Venting, such as honking, yelling, or gesturing, tends to increase anger rather than release it. Each angry action rehearses the anger and keeps your body in a heightened state. It also risks provoking the other driver, which can turn a one-sided frustration into a two-sided confrontation.</p></div>
+
+<p>A related problem is <strong>rumination</strong>, which means replaying an upsetting event over and over in your mind. "I can't believe he did that. Who does that? He almost hit me. People like that shouldn't have a license." Every replay restarts the anger. Rumination can keep you at a high anger level for many miles, long after the other driver is gone. During that time, you are more likely to speed, follow too closely, and react strongly to the next small trigger. This is how one bad moment can turn into a bad drive.</p>
+<p>Rumination usually repeats the same thinking traps: hostile attribution, "should" statements, or personalization. The fastest way past a trigger is usually to let it go, not to act it out or replay it. Telling yourself "That's over. It's behind me now" shortens the anger episode.</p>
+
+<h3>When a Trigger Becomes a Charge</h3>
+<p>It is worth connecting everything in this module back to Virginia law, because the stakes of an unmanaged trigger are real. Most aggressive and reckless driving incidents follow the same path: a trigger, a hostile interpretation, rising anger, and an action that crosses a legal line.</p>
+<ul>
+<li>Tailgating someone because they "cut you off" can be <strong>aggressive driving</strong> under § 46.2-868.1 if you are a hazard to them or intend to intimidate them. Aggressive driving is a Class 2 misdemeanor, punishable by up to 6 months in jail and/or a fine of up to $1,000. If you act with intent to injure, it becomes a Class 1 misdemeanor. The court may also order you to complete an anger management or aggressive driving program.</li>
+<li>Speeding or weaving through traffic because you are angry or late can be <strong>reckless driving</strong> under § 46.2-852, or reckless driving by speed under § 46.2-862 if you are going 20 mph or more over the limit or over 85 mph. Reckless driving is a Class 1 misdemeanor, punishable by up to 12 months in jail and/or a fine of up to $2,500, and carries 6 DMV demerit points.</li>
+</ul>
+
+<div class="warning"><strong>Virginia Caution:</strong> Your reason for driving aggressively is not a legal defense. "He cut me off first" or "I was having a terrible day" does not change whether your actions meet the definition of aggressive or reckless driving. The law looks at what you did and, for aggressive driving, whether you were a hazard or intended to harass, intimidate, injure, or obstruct someone. Understanding your triggers is how you stop the chain before it reaches that point.</div>
+
+<h3>Building Your Personal Trigger Profile</h3>
+<p>Now it's time to put everything together. A personal trigger profile is a clear, honest picture of when, where, and why you are most likely to drive aggressively. In Module 7, you will use this profile to build a personal change plan.</p>
+<p>Work through these questions honestly. No one else will see your answers.</p>
+<ol>
+<li><strong>Situations:</strong> What situations make you angriest behind the wheel? Be specific: "When someone tailgates me on I-95," not just "traffic."</li>
+<li><strong>Times and places:</strong> Are there certain times of day, roads, or trips where you are most likely to get angry? For example, your morning commute, the drive home from work, or a specific stretch of highway.</li>
+<li><strong>Thoughts:</strong> What do you typically <em>think</em> in those moments? "This idiot." "I'm going to be late." "They did that on purpose." Which thinking patterns from this module show up most?</li>
+<li><strong>Body signals:</strong> What do you notice in your body first?</li>
+<li><strong>Actions:</strong> What do you typically <em>do</em>? Honk, gesture, tailgate, speed up, block, yell?</li>
+<li><strong>Background stress:</strong> What outside stress tends to be in the car with you?</li>
+<li><strong>Aftermath:</strong> How do you feel <em>afterward</em>? Relief? Guilt? Embarrassment? More anger? Did the action make anything better?</li>
+</ol>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4>
+<label>My top 3 driving triggers (be specific):</label><textarea placeholder="1.&#10;2.&#10;3."></textarea>
+<label>Times, places, or trips when I'm most at risk:</label><textarea></textarea>
+<label>Thoughts I typically have when triggered (and which thinking patterns they match):</label><textarea></textarea>
+<label>Body signals I notice first:</label><textarea></textarea>
+<label>Actions I typically take:</label><textarea></textarea>
+<label>Outside stress I tend to bring into the car:</label><textarea></textarea>
+<label>How I usually feel afterward:</label><textarea></textarea>
+<label>What I could do differently next time:</label><textarea></textarea>
+</div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Trigger</dt><dd>An event or condition that sets off a strong emotional reaction while driving, such as being cut off or running late.</dd>
+<dt>Trigger-action gap</dt><dd>The space between a trigger and your response, where interpretation, emotion, and choice happen. Attitude change aims to widen it.</dd>
+<dt>Hostile attribution bias</dt><dd>The tendency to assume that another driver's ambiguous behavior was deliberate and hostile.</dd>
+<dt>Cognitive reappraisal</dt><dd>Reinterpreting another person's behavior, for example as a mistake rather than something malicious, which reduces aggressive responses.</dd>
+<dt>Catastrophizing</dt><dd>Treating a minor problem, such as a short delay, as if it were a disaster.</dd>
+<dt>"Should" statements</dt><dd>Rigid rules about how others must behave, which create anger when people break them.</dd>
+<dt>Personalization</dt><dd>Treating impersonal events as if they were aimed at you.</dd>
+<dt>Displaced aggression</dt><dd>Directing anger that started in one part of life, such as work or home, at other drivers.</dd>
+<dt>Venting</dt><dd>Acting out anger by honking, yelling, or gesturing. It tends to increase anger rather than release it.</dd>
+<dt>Rumination</dt><dd>Replaying an upsetting event over and over, which keeps anger going.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Most aggressive driving is an attitude problem, not a skill problem, and attitudes can change with practice.</li>
+<li>Between every trigger and action is a gap containing your interpretation, emotion, and choice. The goal is to widen that gap.</li>
+<li>Common trigger categories include being obstructed, being disrespected, time pressure, displaced stress, environmental conditions, and your own physical state.</li>
+<li>Hostile attribution bias, catastrophizing, "should" statements, and personalization all make anger stronger. Cognitive reappraisal, such as viewing the other driver's behavior as a mistake, reduces aggressive responses.</li>
+<li>Anger builds in stages. Learn your early body signals and aim to catch yourself in the 4–6 range on the anger thermometer.</li>
+<li>Deffenbacher's research found that high-anger drivers get angrier faster, take more risks, and had about twice as many simulated crashes as low-anger drivers.</li>
+<li>Displaced aggression, carrying stress from other parts of life into the car, is a common trigger for aggressive driving. A pre-drive stress check helps.</li>
+<li>Venting and rumination make anger last longer. Letting the moment go shortens it.</li>
+<li>Your reasons for driving aggressively are not a legal defense. Aggressive driving under § 46.2-868.1 is a Class 2 misdemeanor, and reckless driving is a Class 1 misdemeanor.</li>
+<li>Your personal trigger profile will be the starting point for your change plan in Module 7.</li>
+</ul>
+<p>Take the remaining time to review your reflections and the key terms above. When the timer reaches 00:00, the Module 6 Exam will unlock. The exam has 15 questions, and you need a score of 80% to pass.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 6 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course to take the Module 6 Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-m6-remaining', DONE='rad-m6-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';go.removeAttribute('href');
+      msg.textContent='You have completed the required time for Module 6. Return to your course to take the Module 6 Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

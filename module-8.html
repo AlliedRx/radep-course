@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 8: Final Review and Test Preparation | Virginia Commonwealth Driving Improvement Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Module 8 of 8 &middot; 30 minutes</span>Module 8: Final Review and Test Preparation</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>You have reached the last module of this course. Over the past seven modules you looked at Virginia's reckless and aggressive driving laws, the physics of speed, the psychology of anger, the habits that turn ordinary trips into risky ones, the real cost of a conviction, and the tools that help drivers change. This module pulls all of that together. The goal is to see how the pieces connect, so that the next time you feel pressure behind the wheel, you recognize what is happening and know what to do. Try each scenario before you open the answer.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Recall the key Virginia laws, penalties, and DMV rules covered in Modules 1 through 5.</li>
+<li>Explain how speed, anger, risk-taking, and thinking patterns work together to create dangerous driving.</li>
+<li>Apply the attitude-change strategies from Modules 6 and 7 to realistic, multi-part driving situations.</li>
+<li>Define the core terms used throughout the course in your own words.</li>
+<li>Write a personal commitment statement that you can actually use on the road.</li>
+<li>Know exactly what to expect on the final test and how to prepare for it.</li>
+</ul></div>
+
+
+<h3>Review: Modules 1 and 2 — The Law and Speed</h3>
+<h4>Module 1 Review: The Virginia Reckless Driving Problem</h4>
+<p>Module 1 explained why Virginia treats reckless driving so seriously. In Virginia, reckless driving is a <strong>criminal offense</strong>. Under Virginia Code <strong>§ 46.2-868</strong>, reckless driving is a <strong>Class 1 misdemeanor</strong>, the most serious class of misdemeanor in the state. A conviction creates a criminal record, not just a driving record.</p>
+<p><strong>The many ways to be charged.</strong></p>
+<p>Virginia law describes several ways to commit reckless driving:</p>
+<ul>
+<li><strong>§ 46.2-852 (the general rule):</strong> driving "recklessly or at a speed or in a manner so as to endanger the life, limb, or property of any person."</li>
+<li><strong>§ 46.2-853:</strong> driving a vehicle that is not under proper control, or that has inadequate or improperly adjusted brakes.</li>
+<li><strong>§ 46.2-861:</strong> exceeding a reasonable speed under the circumstances and traffic conditions, regardless of the posted limit.</li>
+<li><strong>§ 46.2-862:</strong> reckless driving by speed, which Module 2 covered in detail.</li>
+<li><strong>Other sections in the same article</strong> cover behaviors such as passing a stopped school bus, passing on a curve or the crest of a hill, passing two abreast, and racing.</li>
+</ul>
+<p><strong>Criminal charge versus traffic infraction.</strong></p>
+<p>A routine speeding ticket is a traffic infraction. Reckless driving is different. Because it is a criminal charge, it generally requires a <strong>court appearance</strong>.</p>
+<p><strong>Attitude versus skill.</strong></p>
+<p>Most people in this course are not unskilled drivers. The problem is usually <strong>attitude and choices</strong>, not ability. According to the National Highway Traffic Safety Administration (NHTSA), driver behavior or error is the critical reason in the large majority of crashes. The good news: attitudes and choices can change.</p>
+
+<div class="highlight"><strong>Remember:</strong> Reckless driving in Virginia is a Class 1 misdemeanor, a criminal offense that generally requires going to court. It can be charged for speed, for unsafe speed in bad conditions, for loss of control or bad brakes, or for any driving that endangers people or property.</div>
+
+<h4>Module 2 Review: Speed — When Fast Becomes Criminal</h4>
+<p>Module 2 focused on the most common path into a reckless driving charge: speed. Under <strong>§ 46.2-862</strong>, you are guilty of reckless driving by speed if you drive:</p>
+<ul>
+<li><strong>20 mph or more over</strong> the applicable speed limit, <strong>or</strong></li>
+<li><strong>more than 85 mph</strong>, regardless of the posted limit.</li>
+</ul>
+<p>The 85 mph threshold took effect on July 1, 2020. Before that date, it was 80 mph.</p>
+<p><strong>Worked examples.</strong></p>
+<table>
+<tr><th>Posted limit</th><th>Your speed</th><th>Reckless by speed?</th><th>Why</th></tr>
+<tr><td>35 mph</td><td>55 mph</td><td>Yes</td><td>Exactly 20 mph over</td></tr>
+<tr><td>45 mph</td><td>64 mph</td><td>No (by speed alone)</td><td>19 over and under 85 — but § 46.2-861 or § 46.2-852 could still apply if conditions made it unsafe</td></tr>
+<tr><td>70 mph</td><td>86 mph</td><td>Yes</td><td>Over 85 mph, even though only 16 over</td></tr>
+</table>
+<p><strong>The physics of speed.</strong></p>
+
+<ul>
+<li>At <strong>60 mph</strong>, you travel about <strong>88 feet every second</strong>.</li>
+<li>A typical <strong>perception-reaction time</strong> is about <strong>1.5 seconds</strong>. At 60 mph, that means you travel roughly 132 feet before your foot even reaches the brake.</li>
+<li><strong>Braking distance roughly quadruples when speed doubles.</strong></li>
+<li><strong>Crash energy rises with the square of speed.</strong> A crash at 50 mph carries about 56% more energy than a crash at 40 mph, even though the speed is only 25% higher.</li>
+</ul>
+<p><strong>The time-saved myth.</strong></p>
+<p>On a 10-mile trip, driving 70 mph instead of 60 mph saves about <strong>1 minute and 26 seconds</strong>. (At 60 mph the trip takes 10 minutes; at 70 mph it takes about 8 minutes and 34 seconds.) NHTSA reports that speeding is a factor in roughly <strong>3 in 10</strong> U.S. traffic fatalities. That is a very high price for about a minute and a half.</p>
+
+<div class="myth"><p><strong>Myth:</strong> If I stay under the posted limit, I cannot be charged with reckless driving.</p><p><strong>Fact:</strong> Under § 46.2-861, driving faster than is reasonable for the conditions is reckless driving regardless of the posted limit. Heavy rain, fog, ice, a crowded road, or a work zone can make a legal speed unsafe.</p></div>
+
+<h3>Review: Modules 3 and 4 — Aggression and Risk</h3>
+<h4>Module 3 Review: Aggression and Road Rage</h4>
+<p>Module 3 moved from speed to anger. Virginia has a specific law for aggressive driving, <strong>§ 46.2-868.1</strong>. A driver is guilty of aggressive driving when two things are true:</p>
+<ol>
+<li>The driver commits one of certain listed traffic offenses, such as following too closely, improper passing, failing to yield, evading traffic control devices, speeding, or stopping on a highway; <strong>and</strong></li>
+<li>The driver is a hazard to another person, <strong>or</strong> intends to harass, intimidate, injure, or obstruct another person.</li>
+</ol>
+<p>Aggressive driving is a <strong>Class 2 misdemeanor</strong>, punishable by up to 6 months in jail and/or a fine of up to $1,000. If the driver acted with <strong>intent to injure</strong> another person, it becomes a <strong>Class 1 misdemeanor</strong>. The court may also order the driver to complete an anger management or aggressive driving program.</p>
+<p><strong>Aggressive driving versus road rage.</strong></p>
+<p>Aggressive driving is a pattern of unsafe, pushy driving. Road rage goes further: anger becomes an attempt to confront or harm someone. The two exist on the same <strong>escalation ladder</strong>: irritation, then hostile thoughts, then gestures or honking, then aggressive maneuvers, then confrontation. The earlier you step off that ladder, the easier it is.</p>
+<p><strong>What the research shows.</strong></p>
+<p>Psychologist <strong>Jerry Deffenbacher</strong> of Colorado State University studied drivers with high levels of driving anger. Compared with low-anger drivers, high-anger drivers got angrier faster, had more hostile and aggressive thoughts, and took more risks, including speeding 10 to 20 mph over the limit, making rapid lane changes, tailgating, and entering intersections on red. In driving simulations, they had about <strong>twice as many crashes</strong> as low-anger drivers.</p>
+<p>The <strong>AAA Foundation for Traffic Safety</strong> (1997) documented at least <strong>10,037</strong> incidents of violent aggressive driving from 1990 to 1996, resulting in <strong>218 deaths</strong> and <strong>12,610 injuries</strong>.</p>
+<p>The Monash University Accident Research Centre's <strong>Reducing Aggressive Driving (RAD)</strong> program identified common triggers: being obstructed, feeling disrespected (being cut off or tailgated), time pressure, and stress from other parts of life being carried into the car.</p>
+<p><strong>When someone else is aggressive toward you.</strong></p>
+<ul>
+<li>Do not engage: no eye contact, gestures, or horn.</li>
+<li>Keep your doors locked and windows up.</li>
+<li>Do not drive home if you are being followed. Drive to a police station or a busy public place.</li>
+<li>Call 911 when it is safe to do so, ideally hands-free or with a passenger making the call.</li>
+</ul>
+
+<h4>Module 4 Review: Risk-Taking Behind the Wheel</h4>
+<p>Module 4 looked at the behaviors that raise crash risk and the mental shortcuts that make those behaviors feel acceptable. Risky behaviors often <strong>show up together</strong> and usually share a root, such as time pressure or anger.</p>
+<p><strong>Following distance.</strong></p>
+<p>Tailgating is one of the most common aggressive behaviors and one of the easiest to fix. In good conditions, keep at least a <strong>3 to 4 second</strong> following distance. In rain, fog, darkness, or heavy traffic, leave more. To check, count the seconds between the car ahead passing a fixed object and you reaching it.</p>
+<p><strong>Thinking errors that feed risk.</strong></p>
+<table>
+<tr><th>Bias</th><th>What it means</th><th>How it shows up on the road</th></tr>
+<tr><td>Optimism bias</td><td>Believing bad things are less likely to happen to you than to others</td><td>"I'm an above-average driver; I can handle 90." Most drivers rate themselves above average, which is impossible.</td></tr>
+<tr><td>Time discounting</td><td>Valuing a small immediate reward more than a large future cost</td><td>Saving a minute now feels more important than the risk of a crash or conviction later.</td></tr>
+<tr><td>Social proof</td><td>Assuming something is fine because others do it</td><td>"Everyone goes 85 here."</td></tr>
+<tr><td>Hostile attribution bias</td><td>Assuming that another person's unclear behavior was meant to be hostile</td><td>"He cut me off on purpose," which then "justifies" retaliation.</td></tr>
+</table>
+<p>Module 4 also covered <strong>risk compensation</strong>: the tendency to take more risks when we feel safer. A driver with new safety features may follow more closely or drive faster, cancelling out the protection.</p>
+
+<div class="highlight"><strong>Key research point:</strong> Learning to reinterpret other drivers' behavior as a neutral act or an innocent mistake, rather than a deliberate insult, reduces aggressive responses. This is called cognitive reappraisal, and it is one of the most useful tools in the course.</div>
+
+<h3>Review: Module 5 — Consequences</h3>
+<h4>Module 5 Review: Virginia Consequences — Law and Penalties</h4>
+<p>Module 5 has the most numbers, and many appear on the final test. Review the tables carefully.</p>
+<p><strong>Criminal penalties.</strong></p>
+<table>
+<tr><th>Offense</th><th>Classification</th><th>Maximum penalty</th></tr>
+<tr><td>Reckless driving (§ 46.2-868)</td><td>Class 1 misdemeanor</td><td>Up to 12 months in jail and/or up to $2,500 fine</td></tr>
+<tr><td>Aggressive driving (§ 46.2-868.1)</td><td>Class 2 misdemeanor</td><td>Up to 6 months in jail and/or up to $1,000 fine</td></tr>
+<tr><td>Aggressive driving with intent to injure</td><td>Class 1 misdemeanor</td><td>Up to 12 months in jail and/or up to $2,500 fine</td></tr>
+<tr><td>Racing/exhibition driving with reckless disregard for human life causing serious bodily injury to an uninvolved person (§ 46.2-865.1)</td><td>Class 6 felony</td><td>Felony penalties</td></tr>
+<tr><td>Racing/exhibition driving with reckless disregard for human life causing death (§ 46.2-865.1)</td><td>Felony</td><td>1 to 20 years in prison</td></tr>
+<tr><td>Improper driving (§ 46.2-869)</td><td>Traffic infraction</td><td>Fine up to $500</td></tr>
+</table>
+<p><strong>License suspension.</strong></p>
+<ul>
+<li><strong>Reckless driving (§ 46.2-392):</strong> the court may suspend your license for not less than 10 days nor more than 6 months.</li>
+<li><strong>Racing (§ 46.2-865):</strong> racing between two or more vehicles is reckless driving, and the license suspension is not less than 6 months nor more than 2 years.</li>
+<li><strong>Exhibition driving</strong> (burnouts, wheel spinning, unnecessary zigzagging, drag racing near a group of two or more people): license suspension of up to 6 months.</li>
+</ul>
+<p><strong>Improper driving.</strong></p>
+<p>Under <strong>§ 46.2-869</strong>, when the recklessness is slight, the court may find the driver guilty of <strong>improper driving</strong> instead of reckless driving. Improper driving is a traffic infraction with a fine of up to $500. It is at the court's discretion, never guaranteed. This course does not give legal advice; anyone facing a charge should consult a licensed Virginia attorney.</p>
+<p><strong>DMV demerit points.</strong></p>
+<table>
+<tr><th>Item</th><th>Rule</th></tr>
+<tr><td>Reckless driving</td><td>6 demerit points</td></tr>
+<tr><td>How long the conviction stays on your DMV record</td><td>11 years for 6-point convictions</td></tr>
+<tr><td>How long the points count</td><td>2 years from the violation date</td></tr>
+<tr><td>8 points in 12 months (or 12 in 24 months)</td><td>Advisory letter</td></tr>
+<tr><td>12 points in 12 months (or 18 in 24 months)</td><td>Must complete a Driver Improvement Clinic within 90 days</td></tr>
+<tr><td>18 points in 12 months (or 24 in 24 months)</td><td>90-day suspension, clinic before restoration, and 6-month probation after restoration</td></tr>
+<tr><td>Safe driving points</td><td>+1 per full calendar year violation-free, up to +5; completing a Driver Improvement Clinic can earn +5</td></tr>
+<tr><td>Standard Virginia Driver Improvement Clinic</td><td>8 hours</td></tr>
+</table>
+<p>Drivers convicted of a demerit violation at age 18 or 19 must complete a driver improvement clinic. Court-ordered clinics require documentation.</p>
+<p><strong>Hidden costs.</strong></p>
+<p>A reckless driving conviction typically raises insurance premiums substantially for years, often by hundreds to thousands of dollars per year, and some insurers may choose not to renew a policy. A criminal record can also affect employment.</p>
+
+<div class="warning"><strong>Virginia legal caution:</strong> Reckless driving is a criminal charge that generally requires a court appearance. Do not assume you can prepay it, and do not ignore a court date. Consult a Virginia attorney about your specific case.</div>
+
+<h3>Review: Modules 6 and 7 — Changing Attitude</h3>
+<h4>Module 6 Review: Understanding Your Triggers</h4>
+<p>Module 6 turned from the law to the person behind the wheel. The central idea is the <strong>trigger-action gap</strong>: the short space between something happening (a trigger) and what you do about it (your action). Aggressive driving usually comes from what you tell yourself about the trigger.</p>
+<p><strong>Trigger categories.</strong></p>
+<ul>
+<li><strong>Obstruction:</strong> slow drivers, blocked lanes, traffic jams, drivers who will not let you merge.</li>
+<li><strong>Disrespect:</strong> being cut off, tailgated, honked at, or gestured at.</li>
+<li><strong>Time pressure:</strong> running late, tight schedules, appointments.</li>
+<li><strong>Displaced stress:</strong> anger from work, home, money, or relationships that you carry into the car. This is called <strong>displaced aggression</strong>.</li>
+</ul>
+<p><strong>Thinking patterns that fuel anger.</strong></p>
+<ul>
+<li><strong>Hostile attribution:</strong> "They did that on purpose."</li>
+<li><strong>Catastrophizing:</strong> "If I'm late, my whole day is ruined."</li>
+<li><strong>"Should" statements:</strong> "People should know how to drive. They shouldn't be on the road."</li>
+<li><strong>Personalization:</strong> "This always happens to me. They're targeting me."</li>
+</ul>
+<p>Anger shows up in the body before it shows up in behavior. Common early warning signs include a tight grip on the wheel, clenched jaw, faster breathing, a hot face, raised shoulders, and leaning forward. Noticing them gives you time to choose your response.</p>
+
+<div class="myth"><p><strong>Myth:</strong> Honking, yelling, or gesturing helps me "let it out" so I feel better.</p><p><strong>Fact:</strong> Research suggests venting tends to increase anger rather than release it. Rumination, or replaying the incident in your mind, also keeps anger going long after the event.</p></div>
+
+<h4>Module 7 Review: Strategies That Work</h4>
+<p>Module 7 gave you a toolbox. The goal is a few strategies you know well enough to use under pressure.</p>
+<p><strong>Cognitive restructuring (reframing).</strong></p>
+<p>Cognitive restructuring means catching an angry thought and replacing it with a more accurate, less hostile one. Change the interpretation, and you change the response. Some examples:</p>
+<table>
+<tr><th>Angry thought</th><th>Reframe</th></tr>
+<tr><td>"That idiot cut me off on purpose."</td><td>"They probably didn't see me. I've made that mistake too."</td></tr>
+<tr><td>"This slow driver is ruining my day."</td><td>"They might be lost or nervous. A few extra seconds won't ruin anything."</td></tr>
+<tr><td>"I have to show him he can't do that."</td><td>"It's not my job to teach anyone a lesson. My job is to get home safely."</td></tr>
+</table>
+<p><strong>Relaxation techniques.</strong></p>
+<ul>
+<li><strong>Breathing (4-4-6):</strong> breathe in for 4 counts, hold for 4, breathe out slowly for 6. The long exhale helps calm the body.</li>
+<li><strong>Progressive muscle relaxation:</strong> tense and release muscle groups such as shoulders and jaw, only when safe.</li>
+<li><strong>Physical reset:</strong> loosen your grip, drop your shoulders, sit back in the seat.</li>
+</ul>
+<p>Deffenbacher's research found that relaxation and cognitive-relaxation approaches reduced driving anger, and the gains were largely maintained about a year later.</p>
+<p><strong>The three-second delay.</strong></p>
+<p>When something triggers you, pause for three seconds before reacting. Those seconds create space between the trigger and the action.</p>
+<p><strong>Planning and transition.</strong></p>
+<ul>
+<li><strong>Trip planning:</strong> leave earlier and build in a buffer to remove time pressure.</li>
+<li><strong>Pre-drive transition:</strong> before starting the car, take a minute to set aside whatever happened before.</li>
+</ul>
+<p><strong>What not to do.</strong></p>
+<p>Avoid venting, retaliation, and rumination. Each makes anger stronger and longer.</p>
+<p><strong>Your personal change plan.</strong></p>
+<p>A good personal change plan is <strong>specific, written, and reviewed</strong>. It names a specific behavior you want to change, the trigger that usually leads to it, and the replacement action you will use instead. A specific plan like "When I'm running late and someone in front of me is slow, I will breathe 4-4-6, remind myself that a minute won't matter, and stay three to four seconds back" gives you something to actually do. If you slip, treat it as information, not failure. Figure out what triggered it, adjust the plan, and keep going.</p>
+
+<h3>Putting It All Together: Integrated Scenarios</h3>
+<p>These scenarios are fictional composites. Each involves ideas from several modules. Decide what you think, then open the analysis.</p>
+
+<div class="scenario"><h4>Scenario: Marcus and the Morning Commute</h4><p>Consider a driver we'll call Marcus. He had an argument at home this morning and left 10 minutes later than planned. On I-64, the speed limit is 70 mph. Traffic is light, and Marcus pushes his speed to 88 mph to make up time. A car merges in front of him without signaling. He closes to within one car length, flashes his high beams, and honks repeatedly.</p><details><summary>What should happen here?</summary><p>Several course concepts show up at once. The argument at home is <strong>displaced aggression</strong> (Module 6). Leaving late creates <strong>time pressure</strong>, a major RAD trigger (Module 3). At 88 mph, Marcus already meets the definition of reckless driving by speed because he is <strong>over 85 mph</strong>, even though he is only 18 over the limit (Module 2). Closing to one car length and harassing the other driver could support an <strong>aggressive driving</strong> charge under § 46.2-868.1: following too closely plus intent to harass or intimidate (Module 3). If he assumes the driver cut him off on purpose, that is <strong>hostile attribution bias</strong> (Module 4). He could face Class 1 misdemeanor penalties and 6 points (Module 5). A better path: a pre-drive transition before leaving, accepting a late arrival, the three-second delay when cut off, a reframe like "they didn't see me," and dropping back to a 3 to 4 second following distance (Module 7).</p></details></div>
+
+<div class="scenario"><h4>Scenario: Danielle in the Rain</h4><p>Consider a driver we'll call Danielle. She is on a two-lane road with a 55 mph limit during a heavy rainstorm. She drives at 54 mph because "it's under the limit." She hydroplanes around a curve and slides into a ditch.</p><details><summary>What should happen here?</summary><p>Danielle believed she could not be reckless because she was under the posted limit. That is a myth. Under <strong>§ 46.2-861</strong>, exceeding a reasonable speed for the conditions is reckless driving regardless of the posted limit (Modules 1 and 2). Losing control could also relate to <strong>§ 46.2-853</strong>, driving a vehicle not under proper control. The fix is simple: slow down well below the limit in bad weather and increase following distance beyond 3 to 4 seconds.</p></details></div>
+
+<div class="scenario"><h4>Scenario: The Parking Lot Showdown</h4><p>Consider two young drivers we'll call Tyler and Jordan. They meet at a stoplight, rev their engines, and race each other to the next light. Later, Tyler does burnouts in a shopping center parking lot while a small crowd of friends watches.</p><details><summary>What should happen here?</summary><p>Racing between two or more vehicles is reckless driving under <strong>§ 46.2-865</strong>, with a license suspension of <strong>not less than 6 months nor more than 2 years</strong> (Module 5). The burnouts near a group of two or more people are <strong>exhibition driving</strong>, which carries a license suspension of up to 6 months. If racing or exhibition driving with reckless disregard for human life had caused serious bodily injury to an uninvolved person, it would be a <strong>Class 6 felony</strong> under § 46.2-865.1; if it caused a death, it would be a felony punishable by <strong>1 to 20 years</strong> in prison. The watching crowd also reflects <strong>social proof</strong> (Module 4).</p></details></div>
+
+
+<div class="scenario"><h4>Scenario: The Points Add Up</h4><p>Consider a driver we'll call Andre. He received a reckless driving conviction (6 points) in March. In September of the same year, he received another 6-point conviction. He tells a friend, "It's just points. They go away."</p><details><summary>What should happen here?</summary><p>Andre now has 12 points within 12 months, which means he <strong>must complete a Driver Improvement Clinic within 90 days</strong> (Module 5). While the points count for 2 years from the violation date, each 6-point conviction stays on his DMV record for <strong>11 years</strong>, and each reckless driving conviction is a criminal Class 1 misdemeanor. Andre's "it's just points" thinking is a form of <strong>time discounting</strong> (Module 4): he is focused on the short term and ignoring long-term costs.</p></details></div>
+
+<h3>Consolidated Glossary</h3>
+<p>Make sure you can explain each of these terms in a sentence.</p>
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Reckless driving</dt><dd>In Virginia, a Class 1 misdemeanor covering driving that endangers life, limb, or property, and several specific behaviors such as excessive speed, unsafe speed for conditions, and racing.</dd>
+<dt>Reckless driving by speed</dt><dd>Driving 20 mph or more over the limit, or over 85 mph regardless of the limit (§ 46.2-862).</dd>
+<dt>Aggressive driving</dt><dd>Committing certain listed traffic offenses while being a hazard to another person or intending to harass, intimidate, injure, or obstruct (§ 46.2-868.1); a Class 2 misdemeanor, or Class 1 with intent to injure.</dd>
+<dt>Improper driving</dt><dd>A traffic infraction (fine up to $500) a court may find instead of reckless driving when the recklessness is slight (§ 46.2-869); at the court's discretion.</dd>
+<dt>Class 1 misdemeanor</dt><dd>Virginia's most serious misdemeanor class: up to 12 months in jail and/or up to $2,500 fine.</dd>
+<dt>Demerit points</dt><dd>Points the Virginia DMV assigns for violations; reckless driving carries 6, and points count for 2 years.</dd>
+<dt>Safe driving points</dt><dd>Positive points earned for violation-free years (+1 per year, up to +5) or by completing a Driver Improvement Clinic.</dd>
+<dt>Hostile attribution bias</dt><dd>Assuming another person's unclear behavior was meant to be hostile.</dd>
+<dt>Displaced aggression</dt><dd>Anger from other parts of life carried into driving and aimed at other road users.</dd>
+<dt>Cognitive reappraisal / restructuring</dt><dd>Replacing a hostile interpretation with a more neutral, accurate one, such as seeing a mistake rather than an insult.</dd>
+<dt>Three-second delay</dt><dd>Pausing three seconds before reacting to a trigger to create space for a better choice.</dd>
+<dt>Trigger-action gap</dt><dd>The space between a trigger and your response, where thoughts, emotions, and choices happen.</dd>
+</dl></div>
+
+<h4>Common Mix-Ups to Avoid</h4>
+<p>Some facts are easy to confuse. Keep these straight:</p>
+<ul>
+<li><strong>2 years vs. 11 years.</strong> Demerit points count for 2 years from the violation date. A 6-point conviction like reckless driving stays on your DMV record for 11 years.</li>
+<li><strong>85 vs. 80.</strong> The current Virginia threshold for reckless driving by speed regardless of limit is over 85 mph. It was 80 mph before July 1, 2020.</li>
+<li><strong>Class 1 vs. Class 2.</strong> Reckless driving is Class 1. Aggressive driving is Class 2, unless there is intent to injure, which makes it Class 1.</li>
+<li><strong>Driver behavior and crashes.</strong> NHTSA identifies driver behavior or error as the critical reason in the large majority of crashes, and speeding as a factor in roughly 3 in 10 traffic fatalities.</li>
+</ul>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4>
+<label>Which trigger category (obstruction, disrespect, time pressure, or displaced stress) affects you most often?</label><textarea></textarea>
+<label>Which two strategies from Module 7 are you most likely to actually use? Describe when you will use them.</label><textarea></textarea>
+</div>
+
+<h3>Your Commitment and the Final Test</h3>
+<h4>Your Commitment Statement</h4>
+<p>Write a short, specific commitment statement. Here is a sample you can adapt:</p>
+<p><em>"I understand that reckless and aggressive driving put lives at risk and carry serious criminal consequences in Virginia. I commit to driving at a speed that is safe for conditions, keeping at least a 3 to 4 second following distance, and leaving early enough that I do not feel rushed. When another driver makes a mistake, I will assume it was not personal, use the three-second delay, and breathe before I respond. If someone is aggressive toward me, I will not engage. If I slip, I will figure out why and adjust my plan rather than give up."</em></p>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4>
+<label>Write your own commitment statement in two to four sentences.</label><textarea></textarea>
+<label>What is one specific situation in the next week where you expect to need it?</label><textarea></textarea>
+</div>
+
+<h4>Final Test Information</h4>
+<p>After you pass the Module 8 Exam, you will take the course final test:</p>
+<table>
+<tr><th>Item</th><th>Details</th></tr>
+<tr><td>Number of questions</td><td>20</td></tr>
+<tr><td>Question types</td><td>Multiple choice and true/false</td></tr>
+<tr><td>Passing score</td><td>80% (16 out of 20 correct)</td></tr>
+<tr><td>Materials</td><td>Closed book; no notes or outside materials</td></tr>
+<tr><td>Coverage</td><td>All eight modules</td></tr>
+<tr><td>Retakes</td><td>If you do not pass, you may retake the test after 24 hours, if required or allowed by your program</td></tr>
+</table>
+<p><strong>Test-taking tips:</strong></p>
+<ul>
+<li>Read each question fully, including every answer choice, before choosing.</li>
+<li>Watch for words like "regardless," "or," and "and," which change the meaning of legal definitions.</li>
+<li>Answers cannot be changed after you submit, so review before you click submit.</li>
+</ul>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Reckless driving in Virginia is a Class 1 misdemeanor (up to 12 months in jail and/or $2,500 fine), generally requires a court appearance, and carries 6 demerit points with an 11-year DMV record.</li>
+<li>Reckless driving by speed means 20 mph or more over the limit or over 85 mph regardless of the limit; driving too fast for conditions can be reckless even under the limit.</li>
+<li>At 60 mph you travel about 88 feet per second; braking distance roughly quadruples when speed doubles.</li>
+<li>Aggressive driving is a listed traffic offense plus being a hazard or intending to harass, intimidate, injure, or obstruct; it is a Class 2 misdemeanor, or Class 1 with intent to injure.</li>
+<li>High-anger drivers had about twice as many crashes in simulations; common triggers are obstruction, disrespect, time pressure, and displaced stress.</li>
+<li>Racing can bring a 6-month to 2-year suspension, and racing that causes death is a felony punishable by 1 to 20 years in prison.</li>
+<li>Venting, retaliation, and rumination make anger worse; cognitive reappraisal, relaxation, the three-second delay, and trip planning make it better.</li>
+<li>A strong personal change plan is specific, written, and reviewed, and names a behavior, a trigger, and a replacement action.</li>
+<li>The final test has 20 questions, requires 80% (16 of 20) to pass, and is closed book.</li>
+</ul>
+<p>When the timer reaches 00:00, the Module 8 Exam will unlock. It has 15 questions covering review material from all modules, and you need 80% to pass. Thank you for your effort throughout this course.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 8 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course to take the Module 8 Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-m8-remaining', DONE='rad-m8-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';go.removeAttribute('href');
+      msg.textContent='You have completed the required time for Module 8. Return to your course to take the Module 8 Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 7: Attitude Change — Strategies That Work | Virginia Commonwealth Driving Improvement Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Module 7 of 8 &middot; 30 minutes</span>Module 7: Attitude Change — Strategies That Work</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>In Module 6 you learned to spot your triggers, the thinking patterns that make them worse, and the body signals that warn you anger is building. Spotting triggers is step one. Changing how you respond is step two. This module gives you practical strategies that research shows can lower driving anger and reduce aggressive behavior. None of them asks you to become a timid driver. They help you stay in charge of your own choices, so another driver's mistake does not become your criminal charge, your crash, or your lost license.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain what research shows about strategies that reduce driving anger, including how long the benefits can last.</li>
+<li>Use cognitive restructuring (reframing) to replace hostile thoughts with accurate, calmer ones.</li>
+<li>Apply in-car relaxation techniques, including 4-4-6 breathing, progressive muscle relaxation, and a physical reset.</li>
+<li>Use the three-second delay, trip planning, and a pre-drive transition to remove the pressure behind reckless and aggressive choices.</li>
+<li>Explain why venting, retaliation, and rumination backfire.</li>
+<li>Build a written personal change plan and know how to handle a slip.</li>
+</ul></div>
+
+<h3>What the Research Shows</h3>
+<p>It is fair to ask whether attitude change is real or just something courses say. Driving anger has been studied carefully, and the results are encouraging.</p>
+<p>Psychologist Jerry Deffenbacher of Colorado State University studied drivers who report high anger behind the wheel. As you learned in Module 3, high-anger drivers get angry faster, have more hostile thoughts, and take more risks, such as speeding 10 to 20 mph over the limit, rapid lane changes, tailgating, and entering intersections on red. In driving simulations they had about twice as many crashes as low-anger drivers.</p>
+<p>The key finding for this module is what happened when those drivers learned new skills. Deffenbacher tested relaxation training alone and relaxation combined with cognitive techniques (learning to change angry thinking). Both reduced driving anger. When the drivers were checked about a year later, the gains were largely maintained. People did not just feel better for a week. They kept the skills.</p>
+<div class="highlight"><strong>Research Finding:</strong> In Deffenbacher's studies, relaxation and cognitive-relaxation interventions reduced driving anger in high-anger drivers, and the improvements were largely maintained about a year later. Road anger is a pattern you can change with practice, not a fixed personality trait.</div>
+<p>A second source of evidence comes from Australia. The Monash University Accident Research Centre developed the Reducing Aggressive Driving (RAD) program. Its research identified triggers you know from Module 6: being obstructed, feeling disrespected (cut off or tailgated), time pressure, and stress from other parts of life spilling onto the road. Participants said the most valuable parts were practical take-home strategies and hearing from other drivers with similar experiences.</p>
+<p>That is the approach here: concrete tools plus fictional composite stories of drivers who faced the same situations you do. One more point before we start. Willpower alone rarely works, because anger on the road happens in a split second, before you have time to decide anything. You need skills you have practiced ahead of time, so they run almost automatically, like a fire drill you rehearse before there is a fire.</p>
+
+<h3>Strategy 1: Cognitive Restructuring (Reframing)</h3>
+<p>Cognitive restructuring means noticing the thought that is fueling your anger and replacing it with one that is more accurate and more useful. The idea is simple: the event itself does not decide how angry you get. Your interpretation of the event does.</p>
+<p>Researchers call one version of this <strong>cognitive reappraisal</strong>: reinterpreting another driver's behavior as a mistake rather than a deliberate attack. Studies of driving anger have found that this kind of reinterpretation reduces aggressive responses. It works directly against <strong>hostile attribution bias</strong>, the tendency to assume other people meant to hurt or disrespect you.</p>
+
+<h4>The four-step reframe</h4>
+<ol>
+<li><strong>Catch it.</strong> Notice the angry thought. It often sounds like a sentence in your head: "This idiot did that on purpose."</li>
+<li><strong>Check it.</strong> Ask: "Do I actually know that?" Usually you have seen a few seconds of a stranger's driving and nothing else.</li>
+<li><strong>Consider other explanations.</strong> Name at least one innocent explanation. They did not see you. They are lost. They just got bad news.</li>
+<li><strong>Choose a replacement thought.</strong> Pick a thought that is believable and calming, and say it to yourself.</li>
+</ol>
+<p>The replacement does not have to be cheerful or fake. "They are a wonderful person" will not convince you. "That was a bad move, but it was probably a mistake, and it is not worth my license" is honest and works much better.</p>
+
+<h4>Reframes for common situations</h4>
+<table>
+<tr><th>Situation</th><th>Angry thought</th><th>Replacement thought</th></tr>
+<tr><td>Someone cuts you off</td><td>"They did that on purpose."</td><td>"They probably did not see me. I have made that mistake myself."</td></tr>
+<tr><td>Running late</td><td>"I have to get there as fast as possible."</td><td>"Arriving a few minutes late is better than arriving with a ticket, or not at all."</td></tr>
+<tr><td>Slow driver in the left lane</td><td>"They are blocking me to make a point."</td><td>"They may not realize they are in the passing lane. I will pass safely when I can."</td></tr>
+<tr><td>Someone tailgates you</td><td>"I will not let them bully me."</td><td>"Their problem is not my problem. I will let them by when it is safe."</td></tr>
+<tr><td>Wanting to retaliate</td><td>"I will teach them a lesson."</td><td>"My reaction is my choice. I am not handing a stranger control of my behavior."</td></tr>
+<tr><td>Heavy traffic on I-95 or I-64</td><td>"This always happens to me. My day is ruined."</td><td>"Traffic is traffic. I can use this time to breathe and settle in."</td></tr>
+<tr><td>Merging driver will not let you in</td><td>"They should let me in."</td><td>"I cannot control them. I will find the next gap."</td></tr>
+</table>
+<p>Several of these replacements target the thinking patterns from Module 6. "My day is ruined" is <em>catastrophizing</em>, and "This always happens to me" is <em>personalization</em>. "They should let me in" is a <em>should statement</em>. "They are blocking me to make a point" is <em>hostile attribution</em>. Recognizing the pattern helps you pick the matching reframe faster.</p>
+
+<h4>The "Will this matter?" test</h4>
+<p>Another powerful reframe is perspective. Ask: "Will this matter in an hour? A day? A year?" Being cut off almost never matters an hour later. A reckless driving conviction is a Class 1 misdemeanor in Virginia and stays on your DMV record for 11 years. Put side by side, the choice gets much clearer.</p>
+
+<div class="scenario"><h4>Scenario: Marcus and the Late Merge</h4><p>Consider a driver we'll call Marcus. He is heading home on Route 288 after a long shift. A pickup truck speeds down an on-ramp and merges right in front of him with very little room. Marcus brakes hard. His first thought is, "He saw me and did that on purpose." His face gets hot, and he wants to pull up close behind the truck and flash his high beams.</p><details><summary>What should happen here?</summary><p>Using the four-step reframe, Marcus catches the thought ("He did that on purpose"), checks it ("I saw two seconds of his driving"), considers another explanation ("The ramp is short; he may have misjudged my speed"), and chooses a replacement ("Bad merge, probably a mistake, not worth my license"). He eases off and rebuilds a 3-to-4-second following distance. Had he tailgated and flashed his lights to intimidate the driver, he could have been charged with aggressive driving under § 46.2-868.1, which covers listed offenses such as following too closely combined with intent to harass, intimidate, or obstruct another person. A ten-second reframe protected him from that outcome.</p></details></div>
+
+<h3>Strategy 2: Relaxation Techniques You Can Use in the Car</h3>
+<p>Anger is a full-body event. Your heart beats faster, your breathing gets shallow, your muscles tense, and your attention narrows to the "enemy." That narrowing is dangerous, because a driver focused on one car is not watching the pedestrian, the brake lights ahead, or the light turning red. Relaxation techniques work on the body side of anger. When the body calms down, the thinking brain can catch up. Deffenbacher's research found that relaxation training on its own reduced driving anger.</p>
+
+<h4>4-4-6 breathing</h4>
+<ol>
+<li>Breathe in slowly through your nose for a count of <strong>4</strong>.</li>
+<li>Hold the breath gently for a count of <strong>4</strong>.</li>
+<li>Breathe out slowly through your mouth for a count of <strong>6</strong>.</li>
+<li>Repeat three to five times.</li>
+</ol>
+<p>The longer exhale is the key part. Slow, extended breathing out is associated with the body's calming response, and many people notice their shoulders drop by the third breath. If 4-4-6 feels uncomfortable, shorten it to 3-3-5. The pattern matters more than the exact numbers.</p>
+
+<h4>Progressive muscle relaxation (PMR)</h4>
+<p>PMR means tensing a muscle group for a few seconds and then releasing it, so you feel the difference between tension and relaxation. Use PMR <strong>only when you are fully stopped</strong>, such as at a long red light, in stopped traffic, or in a parking lot. Never tense your legs or feet while the vehicle is moving.</p>
+<ul>
+<li><strong>Hands:</strong> Squeeze the wheel firmly for five seconds, then let your hands rest lightly on it.</li>
+<li><strong>Shoulders:</strong> Lift them toward your ears, hold, then drop them.</li>
+<li><strong>Face and jaw:</strong> Clench, hold, then release and let your mouth fall slightly open.</li>
+<li><strong>Back:</strong> Press your back into the seat, hold, then release.</li>
+</ul>
+<p>Practicing PMR at home for a few minutes a day makes it much more effective in the car, because your body learns what "relaxed" feels like.</p>
+
+<h4>The physical reset</h4>
+<p>The physical reset is a 10-second body check you can safely do while driving:</p>
+<ul>
+<li>Loosen your grip on the wheel. You need control, not a death grip.</li>
+<li>Lower your shoulders away from your ears.</li>
+<li>Unclench your jaw and relax your forehead.</li>
+<li>Sit back against the seat instead of leaning forward.</li>
+<li>Take one slow breath with a long exhale.</li>
+</ul>
+<p>Tie the reset to an everyday cue, like every red light or every time you merge onto the interstate, so you check in with your body before anger builds. You can also lower your baseline stress by keeping the car at a comfortable temperature, choosing calmer audio instead of loud, aggressive music or heated talk radio, and putting your phone out of reach.</p>
+
+<h3>Strategy 3: The Three-Second Delay</h3>
+<p>Many aggressive reactions happen in the first few seconds after a trigger. The horn blast, the tailgating, or the swerve to "get back" at someone usually happens before the driver has really thought about it. The three-second delay puts a small gap between the trigger and your action. That gap is where your thinking brain gets a vote.</p>
+<ol>
+<li><strong>Notice the trigger.</strong> "That driver just cut me off." Name it silently.</li>
+<li><strong>Count to three</strong> while taking one slow breath and loosening your grip. Do nothing with the horn, the lights, or the gas during that count.</li>
+<li><strong>Ask:</strong> "Will this matter in an hour? A day? A year?"</li>
+<li><strong>Choose your response</strong> on purpose. In nearly every case, the best response is to create space and let it go.</li>
+</ol>
+<p>Your body's alarm system reacts first. The part of your brain that weighs consequences needs a moment to come online, and the delay gives it that moment. The delay also fits with safe following distance: keep at least 3 to 4 seconds behind the vehicle ahead in good conditions, and more in bad weather. That space lets you absorb another driver's mistake without slamming the brakes, which means fewer triggers in the first place.</p>
+
+<div class="scenario"><h4>Scenario: Danielle and the Horn</h4><p>Consider a driver we'll call Danielle. She is waiting to turn left at a busy intersection in Henrico County. The light turns green and she waits for oncoming traffic to clear. The driver behind her leans on the horn. Danielle thinks, "Fine, you want me to go? Watch this," and her foot starts to press the gas even though an oncoming car is still approaching.</p><details><summary>What should happen here?</summary><p>This is the moment for the three-second delay. Danielle notices the trigger, counts to three while breathing out slowly, and asks whether this will matter in an hour. It will not. What would matter for years is turning in front of oncoming traffic because someone honked. She waits for a safe gap and turns when it is clear. She can add a reframe: "They cannot see what I see from back there."</p></details></div>
+
+<h3>Strategy 4: Trip Planning to Remove Time Pressure</h3>
+<p>Time pressure is one of the most common triggers identified in the RAD research, and it is a common reason drivers speed. When you are late, every red light feels personal. The best way to manage time pressure is to stop creating it.</p>
+
+<h4>The math of "making up time"</h4>
+<p>Many drivers believe they can make up for a late start by driving faster. Consider a 10-mile trip:</p>
+<table>
+<tr><th>Speed</th><th>Time for 10 miles</th></tr>
+<tr><td>60 mph</td><td>10 minutes 0 seconds</td></tr>
+<tr><td>70 mph</td><td>about 8 minutes 34 seconds</td></tr>
+</table>
+<p>Driving 10 mph faster for the full 10 miles saves about 1 minute 26 seconds, and that assumes no lights, congestion, or slowdowns. In real traffic you usually catch up to the same cars at the next light. Meanwhile, your braking distance grows and crash energy rises sharply. Trading a minute and a half for that risk, plus a possible reckless driving charge, is a bad deal.</p>
+
+<h4>Practical trip-planning habits</h4>
+<ul>
+<li><strong>Add a buffer.</strong> Plan to arrive 10 to 15 minutes early for anything important, such as work, appointments, and court dates. If traffic is bad, you are still on time.</li>
+<li><strong>Check traffic before you leave,</strong> not after you are stuck. Choose your route while parked.</li>
+<li><strong>Prepare the night before.</strong> Many late starts come from a frantic search for keys or a missing item.</li>
+<li><strong>Know your trouble spots.</strong> Plan for the construction zone or congested interchange you drive through every day.</li>
+<li><strong>Accept the delay.</strong> Some days you will be late no matter what. "I will be 10 minutes late, and that is okay" takes the panic out of the drive.</li>
+</ul>
+
+<div class="warning"><strong>Virginia Law:</strong> Being late is not a defense. Under § 46.2-862, driving 20 mph or more over the applicable limit, or over 85 mph regardless of the posted limit, is reckless driving by speed. Under § 46.2-861, driving faster than is reasonable for the circumstances and traffic conditions can be reckless driving even below the posted limit. Reckless driving is a Class 1 misdemeanor, punishable by up to 12 months in jail and/or a fine of up to $2,500.</div>
+
+<div class="scenario"><h4>Scenario: Jordan and the Job Interview</h4><p>Consider a driver we'll call Jordan, who has a 9:00 a.m. job interview in Richmond and leaves home in Chesterfield at 8:35, expecting a 25-minute drive. Ten minutes in, traffic slows because of a crash ahead. Jordan starts weaving between lanes, riding the bumper of the car ahead, and pushing well past the limit on every open stretch.</p><details><summary>What should happen here?</summary><p>Jordan's problem started before the car moved: there was no buffer. Weaving and tailgating will save a minute or two at most, while greatly increasing crash risk and the chance of a reckless or aggressive driving stop. A better plan is to accept the delay, pull over somewhere safe to call the employer, and arrive calm. Most employers respect a candidate who calls ahead. None will be impressed by a reckless driving charge. Next time, Jordan should leave by 8:15 and check traffic before walking out the door.</p></details></div>
+
+<h3>Strategy 5: The Pre-Drive Transition</h3>
+<p>Module 6 introduced <strong>displaced aggression</strong>: carrying anger from an argument at home or a bad day at work into the car and taking it out on other drivers. Many people who have had an aggressive driving incident realize later that they were already angry before they turned the key. The other driver was just the last straw. The pre-drive transition helps you leave that anger outside the vehicle.</p>
+
+<h4>The 60-second transition</h4>
+<ol>
+<li><strong>Sit before you start.</strong> Buckle up and pause before starting the engine.</li>
+<li><strong>Check in honestly.</strong> Ask: "Am I carrying anger that does not belong on the road?"</li>
+<li><strong>Breathe.</strong> Do three rounds of 4-4-6 breathing.</li>
+<li><strong>Set an intention.</strong> "This drive is just a drive. I will get there safely."</li>
+<li><strong>Prepare the space.</strong> Set mirrors, audio, and navigation, and put your phone away now.</li>
+</ol>
+<p>Sometimes the honest answer to "How am I feeling?" is "Furious." Then the safest choice is to delay the trip if you can. Walk around the block, call a friend while parked, or wait 10 or 15 minutes. Intense anger usually eases with a little time and distance. The same idea applies at the end of a drive: if something on the road upset you, take a minute in the parking lot before you walk into work or home, so road anger does not spill into the rest of your day.</p>
+
+<h3>What Not to Do: Responses That Backfire</h3>
+<p>Some common ways of handling anger feel natural, and some people even believe they are healthy. Research says otherwise. These responses make anger stronger, make it last longer, and lead to more risky behavior.</p>
+
+<h4>Venting</h4>
+<p>Venting means letting anger out by yelling, honking, gesturing, or pounding the steering wheel. Many people believe this "releases" anger like steam from a pressure cooker. Research does not support that. Venting tends to <strong>increase</strong> anger rather than release it. Each shout or horn blast rehearses the anger and keeps your body fight-ready. It can also provoke the other driver, turning a one-sided annoyance into a two-car conflict.</p>
+
+<div class="myth"><p><strong>Myth:</strong> It is healthy to let it out. Yelling at other drivers helps me blow off steam so I do not do something worse.</p><p><strong>Fact:</strong> Venting tends to increase anger, not reduce it. Slow breathing, reframing, and creating space lower anger far more reliably.</p></div>
+
+<h4>Retaliation</h4>
+<p>Retaliation means trying to "teach them a lesson": tailgating someone who cut you off, brake-checking, blocking a merge, or chasing a driver to confront them. This is where road conflicts turn dangerous, and it moves you from the person who was wronged to the person breaking the law. Under § 46.2-868.1, aggressive driving includes listed offenses such as following too closely or improper passing combined with intent to harass, intimidate, injure, or obstruct another person. It is a Class 2 misdemeanor, and with intent to injure, a Class 1 misdemeanor. The other driver's bad move does not excuse yours in court.</p>
+
+<h4>Rumination</h4>
+<p>Rumination means replaying the incident over and over: "I cannot believe they did that." It keeps anger alive long after the event is over. The driver who cut you off is gone, but your body keeps reacting as if it is still happening, and your attention is on your thoughts instead of the road. To break it, label it ("I am replaying it again; that is done") and redirect your attention to driving tasks: scan your mirrors, check your speed, note the next turn. A closing phrase such as "It is over. I am fine" can help.</p>
+
+<div class="warning"><strong>Caution:</strong> If another driver is aggressive toward you, do not engage. Avoid eye contact, do not gesture back, keep your doors locked, and create distance. If you are followed, do not drive home. Drive to a police station or a busy public place, and call 911 when it is safe to do so.</div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think of a time you vented, retaliated, or ruminated after an incident on the road. What happened next, and how did you feel an hour later?</label><textarea></textarea><label>Which backfiring response is most common for you, and what will you do instead?</label><textarea></textarea></div>
+
+<h3>Building Your Personal Change Plan</h3>
+<p>Knowing strategies is not the same as using them. A written personal change plan turns the ideas in this module into specific commitments. Specific, written plans are much easier to follow than general promises like "I will try to be calmer."</p>
+
+<h4>The five parts of a good plan</h4>
+<ol>
+<li><strong>Identify the behavior.</strong> "Drive better" is too vague. "Stop tailgating when I feel someone is going too slow" is specific.</li>
+<li><strong>Identify the trigger.</strong> Use your trigger profile from Module 6: "When I am running late, especially on my morning commute."</li>
+<li><strong>Identify the replacement.</strong> Choose one or two strategies from this module: "Leave 15 minutes earlier, keep a 4-second gap, and use 4-4-6 breathing when I feel the urge to close in."</li>
+<li><strong>Commit.</strong> Write it down. Tell someone you trust. Put a reminder where you will see it.</li>
+<li><strong>Review.</strong> At the end of each week, honestly assess how you did and adjust as needed.</li>
+</ol>
+
+<h4>Sample plan</h4>
+<p>Here is how a driver we'll call Andre filled out his plan:</p>
+<ul>
+<li><strong>Behavior:</strong> Speeding 15 to 20 mph over the limit on I-64 when behind schedule.</li>
+<li><strong>Trigger:</strong> Late starts on workday mornings, usually after hitting snooze.</li>
+<li><strong>Replacement:</strong> Alarm 20 minutes earlier, bag packed the night before, cruise control set at the limit, and the reframe "Two minutes is not worth my license."</li>
+<li><strong>Reminder:</strong> A note on my keys that says "Buffer, not speed." My partner will ask each Friday how the week went.</li>
+<li><strong>Review:</strong> Every Sunday, note any day I caught myself speeding and what was going on.</li>
+</ul>
+<p>Andre's plan targets both the cause (late starts) and the behavior (speeding), and it combines practical fixes with a mental tool. Good plans usually do both.</p>
+
+<div class="plan"><h4>Your Personal Change Plan (for your own use — not submitted)</h4>
+<label>The specific behavior I will change:</label><textarea></textarea>
+<label>The situations or triggers where it happens:</label><textarea></textarea>
+<label>What I will do instead (one or two strategies from this module):</label><textarea></textarea>
+<label>The reframe or phrase I will say to myself:</label><textarea></textarea>
+<label>How I will remind myself (note, alarm, person I will tell):</label><textarea></textarea>
+<label>When and how I will review my progress each week:</label><textarea></textarea>
+</div>
+
+<h3>When You Slip: Handling Setbacks</h3>
+<p>Changing a long-standing habit rarely happens in a straight line. There will probably be a day when you honk before you think, or a morning when you catch yourself pushing the speed. That is a <strong>slip</strong>, not a failure. A slip is a single lapse into the old behavior. A relapse is when a slip turns into a full return to the old pattern, often because the driver decides, "I blew it, so what is the point?" That all-or-nothing thinking is the real danger. One honk does not erase weeks of calmer driving.</p>
+
+<h4>A four-step slip recovery</h4>
+<ol>
+<li><strong>Get safe first.</strong> Create space from the other car, slow down, and breathe.</li>
+<li><strong>Own it without beating yourself up.</strong> "That was not the driver I want to be." Shame tends to fuel more anger. Honest responsibility does not.</li>
+<li><strong>Analyze it.</strong> Later, when calm, ask: What was the trigger? Was I already stressed, tired, or late? Which strategy could I have used?</li>
+<li><strong>Adjust the plan.</strong> Maybe you need a bigger time buffer, a new reframe, or more breathing practice. Update the plan and keep going.</li>
+</ol>
+
+<div class="scenario"><h4>Scenario: Kevin's Bad Tuesday</h4><p>Consider a driver we'll call Kevin. For three weeks he has been using his change plan: leaving early, keeping his following distance, and using reframes. Then on a Tuesday, after a stressful meeting, a driver drifts into his lane on Broad Street. Kevin honks, speeds up, and follows the car too closely for half a mile before he realizes what he is doing. Afterward he thinks, "I guess I have not changed at all."</p><details><summary>What should happen here?</summary><p>Kevin had a slip, not a relapse, and noticing it on his own is evidence of progress. He should back off immediately and rebuild a safe gap. Later, he can analyze it: the trigger was the drifting car, but the stressful meeting set him up (displaced aggression). His plan needs one addition, a 60-second pre-drive transition after hard days at work. He should treat the slip as information, update his plan, and keep going.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which strategy from this module do you believe will help you most, and why?</label><textarea></textarea><label>Where are you most likely to slip in the next month, and what will you do if it happens?</label><textarea></textarea></div>
+
+<p>Attitude change is not about becoming a passive driver. It is about becoming a <strong>deliberate</strong> driver who chooses responses instead of reacting on autopilot. A deliberate driver still notices bad driving but refuses to let a stranger's mistake decide what happens to their license, record, wallet, or life. These strategies work. Not perfectly and not overnight, but measurably, when you practice them.</p>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Deffenbacher found that relaxation and cognitive-relaxation interventions reduced driving anger, with gains largely maintained about a year later.</li>
+<li>RAD program participants valued practical take-home strategies and hearing from other drivers with similar experiences.</li>
+<li>Cognitive restructuring replaces hostile thoughts with accurate ones: catch it, check it, consider other explanations, choose a replacement.</li>
+<li>4-4-6 breathing, progressive muscle relaxation (only when stopped), and the physical reset calm the body so the thinking brain can catch up.</li>
+<li>The three-second delay puts a gap between trigger and action. Ask, "Will this matter in an hour? A day? A year?"</li>
+<li>Speeding saves little time: 10 miles at 70 instead of 60 mph saves only about 1 minute 26 seconds. A time buffer is the real fix.</li>
+<li>A 60-second pre-drive transition helps prevent displaced aggression. If you are too angry to drive, delay the trip if you can.</li>
+<li>Venting, retaliation, and rumination backfire and can lead to aggressive or reckless driving charges.</li>
+<li>A written change plan names the behavior, trigger, replacement, commitment, and weekly review.</li>
+<li>A slip is not a failure. Get safe, own it, analyze it, and adjust your plan.</li>
+</ul>
+<p>When the timer reaches 00:00, the Module 7 Exam will unlock. The exam has 15 questions, and you need a score of 80% to pass. Take a moment to review your change plan before you begin.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 7 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course to take the Module 7 Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-m7-remaining', DONE='rad-m7-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';go.removeAttribute('href');
+      msg.textContent='You have completed the required time for Module 7. Return to your course to take the Module 7 Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

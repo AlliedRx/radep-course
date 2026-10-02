@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 1: The Virginia Reckless Driving Problem | Virginia Commonwealth Driving Improvement Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Module 1 of 8 &middot; 30 minutes</span>Module 1: The Virginia Reckless Driving Problem</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>Welcome to the Reckless &amp; Aggressive Driving Education course. If you are here because of a court referral, you may feel frustrated or defensive. That is normal. This module is not about blaming you. It is about making sure you understand exactly how Virginia defines reckless driving, why the state treats it as a crime rather than a simple traffic ticket, and what this course will ask of you over the next four hours. Virginia takes reckless driving more seriously than many states. Here, reckless driving is a <strong>criminal offense</strong> — a Class 1 misdemeanor — which means it can carry jail time, not just a fine. Understanding that reality is the first step toward making sure you never face it again.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain why Virginia classifies reckless driving as a criminal offense and how that differs from a traffic infraction.</li>
+<li>Identify the main ways a driver can be charged with reckless driving under Virginia Code §§ 46.2-852, 46.2-853, 46.2-861, and 46.2-862.</li>
+<li>Apply the "20 over or over 85" speed rule to real-world examples.</li>
+<li>Describe the basic penalties and DMV consequences connected to a reckless driving conviction.</li>
+<li>Explain why attitude and decision-making, not driving skill, drive most reckless behavior.</li>
+<li>Complete an honest self-assessment of your own driving habits.</li>
+</ul></div>
+
+<h3>Why Virginia Is Different</h3>
+<p>Many drivers on I-95, I-81, I-64, or I-66 are surprised by how strict Virginia's reckless driving laws are. Behavior that earns a payable ticket elsewhere can put you in front of a Virginia judge facing a criminal charge.</p>
+<p>There are three main reasons Virginia's approach stands out:</p>
+<ol>
+<li><strong>The definition is broad.</strong> Virginia law does not limit reckless driving to street racing or wild, out-of-control behavior. The general rule covers any driving that endangers "the life, limb, or property of any person." That gives officers and courts a wide range of conduct to work with.</li>
+<li><strong>Speed alone can be enough.</strong> Under Virginia law, driving 20 mph or more over the speed limit, or driving faster than 85 mph anywhere, is reckless driving by definition. You do not need to be weaving, tailgating, or acting aggressively. A heavy foot on an open interstate is enough.</li>
+<li><strong>It is a crime.</strong> Reckless driving is a Class 1 misdemeanor, the most serious class of misdemeanor in Virginia.</li>
+</ol>
+<p>The reasoning is simple: a vehicle is heavy, fast, and capable of killing people in an instant, so drivers who create serious danger for others face consequences that match that danger.</p>
+
+<div class="highlight"><strong>Key Fact:</strong> In Virginia, driving <strong>20 mph or more over the speed limit</strong> — or <strong>over 85 mph regardless of the limit</strong> — is reckless driving under Virginia Code § 46.2-862. You do not have to be weaving through traffic or racing. Simple speed is enough.</div>
+
+<h3>Criminal Charge vs. Traffic Infraction</h3>
+<p>To understand why a reckless driving charge matters so much, you need to understand the difference between a <em>traffic infraction</em> and a <em>criminal offense</em>.</p>
+<p>A <strong>traffic infraction</strong> is a minor violation of traffic law, such as many ordinary speeding tickets, failing to signal, or an expired inspection. Infractions are generally punished with a fine and, in many cases, DMV demerit points. They are not crimes, and they do not carry jail time.</p>
+<p>A <strong>criminal offense</strong> — a misdemeanor or felony — goes through the criminal court process, can carry jail time, and, if convicted, leaves a criminal conviction on your record.</p>
+<p>Reckless driving falls on the criminal side of that line. Virginia Code § 46.2-868 makes reckless driving a Class 1 misdemeanor. A Class 1 misdemeanor in Virginia can be punished by <strong>up to 12 months in jail and/or a fine of up to $2,500</strong>. That does not mean every driver convicted of reckless driving goes to jail — judges look at the facts of each case — but the possibility is real, and the court has the authority to impose it.</p>
+
+<table>
+<tr><th>Feature</th><th>Typical Traffic Infraction</th><th>Reckless Driving (Class 1 Misdemeanor)</th></tr>
+<tr><td>Type of offense</td><td>Non-criminal violation</td><td>Criminal offense</td></tr>
+<tr><td>Maximum jail</td><td>None</td><td>Up to 12 months</td></tr>
+<tr><td>Maximum fine</td><td>Varies by violation</td><td>Up to $2,500</td></tr>
+<tr><td>Court appearance</td><td>Often can be prepaid</td><td>Generally required</td></tr>
+<tr><td>DMV demerit points</td><td>Varies by violation</td><td>6 points</td></tr>
+<tr><td>Time on DMV record</td><td>Varies</td><td>11 years</td></tr>
+</table>
+
+<div class="warning"><strong>Virginia Code § 46.2-868:</strong> Reckless driving is a Class 1 misdemeanor. Because it is a criminal charge, it generally requires a court appearance — you cannot simply pay it online like a routine speeding ticket. If you are currently facing a charge, this course is not legal advice; talk with a licensed Virginia attorney about your specific situation.</div>
+
+<h4>A Possible Reduction: Improper Driving</h4>
+<p>Virginia law also recognizes that not every case is the same. Under § 46.2-869, when a court finds that the driver's recklessness was slight, the judge may find the driver guilty of <strong>improper driving</strong> instead of reckless driving. Improper driving is a traffic infraction with a fine of up to $500. This is entirely up to the court's discretion. It is not automatic, and no one can promise it. You will learn more about this in Module 5.</p>
+
+<h3>Every Way You Can Be Charged With Reckless Driving</h3>
+<p>Virginia does not have just one reckless driving law. It has a whole article of the Code devoted to reckless driving, with several sections that each describe a different kind of reckless conduct. Knowing them helps you see how many everyday choices can cross the line.</p>
+
+<h4>1. The General Rule — § 46.2-852</h4>
+<p>This is the broadest reckless driving law. It says that anyone who drives a vehicle on a highway "recklessly or at a speed or in a manner so as to endanger the life, limb, or property of any person" is guilty of reckless driving, regardless of the posted speed limit.</p>
+<p>The focus is <strong>endangerment</strong>: did your driving put people or property at risk? You do not need to cause a crash or be speeding. Behaviors that might lead to a charge under the general rule include weaving in and out of heavy traffic, cutting sharply across several lanes to make an exit, driving dangerously close to pedestrians or cyclists, or making aggressive moves that force other drivers to brake or swerve.</p>
+
+<h4>2. Vehicle Not Under Control — § 46.2-853</h4>
+<p>This section makes it reckless driving to drive a vehicle that is not under proper control, or that has inadequate or improperly adjusted brakes. This one surprises people. It means that your <em>vehicle's condition</em> and your <em>ability to control it</em> both matter. Losing control on a curve because you entered it too fast, or knowingly driving with brakes that barely work, can both fall under this section.</p>
+
+<h4>3. Too Fast for Conditions — § 46.2-861</h4>
+<p>Under this section, driving faster than is reasonable for the circumstances and traffic conditions is reckless driving — <strong>regardless of the posted speed limit</strong>. In other words, you can be under the limit and still be driving recklessly. Think about heavy rain, fog, snow, ice, a crowded parking area, a school pickup line, or a highway where traffic has suddenly slowed. The posted limit is the maximum under ideal conditions. It is not a promise that the limit is safe at every moment.</p>
+
+<h4>4. Reckless Driving by Speed — § 46.2-862</h4>
+<p>This is the section that catches the largest number of drivers. It says that driving <strong>20 mph or more over the applicable speed limit</strong>, or driving <strong>in excess of 85 mph regardless of the limit</strong>, is reckless driving. The 85 mph threshold took effect on July 1, 2020. Before that date, the threshold was 80 mph — so if you learned the rule years ago, make sure you know the current version.</p>
+<p>Let's work through some examples:</p>
+<table>
+<tr><th>Posted Limit</th><th>Your Speed</th><th>Over the Limit</th><th>Reckless Under § 46.2-862?</th></tr>
+<tr><td>25 mph (residential)</td><td>45 mph</td><td>20 mph</td><td>Yes — 20 or more over</td></tr>
+<tr><td>35 mph</td><td>54 mph</td><td>19 mph</td><td>No under 862, but could be charged under 852 or 861 depending on conditions</td></tr>
+<tr><td>55 mph</td><td>75 mph</td><td>20 mph</td><td>Yes — 20 or more over</td></tr>
+<tr><td>70 mph (interstate)</td><td>86 mph</td><td>16 mph</td><td>Yes — over 85 mph</td></tr>
+<tr><td>70 mph (interstate)</td><td>84 mph</td><td>14 mph</td><td>No under 862 (a speeding violation, but not reckless by speed alone)</td></tr>
+<tr><td>65 mph</td><td>85 mph</td><td>20 mph</td><td>Yes — 20 or more over</td></tr>
+</table>
+<p>Notice that 20 over comes quickly on low-speed roads, and on the interstate the 85 mph ceiling applies even when you are less than 20 over.</p>
+
+<div class="scenario"><h4>Scenario: The "Keeping Up With Traffic" Defense</h4><p>Consider a driver we'll call Marcus. He is heading south on I-95 in a 70 mph zone late on a Sunday night. Traffic is light, and several cars around him are moving fast. Marcus settles in behind one of them and sets his cruise control at 87 mph. A state trooper stops him. Marcus explains that he was just keeping up with traffic and that the road was nearly empty. Is Marcus guilty of reckless driving under § 46.2-862?</p><details><summary>What should happen here?</summary><p>Yes. Under § 46.2-862, driving in excess of 85 mph is reckless driving regardless of the posted limit. Marcus was only 17 mph over the 70 mph limit, but because he exceeded 85 mph, he meets the definition. "Keeping up with traffic" is not an exception in the law. The better choice would have been to let faster cars go and stay at or near the limit.</p></details></div>
+
+<h4>5. Other Reckless Driving Sections</h4>
+<p>The same article of the Code covers several more specific situations. You do not need the section numbers, but know the behaviors:</p>
+<ul>
+<li><strong>Passing a stopped school bus</strong> that is loading or unloading children.</li>
+<li><strong>Passing on a curve or the crest of a hill</strong>, where you cannot see oncoming traffic.</li>
+<li><strong>Passing two abreast</strong> or driving two abreast in a lane meant for one vehicle.</li>
+<li><strong>Racing</strong> another vehicle on a highway (§ 46.2-865), which also carries a license suspension of not less than 6 months and not more than 2 years.</li>
+<li><strong>Exhibition driving</strong>, such as burnouts or unnecessary zigzagging near a group of people, which can lead to a license suspension of up to 6 months.</li>
+</ul>
+<p>Each of these behaviors shares the same core problem: the driver chose to create a risk that other people did not agree to accept.</p>
+
+<h4>A Related Offense: Aggressive Driving — § 46.2-868.1</h4>
+<p>Virginia also has a separate offense called <strong>aggressive driving</strong>. A driver commits aggressive driving when they commit certain listed traffic offenses — such as following too closely, improper passing, failing to yield, evading traffic control devices, speeding, or stopping on a highway — <em>and</em> either create a hazard to another person or intend to harass, intimidate, injure, or obstruct another person. Aggressive driving is a Class 2 misdemeanor (up to 6 months in jail and/or a fine up to $1,000). If the driver intended to injure someone, it becomes a Class 1 misdemeanor. A court may also order the driver to complete an anger management or aggressive driving program. You will study aggressive driving in depth in Module 3.</p>
+
+<div class="scenario"><h4>Scenario: Under the Limit and Still Reckless</h4><p>Consider a driver we'll call Denise. She is driving on Route 288 near Richmond during a heavy thunderstorm. The posted limit is 60 mph, and she is driving 58. Water is pooling on the road, visibility is poor, and the cars ahead are braking unpredictably. Denise hydroplanes and slides into the shoulder, narrowly missing a disabled car. She tells the officer, "I wasn't even speeding." Could Denise still face a reckless driving charge?</p><details><summary>What should happen here?</summary><p>Yes, she could. Under § 46.2-861, driving faster than is reasonable for the conditions is reckless driving regardless of the posted limit. Under § 46.2-853, losing proper control of the vehicle can also be reckless driving. The posted limit describes the maximum in good conditions. In a heavy storm, a safe speed may be far lower, and Denise should also have increased her following distance well beyond the normal 3–4 seconds. "I was under the limit" is not a complete defense.</p></details></div>
+
+<h3>What a Conviction Can Mean</h3>
+<p>Module 5 covers penalties in detail, but you should have a clear overview now. A reckless driving conviction in Virginia can affect you in at least five ways:</p>
+<ol>
+<li><strong>Criminal penalties.</strong> As a Class 1 misdemeanor, reckless driving can bring up to 12 months in jail and/or a fine of up to $2,500.</li>
+<li><strong>License suspension.</strong> Under § 46.2-392, the court may suspend your license for not less than 10 days and not more than 6 months. Racing carries a longer suspension range, as noted above.</li>
+<li><strong>DMV demerit points.</strong> Reckless driving carries <strong>6 demerit points</strong>, the highest level in Virginia's point system. The points count against you for 2 years from the violation date, and the conviction itself stays on your DMV driving record for <strong>11 years</strong>.</li>
+<li><strong>Insurance costs.</strong> A reckless driving conviction typically raises insurance premiums substantially for years — often by hundreds to thousands of dollars per year — and some insurers may choose not to renew a policy.</li>
+<li><strong>A criminal record.</strong> Because it is a criminal conviction, it may show up when employers, landlords, or licensing agencies check your background. For people who drive for a living, the impact can be especially serious.</li>
+</ol>
+
+<div class="highlight"><strong>DMV Point Thresholds:</strong> Virginia DMV sends an advisory letter at 8 points in 12 months (or 12 in 24 months). At 12 points in 12 months (or 18 in 24 months), you must complete a Driver Improvement Clinic within 90 days. At 18 points in 12 months (or 24 in 24 months), your license is suspended for 90 days, and you must complete a clinic and serve 6 months of probation after restoration. A single reckless driving conviction puts you at 6 points — halfway to a mandatory clinic in one event.</div>
+
+<p>Add up fines, court costs, lost work days, and higher insurance, and one conviction can be among the most expensive decisions a driver ever makes — in exchange for a few minutes saved.</p>
+
+<h4>How Much Time Does Speeding Really Save?</h4>
+<p>Many drivers speed because they feel it saves meaningful time. The math rarely supports that feeling. Driving 10 miles at 60 mph takes 10 minutes. Driving the same 10 miles at 70 mph takes about 8 minutes and 34 seconds. The difference is only about <strong>1 minute and 26 seconds</strong> — and that assumes no traffic lights, no slowdowns, and no merging. In real traffic, you often catch up to the same cars at the next light anyway.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "Reckless driving is just a fancy speeding ticket. I'll pay it and move on."</p><p><strong>Fact:</strong> Reckless driving in Virginia is a Class 1 misdemeanor — a criminal charge. It generally requires a court appearance, it carries possible jail time of up to 12 months and fines up to $2,500, it adds 6 demerit points, and it remains on your DMV record for 11 years.</p></div>
+
+<div class="myth"><p><strong>Myth:</strong> "As long as I stay under the speed limit, I can't be charged with reckless driving."</p><p><strong>Fact:</strong> Under §§ 46.2-852, 46.2-853, and 46.2-861, you can be charged with reckless driving while driving at or below the limit if your speed is unreasonable for conditions, your vehicle is not under proper control, or your driving endangers others.</p></div>
+
+<h3>Attitude vs. Skill: Why This Course Exists</h3>
+<p>You already know how to drive. Most reckless driving charges are not caused by a lack of skill. They are caused by <strong>choices</strong> — and those choices come from attitudes, emotions, and habits.</p>
+<p>According to the National Highway Traffic Safety Administration (NHTSA), driver behavior or error is the critical reason behind the large majority of crashes, and speeding is a factor in roughly 3 in 10 U.S. traffic fatalities. Those numbers point to the same conclusion: the most important safety feature in any car is the decision-making of the person in the driver's seat.</p>
+<p>Compare these two questions:</p>
+<ul>
+<li><strong>Skill question:</strong> "Can I make it through that gap between the truck and the SUV at 80 mph?"</li>
+<li><strong>Attitude question:</strong> "Why do I feel like I <em>need</em> to make it through that gap in the first place?"</li>
+</ul>
+<p>A skilled driver might be able to make the move. But skill does not change the fact that the move creates unnecessary risk for everyone nearby. When you leave no margin for error, other people's mistakes become your crash.</p>
+
+<h4>Common Attitudes Behind Reckless Driving</h4>
+<p>Drivers who end up with reckless driving charges often share one or more of the following attitudes. You may recognize some of them in yourself — and that is fine. Recognizing them is the point.</p>
+<ul>
+<li><strong>"I'm a better driver than most people."</strong> Research consistently shows that most drivers rate themselves as above average — which is mathematically impossible. This is called <em>optimism bias</em>, and it leads people to believe that risks apply to other drivers, not to them.</li>
+<li><strong>"I'm in a hurry, and this is important."</strong> Time pressure makes small time savings feel huge. Drivers in a rush tend to overvalue a minute or two and undervalue the long-term risk. Psychologists call this <em>time discounting</em>.</li>
+<li><strong>"That driver did it on purpose."</strong> When someone cuts us off, we often assume they meant to disrespect us, rather than considering that they simply made a mistake. This is called <em>hostile attribution bias</em>, and it is one of the strongest fuels for driving anger.</li>
+<li><strong>"I've done it a hundred times and nothing happened."</strong> Getting away with risky behavior repeatedly can make it feel safe. But a lack of past crashes does not mean the risk is gone — it may mean you have been lucky.</li>
+</ul>
+
+<div class="highlight"><strong>Research Insight:</strong> Psychologist Jerry Deffenbacher of Colorado State University studied drivers who were prone to anger. High-anger drivers became angry faster, had more hostile and aggressive thoughts, and took more risks — such as speeding 10 to 20 mph over the limit, making rapid lane changes, tailgating, and entering intersections on red. In driving simulations, they had about twice as many crashes as low-anger drivers. The encouraging news: relaxation and thinking-based training reduced driving anger, and the gains were largely maintained about a year later. Attitudes can change.</div>
+
+<div class="scenario"><h4>Scenario: The Skilled Driver</h4><p>Consider a driver we'll call Tyrell. He has been driving for 15 years, has never had a crash, and is proud of his reflexes. On I-64 near Norfolk, he regularly weaves between lanes to get around slower traffic, often with only a car length or two of space. He tells himself it is fine because he is good at it. One morning, a car he is passing changes lanes without signaling just as Tyrell moves into the same gap. What does this situation show about the difference between skill and attitude?</p><details><summary>What should happen here?</summary><p>Tyrell's skill did not create the danger — his choice to drive with no margin for error did. The other driver made a mistake, but Tyrell's weaving put him in a position where any small mistake by anyone could cause a crash. His weaving could also support a charge under § 46.2-852 because it endangers others. A safer attitude would be: "I can't control other drivers, so I'll leave room for their mistakes." Leaving 3–4 seconds of following distance and changing lanes only when there is a clear gap would protect him far better than his reflexes.</p></details></div>
+
+<h3>Who Takes This Course — and What It Asks of You</h3>
+<p>Some learners are ordered here by a court, some are referred by an attorney, and some come on their own. Whatever brought you here, the course asks three things of you:</p>
+<ol>
+<li><strong>Honesty.</strong> The reflection exercises in this course are for your own use. They are not submitted or graded. The more honest you are with yourself, the more useful they will be.</li>
+<li><strong>Openness.</strong> Some ideas in this course may challenge the way you think about driving, other drivers, or yourself. Give them a fair hearing before deciding whether they apply to you.</li>
+<li><strong>Action.</strong> Information alone does not change behavior. In the later modules, you will build a personal plan with specific strategies you can use on your next drive.</li>
+</ol>
+<p>This course is not legal advice and does not decide any court case; a licensed Virginia attorney can advise you on a pending charge. It is also separate from Virginia's standard 8-hour Driver Improvement Clinic. Follow the specific instructions your court, attorney, or DMV notice gives you.</p>
+
+<h3>Course Roadmap</h3>
+<p>This course has eight modules. Each one requires 30 minutes of seat time and ends with a 15-question exam. After all eight modules, you will take a 20-question final test. Here is what is ahead:</p>
+<table>
+<tr><th>Module</th><th>Title</th></tr>
+<tr><td>1</td><td>The Virginia Reckless Driving Problem</td></tr>
+<tr><td>2</td><td>Speed — When Fast Becomes Criminal</td></tr>
+<tr><td>3</td><td>Aggression and Road Rage</td></tr>
+<tr><td>4</td><td>Risk-Taking Behind the Wheel</td></tr>
+<tr><td>5</td><td>Virginia Consequences — Law and Penalties</td></tr>
+<tr><td>6</td><td>Attitude Change — Understanding Triggers</td></tr>
+<tr><td>7</td><td>Attitude Change — Strategies That Work</td></tr>
+<tr><td>8</td><td>Final Review and Test Preparation</td></tr>
+</table>
+<p>The first half focuses on <strong>understanding</strong>; the second half focuses on <strong>change</strong>.</p>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Reckless driving</dt><dd>Driving in a way that endangers the life, limb, or property of any person, or driving that meets one of the specific definitions in Virginia's reckless driving laws, such as 20 mph or more over the limit or over 85 mph.</dd>
+<dt>Class 1 misdemeanor</dt><dd>The most serious class of misdemeanor in Virginia, punishable by up to 12 months in jail and/or a fine of up to $2,500.</dd>
+<dt>Traffic infraction</dt><dd>A non-criminal traffic violation, usually punished by a fine and possibly DMV points, with no jail time.</dd>
+<dt>Improper driving</dt><dd>A traffic infraction (fine up to $500) that a court may find instead of reckless driving when the driver's recklessness was slight. It is up to the court's discretion.</dd>
+<dt>Demerit points</dt><dd>Points the Virginia DMV assigns for traffic convictions. Reckless driving carries 6 points.</dd>
+<dt>Aggressive driving</dt><dd>Committing certain listed traffic offenses while creating a hazard to another person or intending to harass, intimidate, injure, or obstruct another person (§ 46.2-868.1).</dd>
+<dt>Optimism bias</dt><dd>The tendency to believe you are less likely than others to experience negative events, such as a crash.</dd>
+<dt>Hostile attribution bias</dt><dd>The tendency to assume another person's behavior was intentional and hostile rather than an honest mistake.</dd>
+</dl></div>
+
+<h3>Self-Assessment: Your Driving Habits</h3>
+<p>Before you move on, take an honest look at your own driving. Read each statement below and think about how often it describes you: <em>never, sometimes, often,</em> or <em>almost always</em>. There are no right or wrong answers, and no one else will see your responses.</p>
+<ol>
+<li>I drive more than 10 mph over the speed limit on the highway.</li>
+<li>I feel annoyed or angry when someone drives slower than I want to go.</li>
+<li>I follow the car in front of me closely so other cars cannot cut in.</li>
+<li>I change lanes frequently to get ahead in traffic.</li>
+<li>I speed up when I am running late.</li>
+<li>I honk, gesture, or say things out loud when other drivers make mistakes.</li>
+<li>I assume other drivers who cut me off did it on purpose.</li>
+<li>I drive the same speed in rain or darkness as I do on a clear day.</li>
+</ol>
+<p>If you answered "often" or "almost always" to several of these, you are not alone, and later modules offer specific strategies for each habit. If most answers were "never," ask whether optimism bias might be at work.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4>
+<label>Think about the driving situation that led you to this course (or the riskiest driving situation you have been in recently). What was happening right before? Were you rushed, angry, distracted, or just not paying attention?</label><textarea></textarea>
+<label>Which two items from the self-assessment above describe you most often? Why do you think those habits developed?</label><textarea></textarea>
+<label>Before reading this module, did you know reckless driving in Virginia is a criminal offense? How does knowing that change the way you think about your driving?</label><textarea></textarea>
+</div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>In Virginia, reckless driving is a <strong>Class 1 misdemeanor</strong> — a criminal offense, not a simple traffic ticket — under § 46.2-868.</li>
+<li>A Class 1 misdemeanor carries up to <strong>12 months in jail and/or a fine of up to $2,500</strong>, and reckless driving generally requires a court appearance.</li>
+<li>The general rule (§ 46.2-852) covers any driving that endangers the life, limb, or property of any person, regardless of the speed limit.</li>
+<li>Driving a vehicle not under proper control or with inadequate brakes (§ 46.2-853), and driving too fast for conditions (§ 46.2-861), are also reckless driving — even at or below the posted limit.</li>
+<li>Driving <strong>20 mph or more over the limit</strong>, or <strong>over 85 mph</strong> regardless of the limit, is reckless driving by speed (§ 46.2-862). The 85 mph threshold took effect July 1, 2020.</li>
+<li>Other reckless driving sections cover passing a stopped school bus, passing on a curve or hill crest, passing two abreast, racing, and more. Aggressive driving (§ 46.2-868.1) is a separate offense.</li>
+<li>A reckless driving conviction brings <strong>6 DMV demerit points</strong>, remains on your DMV record for <strong>11 years</strong>, may lead to a license suspension of 10 days to 6 months, and usually raises insurance costs for years.</li>
+<li>When recklessness is slight, a court may find a driver guilty of improper driving instead — a traffic infraction with a fine up to $500 — but that is at the court's discretion.</li>
+<li>Most reckless driving is caused by <strong>attitude and decisions</strong>, not a lack of skill. Biases like optimism bias and hostile attribution bias make risky choices feel reasonable.</li>
+<li>This course is about understanding why you drive the way you do and building practical tools to change it.</li>
+</ul>
+<p>Take a few minutes to review any section of this module you want to revisit. When the timer reaches 00:00, the <strong>Module 1 Exam</strong> will unlock. The exam has 15 questions, and you need a score of 80% to pass. Good luck.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 1 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course to take the Module 1 Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-m1-remaining', DONE='rad-m1-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';go.removeAttribute('href');
+      msg.textContent='You have completed the required time for Module 1. Return to your course to take the Module 1 Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>
