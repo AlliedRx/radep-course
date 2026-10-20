@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 2: Velocidad: cuando ir rápido se convierte en delito | Virginia Commonwealth Driving Improvement Clinic (Español)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Módulo 2 de 8 &middot; 30 minutos</span>Módulo 2: Velocidad: cuando ir rápido se convierte en delito</h1>
+    <div class="timer" id="timerBox"><small>Tiempo restante</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>Casi todos los conductores han superado el límite de velocidad en algún momento. La mayoría de las veces no pasa nada, y esa tranquila falta de consecuencias enseña una lección peligrosa: que la velocidad es algo sin importancia. En Virginia, la velocidad no es algo sin importancia. Según la ley de Virginia, la diferencia entre una multa común por exceso de velocidad y un cargo penal por conducción temeraria puede ser de una sola milla por hora. Este módulo explica exactamente dónde está esa línea, por qué Virginia la traza donde la traza, lo que la velocidad realmente le hace a su capacidad de evitar un choque, y lo que usted puede hacer para mantener su propia velocidad bajo control incluso cuando va tarde, está frustrado o está rodeado de personas que conducen más rápido que usted.</p>
+
+<div class="objectives"><h4>Objetivos de aprendizaje</h4><ul>
+<li>Aplicar los dos umbrales de velocidad del Código de Virginia § 46.2-862 (20 millas por hora (mph) o más por encima del límite aplicable, o más de 85 mph) a situaciones reales de manejo.</li>
+<li>Explicar cómo el § 46.2-861 hace posible que lo acusen de conducción temeraria incluso cuando conduce en el límite indicado o por debajo de él.</li>
+<li>Describir cómo la velocidad afecta la distancia de percepción y reacción, la distancia de frenado y la energía del choque, y hacer cálculos sencillos con estas ideas.</li>
+<li>Calcular cuánto tiempo ahorra realmente el exceso de velocidad en un viaje típico y explicar por qué el ahorro suele ser pequeño.</li>
+<li>Identificar las actitudes y emociones que empujan a los conductores a exceder la velocidad, incluyendo la presión del tiempo, la creencia de ser "un buen conductor", el enojo y las normas sociales.</li>
+<li>Desarrollar un conjunto personal de estrategias prácticas para controlar su velocidad.</li>
+</ul></div>
+
+<h3>1. ¿Multa por exceso de velocidad o cargo penal? Dónde traza Virginia la línea</h3>
+<p>Muchos conductores que llegan a este curso se sorprenden al saber que fueron acusados de un delito. Ellos "solo iban con exceso de velocidad". En la mayoría de los estados, eso significaría una multa, un pago y quizás algunos puntos. Virginia es diferente. Virginia trata el exceso de velocidad alto como <strong>conducción temeraria</strong>, y la conducción temeraria es un <strong>delito menor de Clase 1</strong> según el § 46.2-868.</p>
+<p>Como la conducción temeraria es un cargo penal, generalmente requiere comparecer ante el tribunal. Por lo general, usted no puede simplemente pagarla por adelantado en línea como lo haría con una multa común por exceso de velocidad. Un juez decide el resultado.</p>
+<p>La ley de Virginia establece varias formas distintas en que lo pueden acusar de conducción temeraria. El Módulo 1 las presentó todas. En este módulo nos enfocamos en las dos que tienen que ver directamente con la velocidad:</p>
+<ul>
+<li><strong>§ 46.2-862 — Conducción temeraria por velocidad.</strong> Esta es una regla de "línea clara" basada en números. Si su velocidad cruza cualquiera de los dos umbrales, el delito queda definido por el número en sí.</li>
+<li><strong>§ 46.2-861 — Exceder una velocidad razonable según las circunstancias.</strong> Esta es una regla basada en el criterio. Examina si su velocidad era razonable para las condiciones, sin importar el límite indicado.</li>
+</ul>
+
+<div class="warning"><strong>La realidad en Virginia:</strong> Una condena por conducción temeraria es un delito menor de Clase 1. La sanción máxima es de hasta 12 meses de cárcel y/o una multa de hasta $2,500. El tribunal también puede suspender su licencia por no menos de 10 días ni más de 6 meses (§ 46.2-392). El DMV asigna 6 puntos de demérito, y una condena de 6 puntos permanece en su historial del DMV durante 11 años. Eso no es una "multa por exceso de velocidad". Eso es una condena penal.</div>
+
+<h3>2. Los dos umbrales de velocidad del § 46.2-862</h3>
+<p>Según el § 46.2-862, usted es culpable de conducción temeraria si conduce:</p>
+<ol>
+<li><strong>a 20 mph o más por encima del límite máximo de velocidad aplicable</strong>, O</li>
+<li><strong>a más de 85 mph</strong>, sin importar el límite indicado.</li>
+</ol>
+<p>Cualquiera de los dos es suficiente. No tiene que cumplir con ambos.</p>
+
+<h4>La regla de "20 o más por encima"</h4>
+<p>Esta regla está ligada al límite de velocidad que se aplica donde usted está conduciendo. Fíjese en las palabras: <em>20 mph o más</em>. Eso significa que ir exactamente 20 por encima cuenta. Conducir a 45 mph en una zona de 25 mph es ir 20 por encima, y eso alcanza el umbral. Muchos conductores suponen que necesitan ir "a más de 20 por encima". Se equivocan por una milla por hora, y esa milla por hora puede ser la diferencia entre una infracción de tránsito y un cargo penal.</p>
+<p>Esta regla importa sobre todo en las vías de baja velocidad, donde la conducción temeraria puede ocurrir a velocidades que no se sienten rápidas en absoluto.</p>
+
+<h4>La regla de "más de 85"</h4>
+<p>A esta regla no le importa el límite indicado. En cuanto usted supera las 85 mph, ya alcanzó el umbral, incluso en una autopista con un límite indicado de 70 mph, donde 86 mph es "solo" 16 por encima. Este umbral entró en vigor el <strong>1 de julio de 2020</strong>. Antes de esa fecha, el número era 80 mph. Hoy es <strong>más de 85 mph</strong>.</p>
+
+<div class="highlight"><strong>Dato clave:</strong> El límite aplicable es el límite que se aplica legalmente en el lugar y en el momento en que usted está conduciendo. No es la velocidad del tráfico a su alrededor, y no es el límite de la vía de la que acaba de salir. Cuando se aplica un límite más bajo, el cálculo de "20 o más por encima" empieza desde ese número más bajo.</div>
+
+<h3>3. Ejemplos resueltos: cómo aplicar los umbrales</h3>
+<p>Para cada ejemplo, hágase dos preguntas: <em>¿La velocidad está 20 o más por encima del límite aplicable?</em> y <em>¿La velocidad es de más de 85 mph?</em> Si la respuesta a cualquiera de las dos preguntas es sí, la velocidad cumple con la definición de conducción temeraria del § 46.2-862.</p>
+
+<table>
+<tr><th>Límite indicado</th><th>Su velocidad</th><th>Cantidad por encima</th><th>¿20+ por encima?</th><th>¿Más de 85?</th><th>¿Temeraria por velocidad?</th></tr>
+<tr><td>25 mph</td><td>44 mph</td><td>19</td><td>No</td><td>No</td><td>No (pero sigue siendo una violación por exceso de velocidad)</td></tr>
+<tr><td>25 mph</td><td>45 mph</td><td>20</td><td>Sí</td><td>No</td><td>Sí</td></tr>
+<tr><td>55 mph</td><td>74 mph</td><td>19</td><td>No</td><td>No</td><td>No (pero sigue siendo una violación por exceso de velocidad)</td></tr>
+<tr><td>55 mph</td><td>75 mph</td><td>20</td><td>Sí</td><td>No</td><td>Sí</td></tr>
+<tr><td>65 mph</td><td>86 mph</td><td>21</td><td>Sí</td><td>Sí</td><td>Sí (ambas reglas)</td></tr>
+<tr><td>70 mph</td><td>85 mph</td><td>15</td><td>No</td><td>No (85 no es "más de" 85)</td><td>No (pero sigue siendo una violación por exceso de velocidad)</td></tr>
+<tr><td>70 mph</td><td>86 mph</td><td>16</td><td>No</td><td>Sí</td><td>Sí</td></tr>
+</table>
+
+<p>Observe con atención el patrón. En las vías de baja velocidad, la regla de "20 o más por encima" es la que lo atrapa. En una autopista con un límite indicado de 70 mph, la regla de "más de 85" lo atrapa primero, porque usted cruza las 85 antes de llegar a 20 por encima. En una vía de 65 mph, las dos reglas se encuentran casi en el mismo punto: 85 es 20 por encima, y cualquier velocidad mayor que 85 viola ambas reglas a la vez.</p>
+
+<p>Fíjese también en las filas marcadas con "No". Ir 19 por encima no es conducción temeraria por velocidad según el § 46.2-862, pero sigue siendo un exceso de velocidad ilegal. Y, como explica la siguiente sección, aun así puede ser conducción temeraria si no era razonable para las condiciones.</p>
+
+<div class="scenario"><h4>Escenario: La defensa de "solo 16 por encima"</h4><p>Piense en un conductor al que llamaremos Marcus. Él va por un tramo de una autopista interestatal de Virginia con un límite indicado de 70 mph. Va tarde para una entrevista de trabajo. Pone el control de crucero a 87 mph y se dice a sí mismo: "Eso es solo 17 por encima. Temeraria es 20 por encima". Un agente de la policía estatal lo detiene y lo acusa de conducción temeraria. ¿Se equivocó el agente?</p><details><summary>¿Qué debería pasar aquí?</summary><p>El agente no se equivocó. Marcus conocía uno de los dos umbrales pero se olvidó del otro. Según el § 46.2-862, cualquier velocidad de más de 85 mph es conducción temeraria sin importar el límite indicado. A 87 mph, Marcus cruzó esa línea aunque iba a menos de 20 por encima. Un mejor plan habría sido llamar con anticipación para avisar. Como verá más adelante, el tiempo que estaba "ahorrando" era poco, y el riesgo era muy grande.</p></details></div>
+
+<h3>4. Demasiado rápido para las condiciones: § 46.2-861</h3>
+<p>Según el § 46.2-861, una persona que conduce más rápido que una <strong>velocidad razonable según las circunstancias y las condiciones del tráfico que existan en ese momento</strong>, sin importar cualquier límite máximo de velocidad indicado, es culpable de conducción temeraria.</p>
+<p>Piense en el límite de velocidad indicado como la velocidad máxima permitida en <em>buenas</em> condiciones: pavimento seco, buena visibilidad y tráfico normal. Cuando las condiciones son peores, la velocidad segura es más baja, y la ley espera que usted se ajuste. Algunas situaciones en las que el límite indicado puede ser demasiado rápido incluyen:</p>
+<ul>
+<li><strong>Lluvia, nieve, aguanieve o hielo</strong> que reducen el agarre de las llantas y aumentan la distancia de frenado.</li>
+<li><strong>Neblina, lluvia intensa u oscuridad</strong> que limitan qué tan lejos puede ver hacia adelante.</li>
+<li><strong>Tráfico pesado o de avanzar y detenerse</strong>, donde los vehículos de adelante pueden detenerse de repente.</li>
+<li><strong>Curvas, colinas y vías angostas</strong>, donde usted no puede ver lo que hay adelante.</li>
+<li><strong>Áreas con peatones, ciclistas o niños</strong>, como cerca de escuelas, parques y vecindarios.</li>
+</ul>
+<p>Una prueba sencilla: si usted no podría detenerse dentro de la distancia que puede ver con claridad delante de usted, va demasiado rápido para las condiciones. De noche, eso significa detenerse dentro del alcance de sus faros.</p>
+
+<div class="scenario"><h4>Escenario: La velocidad legal que no lo era</h4><p>Piense en una conductora a la que llamaremos Tanya. Ella va por una carretera dividida de 55 mph durante un fuerte aguacero. La visibilidad es mala y el agua se está acumulando en el carril derecho. Ella se mantiene exactamente a 55 mph porque "ese es el límite de velocidad". El tráfico se detiene de repente, su auto hace hidroplaneo y ella se desliza y choca contra una camioneta pickup. El agente la acusa de conducción temeraria. Tanya señala que no iba con exceso de velocidad.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Según el § 46.2-861, la pregunta no es si Tanya iba por encima del límite indicado. La pregunta es si 55 mph era una velocidad razonable con lluvia intensa, mala visibilidad y agua estancada. No lo era. El límite indicado es un tope, no una meta. La decisión correcta habría sido reducir la velocidad muy por debajo de 55, aumentar su distancia de seguimiento y mantenerse fuera del carril con agua estancada.</p></details></div>
+
+<div class="myth"><p><strong>Mito:</strong> "Si voy en el límite de velocidad o por debajo de él, no me pueden acusar de conducción temeraria".</p><p><strong>Realidad:</strong> El Código de Virginia § 46.2-861 establece que es conducción temeraria exceder una velocidad razonable para las circunstancias y las condiciones del tráfico, sin importar el límite indicado. Lo pueden acusar aunque conduzca al número que aparece en el letrero o por debajo de él.</p></div>
+
+<h3>5. Zonas especiales: zonas escolares y zonas de construcción</h3>
+<h4>Zonas escolares</h4>
+<p>Muchas zonas escolares tienen un límite de velocidad reducido que se aplica durante los horarios indicados o cuando los letreros o las luces indican que el límite reducido está en vigor. Cuando el límite reducido está en vigor, ese es el límite aplicable. Eso significa que el cálculo de "20 o más por encima" empieza desde el número más bajo de la zona escolar.</p>
+<p>Más importante que el cálculo legal es lo que hay en una zona escolar: niños, que son más pequeños, más difíciles de ver y que pueden salir corriendo de repente entre los autos estacionados.</p>
+<h4>Zonas de construcción</h4>
+<p>Las zonas de construcción en las carreteras a menudo tienen límites de velocidad reducidos, carriles angostos o desviados, pavimento irregular, paradas repentinas y trabajadores parados a solo unos pies del tráfico en movimiento. Cuando se indica un límite para la zona de construcción, trátelo como el límite aplicable. Esté atento a los letreros, incorpórese con anticipación y deje una distancia de seguimiento adicional.</p>
+<div class="highlight"><strong>Dato clave:</strong> Tanto las zonas escolares como las zonas de construcción son lugares donde el § 46.2-861 (demasiado rápido para las condiciones) es especialmente relevante. Aun cuando usted esté dentro del límite indicado, la presencia de niños, trabajadores, desvíos de carril o tráfico detenido puede requerir una velocidad todavía más baja.</div>
+
+<h3>6. Por qué la velocidad mata: la física con la que no se puede discutir</h3>
+<p>Las leyes pueden cambiar. La física no. Tres ideas explican la mayor parte de lo que la velocidad le hace a su seguridad: la distancia de reacción, la distancia de frenado y la energía del choque.</p>
+
+<h4>Distancia de reacción: la distancia que recorre antes de siquiera tocar el freno</h4>
+<p>Antes de que su auto pueda empezar a reducir la velocidad, usted tiene que ver un peligro, reconocerlo como un peligro, decidir frenar y mover el pie al pedal. Esto se llama <strong>tiempo de percepción y reacción</strong>. Un tiempo típico de percepción y reacción es de aproximadamente <strong>1.5 segundos</strong> para un conductor alerta. Si usted está cansado, distraído o alterado, puede ser más largo.</p>
+<p>Durante ese tiempo, su auto sigue avanzando a toda velocidad. A 60 mph, usted recorre aproximadamente <strong>88 pies cada segundo</strong>. En 1.5 segundos, eso equivale a unos 132 pies, casi la mitad del largo de un campo de fútbol americano, antes de que sus frenos siquiera empiecen a funcionar.</p>
+<table>
+<tr><th>Velocidad</th><th>Pies por segundo</th><th>Distancia recorrida en 1.5 segundos (antes de empezar a frenar)</th></tr>
+<tr><td>45 mph</td><td>66 pies/s</td><td>99 pies</td></tr>
+<tr><td>60 mph</td><td>88 pies/s</td><td>132 pies</td></tr>
+<tr><td>70 mph</td><td>aproximadamente 103 pies/s</td><td>aproximadamente 154 pies</td></tr>
+<tr><td>85 mph</td><td>aproximadamente 125 pies/s</td><td>aproximadamente 187 pies</td></tr>
+</table>
+<p>Un atajo útil: para calcular aproximadamente los pies por segundo, multiplique las mph por aproximadamente 1.47. A 60 mph, 60 × 1.47 ≈ 88 pies por segundo.</p>
+
+<h4>Distancia de frenado: por qué duplicar su velocidad es tan peligroso</h4>
+<p>Una vez que usted pisa el freno, su auto necesita distancia para detenerse. La distancia de frenado <strong>no</strong> aumenta en línea recta con la velocidad. Aumenta con el <strong>cuadrado</strong> de la velocidad. En términos prácticos, cuando usted duplica su velocidad, su distancia de frenado <strong>se multiplica aproximadamente por cuatro</strong>. Pasar de 40 a 80 mph le da aproximadamente cuatro veces la distancia de frenado.</p>
+<p>La distancia de reacción más la distancia de frenado es igual a la distancia total de detención, y la velocidad hace que ambas partes sean más grandes al mismo tiempo.</p>
+
+<h4>Energía del choque: por qué ir "un poco más rápido" hace mucho más daño</h4>
+<p>Cuando ocurre un choque, el daño a los vehículos y a los cuerpos depende de la energía involucrada. Esa energía, al igual que la distancia de frenado, aumenta con el cuadrado de la velocidad. Compare un choque a 50 mph con un choque a 40 mph. La velocidad es solo 25% más alta, pero la energía es aproximadamente <strong>56% más alta</strong> (porque 50 × 50 = 2,500, 40 × 40 = 1,600, y 2,500 ÷ 1,600 ≈ 1.56).</p>
+<table>
+<tr><th>Comparación de velocidades</th><th>Aumento de velocidad</th><th>Aumento aproximado de la energía del choque</th></tr>
+<tr><td>40 mph frente a 50 mph</td><td>25%</td><td>aproximadamente 56% más</td></tr>
+<tr><td>60 mph frente a 70 mph</td><td>aproximadamente 17%</td><td>aproximadamente 36% más</td></tr>
+<tr><td>40 mph frente a 80 mph</td><td>100% (el doble)</td><td>aproximadamente 4 veces más</td></tr>
+</table>
+<p>Los cinturones de seguridad y las bolsas de aire absorben la energía del choque, pero tienen límites. Más energía significa que una mayor parte de ella llega a las personas que van adentro, o al peatón que está afuera.</p>
+
+<div class="highlight"><strong>Hallazgo de la investigación:</strong> Según la Administración Nacional de Seguridad del Tráfico en las Carreteras (NHTSA, por sus siglas en inglés), el exceso de velocidad es un factor en aproximadamente 3 de cada 10 muertes por accidentes de tránsito en los Estados Unidos. La NHTSA también concluye que el comportamiento o el error del conductor es la razón crítica detrás de la gran mayoría de los choques. La velocidad es uno de los comportamientos que los conductores pueden controlar de forma más directa.</div>
+
+<div class="scenario"><h4>Escenario: La pelota en la calle</h4><p>Piense en un conductor al que llamaremos James. Él va por un vecindario residencial con un límite indicado de 25 mph, pero va a 45 mph porque va tarde. Una pelota rueda hacia la calle aproximadamente 80 pies adelante, y un momento después la sigue un niño. ¿Qué dice la física?</p><details><summary>¿Qué debería pasar aquí?</summary><p>A 45 mph, James recorre aproximadamente 66 pies por segundo. Con un tiempo típico de percepción y reacción de 1.5 segundos, recorre unos 99 pies antes de que su pie siquiera empiece a pisar el freno. El niño está a solo 80 pies, así que James llega a ese punto antes de empezar a frenar. A 25 mph (aproximadamente 37 pies por segundo), habría recorrido unos 55 pies durante el mismo tiempo de reacción y habría tenido espacio para empezar a frenar antes de llegar al niño. Además de eso, James va exactamente 20 mph por encima del límite de 25 mph, lo cual alcanza el umbral de conducción temeraria del § 46.2-862.</p></details></div>
+
+<h3>7. El mito del tiempo ahorrado</h3>
+<p>La razón más común que dan los conductores para exceder la velocidad es ahorrar tiempo. El cálculo es sencillo: tiempo = distancia ÷ velocidad.</p>
+<p>Tome un viaje de 10 millas. A 60 mph, toma exactamente 10 minutos. A 70 mph, toma aproximadamente 8 minutos y 34 segundos. Ir 10 mph más rápido durante todo el viaje le ahorra aproximadamente <strong>1 minuto y 26 segundos</strong>. Eso suponiendo que no haya semáforos, autos lentos ni congestión.</p>
+<table>
+<tr><th>Distancia del viaje</th><th>Velocidad normal</th><th>Velocidad más rápida</th><th>Tiempo "ahorrado" (en el mejor de los casos)</th></tr>
+<tr><td>5 millas</td><td>35 mph</td><td>45 mph</td><td>aproximadamente 1 minuto 54 segundos</td></tr>
+<tr><td>10 millas</td><td>60 mph</td><td>70 mph</td><td>aproximadamente 1 minuto 26 segundos</td></tr>
+<tr><td>20 millas</td><td>65 mph</td><td>75 mph</td><td>aproximadamente 2 minutos 28 segundos</td></tr>
+<tr><td>100 millas</td><td>70 mph</td><td>80 mph</td><td>aproximadamente 10 minutos 43 segundos</td></tr>
+</table>
+<p>Fíjese en el ejemplo de 20 millas. Conducir a 75 en una zona de 65 es una violación por exceso de velocidad, y aun así ahorra menos de dos minutos y medio incluso en condiciones perfectas.</p>
+<p>Incluso en un viaje de 100 millas por autopista, en el mejor de los casos se ahorran menos de 11 minutos. Y a 80 mph en una autopista de 70 mph, usted está a solo 6 mph del umbral de "más de 85" para la conducción temeraria.</p>
+
+<div class="myth"><p><strong>Mito:</strong> "Si conduzco más rápido, recuperaré mucho del tiempo perdido".</p><p><strong>Realidad:</strong> En la mayoría de los viajes cotidianos, exceder la velocidad ahorra, en el mejor de los casos, desde unos segundos hasta unos pocos minutos, y los semáforos y la congestión a menudo borran incluso eso. Un viaje de 10 millas a 70 mph en lugar de 60 mph ahorra solo aproximadamente 1 minuto y 26 segundos.</p></div>
+
+<div class="myth"><p><strong>Mito:</strong> "Seguir el ritmo del tráfico rápido siempre es más seguro, y la policía no lo va a detener si todos van con exceso de velocidad".</p><p><strong>Realidad:</strong> La ley mide su velocidad comparándola con el límite aplicable y con las condiciones, no con otros conductores. Ir a 86 mph es conducción temeraria según el § 46.2-862, sin importar si otros autos van igual de rápido o no.</p></div>
+
+<h3>8. Velocidad y actitud: por qué los conductores deciden exceder la velocidad</h3>
+<p>La mayoría de las personas que exceden la velocidad ya saben que es arriesgado. Para controlar su velocidad, usted necesita entender los pensamientos y sentimientos que hacen que su pie pise el acelerador.</p>
+
+<h4>Presión del tiempo: "Voy tarde, así que tengo que recuperar tiempo"</h4>
+<p>Ir tarde genera estrés, y el estrés hace que el reloj parezca más importante que la seguridad. Los psicólogos describen un patrón llamado <strong>descuento temporal</strong>: las personas tienden a darle demasiado peso a una recompensa inmediata (llegar antes) y muy poco peso a un posible costo futuro (un choque, un cargo, una condena). Como muestra el cálculo anterior, la recompensa suele ser mínima.</p>
+
+<h4>La creencia de "soy un buen conductor"</h4>
+<p>La mayoría de los conductores se califican a sí mismos por encima del promedio. Esto se llama <strong>sesgo de optimismo</strong>. No todos pueden estar por encima del promedio. Además, la habilidad no puede cambiar mucho su tiempo de reacción, y no puede cambiar en absoluto la distancia de frenado ni la energía del choque.</p>
+<p>El psicólogo Jerry Deffenbacher, de la Universidad Estatal de Colorado, estudió a conductores propensos al enojo detrás del volante. Descubrió que los conductores con mucho enojo se enojan más rápido, tienen más pensamientos hostiles y agresivos, y corren más riesgos. Estos riesgos incluyen ir de 10 a 20 mph por encima del límite, cambiar de carril rápidamente, seguir demasiado cerca al vehículo de adelante y entrar a las intersecciones con la luz en rojo. En simulaciones de manejo, los conductores con mucho enojo tuvieron aproximadamente <strong>el doble de choques</strong> que los conductores con poco enojo.</p>
+
+<h4>Enojo y frustración: "Quítese de mi camino"</h4>
+<p>La excitación emocional hace que usted pise más el acelerador. Cuando está enojado con otro conductor, con su jefe o con su día, es más probable que exceda la velocidad, siga demasiado cerca al vehículo de adelante y haga maniobras repentinas. El Módulo 3 examina a fondo el enojo y la conducción agresiva.</p>
+
+<h4>Normas sociales: "Todo el mundo excede la velocidad"</h4>
+<p>Cuando usted ve que otros autos lo rebasan, es fácil sentir que usted es quien está haciendo algo mal. A esto a veces se le llama <strong>prueba social</strong>: miramos a los demás para decidir qué es normal. Pero no todo el mundo excede la velocidad, y el hecho de que otros estén violando la ley no cambia su riesgo legal ni la física de su auto.</p>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4>
+<label>Piense en la última vez que condujo notablemente por encima del límite de velocidad. ¿Qué estaba pasando? ¿Iba tarde, estaba enojado, distraído o iba siguiendo el ritmo del tráfico?</label><textarea></textarea>
+<label>¿Cuál de las actitudes anteriores (la presión del tiempo, la creencia de ser "un buen conductor", el enojo o las normas sociales) reconoce más en usted mismo? Dé un ejemplo específico.</label><textarea></textarea>
+</div>
+
+<h3>9. Estrategias para controlar su velocidad</h3>
+<p>Entender la ley y la física es el primer paso. El siguiente paso es desarrollar hábitos que mantengan su velocidad bajo control cuando esté estresado, vaya tarde o esté rodeado de tráfico más rápido.</p>
+
+<h4>Antes de conducir</h4>
+<ul>
+<li><strong>Planifique el viaje que realmente va a tener.</strong> Revise el tráfico y el clima antes de salir, y agregue un margen de tiempo para las citas importantes. Eliminar la presión del tiempo elimina la razón más común para exceder la velocidad.</li>
+<li><strong>Decida de antemano qué hará si va tarde.</strong> Llame o envíe un mensaje de texto <em>antes</em> de empezar a conducir, o estaciónese de manera segura para hacerlo. Llegar unos minutos tarde es mucho mejor que un choque o un cargo penal.</li>
+<li><strong>Revise su estado emocional.</strong> Si está enojado o alterado, tómese unos minutos y respire lentamente unas cuantas veces antes de encender el auto.</li>
+</ul>
+
+<h4>Mientras conduce</h4>
+<ul>
+<li><strong>Revise su velocímetro con regularidad,</strong> especialmente después de salir de una autopista, al entrar a una nueva zona de velocidad o al ir cuesta abajo. La velocidad va aumentando sin que usted se dé cuenta.</li>
+<li><strong>Use el control de crucero con prudencia</strong> en autopistas despejadas y en buenas condiciones, programado en el límite o por debajo de él. No lo use con lluvia, nieve, hielo o tráfico pesado.</li>
+<li><strong>Manténgase en el carril derecho</strong> cuando el tráfico vaya más rápido que el límite. Deje que los demás lo rebasen. Su velocidad no es su obligación.</li>
+<li><strong>Mantenga una distancia de seguimiento segura</strong> de al menos 3 a 4 segundos en buenas condiciones, y más con mal tiempo. A 60 mph, un espacio de 3 segundos equivale a unos 264 pies.</li>
+<li><strong>Apréndase sus umbrales de memoria.</strong> En una autopista de 70 mph, 86 es temeraria. En una vía de 55 mph, 75 es temeraria. En una calle de 25 mph, 45 es temeraria.</li>
+</ul>
+
+<h4>Cosas que puede decirse a sí mismo y que ayudan</h4>
+<table>
+<tr><th>En lugar de pensar...</th><th>Intente pensar...</th></tr>
+<tr><td>"Tengo que recuperar tiempo".</td><td>"Exceder la velocidad ahorra uno o dos minutos como máximo. Voy a llamar para avisar".</td></tr>
+<tr><td>"Soy un buen conductor. Puedo manejar esta velocidad".</td><td>"La habilidad no cambia mi distancia de detención. La física se aplica a todos".</td></tr>
+<tr><td>"Todos los demás van así de rápido".</td><td>"Su velocidad no cambia la ley ni mi riesgo. Me quedaré a la derecha".</td></tr>
+</table>
+
+<div class="scenario"><h4>Escenario: La mañana atrasada</h4><p>Piense en una conductora a la que llamaremos Alicia. Se quedó dormida, y su trayecto de 20 millas al trabajo es mayormente por una autopista con un límite indicado de 65 mph. Su corazón late rápido, y piensa: "Si voy a 80 todo el camino, llegaré a tiempo". ¿Cómo sería un mejor plan?</p><details><summary>¿Qué debería pasar aquí?</summary><p>Incluso a una velocidad constante de 75 mph en lugar de 65, un trayecto de 20 millas ahorra solo aproximadamente 2 minutos y 28 segundos en condiciones perfectas. A 80 mph, Alicia está a solo 5 mph del umbral de "más de 85", y un aumento gradual de la velocidad o un tramo cuesta abajo podría llevarla a la conducción temeraria según el § 46.2-862. Un mejor plan: ella le envía un mensaje a su supervisor para avisar que va unos minutos atrasada, respira lentamente unas cuantas veces, programa el control de crucero en el límite y acepta llegar un poco tarde. Llegar tarde es un problema menor. Un choque o antecedentes penales son un problema mayor.</p></details></div>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4>
+<label>Anote dos situaciones en las que es más probable que usted exceda la velocidad, y una estrategia de esta sección que usará para cada una.</label><textarea></textarea>
+</div>
+
+<div class="keyterms"><h4>Términos clave</h4><dl>
+<dt>Conducción temeraria por velocidad (§ 46.2-862)</dt><dd>Conducir a 20 mph o más por encima del límite máximo de velocidad aplicable, o a más de 85 mph sin importar el límite indicado.</dd>
+<dt>Exceder una velocidad razonable (§ 46.2-861)</dt><dd>Conducir más rápido de lo que es razonable para las circunstancias y las condiciones del tráfico, sin importar el límite indicado.</dd>
+<dt>Límite aplicable</dt><dd>El límite de velocidad que se aplica legalmente en el lugar y en el momento en que usted está conduciendo, incluyendo un límite reducido de zona escolar o de zona de construcción.</dd>
+<dt>Tiempo de percepción y reacción</dt><dd>El tiempo que toma notar un peligro, decidir actuar y empezar a frenar, normalmente de aproximadamente 1.5 segundos.</dd>
+<dt>Descuento temporal</dt><dd>Darle más valor a una recompensa inmediata (llegar antes) que a un posible costo futuro (un choque o una condena).</dd>
+<dt>Sesgo de optimismo</dt><dd>Creer que usted tiene menos probabilidades que los demás de sufrir un mal resultado, como cuando la mayoría de los conductores se califican a sí mismos por encima del promedio.</dd>
+
+<dt>Prueba social</dt><dd>Juzgar qué es normal o aceptable observando lo que hacen otras personas, como exceder la velocidad porque otros conductores están excediendo la velocidad.</dd>
+</dl></div>
+
+<h3>Resumen del módulo</h3>
+<ul>
+<li>En Virginia, el exceso de velocidad alto no es solo una multa. La conducción temeraria es un delito menor de Clase 1 con hasta 12 meses de cárcel y/o una multa de hasta $2,500, además de 6 puntos de demérito que permanecen en su historial del DMV durante 11 años.</li>
+<li>Según el § 46.2-862, conducir a 20 mph o más por encima del límite aplicable, o a más de 85 mph sin importar el límite, es conducción temeraria. Cualquiera de los dos umbrales es suficiente.</li>
+<li>El umbral de 85 mph entró en vigor el 1 de julio de 2020; antes de esa fecha era de 80 mph.</li>
+<li>Según el § 46.2-861, lo pueden acusar de conducción temeraria por ir demasiado rápido para las condiciones incluso cuando va en el límite indicado o por debajo de él.</li>
+<li>En las zonas escolares y las zonas de construcción, el límite reducido es el límite aplicable, y las condiciones a menudo exigen una velocidad todavía más baja.</li>
+<li>A 60 mph usted recorre aproximadamente 88 pies por segundo, y un tiempo de reacción típico de 1.5 segundos significa unos 132 pies antes de empezar a frenar.</li>
+<li>La distancia de frenado se multiplica aproximadamente por cuatro cuando la velocidad se duplica, y la energía del choque aumenta con el cuadrado de la velocidad (50 frente a 40 mph es aproximadamente 56% más energía).</li>
+<li>Exceder la velocidad ahorra mucho menos tiempo de lo que la mayoría de la gente cree: 10 millas a 70 en lugar de 60 mph ahorran solo aproximadamente 1 minuto y 26 segundos.</li>
+<li>La presión del tiempo, el sesgo de optimismo, el enojo y la prueba social empujan a los conductores a exceder la velocidad. Reconocerlos es el primer paso para controlarlos.</li>
+<li>Las estrategias prácticas, como planificar tiempo adicional, llamar para avisar, revisar su velocímetro, usar el control de crucero con prudencia, mantenerse a la derecha y mantener una distancia de seguimiento de 3 a 4 segundos, ayudan a mantener su velocidad bajo control.</li>
+</ul>
+<p>Tómese su tiempo para repasar este material. Cuando el temporizador llegue a 00:00, se desbloqueará el <strong>Examen del Módulo 2</strong>. El examen tiene 15 preguntas, y usted necesita una calificación aprobatoria de 80% para aprobar.</p>
+
+    <div class="gate" id="gate">
+      <h3>Tiempo requerido del Módulo 2</h3>
+      <p id="gateMsg">Siga leyendo y realizando las actividades. Este módulo requiere los 30 minutos completos.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Tiempo restante</a>
+      <small>Cuando el temporizador llegue a 00:00, regrese a su curso para tomar el Examen del Módulo 2.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-es-m2-remaining', DONE='rad-es-m2-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Tiempo requerido completado';go.removeAttribute('href');
+      msg.textContent='Ha completado el tiempo requerido del Módulo 2. Regrese a su curso para tomar el Examen del Módulo 2.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

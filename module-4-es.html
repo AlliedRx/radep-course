@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 4: Conductas de riesgo al volante | Virginia Commonwealth Driving Improvement Clinic (Español)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Módulo 4 de 8 &middot; 30 minutos</span>Módulo 4: Conductas de riesgo al volante</h1>
+    <div class="timer" id="timerBox"><small>Tiempo restante</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>Tomar riesgos al volante no es algo al azar. La mayoría de los conductores que terminan con un cargo de conducción temeraria o de conducción agresiva no se despertaron planeando violar la ley. Tomaron una serie de pequeñas decisiones, como seguir un poco más de cerca, cambiar de carril un poco más rápido o pasar un semáforo que ya estaba cambiando, que en ese momento parecían normales. Esas decisiones siguen patrones, y los patrones provienen de formas predecibles en que la mente humana juzga el peligro. En este módulo usted examinará los comportamientos riesgosos más comunes, los atajos mentales que hacen que parezcan seguros y los resultados en la vida real cuando las probabilidades finalmente lo alcanzan. El objetivo no es hacerlo sentir mal. El objetivo es ayudarle a detectar sus propios patrones lo suficientemente temprano para interrumpirlos.</p>
+
+<div class="objectives"><h4>Objetivos de aprendizaje</h4><ul>
+<li>Identificar los comportamientos de riesgo más comunes al volante y explicar cómo varios de ellos se relacionan con las leyes de Virginia sobre la conducción temeraria y la conducción agresiva.</li>
+<li>Explicar cómo el sesgo de optimismo, el descuento temporal, la prueba social y el sesgo de atribución hostil llevan a los conductores a subestimar el peligro.</li>
+<li>Calcular una distancia de seguimiento segura usando la regla de 3 a 4 segundos y explicar por qué el tiempo de percepción y reacción hace que seguir demasiado cerca sea tan peligroso.</li>
+<li>Describir la compensación del riesgo y por qué pensar "soy un buen conductor" en realidad puede aumentar el riesgo.</li>
+<li>Enumerar las consecuencias legales, económicas, profesionales y personales de conducir de manera riesgosa.</li>
+<li>Completar un inventario personal de riesgos para identificar sus propios hábitos de mayor riesgo.</li>
+</ul></div>
+
+<h3>Por qué tomar riesgos sigue patrones</h3>
+<p>Cada vez que usted conduce, toma cientos de pequeñas decisiones, la mayoría en una fracción de segundo. Su cerebro depende de hábitos y atajos para manejarlas.</p>
+<p>El problema es que los hábitos y los atajos pueden ir cambiando poco a poco. Si un día usted sigue un poco demasiado cerca y no pasa nada malo, su cerebro lo archiva como "seguro". La próxima vez, esa misma distancia se siente normal, y una distancia un poco más corta parece aceptable. A lo largo de meses y años, un conductor puede pasar de ser cuidadoso a ser peligroso sin notar nunca un solo momento en el que "decidió" convertirse en un conductor riesgoso.</p>
+<p>La NHTSA ha encontrado que el comportamiento o el error del conductor es la razón decisiva en la gran mayoría de los choques. El clima, el diseño de la vía y las fallas del vehículo influyen, pero el factor decisivo más común es lo que el conductor decidió hacer. En realidad, esa es una buena noticia: significa que el factor de seguridad más importante es el que usted controla.</p>
+
+<div class="highlight"><strong>Idea clave:</strong> La mayoría de los choques no son "accidentes" en el sentido de pura mala suerte. Son el resultado predecible de decisiones que reducen el margen de error hasta que ya no queda ningún margen.</div>
+
+<h3>El perfil de quien toma riesgos: comportamientos comunes</h3>
+<p>Los investigadores que estudian a los conductores de alto riesgo, incluido el psicólogo Jerry Deffenbacher de Colorado State University, han encontrado que los mismos comportamientos aparecen una y otra vez. En su trabajo, los conductores con mucho enojo eran más propensos a exceder el límite de velocidad por 10 a 20 mph, hacer cambios de carril rápidos, seguir demasiado cerca y entrar a las intersecciones con la luz roja. En simulaciones de manejo, los conductores con mucho enojo tuvieron aproximadamente el doble de choques que los conductores con poco enojo. Veamos cada uno de estos comportamientos, además de otros dos que comúnmente llevan a cargos.</p>
+
+<h4>1. Exceso de velocidad</h4>
+<p>El exceso de velocidad es el comportamiento de riesgo más común y un factor en aproximadamente 3 de cada 10 muertes de tránsito en los EE. UU., según la NHTSA. En Virginia, ir a 20 mph o más por encima del límite, o a más de 85 mph, es conducción temeraria según el § 46.2-862, y conducir demasiado rápido para las condiciones puede ser conducción temeraria según el § 46.2-861 aun por debajo del límite. La velocidad empeora todos los demás riesgos porque reduce su tiempo para reaccionar.</p>
+
+<h4>2. Zigzaguear y cambiar de carril rápidamente</h4>
+<p>Zigzaguear significa entrar y salir de los carriles para adelantarse al tránsito. Cada cambio de carril crea un nuevo punto de conflicto, un momento en que dos autos podrían intentar ocupar el mismo espacio, y obliga a revisar rápidamente los espejos y el punto ciego. Meterse en los espacios entre autos también hace que otros conductores frenen, lo cual se propaga hacia atrás en el tránsito.</p>
+
+<h4>3. Seguir demasiado cerca (pegarse al vehículo de adelante)</h4>
+<p>Seguir demasiado cerca significa ir tan pegado que no podría detenerse de forma segura si el vehículo de adelante frena de repente. Algunos conductores lo hacen para presionar al conductor de adelante; otros simplemente se han acostumbrado a dejar poco espacio. Seguir demasiado cerca es una de las infracciones incluidas en la ley de conducción agresiva de Virginia, el § 46.2-868.1.</p>
+
+<h4>4. Pasarse los semáforos en rojo y evadir los controles de tránsito</h4>
+<p>Entrar a una intersección después de que la luz cambió a rojo es una de las maniobras más peligrosas que puede hacer un conductor, porque los choques en intersecciones a menudo implican que un auto golpee a otro de lado. El costado de un vehículo tiene mucha menos protección que la parte delantera o trasera. Un comportamiento relacionado es cortar camino por un estacionamiento o una gasolinera para evitar un semáforo o una señal de alto. La ley de conducción agresiva de Virginia incluye específicamente evadir los dispositivos de control de tránsito como una de las infracciones subyacentes.</p>
+
+<h4>5. Rebasar de manera indebida</h4>
+<p>Rebasar de manera indebida incluye rebasar por la derecha cuando no está permitido, rebasar donde no se puede ver lo suficientemente lejos hacia adelante y volver a meterse de forma demasiado brusca delante del vehículo que rebasó. Rebasar de manera indebida está incluido en la ley de conducción agresiva. Algunas formas de rebasar también están cubiertas por las leyes de conducción temeraria de Virginia, como rebasar en una curva o en la cima de una colina donde no se puede ver el tránsito que viene en sentido contrario, rebasar dos vehículos lado a lado y rebasar un autobús escolar detenido. Estas se tratan con seriedad porque el conductor está apostando a que no viene nada desde la dirección que no puede ver.</p>
+
+<h4>6. Distracción</h4>
+<p>La distracción también es tomar riesgos. Leer un mensaje de texto o buscar en una lista de canciones aparta sus ojos y su mente de la vía. A 60 mph usted recorre unos 88 pies cada segundo, así que una mirada de dos segundos al teléfono significa conducir a ciegas unos 176 pies. Combinada con seguir demasiado cerca, casi no deja oportunidad de reaccionar.</p>
+
+<p>Muchos de estos hábitos coinciden con las infracciones incluidas en la ley de conducción agresiva de Virginia. Según el § 46.2-868.1, cometer una de ellas se convierte en conducción agresiva cuando el conductor además representa un peligro para otra persona o tiene la intención de acosar, intimidar, lesionar u obstruir a alguien. Bajo las circunstancias adecuadas, estos hábitos son delitos.</p>
+
+<div class="scenario"><h4>Escenario: El viaje de la mañana al trabajo</h4><p>Piense en un conductor al que llamaremos Marcus. Viaja todas las mañanas por la I-64 hacia Richmond. Por lo general va de cinco a diez minutos atrasado. Para recuperar el tiempo, maneja unas 15 mph por encima del límite, cambia de carril cada vez que el carril de al lado parece más rápido y se mantiene cerca del auto de adelante para que nadie se le pueda meter. Lo ha hecho durante años sin chocar y se considera un conductor excelente.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Marcus está acumulando varios riesgos a la vez: exceso de velocidad, zigzagueo y seguir demasiado cerca. Cada uno reduce su margen de seguridad, y juntos casi no le dejan espacio para cometer un error. Su historial sin choques no es prueba de seguridad; en parte es suerte, y alimenta su sesgo de optimismo. Si el auto de adelante se detiene de repente mientras él lo sigue de cerca a alta velocidad, no tendrá tiempo de reaccionar. La verdadera solución no es "manejar mejor", sino "salir más temprano". Al reservar diez minutos adicionales en su mañana, Marcus elimina la presión de tiempo que impulsa los tres comportamientos. También debería fijarse una regla personal firme sobre la distancia de seguimiento (al menos de 3 a 4 segundos) y quedarse en un solo carril a menos que tenga una razón real para cambiar.</p></details></div>
+
+<h3>Distancia de seguimiento: su margen de seguridad más importante</h3>
+<p>Si usted cambia un solo hábito después de este curso, que sea su distancia de seguimiento. Es fácil de corregir, casi no le cuesta tiempo de viaje y le ayuda a protegerse de los choques por alcance. También elimina uno de los comportamientos que otros conductores y la policía tienen más probabilidad de ver como agresivo.</p>
+
+<h4>Por qué importa el espacio: el tiempo de reacción</h4>
+<p>Cuando algo sucede delante de usted, no frena al instante. Primero debe ver el peligro, reconocerlo como un problema, decidir frenar y mover el pie hacia el pedal. Esto se llama <strong>tiempo de percepción y reacción</strong>, y para un conductor alerta típico es de aproximadamente 1.5 segundos. Durante ese tiempo su auto sigue avanzando a toda velocidad.</p>
+<p>A 60 mph, usted recorre unos 88 pies por segundo. En 1.5 segundos, recorre unos 132 pies antes de que su pie siquiera llegue al freno. Solo entonces el auto empieza a reducir la velocidad. Y la distancia de frenado aumenta rápidamente con la velocidad: cuando su velocidad se duplica, su distancia de frenado se multiplica aproximadamente por cuatro.</p>
+<p>Ahora imagine que sigue a alguien a 60 mph con un espacio de solo un segundo, unos 88 pies. Si ese conductor frena con fuerza, ya habrá estado reduciendo la velocidad durante un segundo y medio completo cuando usted empiece a frenar. Su tiempo de reacción por sí solo es más largo que el espacio que usted dejó. Así es como ocurren los choques en cadena en las carreteras.</p>
+
+<h4>La regla de 3 a 4 segundos</h4>
+<p>La forma más segura de medir la distancia de seguimiento es en tiempo, no en largos de auto, porque el tiempo se ajusta automáticamente a la velocidad. Así se hace:</p>
+<ol>
+<li>Escoja un objeto fijo adelante, como una señal, un paso elevado o una sombra en la vía.</li>
+<li>Cuando la parte trasera del vehículo de adelante pase ese objeto, empiece a contar: "mil uno, mil dos, mil tres…"</li>
+<li>Si la parte delantera de su vehículo llega al objeto antes de que usted termine de contar al menos hasta tres (cuatro es mejor), va demasiado cerca. Suelte el acelerador poco a poco hasta tener un espacio mayor.</li>
+</ol>
+<p>De tres a cuatro segundos es el mínimo en buenas condiciones. Con lluvia, neblina, nieve, oscuridad, tránsito pesado, o cuando va detrás de un camión grande o una motocicleta, auméntelo.</p>
+
+<table>
+<tr><th>Velocidad</th><th>Pies recorridos por segundo (aprox.)</th><th>Distancia recorrida en 3 segundos (aprox.)</th></tr>
+<tr><td>30 mph</td><td>44 pies</td><td>132 pies</td></tr>
+<tr><td>45 mph</td><td>66 pies</td><td>198 pies</td></tr>
+<tr><td>60 mph</td><td>88 pies</td><td>264 pies</td></tr>
+<tr><td>70 mph</td><td>unos 103 pies</td><td>unos 308 pies</td></tr>
+</table>
+
+<div class="myth"><p><strong>Mito:</strong> "Si dejo un espacio grande, la gente simplemente se meterá y perderé tiempo".</p><p><strong>Realidad:</strong> A veces un conductor se meterá en su espacio. Cuando eso pase, simplemente suelte el acelerador un poco y vuelva a formar su espacio. Cada auto que se mete delante de usted solo le cuesta uno o dos segundos. A lo largo de todo un viaje al trabajo, eso suma muy poco tiempo, y es mucho menos que el tiempo que se pierde por un choque, una detención por la policía o una fecha en el tribunal.</p></div>
+
+<div class="scenario"><h4>Escenario: El carril izquierdo lento</h4><p>Una conductora a la que llamaremos Tasha va por una carretera de cuatro carriles en el carril izquierdo. El auto delante de ella va exactamente al límite de velocidad y no se cambia de carril. Tasha se acerca hasta quedar a aproximadamente el largo de un auto de su defensa y hace cambio de luces para que se quite.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Tasha se está pegando al vehículo de adelante para presionar a otro conductor, lo que significa seguir demasiado cerca con la intención de intimidar u obstruir. Esa combinación encaja en la definición de conducción agresiva según el § 46.2-868.1. Aun dejando la ley de lado, ella se ha dejado mucho menos espacio del que requiere su tiempo de reacción. Si el conductor de adelante frena por escombros o por un venado, es probable que Tasha lo choque por detrás, y ella tendrá la culpa. La mejor opción es retroceder hasta un espacio de 3 a 4 segundos y, si aparece una oportunidad segura para rebasar legalmente por la derecha, aprovecharla con calma. Si no, aceptar la velocidad más lenta. Puede que el otro conductor esté nervioso, perdido o simplemente manejando al límite legal. Su velocidad no es un insulto personal.</p></details></div>
+
+<h3>Por qué tomamos riesgos: los atajos mentales detrás del peligro</h3>
+<p>Si conducir de manera riesgosa es tan peligroso, ¿por qué lo hacen personas inteligentes y responsables? La respuesta es que el cerebro humano usa varios atajos mentales, llamados <strong>sesgos cognitivos</strong>, que hacen que los riesgos parezcan más pequeños de lo que son. Todos tenemos estos sesgos. El objetivo no es eliminarlos, lo cual es imposible, sino reconocerlos cuando están dirigiendo sus decisiones.</p>
+
+<h4>Sesgo de optimismo: "A mí no me va a pasar"</h4>
+<p>El sesgo de optimismo es la tendencia a creer que es más probable que las cosas malas les pasen a otras personas que a usted. Al conducir, se nota claramente: la mayoría de los conductores se califican a sí mismos por encima del promedio en habilidad y seguridad. Obviamente, no todos pueden estar por encima del promedio. Muchos de nosotros nos estamos sobreestimando.</p>
+<p>El problema es que a la física no le importa su confianza. Un tiempo de reacción de 1.5 segundos es un límite humano, no un problema de habilidad.</p>
+
+<h4>Descuento temporal: el "ahora" se siente más grande que el "después"</h4>
+<p>El descuento temporal es la tendencia a darles más valor a las recompensas inmediatas que a los costos futuros. La recompensa de exceder la velocidad o zigzaguear, llegar un poco antes, se siente ahora mismo. Los posibles costos, un choque, un cargo penal, un seguro más caro, están en el futuro y son inciertos, así que el cerebro los hace más pequeños.</p>
+<p>Lo que hace que el descuento temporal sea especialmente costoso al conducir es que la "recompensa" por lo general es diminuta. Tome un viaje de 10 millas. A 60 mph toma 10 minutos. A 70 mph toma unos 8 minutos y 34 segundos. Usted ahorra aproximadamente 1 minuto y 26 segundos, y eso suponiendo que pueda mantener 70 todo el camino sin semáforos, tránsito ni reducciones de velocidad. En el tránsito real, el ahorro a menudo es menor. Mientras tanto, los posibles costos, lesiones, antecedentes penales, miles de dólares en aumentos del seguro, pueden durar años.</p>
+
+<div class="highlight"><strong>Haga las cuentas:</strong> Diez millas a 70 mph en lugar de 60 mph ahorran aproximadamente 1 minuto y 26 segundos. Una condena por conducción temeraria permanece en su historial de manejo del DMV de Virginia durante 11 años. Es un intercambio muy malo.</div>
+
+<h4>Prueba social: "Todo el mundo lo hace"</h4>
+<p>La prueba social es nuestra tendencia a fijarnos en lo que hacen los demás para decidir qué es normal y aceptable. Si el tránsito a su alrededor va a 80 en una zona de 65, puede sentirse extraño, e incluso inseguro, manejar al límite.</p>
+<p>Pero "todo el mundo lo hace" no es una defensa ni en el tribunal ni contra la física. Cada conductor es individualmente responsable de su propia velocidad, y la policía puede detener a cualquier auto de un grupo que va rápido.</p>
+
+<h4>Sesgo de atribución hostil: "Lo hizo a propósito"</h4>
+<p>El sesgo de atribución hostil es la tendencia a suponer que las acciones ambiguas de otras personas son deliberadas y hostiles. Cuando otro conductor se le mete adelante, se incorpora lentamente o no avanza cuando la luz cambia a verde, usted puede interpretarlo de muchas maneras. Tal vez no lo vio. Tal vez está perdido, es nuevo en la zona, está lidiando con un hijo enfermo o simplemente cometió un error. Pero un conductor con un fuerte sesgo de atribución hostil salta directamente a "Ese idiota me lo hizo a propósito".</p>
+<p>Esto importa para la toma de riesgos porque los pensamientos hostiles justifican respuestas riesgosas. "Se me metió adelante, así que le voy a dar una lección" lleva a pegarse al vehículo de adelante, frenar de golpe a propósito o perseguir. En la investigación de Deffenbacher, los conductores con mucho enojo tenían más pensamientos hostiles y agresivos y tomaban más riesgos. El sesgo es el combustible; el comportamiento riesgoso es el fuego.</p>
+
+<h4>Excitación emocional: cuando los sentimientos toman el volante</h4>
+<p>El enojo y el estrés estrechan su atención, así que usted se enfoca en el conductor "enemigo" y no ve otros peligros. También hacen que las acciones riesgosas parezcan justificadas. Los conductores con mucho enojo en la investigación de Deffenbacher se enojaban más rápido y tomaban más riesgos. El estrés del trabajo, el dinero o la familia también puede desbordarse hacia la vía; desquitarse con un blanco que no tiene nada que ver, como otro conductor, se llama <strong>agresión desplazada</strong>.</p>
+
+<div class="scenario"><h4>Escenario: La incorporación</h4><p>Un conductor al que llamaremos Darnell se está incorporando a la Route 288. Un auto en el carril derecho acelera en lugar de dejarlo entrar, y Darnell tiene que frenar con fuerza al final de la rampa. Entra a la carretera detrás de ese auto y siente que se le calienta la cara. Su primer pensamiento es acercarse mucho al auto y quedarse pegado a su defensa durante unas millas para "que se entere".</p><details><summary>¿Qué debería pasar aquí?</summary><p>Darnell está experimentando el sesgo de atribución hostil y la excitación emocional al mismo tiempo. Ha supuesto que el otro conductor le bloqueó el paso a propósito. Es igual de probable que el otro conductor no lo haya notado, que haya calculado mal su velocidad o que haya entrado en pánico. Si Darnell actúa según su impulso, estará siguiendo demasiado cerca con la intención de acosar o intimidar, lo cual puede ser conducción agresiva según el § 46.2-868.1. La mejor decisión es notar el enojo ("se me calienta la cara, estoy enojado"), respirar lentamente y retroceder a propósito. El reencuadre ayuda: "Tal vez no me vio". El incidente ya terminó. Continuarlo solo le agrega riesgo y exposición legal a Darnell.</p></details></div>
+
+<h3>La mentalidad de tomar riesgos y el poder del reencuadre</h3>
+<p>Juntos, estos sesgos forman una <strong>mentalidad de tomar riesgos</strong>: los otros conductores son adversarios, el tiempo siempre es poco y usted está seguro de que puede con cualquier cosa.</p>
+<p>Uno de los hallazgos de investigación más importantes sobre esta mentalidad es que se puede cambiar. Los estudios sobre el enojo al conducir han encontrado que las intervenciones que animan a los conductores a reinterpretar el comportamiento de otros conductores como neutral o como un error inocente, en lugar de malintencionado, pueden reducir las respuestas de conducción agresiva. Esta habilidad se llama <strong>reevaluación cognitiva</strong> o reencuadre. La investigación de Deffenbacher también encontró que el entrenamiento en relajación y el entrenamiento cognitivo-relajante redujeron el enojo al conducir, y las mejoras se mantuvieron en gran parte aproximadamente un año después.</p>
+
+<div class="highlight"><strong>Hallazgo de investigación:</strong> Reinterpretar el comportamiento de otro conductor como un error y no como un ataque, lo que se conoce como reevaluación cognitiva, reduce las respuestas agresivas. Usted no necesita saber la verdadera razón por la que alguien manejó mal. Solo necesita escoger una explicación que lo mantenga tranquilo y seguro.</div>
+
+<p>Reencuadrar no significa que el otro conductor no hizo nada mal. Significa negarse a permitir que el error de esa persona se convierta en su razón para cometer un segundo error, más peligroso. Algunos reencuadres útiles son:</p>
+<ul>
+<li>"Tal vez está perdido o buscando una salida".</li>
+<li>"Yo también he hecho eso sin querer".</li>
+<li>"Ese es su error. No necesito agregar uno mío".</li>
+<li>"Llegar a casa a salvo importa más que ganar este momento".</li>
+<li>"Su mala forma de manejar es una razón para darle más espacio, no menos".</li>
+</ul>
+
+
+<div class="myth"><p><strong>Mito:</strong> "Desahogarme tocando la bocina o gritando me ayuda a calmarme".</p><p><strong>Realidad:</strong> Las investigaciones sobre el enojo sugieren que desahogarse, por ejemplo tocando la bocina, gritando o haciendo gestos, tiende a aumentar el enojo en lugar de liberarlo. Repetir el incidente en su mente (rumiación) también mantiene el enojo. Las técnicas para calmarse y el reencuadre funcionan mejor que "sacar la presión".</p></div>
+
+<h3>Compensación del riesgo: por qué sentirse seguro puede hacerlo menos seguro</h3>
+<p>La <strong>compensación del riesgo</strong> es la tendencia de las personas a tomar más riesgos cuando se sienten más protegidas. Al conducir, puede manifestarse de varias maneras:</p>
+<ul>
+<li>Un conductor con una SUV nueva con tracción en todas las ruedas se siente confiado en la nieve y maneja más rápido de lo que permiten las condiciones.</li>
+<li>Un conductor cuyo auto tiene frenado automático de emergencia sigue más de cerca, confiando en que el auto se detendrá por él.</li>
+<li>Un conductor que lleva 20 años manejando sin chocar supone que su habilidad compensa el exceso de velocidad.</li>
+<li>Un conductor en una vía conocida deja de prestar mucha atención porque "conozco esta vía como la palma de mi mano".</li>
+</ul>
+<p>La tecnología de seguridad es valiosa, pero la tracción en todas las ruedas le ayuda a arrancar en una vía resbalosa, no a detenerse más rápido, y los sistemas de asistencia al conductor están diseñados para ayudarle, no para reemplazar su juicio. La experiencia también puede generar exceso de confianza, que es el sesgo de optimismo con otro nombre.</p>
+
+<div class="scenario"><h4>Escenario: La camioneta nueva</h4><p>Un conductor al que llamaremos Kevin acaba de comprar una camioneta pickup nueva con tracción en las cuatro ruedas y un conjunto completo de funciones de asistencia al conductor. En la primera mañana con hielo del invierno, maneja a su velocidad normal de carretera y sigue al auto de adelante a unos dos segundos. "Esta camioneta está hecha para el mal tiempo", le dice a su pasajero.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Kevin está mostrando compensación del riesgo. Las funciones de su camioneta lo hacen sentir más seguro, así que está aceptando más riesgo. Pero la tracción en las cuatro ruedas no acorta la distancia de frenado sobre el hielo, y su camioneta, que es más pesada, en realidad podría necesitar más espacio para detenerse. Según la ley de Virginia, conducir más rápido de lo razonable para las condiciones puede ser conducción temeraria según el § 46.2-861, aunque vaya por debajo del límite indicado. Kevin debería reducir la velocidad muy por debajo de su velocidad normal, aumentar su distancia de seguimiento mucho más allá de los 3 a 4 segundos habituales y tratar las funciones de seguridad del vehículo como un respaldo, no como un permiso para manejar más rápido.</p></details></div>
+
+<h3>Tomar riesgos y sus consecuencias</h3>
+<p>Cuando llegan las consecuencias, suelen afectar varias áreas de la vida al mismo tiempo. El Módulo 5 cubre por completo las sanciones de Virginia.</p>
+
+<ul>
+<li><strong>Legales:</strong> La conducción temeraria es un delito menor de Clase 1 según el § 46.2-868 (hasta 12 meses de cárcel y/o una multa de hasta $2,500), por lo general requiere comparecer ante el tribunal y puede traer una suspensión de la licencia de 10 días a 6 meses según el § 46.2-392. La conducción agresiva es un delito menor de Clase 2, o de Clase 1 con intención de lesionar.</li>
+<li><strong>DMV:</strong> La conducción temeraria agrega 6 puntos de demérito, y la condena permanece en su historial de manejo del DMV durante 11 años.</li>
+<li><strong>Económicas:</strong> Multas, costos judiciales, honorarios de abogados y aumentos del seguro que a menudo son de cientos a miles de dólares por año, durante años. Algunas aseguradoras podrían no renovar su póliza.</li>
+<li><strong>Profesionales:</strong> Una condena penal puede aparecer en las verificaciones de antecedentes y afectar empleos que implican conducir, licencias profesionales o autorizaciones de seguridad.</li>
+<li><strong>Personales:</strong> Lesiones o la muerte de usted, de sus pasajeros o de desconocidos que simplemente compartían la vía. La culpa de haberle hecho daño a alguien puede durar mucho más que cualquier sentencia.</li>
+</ul>
+
+<div class="warning"><strong>Advertencia de Virginia:</strong> Si las carreras (en la vía pública) o la conducción de exhibición con desprecio temerario por la vida humana causan lesiones corporales graves a alguien que no participaba, es un delito grave de Clase 6 según el § 46.2-865.1. Si causan una muerte, es un delito grave castigado con 1 a 20 años de prisión. Una sola decisión riesgosa puede convertir un hábito de nivel de delito menor en un delito grave.</div>
+
+<h3>Su inventario personal de riesgos</h3>
+<p>Conocer los comportamientos riesgosos en general es útil. Conocer sus propios patrones es mucho más útil. Lea las afirmaciones de abajo y cuente con honestidad cuántas lo describen. Nadie más verá sus respuestas.</p>
+<ul>
+<li>Con regularidad manejo 10 mph o más por encima del límite indicado.</li>
+<li>A menudo sigo al auto de adelante a menos de tres segundos.</li>
+<li>Cambio de carril con frecuencia para adelantarme al tránsito más lento.</li>
+<li>Acelero cuando veo una luz amarilla.</li>
+<li>Reviso o uso mi teléfono mientras el auto está en movimiento.</li>
+<li>A menudo voy tarde cuando manejo.</li>
+<li>A veces me quedo pegado detrás de un conductor para que se quite del carril.</li>
+<li>Supongo que los otros conductores que cometen errores están siendo descuidados o groseros a propósito.</li>
+<li>Manejo igual con lluvia u oscuridad que a plena luz del día y con buen tiempo.</li>
+<li>Creo que soy mejor conductor que la mayoría de las personas en la vía.</li>
+</ul>
+<p>Si marcó dos o más, ha encontrado oportunidades reales para reducir su riesgo. Los comportamientos riesgosos a menudo comparten una raíz, por lo general la presión de tiempo o el enojo. Salir 10 minutos más temprano, por ejemplo, puede reducir a la vez el exceso de velocidad, el zigzagueo, seguir demasiado cerca y acelerar con la luz amarilla.</p>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4>
+<label>¿Cuáles dos puntos del inventario de riesgos lo describen con mayor precisión? ¿Cuándo suelen ocurrir (hora del día, tipo de viaje, estado de ánimo)?</label><textarea></textarea>
+<label>Piense en una ocasión en que tomó un riesgo mientras manejaba y no pasó nada malo. ¿Qué se dijo a sí mismo en ese momento para justificarlo? ¿Qué sesgo de este módulo estaba actuando?</label><textarea></textarea>
+<label>¿Cuál es un cambio específico que puede hacer esta semana, como salir más temprano, fijarse una regla de distancia de seguimiento de 3 a 4 segundos o poner su teléfono fuera de su alcance?</label><textarea></textarea>
+</div>
+
+<div class="keyterms"><h4>Términos clave</h4><dl>
+<dt>Sesgo de optimismo</dt><dd>La creencia de que es más probable que los malos resultados les pasen a otros que a usted; la mayoría de los conductores se califican a sí mismos por encima del promedio.</dd>
+<dt>Descuento temporal</dt><dd>Valorar más las recompensas inmediatas (llegar antes) que los costos futuros (choques, cargos, aumentos del seguro).</dd>
+<dt>Prueba social</dt><dd>Usar lo que hacen los demás para juzgar qué es normal o aceptable, como exceder la velocidad porque el tránsito a su alrededor la excede.</dd>
+<dt>Sesgo de atribución hostil</dt><dd>Suponer que las acciones ambiguas de otras personas son deliberadas y hostiles.</dd>
+<dt>Reevaluación cognitiva (reencuadre)</dt><dd>Reinterpretar el comportamiento de otro conductor como un error neutral en lugar de un ataque, lo cual reduce las respuestas agresivas.</dd>
+<dt>Compensación del riesgo</dt><dd>Tomar más riesgos cuando uno se siente más protegido, por ejemplo por las funciones de seguridad del vehículo o por la experiencia.</dd>
+<dt>Tiempo de percepción y reacción</dt><dd>El tiempo que toma ver un peligro, decidir actuar y empezar a frenar, por lo general aproximadamente 1.5 segundos.</dd>
+<dt>Regla de 3 a 4 segundos</dt><dd>Un método para medir la distancia de seguimiento contando los segundos entre el momento en que el vehículo de adelante y su vehículo pasan por un punto fijo.</dd>
+<dt>Agresión desplazada</dt><dd>Desquitar la frustración de un área de la vida con un blanco que no tiene nada que ver, como otro conductor.</dd>
+</dl></div>
+
+<h3>Resumen del módulo</h3>
+<ul>
+<li>Tomar riesgos sigue patrones. Las pequeñas decisiones riesgosas que "funcionan" se vuelven hábitos, y los hábitos van cambiando hacia un mayor riesgo con el tiempo.</li>
+<li>Los comportamientos de riesgo comunes incluyen el exceso de velocidad, zigzaguear, seguir demasiado cerca, pasarse los semáforos en rojo, rebasar de manera indebida y la distracción. Varios son infracciones incluidas en la ley de conducción agresiva de Virginia, el § 46.2-868.1.</li>
+<li>El comportamiento o el error del conductor es la razón decisiva en la gran mayoría de los choques, lo que significa que sus decisiones son el factor de seguridad más importante que usted controla.</li>
+<li>A 60 mph usted recorre unos 88 pies por segundo, y el tiempo típico de percepción y reacción es de aproximadamente 1.5 segundos. Mantenga una distancia de seguimiento de al menos 3 a 4 segundos, y más en malas condiciones.</li>
+<li>El sesgo de optimismo, el descuento temporal, la prueba social y el sesgo de atribución hostil hacen que los riesgos parezcan más pequeños o más justificados de lo que son.</li>
+<li>El exceso de velocidad por lo general ahorra muy poco tiempo: 10 millas a 70 mph en lugar de 60 mph ahorran solo aproximadamente 1 minuto y 26 segundos.</li>
+<li>Reencuadrar el comportamiento de otros conductores como un error y no como un ataque reduce las respuestas agresivas.</li>
+<li>La compensación del riesgo significa que las funciones de seguridad y la experiencia pueden llevar al exceso de confianza. La tecnología le ayuda; no reemplaza el juicio.</li>
+<li>Las consecuencias de conducir de manera riesgosa pueden ser legales, económicas, profesionales y profundamente personales. Una condena por conducción temeraria es un delito menor de Clase 1 y permanece en su historial del DMV durante 11 años.</li>
+<li>Corregir la causa de raíz, que a menudo es la presión de tiempo o el enojo, puede mejorar varios comportamientos riesgosos a la vez.</li>
+</ul>
+<p>Tómese su tiempo con los escenarios y las preguntas de reflexión de arriba. Cuando el temporizador llegue a 00:00, se desbloqueará el Examen del Módulo 4. El examen tiene 15 preguntas, y usted necesita una calificación aprobatoria de 80% para pasar.</p>
+
+    <div class="gate" id="gate">
+      <h3>Tiempo requerido del Módulo 4</h3>
+      <p id="gateMsg">Siga leyendo y realizando las actividades. Este módulo requiere los 30 minutos completos.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Tiempo restante</a>
+      <small>Cuando el temporizador llegue a 00:00, regrese a su curso para tomar el Examen del Módulo 4.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-es-m4-remaining', DONE='rad-es-m4-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Tiempo requerido completado';go.removeAttribute('href');
+      msg.textContent='Ha completado el tiempo requerido del Módulo 4. Regrese a su curso para tomar el Examen del Módulo 4.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

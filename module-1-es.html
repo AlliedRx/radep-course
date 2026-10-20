@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 1: El problema de la conducción temeraria en Virginia | Virginia Commonwealth Driving Improvement Clinic (Español)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Módulo 1 de 8 &middot; 30 minutos</span>Módulo 1: El problema de la conducción temeraria en Virginia</h1>
+    <div class="timer" id="timerBox"><small>Tiempo restante</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>Bienvenido al curso de Educación sobre Conducción Temeraria y Agresiva. Si usted está aquí por una remisión del tribunal, es posible que se sienta frustrado o a la defensiva. Eso es normal. Este módulo no se trata de culparlo a usted. Se trata de asegurarnos de que usted entienda exactamente cómo Virginia define la conducción temeraria, por qué el estado la trata como un delito en lugar de una simple multa de tránsito, y qué le pedirá este curso durante las próximas cuatro horas. Virginia toma la conducción temeraria más en serio que muchos otros estados. Aquí, la conducción temeraria es un <strong>delito penal</strong> — un delito menor de Clase 1 — lo que significa que puede conllevar tiempo en la cárcel, no solo una multa. Entender esa realidad es el primer paso para asegurarse de que nunca vuelva a enfrentarla.</p>
+
+<div class="objectives"><h4>Objetivos de aprendizaje</h4><ul>
+<li>Explicar por qué Virginia clasifica la conducción temeraria como un delito penal y en qué se diferencia de una infracción de tránsito.</li>
+<li>Identificar las principales formas en que un conductor puede ser acusado de conducción temeraria según el Código de Virginia §§ 46.2-852, 46.2-853, 46.2-861 y 46.2-862.</li>
+<li>Aplicar la regla de velocidad de "20 por encima o más de 85" a ejemplos de la vida real.</li>
+<li>Describir las sanciones básicas y las consecuencias ante el DMV relacionadas con una condena por conducción temeraria.</li>
+<li>Explicar por qué la actitud y la toma de decisiones, y no la habilidad para conducir, son la causa de la mayoría de los comportamientos temerarios.</li>
+<li>Completar una autoevaluación honesta de sus propios hábitos al volante.</li>
+</ul></div>
+
+<h3>Por qué Virginia es diferente</h3>
+<p>Muchos conductores en la I-95, la I-81, la I-64 o la I-66 se sorprenden de lo estrictas que son las leyes de Virginia sobre la conducción temeraria. Un comportamiento que en otros lugares le costaría una multa que se puede pagar, en Virginia puede llevarlo ante un juez enfrentando un cargo penal.</p>
+<p>Hay tres razones principales por las que el enfoque de Virginia se destaca:</p>
+<ol>
+<li><strong>La definición es amplia.</strong> La ley de Virginia no limita la conducción temeraria a las carreras callejeras o a un comportamiento descontrolado y salvaje. La regla general abarca cualquier forma de conducir que ponga en peligro "la vida, la integridad física o la propiedad de cualquier persona". Eso les da a los agentes y a los tribunales un rango amplio de conductas con las cuales trabajar.</li>
+<li><strong>La velocidad por sí sola puede ser suficiente.</strong> Según la ley de Virginia, conducir a 20 millas por hora (mph) o más por encima del límite de velocidad, o conducir a más de 85 mph en cualquier lugar, es conducción temeraria por definición. No hace falta que usted esté zigzagueando, siguiendo demasiado cerca a otro vehículo o actuando de manera agresiva. Un pie pesado en una autopista interestatal despejada es suficiente.</li>
+<li><strong>Es un delito.</strong> La conducción temeraria es un delito menor de Clase 1, la clase más grave de delito menor en Virginia.</li>
+</ol>
+<p>El razonamiento es sencillo: un vehículo es pesado, rápido y capaz de matar a personas en un instante, por lo que los conductores que crean un peligro grave para los demás enfrentan consecuencias que corresponden a ese peligro.</p>
+
+<div class="highlight"><strong>Dato clave:</strong> En Virginia, conducir a <strong>20 mph o más por encima del límite de velocidad</strong> — o a <strong>más de 85 mph sin importar el límite</strong> — es conducción temeraria según el Código de Virginia § 46.2-862. No tiene que estar zigzagueando entre el tráfico ni participando en carreras. La simple velocidad es suficiente.</div>
+
+<h3>Cargo penal frente a infracción de tránsito</h3>
+<p>Para entender por qué un cargo de conducción temeraria es tan importante, usted necesita entender la diferencia entre una <em>infracción de tránsito</em> y un <em>delito penal</em>.</p>
+<p>Una <strong>infracción de tránsito</strong> es una violación menor de la ley de tránsito, como muchas multas comunes por exceso de velocidad, no señalizar o tener la inspección vencida. Las infracciones generalmente se castigan con una multa y, en muchos casos, con puntos de demérito del DMV. No son delitos y no conllevan tiempo en la cárcel.</p>
+<p>Un <strong>delito penal</strong> — un delito menor o un delito grave — pasa por el proceso del tribunal penal, puede conllevar tiempo en la cárcel y, si usted es declarado culpable, deja una condena penal en sus antecedentes.</p>
+<p>La conducción temeraria está del lado penal de esa línea. El Código de Virginia § 46.2-868 establece que la conducción temeraria es un delito menor de Clase 1. Un delito menor de Clase 1 en Virginia puede castigarse con <strong>hasta 12 meses de cárcel y/o una multa de hasta $2,500</strong>. Eso no significa que todo conductor condenado por conducción temeraria vaya a la cárcel — los jueces examinan los hechos de cada caso — pero la posibilidad es real, y el tribunal tiene la autoridad para imponerla.</p>
+
+<table>
+<tr><th>Característica</th><th>Infracción de tránsito típica</th><th>Conducción temeraria (delito menor de Clase 1)</th></tr>
+<tr><td>Tipo de falta</td><td>Violación no penal</td><td>Delito penal</td></tr>
+<tr><td>Cárcel máxima</td><td>Ninguna</td><td>Hasta 12 meses</td></tr>
+<tr><td>Multa máxima</td><td>Varía según la violación</td><td>Hasta $2,500</td></tr>
+<tr><td>Comparecer ante el tribunal</td><td>A menudo se puede pagar por adelantado</td><td>Generalmente obligatorio</td></tr>
+<tr><td>Puntos de demérito del DMV</td><td>Varían según la violación</td><td>6 puntos</td></tr>
+<tr><td>Tiempo en el historial del DMV</td><td>Varía</td><td>11 años</td></tr>
+</table>
+
+<div class="warning"><strong>Código de Virginia § 46.2-868:</strong> La conducción temeraria es un delito menor de Clase 1. Como es un cargo penal, generalmente requiere comparecer ante el tribunal — no puede simplemente pagarla en línea como una multa común por exceso de velocidad. Si actualmente enfrenta un cargo, este curso no es asesoría legal; hable con un abogado con licencia en Virginia sobre su situación específica.</div>
+
+<h4>Una posible reducción: conducción indebida</h4>
+<p>La ley de Virginia también reconoce que no todos los casos son iguales. Según el § 46.2-869, cuando un tribunal determina que la imprudencia del conductor fue leve, el juez puede declarar al conductor culpable de <strong>conducción indebida</strong> en lugar de conducción temeraria. La conducción indebida es una infracción de tránsito con una multa de hasta $500. Esto queda completamente a discreción del tribunal. No es automático, y nadie puede prometerlo. Usted aprenderá más sobre esto en el Módulo 5.</p>
+
+<h3>Todas las formas en que lo pueden acusar de conducción temeraria</h3>
+<p>Virginia no tiene una sola ley de conducción temeraria. Tiene todo un artículo del Código dedicado a la conducción temeraria, con varias secciones que describen, cada una, un tipo diferente de conducta temeraria. Conocerlas le ayuda a ver cuántas decisiones cotidianas pueden cruzar la línea.</p>
+
+<h4>1. La regla general — § 46.2-852</h4>
+<p>Esta es la ley de conducción temeraria más amplia. Dice que cualquier persona que conduzca un vehículo en una carretera "de manera temeraria o a una velocidad o de una forma que ponga en peligro la vida, la integridad física o la propiedad de cualquier persona" es culpable de conducción temeraria, sin importar el límite de velocidad indicado.</p>
+<p>El enfoque está en el <strong>peligro</strong>: ¿su manera de conducir puso en riesgo a personas o propiedades? No es necesario que cause un choque ni que vaya a exceso de velocidad. Algunos comportamientos que podrían llevar a un cargo bajo la regla general incluyen zigzaguear entre el tráfico pesado, cruzar bruscamente varios carriles para tomar una salida, conducir peligrosamente cerca de peatones o ciclistas, o hacer maniobras agresivas que obliguen a otros conductores a frenar o desviarse.</p>
+
+<h4>2. Vehículo fuera de control — § 46.2-853</h4>
+<p>Esta sección establece que es conducción temeraria conducir un vehículo que no está bajo el control adecuado, o que tiene frenos inadecuados o mal ajustados. Esta sorprende a la gente. Significa que tanto la <em>condición de su vehículo</em> como su <em>capacidad para controlarlo</em> importan. Perder el control en una curva porque entró en ella demasiado rápido, o conducir a sabiendas con frenos que apenas funcionan, pueden caer bajo esta sección.</p>
+
+<h4>3. Demasiado rápido para las condiciones — § 46.2-861</h4>
+<p>Según esta sección, conducir más rápido de lo que es razonable para las circunstancias y las condiciones del tráfico es conducción temeraria — <strong>sin importar el límite de velocidad indicado</strong>. En otras palabras, usted puede estar por debajo del límite y aun así estar conduciendo de manera temeraria. Piense en lluvia intensa, neblina, nieve, hielo, un estacionamiento lleno de gente, una fila para recoger niños en la escuela o una carretera donde el tráfico se ha detenido de repente. El límite indicado es el máximo en condiciones ideales. No es una promesa de que ese límite sea seguro en todo momento.</p>
+
+<h4>4. Conducción temeraria por velocidad — § 46.2-862</h4>
+<p>Esta es la sección que atrapa al mayor número de conductores. Dice que conducir a <strong>20 mph o más por encima del límite de velocidad aplicable</strong>, o conducir a <strong>más de 85 mph sin importar el límite</strong>, es conducción temeraria. El umbral de 85 mph entró en vigor el 1 de julio de 2020. Antes de esa fecha, el umbral era de 80 mph — así que si aprendió la regla hace años, asegúrese de conocer la versión actual.</p>
+<p>Veamos algunos ejemplos:</p>
+<table>
+<tr><th>Límite indicado</th><th>Su velocidad</th><th>Por encima del límite</th><th>¿Temeraria según el § 46.2-862?</th></tr>
+<tr><td>25 mph (zona residencial)</td><td>45 mph</td><td>20 mph</td><td>Sí — 20 o más por encima</td></tr>
+<tr><td>35 mph</td><td>54 mph</td><td>19 mph</td><td>No según el 862, pero podría ser acusado según el 852 o el 861 dependiendo de las condiciones</td></tr>
+<tr><td>55 mph</td><td>75 mph</td><td>20 mph</td><td>Sí — 20 o más por encima</td></tr>
+<tr><td>70 mph (autopista interestatal)</td><td>86 mph</td><td>16 mph</td><td>Sí — más de 85 mph</td></tr>
+<tr><td>70 mph (autopista interestatal)</td><td>84 mph</td><td>14 mph</td><td>No según el 862 (es una violación por exceso de velocidad, pero no es temeraria solo por la velocidad)</td></tr>
+<tr><td>65 mph</td><td>85 mph</td><td>20 mph</td><td>Sí — 20 o más por encima</td></tr>
+</table>
+<p>Observe que en las vías de baja velocidad se llega muy rápido a 20 por encima, y que en la autopista interestatal el tope de 85 mph se aplica incluso cuando usted va a menos de 20 por encima.</p>
+
+<div class="scenario"><h4>Escenario: La defensa de "solo iba al ritmo del tráfico"</h4><p>Piense en un conductor al que llamaremos Marcus. Él va hacia el sur por la I-95 en una zona de 70 mph, tarde un domingo por la noche. El tráfico es ligero y varios autos a su alrededor van rápido. Marcus se acomoda detrás de uno de ellos y pone el control de crucero a 87 mph. Un agente de la policía estatal lo detiene. Marcus explica que solo iba al ritmo del tráfico y que la carretera estaba casi vacía. ¿Es Marcus culpable de conducción temeraria según el § 46.2-862?</p><details><summary>¿Qué debería pasar aquí?</summary><p>Sí. Según el § 46.2-862, conducir a más de 85 mph es conducción temeraria sin importar el límite indicado. Marcus iba solo 17 mph por encima del límite de 70 mph, pero como superó las 85 mph, cumple con la definición. "Ir al ritmo del tráfico" no es una excepción en la ley. La mejor decisión habría sido dejar pasar a los autos más rápidos y mantenerse en el límite o cerca de él.</p></details></div>
+
+<h4>5. Otras secciones sobre conducción temeraria</h4>
+<p>El mismo artículo del Código cubre varias situaciones más específicas. No necesita saberse los números de sección, pero sí conozca los comportamientos:</p>
+<ul>
+<li><strong>Rebasar un autobús escolar detenido</strong> que está subiendo o bajando niños.</li>
+<li><strong>Rebasar en una curva o en la cima de una colina</strong>, donde usted no puede ver el tráfico que viene en sentido contrario.</li>
+<li><strong>Rebasar lado a lado</strong> o conducir lado a lado en un carril destinado para un solo vehículo.</li>
+<li><strong>Carreras</strong> con otro vehículo en una carretera (§ 46.2-865), lo cual también conlleva una suspensión de la licencia de no menos de 6 meses y no más de 2 años.</li>
+<li><strong>Conducción de exhibición</strong>, como quemar llanta o zigzaguear innecesariamente cerca de un grupo de personas, lo cual puede llevar a una suspensión de la licencia de hasta 6 meses.</li>
+</ul>
+<p>Cada uno de estos comportamientos comparte el mismo problema de fondo: el conductor decidió crear un riesgo que otras personas no aceptaron correr.</p>
+
+<h4>Un delito relacionado: conducción agresiva — § 46.2-868.1</h4>
+<p>Virginia también tiene un delito aparte llamado <strong>conducción agresiva</strong>. Un conductor comete conducción agresiva cuando comete ciertas infracciones de tránsito que están enumeradas en la ley — como seguir demasiado cerca, rebasar de forma indebida, no ceder el paso, evadir dispositivos de control de tránsito, exceder la velocidad o detenerse en una carretera — <em>y</em> además crea un peligro para otra persona o tiene la intención de acosar, intimidar, herir u obstruir a otra persona. La conducción agresiva es un delito menor de Clase 2 (hasta 6 meses de cárcel y/o una multa de hasta $1,000). Si el conductor tenía la intención de herir a alguien, se convierte en un delito menor de Clase 1. Un tribunal también puede ordenar que el conductor complete un programa de manejo de la ira o de conducción agresiva. Usted estudiará la conducción agresiva a fondo en el Módulo 3.</p>
+
+<div class="scenario"><h4>Escenario: Por debajo del límite y aun así temeraria</h4><p>Piense en una conductora a la que llamaremos Denise. Ella va por la Ruta 288 cerca de Richmond durante una fuerte tormenta eléctrica. El límite indicado es de 60 mph y ella va a 58. El agua se está acumulando en la carretera, la visibilidad es mala y los autos de adelante están frenando de forma impredecible. Denise hace hidroplaneo y se desliza hacia el acotamiento, y por poco choca con un auto averiado. Ella le dice al agente: "Ni siquiera iba con exceso de velocidad". ¿Podría Denise aun así enfrentar un cargo de conducción temeraria?</p><details><summary>¿Qué debería pasar aquí?</summary><p>Sí, podría. Según el § 46.2-861, conducir más rápido de lo que es razonable para las condiciones es conducción temeraria sin importar el límite indicado. Según el § 46.2-853, perder el control adecuado del vehículo también puede ser conducción temeraria. El límite indicado describe el máximo en buenas condiciones. En una tormenta fuerte, una velocidad segura puede ser mucho más baja, y Denise también debió haber aumentado su distancia de seguimiento muy por encima de los 3 a 4 segundos normales. "Iba por debajo del límite" no es una defensa completa.</p></details></div>
+
+<h3>Lo que puede significar una condena</h3>
+<p>El Módulo 5 cubre las sanciones en detalle, pero usted debe tener desde ahora un panorama claro. Una condena por conducción temeraria en Virginia puede afectarle en al menos cinco formas:</p>
+<ol>
+<li><strong>Sanciones penales.</strong> Como delito menor de Clase 1, la conducción temeraria puede traer hasta 12 meses de cárcel y/o una multa de hasta $2,500.</li>
+<li><strong>Suspensión de la licencia.</strong> Según el § 46.2-392, el tribunal puede suspender su licencia por no menos de 10 días y no más de 6 meses. Las carreras conllevan un rango de suspensión más largo, como se mencionó arriba.</li>
+<li><strong>Puntos de demérito del DMV.</strong> La conducción temeraria conlleva <strong>6 puntos de demérito</strong>, el nivel más alto del sistema de puntos de Virginia. Los puntos cuentan en su contra durante 2 años a partir de la fecha de la violación, y la condena en sí permanece en su historial de manejo del DMV durante <strong>11 años</strong>.</li>
+<li><strong>Costos del seguro.</strong> Una condena por conducción temeraria normalmente aumenta las primas del seguro de manera considerable durante años — a menudo entre cientos y miles de dólares por año — y algunas aseguradoras pueden decidir no renovar la póliza.</li>
+<li><strong>Antecedentes penales.</strong> Como es una condena penal, puede aparecer cuando empleadores, arrendadores o agencias que otorgan licencias revisan sus antecedentes. Para las personas que conducen como medio de trabajo, el impacto puede ser especialmente grave.</li>
+</ol>
+
+<div class="highlight"><strong>Umbrales de puntos del DMV:</strong> El DMV de Virginia envía una carta de advertencia al acumular 8 puntos en 12 meses (o 12 en 24 meses). Con 12 puntos en 12 meses (o 18 en 24 meses), usted debe completar una Clínica de Mejoramiento del Conductor dentro de 90 días. Con 18 puntos en 12 meses (o 24 en 24 meses), su licencia se suspende por 90 días, y usted debe completar una clínica y cumplir 6 meses de período de prueba después de que se le restablezca la licencia. Una sola condena por conducción temeraria lo deja con 6 puntos — a mitad de camino de una clínica obligatoria en un solo evento.</div>
+
+<p>Si suma las multas, los costos judiciales, los días de trabajo perdidos y un seguro más caro, una sola condena puede estar entre las decisiones más costosas que un conductor llegue a tomar — a cambio de ahorrarse unos pocos minutos.</p>
+
+<h4>¿Cuánto tiempo ahorra realmente el exceso de velocidad?</h4>
+<p>Muchos conductores van con exceso de velocidad porque sienten que así ahorran un tiempo importante. Las matemáticas rara vez respaldan esa sensación. Conducir 10 millas a 60 mph toma 10 minutos. Conducir las mismas 10 millas a 70 mph toma aproximadamente 8 minutos y 34 segundos. La diferencia es de apenas <strong>1 minuto y 26 segundos</strong> — y eso suponiendo que no haya semáforos, ni zonas lentas, ni incorporaciones de tráfico. En el tráfico real, muchas veces usted alcanza a los mismos autos en el siguiente semáforo de todos modos.</p>
+
+<div class="myth"><p><strong>Mito:</strong> "La conducción temeraria es solo una multa de velocidad más elegante. La pagaré y seguiré adelante".</p><p><strong>Realidad:</strong> En Virginia, la conducción temeraria es un delito menor de Clase 1 — un cargo penal. Generalmente requiere comparecer ante el tribunal, conlleva una posible pena de cárcel de hasta 12 meses y multas de hasta $2,500, suma 6 puntos de demérito y permanece en su historial del DMV durante 11 años.</p></div>
+
+<div class="myth"><p><strong>Mito:</strong> "Mientras me mantenga por debajo del límite de velocidad, no me pueden acusar de conducción temeraria".</p><p><strong>Realidad:</strong> Según los §§ 46.2-852, 46.2-853 y 46.2-861, usted puede ser acusado de conducción temeraria aunque conduzca en el límite o por debajo de él, si su velocidad no es razonable para las condiciones, si su vehículo no está bajo el control adecuado o si su manera de conducir pone en peligro a otras personas.</p></div>
+
+<h3>Actitud frente a habilidad: por qué existe este curso</h3>
+<p>Usted ya sabe conducir. La mayoría de los cargos por conducción temeraria no se deben a la falta de habilidad. Se deben a <strong>decisiones</strong> — y esas decisiones provienen de actitudes, emociones y hábitos.</p>
+<p>Según la Administración Nacional de Seguridad del Tráfico en las Carreteras (NHTSA, por sus siglas en inglés), el comportamiento o el error del conductor es la razón crítica detrás de la gran mayoría de los choques, y el exceso de velocidad es un factor en aproximadamente 3 de cada 10 muertes por accidentes de tránsito en los Estados Unidos. Esas cifras apuntan a la misma conclusión: la característica de seguridad más importante de cualquier auto es la toma de decisiones de la persona que va en el asiento del conductor.</p>
+<p>Compare estas dos preguntas:</p>
+<ul>
+<li><strong>Pregunta de habilidad:</strong> "¿Puedo pasar por ese espacio entre el camión y la camioneta a 80 mph?"</li>
+<li><strong>Pregunta de actitud:</strong> "¿Por qué siento que <em>necesito</em> pasar por ese espacio en primer lugar?"</li>
+</ul>
+<p>Un conductor hábil quizás podría hacer la maniobra. Pero la habilidad no cambia el hecho de que la maniobra crea un riesgo innecesario para todos los que están cerca. Cuando usted no deja margen de error, los errores de otras personas se convierten en su choque.</p>
+
+<h4>Actitudes comunes detrás de la conducción temeraria</h4>
+<p>Los conductores que terminan con cargos de conducción temeraria a menudo comparten una o más de las siguientes actitudes. Es posible que reconozca algunas de ellas en usted mismo — y eso está bien. Reconocerlas es justamente el propósito.</p>
+<ul>
+<li><strong>"Soy mejor conductor que la mayoría de la gente".</strong> Las investigaciones muestran de forma constante que la mayoría de los conductores se califican a sí mismos por encima del promedio — lo cual es matemáticamente imposible. Esto se llama <em>sesgo de optimismo</em>, y lleva a las personas a creer que los riesgos les ocurren a otros conductores, no a ellas.</li>
+<li><strong>"Tengo prisa, y esto es importante".</strong> La presión del tiempo hace que pequeños ahorros de tiempo se sientan enormes. Los conductores con prisa tienden a darle demasiado valor a un minuto o dos y a darle muy poco valor al riesgo a largo plazo. Los psicólogos llaman a esto <em>descuento temporal</em>.</li>
+<li><strong>"Ese conductor lo hizo a propósito".</strong> Cuando alguien se nos atraviesa, a menudo suponemos que quiso faltarnos el respeto, en lugar de considerar que simplemente cometió un error. Esto se llama <em>sesgo de atribución hostil</em>, y es una de las cosas que más alimentan el enojo al conducir.</li>
+<li><strong>"Lo he hecho cien veces y nunca ha pasado nada".</strong> Salirse con la suya una y otra vez con un comportamiento arriesgado puede hacer que se sienta seguro. Pero no haber tenido choques en el pasado no significa que el riesgo haya desaparecido — puede significar que usted ha tenido suerte.</li>
+</ul>
+
+<div class="highlight"><strong>Dato de la investigación:</strong> El psicólogo Jerry Deffenbacher, de la Universidad Estatal de Colorado, estudió a conductores propensos al enojo. Los conductores con mucho enojo se enojaban más rápido, tenían más pensamientos hostiles y agresivos, y corrían más riesgos — como ir de 10 a 20 mph por encima del límite, cambiar de carril rápidamente, seguir demasiado cerca al vehículo de adelante y entrar a las intersecciones con la luz en rojo. En simulaciones de manejo, tuvieron aproximadamente el doble de choques que los conductores con poco enojo. La buena noticia: el entrenamiento en relajación y en formas de pensar redujo el enojo al conducir, y las mejoras se mantuvieron en gran parte aproximadamente un año después. Las actitudes pueden cambiar.</div>
+
+<div class="scenario"><h4>Escenario: El conductor hábil</h4><p>Piense en un conductor al que llamaremos Tyrell. Lleva 15 años conduciendo, nunca ha tenido un choque y está orgulloso de sus reflejos. En la I-64 cerca de Norfolk, con frecuencia zigzaguea entre carriles para rebasar al tráfico más lento, muchas veces con solo uno o dos autos de distancia. Se dice a sí mismo que no hay problema porque es bueno para eso. Una mañana, un auto al que está rebasando cambia de carril sin señalizar justo cuando Tyrell se mete en el mismo espacio. ¿Qué muestra esta situación sobre la diferencia entre habilidad y actitud?</p><details><summary>¿Qué debería pasar aquí?</summary><p>La habilidad de Tyrell no creó el peligro — lo creó su decisión de conducir sin margen de error. El otro conductor cometió un error, pero el zigzagueo de Tyrell lo puso en una situación en la que cualquier pequeño error de cualquier persona podía causar un choque. Su zigzagueo también podría justificar un cargo según el § 46.2-852 porque pone en peligro a otras personas. Una actitud más segura sería: "No puedo controlar a otros conductores, así que dejaré espacio para sus errores". Dejar de 3 a 4 segundos de distancia de seguimiento y cambiar de carril solo cuando haya un espacio despejado lo protegería mucho mejor que sus reflejos.</p></details></div>
+
+<h3>Quién toma este curso — y qué se le pide a usted</h3>
+<p>Algunos participantes vienen por orden de un tribunal, otros son remitidos por un abogado y otros vienen por su propia cuenta. Sea lo que sea que lo trajo aquí, el curso le pide tres cosas:</p>
+<ol>
+<li><strong>Honestidad.</strong> Los ejercicios de reflexión de este curso son para su uso personal. No se envían ni se califican. Mientras más honesto sea consigo mismo, más útiles le serán.</li>
+<li><strong>Apertura.</strong> Algunas ideas de este curso pueden desafiar su manera de pensar sobre la conducción, sobre otros conductores o sobre usted mismo. Escúchelas con imparcialidad antes de decidir si se aplican a usted.</li>
+<li><strong>Acción.</strong> La información por sí sola no cambia el comportamiento. En los módulos posteriores, usted elaborará un plan personal con estrategias específicas que podrá usar la próxima vez que conduzca.</li>
+</ol>
+<p>Este curso no es asesoría legal y no decide ningún caso judicial; un abogado con licencia en Virginia puede asesorarle sobre un cargo pendiente. También es independiente de la Clínica de Mejoramiento del Conductor estándar de 8 horas de Virginia. Siga las instrucciones específicas que le den su tribunal, su abogado o el aviso del DMV.</p>
+
+<h3>Mapa del curso</h3>
+<p>Este curso tiene ocho módulos. Cada uno requiere 30 minutos de tiempo de estudio y termina con un examen de 15 preguntas. Después de los ocho módulos, usted tomará un examen final de 20 preguntas. Esto es lo que viene:</p>
+<table>
+<tr><th>Módulo</th><th>Título</th></tr>
+<tr><td>1</td><td>El problema de la conducción temeraria en Virginia</td></tr>
+<tr><td>2</td><td>La velocidad — cuando ir rápido se convierte en delito</td></tr>
+<tr><td>3</td><td>La agresión y la furia al volante</td></tr>
+<tr><td>4</td><td>Tomar riesgos detrás del volante</td></tr>
+<tr><td>5</td><td>Las consecuencias en Virginia — la ley y las sanciones</td></tr>
+<tr><td>6</td><td>Cambio de actitud — entender los detonantes</td></tr>
+<tr><td>7</td><td>Cambio de actitud — estrategias que funcionan</td></tr>
+<tr><td>8</td><td>Repaso final y preparación para el examen</td></tr>
+</table>
+<p>La primera mitad se enfoca en <strong>entender</strong>; la segunda mitad se enfoca en <strong>cambiar</strong>.</p>
+
+<div class="keyterms"><h4>Términos clave</h4><dl>
+<dt>Conducción temeraria</dt><dd>Conducir de una manera que pone en peligro la vida, la integridad física o la propiedad de cualquier persona, o conducir de una forma que cumple con una de las definiciones específicas de las leyes de conducción temeraria de Virginia, como ir a 20 mph o más por encima del límite o a más de 85 mph.</dd>
+<dt>Delito menor de Clase 1</dt><dd>La clase más grave de delito menor en Virginia, castigable con hasta 12 meses de cárcel y/o una multa de hasta $2,500.</dd>
+<dt>Infracción de tránsito</dt><dd>Una violación de tránsito no penal, que generalmente se castiga con una multa y posiblemente con puntos del DMV, sin tiempo en la cárcel.</dd>
+<dt>Conducción indebida</dt><dd>Una infracción de tránsito (multa de hasta $500) por la que un tribunal puede declarar culpable a un conductor en lugar de conducción temeraria cuando la imprudencia del conductor fue leve. Queda a discreción del tribunal.</dd>
+<dt>Puntos de demérito</dt><dd>Puntos que el DMV de Virginia asigna por condenas de tránsito. La conducción temeraria conlleva 6 puntos.</dd>
+<dt>Conducción agresiva</dt><dd>Cometer ciertas infracciones de tránsito enumeradas en la ley mientras se crea un peligro para otra persona o con la intención de acosar, intimidar, herir u obstruir a otra persona (§ 46.2-868.1).</dd>
+<dt>Sesgo de optimismo</dt><dd>La tendencia a creer que usted tiene menos probabilidades que los demás de sufrir eventos negativos, como un choque.</dd>
+<dt>Sesgo de atribución hostil</dt><dd>La tendencia a suponer que el comportamiento de otra persona fue intencional y hostil en lugar de un error sincero.</dd>
+</dl></div>
+
+<h3>Autoevaluación: sus hábitos al volante</h3>
+<p>Antes de continuar, eche un vistazo honesto a su propia manera de conducir. Lea cada afirmación a continuación y piense con qué frecuencia lo describe a usted: <em>nunca, a veces, a menudo</em> o <em>casi siempre</em>. No hay respuestas correctas ni incorrectas, y nadie más verá sus respuestas.</p>
+<ol>
+<li>Conduzco a más de 10 mph por encima del límite de velocidad en la autopista.</li>
+<li>Me siento molesto o enojado cuando alguien conduce más despacio de lo que yo quiero ir.</li>
+<li>Sigo muy de cerca al auto de adelante para que otros autos no se puedan meter.</li>
+<li>Cambio de carril con frecuencia para adelantarme en el tráfico.</li>
+<li>Acelero cuando voy tarde.</li>
+<li>Toco la bocina, hago gestos o digo cosas en voz alta cuando otros conductores cometen errores.</li>
+<li>Supongo que los conductores que se me atraviesan lo hicieron a propósito.</li>
+<li>Conduzco a la misma velocidad con lluvia o en la oscuridad que en un día despejado.</li>
+</ol>
+<p>Si respondió "a menudo" o "casi siempre" a varias de estas afirmaciones, no es el único, y los módulos posteriores ofrecen estrategias específicas para cada hábito. Si la mayoría de sus respuestas fueron "nunca", pregúntese si el sesgo de optimismo podría estar influyendo.</p>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4>
+<label>Piense en la situación de manejo que lo trajo a este curso (o en la situación de manejo más arriesgada en la que haya estado recientemente). ¿Qué estaba pasando justo antes? ¿Tenía prisa, estaba enojado, distraído o simplemente no estaba prestando atención?</label><textarea></textarea>
+<label>¿Cuáles dos afirmaciones de la autoevaluación anterior lo describen con más frecuencia? ¿Por qué cree que se desarrollaron esos hábitos?</label><textarea></textarea>
+<label>Antes de leer este módulo, ¿sabía usted que la conducción temeraria en Virginia es un delito penal? ¿Cómo cambia saber eso la manera en que piensa sobre su forma de conducir?</label><textarea></textarea>
+</div>
+
+<h3>Resumen del módulo</h3>
+<ul>
+<li>En Virginia, la conducción temeraria es un <strong>delito menor de Clase 1</strong> — un delito penal, no una simple multa de tránsito — según el § 46.2-868.</li>
+<li>Un delito menor de Clase 1 conlleva <strong>hasta 12 meses de cárcel y/o una multa de hasta $2,500</strong>, y la conducción temeraria generalmente requiere comparecer ante el tribunal.</li>
+<li>La regla general (§ 46.2-852) abarca cualquier forma de conducir que ponga en peligro la vida, la integridad física o la propiedad de cualquier persona, sin importar el límite de velocidad.</li>
+<li>Conducir un vehículo que no está bajo el control adecuado o con frenos inadecuados (§ 46.2-853), y conducir demasiado rápido para las condiciones (§ 46.2-861), también son conducción temeraria — incluso en el límite indicado o por debajo de él.</li>
+<li>Conducir a <strong>20 mph o más por encima del límite</strong>, o a <strong>más de 85 mph</strong> sin importar el límite, es conducción temeraria por velocidad (§ 46.2-862). El umbral de 85 mph entró en vigor el 1 de julio de 2020.</li>
+<li>Otras secciones sobre conducción temeraria cubren rebasar un autobús escolar detenido, rebasar en una curva o en la cima de una colina, rebasar lado a lado, las carreras y más. La conducción agresiva (§ 46.2-868.1) es un delito aparte.</li>
+<li>Una condena por conducción temeraria trae <strong>6 puntos de demérito del DMV</strong>, permanece en su historial del DMV durante <strong>11 años</strong>, puede llevar a una suspensión de la licencia de 10 días a 6 meses y normalmente aumenta los costos del seguro durante años.</li>
+<li>Cuando la imprudencia es leve, un tribunal puede declarar al conductor culpable de conducción indebida en su lugar — una infracción de tránsito con una multa de hasta $500 — pero eso queda a discreción del tribunal.</li>
+<li>La mayor parte de la conducción temeraria se debe a la <strong>actitud y a las decisiones</strong>, no a la falta de habilidad. Sesgos como el sesgo de optimismo y el sesgo de atribución hostil hacen que las decisiones arriesgadas parezcan razonables.</li>
+<li>Este curso se trata de entender por qué usted conduce como conduce y de desarrollar herramientas prácticas para cambiarlo.</li>
+</ul>
+<p>Tómese unos minutos para repasar cualquier sección de este módulo que quiera volver a ver. Cuando el temporizador llegue a 00:00, se desbloqueará el <strong>Examen del Módulo 1</strong>. El examen tiene 15 preguntas, y usted necesita una calificación aprobatoria de 80% para aprobar. Buena suerte.</p>
+
+    <div class="gate" id="gate">
+      <h3>Tiempo requerido del Módulo 1</h3>
+      <p id="gateMsg">Siga leyendo y realizando las actividades. Este módulo requiere los 30 minutos completos.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Tiempo restante</a>
+      <small>Cuando el temporizador llegue a 00:00, regrese a su curso para tomar el Examen del Módulo 1.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-es-m1-remaining', DONE='rad-es-m1-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Tiempo requerido completado';go.removeAttribute('href');
+      msg.textContent='Ha completado el tiempo requerido del Módulo 1. Regrese a su curso para tomar el Examen del Módulo 1.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

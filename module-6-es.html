@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 6: Cambio de actitud: entender los detonantes | Virginia Commonwealth Driving Improvement Clinic (Español)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Módulo 6 de 8 &middot; 30 minutos</span>Módulo 6: Cambio de actitud: entender los detonantes</h1>
+    <div class="timer" id="timerBox"><small>Tiempo restante</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>Usted no puede cambiar lo que no entiende. La mayoría de los conductores que terminan con un cargo de conducción temeraria o agresiva no salieron esa mañana con la idea de violar la ley. Algo pasó en la carretera, o antes de que siquiera se subieran al carro, y reaccionaron. En este módulo, usted va a ir más despacio en esa reacción y la va a examinar parte por parte. Aprenderá qué lo hace estallar, qué le dice su mente en esos momentos, qué hace su cuerpo y cómo todo eso puede convertirse en una decisión que lo pone en riesgo a usted, a sus pasajeros y a otras personas. Este módulo es la base del Módulo 7, donde usted creará estrategias específicas para cambiar sus patrones. Mientras más honesto sea consigo mismo aquí, más útil le será el Módulo 7.</p>
+
+<div class="objectives"><h4>Objetivos de aprendizaje</h4><ul>
+<li>Explicar la brecha entre el detonante y la acción, y por qué ampliarla le da más control sobre su manera de manejar.</li>
+<li>Identificar las principales categorías de detonantes de la ira al volante, incluidos la obstrucción, la falta de respeto, la presión del tiempo, el estrés desplazado y los factores del entorno.</li>
+<li>Reconocer cuatro patrones de pensamiento comunes que alimentan la ira al volante: la atribución hostil, el catastrofismo, las frases con "debería" y la personalización.</li>
+<li>Describir las primeras señales de advertencia físicas y emocionales de que la ira está aumentando.</li>
+<li>Explicar la agresión desplazada, el desahogo y la rumiación, y por qué hacen más probable la conducción agresiva.</li>
+<li>Crear un perfil personal de detonantes que usted usará en el Módulo 7 para elaborar un plan de cambio.</li>
+</ul></div>
+
+<h3>Por qué la actitud importa más que la habilidad</h3>
+<p>La mayoría de las personas acusadas de conducción temeraria o agresiva saben manejar. Pueden incorporarse al tránsito, frenar, revisar los espejos y controlar un carro en medio del tráfico. El problema rara vez es la falta de habilidad. El problema es lo que el conductor <em>decide</em> hacer con esa habilidad cuando está frustrado, apurado o enojado.</p>
+<p>Piense en las conductas que forman la conducción agresiva según la ley de Virginia. Según el <strong>§ 46.2-868.1</strong>, la conducción agresiva consiste en cometer ciertas infracciones de tránsito, como seguir demasiado cerca, rebasar de forma indebida, no ceder el paso, evadir dispositivos de control de tránsito, exceder el límite de velocidad o detenerse en una carretera, <em>y además</em> representar un peligro para otra persona o tener la intención de acosar, intimidar, lesionar u obstruir a otra persona. Fíjese en la segunda parte de esa definición. Se trata de la intención y del efecto. Se trata de la actitud. Un conductor hábil que se pega al vehículo de otra persona para "darle una lección" no está cometiendo un error de habilidad. Está cometiendo un error de actitud.</p>
+<p>Esa es una buena noticia, porque las actitudes pueden cambiar. Las investigaciones lo respaldan. El psicólogo Jerry Deffenbacher, de la Universidad Estatal de Colorado (Colorado State University), estudió a conductores con mucha ira y encontró que las intervenciones de relajación y de relajación cognitiva redujeron la ira al volante, y que los avances se mantuvieron en gran parte alrededor de un año después.</p>
+
+<div class="highlight"><strong>Hallazgo de investigación:</strong> En las investigaciones de Deffenbacher, los conductores con mucha ira se enojaban más rápido, tenían más pensamientos hostiles y agresivos, y tomaban más riesgos, como exceder el límite de velocidad por 10–20 mph, cambiar de carril bruscamente, seguir demasiado cerca y entrar a las intersecciones con la luz roja. En simulaciones de manejo, tuvieron aproximadamente el doble de choques que los conductores con poca ira. La ira no es solo un sentimiento. Cambia la forma en que usted maneja.</div>
+
+<h3>La brecha entre el detonante y la acción</h3>
+<p>Entre un detonante (alguien se le atraviesa) y su acción (pegarse a su vehículo como respuesta), hay una <strong>brecha</strong>. En esa brecha están su interpretación, su respuesta emocional y su decisión. La mayoría de los conductores reaccionan tan rápido que ni siquiera se dan cuenta de que están tomando una decisión. Se siente automático: "Se me atravesó, así que me enojé, así que aceleré". Pero eso no es realmente lo que pasó. Hubo varios pasos en medio, muy rápidos.</p>
+<p>Esta es la cadena dividida en sus partes:</p>
+<ol>
+<li><strong>Detonante:</strong> Algo sucede. Un carro se incorpora delante de usted con muy poco espacio.</li>
+<li><strong>Interpretación:</strong> Su mente decide al instante qué significa. "Ese idiota lo hizo a propósito".</li>
+<li><strong>Emoción y respuesta del cuerpo:</strong> Usted siente una oleada de ira. Aprieta más el volante, su ritmo cardíaco sube, se le calienta la cara.</li>
+<li><strong>Impulso:</strong> Usted siente un fuerte deseo de hacer algo. Tocar la bocina, acortar la distancia, rebasarlo y volver a atravesársele.</li>
+<li><strong>Acción:</strong> Usted actúa según el impulso o no lo hace.</li>
+<li><strong>Consecuencia:</strong> Lo que pasa después. Nada, casi un choque, un enfrentamiento, un choque o que lo detenga la policía de tránsito.</li>
+</ol>
+<p>El paso más importante de esta cadena es el paso 2, la interpretación. El detonante por lo general está fuera de su control. Usted no puede impedir que otras personas se incorporen mal. Pero el significado que usted le da determina todo lo que viene después. Si su interpretación es "lo hicieron a propósito para faltarme el respeto", su ira será alta y su impulso de desquitarse será fuerte. Si su interpretación es "probablemente no me vieron", su reacción será mucho menor.</p>
+<p>El objetivo del cambio de actitud es <strong>ampliar la brecha</strong>, lo que significa crear suficiente espacio entre el detonante y la acción para que pueda haber una decisión consciente. Incluso uno o dos segundos más pueden ser suficientes para que usted note lo que está sintiendo y decida no actuar en consecuencia.</p>
+
+<div class="scenario"><h4>Escenario: La incorporación en la I-64</h4><p>Piense en un conductor al que llamaremos Marcus. Va manejando hacia el este por la I-64 cerca de Richmond, con tráfico moderado. Una camioneta pickup se incorpora desde una rampa de entrada y se mete en el carril de Marcus con apenas el espacio de un carro de distancia. Marcus frena, dice una grosería e inmediatamente piensa: "Este tipo cree que es dueño de la carretera". En cuestión de segundos, Marcus se ha acercado a unos pocos pies detrás de la camioneta y le está haciendo cambio de luces con las luces altas. Revise paso a paso la cadena entre el detonante y la acción de Marcus. ¿Dónde estaba la brecha y qué pudo haber cambiado el resultado?</p><details><summary>¿Qué debería pasar aquí?</summary><p>El detonante fue la incorporación con poco espacio. La interpretación de Marcus, "Este tipo cree que es dueño de la carretera", supuso una falta de respeto deliberada. Esa interpretación provocó una oleada rápida de ira y un impulso de desquitarse, que se convirtió en la acción de pegarse al vehículo y hacer cambio de luces. Seguir demasiado cerca es una de las infracciones que aparecen en la ley de conducción agresiva de Virginia, y hacerlo para intimidar a otro conductor coincide con la definición de conducción agresiva. La brecha fue el momento justo después de que Marcus frenó. Si él hubiera notado que su ira aumentaba y hubiera pensado: "Tal vez no me vio en el espejo", el impulso habría sido más débil. Simplemente soltar el acelerador y dejar que la camioneta se adelantara habría terminado la situación de forma segura. La incorporación no fue decisión de Marcus. Pegarse al vehículo sí lo fue.</p></details></div>
+
+<h3>Identifique sus detonantes</h3>
+<p>Un detonante es cualquier suceso o condición que provoca una reacción emocional fuerte mientras usted maneja. Los detonantes no son iguales para todos. Un conductor apenas nota un carro lento en el carril izquierdo, mientras que otro siente que se le dispara la presión arterial. Conocer <em>sus</em> detonantes específicos es el primer paso para manejarlos.</p>
+<p>El Centro de Investigación de Accidentes de Monash University desarrolló un programa llamado "Reducing Aggressive Driving" (Reducir la Conducción Agresiva, RAD). Ese programa identificó varias categorías comunes de detonantes que los participantes mencionaban una y otra vez. Los participantes también dijeron que valoraban las estrategias prácticas para llevar a casa y escuchar a otros conductores que habían tenido experiencias parecidas. La tabla de abajo resume esos detonantes comunes, más otros dos que muchos conductores reconocen: las condiciones del entorno (calor, ruido, construcción) y su propio estado físico (hambre, cansancio, falta de sueño). Los detonantes de falta de respeto suelen ser los más intensos, porque tocan el orgullo. La presión del tiempo es uno de los amplificadores más poderosos, porque cuando usted va apurado, cada luz roja se siente como un ataque personal y usted se siente presionado a "recuperar el tiempo". Las condiciones del entorno y su estado físico tal vez no lo hagan enojar por sí solos, pero bajan su tolerancia, de modo que un detonante más pequeño puede hacerlo estallar.</p>
+
+<table>
+<tr><th>Categoría de detonante</th><th>Ejemplos comunes</th><th>Pensamiento típico</th></tr>
+<tr><td>Obstrucción</td><td>Conductores que se quedan en el carril izquierdo, conductores lentos, un carro que no avanza cuando la luz está en verde</td><td>"Quítese de mi camino".</td></tr>
+<tr><td>Falta de respeto</td><td>Que se le atraviesen, que se le peguen atrás, que le toquen la bocina, que le hagan gestos</td><td>"¿Quién se cree que es?"</td></tr>
+<tr><td>Presión del tiempo</td><td>Ir tarde, embotellamientos, desvíos inesperados</td><td>"No puedo darme el lujo de este retraso".</td></tr>
+<tr><td>Estrés desplazado</td><td>Un mal día en el trabajo, una discusión en casa, preocupaciones de dinero</td><td>"Hoy todo me está saliendo mal".</td></tr>
+<tr><td>Del entorno</td><td>Calor, ruido, construcción, congestión</td><td>"No soporto esto".</td></tr>
+<tr><td>Estado físico</td><td>Hambre, cansancio, dolor, falta de sueño</td><td>"Solo quiero llegar a casa".</td></tr>
+</table>
+
+<p>La mayoría de los conductores tienen dos o tres detonantes "principales" que les causan la mayor parte de sus problemas. Mientras lee, piense en qué categorías se aplican mejor a usted. Sea específico. "El tráfico" es demasiado vago para trabajar con eso. "Cuando alguien se me pega atrás en la I-95 durante mi trayecto de la mañana al trabajo" es lo suficientemente específico como para hacer un plan.</p>
+
+<h3>Patrones de pensamiento que alimentan la ira al volante</h3>
+<p>Recuerde que el paso de la interpretación en la cadena entre el detonante y la acción es el más importante. Los psicólogos han identificado varios patrones de pensamiento comunes, a veces llamados distorsiones cognitivas o trampas del pensamiento, que hacen que la ira sea más fuerte y dure más. Todo el mundo usa estos patrones a veces. El objetivo no es no tener nunca estos pensamientos. El objetivo es detectarlos cuando ocurren, para que no decidan sus acciones por usted.</p>
+
+<h4>Sesgo de atribución hostil</h4>
+<p>Los conductores con mucha ira comparten un patrón común: suponen que hay una intención hostil detrás de una conducta ambigua. Cuando alguien se les atraviesa, suponen que fue una falta de respeto deliberada y no un error, una distracción o una emergencia. Esto se llama <strong>sesgo de atribución hostil</strong>.</p>
+<p>Esta es la razón por la que importa. La mayor parte de lo que hacen otros conductores es ambiguo. Usted no puede ver dentro de su carro ni dentro de su cabeza. Un conductor que se desvía hacia su carril podría estar enviando un mensaje de texto, podría estar perdido, podría llevar a un niño llorando en el asiento de atrás, podría haber calculado mal la distancia o simplemente podría no haberlo visto a usted. Por lo general, el otro conductor ni siquiera está pensando en usted. Pero la atribución hostil llena ese vacío con la peor explicación posible, y la peor explicación posible produce la peor ira posible.</p>
+<p>Las investigaciones muestran que enseñar a los conductores a reinterpretar la conducta de otros conductores como un error neutral o inocente, en lugar de algo malintencionado, reduce las respuestas de conducción agresiva. Este proceso se llama <strong>reevaluación cognitiva</strong>. No significa fingir que manejar mal está bien. Significa elegir una explicación que no lo empuje a usted a empeorar la situación.</p>
+
+<div class="highlight"><strong>Práctica:</strong> La próxima vez que alguien se le atraviese, intente decir (en voz alta si hace falta): "Puede que tenga una emergencia. Puede que esté perdido. Puede que simplemente sea descuidado, no malintencionado". No se trata de excusar el mal manejo. Se trata de elegir no empeorar la situación.</div>
+
+<h4>Catastrofismo</h4>
+<p>El <strong>catastrofismo</strong> consiste en exagerar una situación hasta convertirla en algo mucho peor de lo que realmente es. "Si llego tarde a esta reunión, me van a despedir". "Este tráfico me va a arruinar todo el día". "Nunca voy a salir de este carril". Cuando su mente trata un pequeño retraso como si fuera un desastre, su cuerpo responde como si usted estuviera ante una emergencia real. Las hormonas del estrés suben, y usted se siente con derecho a tomar riesgos para escapar del "desastre".</p>
+<p>Intente preguntarse: "¿Qué es lo peor que realistamente puede pasar aquí?" Por lo general, la respuesta honesta es que llegará unos minutos tarde, lo cual es desagradable pero soportable. Es mucho menos grave que un choque, un cargo penal o una suspensión de la licencia.</p>
+
+<h4>Frases con "debería"</h4>
+<p>Las <strong>frases con "debería"</strong> son reglas rígidas sobre cómo deberían comportarse otras personas. "La gente debería saber incorporarse al tráfico". "Los conductores lentos deberían quedarse fuera del carril izquierdo". "Él debería haber usado la direccional". Algunas de estas reglas incluso pueden ser correctas. Pero cuando usted las mantiene de forma rígida, cada conductor que rompe una se siente como un insulto, y usted puede terminar sintiendo que es su trabajo hacer cumplir la regla. Así es como los conductores terminan "dando lecciones" pegándose al vehículo de adelante, frenando de golpe a propósito o bloqueando el paso.</p>
+<p>Un cambio útil es reemplazar "debería" por "preferiría". "Preferiría que la gente usara la direccional, pero algunos no lo harán, y no me toca a mí arreglarlo". Esto le permite mantener sus estándares y, al mismo tiempo, soltar la ira que viene de esperar que todos los cumplan.</p>
+
+<h4>Personalización</h4>
+<p>La <strong>personalización</strong> consiste en tratar los sucesos como si tuvieran que ver con usted cuando no es así. "¿Por qué siempre me pasa esto a mí?" "Todos los semáforos se ponen en rojo cuando llego". "Ese conductor me escogió a mí". La personalización convierte el tráfico al azar en un ataque personal y lo hace sentir a usted como un blanco. Cuando usted se siente como un blanco, se siente con más derecho a responder con agresión.</p>
+<p>La realidad es que el tráfico es impersonal. El semáforo no sabe que usted está ahí. El conductor de adelante no sabe que usted va tarde. Recordarse a sí mismo que "esto no se trata de mí" puede bajar mucho la tensión del momento.</p>
+
+<div class="myth"><p><strong>Mito:</strong> "Mi ira la causan los otros conductores. Si manejaran mejor, yo no me enojaría".</p><p><strong>Realidad:</strong> Otros conductores crean el detonante, pero su interpretación crea la mayor parte de la ira. Dos conductores pueden vivir el mismo suceso y reaccionar de forma completamente distinta según lo que se digan a sí mismos sobre él. Por eso, cambiar su forma de pensar es una de las maneras más eficaces de reducir la ira al volante.</p></div>
+
+<div class="scenario"><h4>Escenario: La conductora del carril izquierdo</h4><p>Una conductora a la que llamaremos Denise va diez minutos tarde a una cita con el médico. Está en la Ruta 288 detrás de un carro que va exactamente al límite de velocidad en el carril izquierdo. Denise piensa: "A la gente así deberían ponerle una multa. Lo hacen a propósito para controlar a todos los demás. Ahora voy a perder mi cita y voy a tener que reprogramarla, y todo este día está arruinado". Empieza a pegarse a la defensa del carro. ¿Qué patrones de pensamiento puede identificar y cómo sería una respuesta más equilibrada?</p><details><summary>¿Qué debería pasar aquí?</summary><p>Denise está usando varias trampas del pensamiento a la vez. "A la gente así deberían ponerle una multa" es una frase con "debería". "Lo hacen a propósito para controlar a todos" es atribución hostil. "Todo este día está arruinado" es catastrofismo. La presión del tiempo es el detonante que amplifica todo esto. Una respuesta más equilibrada sería: "Probablemente este conductor no se da cuenta de que está deteniendo a otras personas. Voy tarde, pero llegar unos minutos tarde a una cita no es un desastre. Llamaré al consultorio cuando pueda hacerlo de manera segura y legal". Luego, Denise debería retroceder a una distancia de seguimiento segura de al menos tres a cuatro segundos y esperar una oportunidad segura y legal para rebasar por la derecha o a que el conductor se cambie de carril. Pegarse al vehículo para presionar al conductor es seguir demasiado cerca con la intención de intimidar, que es exactamente lo que busca castigar la ley de conducción agresiva de Virginia.</p></details></div>
+
+<h3>Emociones y señales del cuerpo: su sistema de alerta temprana</h3>
+<p>La ira no llega de golpe. Va aumentando. Mientras más temprano la note, más fácil es manejarla. Para cuando usted está gritando o pegándose al vehículo de adelante, ya pasó por varias señales de advertencia. Aprender a reconocer estas señales tempranas es una de las habilidades más prácticas que usted puede desarrollar.</p>
+
+<h4>Señales físicas de advertencia</h4>
+<ul>
+<li>Apretar más fuerte el volante</li>
+<li>Apretar la mandíbula o rechinar los dientes</li>
+<li>Ritmo cardíaco más rápido o golpeteo fuerte en el pecho</li>
+<li>Respiración corta y rápida</li>
+<li>Sentir calor, la cara roja o sudor</li>
+<li>Tensión en los hombros, el cuello o el estómago</li>
+<li>Pisar más fuerte el acelerador sin haberlo decidido</li>
+<li>Inclinarse hacia adelante en el asiento</li>
+</ul>
+
+<h4>El termómetro de la ira</h4>
+<p>Una herramienta útil es imaginar su ira en una escala del 0 al 10. En 0, usted está completamente tranquilo. En 10, usted está en plena furia y no está pensando con claridad. La mayoría de las personas pueden tomar buenas decisiones entre 1 y 3. Entre 4 y 6, el buen juicio empieza a fallar, y es más probable que usted exceda el límite de velocidad, siga demasiado cerca o haga cambios de carril riesgosos. De 7 para arriba, usted corre un riesgo serio de hacer algo que nunca haría estando tranquilo, como perseguir a otro carro, frenar de golpe a propósito o bajarse de su vehículo para enfrentar a alguien.</p>
+
+<p>El objetivo es detectarse a sí mismo en el rango de 4–6 y volver a bajar antes de llegar a 7. Recuerde el hallazgo de Deffenbacher de que los conductores con mucha ira se enojan <em>más rápido</em>. Si usted sabe que tiende a subir de nivel rápidamente, es aún más importante notar las primeras señales.</p>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4><label>¿Cuáles son las primeras dos o tres señales físicas que usted nota cuando empieza a enojarse al volante?</label><textarea></textarea><label>Piense en una vez reciente en que se enojó mientras manejaba. En una escala del 0 al 10, ¿qué tan alto llegó? ¿En qué número estaba cuando lo notó por primera vez?</label><textarea></textarea></div>
+
+<h3>Agresión desplazada: el estrés que lleva consigo</h3>
+<p>La <strong>agresión desplazada</strong> consiste en descargar una frustración que empezó en una parte de su vida sobre personas en una situación completamente diferente. El programa RAD identificó el estrés desplazado como un detonante común de la conducción agresiva. El carro puede sentirse como un lugar seguro para descargar el estrés. Los otros conductores son desconocidos, probablemente usted nunca los volverá a ver y usted está dentro de un espacio cerrado y privado. Esa combinación hace que sea fácil dirigir hacia ellos una ira que en realidad pertenece a otro lugar.</p>
+<p>Piense en la diferencia entre dos conductores atrapados detrás del mismo camión lento. Uno ha tenido un día tranquilo y agradable. El otro acaba de recibir un regaño de su supervisor, tiene en mente una factura vencida y no almorzó. El camión es el mismo. La reacción es completamente diferente. El segundo conductor en realidad no está enojado con el camión. El camión es solo el blanco más cercano.</p>
+<p>Uno de los hábitos más valiosos que usted puede desarrollar es hacer una rápida "revisión del estrés" antes de encender el carro. Pregúntese: "¿Qué estoy cargando ahora mismo?" Solo con nombrarlo, por ejemplo, "Todavía estoy molesto por esa reunión", lo ayuda a separarlo del tráfico que está a punto de enfrentar. En el Módulo 7, usted aprenderá una rutina de transición antes de manejar basada en esta idea.</p>
+
+<div class="scenario"><h4>Escenario: El camino a casa</h4><p>Piense en un conductor al que llamaremos Andre. Él trabaja turnos largos en un almacén en el Condado de Chesterfield. Hoy, su gerente lo criticó delante de sus compañeros de trabajo, y él se fue sin comer. De camino a casa, un carro delante de él baja la velocidad para buscar una dirección. Andre se queda tocando la bocina, rodea el carro por el acotamiento y se va a toda velocidad. Más tarde, le dice a un amigo: "Ese tipo manejaba como un idiota". ¿La reacción de Andre realmente tenía que ver con el otro conductor?</p><details><summary>¿Qué debería pasar aquí?</summary><p>La reacción de Andre tuvo que ver sobre todo con su día, no con el otro conductor. La humillación en el trabajo, más el hambre y el cansancio, lo pusieron en un nivel alto de ira antes de que siquiera encendiera el carro. Que un conductor baje la velocidad para encontrar una dirección es un suceso pequeño y común. Esto es agresión desplazada. Rebasar por el acotamiento e irse a toda velocidad por enojo fácilmente podría terminar en un cargo de conducción temeraria según el § 46.2-852, que abarca manejar de una manera que pone en peligro la vida, la integridad física o la propiedad. Un mejor enfoque habría sido pasar unos minutos en el estacionamiento antes de irse: comer algo, respirar despacio varias veces y reconocer: "Estoy enojado por el trabajo, no por el tráfico". Ese simple paso podría haber evitado que un mal día se convirtiera en un cargo penal.</p></details></div>
+
+<h3>Por qué crece la ira: el desahogo y la rumiación</h3>
+<p>Muchas personas creen que la ira es como el vapor en una olla de presión, y que sacarla gritando, tocando la bocina o golpeando el volante libera la presión y ayuda a calmarse. Esta idea es popular, pero las investigaciones no la respaldan.</p>
+
+<div class="myth"><p><strong>Mito:</strong> "Gritarles o tocarles la bocina a otros conductores me ayuda a desahogarme, así que me calmo más rápido".</p><p><strong>Realidad:</strong> El desahogo, como tocar la bocina, gritar o hacer gestos, tiende a aumentar la ira en lugar de liberarla. Cada acción de enojo ensaya la ira y mantiene su cuerpo en un estado de alerta elevado. También corre el riesgo de provocar al otro conductor, lo que puede convertir una frustración de un solo lado en un enfrentamiento de dos lados.</p></div>
+
+<p>Un problema relacionado es la <strong>rumiación</strong>, que significa repetir una y otra vez en su mente un suceso que lo molestó. "No puedo creer que hizo eso. ¿Quién hace eso? Casi me choca. La gente así no debería tener licencia". Cada repetición vuelve a encender la ira. La rumiación puede mantenerlo en un nivel alto de ira durante muchas millas, mucho después de que el otro conductor se ha ido. Durante ese tiempo, es más probable que usted exceda el límite de velocidad, siga demasiado cerca y reaccione con fuerza ante el siguiente detonante pequeño. Así es como un mal momento puede convertirse en un mal viaje.</p>
+<p>La rumiación por lo general repite las mismas trampas del pensamiento: la atribución hostil, las frases con "debería" o la personalización. La forma más rápida de superar un detonante suele ser dejarlo ir, no actuarlo ni repetirlo en la mente. Decirse a sí mismo "Eso ya pasó. Ya quedó atrás" acorta el episodio de ira.</p>
+
+<h3>Cuando un detonante se convierte en un cargo</h3>
+<p>Vale la pena relacionar todo lo de este módulo con la ley de Virginia, porque lo que está en juego cuando no se maneja un detonante es real. La mayoría de los incidentes de conducción agresiva y temeraria siguen el mismo camino: un detonante, una interpretación hostil, una ira que aumenta y una acción que cruza una línea legal.</p>
+<ul>
+<li>Pegarse al vehículo de alguien porque "se le atravesó" puede ser <strong>conducción agresiva</strong> según el § 46.2-868.1 si usted representa un peligro para esa persona o tiene la intención de intimidarla. La conducción agresiva es un delito menor de Clase 2, castigado con hasta 6 meses de cárcel y/o una multa de hasta $1,000. Si usted actúa con la intención de lesionar, se convierte en un delito menor de Clase 1. El tribunal también puede ordenarle completar un programa de manejo de la ira o de conducción agresiva.</li>
+<li>Exceder el límite de velocidad o zigzaguear entre el tráfico porque usted está enojado o va tarde puede ser <strong>conducción temeraria</strong> según el § 46.2-852, o conducción temeraria por velocidad según el § 46.2-862 si usted va a 20 mph o más por encima del límite o a más de 85 mph. La conducción temeraria es un delito menor de Clase 1, castigado con hasta 12 meses de cárcel y/o una multa de hasta $2,500, y conlleva 6 puntos de demérito del DMV.</li>
+</ul>
+
+<div class="warning"><strong>Advertencia sobre Virginia:</strong> Su razón para manejar de forma agresiva no es una defensa legal. "Él se me atravesó primero" o "Estaba teniendo un día terrible" no cambia si sus acciones cumplen con la definición de conducción agresiva o temeraria. La ley se fija en lo que usted hizo y, en el caso de la conducción agresiva, en si usted representó un peligro o tuvo la intención de acosar, intimidar, lesionar u obstruir a alguien. Entender sus detonantes es la manera de detener la cadena antes de que llegue a ese punto.</div>
+
+<h3>Cree su perfil personal de detonantes</h3>
+<p>Ahora es momento de juntar todo. Un perfil personal de detonantes es una imagen clara y honesta de cuándo, dónde y por qué es más probable que usted maneje de forma agresiva. En el Módulo 7, usted usará este perfil para crear un plan personal de cambio.</p>
+<p>Responda estas preguntas con honestidad. Nadie más verá sus respuestas.</p>
+<ol>
+<li><strong>Situaciones:</strong> ¿Qué situaciones lo hacen enojar más al volante? Sea específico: "Cuando alguien se me pega atrás en la I-95", no solo "el tráfico".</li>
+<li><strong>Horarios y lugares:</strong> ¿Hay ciertas horas del día, carreteras o viajes en los que es más probable que usted se enoje? Por ejemplo, su trayecto de la mañana al trabajo, el camino de regreso a casa después del trabajo o un tramo específico de autopista.</li>
+<li><strong>Pensamientos:</strong> ¿Qué suele <em>pensar</em> usted en esos momentos? "Este idiota". "Voy a llegar tarde". "Lo hicieron a propósito". ¿Qué patrones de pensamiento de este módulo aparecen más?</li>
+<li><strong>Señales del cuerpo:</strong> ¿Qué nota primero en su cuerpo?</li>
+<li><strong>Acciones:</strong> ¿Qué suele <em>hacer</em> usted? ¿Tocar la bocina, hacer gestos, pegarse al vehículo de adelante, acelerar, bloquear el paso, gritar?</li>
+<li><strong>Estrés de fondo:</strong> ¿Qué estrés externo suele ir con usted en el carro?</li>
+<li><strong>Después:</strong> ¿Cómo se siente <em>después</em>? ¿Alivio? ¿Culpa? ¿Vergüenza? ¿Más ira? ¿La acción mejoró algo?</li>
+</ol>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4>
+<label>Mis 3 detonantes principales al manejar (sea específico):</label><textarea placeholder="1.&#10;2.&#10;3."></textarea>
+<label>Horarios, lugares o viajes en los que corro más riesgo:</label><textarea></textarea>
+<label>Pensamientos que suelo tener cuando algo me detona (y con qué patrones de pensamiento coinciden):</label><textarea></textarea>
+<label>Señales del cuerpo que noto primero:</label><textarea></textarea>
+<label>Acciones que suelo tomar:</label><textarea></textarea>
+<label>Estrés externo que tiendo a llevar al carro:</label><textarea></textarea>
+<label>Cómo me siento normalmente después:</label><textarea></textarea>
+<label>Lo que podría hacer de otra manera la próxima vez:</label><textarea></textarea>
+</div>
+
+<div class="keyterms"><h4>Términos clave</h4><dl>
+<dt>Detonante</dt><dd>Un suceso o condición que provoca una reacción emocional fuerte mientras se maneja, como que alguien se le atraviese o ir tarde.</dd>
+<dt>Brecha entre el detonante y la acción</dt><dd>El espacio entre un detonante y su respuesta, donde ocurren la interpretación, la emoción y la decisión. El cambio de actitud busca ampliarla.</dd>
+<dt>Sesgo de atribución hostil</dt><dd>La tendencia a suponer que la conducta ambigua de otro conductor fue deliberada y hostil.</dd>
+<dt>Reevaluación cognitiva</dt><dd>Reinterpretar la conducta de otra persona, por ejemplo, como un error y no como algo malintencionado, lo cual reduce las respuestas agresivas.</dd>
+<dt>Catastrofismo</dt><dd>Tratar un problema pequeño, como un retraso corto, como si fuera un desastre.</dd>
+<dt>Frases con "debería"</dt><dd>Reglas rígidas sobre cómo deben comportarse los demás, que generan ira cuando las personas las rompen.</dd>
+<dt>Personalización</dt><dd>Tratar sucesos impersonales como si estuvieran dirigidos a usted.</dd>
+<dt>Agresión desplazada</dt><dd>Dirigir hacia otros conductores una ira que empezó en otra parte de la vida, como el trabajo o el hogar.</dd>
+<dt>Desahogo</dt><dd>Expresar la ira tocando la bocina, gritando o haciendo gestos. Tiende a aumentar la ira en lugar de liberarla.</dd>
+<dt>Rumiación</dt><dd>Repetir en la mente una y otra vez un suceso que lo molestó, lo cual mantiene viva la ira.</dd>
+</dl></div>
+
+<h3>Resumen del módulo</h3>
+<ul>
+<li>La mayor parte de la conducción agresiva es un problema de actitud, no de habilidad, y las actitudes pueden cambiar con práctica.</li>
+<li>Entre cada detonante y cada acción hay una brecha que contiene su interpretación, su emoción y su decisión. El objetivo es ampliar esa brecha.</li>
+<li>Las categorías comunes de detonantes incluyen que lo obstruyan, que le falten el respeto, la presión del tiempo, el estrés desplazado, las condiciones del entorno y su propio estado físico.</li>
+<li>El sesgo de atribución hostil, el catastrofismo, las frases con "debería" y la personalización hacen que la ira sea más fuerte. La reevaluación cognitiva, como ver la conducta del otro conductor como un error, reduce las respuestas agresivas.</li>
+<li>La ira aumenta por etapas. Aprenda cuáles son sus primeras señales del cuerpo y trate de detectarse en el rango de 4–6 del termómetro de la ira.</li>
+<li>Las investigaciones de Deffenbacher encontraron que los conductores con mucha ira se enojan más rápido, toman más riesgos y tuvieron aproximadamente el doble de choques simulados que los conductores con poca ira.</li>
+<li>La agresión desplazada, es decir, llevar al carro el estrés de otras partes de la vida, es un detonante común de la conducción agresiva. Una revisión del estrés antes de manejar ayuda.</li>
+<li>El desahogo y la rumiación hacen que la ira dure más. Dejar ir el momento la acorta.</li>
+<li>Sus razones para manejar de forma agresiva no son una defensa legal. La conducción agresiva según el § 46.2-868.1 es un delito menor de Clase 2, y la conducción temeraria es un delito menor de Clase 1.</li>
+<li>Su perfil personal de detonantes será el punto de partida de su plan de cambio en el Módulo 7.</li>
+</ul>
+<p>Use el tiempo restante para repasar sus reflexiones y los términos clave de arriba. Cuando el temporizador llegue a 00:00, se desbloqueará el Examen del Módulo 6. El examen tiene 15 preguntas, y usted necesita una calificación aprobatoria de 80% para pasar.</p>
+
+    <div class="gate" id="gate">
+      <h3>Tiempo requerido del Módulo 6</h3>
+      <p id="gateMsg">Siga leyendo y realizando las actividades. Este módulo requiere los 30 minutos completos.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Tiempo restante</a>
+      <small>Cuando el temporizador llegue a 00:00, regrese a su curso para tomar el Examen del Módulo 6.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-es-m6-remaining', DONE='rad-es-m6-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Tiempo requerido completado';go.removeAttribute('href');
+      msg.textContent='Ha completado el tiempo requerido del Módulo 6. Regrese a su curso para tomar el Examen del Módulo 6.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

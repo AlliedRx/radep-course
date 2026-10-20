@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 7: Cambio de actitud: estrategias que funcionan | Virginia Commonwealth Driving Improvement Clinic (Español)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Módulo 7 de 8 &middot; 30 minutos</span>Módulo 7: Cambio de actitud: estrategias que funcionan</h1>
+    <div class="timer" id="timerBox"><small>Tiempo restante</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>En el Módulo 6 usted aprendió a identificar sus detonantes, los patrones de pensamiento que los empeoran y las señales del cuerpo que le avisan que el enojo está creciendo. Identificar los detonantes es el primer paso. Cambiar la forma en que usted responde es el segundo paso. Este módulo le ofrece estrategias prácticas que, según la investigación, pueden disminuir el enojo al conducir y reducir el comportamiento agresivo. Ninguna de ellas le pide que se convierta en un conductor tímido. Le ayudan a mantener el control de sus propias decisiones, para que el error de otro conductor no se convierta en su cargo penal, su choque o la pérdida de su licencia.</p>
+
+<div class="objectives"><h4>Objetivos de aprendizaje</h4><ul>
+<li>Explicar lo que muestra la investigación sobre las estrategias que reducen el enojo al conducir, incluido cuánto tiempo pueden durar los beneficios.</li>
+<li>Usar la reestructuración cognitiva (reencuadre) para reemplazar los pensamientos hostiles por otros más precisos y calmados.</li>
+<li>Aplicar técnicas de relajación dentro del auto, incluida la respiración 4-4-6, la relajación muscular progresiva y un reinicio físico.</li>
+<li>Usar la pausa de tres segundos, la planificación del viaje y una transición antes de conducir para eliminar la presión que hay detrás de las decisiones temerarias y agresivas.</li>
+<li>Explicar por qué desahogarse, tomar represalias y la rumiación resultan contraproducentes.</li>
+<li>Crear un plan personal de cambio por escrito y saber cómo manejar una recaída momentánea.</li>
+</ul></div>
+
+<h3>Lo que muestra la investigación</h3>
+<p>Es justo preguntarse si el cambio de actitud es real o solo algo que dicen los cursos. El enojo al conducir se ha estudiado con cuidado, y los resultados son alentadores.</p>
+<p>El psicólogo Jerry Deffenbacher, de la Universidad Estatal de Colorado, estudió a conductores que reportan mucho enojo al volante. Como usted aprendió en el Módulo 3, los conductores con mucho enojo se enojan más rápido, tienen más pensamientos hostiles y toman más riesgos, como manejar de 10 a 20 millas por hora (mph) por encima del límite, cambiar de carril rápidamente, seguir demasiado cerca (pegarse al vehículo de adelante) y entrar a las intersecciones con la luz roja. En simulaciones de manejo tuvieron aproximadamente el doble de choques que los conductores con poco enojo.</p>
+<p>El hallazgo clave para este módulo es lo que pasó cuando esos conductores aprendieron nuevas habilidades. Deffenbacher probó el entrenamiento en relajación por sí solo y la relajación combinada con técnicas cognitivas (aprender a cambiar el pensamiento enojado). Ambos redujeron el enojo al conducir. Cuando se volvió a evaluar a los conductores aproximadamente un año después, los avances se habían mantenido en gran parte. Las personas no solo se sintieron mejor durante una semana. Conservaron las habilidades.</p>
+<div class="highlight"><strong>Hallazgo de la investigación:</strong> En los estudios de Deffenbacher, las intervenciones de relajación y de relajación cognitiva redujeron el enojo al conducir en conductores con mucho enojo, y las mejoras se mantuvieron en gran parte aproximadamente un año después. El enojo en la carretera es un patrón que usted puede cambiar con práctica, no un rasgo fijo de la personalidad.</div>
+<p>Una segunda fuente de evidencia viene de Australia. El Centro de Investigación de Accidentes de la Monash University desarrolló el programa Reducing Aggressive Driving (RAD, Reducción de la Conducción Agresiva). Su investigación identificó detonantes que usted conoce del Módulo 6: que le obstruyan el paso, sentirse irrespetado (que se le atraviesen o lo sigan demasiado cerca), la presión del tiempo y el estrés de otras partes de la vida que se desborda en la carretera. Los participantes dijeron que las partes más valiosas fueron las estrategias prácticas para llevar a casa y escuchar a otros conductores con experiencias similares.</p>
+<p>Ese es el enfoque aquí: herramientas concretas más historias ficticias compuestas de conductores que enfrentaron las mismas situaciones que usted. Un punto más antes de empezar. La fuerza de voluntad por sí sola rara vez funciona, porque el enojo en la carretera ocurre en una fracción de segundo, antes de que usted tenga tiempo de decidir algo. Usted necesita habilidades que haya practicado con anticipación, para que funcionen casi de forma automática, como un simulacro de incendio que se ensaya antes de que haya un incendio.</p>
+
+<h3>Estrategia 1: Reestructuración cognitiva (reencuadre)</h3>
+<p>La reestructuración cognitiva significa notar el pensamiento que alimenta su enojo y reemplazarlo por uno más preciso y más útil. La idea es sencilla: el suceso en sí no decide cuánto se enoja usted. Lo decide su interpretación del suceso.</p>
+<p>Los investigadores llaman a una versión de esto <strong>reevaluación cognitiva</strong>: reinterpretar el comportamiento de otro conductor como un error y no como un ataque deliberado. Los estudios sobre el enojo al conducir han encontrado que este tipo de reinterpretación reduce las respuestas agresivas. Actúa directamente en contra del <strong>sesgo de atribución hostil</strong>, la tendencia a suponer que otras personas tenían la intención de hacerle daño o faltarle el respeto.</p>
+
+<h4>El reencuadre en cuatro pasos</h4>
+<ol>
+<li><strong>Detéctelo.</strong> Note el pensamiento de enojo. Con frecuencia suena como una frase en su cabeza: "Este idiota lo hizo a propósito".</li>
+<li><strong>Revíselo.</strong> Pregúntese: "¿De verdad sé eso?". Por lo general, usted ha visto unos cuantos segundos del manejo de un desconocido y nada más.</li>
+<li><strong>Considere otras explicaciones.</strong> Nombre al menos una explicación inocente. No lo vieron. Están perdidos. Acaban de recibir una mala noticia.</li>
+<li><strong>Elija un pensamiento de reemplazo.</strong> Escoja un pensamiento que sea creíble y tranquilizador, y dígaselo a sí mismo.</li>
+</ol>
+<p>El reemplazo no tiene que ser alegre ni falso. "Es una persona maravillosa" no lo va a convencer. "Fue una mala maniobra, pero probablemente fue un error, y no vale mi licencia" es honesto y funciona mucho mejor.</p>
+
+<h4>Reencuadres para situaciones comunes</h4>
+<table>
+<tr><th>Situación</th><th>Pensamiento de enojo</th><th>Pensamiento de reemplazo</th></tr>
+<tr><td>Alguien se le atraviesa</td><td>"Lo hizo a propósito".</td><td>"Probablemente no me vio. Yo mismo he cometido ese error".</td></tr>
+<tr><td>Va con retraso</td><td>"Tengo que llegar lo más rápido posible".</td><td>"Llegar unos minutos tarde es mejor que llegar con una multa, o no llegar".</td></tr>
+<tr><td>Conductor lento en el carril izquierdo</td><td>"Me está bloqueando para demostrar algo".</td><td>"Puede que no se dé cuenta de que está en el carril de rebase. Lo rebasaré de forma segura cuando pueda".</td></tr>
+<tr><td>Alguien lo sigue demasiado cerca</td><td>"No voy a dejar que me intimide".</td><td>"Su problema no es mi problema. Lo dejaré pasar cuando sea seguro".</td></tr>
+<tr><td>Ganas de tomar represalias</td><td>"Le voy a dar una lección".</td><td>"Mi reacción es mi decisión. No le voy a entregar a un desconocido el control de mi comportamiento".</td></tr>
+<tr><td>Tráfico pesado en la I-95 o la I-64</td><td>"Esto siempre me pasa a mí. Se me arruinó el día".</td><td>"El tráfico es el tráfico. Puedo usar este tiempo para respirar y tranquilizarme".</td></tr>
+<tr><td>Un conductor que se incorpora no lo deja entrar</td><td>"Debería dejarme entrar".</td><td>"No puedo controlarlo. Buscaré el siguiente espacio".</td></tr>
+</table>
+<p>Varios de estos reemplazos apuntan a los patrones de pensamiento del Módulo 6. "Se me arruinó el día" es <em>catastrofización</em>, y "Esto siempre me pasa a mí" es <em>personalización</em>. "Debería dejarme entrar" es una <em>afirmación de "debería"</em>. "Me está bloqueando para demostrar algo" es <em>atribución hostil</em>. Reconocer el patrón le ayuda a elegir más rápido el reencuadre que corresponde.</p>
+
+<h4>La prueba de "¿Importará esto?"</h4>
+<p>Otro reencuadre muy poderoso es la perspectiva. Pregúntese: "¿Importará esto en una hora? ¿En un día? ¿En un año?". Que alguien se le atraviese casi nunca importa una hora después. Una condena por conducción temeraria es un delito menor de Clase 1 en Virginia y permanece en su historial del DMV durante 11 años. Al compararlos lado a lado, la decisión se vuelve mucho más clara.</p>
+
+<div class="scenario"><h4>Escenario: Marcus y la incorporación tardía</h4><p>Piense en un conductor al que llamaremos Marcus. Va de regreso a casa por la Ruta 288 después de un turno largo. Una camioneta pickup baja a toda velocidad por una rampa de entrada y se incorpora justo delante de él con muy poco espacio. Marcus frena fuerte. Su primer pensamiento es: "Me vio y lo hizo a propósito". Se le calienta la cara y quiere acercarse mucho por detrás de la camioneta y encenderle las luces altas.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Usando el reencuadre en cuatro pasos, Marcus detecta el pensamiento ("Lo hizo a propósito"), lo revisa ("Vi dos segundos de su manejo"), considera otra explicación ("La rampa es corta; puede que calculara mal mi velocidad") y elige un reemplazo ("Mala incorporación, probablemente un error, no vale mi licencia"). Suelta un poco el acelerador y vuelve a establecer una distancia de seguimiento de 3 a 4 segundos. Si se hubiera pegado a la camioneta y le hubiera encendido las luces para intimidar al conductor, podría haber sido acusado de conducción agresiva según el § 46.2-868.1, que abarca infracciones específicas, como seguir demasiado cerca, combinadas con la intención de acosar, intimidar u obstruir a otra persona. Un reencuadre de diez segundos lo protegió de ese resultado.</p></details></div>
+
+<h3>Estrategia 2: Técnicas de relajación que puede usar en el auto</h3>
+<p>El enojo es un suceso de todo el cuerpo. Su corazón late más rápido, su respiración se vuelve superficial, sus músculos se tensan y su atención se estrecha hacia el "enemigo". Ese estrechamiento es peligroso, porque un conductor concentrado en un solo auto no está mirando al peatón, las luces de freno de adelante ni el semáforo que cambia a rojo. Las técnicas de relajación actúan sobre el lado físico del enojo. Cuando el cuerpo se calma, el cerebro que piensa puede ponerse al día. La investigación de Deffenbacher encontró que el entrenamiento en relajación por sí solo redujo el enojo al conducir.</p>
+
+<h4>Respiración 4-4-6</h4>
+<ol>
+<li>Inhale lentamente por la nariz mientras cuenta hasta <strong>4</strong>.</li>
+<li>Sostenga el aire suavemente mientras cuenta hasta <strong>4</strong>.</li>
+<li>Exhale lentamente por la boca mientras cuenta hasta <strong>6</strong>.</li>
+<li>Repita de tres a cinco veces.</li>
+</ol>
+<p>La exhalación más larga es la parte clave. Exhalar de forma lenta y prolongada se asocia con la respuesta de calma del cuerpo, y muchas personas notan que sus hombros bajan para la tercera respiración. Si el 4-4-6 le resulta incómodo, acórtelo a 3-3-5. El patrón importa más que los números exactos.</p>
+
+<h4>Relajación muscular progresiva (RMP)</h4>
+<p>La RMP consiste en tensar un grupo de músculos durante unos segundos y luego soltarlo, para que sienta la diferencia entre la tensión y la relajación. Use la RMP <strong>solo cuando esté completamente detenido</strong>, por ejemplo en un semáforo en rojo largo, en tráfico detenido o en un estacionamiento. Nunca tense las piernas ni los pies mientras el vehículo esté en movimiento.</p>
+<ul>
+<li><strong>Manos:</strong> Apriete el volante con firmeza durante cinco segundos y luego deje que sus manos descansen ligeramente sobre él.</li>
+<li><strong>Hombros:</strong> Súbalos hacia las orejas, sostenga y luego déjelos caer.</li>
+<li><strong>Cara y mandíbula:</strong> Apriete, sostenga y luego suelte y deje que la boca se abra un poco.</li>
+<li><strong>Espalda:</strong> Presione la espalda contra el asiento, sostenga y luego suelte.</li>
+</ul>
+<p>Practicar la RMP en casa unos minutos al día la hace mucho más eficaz en el auto, porque su cuerpo aprende cómo se siente estar "relajado".</p>
+
+<h4>El reinicio físico</h4>
+<p>El reinicio físico es una revisión del cuerpo de 10 segundos que usted puede hacer de forma segura mientras conduce:</p>
+<ul>
+<li>Afloje la mano sobre el volante. Usted necesita control, no apretarlo con toda su fuerza.</li>
+<li>Baje los hombros, alejándolos de las orejas.</li>
+<li>Suelte la mandíbula y relaje la frente.</li>
+<li>Recárguese en el asiento en lugar de inclinarse hacia adelante.</li>
+<li>Haga una respiración lenta con una exhalación larga.</li>
+</ul>
+<p>Asocie el reinicio con una señal cotidiana, como cada semáforo en rojo o cada vez que se incorpore a la autopista interestatal, para revisar cómo está su cuerpo antes de que el enojo crezca. También puede bajar su nivel básico de estrés manteniendo el auto a una temperatura cómoda, eligiendo audio más tranquilo en lugar de música fuerte y agresiva o programas de radio de debates acalorados, y poniendo su teléfono fuera de su alcance.</p>
+
+<h3>Estrategia 3: La pausa de tres segundos</h3>
+<p>Muchas reacciones agresivas ocurren en los primeros segundos después de un detonante. El bocinazo, seguir demasiado cerca o el volantazo para "desquitarse" con alguien suelen ocurrir antes de que el conductor realmente lo haya pensado. La pausa de tres segundos pone un pequeño espacio entre el detonante y su acción. En ese espacio, su cerebro que piensa tiene voz y voto.</p>
+<ol>
+<li><strong>Note el detonante.</strong> "Ese conductor se me acaba de atravesar". Nómbrelo en silencio.</li>
+<li><strong>Cuente hasta tres</strong> mientras hace una respiración lenta y afloja la mano sobre el volante. No haga nada con la bocina, las luces ni el acelerador durante ese conteo.</li>
+<li><strong>Pregúntese:</strong> "¿Importará esto en una hora? ¿En un día? ¿En un año?".</li>
+<li><strong>Elija su respuesta</strong> a propósito. En casi todos los casos, la mejor respuesta es crear espacio y dejarlo pasar.</li>
+</ol>
+<p>El sistema de alarma de su cuerpo reacciona primero. La parte de su cerebro que sopesa las consecuencias necesita un momento para ponerse en marcha, y la pausa le da ese momento. La pausa también va de la mano con una distancia de seguimiento segura: mantenga al menos de 3 a 4 segundos detrás del vehículo de adelante en buenas condiciones, y más con mal tiempo. Ese espacio le permite absorber el error de otro conductor sin frenar de golpe, lo que significa menos detonantes desde un principio.</p>
+
+<div class="scenario"><h4>Escenario: Danielle y la bocina</h4><p>Piense en una conductora a la que llamaremos Danielle. Está esperando para dar vuelta a la izquierda en una intersección con mucho tráfico en el condado de Henrico. El semáforo cambia a verde y ella espera a que pase el tráfico que viene en sentido contrario. El conductor de atrás se pega a la bocina. Danielle piensa: "Está bien, ¿quieres que avance? Mira esto", y su pie empieza a pisar el acelerador aunque todavía se acerca un auto en sentido contrario.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Este es el momento para la pausa de tres segundos. Danielle nota el detonante, cuenta hasta tres mientras exhala lentamente y se pregunta si esto importará en una hora. No importará. Lo que sí importaría durante años es dar vuelta delante del tráfico que viene en sentido contrario porque alguien tocó la bocina. Espera un espacio seguro y da vuelta cuando el camino está despejado. Puede agregar un reencuadre: "Desde allá atrás no pueden ver lo que yo veo".</p></details></div>
+
+<h3>Estrategia 4: Planificar el viaje para eliminar la presión del tiempo</h3>
+<p>La presión del tiempo es uno de los detonantes más comunes identificados en la investigación del programa RAD, y es una razón común por la que los conductores manejan a exceso de velocidad. Cuando usted va tarde, cada semáforo en rojo se siente personal. La mejor manera de manejar la presión del tiempo es dejar de crearla.</p>
+
+<h4>Las matemáticas de "recuperar tiempo"</h4>
+<p>Muchos conductores creen que pueden compensar una salida tardía manejando más rápido. Piense en un viaje de 10 millas:</p>
+<table>
+<tr><th>Velocidad</th><th>Tiempo para 10 millas</th></tr>
+<tr><td>60 mph</td><td>10 minutos 0 segundos</td></tr>
+<tr><td>70 mph</td><td>aproximadamente 8 minutos 34 segundos</td></tr>
+</table>
+<p>Manejar 10 mph más rápido durante las 10 millas completas ahorra aproximadamente 1 minuto 26 segundos, y eso suponiendo que no haya semáforos, congestión ni reducciones de velocidad. En el tráfico real, por lo general usted alcanza a los mismos autos en el siguiente semáforo. Mientras tanto, su distancia de frenado aumenta y la energía de un choque sube considerablemente. Cambiar un minuto y medio por ese riesgo, más un posible cargo por conducción temeraria, es un mal negocio.</p>
+
+<h4>Hábitos prácticos para planificar el viaje</h4>
+<ul>
+<li><strong>Agregue un margen de tiempo.</strong> Planee llegar de 10 a 15 minutos antes a cualquier cosa importante, como el trabajo, las citas y las fechas de corte. Si el tráfico está mal, aun así llegará a tiempo.</li>
+<li><strong>Revise el tráfico antes de salir,</strong> no después de quedarse atascado. Elija su ruta mientras esté estacionado.</li>
+<li><strong>Prepárese la noche anterior.</strong> Muchas salidas tardías vienen de buscar desesperadamente las llaves o algo que falta.</li>
+<li><strong>Conozca sus puntos problemáticos.</strong> Planifique para la zona de construcción o el cruce congestionado por el que pasa todos los días.</li>
+<li><strong>Acepte el retraso.</strong> Algunos días llegará tarde pase lo que pase. "Voy a llegar 10 minutos tarde, y está bien" le quita el pánico al viaje.</li>
+</ul>
+
+<div class="warning"><strong>Ley de Virginia:</strong> Ir tarde no es una defensa. Según el § 46.2-862, manejar 20 mph o más por encima del límite aplicable, o a más de 85 mph sin importar el límite indicado, es conducción temeraria por velocidad. Según el § 46.2-861, manejar más rápido de lo que es razonable para las circunstancias y las condiciones del tráfico puede ser conducción temeraria incluso por debajo del límite indicado. La conducción temeraria es un delito menor de Clase 1, que se castiga con hasta 12 meses de cárcel y/o una multa de hasta $2,500.</div>
+
+<div class="scenario"><h4>Escenario: Jordan y la entrevista de trabajo</h4><p>Piense en un conductor al que llamaremos Jordan, que tiene una entrevista de trabajo a las 9:00 a. m. en Richmond y sale de su casa en Chesterfield a las 8:35, esperando un viaje de 25 minutos. A los diez minutos, el tráfico se hace lento por un choque más adelante. Jordan empieza a zigzaguear entre carriles, a pegarse a la defensa del auto de adelante y a ir muy por encima del límite en cada tramo despejado.</p><details><summary>¿Qué debería pasar aquí?</summary><p>El problema de Jordan empezó antes de que el auto se moviera: no había margen de tiempo. Zigzaguear y seguir demasiado cerca le ahorrarán uno o dos minutos como máximo, mientras aumentan mucho el riesgo de choque y la probabilidad de que lo detengan por conducción temeraria o agresiva. Un mejor plan es aceptar el retraso, orillarse en un lugar seguro para llamar al empleador y llegar tranquilo. La mayoría de los empleadores respetan a un candidato que llama con anticipación. A ninguno le va a impresionar un cargo por conducción temeraria. La próxima vez, Jordan debería salir a más tardar a las 8:15 y revisar el tráfico antes de salir por la puerta.</p></details></div>
+
+<h3>Estrategia 5: La transición antes de conducir</h3>
+<p>El Módulo 6 presentó la <strong>agresión desplazada</strong>: llevar al auto el enojo de una discusión en casa o de un mal día en el trabajo y desquitarse con otros conductores. Muchas personas que han tenido un incidente de conducción agresiva se dan cuenta después de que ya estaban enojadas antes de girar la llave. El otro conductor fue solo la gota que derramó el vaso. La transición antes de conducir le ayuda a dejar ese enojo fuera del vehículo.</p>
+
+<h4>La transición de 60 segundos</h4>
+<ol>
+<li><strong>Siéntese antes de arrancar.</strong> Abróchese el cinturón y haga una pausa antes de encender el motor.</li>
+<li><strong>Revise honestamente cómo está.</strong> Pregúntese: "¿Estoy cargando un enojo que no tiene lugar en la carretera?".</li>
+<li><strong>Respire.</strong> Haga tres rondas de respiración 4-4-6.</li>
+<li><strong>Fije una intención.</strong> "Este viaje es solo un viaje. Voy a llegar de forma segura".</li>
+<li><strong>Prepare el espacio.</strong> Ajuste los espejos, el audio y la navegación, y guarde su teléfono ahora.</li>
+</ol>
+<p>A veces la respuesta honesta a "¿Cómo me siento?" es "Furioso". En ese caso, la decisión más segura es retrasar el viaje si puede. Dé una vuelta a la cuadra caminando, llame a un amigo mientras está estacionado o espere 10 o 15 minutos. El enojo intenso por lo general disminuye con un poco de tiempo y distancia. La misma idea se aplica al final de un viaje: si algo en la carretera lo molestó, tómese un minuto en el estacionamiento antes de entrar al trabajo o a su casa, para que el enojo de la carretera no se desborde en el resto de su día.</p>
+
+<h3>Lo que no debe hacer: respuestas contraproducentes</h3>
+<p>Algunas formas comunes de manejar el enojo se sienten naturales, y algunas personas incluso creen que son saludables. La investigación dice lo contrario. Estas respuestas hacen que el enojo sea más fuerte, que dure más tiempo y que lleve a un comportamiento más riesgoso.</p>
+
+<h4>Desahogarse</h4>
+<p>Desahogarse significa sacar el enojo gritando, tocando la bocina, haciendo gestos o golpeando el volante. Muchas personas creen que esto "libera" el enojo como el vapor de una olla de presión. La investigación no respalda esa idea. Desahogarse tiende a <strong>aumentar</strong> el enojo en lugar de liberarlo. Cada grito o bocinazo ensaya el enojo y mantiene a su cuerpo listo para pelear. También puede provocar al otro conductor, convirtiendo una molestia de un solo lado en un conflicto entre dos autos.</p>
+
+<div class="myth"><p><strong>Mito:</strong> Es saludable sacarlo. Gritarles a otros conductores me ayuda a desahogarme para no hacer algo peor.</p><p><strong>Realidad:</strong> Desahogarse tiende a aumentar el enojo, no a reducirlo. Respirar lentamente, reencuadrar y crear espacio disminuyen el enojo de manera mucho más confiable.</p></div>
+
+<h4>Represalias</h4>
+<p>Tomar represalias significa tratar de "darle una lección" a alguien: seguir demasiado cerca a alguien que se le atravesó, frenar de golpe a propósito delante de otro auto, bloquearle una incorporación o perseguir a un conductor para confrontarlo. Aquí es donde los conflictos en la carretera se vuelven peligrosos, y esto lo convierte a usted de la persona a la que le hicieron algo malo en la persona que está violando la ley. Según el § 46.2-868.1, la conducción agresiva incluye infracciones específicas, como seguir demasiado cerca o rebasar de forma indebida, combinadas con la intención de acosar, intimidar, lesionar u obstruir a otra persona. Es un delito menor de Clase 2, y con la intención de lesionar, un delito menor de Clase 1. La mala maniobra del otro conductor no justifica la suya ante el tribunal.</p>
+
+<h4>Rumiación</h4>
+<p>La rumiación significa repetir el incidente en la mente una y otra vez: "No puedo creer que hayan hecho eso". Mantiene vivo el enojo mucho tiempo después de que el suceso terminó. El conductor que se le atravesó ya se fue, pero su cuerpo sigue reaccionando como si todavía estuviera pasando, y su atención está en sus pensamientos en lugar de en la carretera. Para romper el ciclo, póngale nombre ("Lo estoy repitiendo otra vez; eso ya pasó") y redirija su atención a las tareas de manejo: revise sus espejos, revise su velocidad, fíjese en la siguiente vuelta. Una frase de cierre como "Ya pasó. Estoy bien" puede ayudar.</p>
+
+<div class="warning"><strong>Precaución:</strong> Si otro conductor es agresivo con usted, no se involucre. Evite el contacto visual, no le responda con gestos, mantenga las puertas con seguro y cree distancia. Si lo siguen, no maneje a su casa. Maneje a una estación de policía o a un lugar público concurrido, y llame al 911 cuando sea seguro hacerlo.</div>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4><label>Piense en una ocasión en que se desahogó, tomó represalias o rumió después de un incidente en la carretera. ¿Qué pasó después y cómo se sintió una hora más tarde?</label><textarea></textarea><label>¿Cuál respuesta contraproducente es la más común en usted y qué hará en su lugar?</label><textarea></textarea></div>
+
+<h3>Cómo crear su plan personal de cambio</h3>
+<p>Conocer las estrategias no es lo mismo que usarlas. Un plan personal de cambio por escrito convierte las ideas de este módulo en compromisos específicos. Los planes específicos y por escrito son mucho más fáciles de seguir que las promesas generales como "Voy a tratar de estar más tranquilo".</p>
+
+<h4>Las cinco partes de un buen plan</h4>
+<ol>
+<li><strong>Identifique el comportamiento.</strong> "Manejar mejor" es demasiado vago. "Dejar de seguir demasiado cerca cuando siento que alguien va demasiado lento" es específico.</li>
+<li><strong>Identifique el detonante.</strong> Use su perfil de detonantes del Módulo 6: "Cuando voy tarde, especialmente en mi trayecto de la mañana".</li>
+<li><strong>Identifique el reemplazo.</strong> Elija una o dos estrategias de este módulo: "Salir 15 minutos antes, mantener un espacio de 4 segundos y usar la respiración 4-4-6 cuando sienta el impulso de acercarme demasiado".</li>
+<li><strong>Comprométase.</strong> Escríbalo. Cuénteselo a alguien de su confianza. Ponga un recordatorio donde lo vea.</li>
+<li><strong>Revise.</strong> Al final de cada semana, evalúe con honestidad cómo le fue y haga ajustes según sea necesario.</li>
+</ol>
+
+<h4>Plan de ejemplo</h4>
+<p>Así es como un conductor al que llamaremos Andre llenó su plan:</p>
+<ul>
+<li><strong>Comportamiento:</strong> Manejar de 15 a 20 mph por encima del límite en la I-64 cuando voy atrasado.</li>
+<li><strong>Detonante:</strong> Salidas tardías en las mañanas de días de trabajo, por lo general después de posponer la alarma.</li>
+<li><strong>Reemplazo:</strong> Alarma 20 minutos más temprano, mochila preparada la noche anterior, control de crucero fijado en el límite y el reencuadre "Dos minutos no valen mi licencia".</li>
+<li><strong>Recordatorio:</strong> Una nota en mis llaves que dice "Margen de tiempo, no velocidad". Mi pareja me preguntará cada viernes cómo me fue en la semana.</li>
+<li><strong>Revisión:</strong> Cada domingo, anotar cualquier día en que me descubrí manejando a exceso de velocidad y qué estaba pasando.</li>
+</ul>
+<p>El plan de Andre apunta tanto a la causa (las salidas tardías) como al comportamiento (el exceso de velocidad), y combina soluciones prácticas con una herramienta mental. Los buenos planes por lo general hacen ambas cosas.</p>
+
+<div class="plan"><h4>Su plan personal de cambio (para su uso personal — no se envía)</h4>
+<label>El comportamiento específico que voy a cambiar:</label><textarea></textarea>
+<label>Las situaciones o detonantes en los que ocurre:</label><textarea></textarea>
+<label>Lo que haré en su lugar (una o dos estrategias de este módulo):</label><textarea></textarea>
+<label>El reencuadre o la frase que me diré a mí mismo:</label><textarea></textarea>
+<label>Cómo me lo recordaré (nota, alarma, persona a la que se lo diré):</label><textarea></textarea>
+<label>Cuándo y cómo revisaré mi progreso cada semana:</label><textarea></textarea>
+</div>
+
+<h3>Cuando tenga un tropiezo: cómo manejar los retrocesos</h3>
+<p>Cambiar un hábito de mucho tiempo rara vez ocurre en línea recta. Probablemente habrá un día en que toque la bocina antes de pensar, o una mañana en que se descubra subiendo la velocidad. Eso es un <strong>tropiezo</strong>, no un fracaso. Un tropiezo es una sola caída en el comportamiento anterior. Una recaída es cuando un tropiezo se convierte en un regreso total al patrón anterior, muchas veces porque el conductor decide: "Ya lo eché a perder, ¿para qué seguir intentándolo?". Ese pensamiento de todo o nada es el verdadero peligro. Un bocinazo no borra semanas de manejo más tranquilo.</p>
+
+<h4>Recuperación de un tropiezo en cuatro pasos</h4>
+<ol>
+<li><strong>Primero póngase a salvo.</strong> Cree espacio con respecto al otro auto, baje la velocidad y respire.</li>
+<li><strong>Acéptelo sin castigarse.</strong> "Ese no es el conductor que quiero ser". La vergüenza tiende a alimentar más enojo. La responsabilidad honesta no.</li>
+<li><strong>Analícelo.</strong> Más tarde, cuando esté tranquilo, pregúntese: ¿Cuál fue el detonante? ¿Ya estaba estresado, cansado o atrasado? ¿Qué estrategia pude haber usado?</li>
+<li><strong>Ajuste el plan.</strong> Tal vez necesite un margen de tiempo más amplio, un nuevo reencuadre o más práctica de respiración. Actualice el plan y siga adelante.</li>
+</ol>
+
+<div class="scenario"><h4>Escenario: El mal martes de Kevin</h4><p>Piense en un conductor al que llamaremos Kevin. Durante tres semanas ha estado usando su plan de cambio: sale temprano, mantiene su distancia de seguimiento y usa reencuadres. Luego, un martes, después de una reunión estresante, un conductor se desvía hacia su carril en Broad Street. Kevin toca la bocina, acelera y sigue al auto demasiado cerca durante media milla antes de darse cuenta de lo que está haciendo. Después piensa: "Creo que no he cambiado nada".</p><details><summary>¿Qué debería pasar aquí?</summary><p>Kevin tuvo un tropiezo, no una recaída, y darse cuenta por sí mismo es una prueba de su progreso. Debería alejarse de inmediato y volver a establecer un espacio seguro. Más tarde, puede analizarlo: el detonante fue el auto que se desvió, pero la reunión estresante lo predispuso (agresión desplazada). Su plan necesita un agregado: una transición de 60 segundos antes de conducir después de días difíciles en el trabajo. Debería tomar el tropiezo como información, actualizar su plan y seguir adelante.</p></details></div>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4><label>¿Qué estrategia de este módulo cree que le ayudará más y por qué?</label><textarea></textarea><label>¿Dónde es más probable que tenga un tropiezo en el próximo mes y qué hará si ocurre?</label><textarea></textarea></div>
+
+<p>El cambio de actitud no se trata de convertirse en un conductor pasivo. Se trata de convertirse en un conductor <strong>deliberado</strong>, que elige sus respuestas en lugar de reaccionar en piloto automático. Un conductor deliberado sigue notando el mal manejo, pero se niega a dejar que el error de un desconocido decida lo que le pasa a su licencia, su historial, su bolsillo o su vida. Estas estrategias funcionan. No de forma perfecta ni de la noche a la mañana, pero sí de manera medible, cuando usted las practica.</p>
+
+<h3>Resumen del módulo</h3>
+<ul>
+<li>Deffenbacher encontró que las intervenciones de relajación y de relajación cognitiva redujeron el enojo al conducir, y los avances se mantuvieron en gran parte aproximadamente un año después.</li>
+<li>Los participantes del programa RAD valoraron las estrategias prácticas para llevar a casa y escuchar a otros conductores con experiencias similares.</li>
+<li>La reestructuración cognitiva reemplaza los pensamientos hostiles por otros precisos: detéctelo, revíselo, considere otras explicaciones, elija un reemplazo.</li>
+<li>La respiración 4-4-6, la relajación muscular progresiva (solo cuando esté detenido) y el reinicio físico calman el cuerpo para que el cerebro que piensa pueda ponerse al día.</li>
+<li>La pausa de tres segundos pone un espacio entre el detonante y la acción. Pregúntese: "¿Importará esto en una hora? ¿En un día? ¿En un año?".</li>
+<li>Manejar a exceso de velocidad ahorra poco tiempo: 10 millas a 70 en lugar de 60 mph ahorran solo aproximadamente 1 minuto 26 segundos. Un margen de tiempo es la verdadera solución.</li>
+<li>Una transición de 60 segundos antes de conducir ayuda a prevenir la agresión desplazada. Si está demasiado enojado para manejar, retrase el viaje si puede.</li>
+<li>Desahogarse, tomar represalias y la rumiación son contraproducentes y pueden llevar a cargos por conducción agresiva o temeraria.</li>
+<li>Un plan de cambio por escrito nombra el comportamiento, el detonante, el reemplazo, el compromiso y la revisión semanal.</li>
+<li>Un tropiezo no es un fracaso. Póngase a salvo, acéptelo, analícelo y ajuste su plan.</li>
+</ul>
+<p>Cuando el temporizador llegue a 00:00, se desbloqueará el Examen del Módulo 7. El examen tiene 15 preguntas, y usted necesita una calificación aprobatoria de 80% para aprobar. Tómese un momento para repasar su plan de cambio antes de comenzar.</p>
+
+    <div class="gate" id="gate">
+      <h3>Tiempo requerido del Módulo 7</h3>
+      <p id="gateMsg">Siga leyendo y realizando las actividades. Este módulo requiere los 30 minutos completos.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Tiempo restante</a>
+      <small>Cuando el temporizador llegue a 00:00, regrese a su curso para tomar el Examen del Módulo 7.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-es-m7-remaining', DONE='rad-es-m7-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Tiempo requerido completado';go.removeAttribute('href');
+      msg.textContent='Ha completado el tiempo requerido del Módulo 7. Regrese a su curso para tomar el Examen del Módulo 7.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>

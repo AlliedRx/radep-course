@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 3: Agresión y furia al volante | Virginia Commonwealth Driving Improvement Clinic (Español)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress .step{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress .step.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress .step.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">Módulo 3 de 8 &middot; 30 minutos</span>Módulo 3: Agresión y furia al volante</h1>
+    <div class="timer" id="timerBox"><small>Tiempo restante</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<p>La mayoría de los conductores lo han sentido: una oleada de calor cuando alguien se le mete adelante, la mandíbula apretada cuando el auto de adelante avanza lentísimo con la luz verde, las ganas de pegarse a la bocina o de cerrar el espacio para que nadie más se pueda meter. El enojo al volante es común. Lo que usted hace con ese enojo es lo que separa un viaje frustrante de un cargo penal, un choque o un enfrentamiento que termina en tragedia. Este módulo examina de cerca la conducción agresiva y la furia al volante: cómo define la ley de Virginia la conducción agresiva, cómo la frustración común puede escalar hasta convertirse en un comportamiento peligroso, qué nos dicen las investigaciones sobre por qué algunos conductores se enojan más que otros, y qué debe hacer usted cuando otro conductor dirige su agresión contra usted.</p>
+
+<div class="objectives"><h4>Objetivos de aprendizaje</h4><ul>
+<li>Explicar la prueba de dos partes para la conducción agresiva según el Código de Virginia § 46.2-868.1 y las sanciones que se aplican.</li>
+<li>Distinguir entre conducción agresiva, conducción temeraria y furia al volante.</li>
+<li>Describir la escalera de escalada e identificar los puntos donde usted puede bajarse de ella.</li>
+<li>Resumir los hallazgos clave de las investigaciones sobre los conductores con mucho enojo, incluido el trabajo del psicólogo Jerry Deffenbacher.</li>
+<li>Identificar los detonantes comunes del enojo al conducir, incluido el estrés desplazado, según lo describe el programa Reducing Aggressive Driving (RAD) de Monash University.</li>
+<li>Aplicar un plan seguro, paso a paso, para responder cuando otro conductor es agresivo con usted.</li>
+</ul></div>
+
+<h3>Por qué la agresión merece su propio módulo</h3>
+<p>En los Módulos 1 y 2 usted aprendió cómo trata Virginia la conducción temeraria y cómo la velocidad por sí sola puede convertir un viaje común en un delito. La agresión está relacionada, pero es diferente en un aspecto importante. El exceso de velocidad suele ser un hábito o un error de juicio. La agresión tiene que ver con la emoción y la intención. Tiene que ver con cómo usted reacciona ante otras personas en la vía.</p>
+
+<div class="highlight"><strong>Idea clave:</strong> El objetivo de este módulo no es convertirlo en una persona que nunca siente enojo. Eso no es realista. El objetivo es ampliar la distancia entre el sentimiento y la acción, para que el enojo siga siendo un sentimiento y no se convierta en una decisión al volante.</div>
+
+<h3>La ley de conducción agresiva de Virginia (§ 46.2-868.1)</h3>
+<p>Virginia es uno de varios estados que tienen una ley específica sobre la conducción agresiva. Según el Código de Virginia § 46.2-868.1, la conducción agresiva no es simplemente "manejar enojado" o "manejar con mala educación". La ley establece una prueba de dos partes, y se deben cumplir ambas partes.</p>
+
+<h4>Parte 1: Una infracción de tránsito incluida en la lista</h4>
+<p>Primero, el conductor debe cometer una de ciertas infracciones de tránsito que aparecen en la ley. Entre ellas se incluyen infracciones como:</p>
+<ul>
+<li>Seguir demasiado cerca (pegarse al vehículo de adelante)</li>
+<li>Rebasar de manera indebida</li>
+<li>No ceder el derecho de paso</li>
+<li>Evadir los dispositivos de control de tránsito (por ejemplo, cortar camino por un estacionamiento para evitar un semáforo en rojo)</li>
+<li>Exceso de velocidad</li>
+<li>Detenerse en una carretera</li>
+</ul>
+<p>Observe que cada una de estas, por sí sola, es una infracción de tránsito común. Muchísimos conductores reciben multas por seguir demasiado cerca o por exceso de velocidad sin que se les acuse de conducción agresiva. Se necesita algo más.</p>
+
+<h4>Parte 2: Un peligro o una intención hostil</h4>
+<p>Segundo, mientras comete esa infracción, el conductor debe:</p>
+<ol>
+<li><strong>Representar un peligro para otra persona</strong>, O</li>
+<li>Cometer la infracción <strong>con la intención de acosar, intimidar, lesionar u obstruir</strong> a otra persona.</li>
+</ol>
+<p>Esta segunda parte es la que convierte una infracción común en conducción agresiva. Es importante leer con cuidado la palabra "O". Un fiscal no siempre tiene que probar lo que usted tenía en mente. Si el hecho de que usted siguiera demasiado cerca o rebasara de manera indebida creó un peligro para otra persona, eso puede ser suficiente. Y si usted se pegaba al vehículo de adelante específicamente para asustar o presionar al conductor, esa intención por sí sola cumple la segunda parte, aunque nadie haya estado realmente en peligro.</p>
+
+
+<h4>Sanciones</h4>
+<p>La conducción agresiva es un <strong>delito menor de Clase 2</strong> en Virginia. Un delito menor de Clase 2 conlleva hasta <strong>6 meses de cárcel y/o una multa de hasta $1,000</strong>. Si el conductor actuó con la <strong>intención de lesionar</strong> a otra persona, el delito pasa a ser un <strong>delito menor de Clase 1</strong>, el mismo nivel que la conducción temeraria, castigado con hasta <strong>12 meses de cárcel y/o una multa de hasta $2,500</strong>.</p>
+<p>La ley también permite que el tribunal ordene al conductor completar un programa de manejo de la ira o de conducción agresiva. Esa es una de las razones por las que muchas personas toman este curso: un juez decidió que la educación sobre el enojo y la conducción forma parte del resultado apropiado.</p>
+
+
+<div class="scenario"><h4>Escenario: La camioneta lenta</h4><p>Piense en un conductor al que llamaremos Marcus. Va tarde a un lugar de trabajo por la Route 288. Una camioneta pickup delante de él va unas 5 mph por debajo del límite en el carril izquierdo. Marcus se acerca a unos pocos pies de la defensa de la camioneta y se queda ahí durante casi una milla, haciendo cambio de luces altas. Después dice: "Quería que él supiera que estaba en el carril equivocado".</p><details><summary>¿Qué debería pasar aquí?</summary><p>Marcus cometió una infracción incluida en la lista (seguir demasiado cerca) y, según sus propias palabras, lo hizo para presionar e intimidar al otro conductor. Eso cumple ambas partes del § 46.2-868.1, aunque no haya ocurrido ningún choque. Seguir tan de cerca también creó un peligro real: si la camioneta hubiera frenado de repente, Marcus no tenía espacio para detenerse. Puede que el conductor de la camioneta se equivocara al quedarse en el carril izquierdo, pero el error de otro conductor no le da permiso a Marcus para cometer un delito como respuesta. Una opción más segura habría sido mantener una distancia de seguimiento de 3 a 4 segundos, esperar una oportunidad segura para rebasar por la derecha donde sea legal, o simplemente aceptar llegar uno o dos minutos más tarde.</p></details></div>
+
+<h3>Conducción agresiva, conducción temeraria y furia al volante: conocer la diferencia</h3>
+<p>Estos tres términos se usan a menudo como si significaran lo mismo. No es así, y las diferencias ayudan a explicar cómo un solo incidente puede dar lugar a más de un cargo.</p>
+
+<h4>Conducción temeraria</h4>
+<p>Como aprendió en el Módulo 1, la conducción temeraria según el § 46.2-852 es conducir "de manera temeraria o a una velocidad o de una forma que ponga en peligro la vida, la integridad física o la propiedad de cualquier persona". La conducción temeraria se enfoca en el peligro creado. No requiere enojo ni mala intención. Un conductor tranquilo y distraído que va a 90 mph en la autopista interestatal es un conductor temerario según el § 46.2-862, aunque esté de buen humor.</p>
+
+<h4>Conducción agresiva</h4>
+<p>La conducción agresiva según el § 46.2-868.1 requiere una infracción de tránsito incluida en la lista más un peligro para alguien o la intención de acosar, intimidar, lesionar u obstruir. A menudo implica un blanco: un conductor específico ante el cual reacciona el conductor agresivo.</p>
+
+<h4>Furia al volante</h4>
+<p>"Furia al volante" no es el nombre de un delito separado en el Código de Virginia. Es un término común para el extremo más grave de la agresión al conducir: usar el vehículo como arma, embestir deliberadamente otro auto o sacarlo de la vía, bajarse del auto para enfrentar a alguien, lanzar objetos, hacer amenazas físicas o atacar a otra persona. Como la furia al volante no es un cargo propio, los comportamientos involucrados se procesan bajo otras leyes, lo que puede incluir cargos penales graves y, en algunos casos, delitos graves.</p>
+
+
+
+<div class="myth"><p><strong>Mito:</strong> "Solo es conducción agresiva si yo tenía la intención de lastimar a alguien".</p><p><strong>Realidad:</strong> La intención de lesionar eleva el cargo a un delito menor de Clase 1, pero no es necesaria para un cargo de conducción agresiva. La intención de acosar, intimidar u obstruir es suficiente, y también lo es simplemente representar un peligro para otra persona mientras se comete una infracción incluida en la lista.</p></div>
+
+<h3>La escalera de escalada</h3>
+<p>Muy pocos incidentes de furia al volante comienzan con alguien que planea lastimar a un desconocido. Por lo general se van formando paso a paso. Cada paso se siente como una respuesta pequeña y razonable a lo que la otra persona acaba de hacer. Al mirar atrás, las personas involucradas a menudo no pueden creer hasta dónde llegó la situación. Una forma útil de imaginarlo es como una escalera.</p>
+<ol>
+<li><strong>Irritación.</strong> Algo sucede: un auto se le mete, alguien va lento, el tránsito se detiene. Usted se siente molesto. Aprieta el volante con más fuerza. Esto es normal y no es un problema por sí solo.</li>
+<li><strong>Interpretación hostil.</strong> Usted decide que el otro conductor lo hizo a propósito, o que es egoísta, tonto o le está faltando el respeto. El pensamiento "Me lo hizo a mí" le echa leña al fuego.</li>
+<li><strong>Desahogo.</strong> Usted grita dentro del auto, toca la bocina larga y fuertemente, o hace un gesto grosero. Puede sentir que esto le "deja sacar la presión", pero las investigaciones sugieren que desahogarse tiende a aumentar el enojo en lugar de liberarlo.</li>
+<li><strong>Castigar con el vehículo.</strong> Usted se pega al vehículo de adelante, hace cambio de luces, acelera para bloquear una incorporación, frena de golpe a propósito o se desvía hacia el otro auto. De aquí provienen muchos cargos de conducción agresiva.</li>
+<li><strong>Persecución y enfrentamiento.</strong> Usted sigue al otro conductor, se pone a su lado para gritarle o lo encierra. Ahora ambos conductores están distraídos y cargados de emoción a velocidad de carretera.</li>
+<li><strong>Violencia.</strong> Alguien se baja del auto, lanza algo, embiste un vehículo o usa un arma. Ahora hay vidas en grave peligro, y las consecuencias pueden ser permanentes.</li>
+</ol>
+<p>Lo bueno de una escalera es que usted puede bajarse en cualquier peldaño. Mientras más temprano se baje, más fácil es. En el peldaño 1 o 2, un solo pensamiento diferente ("Tal vez no me vio") puede terminar con todo. En el peldaño 5, el corazón le late con fuerza, su pensamiento se ha estrechado y detenerse requiere mucho más esfuerzo. Por eso este curso se enfoca tanto en los primeros pasos: cómo interpreta usted lo que hacen otros conductores.</p>
+
+
+<div class="scenario"><h4>Escenario: La incorporación en Broad Street</h4><p>Una conductora a la que llamaremos Denise va camino a casa por Broad Street en Richmond después de un turno largo. Un auto que sale de una calle lateral se le mete adelante y la obliga a frenar. Ella toca la bocina. El otro conductor saca la mano por la ventanilla y hace un gesto que Denise interpreta como despectivo. Ella acelera, lo sigue de cerca durante varias cuadras y, cuando el auto se detiene en un semáforo, se pone a su lado y empieza a gritar por la ventanilla abierta. El otro conductor le grita también.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Recorra los pasos de Denise por la escalera: irritación (el frenazo), interpretación hostil (el gesto significaba falta de respeto), desahogo (tocar la bocina), castigar con el vehículo (pegarse al vehículo de adelante) y enfrentamiento (gritar en el semáforo). Estaba a un peldaño de algo mucho peor. El gesto pudo haber sido una disculpa; ella no puede saberlo. La salida más segura estaba en el primer peldaño: frenar, respirar, dejar ir el auto y recordarse que estaba cansada y que el error del otro conductor solo le costó unos segundos. Incluso en el semáforo, todavía podía haberse bajado de la escalera manteniendo la ventanilla cerrada, mirando hacia adelante y dejando que el otro auto se fuera primero.</p></details></div>
+
+<h3>La psicología del enojo al conducir</h3>
+<p>¿Por qué algunas personas se mantienen tranquilas en el tránsito pesado mientras otras explotan? El psicólogo <strong>Jerry Deffenbacher</strong> de Colorado State University pasó años estudiando esta pregunta. Su investigación comparó a los conductores con "mucho enojo", personas que dicen enojarse a menudo y con intensidad mientras conducen, con los conductores con "poco enojo". Las diferencias fueron claras y constantes.</p>
+
+<h4>Qué hacen diferente los conductores con mucho enojo</h4>
+<ul>
+<li><strong>Se enojan más, y más rápido.</strong> La misma situación, como un conductor lento o un cambio de carril repentino, les produce más enojo y se lo produce más rápidamente.</li>
+<li><strong>Tienen más pensamientos hostiles y agresivos.</strong> Es más probable que supongan mala intención y que piensen en desquitarse con el otro conductor.</li>
+<li><strong>Toman más riesgos.</strong> Los conductores con mucho enojo reportaron más comportamientos riesgosos, como exceder el límite de velocidad por 10 a 20 mph, hacer cambios de carril rápidos, pegarse al vehículo de adelante y entrar a las intersecciones con la luz roja.</li>
+<li><strong>Chocan más.</strong> En simulaciones de manejo, los conductores con mucho enojo tuvieron aproximadamente <strong>el doble de choques</strong> que los conductores con poco enojo.</li>
+</ul>
+
+
+<h4>Por qué el enojo lo convierte en un peor conductor</h4>
+<p>El enojo es una emoción de "pelea". Cuando aumenta, su cuerpo se prepara para actuar: el ritmo cardíaco sube, los músculos se tensan y la atención se estrecha hacia la fuente de la amenaza. Ese enfoque estrecho podría ayudar en una pelea física, pero conducir requiere lo contrario. Usted necesita una atención amplia, para ver al peatón que se baja de la acera, las luces de freno tres autos más adelante y la motocicleta en su punto ciego. Un conductor enojado y fijado en el auto que se le metió adelante no está mirando el resto de la vía.</p>
+<p>El enojo también cambia el juicio. Hace que las maniobras riesgosas parezcan justificadas y que los posibles costos parezcan lejanos. Un conductor que normalmente nunca rebasaría en una doble línea amarilla puede hacerlo para "pasar a este idiota". Recuerde del Módulo 2 que a 60 mph usted recorre unos 88 pies cada segundo, y que un tiempo típico de percepción y reacción es de aproximadamente 1.5 segundos. Un conductor distraído y enojado puede reaccionar aún más lentamente, justo en el momento en que va más cerca y más rápido.</p>
+
+<h4>La buena noticia: el enojo al conducir se puede reducir</h4>
+<p>El trabajo de Deffenbacher no solo describió el problema. También puso a prueba soluciones. Los programas que enseñaron a los conductores <strong>técnicas de relajación</strong>, y los programas que combinaron la relajación con <strong>cambiar los patrones de pensamiento de enojo</strong> (a menudo llamados enfoques cognitivo-relajantes), redujeron el enojo al conducir. Algo importante es que las mejoras se mantuvieron en gran parte aproximadamente un año después. En otras palabras, el enojo al conducir no es un rasgo fijo de la personalidad. Es un patrón, y los patrones se pueden cambiar con práctica. Los Módulos 6 y 7 de este curso se basan precisamente en este tipo de habilidades.</p>
+
+<h3>Trampas del pensamiento que alimentan el enojo en la vía</h3>
+<p>Gran parte del enojo al conducir no viene de lo que sucede, sino de lo que nos decimos a nosotros mismos sobre lo que sucedió. Los psicólogos han identificado varios patrones de pensamiento que hacen que el enojo sea más fuerte y dure más.</p>
+
+<h4>Sesgo de atribución hostil</h4>
+<p>Es la tendencia a suponer que las acciones de otras personas son deliberadas y están dirigidas contra usted. Cuando alguien se le mete adelante, el pensamiento hostil es "Lo hizo a propósito. Se cree mejor que yo". En realidad, la mayoría de los errores al conducir son solo eso: errores. Puede que el otro conductor no lo haya visto en un punto ciego, que esté perdido, que sea nuevo en la zona o que esté enfrentando una emergencia. Casi nunca se sabe la verdadera razón.</p>
+
+<h4>Reevaluación cognitiva: el antídoto</h4>
+<p>Las investigaciones muestran que la <strong>reevaluación cognitiva</strong>, es decir, reinterpretar deliberadamente el comportamiento de otro conductor como un error y no como algo malintencionado, reduce las respuestas agresivas. No se trata de fingir que el otro conductor no hizo nada mal. Se trata de elegir una explicación que no exija venganza. Compare estas:</p>
+<table>
+<tr><th>Pensamiento hostil</th><th>Reevaluación</th></tr>
+<tr><td>"Ese idiota se me metió adelante a propósito".</td><td>"Probablemente no me vio. Yo también lo he hecho antes".</td></tr>
+<tr><td>"Ella va despacio solo para hacerme llegar tarde".</td><td>"Puede que esté buscando una dirección, o que esté nerviosa en esta vía".</td></tr>
+<tr><td>"Se pega detrás de mí para presionarme".</td><td>"Tiene prisa. Ese es su problema. Lo dejaré pasar".</td></tr>
+<tr><td>"Nadie en esta ciudad sabe manejar".</td><td>"El tránsito está pesado y la gente está estresada. Yo no tengo que empeorarlo".</td></tr>
+</table>
+
+<h4>Rumiación</h4>
+<p>La rumiación significa repetir un incidente una y otra vez en la mente. "No puedo creer que hizo eso. ¿Quién se cree que es? Debí haber…" Cada repetición vuelve a detonar el enojo. La rumiación prolonga el enojo, a veces por el resto del viaje o por el resto del día.</p>
+
+
+<div class="myth"><p><strong>Mito:</strong> "Pegarme a la bocina y gritar me ayuda a desahogarme para no hacer algo peor".</p><p><strong>Realidad:</strong> Desahogarse tiende a aumentar el enojo, no a liberarlo. También invita al otro conductor a responder, lo cual puede convertir un incidente menor en un enfrentamiento peligroso. Las técnicas para calmarse, como la respiración lenta, funcionan mejor.</p></div>
+
+<div class="reflect"><h4>Reflexión (para su uso personal — no se envía)</h4>
+<label>Piense en la última vez que otro conductor lo hizo enojar. ¿Qué se dijo usted a sí mismo sobre por qué lo hizo?</label><textarea></textarea>
+<label>Escriba otra explicación posible (una reevaluación) de lo que hizo ese conductor.</label><textarea></textarea>
+<label>¿Cuánto duró el enojo? ¿Repitió el incidente en su mente después?</label><textarea></textarea>
+</div>
+
+<h3>Lo que lo provoca: detonantes comunes</h3>
+<p>El Monash University Accident Research Centre en Australia desarrolló un programa llamado <strong>Reducing Aggressive Driving (RAD)</strong> (Reducción de la Conducción Agresiva). A través de su trabajo con conductores, el programa identificó situaciones que comúnmente detonan el enojo al conducir. Conocer sus detonantes le ayuda a ver venir el enojo antes de que tome el control.</p>
+
+<h4>Obstrucción</h4>
+<p>Que lo retrasen o le bloqueen el paso: congestión, un conductor lento en el carril izquierdo, un auto que no lo deja incorporarse, un vehículo detenido en un carril de circulación. La obstrucción es uno de los detonantes más comunes porque se interpone en el camino de una meta, por lo general llegar a algún lugar a tiempo.</p>
+
+<h4>Sentirse irrespetado</h4>
+<p>Que se le metan adelante, que se le peguen detrás, que le toquen la bocina o le hagan gestos. Estos detonantes se sienten personales y activan rápidamente el sesgo de atribución hostil. Muchos conductores descubren que es más difícil dejar ir la sensación de haber sido irrespetados que la molestia en sí.</p>
+
+<h4>Presión de tiempo</h4>
+<p>Ir tarde reduce su tolerancia ante todo. Un semáforo en rojo que no le molestaría un domingo por la tarde se siente como un insulto cuando va diez minutos atrasado para el trabajo. La presión de tiempo es uno de los detonantes más controlables: salir más temprano la elimina por completo.</p>
+
+<h4>Estrés desplazado</h4>
+<p>A veces el enojo que usted siente en la vía no comenzó en la vía. Una discusión en casa, un día difícil en el trabajo, preocupaciones de dinero o el agotamiento pueden seguirlo hasta el auto. Los psicólogos llaman a esto <strong>agresión desplazada</strong>: el enojo de una situación se redirige hacia un blanco más seguro o más disponible. Los otros conductores son anónimos y probablemente nunca los volverá a ver, lo que los convierte en blancos fáciles. El conductor que lo "hizo" ponerse furioso pudo haber sido simplemente la gota que derramó el vaso en un mal día.</p>
+
+<div class="scenario"><h4>Escenario: Después de la llamada</h4><p>Un conductor al que llamaremos Andre termina una llamada tensa con su arrendador en el estacionamiento del trabajo. Sale a Hull Street Road todavía molesto. En cinco minutos le ha tocado la bocina a dos conductores, ha rebasado a un auto por el acotamiento y le ha gritado a un peatón que cruzaba lentamente por un paso peatonal. Después dice: "Hoy todo el mundo manejaba como idiota".</p><details><summary>¿Qué debería pasar aquí?</summary><p>Este es un caso clásico de estrés desplazado. Probablemente los otros conductores no eran peores que de costumbre; la tolerancia de Andre era mucho menor porque trajo el enojo consigo al auto. Rebasar por el acotamiento es el tipo de maniobra peligrosa e ilegal que puede llevar a cargos y choques. Un mejor enfoque habría sido reconocer el detonante antes de arrancar el auto: quedarse sentado un minuto, respirar lentamente varias veces y reconocer: "Estoy molesto por el arrendador, no por el tránsito". Si aun así se sentía demasiado enojado para conducir con calma, esperar unos minutos más habría sido la opción segura.</p></details></div>
+
+<h4>Lo que les resultó útil a los participantes de RAD</h4>
+<p>Los participantes del programa RAD dijeron que valoraban especialmente dos cosas: <strong>estrategias prácticas para llevarse a casa</strong> que podían usar en el auto, y escuchar las <strong>experiencias de otros conductores</strong>. Escuchar que otras personas luchan con los mismos detonantes, y aprender lo que les funcionó, ayudó a los participantes a ver su propio comportamiento con más claridad.</p>
+
+
+<h3>El costo real de la furia al volante</h3>
+<p>La furia al volante no es solo un momento desagradable. Mata y lesiona a personas. La <strong>AAA Foundation for Traffic Safety</strong> estudió los incidentes violentos de conducción agresiva en los Estados Unidos y encontró que de <strong>1990 a 1996</strong> hubo <strong>al menos 10,037</strong> incidentes de ese tipo, que resultaron en <strong>218 muertes</strong> y <strong>12,610 lesiones</strong>. Esas cifras cuentan solo los incidentes que se volvieron violentos y que fueron reportados, por lo que no reflejan la cantidad mucho mayor de casi accidentes, enfrentamientos aterradores y choques en los que el enojo tuvo un papel más silencioso.</p>
+
+
+<p>Los costos también alcanzan al conductor agresivo. Además de las sanciones penales por conducción agresiva y conducción temeraria que usted ya aprendió, una condena puede traer puntos de demérito del DMV, primas de seguro más altas durante años y posibles efectos en el empleo, sobre todo para cualquier persona que conduce por trabajo. El Módulo 5 cubre estas consecuencias en detalle.</p>
+
+
+<h3>Cuando otro conductor es agresivo con usted</h3>
+<p>Hasta ahora este módulo se ha enfocado en su propio enojo. Pero usted también necesita un plan para cuando otra persona dirige su agresión contra usted. Usted puede hacer todo bien y aun así encontrarse con un conductor que se le pega detrás, le hace gestos, lo sigue o trata de provocar un enfrentamiento. La forma en que usted responda puede determinar si el incidente se desvanece o se vuelve violento.</p>
+
+<h4>La regla principal: no se involucre</h4>
+<p>El conductor agresivo quiere una reacción. No se la dé. Evite el contacto visual, no le devuelva gestos, no le devuelva bocinazos y no acelere ni frene de repente para "mandar un mensaje". Su objetivo es volverse aburrido, no darle al otro conductor nada a qué reaccionar, para que pierda el interés y siga su camino.</p>
+
+<h4>Un plan de respuesta paso a paso</h4>
+<ol>
+<li><strong>Cree espacio.</strong> Si alguien se le pega detrás, cámbiese de carril cuando sea seguro y déjelo pasar. Si alguien conduce de forma errática delante de usted, reduzca la velocidad y aumente su distancia de seguimiento.</li>
+<li><strong>Evite el contacto visual y los gestos.</strong> Mire hacia adelante. El contacto visual se puede interpretar como un desafío.</li>
+<li><strong>Mantenga las puertas con seguro y las ventanillas cerradas.</strong> Esto es especialmente importante en el tránsito de avanzar y detenerse y en los semáforos en rojo.</li>
+<li><strong>Déjese una ruta de escape.</strong> Cuando esté detenido, trate de dejar suficiente espacio delante de su auto para poder rodear al vehículo de adelante si lo necesita.</li>
+<li><strong>No maneje a su casa si lo están siguiendo.</strong> Usted no quiere que un desconocido enojado sepa dónde vive. En su lugar, maneje a una estación de policía, una estación de bomberos o un lugar público concurrido y bien iluminado.</li>
+<li><strong>Llame al 911 cuando sea seguro hacerlo.</strong> Use la llamada de manos libres o pídale a un pasajero que llame. Dé su ubicación, la dirección en que viaja y una descripción del otro vehículo. Si maneja solo, oríllese en un lugar público y seguro antes de usar el teléfono en la mano.</li>
+<li><strong>Nunca se baje del auto para enfrentar al otro conductor.</strong> Si se acerca a su vehículo, quédese adentro con las puertas con seguro. Si puede alejarse manejando de forma segura, hágalo.</li>
+<li><strong>Déjelo ir después.</strong> Una vez que esté a salvo, resista las ganas de repetir el incidente en su mente. La rumiación mantiene vivo el enojo y hace más probable que reaccione mal más adelante en su viaje.</li>
+</ol>
+
+<div class="warning"><strong>Advertencia de seguridad:</strong> Si otro conductor lo está siguiendo, no maneje a su casa y no se orille en una vía aislada. Maneje a una estación de policía o a un lugar público concurrido y llame al 911 cuando sea seguro. Nunca salga de su vehículo para enfrentar a un conductor agresivo.</div>
+
+<div class="scenario"><h4>Escenario: Seguida al salir de la interestatal</h4><p>Una conductora a la que llamaremos Priya se desvía por accidente hacia el carril de al lado en la I-295 de noche, lo que hace que otro conductor tenga que frenar. Ese conductor acelera hasta ponerse a su lado, toca la bocina y le hace gestos. Cuando Priya toma su salida, nota que el mismo auto sale detrás de ella y se mantiene cerca durante dos giros. Su casa está a tres minutos.</p><details><summary>¿Qué debería pasar aquí?</summary><p>Priya no debe manejar a su casa. Debe mantener las puertas con seguro, evitar mirar o hacerle gestos al otro conductor y dirigirse a una estación de policía o a un lugar público concurrido y bien iluminado, como una gasolinera con gente alrededor. Cuando sea seguro, debe llamar al 911, usando la llamada de manos libres o entrando primero a esa área pública, y dar su ubicación y una descripción del auto. Debe quedarse dentro de su vehículo. Priya sí cometió un error al desviarse de carril, pero la respuesta correcta ante un conductor enojado es ponerse a salvo, no explicarse ni disculparse cara a cara.</p></details></div>
+
+
+
+
+<div class="keyterms"><h4>Términos clave</h4><dl>
+<dt>Conducción agresiva (§ 46.2-868.1)</dt><dd>Cometer una infracción de tránsito incluida en la lista mientras se representa un peligro para otra persona o con la intención de acosar, intimidar, lesionar u obstruir a otra persona. Un delito menor de Clase 2; un delito menor de Clase 1 con intención de lesionar.</dd>
+<dt>Furia al volante</dt><dd>El extremo más grave de la agresión al conducir, que implica violencia deliberada, amenazas o el uso de un vehículo como arma. No es un solo delito en Virginia; se procesa bajo otras leyes penales.</dd>
+<dt>Escalera de escalada</dt><dd>El ascenso paso a paso desde la irritación hacia los pensamientos hostiles, el desahogo, el castigo con el vehículo, el enfrentamiento y la violencia.</dd>
+<dt>Sesgo de atribución hostil</dt><dd>La tendencia a suponer que el comportamiento de otra persona es deliberado y está dirigido contra usted.</dd>
+<dt>Reevaluación cognitiva</dt><dd>Reinterpretar el comportamiento de otro conductor como un probable error en lugar de algo malintencionado, lo cual reduce las respuestas agresivas.</dd>
+<dt>Agresión desplazada</dt><dd>Enojo que viene de una parte de la vida, como el trabajo o el hogar, y que se redirige hacia otros conductores.</dd>
+<dt>Rumiación</dt><dd>Repetir una y otra vez en la mente un incidente molesto, lo cual prolonga el enojo.</dd>
+<dt>Desahogo</dt><dd>Expresar el enojo tocando la bocina, gritando o haciendo gestos; tiende a aumentar el enojo en lugar de liberarlo.</dd>
+</dl></div>
+
+<h3>Resumen del módulo</h3>
+<ul>
+<li>Según el Código de Virginia § 46.2-868.1, la conducción agresiva requiere una infracción de tránsito incluida en la lista (como seguir demasiado cerca, rebasar de manera indebida, no ceder el paso, evadir los dispositivos de control de tránsito, exceso de velocidad o detenerse en una carretera) MÁS representar un peligro para otra persona O tener la intención de acosar, intimidar, lesionar u obstruir a otra persona.</li>
+<li>La conducción agresiva es un delito menor de Clase 2 (hasta 6 meses de cárcel y/o una multa de $1,000). Con intención de lesionar, es un delito menor de Clase 1 (hasta 12 meses y/o $2,500). El tribunal puede ordenar un programa de manejo de la ira o de conducción agresiva.</li>
+<li>La conducción temeraria se enfoca en el peligro; la conducción agresiva agrega un peligro o una intención hostil vinculados a una infracción incluida en la lista; la furia al volante no es un delito separado en Virginia, pero sus comportamientos pueden llevar a cargos graves, incluidos delitos graves.</li>
+<li>La agresión por lo general escala paso a paso. Usted puede bajarse de la escalera en cualquier peldaño, y mientras más temprano lo haga, más fácil es.</li>
+<li>La investigación de Jerry Deffenbacher encontró que los conductores con mucho enojo se enojan más rápido, tienen más pensamientos hostiles, toman más riesgos y tuvieron aproximadamente el doble de choques en las simulaciones de manejo. El entrenamiento en relajación y el entrenamiento cognitivo-relajante redujeron el enojo al conducir, y las mejoras se mantuvieron en gran parte aproximadamente un año después.</li>
+<li>El sesgo de atribución hostil, la rumiación y el desahogo empeoran el enojo. La reevaluación cognitiva lo mejora.</li>
+<li>Los detonantes comunes identificados por el programa RAD de Monash University incluyen la obstrucción, sentirse irrespetado, la presión de tiempo y el estrés desplazado.</li>
+<li>La AAA Foundation encontró al menos 10,037 incidentes violentos de conducción agresiva de 1990 a 1996, que causaron 218 muertes y 12,610 lesiones.</li>
+<li>Si otro conductor es agresivo con usted: no se involucre, cree espacio, mantenga las puertas con seguro, nunca maneje a su casa si lo siguen, vaya a una estación de policía o a un lugar público concurrido, llame al 911 cuando sea seguro y nunca se baje para enfrentarlo.</li>
+</ul>
+<p>Use el tiempo restante para repasar este módulo, volver a ver los escenarios y completar las preguntas de reflexión para su propio beneficio. Cuando el temporizador llegue a 00:00, se desbloqueará el Examen del Módulo 3. El examen tiene 15 preguntas, y usted necesita una calificación aprobatoria de 80% para pasar.</p>
+
+    <div class="gate" id="gate">
+      <h3>Tiempo requerido del Módulo 3</h3>
+      <p id="gateMsg">Siga leyendo y realizando las actividades. Este módulo requiere los 30 minutos completos.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" href="#" aria-disabled="true">&#128274; Tiempo restante</a>
+      <small>Cuando el temporizador llegue a 00:00, regrese a su curso para tomar el Examen del Módulo 3.</small>
+    </div>
+  </div>
+</main>
+<script>
+
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},
+ set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}},
+ ok:function(){try{var t='__t';localStorage.setItem(t,'1');localStorage.removeItem(t);return true;}catch(e){return false;}}};
+
+(function(){
+  var KEY='rad-es-m3-remaining', DONE='rad-es-m3-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Tiempo requerido completado';go.removeAttribute('href');
+      msg.textContent='Ha completado el tiempo requerido del Módulo 3. Regrese a su curso para tomar el Examen del Módulo 3.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;  // time only counts while this page is open and visible
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+
+</script>
+</body>
+</html>
