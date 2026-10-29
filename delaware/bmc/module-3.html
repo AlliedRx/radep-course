@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 3: Speed, Space and Aggression | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 3 of 16 &middot; 30 minutes</span>Module 3: Speed, Space and Aggression</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course under 21 Del.C. §4175A(d) and 2 DE Admin. Code 1202). Module B3: speeding and tailgating as aggression (§§4168, 4169, 4123 on the §4175A list); Delaware speed law, fines (§4169(c)), points and serious-speeding actions (Reg 2208; DMV), reckless driving at 90+ (§4175), work zones (§4105(f), §4170A); physics of speed (reaction distance, braking, crash energy); following distance; being tailgated; the time-saved myth; strategies. Related DDC topics 6.1.11.3, 6.1.11.4. -->
+
+<p>Three of the twelve sections on Delaware's aggressive driving list are about speed and space: the basic speed rule (§4168), the speed limits (§4169), and following too closely (§4123). That is no accident. When you look at how aggressive driving actually happens, speed and closeness are usually where it starts. A driver who is frustrated or in a hurry speeds up, closes in on the car ahead, and then starts looking for gaps. This module treats speeding and tailgating not just as rule-breaking but as behaviors that often carry a message: "Move," "Hurry up," "I'm more important." You will review what Delaware law says, work through the physics of why speed and short following distances are so unforgiving, test the belief that speeding saves meaningful time, and build specific strategies for managing your speed and space.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain why speeding and tailgating can be forms of aggression, not just violations.</li>
+<li>Describe Delaware's basic speed rule, statutory speed limits, speeding fines, point values and serious-speeding consequences.</li>
+<li>Calculate how far a vehicle travels during perception-reaction time and explain how speed affects braking distance and crash energy.</li>
+<li>Apply a time-based following distance and explain why tailgating leaves no room to stop.</li>
+<li>Calculate the actual time saved by speeding on a typical trip and evaluate whether it is worth the risk.</li>
+<li>Choose specific "if-then" strategies to manage your speed and following distance.</li>
+</ul></div>
+
+<h3>When Speed and Closeness Become Aggression</h3>
+<p>Not every speeding driver is angry. Some are distracted, some misjudge their speed, and some simply drift up with the flow of traffic. But speed and closeness are also the main ways drivers express frustration with a vehicle. Think about what happens when a driver is annoyed by a slower car. They close the gap. They hover a few feet off the bumper. They swing out, accelerate hard past the "offender," and cut back in. Every one of those moves uses speed and space as a weapon of pressure.</p>
+<p>Tailgating in particular is almost always a form of communication. A driver who follows one car-length behind on a highway is not doing it because it is comfortable. They are doing it to push, to keep someone from merging, or to show displeasure. The problem is that the message is delivered by putting two vehicles and everyone in them inside a space where no human can react in time. Researchers who study high-anger drivers, whose work you will see in Module B5, have found that angrier drivers are more likely to speed well over the limit and to tailgate. These behaviors are where anger shows up first in how a person drives.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think of the last time you followed another vehicle more closely than you know is safe. What were you feeling? What did you want the other driver to do?</label><textarea></textarea></div>
+
+<h3>What Delaware Law Says About Speed</h3>
+<h4>The basic rule and the limits</h4>
+<p>Delaware's speed law has two layers. The first is the basic speed rule in §4168(a): "No person shall drive a vehicle on a highway at a speed greater than is reasonable and prudent under the conditions." The second layer is the set of numeric limits in §4169(a). Unless signs post a different limit, the statutory limits are:</p>
+<table>
+<tr><th>Type of road or area</th><th>Statutory limit</th></tr>
+<tr><td>Business district</td><td>25 mph</td></tr>
+<tr><td>Residence district</td><td>20 or 25 mph (the road owner decides)</td></tr>
+<tr><td>School zone, where posted with times or conditions</td><td>20 mph</td></tr>
+<tr><td>Two-lane roadways</td><td>50 mph</td></tr>
+<tr><td>Four-lane and divided roadways</td><td>55 mph</td></tr>
+</table>
+<p>The statute itself sets 65 mph only for SR 1 between Red Lion Creek and the Appoquinimink River (§4169(d)). Delaware also has a minimum speed rule: you may not drive "at such a slow speed as to impede the normal and reasonable movement of traffic" (§4171(a)). That rule does not give faster drivers permission to punish slower ones. It simply means both extremes can be a problem.</p>
+
+<h4>Fines</h4>
+<p>Under §4169(c), a speeding fine starts with a base amount of $20 for a first offense or $25 for a subsequent offense within 24 months. On top of that, Delaware adds an amount for each mile per hour over the limit, and the rate rises with your speed:</p>
+<table>
+<tr><th>Miles per hour over the limit</th><th>First offense, per mph</th><th>Subsequent offense within 24 months, per mph</th></tr>
+<tr><td>More than 5 but under 16</td><td>$1</td><td>$2</td></tr>
+<tr><td>More than 15 but under 20</td><td>$2</td><td>$3</td></tr>
+<tr><td>More than 19</td><td>$3</td><td>$4</td></tr>
+</table>
+<p>In a highway construction or maintenance area marked by traffic-control devices, fines for speed violations under §4168 and §4169, and for many other listed offenses including stop-sign violations and reckless driving, are "not less than double" the normal amount for a first offense (§4105(f)(1)). The work zone runs from the first warning device to the last device showing restrictions are removed, and missing or improper signs are no defense. Delaware also uses electronic speed enforcement in work zones, handled by Delaware State Police; a violation requires going 11 or more mph over the limit (§4170A).</p>
+
+<h4>Points and serious-speeding consequences</h4>
+<p>Under Reg 2208, speeding 1–9 mph over carries 2 points, 10–14 over carries 4, 15–19 over carries 5, and 20 or more over carries 5 points with possible further action. The DMV also takes direct action on very high speeds:</p>
+<table>
+<tr><th>Speed over the limit</th><th>DMV action</th></tr>
+<tr><td>20–24 mph over</td><td>Advisory letter</td></tr>
+<tr><td>25–29 mph over</td><td>1-month suspension; the driver may take a course instead</td></tr>
+<tr><td>30+ mph over</td><td>Mandatory suspension: 1 month, plus 1 month for each additional 5 mph over 25</td></tr>
+<tr><td>50+ mph over, or 100 mph on a highway</td><td>1-year suspension</td></tr>
+</table>
+<p>And at a certain point, speed stops being "just speeding." Under §4175, driving 90 mph or more is reckless driving in Delaware, regardless of the posted limit. Reckless driving carries 6 points and, for a first offense, a fine of $100 to $300, 10 to 30 days in jail, or both.</p>
+
+<div class="warning"><strong>Delaware Law:</strong> Speed alone can bring a criminal charge. Driving 90 mph or more is reckless driving under §4175, and driving 30 or more mph over the limit brings a mandatory suspension from the DMV. In a marked work zone, fines are at least doubled.</div>
+
+<h3>The Physics of Speed</h3>
+<p>Traffic laws can be argued about. Physics cannot. Three facts explain most of why speed is so dangerous.</p>
+
+<h4>Fact 1: You cover a lot of ground before you even touch the brake</h4>
+<p>It takes a typical alert driver about 1.5 seconds to see a hazard, recognize it, decide to brake, and move a foot to the pedal. This is called perception-reaction time. During that time the car keeps moving at full speed. To convert miles per hour to feet per second, multiply by about 1.47. At 60 mph, you are traveling about 88 feet every second.</p>
+<table>
+<tr><th>Speed</th><th>Feet per second (approx.)</th><th>Distance traveled in 1.5 seconds of reaction time</th></tr>
+<tr><td>25 mph</td><td>37</td><td>About 55 feet</td></tr>
+<tr><td>35 mph</td><td>51</td><td>About 77 feet</td></tr>
+<tr><td>45 mph</td><td>66</td><td>About 99 feet</td></tr>
+<tr><td>55 mph</td><td>81</td><td>About 121 feet</td></tr>
+<tr><td>65 mph</td><td>95</td><td>About 143 feet</td></tr>
+<tr><td>75 mph</td><td>110</td><td>About 165 feet</td></tr>
+</table>
+<p>At 75 mph, you travel more than half a football field before your foot even reaches the brake. And 1.5 seconds assumes you are alert and looking ahead. If you are angry, distracted, fatigued or focused on the car you are trying to pass, your reaction time is likely to be longer.</p>
+
+<h4>Fact 2: Braking distance grows with the square of speed</h4>
+<p>Once the brakes are applied, the distance needed to stop does not grow evenly with speed. It grows with the square of speed. Double your speed and your braking distance roughly quadruples. That means small increases in speed have outsized effects.</p>
+<p><em>Worked example:</em> How much longer is your braking distance at 65 mph than at 55 mph? Divide the speeds and square the result: 65 ÷ 55 = 1.18, and 1.18 × 1.18 ≈ 1.40. Your braking distance is about 40% longer at 65 than at 55, even though your speed is only about 18% higher. Add the extra reaction distance (about 143 feet instead of 121) and the total stopping distance grows substantially.</p>
+
+<h4>Fact 3: Crash energy grows with the square of speed</h4>
+<p>The energy a vehicle carries into a crash also rises with the square of speed. Compare 50 mph to 40 mph: 50 ÷ 40 = 1.25, and 1.25 × 1.25 ≈ 1.56. A crash at 50 involves about 56% more energy than one at 40. That energy has to go somewhere: into the vehicles, the guardrail, and the bodies of the people involved. It is why a crash that might have meant bruises at a lower speed can mean life-changing injuries at a higher one, and why the 2024 IIHS figures for Delaware show 31 speed-related deaths, 25% of all traffic deaths that year.</p>
+
+<div class="highlight"><strong>Key Fact:</strong> A modest jump in speed, such as from 55 to 65 mph, adds about 22 feet of reaction distance and about 40% more braking distance, and the crash energy rises by the same proportion. Speed does not just raise the chance of a crash; it raises the harm of every crash.</div>
+
+<div class="scenario"><h4>Scenario: The Yellow Light on Route 40</h4><p>A driver we'll call Sam is going 55 mph in a 45 mph zone on Route 40, trying to make up time. A light ahead turns yellow. At 45 he would have stopped easily. At 55, he decides he is too close to stop and pushes through as the light turns red, just as a car begins turning left from the opposite direction.</p><details><summary>What should happen here?</summary><p>Sam's speed shaped the whole decision. At 55 mph he travels about 81 feet per second instead of about 66, so the "point of no return" before the intersection arrives sooner and the braking distance is longer. By going 10 over, he turned a routine stop into a choice between braking hard and running a red light. The better choice happened earlier: driving at the limit, so that a yellow light is just a yellow light. If Sam had entered on red, he would have added a red-light violation (3 points) to his speeding ticket, and two listed §4175A offenses in a row. The turning driver, meanwhile, had no way to predict that Sam would come through.</p></details></div>
+
+<h3>Following Distance: Space Is Time</h3>
+<p>Section 4123 says you must not follow "more closely than is reasonable and prudent." The statute does not set a seconds rule for cars, but the physics above tell you what "reasonable and prudent" has to mean. If the car ahead brakes hard, you need enough space to cover your reaction time and then brake yourself.</p>
+<h4>The time-gap method</h4>
+<p>A widely taught defensive driving guideline is to keep at least 3 to 4 seconds of following distance in good conditions, and more in rain, fog, darkness, snow, or when following a large truck or motorcycle. To measure it:</p>
+<ol>
+<li>Pick a fixed object ahead, such as a sign or an overpass.</li>
+<li>When the rear of the vehicle ahead passes it, start counting: "one-thousand-one, one-thousand-two, one-thousand-three…"</li>
+<li>If your front bumper reaches the object before you finish counting to at least three, you are too close. Ease off.</li>
+</ol>
+<p>The time method works at any speed, because as speed rises, the distance covered in each second grows automatically. At 60 mph, a 3-second gap is about 264 feet; a 4-second gap is about 352 feet.</p>
+
+<h4>What tailgating really means</h4>
+<p>Now compare a typical tailgater. At 60 mph, a driver following one second behind is only about 88 feet back. Reaction time alone, about 1.5 seconds, uses up about 132 feet. That means if the car ahead stops suddenly, the tailgater will still be traveling at full speed when they reach the spot where the lead car began to brake. Even if both cars brake equally well, the tailgater has no room left to absorb their own reaction time. At that gap, a rear-end crash is not bad luck; it is arithmetic.</p>
+<p>Delaware also sets a hard number for one group: trucks and vehicles towing others outside business or residence districts must keep at least 300 feet behind another vehicle (§4123(b)). That rule exists because heavy vehicles need much more distance to stop.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "I have fast reflexes, so I can follow closer than other people."</p><p><strong>Fact:</strong> Even excellent reflexes do not shrink reaction time to zero, and they cannot change your car's braking distance or the road surface. At highway speed, a one-second gap is shorter than the distance you travel during a typical reaction. Fast reflexes help only if you leave room for them to work.</p></div>
+
+<h3>When You Are the One Being Tailgated</h3>
+<p>Sooner or later, you will be on the other end: someone fills your rear-view mirror. How you respond can either end the situation or escalate it.</p>
+<h4>Do</h4>
+<ul>
+<li>Check your own speed. If you are below the limit in the left lane, the simplest answer is to move right when it is safe and let the driver pass.</li>
+<li>Increase the gap <em>in front</em> of you. If the tailgater forces you to stop suddenly, extra space ahead lets you brake more gently, which gives them more time to react.</li>
+<li>Signal early and brake gradually for turns so the driver behind has warning.</li>
+<li>Remind yourself that the other driver's behavior is about their pressure, not about you.</li>
+</ul>
+<h4>Do not</h4>
+<ul>
+<li>Brake-check, meaning tapping or slamming the brakes to "teach them a lesson." That is driving to punish, rung 4 on the escalation ladder, and it invites exactly the crash you fear.</li>
+<li>Speed up to "get away." You become the speeder, and the tailgater often follows.</li>
+<li>Make eye contact in the mirror, gesture, or slow down deliberately in front of them.</li>
+</ul>
+<p>If a tailgater becomes threatening, follows you after you move over, or tries to force you off the road, that is no longer ordinary aggressive driving. Module B8 explains what to do, including heading to a safe public place and calling 911 when it is safe to do so.</p>
+
+<div class="scenario"><h4>Scenario: The Left Lane on I-495</h4><p>A driver we'll call Tasha is driving at the posted limit in the left lane of I-495 when an SUV closes to within a car-length behind her and flashes its lights. Tasha feels her face get hot. Her first impulse is to tap her brakes, and her second is to slow down and "make him wait."</p><details><summary>What should happen here?</summary><p>Tasha's anger is understandable; the SUV driver is following too closely and creating danger. But both of her impulses would make the danger worse. A brake tap at a one-car-length gap could cause the very crash she is upset about. Slowing down to make him wait turns her into an aggressive driver, too. The safest response is to signal, move right when it is safe, and let the SUV go. If the driver passes and keeps driving aggressively, Tasha can widen her following distance and stay away from that vehicle. Letting him go costs her a few seconds and ends the conflict.</p></details></div>
+
+<h3>The Time-Saved Myth</h3>
+<p>Most people speed because they believe it gets them there meaningfully faster. Let us test that belief with arithmetic. Time equals distance divided by speed. To convert to minutes, multiply by 60.</p>
+
+<h4>Example 1: A 10-mile stretch</h4>
+<p>At 60 mph, 10 miles takes 10 minutes. At 70 mph, it takes 10 ÷ 70 × 60 ≈ 8.57 minutes. The time saved is about 1.43 minutes, or roughly <strong>1 minute 26 seconds</strong>.</p>
+
+<h4>Example 2: A 12-mile commute</h4>
+<p>At 55 mph, 12 miles takes about 13.1 minutes. At 65 mph, it takes about 11.1 minutes. The savings: about <strong>2 minutes</strong>.</p>
+
+<h4>Example 3: A 30-mile highway drive</h4>
+<p>At 55 mph, 30 miles takes about 32.7 minutes. At 65 mph, about 27.7 minutes. The savings: about <strong>5 minutes</strong>, and that is only if you could hold 65 the whole way, with no traffic, no lights, no slower vehicles and no merges.</p>
+
+<p>In real driving, the savings are usually smaller than these ideal numbers. Traffic signals, congestion, turns and slower vehicles bring everyone back together. The speeder often meets the "slow" driver again at the next light. Meanwhile, the costs of speeding are real: higher crash risk, more severe crashes, fines that rise with every mile per hour, points that can add up to a suspension, and, if speed is combined with tailgating or weaving, an aggressive driving conviction.</p>
+
+<div class="highlight"><strong>The Trade:</strong> On a 12-mile commute, driving 10 mph faster saves about 2 minutes in ideal conditions. In exchange, you accept longer stopping distances, higher crash energy, and the legal risk of fines, points and suspension. Leaving 5 minutes earlier achieves more, with none of the risk.</div>
+
+<div class="scenario"><h4>Scenario: The Late Pickup</h4><p>A driver we'll call Devon is supposed to pick up his daughter from practice at 6:00. At 5:48 he is still 12 miles away on a four-lane divided road posted at 55. He decides that if he drives 70 he can make it, and he starts weaving around slower cars to keep his speed up.</p><details><summary>What should happen here?</summary><p>Run the numbers. At 55 mph, 12 miles takes about 13 minutes. At 70 mph, it takes about 10.3 minutes, so even in perfect conditions Devon saves under three minutes and still arrives late. To hold 70, he is speeding 15 over (5 points, and a higher per-mph fine), weaving across lanes and likely following too closely as he squeezes into gaps: a pattern that can meet the §4175A definition. The better choice takes ten seconds before he pulls out: a text or call to his daughter or the coach saying he will be a few minutes late, made while parked. The real problem was the departure time, not the speed limit, and the fix belongs in his planning, not his right foot.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Calculate the time saved on your own most common trip. Divide the distance by the speed limit and by the speed you usually drive, then multiply each by 60. What is the difference in minutes? Is that number what you expected?</label><textarea></textarea></div>
+
+<h3>Why We Keep Speeding Anyway</h3>
+<p>If the time saved is so small, why do so many drivers speed? Several patterns of thinking keep the habit going.</p>
+<ul>
+<li><strong>Time pressure.</strong> When you are late, the clock feels like an emergency. Speeding feels like doing something about it, even when it barely helps. Time pressure is one of the common triggers for aggressive driving identified by the Monash University Reducing Aggressive Driving (RAD) program.</li>
+<li><strong>Optimism bias.</strong> Most drivers rate themselves as above average, which leads them to believe crashes happen to other, less skilled people.</li>
+<li><strong>Time discounting.</strong> People give more weight to an immediate, certain reward (getting there a bit sooner) than to a larger but uncertain future cost (a crash or a suspension).</li>
+<li><strong>Getting used to speed.</strong> After a stretch of highway driving, lower speeds feel slower than they really are, so drivers leaving a highway often carry too much speed into towns and neighborhoods.</li>
+<li><strong>Getting away with it.</strong> Each trip without a ticket or crash teaches the brain that the risk is small. But the risk was always there; it just did not happen that time.</li>
+</ul>
+
+<div class="myth"><p><strong>Myth:</strong> "Everyone else is going this fast, so it's safe."</p><p><strong>Fact:</strong> The flow of traffic does not change the physics of stopping or the law. Delaware's basic speed rule is about what is reasonable and prudent under the conditions, and a group of cars traveling too fast and too close together just means more vehicles share the same lack of margin when something goes wrong.</p></div>
+
+<h3>Strategies to Manage Speed and Space</h3>
+<p>Knowing the facts is a start, but habits change when you decide in advance exactly what you will do. Psychologists call these <em>implementation intentions</em>: specific "if-then" plans that link a situation to a response. Here are examples you can adopt or adapt.</p>
+<ul>
+<li><strong>If</strong> I am running late, <strong>then</strong> I will call or text ahead before I start the car (never while driving), and drive at the limit.</li>
+<li><strong>If</strong> I notice I am closer than three seconds to the car ahead, <strong>then</strong> I will ease off the accelerator until I can count to three.</li>
+<li><strong>If</strong> a slower car is in front of me on a two-lane road, <strong>then</strong> I will stay back and wait for a legal, clearly visible passing opportunity, or accept the slower speed.</li>
+<li><strong>If</strong> I leave a highway, <strong>then</strong> I will check my speedometer within the first minute.</li>
+<li><strong>If</strong> I see orange signs or cones, <strong>then</strong> I will slow to the posted work-zone limit and remember that fines there are at least doubled.</li>
+<li><strong>If</strong> someone tailgates me, <strong>then</strong> I will move right when safe and let them go.</li>
+</ul>
+<p>Practical tools help too. Use cruise control on open highways to stop speed from creeping up. Set your phone's navigation before you leave so you are not making last-second lane changes. Build a time buffer into every trip; Module B13 covers trip planning in depth.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Write two "if-then" plans of your own, one for speed and one for following distance, based on the situations where you are most likely to slip.</label><textarea></textarea></div>
+
+<div class="scenario"><h4>Scenario: The Work Zone on a Summer Evening</h4><p>A driver we'll call Gloria is heading home on a four-lane divided road where a work zone has narrowed traffic to one lane. The car in front of her slows to the reduced work-zone limit. Gloria is tired and wants to get home. She closes to a few feet behind it.</p><details><summary>What should happen here?</summary><p>Gloria is following too closely (§4123). In a marked work zone, Delaware at least doubles the fines for many offenses, including speeding (§4105(f)), and if she speeds she may also be caught by a work-zone speed camera at 11 or more mph over (§4170A). More importantly, work zones are where sudden stops are most likely, because equipment, workers and lane shifts can appear with little warning. The better choice is to drop back to at least three or four seconds and accept the slower pace for the length of the zone. If she is fatigued, that is a reason to leave more space, not less.</p></details></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Perception-reaction time</dt><dd>The time it takes to see a hazard, recognize it, decide what to do and begin to act; about 1.5 seconds for a typical alert driver.</dd>
+<dt>Braking distance</dt><dd>The distance a vehicle travels after the brakes are applied; it roughly quadruples when speed doubles.</dd>
+<dt>Stopping distance</dt><dd>Reaction distance plus braking distance.</dd>
+<dt>Time-gap method</dt><dd>Measuring following distance by counting the seconds between the vehicle ahead passing a fixed point and your vehicle reaching it.</dd>
+<dt>Brake-checking</dt><dd>Tapping or slamming the brakes to punish a following driver; an escalation that can cause a crash.</dd>
+<dt>Implementation intention</dt><dd>A specific "if-then" plan made in advance that links a situation to a chosen response.</dd>
+<dt>Time discounting</dt><dd>The tendency to value an immediate reward more than a larger, uncertain future cost.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Speeding and tailgating are often ways of pressuring or punishing other drivers, and three of the twelve §4175A sections cover them: §4168, §4169 and §4123.</li>
+<li>Delaware's basic speed rule requires a speed that is reasonable and prudent for conditions; statutory limits include 25 in business districts, 50 on two-lane roads and 55 on four-lane and divided roads.</li>
+<li>Speeding fines rise per mile per hour over the limit, fines in marked work zones are at least doubled, and 90 mph or more is reckless driving.</li>
+<li>Driving 25–29 over brings a 1-month suspension (or a course), 30+ over brings a mandatory suspension, and 50+ over or 100 mph on a highway brings a 1-year suspension.</li>
+<li>At 60 mph you travel about 88 feet per second; a 1.5-second reaction covers about 132 feet before braking begins.</li>
+<li>Braking distance and crash energy grow with the square of speed: 50 mph carries about 56% more energy than 40 mph.</li>
+<li>A 3- to 4-second following distance in good conditions, and more in bad conditions, gives you room to react; a one-second gap does not.</li>
+<li>Speeding usually saves only a minute or two on typical trips. Leaving earlier is safer and more effective.</li>
+<li>"If-then" plans turn good intentions into automatic responses.</li>
+</ul>
+
+<p>When the timer reaches 00:00, return to the course and continue to Module B4, where you will look at lane weaving, red lights and stop signs, failing to yield, and improper passing, and at the people these maneuvers put at risk.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 3 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 4.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m3-remaining', DONE='de-bmc-m3-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 3. Return to your course and continue to Module 4.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

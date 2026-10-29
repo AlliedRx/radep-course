@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 14: Courtesy, Empathy and Sharing the Road | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 14 of 16 &middot; 30 minutes</span>Module 14: Courtesy, Empathy and Sharing the Road</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course, 21 Del.C. §4175A(d); 2 DE Admin. Code 1202) | Module B14: Courtesy, Empathy and Sharing the Road | Principles: perspective-taking, cooperation and reciprocity, reducing hostile attribution; related DDC content 6.1.5, 6.1.6.2, 6.1.7 -->
+<p>So far in the second half of this course you have learned to rethink situations, calm your body and plan ahead. This module turns outward, toward the other people on the road. Aggressive driving usually rests on an unspoken belief: the road is a competition, and other drivers are opponents. Courtesy and empathy replace that belief with a more accurate one. The road is a shared space where everyone, drivers, cyclists, pedestrians, motorcyclists, workers and emergency responders, is trying to get somewhere safely, and where cooperation makes that easier for everyone, including you. Courtesy is not about being a pushover. It is a practical safety skill that lowers conflict, reduces your own stress, and protects the people who would be hurt most in a crash.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain why courtesy and cooperation reduce conflict and crash risk, and how aggressive acts tend to provoke more aggression.</li>
+<li>Use perspective-taking to replace hostile assumptions about other road users with more accurate ones.</li>
+<li>Practice cooperative behaviors such as clear signaling, leaving gaps, letting others merge, and allowing faster traffic to pass.</li>
+<li>Use zipper merging courtesy where lanes narrow or end.</li>
+<li>Apply Delaware laws that protect vulnerable road users, including cyclists, pedestrians, people who are blind, motorcyclists, workers and emergency responders.</li>
+<li>Communicate courteously with other road users and repair a mistake with a simple apology gesture.</li>
+</ul></div>
+
+<h3>Why Courtesy Is a Safety Skill</h3>
+<p>Human beings respond to how they are treated. When someone treats us with respect, we tend to return it. When someone treats us with hostility, we tend to return that too. Psychologists call this pattern <em>reciprocity</em>, and it is especially powerful on the road, where drivers cannot talk to each other and must guess at intentions from behavior alone. A honk, a tailgate or a gesture is read as an attack, and the most common response to an attack is a counterattack. That is how a small mistake grows into a dangerous confrontation, the escalation pattern you studied in Module 8.</p>
+<p>Courtesy works in the opposite direction. A driver who leaves a gap, signals early, or waves "thank you" lowers the emotional temperature for everyone nearby. Even a driver who is already angry has less to push against. Courtesy also reduces your own arousal. When you decide in advance to be cooperative, you stop scanning the road for insults to defend against, and you stop treating every other car as a threat to your status.</p>
+<p>Finally, courtesy is closely tied to the law. The behaviors that make up aggressive driving under 21 Del.C. §4175A, such as following too closely, failing to signal, passing on the right, improper lane use, and failing to yield to oncoming traffic when turning left or to traffic already on the roadway, are almost all failures of cooperation. A driver who routinely yields, signals and leaves space is very unlikely to commit three of those violations in a row.</p>
+<div class="highlight"><strong>Key Idea:</strong> Courtesy is not weakness and it is not a favor to the other driver. It is a choice that keeps conflict small, keeps your own stress low, and keeps you on the right side of Delaware's aggressive driving law.</div>
+
+<h3>Perspective-Taking: Seeing the Road Through Their Windshield</h3>
+<p>In Module 6 you learned about <em>hostile attribution bias</em>: the tendency to assume another person's bad behavior is deliberate and aimed at you. Perspective-taking is the antidote. It means deliberately imagining the situation from the other person's point of view. It does not mean excusing dangerous driving. It means getting a more accurate picture of what is probably happening.</p>
+<p>A related idea from psychology is that we judge ourselves and others by different rules. When we make a driving mistake, we explain it by the situation: "I didn't see him," "The sign was hidden," "I was distracted by my kid." When someone else makes the same mistake, we explain it by their character: "He's a jerk," "She's reckless." Most drivers also rate themselves as better than average, an <em>optimism bias</em> that makes it easy to forget how often we make mistakes too. Perspective-taking corrects both errors.</p>
+<p>Try asking these questions when another road user frustrates you:</p>
+<ul>
+<li>What might they be dealing with right now? A sick child in the back seat, a new job, a medical emergency, a funeral, unfamiliar roads?</li>
+<li>Can they see what I see? Their view may be blocked by a truck, glare, a pillar, or my own car sitting in their blind spot.</li>
+<li>Have I ever done this? Almost everyone has missed an exit, drifted in a lane, or pulled out too close to another car.</li>
+<li>If this were my parent, my teenager, or my friend driving that car, how would I want other drivers to respond?</li>
+</ul>
+<table>
+<tr><th>What you see</th><th>Hostile interpretation</th><th>Perspective-taking interpretation</th></tr>
+<tr><td>A car slows suddenly and turns without signaling</td><td>"They don't care about anyone else."</td><td>"They probably just spotted the street they were looking for."</td></tr>
+<tr><td>A driver goes slowly in the left lane</td><td>"They're blocking me on purpose."</td><td>"They may be nervous, new, or not watching their mirrors. I can wait for a safe chance to pass."</td></tr>
+<tr><td>A cyclist is riding in the travel lane</td><td>"They think they own the road."</td><td>"They may be avoiding debris, parked car doors, or a broken road edge."</td></tr>
+<tr><td>A pedestrian crosses slowly</td><td>"They're making me wait to prove a point."</td><td>"They may be elderly, injured, carrying something, or have limited vision."</td></tr>
+<tr><td>A driver honks at me</td><td>"They're attacking me."</td><td>"They may have seen a hazard I missed, or they're having a bad day. It is not about who I am."</td></tr>
+</table>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Describe a time you made a driving mistake that probably upset another driver. What was really going on for you at that moment? How would you have wanted the other driver to respond?</label><textarea></textarea></div>
+
+<h3>Cooperation in Everyday Traffic</h3>
+<p>Cooperation means making your intentions clear and making room for others. A handful of habits does most of the work.</p>
+<h4>Signal early and clearly</h4>
+<p>Delaware law requires a turn signal "continuously during not less than the last 300 feet" before turning (21 Del.C. §4155(b)). Signaling is the main way drivers communicate. A driver who changes lanes without signaling forces everyone around them to guess, and surprised drivers are irritated drivers. Signal before you start to move, not as you move. Failing to signal is one of the twelve offenses listed in the aggressive driving law.</p>
+<h4>Leave space and gaps</h4>
+<p>Keep a following distance of at least three to four seconds in good conditions and more in bad weather. A space cushion in front of you gives you time to react, makes it easier for others to merge, and prevents the tailgating that other drivers read as hostility. Delaware law does not set a number of seconds; it requires that you not follow "more closely than is reasonable and prudent" (§4123(a)).</p>
+<h4>Let faster traffic pass</h4>
+<p>If someone wants to go faster than you, your job is not to stop them. On multilane roads, it is good practice to keep right except when passing, and to move right when it is safe to let a faster driver by. Blocking a faster driver on purpose turns you into a participant in their aggression. Delaware law also says you should not drive so slowly that you "impede the normal and reasonable movement of traffic" (§4171(a)). At the same time, a slow driver ahead of you is not your problem to solve by tailgating. Passing on the right is allowed only when it is safe (§4117), and passing on the right is another of the offenses listed in §4175A.</p>
+<h4>Yield generously</h4>
+<p>Delaware's right-of-way rules tell you who must yield: a driver turning left yields to oncoming traffic (§4132), a driver entering from a driveway yields to traffic already on the roadway (§4133), and when two vehicles arrive at an intersection at about the same time, the driver on the left yields to the driver on the right (§4131(b)). Courtesy adds one more rule: the right of way is something you give, not something you take. If another driver makes a yielding mistake, you still have a duty to avoid a crash.</p>
+
+<div class="myth"><p><strong>Myth:</strong> If I let people merge in front of me, everyone will take advantage of me and I will never get anywhere.</p><p><strong>Fact:</strong> Letting one car in typically costs a few seconds. Fighting for position costs far more: stress, risk of a sideswipe, and possible conflict. In heavy traffic, cooperative merging helps everyone keep moving, including you.</p></div>
+
+<h3>Merging and Zipper Courtesy</h3>
+<p>Few situations produce more anger than a lane that ends. Some drivers merge early and then resent anyone who drives to the end of the closing lane. Others use the closing lane and resent drivers who refuse to let them in. Both groups feel the other side is cheating.</p>
+<p>The zipper merge is a cooperative pattern that removes most of this conflict. When traffic is heavy and slow, drivers use both lanes up to the merge point and then take turns, one from each lane, like the teeth of a zipper. When traffic is light and moving at speed, it usually works better for drivers to merge earlier, as soon as there is a safe gap. Either way, the key is taking turns.</p>
+<ul>
+<li><strong>If you are in the continuing lane:</strong> expect one car from the ending lane to enter in front of you. Leave a gap. Do not speed up to close it.</li>
+<li><strong>If you are in the ending lane:</strong> signal early, match the speed of the other lane, and merge into the gap in turn. Do not force your way in, cut across several cars, or drive on the shoulder.</li>
+<li><strong>Everyone:</strong> make eye contact when it helps, give a small wave, and keep it simple. Merging is not a contest of who blinks first.</li>
+</ul>
+<p>Work zones in Delaware often involve shifting or narrowing lanes. Remember that fines are at least doubled for many violations within a highway construction or maintenance area marked by traffic-control devices (21 Del.C. §4105(f)). Follow the signs and any flagger's directions, merge where the signs indicate, and keep extra space. The workers just beyond the cones have no protection except your attention.</p>
+
+<div class="scenario"><h4>Scenario: The Lane Closure</h4><p>Consider a driver we'll call Gina, heading north in stop-and-go traffic where a work zone closes the right lane. Gina merged left a mile back. A pickup truck now drives up the open right lane and signals to merge in front of her. Gina's first thought is, "He's cutting the line. I'm not letting him in." She starts to close the gap.</p><details><summary>What should happen here?</summary><p>Gina recognizes the trigger, feeling disrespected, and the hostile thought. She uses the three-second delay and reframes: in slow, heavy traffic, using both lanes and taking turns at the merge point is a reasonable pattern, and the pickup driver may be doing exactly that. Even if he is not, blocking him would create the very collision risk she wants to avoid, inside a work zone where penalties are higher. She leaves the gap and lets him in. The cost is one car length. She notices that the next driver in the ending lane waits for the car ahead of her to go, and traffic flows in turn. Gina's tension never rises above a 4.</p></details></div>
+
+<h3>Vulnerable Road Users: Cyclists</h3>
+<p>Some people on the road have little or no protection in a crash. They are often called vulnerable road users. Aggression toward them is especially dangerous, because what feels like a small act of intimidation from inside a car, passing closely, honking, revving, can be deadly to the person outside it. Delaware data show how much is at stake. According to IIHS figures compiled from federal fatality data, 28 pedestrians, 22 motorcyclists and 4 bicyclists were killed in Delaware crashes in 2024.</p>
+<p>Delaware law gives cyclists the same rights and duties as other drivers (21 Del.C. §4193). Cyclists generally ride in the right half of the roadway, with listed exceptions (§4196(a)), and may ride on sidewalks unless signs prohibit it, yielding to pedestrians (§4198B). When you pass a cyclist in a single lane, you must keep "a reasonable and prudent distance, which shall in any case never be less than 3 feet." Where there are two lanes in your direction, you must "move completely into the lane to the left before passing" (§4116).</p>
+<p>One Delaware rule often triggers driver frustration because many drivers do not know it. Under the "Delaware Yield" (§4196A), at a stop sign on a roadway with two or fewer lanes, a cyclist may slow, yield, and proceed without coming to a full stop. On roadways with three or more lanes, a full stop is required. A driver who sees a cyclist roll through a stop sign on a two-lane road and thinks, "They're breaking the law," may be wrong. Knowing the rule removes a false trigger.</p>
+<div class="warning"><strong>Delaware Law:</strong> Passing a cyclist in the same lane requires at least 3 feet of clearance; on roads with two lanes in your direction, move completely into the left lane to pass (21 Del.C. §4116). Honking, revving or passing closely to "teach a cyclist a lesson" is dangerous intimidation, not communication.</div>
+
+<div class="scenario"><h4>Scenario: The Cyclist on the Two-Lane Road</h4><p>Consider a driver we'll call Brian, driving on a narrow two-lane road near Lewes on a Saturday morning. A cyclist is riding near the middle of the lane, and oncoming traffic is steady. Brian has been behind the cyclist for about thirty seconds. He feels his grip tighten and wants to give a long blast of the horn.</p><details><summary>What should happen here?</summary><p>Brian takes a breath and asks the perspective-taking questions. The road edge may be broken or full of sand and debris, and riding farther right could be unsafe for the cyclist. A horn blast from close behind could startle the rider into a fall. Brian stays back at a safe distance and waits for a break in oncoming traffic and a legal place to pass, where the road is clearly visible and free of oncoming traffic for a sufficient distance (§4118). When it comes, he moves over and gives well more than the 3 feet the law requires. Thirty seconds of patience costs him almost nothing. A close pass could cost a life, and causing serious physical injury to a vulnerable road user while violating Delaware traffic law brings additional penalties under §4176E.</p></details></div>
+
+<h3>Vulnerable Road Users: Pedestrians and People Who Are Blind</h3>
+<p>At crosswalks without working signals, and when you are turning, Delaware law requires drivers to "yield the right-of-way, slowing down or stopping if need be to so yield" to pedestrians (21 Del.C. §4142(a)). Drivers must also use due care to avoid colliding with pedestrians, with special care around children (§4144). Pedestrians often move more slowly than drivers expect, and they may not cross the way you would. An older adult, a parent with a stroller, a person with a disability, or a child may need much more time.</p>
+<p>The Delaware White Cane Law (16 Del.C. Ch. 95) gives specific protection to people who are blind or partially blind. When a pedestrian is carrying a predominantly white or metallic cane or using a guide dog, the driver approaching "shall take all necessary precautions to avoid injury" (§9503). A driver who fails to do so is liable for damages, and the law sets a fine of $100 per violation (§9506). Never honk at, rush, or edge toward a person using a white cane or a guide dog. Stop, wait, and let them complete their crossing. Do not wave them across; they may not be able to see your signal.</p>
+<p>Impatience with pedestrians is a common hidden trigger. A driver waiting to turn right at a busy intersection may watch the light change while people keep crossing and feel trapped. Perspective-taking helps: the pedestrian has the right of way, is far more vulnerable than you, and is not crossing to annoy you. Your plan for this situation can be simple: "If pedestrians are crossing, then I wait, breathe, and turn only when the crosswalk is clear."</p>
+
+<h3>Motorcyclists, Workers and Emergency Responders</h3>
+<h4>Motorcyclists</h4>
+<p>Motorcycles are small and easy to miss, and their speed and distance are hard to judge. A rider can be hidden by a pillar, a mirror, or the car next to you. Give motorcycles a full lane, check your blind spots carefully before changing lanes, and increase your following distance behind a motorcycle, because a rider may slow down without the brake light coming on, such as by downshifting, and can sometimes stop in a shorter distance than a larger vehicle. Tailgating a motorcycle is intimidating to the rider and dangerous for both of you.</p>
+<h4>Roadside workers and emergency responders</h4>
+<p>Delaware's Move Over law (21 Del.C. §4134) protects people working at the roadside. When an emergency vehicle approaches with signals, you must immediately move to a position parallel to and as close as possible to the right-hand edge or curb. When you approach a stationary emergency vehicle, DOT vehicle, tow truck, utility vehicle or any vehicle showing warning signals such as hazard lights, flares or cones, you must change into a lane not next to it if it is safe and possible. If you cannot change lanes safely, you must slow down, and where the limit is 50 mph or more, slow to a safe speed at least 20 mph below the posted limit. Fines are up to $250 for a first offense, up to $500 for a second, and up to $1,000 after that. Striking an emergency responder and causing physical injury while violating this rule is a class F felony.</p>
+<h4>School buses</h4>
+<p>School buses are another situation where impatience can lead to tragedy. Under 21 Del.C. §4166, drivers approaching a stopped school bus with red lights flashing, from the front or the rear, must stop before passing it. On roadways with four or more lanes, drivers approaching from the front do not have to stop. Amber lights come on about 10 seconds before the red lights, so treat amber as a signal to prepare to stop, not to hurry past. Passing a stopped school bus carries 6 points under Reg 2208 and is one of the offenses listed in §4175A.</p>
+
+<div class="scenario"><h4>Scenario: The Tow Truck on the Shoulder</h4><p>Consider a driver we'll call Andre, traveling in the right lane of a four-lane divided highway where the limit is 55 mph. Ahead, a tow truck with flashing lights is loading a car on the shoulder. The left lane is full of traffic, and the driver beside him does not leave room. Andre is irritated because he is running late, and he is tempted to stay at speed and "just get by."</p><details><summary>What should happen here?</summary><p>Andre's lateness has nothing to do with the tow operator, who is standing a few feet from moving traffic. Because he cannot safely move left, the Move Over law requires him to slow down, and since the limit is 50 mph or more, to a safe speed at least 20 mph below the posted limit, so 35 mph or less. He signals his intent by easing off early so the driver behind him is not surprised, keeps a careful eye on his mirrors, and passes slowly with full attention. After passing, he brings his speed back up gradually. The delay is seconds. The courtesy may save a worker's life.</p></details></div>
+
+<h3>Courteous Communication and Repairing Mistakes</h3>
+<p>Drivers have very few ways to communicate: signals, lights, the horn, and hand gestures. Using them well prevents misunderstandings.</p>
+<ul>
+<li><strong>The horn</strong> is a warning device. Use a short tap to alert someone to a danger, such as a driver drifting into your lane. Long blasts, repeated honks, and honking out of frustration are read as aggression and tend to provoke it.</li>
+<li><strong>Headlights:</strong> flashing your high beams at someone ahead of you is usually read as hostility. Do not use your lights to pressure other drivers.</li>
+<li><strong>Hand gestures:</strong> the only hand gestures that help are friendly ones: a small "thank you" wave, or an open hand to signal "go ahead" to another driver (not to a pedestrian who may not see it or may be put at risk by traffic in another lane).</li>
+<li><strong>Eye contact:</strong> brief eye contact can help with merging and four-way stops. With a driver who is already angry, avoid staring or prolonged eye contact, which can be read as a challenge.</li>
+</ul>
+<h4>The apology gesture</h4>
+<p>Everyone makes mistakes. When you make one that affects another driver, such as pulling out too close, drifting, or missing a signal, a quick apology can stop the other driver's anger before it builds. Raise one hand with an open palm, or give a small wave and a nod, as if to say, "Sorry, my mistake." Keep both hands available for driving and make it brief. You are giving the other driver a non-hostile explanation for your behavior, the very thing hostile attribution bias leaves out. Many angry confrontations would never happen if the first driver had simply acknowledged the mistake.</p>
+<p>Accepting someone else's apology is equally important. When another driver waves an apology at you, let it end there. Nod or wave back. Choosing to stay angry after an apology turns you into the one keeping the conflict alive.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Write three courtesy commitments you will practice this week, for example: "I will let one driver merge in front of me on every trip," "I will wait patiently for pedestrians when turning," or "I will give cyclists far more than 3 feet." Then write one sentence about how you expect these choices to affect your own stress.</label><textarea></textarea></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Reciprocity</dt><dd>The tendency to return the kind of treatment we receive; courtesy invites courtesy and hostility invites hostility.</dd>
+<dt>Perspective-taking</dt><dd>Deliberately imagining a situation from another road user's point of view to get a more accurate interpretation of their behavior.</dd>
+<dt>Optimism bias</dt><dd>The tendency to rate ourselves as better than average, which makes us forget our own mistakes while judging others harshly.</dd>
+<dt>Zipper merge</dt><dd>A cooperative merging pattern in which drivers from two lanes take turns entering a single lane at the merge point.</dd>
+<dt>Vulnerable road user</dt><dd>A person with little protection in a crash, such as a pedestrian, cyclist, motorcyclist, roadside worker or emergency responder; Delaware's §4176E sets penalties for causing them serious physical injury while violating traffic law.</dd>
+<dt>Delaware Yield</dt><dd>Delaware's rule (§4196A) allowing cyclists at a stop sign on a roadway of two or fewer lanes to slow, yield and proceed without a full stop.</dd>
+<dt>White Cane Law</dt><dd>Delaware law (16 Del.C. Ch. 95) requiring drivers to take all necessary precautions to avoid injuring a pedestrian who is blind or partially blind and is using a white or metallic cane or a guide dog.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Courtesy is a safety skill: reciprocity means courtesy tends to lower conflict while hostility tends to provoke more hostility.</li>
+<li>Perspective-taking counters hostile attribution bias and optimism bias by reminding you what the other road user may be facing and that you make mistakes too.</li>
+<li>Signal at least 300 feet before turning (§4155), keep a generous following distance (§4123), let faster traffic pass, and yield generously.</li>
+<li>In heavy traffic, use zipper courtesy: take turns at the merge point and never speed up to block a merging driver. Work zone fines are at least doubled.</li>
+<li>Give cyclists at least 3 feet in the same lane, or change lanes completely where there are two lanes in your direction (§4116). Know the Delaware Yield rule for cyclists.</li>
+<li>Yield to pedestrians in crosswalks and when turning (§4142), and take all necessary precautions around people using a white cane or guide dog (White Cane Law, $100 fine).</li>
+<li>Give motorcycles a full lane and extra following distance; obey the Move Over law (§4134) and school bus law (§4166).</li>
+<li>Use the horn only as a warning, avoid flashing lights or hostile gestures, and use a simple apology gesture when you make a mistake. Accept others' apologies.</li>
+</ul>
+<p>When the timer for this module reaches 00:00, return to the course and continue to Module 15, Your Personal Change Plan and Relapse Prevention.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 14 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 15.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m14-remaining', DONE='de-bmc-m14-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 14. Return to your course and continue to Module 15.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

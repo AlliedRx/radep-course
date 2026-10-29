@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 2: What Aggressive Driving and Road Rage Really Are | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 2 of 16 &middot; 30 minutes</span>Module 2: What Aggressive Driving and Road Rage Really Are</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course under 21 Del.C. §4175A(d) and 2 DE Admin. Code 1202). Module B2: the twelve §4175A offenses (§§4107, 4108, 4117, 4122, 4123, 4132, 4133, 4155, 4164, 4166(d), 4168, 4169); "continuous conduct"; aggressive driving vs road rage (related DDC topic 6.1.10.3.1); escalation; Delaware crash data with compilation years (2023 State of Delaware, 2024 IIHS/FARS, 2025 DelDOT); AAA Foundation for Traffic Safety 1997 research. -->
+
+<p>In Module B1 you learned that Delaware defines aggressive driving as "continuous conduct which violates 3 or more of" twelve sections of the traffic code. That definition is short, but it hides a lot. Which twelve sections? What do they actually require? How does a handful of ordinary violations add up to a criminal offense? And where does road rage, the behavior most people picture when they hear "aggressive driving," fit in? This module answers those questions. You will walk through each of the twelve offenses, see how they combine in real driving, learn the difference between aggressive driving and road rage, look at the "escalation ladder" that turns irritation into danger, and review what research and recent Delaware crash data tell us about the cost of these behaviors.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Name the twelve traffic sections listed in 21 Del.C. §4175A and describe what each one requires.</li>
+<li>Explain how separate violations combine into "continuous conduct" that meets Delaware's aggressive driving definition.</li>
+<li>Distinguish aggressive driving from road rage.</li>
+<li>Describe the escalation ladder and identify points where a driver can step off it.</li>
+<li>Summarize the AAA Foundation for Traffic Safety's 1997 findings on violent aggressive driving.</li>
+<li>Cite recent Delaware crash statistics with the year they were compiled and explain how aggressive behaviors contribute to them.</li>
+</ul></div>
+
+<h3>The Twelve Offenses on Delaware's List</h3>
+<p>The twelve sections in §4175A are not random. Almost every one of them is about the same thing: who gets to use a piece of road, and when. Speed limits, following distance, lane rules, signals and right-of-way rules exist so that drivers can predict each other. Aggressive driving is, at its core, a driver deciding that those shared rules do not apply to them right now. To make the list easier to remember, we will group the twelve sections into six families.</p>
+
+<h4>Family 1: Speed (§4168 and §4169)</h4>
+<p>Section 4168(a) is Delaware's basic speed rule: "No person shall drive a vehicle on a highway at a speed greater than is reasonable and prudent under the conditions." This means you can violate the law while driving at or below the posted limit if rain, fog, traffic or darkness make that speed unsafe. Section 4169 sets the actual limits. Unless signs say otherwise, the statutory limits are 25 mph in a business district, 20 or 25 mph in a residence district (the road owner decides), 20 mph in a school zone where posted with times or conditions, 50 mph on two-lane roadways, and 55 mph on four-lane and divided roadways. Two speed offenses on one list tells you something: lawmakers saw speed as central to aggressive driving. Module B3 covers speed in depth.</p>
+
+<h4>Family 2: Space (§4123)</h4>
+<p>Section 4123(a) says a driver "shall not follow another vehicle more closely than is reasonable and prudent." The statute does not set a number of seconds or feet for ordinary cars; the test is what is reasonable and prudent given speed, traffic and road conditions. For trucks and vehicles towing others outside business or residence districts, §4123(b) does set a number: at least 300 feet. Tailgating is one of the most common aggressive behaviors because it is a way of "telling" the driver ahead to move. Module B3 explains why it is also one of the most dangerous.</p>
+
+<h4>Family 3: Lanes and passing (§4122 and §4117)</h4>
+<p>Section 4122 covers driving on roadways laned for traffic: staying within a lane and moving out of it only when it is safe. Section 4117 covers passing on the right, which Delaware allows only when it is safe to do so. Together these cover the classic weaving pattern, in which a driver darts from lane to lane, slips through gaps, and passes on whichever side opens up. Module B4 covers these maneuvers in detail.</p>
+
+<h4>Family 4: Signs, signals and markings (§4107, §4108, §4164 and §4155)</h4>
+<p>Section 4107 requires drivers to obey traffic-control devices: signs, signals and pavement markings. Section 4108 covers traffic-control signals such as red, yellow and green lights. Section 4164 covers stop and yield signs; at a stop sign you must stop at the marked stop line and then yield. Section 4155 covers turn signals; Delaware requires a signal "continuously during not less than the last 300 feet" before turning. Running a red light, rolling a stop sign, and cutting across lanes without signaling all fall in this family.</p>
+
+<h4>Family 5: Yielding (§4132 and §4133)</h4>
+<p>Section 4132 says a driver turning left must yield to oncoming traffic. Section 4133 says a driver entering the road from a driveway or other place that is not a roadway must yield to all traffic on the roadway. Aggressive drivers often "force" these situations: turning left in front of oncoming cars on the assumption they will brake, or pulling out of a shopping center into a gap that is not really there.</p>
+
+<h4>Family 6: School buses (§4166(d))</h4>
+<p>Section 4166(d)(1) states that "the driver of any vehicle approaching the school bus from the front or from the rear shall stop before passing the bus." On roadways with four or more lanes, drivers approaching from the front do not have to stop. Amber lamps come on about 10 seconds before the red lamps, and the red lamps are on only when the bus is stopped. Passing a stopped school bus is serious on its own: Reg 2208 assigns it 6 points, and §4166 provides a fine of $115 to $230, 30 to 60 days in jail, or both for a first offense, plus a license suspension of one month to one year.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which of the six families above describes the behavior you are most likely to fall into when you are in a hurry? Which describes what you do when you are annoyed at another driver? Are they the same?</label><textarea></textarea></div>
+
+<h3>How Separate Violations Become "Continuous Conduct"</h3>
+<p>The word "continuous" in §4175A matters. The statute is aimed at a connected pattern of driving, not at three unrelated tickets spread across a year. How a court applies that word in any specific case is a legal question, but the everyday picture is easy to understand: one stretch of driving in which a driver breaks rule after rule.</p>
+<p>Here is how quickly it can happen. Picture a driver on US 13 who is late for a shift. The posted limit is 55. The driver:</p>
+<ol>
+<li>Settles in at about 70 mph (§4169, speed limits).</li>
+<li>Closes to a car-length behind a slower car to pressure it (§4123, following too closely).</li>
+<li>Swings into the other lane without signaling (§4155, turn signals; §4122, lanes).</li>
+<li>Passes on the right when the left lane is blocked (§4117).</li>
+<li>Reaches a signal as it turns red and goes through anyway (§4108).</li>
+</ol>
+<p>In perhaps two minutes of driving, that is five or more of the twelve listed sections. None of those decisions felt dramatic to the driver. Each one felt like a small, reasonable way to save a few seconds. That is exactly why the law focuses on the pattern: the danger comes from the combination. A car going 15 mph over the limit, one car-length behind another vehicle, changing lanes without warning, has almost no margin for anyone else's mistake.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "Aggressive driving means getting into a fight with another driver."</p><p><strong>Fact:</strong> Under Delaware law, aggressive driving is a pattern of traffic violations. It does not require a confrontation, a gesture, or even another driver noticing you. A driver alone on the road, weaving and speeding to make up time, can meet the definition. A physical confrontation is a different and more serious category, which we call road rage.</p></div>
+
+<div class="scenario"><h4>Scenario: The Merge on SR 1</h4><p>A driver we'll call Keisha is heading south on SR 1 in heavy traffic. A car ahead keeps a large gap, and other drivers keep slipping into it. Frustrated, Keisha closes the gap to a few feet so no one else can merge, then moves into the shoulder side of her lane, accelerates past two cars on the right as the lane next to her clears, and cuts back in front of them without a signal.</p><details><summary>What should happen here?</summary><p>Count the listed offenses: following too closely (§4123), passing on the right when it was not clearly safe (§4117), improper lane use (§4122), and failing to signal (§4155). That is four in one continuous stretch, enough to meet the §4175A definition. Keisha also took away every cushion of safety around her car. The better choice would have been to accept the merging cars, keep a steady following distance, and stay in her lane. In heavy traffic, the time gained by these moves is usually measured in seconds, while the risk is a crash, a criminal charge, and 6 points.</p></details></div>
+
+<div class="scenario"><h4>Scenario: The Bus, the Left Turn and the Driveway</h4><p>A driver we'll call Andre is running late for work on a two-lane road outside Dover. Ahead, a school bus slows and its amber lamps come on. Andre speeds up and passes the bus just before its red lamps light. A minute later, he turns left across oncoming traffic, forcing an approaching car to brake, and then swings into a driveway that cuts through a parking lot to avoid a light.</p><details><summary>What should happen here?</summary><p>Andre has stacked several listed offenses in one continuous stretch. Speeding up to beat a school bus that is about to stop puts children at risk and, if the red lamps were on, violates §4166(d), which on a two-lane road requires drivers approaching from either direction to stop. Turning left in front of an oncoming car violates the left-turn yield rule in §4132. Cutting through a parking lot to dodge a light defeats the purpose of the signal and endangers people walking in the lot. Each of these decisions was meant to save a minute. Add the speeding, and the listed violations quickly reach the three that the aggressive driving definition requires. And had the red lamps come on a moment sooner, passing the bus alone would bring 6 points, a fine and a license suspension of one month to one year. When amber lamps come on, the right response is to slow down and prepare to stop.</p></details></div>
+
+<h3>Aggressive Driving Versus Road Rage</h3>
+<p>People often use "aggressive driving" and "road rage" as if they mean the same thing. They do not, and the difference matters both legally and personally.</p>
+
+<table>
+<tr><th></th><th>Aggressive driving</th><th>Road rage</th></tr>
+<tr><td>What it is</td><td>A pattern of traffic violations that puts others at risk</td><td>Deliberate behavior meant to intimidate, threaten or harm another person</td></tr>
+<tr><td>Typical behaviors</td><td>Speeding, tailgating, weaving, running lights and stop signs, failing to yield, passing on the right</td><td>Chasing or boxing in another vehicle, brake-checking to punish, using the vehicle as a weapon, getting out to confront, throwing objects, threats or assault</td></tr>
+<tr><td>Main driver</td><td>Often impatience, time pressure, habit or a sense of entitlement to the road</td><td>Anger aimed at a specific person, often after a perceived insult</td></tr>
+<tr><td>Delaware law</td><td>21 Del.C. §4175A (3 or more listed violations); 6 points; mandatory course</td><td>Depending on what happens, the conduct can lead to criminal charges under other laws in addition to traffic charges</td></tr>
+<tr><td>Who is the target?</td><td>No one in particular; everyone nearby is put at risk</td><td>A particular person or vehicle</td></tr>
+</table>
+
+<p>A simple way to remember the difference: aggressive driving is about <em>getting ahead</em>; road rage is about <em>getting even</em>. Aggressive driving treats other people as obstacles. Road rage treats them as enemies.</p>
+<p>The two are connected. A road rage incident can begin with ordinary aggressive driving by one or both drivers: a cut-off, a tailgate, a horn. The aggressive driving creates the spark. Then one driver takes it personally and decides to respond. That is the moment frustration becomes something much more dangerous.</p>
+
+<div class="highlight"><strong>Key Distinction:</strong> Aggressive driving puts everyone near you at risk. Road rage targets someone. Both are choices, and the step from the first to the second is usually a single thought: "They did that to me."</div>
+
+<h3>The Escalation Ladder</h3>
+<p>Road rage rarely appears out of nowhere. It usually climbs a ladder, one rung at a time, and each rung makes the next one easier. Knowing the rungs helps you recognize where you are and step off.</p>
+<ol>
+<li><strong>Irritation.</strong> Something happens that you do not like. A slow car, a late merge, a driver on a phone. You feel annoyed. This is normal and not yet dangerous.</li>
+<li><strong>Judgment.</strong> You decide what kind of person the other driver is: "careless," "selfish," "doing it on purpose." This is the most important rung, because it turns an event into a personal insult.</li>
+<li><strong>Signaling displeasure.</strong> You honk, flash your lights, throw up your hands, or mutter. You want the other driver to know you are upset.</li>
+<li><strong>Driving to punish.</strong> You tailgate, refuse to let them in, speed up to block them, or pass and cut in close. Your driving is now aimed at a person.</li>
+<li><strong>Confrontation.</strong> You chase, box in, brake-check, gesture or shout at close range, or follow the other driver after they turn off.</li>
+<li><strong>Violence.</strong> Someone gets out of a vehicle, an object is thrown, a vehicle is used to strike, or a weapon is shown. Lives change permanently at this rung.</li>
+</ol>
+<p>Two features of the ladder are worth remembering. First, the higher you climb, the harder it is to stop, because anger feeds on itself and the other driver may be climbing too. Second, the easiest place to step off is the bottom. At rung 1 or 2, a single changed thought ("Maybe they didn't see me") or a single action (backing off and letting them go) ends the whole sequence. Later modules give you specific tools for doing that.</p>
+
+<div class="scenario"><h4>Scenario: Two Drivers, One Ladder</h4><p>On a two-lane road in Sussex County, a driver we'll call Brian is following a pickup truck that is going 10 mph under the limit. Brian closes in and flashes his high beams. The truck's driver, whom we'll call Wade, taps his brakes hard. Brian swerves, passes over the center line on a straight stretch, then slows suddenly in front of the truck. Wade honks and follows Brian into a gas station parking lot.</p><details><summary>What should happen here?</summary><p>Both drivers climbed the ladder together. Brian started with tailgating and flashing lights (rung 3), Wade answered with a punishment brake tap (rung 4), Brian retaliated by cutting in and slowing (rung 4), and Wade's decision to follow him into a parking lot is the edge of rung 5. Either driver could have ended it at any point. Brian could have accepted a slower trip or waited for a safe, legal passing zone; a two-lane road requires that the way be clearly visible and free of oncoming traffic for a sufficient distance. Wade could have pulled over to let Brian go instead of brake-checking. Once the parking lot is involved, the safest move for either driver is to stay in the vehicle, avoid eye contact, and leave, calling 911 when it is safe if the other driver threatens them. Module B8 covers this in depth.</p></details></div>
+
+<h3>What Research Shows: The AAA Foundation Study</h3>
+<p>One of the best-known early studies of violent aggressive driving was published by the AAA Foundation for Traffic Safety in 1997. The study counted violent incidents connected to traffic disputes in the United States and found that from 1990 through 1996, there were at least 10,037 incidents of violent aggressive driving, resulting in 218 deaths and 12,610 injuries.</p>
+
+<div class="highlight"><strong>Research Finding (AAA Foundation for Traffic Safety, 1997):</strong> From 1990 to 1996, at least 10,037 incidents of violent aggressive driving were identified nationwide, resulting in 218 deaths and 12,610 injuries. This is historical national research, not current Delaware data, and the "at least" matters: it counts only incidents that were reported and found by researchers.</div>
+
+<p>What makes these numbers striking is not only their size. It is what they represent. A violent traffic dispute can start with something as ordinary as a lane change, a parking space or a slow driver, between strangers who would never have seen each other again if one of them had simply let the moment pass. The study is a reminder that the stakes of a traffic dispute are completely out of proportion to its cause. Nobody plans to risk their life, their freedom or someone else's life over a merge. But the escalation ladder can take a driver there within a minute.</p>
+
+<h3>Delaware Crash Data: The Cost on Our Roads</h3>
+<p>Delaware does not publish, in the sources we rely on, a single count of crashes caused by "aggressive driving." What the data do show is the toll of the behaviors on the §4175A list, especially speed, and the overall number of lives lost on Delaware roads in recent years. Each statistic below includes the year it was compiled.</p>
+
+<table>
+<tr><th>Year</th><th>Measure</th><th>Source</th></tr>
+<tr><td>2023</td><td>137 traffic fatalities in Delaware, down 16% from 164 in 2022</td><td>State of Delaware news release, January 12, 2024</td></tr>
+<tr><td>2024</td><td>126 deaths; speed-related deaths: 31, or 25% of the total</td><td>IIHS, compiled from NHTSA's Fatality Analysis Reporting System (FARS)</td></tr>
+<tr><td>2024</td><td>Pedestrians killed: 28; motorcyclists: 22; bicyclists: 4</td><td>IIHS, compiled from FARS</td></tr>
+<tr><td>2025</td><td>117 deaths, about 10% fewer than the state's 2024 count; 50 involved vehicles leaving the roadway; 21 were DUI-related</td><td>Delaware Department of Transportation (DelDOT)</td></tr>
+</table>
+
+<p>A note on reading these numbers: the 2024 totals from IIHS (126) and from DelDOT's state data (130) differ slightly because they come from different counting systems. Within this course, when we cite a 2024 breakdown such as speed-related deaths, we use the IIHS/FARS figures consistently.</p>
+<p>Look at the speed figure. In 2024, according to IIHS, one in four Delaware traffic deaths was speed-related. Speed is covered by two of the twelve sections on the aggressive driving list, and it multiplies the harm of every other mistake. Now look at the 2025 DelDOT figure for roadway departures: 50 of 117 deaths involved a vehicle leaving the road. Excess speed, sudden lane changes and over-correction are exactly the kinds of driving that make a vehicle leave its lane. The numbers have been falling, which is good news, but they still represent well over a hundred families each year whose lives were changed by a crash.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>The 2024 IIHS data show 31 speed-related deaths in Delaware. Think about the stretch of road you drive most often. Where on that route are you most tempted to speed, and who else is usually on the road there (pedestrians, cyclists, school buses, work crews)?</label><textarea></textarea></div>
+
+<h3>Why the Car Changes How We Act</h3>
+<p>Many people who drive aggressively are patient, polite people when they are standing in line at a store. Why does the car change things? Several features of driving make aggression more likely.</p>
+
+<h4>Obstruction and time pressure</h4>
+<p>Driving is goal-directed: you are trying to get somewhere. Anything that blocks that goal, a slow car, a red light, a merge, is felt as an obstacle. Researchers at Monash University's Accident Research Centre, who developed the Reducing Aggressive Driving (RAD) program, identified common triggers for driver aggression that include obstruction, feeling disrespected (being cut off or tailgated), time pressure, and displaced stress carried in from other parts of life. You will study these triggers in Module B6.</p>
+
+<h4>Anonymity</h4>
+<p>Inside a car, you are partly hidden. The other driver cannot see your face clearly, and you will probably never meet them. That sense of anonymity makes it easier to act in ways you never would face to face. It also makes it easier to imagine the other driver as a "car" rather than a person who might be a parent driving a sick child or an elderly neighbor who is unsure of the route.</p>
+
+<h4>Limited communication</h4>
+<p>Drivers cannot explain themselves to each other. If you change lanes too close to someone because you misjudged the gap, you cannot say, "Sorry, my mistake." All the other driver sees is the action, and people tend to explain other drivers' actions by assuming bad character rather than an honest error. Psychologists call this hostile attribution bias, and it is one of the most important ideas in this course. When you assume another driver meant to insult you, you have already climbed to rung 2 of the ladder.</p>
+
+<h4>The "release" myth</h4>
+<p>Many drivers believe that honking, yelling or tailgating "lets off steam," as if anger were pressure that has to escape. Research on anger suggests the opposite: venting tends to increase anger rather than release it, and replaying an incident in your mind (rumination) keeps it alive longer. Every horn blast and gesture is practice in being angry.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "If I don't let it out, I'll explode."</p><p><strong>Fact:</strong> Venting anger through honking, yelling or aggressive driving tends to make anger stronger, not weaker. Calming strategies that lower your body's arousal, along with reinterpreting what happened, are what actually reduce anger. You will practice those skills in Modules B11 and B12.</p></div>
+
+<div class="scenario"><h4>Scenario: The Driver on the Phone</h4><p>In a Newark shopping center, a driver we'll call Priya is waiting to turn left out of the lot. The car in front of her sits through a clear gap. Priya can see the driver looking down. She leans on her horn. When the car finally pulls out, Priya follows close behind, and when it slows to turn into a gas station, she swerves around it, honking again.</p><details><summary>What should happen here?</summary><p>Priya may be right that the other driver was distracted, and distraction is a real safety problem. But Priya's reaction made the situation more dangerous, not less. She moved from irritation (rung 1) to judgment and signaling (rungs 2 and 3) to driving to punish (rung 4) in a few seconds. Her horn did not make the other driver safer; it only raised the stress for both of them. A better path would have been to recognize the irritation, take a slow breath, and accept a short delay. If the distracted driver was truly a danger, Priya's best protection was to keep extra space, not less. And when entering the roadway herself, Priya still needed to yield to all traffic (§4133).</p></details></div>
+
+<h3>Self-Check: Test Your Understanding</h3>
+<p>Before you move on, answer these questions for yourself. If any of them feel unclear, scroll back to the matching section.</p>
+<ol>
+<li>Can a driver who never honks or gestures still be convicted of aggressive driving in Delaware? (Yes. The definition is about a pattern of listed violations.)</li>
+<li>Which two sections on the list are about speed? (§4168, the basic "reasonable and prudent" rule, and §4169, the speed limits.)</li>
+<li>What is the key difference between aggressive driving and road rage? (Aggressive driving endangers everyone nearby; road rage targets a specific person.)</li>
+<li>On the escalation ladder, which rung turns an event into a personal insult? (Rung 2, judgment.)</li>
+<li>Why should each Delaware statistic in a course like this include a year? (Because data change from year to year, and a number is only meaningful when you know when it was compiled.)</li>
+</ol>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Continuous conduct</dt><dd>The phrase §4175A uses for a connected pattern of driving in which three or more listed violations occur.</dd>
+<dt>Basic speed rule (§4168)</dt><dd>Delaware's rule that no one may drive faster than is reasonable and prudent under the conditions, regardless of the posted limit.</dd>
+<dt>Road rage</dt><dd>Deliberate behavior aimed at intimidating, threatening or harming another road user, such as chasing, boxing in, brake-checking to punish, or physical confrontation.</dd>
+<dt>Escalation ladder</dt><dd>The step-by-step climb from irritation to judgment, signaling, punishing, confrontation and violence.</dd>
+<dt>Hostile attribution bias</dt><dd>The tendency to assume another person's action was deliberate and meant to harm or insult you, rather than an honest mistake.</dd>
+<dt>Rumination</dt><dd>Replaying an upsetting event over and over in your mind, which keeps anger alive longer.</dd>
+<dt>FARS</dt><dd>NHTSA's Fatality Analysis Reporting System, the national data source behind the IIHS state fatality figures.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Delaware's aggressive driving law lists twelve sections: §4107 traffic-control devices, §4108 signals, §4117 passing on the right, §4122 lanes, §4123 following too closely, §4132 left-turn yield, §4133 entering a roadway, §4155 turn signals, §4164 stop and yield signs, §4166(d) school buses, §4168 speed restrictions and §4169 speed limits.</li>
+<li>Violating three or more of them in continuous conduct meets the definition, and it can happen in a couple of minutes of hurried driving.</li>
+<li>Aggressive driving is about getting ahead; road rage is about getting even. Both are choices.</li>
+<li>Road rage usually climbs a ladder: irritation, judgment, signaling, punishing, confrontation, violence. The easiest place to step off is the bottom.</li>
+<li>The AAA Foundation for Traffic Safety (1997) found at least 10,037 incidents of violent aggressive driving from 1990 to 1996, with 218 deaths and 12,610 injuries.</li>
+<li>In Delaware, 137 people died on the roads in 2023 (State of Delaware); in 2024, 31 deaths (25%) were speed-related (IIHS/FARS); in 2025, 117 people died and 50 deaths involved roadway departures (DelDOT).</li>
+<li>Obstruction, time pressure, anonymity and limited communication make driving a setting where aggression comes easily.</li>
+<li>Venting does not release anger; it tends to increase it.</li>
+</ul>
+
+<p>When the timer reaches 00:00, return to the course and continue to Module B3, where you will look at speed and following distance as forms of aggression and work through the physics of why they are so dangerous.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 2 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 3.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m2-remaining', DONE='de-bmc-m2-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 2. Return to your course and continue to Module 3.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

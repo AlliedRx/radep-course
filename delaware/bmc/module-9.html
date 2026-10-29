@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 9: Aggravating Factors | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 9 of 16 &middot; 30 minutes</span>Module 9: Aggravating Factors</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (21 Del.C. §4175A(d); Reg 1202 behavior modification/attitudinal driving) – aggravating factors: distraction (21 Del.C. §4176C; §4176), fatigue, alcohol and drugs (§4177, §4177A, §4177L, §2740, §4177J), physical discomfort, passengers; stacking of risk factors; Delaware statistics 2024 (IIHS/FARS) and 2025 (DelDOT) -->
+<p>Anger rarely acts alone. Most aggressive-driving incidents involve something else that made the driver more irritable, less patient or less able to think clearly. A driver who is exhausted, distracted, hungry, hurting or impaired by alcohol or drugs has a lower anger threshold and weaker self-control than the same driver on a good day. In this module you will look at these <strong>aggravating factors</strong>: conditions that do not cause aggressive driving by themselves, but make it more likely and more dangerous when it happens. You will also review the Delaware laws that apply to some of them, especially handheld devices and impaired driving. As you read, keep your trigger profile from Module 6 and your early-warning list from Module 7 in mind. You are adding one more layer to your self-knowledge: the conditions under which <em>you</em> are most at risk.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain how distraction, fatigue, alcohol, drugs and physical discomfort lower your anger threshold and weaken self-control.</li>
+<li>Summarize Delaware's handheld device law and inattentive driving law, including penalties.</li>
+<li>Summarize Delaware's impaired driving laws, including per se limits, the under-21 rule and implied consent.</li>
+<li>Describe how risk factors "stack" to create high-risk drives.</li>
+<li>Cite dated Delaware crash statistics related to impairment and speed.</li>
+<li>Add personal aggravating factors and countermeasures to your change plan.</li>
+</ul></div>
+
+<h3>What Makes a Factor "Aggravating"?</h3>
+<p>Think back to the cognitive-behavioral chain from Module 6: trigger, thought, emotion, action and consequence. Aggravating factors work on every link of that chain at once:</p>
+<ul>
+<li><strong>They create more triggers.</strong> A distracted driver misses a light change and gets honked at. A tired driver drifts and gets cut off by an annoyed driver in the next lane.</li>
+<li><strong>They push thoughts toward hostility.</strong> When you are tired or uncomfortable, it is easier to assume the worst about others.</li>
+<li><strong>They intensify emotion.</strong> Fatigue, hunger and pain all make irritation feel bigger.</li>
+<li><strong>They weaken the brakes on action.</strong> Alcohol, drugs and exhaustion reduce your ability to stop and think before you act.</li>
+<li><strong>They make consequences worse.</strong> Slower reactions and poorer judgment turn a risky move into a crash.</li>
+</ul>
+<p>In other words, an aggravating factor is like turning up the volume on everything you have learned about so far. A trigger you could normally handle becomes one you cannot.</p>
+
+<div class="highlight"><strong>Key Idea:</strong> You cannot always control the triggers you meet on the road, but you can usually control whether you get behind the wheel distracted, exhausted or impaired. Managing aggravating factors is one of the most practical ways to prevent aggressive driving.</div>
+
+<h3>Distraction: Missing Information, Gaining Frustration</h3>
+<p>Distraction is anything that takes your eyes off the road, your hands off the wheel or your mind off driving. Phones are the best-known example, but eating, adjusting navigation, reaching for objects, arguing with a passenger and daydreaming all count.</p>
+<h4>How distraction feeds aggression</h4>
+<p>Distraction and aggression are connected in ways many drivers do not notice:</p>
+<ul>
+<li><strong>Late reactions create conflict.</strong> A driver looking at a screen notices brake lights late, brakes hard, and feels angry at the car ahead for "stopping short."</li>
+<li><strong>Missed turns create time pressure.</strong> Missing an exit while distracted often leads to a rushed, risky recovery: a sudden lane change, a U-turn or speeding to make up time.</li>
+<li><strong>Distracted mistakes provoke others.</strong> Drifting, sitting through a green light or failing to signal can trigger anger in other drivers and start an encounter.</li>
+<li><strong>Divided attention leaves less room for self-control.</strong> When your mind is busy with a text or a stressful call, you have fewer mental resources available to notice your own warning signs.</li>
+</ul>
+<p>Stressful phone calls deserve special attention. A hands-free call is legal, but if the conversation is an argument with a family member or a tense discussion with your boss, you are combining distraction with displaced stress (Module 7). Many drivers find that the safest rule is: no difficult conversations while driving, hands-free or not.</p>
+<h4>Delaware's handheld device law</h4>
+<p>Under 21 Del.C. §4176C, you may not use an electronic communication device while your vehicle is in motion. "Using" includes holding the device to talk, text, browse or play games. Hands-free use is allowed. Exceptions include reporting emergencies or crimes, on-duty emergency responders and amateur radio operators.</p>
+<table>
+<tr><th>Offense</th><th>Penalty under §4176C</th></tr>
+<tr><td>First offense</td><td>$100 fine</td></tr>
+<tr><td>Subsequent offense within 2 years</td><td>$200 to $300 fine</td></tr>
+<tr><td>Motor vehicle points</td><td>None</td></tr>
+</table>
+<p>Drivers who hold a Graduated Driver License learner's permit face a stricter rule: under 21 Del.C. §2710(c)(8), they may not use any cell phone or texting device while driving, even hands-free.</p>
+<h4>Inattentive and careless driving</h4>
+<p>Delaware's §4176 covers careless driving, meaning driving in a "careless or imprudent manner," and inattentive driving, meaning failing to give full attention to driving or to keep a proper lookout. Fines are $25 to $75 for a first offense and $50 to $95 for a subsequent offense within 3 years. Distraction that leads to drifting, late braking or missed signals can bring an inattentive driving charge, separate from any handheld device violation.</p>
+
+<div class="scenario"><h4>Scenario: The Navigation Scramble</h4><p>Consider a driver we'll call Corey. He is driving to a job interview in an unfamiliar part of New Castle County, holding his phone to check the map. He realizes at the last second that his turn is coming up, cuts across two lanes without signaling, and nearly hits a car that honks at him. Corey's face goes hot and he yells, "Can't you see I'm trying to turn?"</p><details><summary>What should happen here?</summary><p>Corey's distraction created the whole incident. Holding the phone while the vehicle was moving violated §4176C. His last-second crossing of two lanes without a signal also involved improper lane use (§4122) and failure to signal (§4155), two of the sections listed in the aggressive driving statute. His angry reaction was a classic double standard: he blamed the other driver for his own mistake. A better plan: set the destination before leaving, mount the phone and use voice directions, and if he misses a turn, simply continue to the next safe place to turn around. A missed turn costs a few minutes; a crash on the way to an interview costs far more.</p></details></div>
+
+<h3>Fatigue: The Short-Fuse Factor</h3>
+<p>Most people know that being tired slows their reactions. Fewer realize how much fatigue affects mood. When you are short on sleep, your patience drops, small annoyances feel bigger, and you are more likely to interpret others' actions as hostile. In terms of the anger scale from Module 7, fatigue means you start the drive at a higher number and climb faster.</p>
+<h4>How fatigue raises risk</h4>
+<ul>
+<li><strong>Slower perception and reaction.</strong> A normal perception-reaction time of about 1.5 seconds gets longer when you are tired. At 55 mph, you travel roughly 80 feet every second, so each extra half-second means about 40 more feet before you even start to brake.</li>
+<li><strong>Lapses in attention.</strong> Tired drivers drift, miss signs and fail to notice brake lights, which creates sudden, stressful situations.</li>
+<li><strong>Microsleeps.</strong> A severely fatigued driver can fall asleep for a few seconds without realizing it, often with their eyes open.</li>
+<li><strong>Irritability.</strong> Fatigue lowers your ability to regulate emotions, so you are quicker to anger and slower to calm down.</li>
+<li><strong>Impatience to get there.</strong> Tired drivers often speed because they want the drive to be over.</li>
+</ul>
+<h4>Warning signs of driver fatigue</h4>
+<ul>
+<li>Frequent yawning or heavy eyelids</li>
+<li>Trouble remembering the last few miles</li>
+<li>Drifting from your lane or hitting a rumble strip</li>
+<li>Missing exits or signs</li>
+<li>Feeling restless, irritable or unusually impatient</li>
+</ul>
+<p>Common "fixes" such as opening the window or turning up the radio do not reverse fatigue. The only real cure is sleep. If you notice warning signs, stop in a safe place. A short nap and, for some people, caffeine can provide temporary help, but the safest choice is to avoid driving when you are seriously tired.</p>
+
+<h4>Shift work and long days</h4>
+<p>Drivers who work nights, rotating shifts or double shifts face special risk. The drive home after a night shift often happens when the body most wants to sleep, and many drivers underestimate how tired they are because they are used to it. If you work these hours, consider napping before the drive, sharing rides, or using public transit when possible. Plan your most demanding errands for times when you are rested, not for the end of a long shift.</p>
+
+<div class="scenario"><h4>Scenario: The Drive After the Night Shift</h4><p>Consider a driver we'll call Elena. She finishes a 12-hour overnight shift and starts her 30-minute drive home on a divided highway. She is yawning, her eyes feel heavy, and when a car ahead slows for a turn, she feels a surge of irritation and nearly honks. A few minutes later she realizes she does not remember the last exit.</p><details><summary>What should happen here?</summary><p>Elena is showing several warning signs of fatigue: yawning, heavy eyes, unusual irritability and a memory gap. Her flash of anger at a normal turn is a clue that fatigue is shortening her fuse. The safest choice is to stop at the next safe place, such as a well-lit rest area or parking lot, and nap before continuing, or to call someone for a ride. Opening the window or turning up the radio will not fix the problem. In the future, she could plan a short nap before leaving work or arrange a ride home after long shifts.</p></details></div>
+
+<div class="myth"><p><strong>Myth:</strong> "I'm not sleepy, just a little cranky. That doesn't affect my driving."</p><p><strong>Fact:</strong> Crankiness is often an early sign of fatigue. Even if you are not about to fall asleep, a tired brain has less patience and weaker emotional control, which makes aggressive reactions more likely.</p></div>
+
+<h3>Alcohol: Lowered Inhibitions, Raised Aggression</h3>
+<p>Alcohol is one of the most powerful aggravating factors there is. Even small amounts affect the parts of the brain responsible for judgment, self-control and weighing consequences. That is exactly the part of the brain you need to manage anger. Alcohol also slows reaction time, reduces coordination, narrows attention and makes people overconfident about their abilities.</p>
+<h4>How alcohol amplifies aggression</h4>
+<ul>
+<li><strong>Weaker inhibition.</strong> The "pause" that normally stops you from acting on an angry impulse is weakened.</li>
+<li><strong>Distorted perception.</strong> Ambiguous actions by others are more easily read as hostile.</li>
+<li><strong>Overconfidence.</strong> Risky moves, such as speeding, tailgating or squeezing into small gaps, feel more manageable than they are.</li>
+<li><strong>Poorer driving.</strong> Slower reactions and weaving create conflicts with other drivers, which can spark encounters.</li>
+</ul>
+<h4>The morning after</h4>
+<p>Alcohol leaves the body slowly, at a rate you cannot speed up. Coffee, a cold shower, food or fresh air may make you feel more awake, but they do not lower your blood alcohol concentration. A driver who drank heavily late at night can still be impaired the next morning. Combine that with the poor sleep and headache that often follow a night of drinking, and the morning commute becomes a high-risk drive for both impairment and irritability. If you drank heavily the night before, give yourself extra time, or find another way to get where you are going.</p>
+
+<div class="highlight"><strong>Remember:</strong> The only thing that lowers your blood alcohol concentration is time. Feeling sober and being sober are not the same.</div>
+
+<h4>Delaware's impaired driving law</h4>
+<p>Under 21 Del.C. §4177, it is illegal to drive under the influence. A driver is per se in violation with a blood alcohol concentration (BAC) of <strong>0.08 or more</strong>, or with an illicit or recreational drug in the blood within 4 hours of driving. Penalties increase with each offense:</p>
+<table>
+<tr><th>Offense</th><th>Penalty under §4177</th></tr>
+<tr><td>First offense</td><td>$500 to $1,500 fine, up to 12 months in jail, or both</td></tr>
+<tr><td>Second offense within 10 years</td><td>$750 to $2,500 fine and 60 days to 18 months in jail</td></tr>
+<tr><td>Third offense</td><td>Class G felony</td></tr>
+</table>
+<p>The court must also order an alcohol evaluation and rehabilitation program (§4177D). License revocation under §4177A is 12 months for a first offense, 18 months with a BAC of .15 to .20, and 24 months with a BAC of .20 or more or for refusing a test. Ignition interlock requirements also apply under §4177C.</p>
+<h4>Implied consent</h4>
+<p>Under 21 Del.C. §2740, anyone who drives or is in physical control of a vehicle in Delaware is deemed to have consented to breath, blood or urine testing. Refusing a test in a §4177 case brings a revocation of 1 year with no prior offenses, 18 months with one prior, and 24 months with two or more.</p>
+<h4>Drivers under 21</h4>
+<p>Delaware's zero-tolerance law, §4177L, applies to anyone under 21 who drives after drinking. A BAC of <strong>.02 or more</strong> is per se evidence that the person consumed alcohol. A first offense brings a 2-month revocation; a subsequent offense brings 6 to 12 months.</p>
+<h4>Drinking while driving</h4>
+<p>Delaware's §4177J prohibits drinking alcohol while driving. The fine is $25 to $200 for a first offense and $50 to $400 for a subsequent offense within 1 year.</p>
+
+<div class="warning"><strong>Delaware Law:</strong> If a reckless driving charge (§4175) was reduced from a DUI charge, the court orders a rehabilitation course and the offense is noted as alcohol- or drug-related on the driving record. Reckless driving also carries 6 points under DMV Regulation 2208.</div>
+
+<h4>What the Delaware numbers show</h4>
+<p>According to the Insurance Institute for Highway Safety (IIHS), compiled from NHTSA's Fatality Analysis Reporting System, Delaware had 126 traffic deaths in <strong>2024</strong>. An estimated 33% of drivers killed that year (15 drivers) had a BAC of 0.08 or higher, and 31 deaths (25%) were speed-related. For <strong>2025</strong>, state data reported by DelDOT show 117 traffic deaths, including 21 DUI-related deaths. Behind every one of those numbers is a family, and many of those crashes involved choices made before the driver ever started the car.</p>
+
+<div class="scenario"><h4>Scenario: "Just a Couple" After the Game</h4><p>Consider a driver we'll call Ray. He has two beers while watching a game with friends, then drives home feeling fine. A car merges slowly in front of him. Ray, who normally would ease off, speeds up, tailgates and flashes his high beams, then passes on the right. Later he admits, "I don't usually do that. I don't know what got into me."</p><details><summary>What should happen here?</summary><p>Alcohol "got into" Ray, quite literally. Even if his BAC was below 0.08, alcohol weakened his self-control and made risky moves feel acceptable. His actions included following too closely (§4123) and passing on the right (§4117), two of the §4175A sections, and could easily have included speeding. If his BAC was 0.08 or higher, he also faced a DUI charge under §4177. The best plan is to separate drinking and driving completely: decide before the first drink how you will get home, and use a designated driver, a ride service or public transit. "Feeling fine" is not a reliable test.</p></details></div>
+
+<h3>Drugs: Legal, Illegal and Prescription</h3>
+<p>Delaware's impaired-driving law covers more than alcohol. Under §4177, having an illicit or recreational drug in your blood within 4 hours of driving is a per se violation, and driving under the influence of any drug that impairs you is also prohibited. Different drugs affect aggression in different ways:</p>
+<ul>
+<li><strong>Stimulants</strong> can increase agitation, impatience and risk-taking, and can make a driver feel invincible.</li>
+<li><strong>Cannabis</strong> can slow reaction time, impair the ability to judge time and distance, and reduce attention. When combined with alcohol, the effects can be worse than either alone.</li>
+<li><strong>Depressants and sedatives</strong>, including some sleep aids and anxiety medications, can cause drowsiness and slowed reactions.</li>
+<li><strong>Some over-the-counter medicines</strong>, such as certain allergy and cold remedies, can cause drowsiness.</li>
+<li><strong>Withdrawal</strong> from nicotine, caffeine, alcohol or other substances can cause irritability that lowers your anger threshold.</li>
+</ul>
+<p>If you take any medication, read the label and ask your pharmacist or doctor how it may affect your driving. Never mix alcohol with medications that warn against it. A prescription makes a medication legal to take; it does not make it safe to drive on if it impairs you.</p>
+
+<h3>Physical Discomfort and Environment</h3>
+<p>Less dramatic factors also make anger more likely. Many drivers in aggressive-driving programs recognize these in themselves:</p>
+<ul>
+<li><strong>Hunger.</strong> Low blood sugar makes people irritable and impatient. The word "hangry" exists for a reason.</li>
+<li><strong>Heat.</strong> Hot, stuffy cars increase discomfort and irritability. Set the temperature before you go.</li>
+<li><strong>Pain.</strong> Back pain, headaches or other discomfort make it harder to stay patient.</li>
+<li><strong>Noise.</strong> Loud music, shouting passengers or constant notifications raise arousal.</li>
+<li><strong>Crowding.</strong> Heavy traffic and tight spaces increase stress for many people.</li>
+<li><strong>Poor visibility.</strong> Sun glare, rain and darkness make driving more demanding and can raise frustration. For sun glare, Delaware's Office of Highway Safety advises slowing down, increasing following distance and wearing polarized sunglasses.</li>
+</ul>
+<h4>Passengers as aggravating factors</h4>
+<p>Passengers can calm you down or wind you up. A passenger who criticizes your driving, encourages you to "go after" another driver, starts an argument or creates chaos can be a powerful aggravating factor. Young drivers in particular face strong peer pressure from passengers. You are entitled to set ground rules in your own car, such as "no backseat driving" or "we don't talk about other drivers."</p>
+
+<h3>Stacking: When Risk Factors Add Up</h3>
+<p>The most dangerous drives are usually not the ones with a single aggravating factor. They are the ones where several factors <strong>stack</strong> on top of each other. Consider a drive home after a long shift: you are tired, hungry and stressed, you are late to pick up your child, and you are checking your phone at red lights. Each factor alone might raise your risk a little. Together, they can push you from calm to furious with a single trigger.</p>
+<table>
+<tr><th>Factor</th><th>Effect on the chain</th><th>Countermeasure</th></tr>
+<tr><td>Fatigue</td><td>Shorter fuse, slower reactions</td><td>Sleep before long drives; stop to rest when warning signs appear</td></tr>
+<tr><td>Hunger</td><td>Irritability, impatience</td><td>Eat before leaving; keep a simple snack for after you park</td></tr>
+<tr><td>Time pressure</td><td>Catastrophizing, speeding</td><td>Leave earlier; call ahead if running late</td></tr>
+<tr><td>Phone and screens</td><td>Late reactions, missed turns</td><td>Set navigation before driving; silence notifications</td></tr>
+<tr><td>Alcohol or drugs</td><td>Weak self-control, poor judgment</td><td>Plan a sober ride before drinking; ask about medications</td></tr>
+<tr><td>Outside stress</td><td>Displaced aggression</td><td>Pre-drive stress check; postpone difficult calls</td></tr>
+</table>
+<p>The good news about stacking is that removing even one or two factors can make a real difference. If you are tired and stressed, at least do not add time pressure and your phone. If you know you will be hungry after work, eat something before you leave. Small adjustments lower the total load.</p>
+
+<div class="scenario"><h4>Scenario: The Stacked Friday</h4><p>Consider a driver we'll call Monique. It is Friday evening. She worked a double shift, skipped dinner, and is driving to pick up her kids, already 15 minutes late. Her phone keeps buzzing with texts from her ex about the late pickup. Traffic on the main road is heavy. When a driver ahead hesitates at a yellow light and stops, Monique slams the horn, swerves around and speeds through the intersection as the light turns red.</p><details><summary>What should happen here?</summary><p>Monique's drive stacked fatigue, hunger, time pressure, phone distraction and displaced stress. Any one of them would raise her risk; together, they made a strong reaction almost certain. Her actions, disregarding a traffic signal (§4107), speeding (§4169) and an unsafe lane change (§4122), could support an aggressive driving charge, and running a red light alone carries 3 points under Regulation 2208. A better plan: before leaving, Monique could send one message saying she is on her way and will be late, put the phone on do-not-disturb, eat something quick, and do a pre-drive stress check. Arriving 17 minutes late is far better than not arriving at all.</p></details></div>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Which aggravating factors show up most often in your driving? List your top three. For each one, write a specific countermeasure, using the format "Before I drive, when [factor] is present, I will..."</label><textarea></textarea></div>
+
+<h3>Making Better Decisions Before You Drive</h3>
+<p>The key insight of this module is that many of the most important decisions about aggressive driving are made <strong>before</strong> you turn the key. Once you are on the road with a short fuse, a crowded mind or alcohol in your system, your ability to manage anger is already reduced. That makes the decision to drive in that condition the most important decision of the trip.</p>
+<p>Build these questions into the pre-drive stress check you started in Module 7:</p>
+<ol>
+<li><strong>Am I rested enough to drive safely?</strong> If not, can someone else drive, or can I rest first?</li>
+<li><strong>Have I had any alcohol or taken anything that could impair me?</strong> If yes, I do not drive.</li>
+<li><strong>Is my phone set up so I won't need to touch it?</strong> Destination entered, notifications silenced.</li>
+<li><strong>Have I eaten?</strong> Am I comfortable?</li>
+<li><strong>Am I carrying stress that I need to set aside or deal with first?</strong></li>
+<li><strong>Do I have enough time?</strong> If not, can I call ahead to remove the pressure?</li>
+</ol>
+<p>Answering "no" to the rest question or "yes" to the alcohol question is a reason not to drive. The other questions are reasons to make an adjustment before you go. Over time, these questions become a quick habit that protects you, your passengers and everyone else on Delaware's roads.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "I drive better when I'm a little buzzed. It relaxes me."</p><p><strong>Fact:</strong> Alcohol may make you feel relaxed, but it weakens the judgment and self-control you need to manage anger, slows your reactions and makes risky moves seem safe. Feeling relaxed and being safe are not the same thing.</p></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Aggravating factor</dt><dd>A condition, such as fatigue, distraction or alcohol, that makes aggressive driving more likely and more dangerous.</dd>
+<dt>Stacking</dt><dd>The combined effect of several aggravating factors present at the same time.</dd>
+<dt>Microsleep</dt><dd>A brief episode of sleep, lasting a few seconds, that can occur without the driver realizing it.</dd>
+<dt>Per se limit</dt><dd>A level, such as a BAC of 0.08 in Delaware, at which a driver is in violation regardless of how impaired they appear.</dd>
+<dt>Implied consent</dt><dd>Under 21 Del.C. §2740, the legal rule that a driver is deemed to consent to chemical testing.</dd>
+<dt>Zero tolerance</dt><dd>Delaware's §4177L rule for drivers under 21, under which a BAC of .02 or more is per se evidence of drinking.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Aggravating factors do not cause aggressive driving alone, but they create more triggers, push thinking toward hostility, intensify emotion and weaken self-control.</li>
+<li>Distraction causes late reactions, missed turns and mistakes that provoke conflict; Delaware's §4176C bans handheld device use while moving ($100 first offense, $200 to $300 subsequent within 2 years).</li>
+<li>Fatigue shortens your fuse and slows reactions; the only real cure is sleep.</li>
+<li>Alcohol weakens inhibition and judgment; Delaware's per se limit is 0.08 (for drivers under 21, .02 is per se evidence of drinking), and drugs in the blood within 4 hours of driving are also covered.</li>
+<li>A first DUI in Delaware brings a $500 to $1,500 fine, possible jail, license revocation and a required evaluation and rehabilitation program; refusing a test brings its own revocation.</li>
+<li>In 2024 (IIHS/FARS), an estimated 33% of Delaware drivers killed had a BAC of 0.08 or higher and 25% of deaths were speed-related; in 2025, DelDOT reported 21 DUI-related deaths.</li>
+<li>Hunger, heat, pain, noise and passengers can also lower your anger threshold.</li>
+<li>Risk factors stack; removing even one or two lowers your total risk.</li>
+<li>The most important decisions are made before you drive: rest, sobriety, phone setup, food, stress and time.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module, where you will look closely at the legal, financial and human consequences of aggressive driving in Delaware.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 9 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 10.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m9-remaining', DONE='de-bmc-m9-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 9. Return to your course and continue to Module 10.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

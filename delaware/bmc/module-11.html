@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 11: Rethinking the Situation | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 11 of 16 &middot; 30 minutes</span>Module 11: Rethinking the Situation</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (21 Del.C. §4175A(d); Reg 1202 behavior modification/attitudinal driving) – cognitive restructuring, cognitive reappraisal, Catch-Check-Change method, evidence and alternative-explanation questions, reframe library, coping self-talk before/during/after, handling real wrongs, implementation intentions, mental rehearsal -->
+<p>In Module 6 you learned to notice the thoughts that turn an ordinary traffic event into anger: hostile attribution, personalization, "should" statements and catastrophizing. Noticing is the first step. This module teaches the second step: changing those thoughts. Psychologists call this <strong>cognitive restructuring</strong>, and one of its most useful forms is <strong>cognitive reappraisal</strong>, which means deliberately reinterpreting a situation in a way that is more accurate and less inflaming. Reappraisal is not about pretending that bad driving is fine or that you should never feel annoyed. It is about telling yourself a truer, more useful story, so that your emotions and your actions follow that story instead of the angry one. By the end of this module, you will have a personal library of reframes for the situations that trigger you most, along with short self-talk scripts you can use before, during and after a drive.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain cognitive restructuring and cognitive reappraisal and why they reduce aggressive responses.</li>
+<li>Apply the three-step Catch, Check, Change method to an angry driving thought.</li>
+<li>Use checking questions to test a hot thought for accuracy and usefulness.</li>
+<li>Generate realistic alternative explanations, or reframes, for common driving triggers.</li>
+<li>Prepare coping self-talk for before, during and after a difficult drive, including situations where the other driver really was wrong.</li>
+<li>Write implementation intentions that link your top triggers to specific reframes.</li>
+</ul></div>
+
+<h3>Why Changing Your Thoughts Works</h3>
+<p>Remember the cognitive-behavioral chain: trigger, thought, emotion, action and consequence. You cannot control most triggers. You can, with practice, control the thought. And because the thought shapes the emotion, changing the thought changes how angry you get, which changes what you do.</p>
+<p>Research on aggression supports this. Studies on <strong>cognitive reappraisal</strong> have found that reinterpreting another person's behavior as a mistake, rather than as a deliberate attack, reduces aggressive responses. Driving-anger research points the same way. In Jerry Deffenbacher's work at Colorado State University, high-anger drivers who learned cognitive-relaxation skills, which combine calming techniques with changing angry thoughts, reduced their driving anger, and those gains were largely maintained about a year later.</p>
+<h4>Reappraisal vs. suppression</h4>
+<p>It helps to understand what reappraisal is <em>not</em>. It is not <strong>suppression</strong>, which means gritting your teeth and trying to force the anger down while still believing the angry story. Suppression is like holding a beach ball under water: it takes constant effort and tends to pop back up, often at the worst moment. Reappraisal changes the story itself, so there is less anger to hold down in the first place.</p>
+<table>
+<tr><th></th><th>Suppression</th><th>Reappraisal</th></tr>
+<tr><td>What you tell yourself</td><td>"He's a jerk who did that on purpose, but I'll keep quiet."</td><td>"He probably didn't see me. People miss things."</td></tr>
+<tr><td>What happens to the anger</td><td>Stays high, held down by effort</td><td>Drops because the trigger feels less threatening</td></tr>
+<tr><td>Risk afterward</td><td>Anger may burst out at the next trigger</td><td>Lower arousal for the rest of the drive</td></tr>
+</table>
+
+<div class="highlight"><strong>Key Idea:</strong> You do not have to win a fight with your anger. Change the story that feeds it, and the anger has less fuel.</div>
+
+<h3>The Catch, Check, Change Method</h3>
+<p>Cognitive restructuring can be summarized in three steps. They are simple enough to use in a few seconds on the road, and thorough enough to use for deeper practice after you park.</p>
+<h4>Step 1: Catch the thought</h4>
+<p>Notice the moment your anger rises, using the early-warning signs from Module 7: a tight grip, a hot face, insulting words in your head, a creeping speedometer. Then ask yourself, "What am I telling myself right now?" Put the thought into words. "He cut me off on purpose." "She's doing this to make me late." "Nobody in this state knows how to drive."</p>
+<h4>Step 2: Check the thought</h4>
+<p>Treat the thought as a guess, not a fact. Test it with one or two quick questions (see the next section). Is it accurate? Is there another explanation? Does it matter as much as it feels like it does? Is thinking this way helping me get where I'm going safely?</p>
+<h4>Step 3: Change the thought</h4>
+<p>Replace the hot thought with a cooler, more accurate one. "He probably didn't see me." "She's being careful, and that's not about me." "This delay is annoying, but it's a few minutes, not a disaster." Then let your action follow the new thought: ease off, add space, breathe out, refocus.</p>
+<p>On the road, the whole process may take only a few seconds. At first it will feel slow and awkward. With practice, many drivers find that the new thought begins to appear automatically, sometimes even before the old one finishes.</p>
+
+<div class="scenario"><h4>Scenario: Catch, Check, Change at the Merge</h4><p>Consider a driver we'll call Malik. On a highway on-ramp, a car in the right lane refuses to let him in, then speeds up to close the gap. Malik feels his face go hot and thinks, "He's doing that just to block me."</p><details><summary>What should happen here?</summary><p><strong>Catch:</strong> Malik notices the heat and names the thought: "I'm telling myself he's blocking me on purpose." <strong>Check:</strong> "Do I know that? He might be watching the car ahead of him, or he might not have seen me. Even if he did it on purpose, does it really matter? It's one car." <strong>Change:</strong> "He's focused on his own drive. I'll merge behind him." Malik eases off, signals and merges into the next gap. His anger drops from a 6 to a 3, and the encounter is over in seconds. Racing for the space could have meant speeding (§4169) and an unsafe lane change (§4122), two of the sections in Delaware's aggressive driving statute.</p></details></div>
+
+<h3>Checking Questions: Testing a Hot Thought</h3>
+<p>A "hot thought" is the one that carries the most anger. Checking questions help you see whether it holds up. You do not need all of them every time. Pick the one or two that work best for you, and memorize them.</p>
+<ol>
+<li><strong>The evidence question:</strong> "What do I actually know? What am I assuming?" You usually know what the other car did. You almost never know why.</li>
+<li><strong>The alternatives question:</strong> "What else could explain this?" Try to come up with at least two innocent explanations.</li>
+<li><strong>The double-standard question:</strong> "Have I ever done something like this by accident?" If you have, you know how easily it happens.</li>
+<li><strong>The importance question:</strong> "Will this matter in an hour? In a week?" Most traffic annoyances are forgotten by dinner.</li>
+<li><strong>The usefulness question:</strong> "Is this thought helping me drive safely and get where I'm going?" If the answer is no, the thought is not worth keeping, even if it is partly true.</li>
+<li><strong>The friend question:</strong> "What would I tell a friend in the passenger seat who was this angry?" Most people are much wiser for others than for themselves.</li>
+<li><strong>The cost question:</strong> "What could acting on this thought cost me?" Recall your cost-benefit review from Module 10: points, fines, your license, someone's safety.</li>
+</ol>
+<p>Notice that the usefulness question works even when the other driver really did something wrong. A thought can be technically true ("that driver broke the law") and still be harmful if it pushes you toward revenge. You are allowed to drop a true thought that is not helping you.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "Reframing is just making excuses for bad drivers."</p><p><strong>Fact:</strong> Reframing is about accuracy and self-protection, not excuses. You rarely know why another driver acted as they did, so the hostile story is usually a guess. Choosing a calmer, equally likely explanation protects your safety, your license and your mood. It does not mean you approve of bad driving.</p></div>
+
+<div class="myth"><p><strong>Myth:</strong> "If I start giving other drivers the benefit of the doubt, I'll stop watching out for dangerous ones."</p><p><strong>Fact:</strong> Reframing changes how you interpret a driver's intent, not how carefully you watch their behavior. You can believe a driver made an honest mistake and still give them extra room, cover your brake and stay out of their path. In fact, calmer drivers scan better, because their attention is not locked onto one car. Defensive driving and reappraisal work together: you protect yourself from the other driver's actions without letting their actions take over your mind.</p></div>
+
+<h3>A Library of Reframes</h3>
+<p>A reframe is a different, realistic way of viewing the same situation. The most effective reframes are believable to you. A reframe you do not believe ("I love being cut off!") will not work. A reframe that is plausible ("They might be lost") often does. The table below gives reframes for many common Delaware driving situations. Read them all, then mark the ones that fit your triggers.</p>
+<table>
+<tr><th>Situation</th><th>Hot thought</th><th>Reframe</th></tr>
+<tr><td>A car cuts in front of you on the highway</td><td>"He did that on purpose."</td><td>"He probably misjudged the gap or didn't see me in his blind spot. I've done that."</td></tr>
+<tr><td>A slow driver stays in the left lane</td><td>"They think they own the road."</td><td>"They may be nervous, lost or planning a left exit. I'll pass when it's safe and legal."</td></tr>
+<tr><td>A driver hesitates at a green light</td><td>"Wake up! Move!"</td><td>"Maybe they're checking for a red-light runner. That's actually smart."</td></tr>
+<tr><td>Someone tailgates you</td><td>"He's trying to push me around."</td><td>"He's in a hurry about something. That's his problem. I'll let him by."</td></tr>
+<tr><td>A driver won't let you merge</td><td>"She's blocking me on purpose."</td><td>"She may be focused on the car ahead. There'll be another gap in a few seconds."</td></tr>
+<tr><td>You hit every red light</td><td>"Everything is against me today."</td><td>"Lights don't know who I am. This is just timing."</td></tr>
+<tr><td>Traffic stops for a crash ahead</td><td>"This is ruining my whole day."</td><td>"Someone ahead may be hurt. A delay for me is a much worse day for them."</td></tr>
+<tr><td>A truck pulls out slowly from a side road</td><td>"He should have waited."</td><td>"Big trucks need time and space. He had to go sometime."</td></tr>
+<tr><td>A driver honks at you</td><td>"How dare he! I'll show him."</td><td>"Maybe I did something he didn't expect. A honk can't hurt me. I'll let it go."</td></tr>
+<tr><td>A driver gestures rudely</td><td>"I can't let that slide."</td><td>"That says something about his day, not about me. I don't need to answer."</td></tr>
+<tr><td>A car stops suddenly to turn without signaling</td><td>"What an idiot."</td><td>"They might have just realized their turn. Good thing I left space."</td></tr>
+<tr><td>You're running late</td><td>"I can't be late. I have to make up time."</td><td>"Being a few minutes late is an inconvenience. A crash or a ticket would make me much later."</td></tr>
+<tr><td>A work zone narrows to one lane</td><td>"Why do they always do this at rush hour?"</td><td>"The crews are making the road safer. Slowing down here protects their lives."</td></tr>
+<tr><td>A cyclist is ahead on a two-lane road</td><td>"He shouldn't be on this road."</td><td>"He has the same right to the road. I'll wait for a safe chance to pass with at least 3 feet."</td></tr>
+<tr><td>A passenger criticizes your driving</td><td>"Nobody tells me how to drive."</td><td>"She's nervous, not attacking me. I can talk about it calmly when we park."</td></tr>
+<tr><td>You make a mistake and someone honks</td><td>"Back off, I didn't mean it."</td><td>"That was my error. A quick wave of apology, and I'll move on."</td></tr>
+</table>
+<p>The cyclist reframe reflects Delaware law: under §4116, when passing a bicycle in a single lane, a driver must keep "a reasonable and prudent distance, which shall in any case never be less than 3 feet," and where there are two lanes in the same direction, the driver must move completely into the left lane before passing. The work-zone reframe also has a legal side: many fines are at least doubled in marked work zones under §4105(f).</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Choose the three situations from the table that trigger you most. For each, write a reframe in your own words that you would actually believe.</label><textarea></textarea></div>
+
+<h3>Reframes Matched to Thinking Patterns</h3>
+<p>Each thinking pattern from Module 6 has its own antidote. If you know which patterns you use most, you can prepare the matching reframes in advance.</p>
+<h4>For hostile attribution: "It's probably a mistake"</h4>
+<p>Hostile attribution assumes intent. The antidote is to assume error. Most driving mistakes come from not seeing, misjudging, being lost or being distracted. Useful reframes include: "They didn't see me." "Everyone makes mistakes." "I don't know their reason, and I don't need to."</p>
+<h4>For personalization: "It's not about me"</h4>
+<p>Personalization turns the road into a contest about your worth. The antidote is to remember that other drivers are focused on their own trip. Reframes: "They don't know me." "This isn't a contest." "My worth isn't decided on this highway." "Letting them go isn't losing; it's driving well."</p>
+<h4>For "should" statements: "I'd prefer it, but I can handle it"</h4>
+<p>"Should" statements demand that others follow your rules. The antidote is to turn demands into preferences. Reframes: "I'd prefer that drivers signal, but some won't." "Enforcement is the police's job, not mine." "I can't control them. I can control me."</p>
+<h4>For catastrophizing: "This is an inconvenience, not a catastrophe"</h4>
+<p>Catastrophizing makes small events feel huge. The antidote is perspective. Reframes: "This is annoying, not awful." "What's the realistic worst case? A few minutes." "In a week, I won't remember this." "The only real catastrophe would be a crash."</p>
+
+<div class="scenario"><h4>Scenario: The Should Statement in the School Zone</h4><p>Consider a driver we'll call Hannah. She is driving through a posted school zone with a 20 mph limit when school is letting out. The car ahead is going a little under 20 and stopping for children at every crossing. Hannah thinks, "They should know they can go faster than this. Some people shouldn't be allowed to drive."</p><details><summary>What should happen here?</summary><p>Hannah's "should" statements are pushing her toward impatience in exactly the wrong place. A reframe: "That driver is being careful around kids. I'd want someone to drive that way near my child." Delaware law sets a 20 mph limit in school zones where posted with times or conditions (§4169), and the basic speed rule (§4168) requires speeds that are "reasonable and prudent under the conditions." Children can step out without warning. The slower driver is setting a good example. Hannah can relax her grip, keep a safe gap and let the school zone take the extra minute it needs.</p></details></div>
+
+<h3>Coping Self-Talk: Before, During and After</h3>
+<p>Self-talk is the running commentary in your head. Angry drivers often have angry self-talk running all the time: insults, complaints, replays. Coping self-talk replaces it with short, calming statements. Anger management programs often organize these statements by the stage of the situation, so you have the right words ready when you need them.</p>
+<h4>Before the drive (preparing)</h4>
+<ul>
+<li>"Traffic may be heavy. I've planned for it."</li>
+<li>"My goal today is to arrive safely, not quickly."</li>
+<li>"Other drivers will make mistakes. That's normal, and I'm ready for it."</li>
+<li>"If I get angry, I know what to do."</li>
+</ul>
+<h4>During a trigger (confronting)</h4>
+<ul>
+<li>"Catch it. Check it. Change it."</li>
+<li>"Not worth it."</li>
+<li>"Breathe out. Loosen up. Add space."</li>
+<li>"They probably didn't see me."</li>
+<li>"I don't have to win."</li>
+</ul>
+<h4>When anger is high (coping with arousal)</h4>
+<ul>
+<li>"My body is revved up. That's okay. It will settle."</li>
+<li>"I can pull over if I need to."</li>
+<li>"Get home safe. That's all that matters right now."</li>
+</ul>
+<h4>After the drive (reflecting)</h4>
+<ul>
+<li>"I handled that better than I used to."</li>
+<li>"That was tough, and I didn't make it worse."</li>
+<li>"Next time I'll leave more space a little sooner."</li>
+<li>"It's over. I don't need to replay it."</li>
+</ul>
+<p>The after-the-drive statements matter more than they might seem. Giving yourself credit reinforces the new habit. And if things did not go well, a calm, problem-solving statement ("Next time I'll...") is far more useful than beating yourself up or replaying the incident, which, as you learned in Module 7, prolongs anger.</p>
+
+<div class="highlight"><strong>Practice Tip:</strong> Choose one statement from each stage and write them on a card or save them as a note you read before you start the car (never while driving). Short, familiar phrases are easiest to remember under stress.</div>
+
+<h3>When the Other Driver Really Was Wrong</h3>
+<p>Sometimes your anger is not based on a misunderstanding. The other driver really did run a red light, really did tailgate you for miles or really did cut you off dangerously. Reappraisal still has a role here, but it looks a little different. Instead of reinterpreting <em>why</em> they did it, you reinterpret what it means and what you will do about it.</p>
+<ul>
+<li><strong>Accept the facts.</strong> "Yes, that driver was dangerous." You do not have to pretend otherwise.</li>
+<li><strong>Separate their choice from yours.</strong> "Their bad driving is their responsibility. My driving is mine."</li>
+<li><strong>Remember who enforces the law.</strong> "Punishing them isn't my job. If it's truly dangerous, a safe 911 call is the right response."</li>
+<li><strong>Focus on what you control.</strong> "I can't change what they did. I can choose space, safety and calm."</li>
+<li><strong>Count the near miss as a win.</strong> "I left enough space to avoid a crash. My defensive driving worked."</li>
+</ul>
+<p>This last point is a powerful reframe. Many drivers feel anger after a near miss because of the fear they experienced. Turning the story into "I handled that well" changes the emotion from rage to relief, and relief does not push you to retaliate.</p>
+
+<div class="scenario"><h4>Scenario: The Red-Light Runner</h4><p>Consider a driver we'll call Omar. His light turns green, and as he starts into the intersection, a car runs the red light across his path. Omar brakes hard and avoids a crash. His heart is pounding, and his first thought is to chase the car down.</p><details><summary>What should happen here?</summary><p>The other driver truly was wrong; disregarding a red light is a violation that carries 3 points under Regulation 2208. But chasing the car would put Omar and others at risk and could involve his own violations. A reframe for a real wrong: "That driver was dangerous, and I avoided a crash. My job now is to calm down and keep driving safely." If the other driver's behavior seemed like an ongoing danger, a passenger could call 911, or Omar could call when safe. Then he can take a slow breath out, check his anger rating and give himself credit for alert driving.</p></details></div>
+
+<h3>Making Reframes Automatic</h3>
+<p>Reframes work best when they are practiced in advance. In the moment, your stressed brain will reach for whatever response is most familiar. Two techniques help move reframes from paper into habit.</p>
+<h4>Implementation intentions</h4>
+<p>As you learned in Module 7, an implementation intention is a "when, then" plan. Research in behavior change shows that people who decide in advance exactly what they will do in a specific situation are much more likely to follow through. Link your top triggers to specific reframes:</p>
+<ul>
+<li>"<strong>When</strong> someone cuts me off, <strong>then</strong> I will think, 'They didn't see me,' and ease off."</li>
+<li>"<strong>When</strong> I catch myself saying 'should,' <strong>then</strong> I will change it to 'I'd prefer.'"</li>
+<li>"<strong>When</strong> I'm running late, <strong>then</strong> I will tell myself, 'A few minutes late is fine; a crash is not.'"</li>
+</ul>
+<h4>Mental rehearsal</h4>
+<p>Once or twice a day for the next week, take two minutes when you are calm and not driving. Picture one of your trigger situations in detail: the road, the car, the moment it happens. Notice the old hot thought starting. Then picture yourself catching it, checking it and replacing it with your reframe. Picture your hands loosening, your foot easing off the gas and the other car moving on. Athletes and performers use this kind of rehearsal to prepare for pressure. It helps your new response feel familiar when the real moment comes.</p>
+<h4>Using your anger log</h4>
+<p>Add a column to the anger log you started in Module 6: "Reframe I used (or could have used)." After each difficult drive, write the hot thought and the reframe. Over a few weeks, you will build a personal reframe library based on your own real situations, and you will likely notice your anger ratings dropping.</p>
+
+<h4>Common obstacles, and how to get past them</h4>
+<ul>
+<li><strong>"I forget to do it in the moment."</strong> That is normal at first. Use your anger log to practice after the fact. Each time you reframe a drive on paper, you make it more likely you will remember on the road next time.</li>
+<li><strong>"The reframe feels fake."</strong> Then choose a different one. "They didn't see me" may not feel believable for a driver who tailgated you for five miles, but "Their hurry isn't my emergency" might.</li>
+<li><strong>"I feel like a pushover."</strong> Remind yourself that choosing safety under pressure takes more strength than reacting. Professional drivers, first responders and pilots are trained to stay calm because calm is what keeps people alive.</li>
+<li><strong>"The anger comes back."</strong> Anger often returns in waves, especially after a scare. Simply repeat the process: catch, check, change. Each wave is usually smaller than the last.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Reframe That Didn't Fit</h4><p>Consider a driver we'll call Bianca. A pickup tailgates her for several miles on a divided highway, flashing its lights even though she is in the right lane at the posted speed. She tries the reframe "He probably doesn't see how close he is," but it does not feel believable, and her anger keeps climbing.</p><details><summary>What should happen here?</summary><p>Bianca does not need to believe the driver is innocent. She needs a reframe that is believable and useful. She might switch to: "Whatever his reason, his hurry isn't my emergency. My job is to get home safe." Then she can act on it: keep a steady speed, add space ahead, and let him pass or pull off at a safe place if he will not. Following too closely (§4123) is his violation, not hers, and she does not need to respond to it with any of her own.</p></details></div>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>My reframe plan: (1) my two most common hot thoughts; (2) the checking question that works best for me; (3) a believable reframe for each hot thought; (4) one "When..., then I will think..." statement for my top trigger; (5) my coping phrase for during a trigger.</label><textarea></textarea></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Cognitive restructuring</dt><dd>The process of identifying, testing and changing unhelpful thoughts.</dd>
+<dt>Cognitive reappraisal</dt><dd>Reinterpreting a situation in a more accurate, less inflaming way, such as viewing another driver's action as a mistake rather than an attack.</dd>
+<dt>Suppression</dt><dd>Trying to hold down anger while still believing the angry story; less effective than reappraisal.</dd>
+<dt>Hot thought</dt><dd>The thought in a situation that carries the most anger.</dd>
+<dt>Reframe</dt><dd>A realistic, believable alternative way of viewing a situation.</dd>
+<dt>Coping self-talk</dt><dd>Short, calming statements used before, during and after a stressful situation.</dd>
+<dt>Mental rehearsal</dt><dd>Picturing a trigger situation and your planned calm response to make that response familiar.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Changing the thought changes the emotion and the action; reappraising another driver's behavior as a mistake rather than an attack reduces aggressive responses.</li>
+<li>Reappraisal changes the angry story itself; suppression only holds anger down and often fails under pressure.</li>
+<li>Use Catch, Check, Change: notice the thought, test it, and replace it with a cooler, more accurate one.</li>
+<li>Checking questions include evidence, alternatives, double standards, importance, usefulness, the friend question and the cost question.</li>
+<li>Good reframes are realistic and believable; build a personal library for your top triggers.</li>
+<li>Each thinking pattern has an antidote: assume error, remember it is not about you, turn "shoulds" into preferences, and keep perspective.</li>
+<li>Coping self-talk prepares you before the drive, steadies you during a trigger and helps you reflect afterward without replaying.</li>
+<li>When the other driver really was wrong, accept it, separate their choices from yours, leave enforcement to police and count your safe response as a win.</li>
+<li>Implementation intentions, mental rehearsal and your anger log help make reframes automatic.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module, where you will learn physical calming skills to pair with the thinking skills you practiced here.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 11 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 12.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m11-remaining', DONE='de-bmc-m11-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 11. Return to your course and continue to Module 12.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

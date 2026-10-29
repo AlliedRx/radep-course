@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 15: Your Personal Change Plan and Relapse Prevention | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 15 of 16 &middot; 30 minutes</span>Module 15: Your Personal Change Plan and Relapse Prevention</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course, 21 Del.C. §4175A(d); 2 DE Admin. Code 1202) | Module B15: Your Personal Change Plan and Relapse Prevention | Principles: goal setting and commitment, self-monitoring, implementation intentions, relapse prevention (high-risk situations, lapse vs. relapse, coping with slips) -->
+<p>You now have a full set of tools: you understand how driving anger works, you know your triggers and thinking patterns, you can calm your body, rethink a situation, plan ahead, and treat other road users with courtesy. Tools only help if you use them, and the hard part of any behavior change is not learning what to do. It is continuing to do it weeks and months later, when this course is a memory and you are tired, late and stuck in traffic. This module helps you turn what you have learned into a written personal change plan, and it prepares you for the moment almost everyone faces: a slip back into an old habit. You will learn why slips happen, how to keep a slip from becoming a full relapse, and how to recover quickly.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain why a specific, written plan is more effective than a general intention to "drive better."</li>
+<li>Complete a personal change plan that names your reasons for change, high-risk situations, warning signs, strategies and support.</li>
+<li>Use self-monitoring to track your progress after the course ends.</li>
+<li>Distinguish a slip (lapse) from a relapse and explain how all-or-nothing thinking turns one into the other.</li>
+<li>Recognize small decisions that lead toward high-risk situations.</li>
+<li>Follow a step-by-step process to recover from a slip and strengthen your plan.</li>
+</ul></div>
+
+<h3>Why a Written Plan Works</h3>
+<p>Most people who want to change a habit start with a general intention: "I'm going to stop getting so angry when I drive." General intentions feel sincere, but they rarely survive real life. They do not say what to do, when, or how. When a tense situation arrives, the old habit is ready and waiting, and the vague intention has nothing to offer.</p>
+<p>Behavior-change research points to several features that make plans work better:</p>
+<ul>
+<li><strong>Specific:</strong> the plan names exact situations and exact actions, like the if-then plans you wrote in Module 13.</li>
+<li><strong>Written:</strong> writing a plan forces you to think it through and gives you something to review later. It also strengthens your commitment.</li>
+<li><strong>Personal:</strong> the plan is built around your own triggers, warning signs and reasons for change, not a generic list.</li>
+<li><strong>Monitored:</strong> you track how it is going, so you notice progress and problems early.</li>
+<li><strong>Revised:</strong> you adjust the plan when something does not work, instead of abandoning it.</li>
+</ul>
+<p>The worksheets in this module are for your own use and are not submitted. Take them seriously anyway. Many people find it helpful to copy their finished plan onto paper or into a notes file after the module, so they can review it in the weeks ahead. You will build your plan in six parts.</p>
+
+<h3>Part 1: Your Reasons for Change</h3>
+<p>Lasting change is driven by reasons that matter to you personally. "Because the court ordered it" or "because DMV sent a letter" may be why you are in this course, but it is not usually enough to change behavior once the course is over. Deeper reasons last longer: the people who ride with you, the people who depend on your income, the kind of person you want to be, the freedom that comes with a valid license.</p>
+<p>It also helps to be clear about the concrete consequences you are working to avoid. In Delaware:</p>
+<ul>
+<li>An aggressive driving conviction under 21 Del.C. §4175A carries 6 points under DMV Policy Regulation 2208. A second conviction within 3 years carries a fine of $300 to $1,000, 30 to 60 days in jail, or both, and a 30-day license suspension, plus this course again.</li>
+<li>Points count at full value for 12 months from the violation date and at half value for the next 12 months. DMV action is based on convictions within that 24-month period. That means the next two years are when your record is most fragile.</li>
+<li>At 12 points, a driver must complete a behavior modification course within 90 days of notice or face a mandatory 2-month suspension. At 14 points the suspension is 4 months, and it rises in steps to 12 months at 22 points. At 14 or more points, reinstatement requires a behavior modification course completed within the past 2 years and a reinstatement fee.</li>
+<li>For an aggressive driving conviction, Reg 1202 requires completing this course within 90 days after conviction (one 90-day extension may be granted on written request). If you fail to do so, the court is notified and holds a non-compliance hearing, and any suspension follows the court's direction.</li>
+</ul>
+<p>Write your reasons in your own words and make them vivid. "I don't want points" is weak. "I want to keep driving my daughter to her Saturday games, and I can't do that with a suspended license" is strong, because it connects the behavior to something you care about and can picture. When you are stuck in traffic and the old urge rises, a vivid reason is much easier to recall than an abstract rule. Some people keep a photo or a single word that reminds them of their main reason, and look at it during their pre-drive routine, never while driving. Others repeat a short phrase, such as "Home safe for them," as part of setting their intention before they start the engine.</p>
+<div class="highlight"><strong>Key Fact:</strong> Under Reg 2208, points count at full value for 12 months and half value for the next 12. The two years after a violation are the period when one more mistake is most likely to lead to a suspension. Your change plan should be designed to carry you through that window.</div>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Part 1 — My reasons for change. List at least three personal reasons you want to drive differently (people, values, goals), and the specific consequences you most want to avoid.</label><textarea></textarea></div>
+
+<h3>Parts 2 and 3: Your High-Risk Situations and Warning Signs</h3>
+<p>In relapse prevention, a <em>high-risk situation</em> is any situation in which you are more likely than usual to fall back into an old behavior. For aggressive driving, high-risk situations usually fall into a few groups, many of which you identified in Modules 6, 7 and 9:</p>
+<ul>
+<li><strong>Time pressure:</strong> running late, tight schedules, important appointments.</li>
+<li><strong>Specific places:</strong> a certain merge, a lane drop, a congested stretch, a parking lot you dread.</li>
+<li><strong>Specific behaviors by others:</strong> being cut off, tailgated, honked at, or stuck behind a slow vehicle.</li>
+<li><strong>Your own state:</strong> fatigue, hunger, illness, pain, or stress carried from home or work.</li>
+<li><strong>Substances and distraction:</strong> alcohol, drugs, some medications, or phone use, which reduce self-control and attention (Module 9).</li>
+<li><strong>Passengers:</strong> some passengers calm you; others encourage you to "show" another driver or criticize your driving.</li>
+</ul>
+<p>Your <em>warning signs</em> are the early signals that you are entering the danger zone. They can be physical (tight grip, clenched jaw, hot face, fast breathing), mental (hostile thoughts, "should" statements, replaying an event), or behavioral (creeping closer to the car ahead, speeding up to block someone, muttering or yelling). The earlier you notice them, the easier it is to change course. A tension rating of 5 is much easier to bring down than an 8.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Part 2 — My top high-risk situations. List your three to five highest-risk driving situations, as specifically as you can (place, time, circumstance).</label><textarea></textarea></div>
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Part 3 — My warning signs. List your earliest physical, mental and behavioral warning signs that anger or impatience is building.</label><textarea></textarea></div>
+
+<h3>Parts 4, 5 and 6: Strategies, Monitoring and Support</h3>
+<h4>Part 4: Your strategies</h4>
+<p>For each high-risk situation, choose specific strategies from the course. A good plan includes at least one strategy from each of these groups:</p>
+<table>
+<tr><th>Strategy type</th><th>Examples from the course</th></tr>
+<tr><td>Prevent the situation</td><td>Backward planning, time buffers, alternate routes, pre-drive transition routine (Module 13)</td></tr>
+<tr><td>Calm the body</td><td>4-4-6 breathing, grip-shoulders-jaw release, physical reset, safe stop (Module 12)</td></tr>
+<tr><td>Change the thought</td><td>Reframes, perspective-taking, "Not worth my license" (Modules 11 and 14)</td></tr>
+<tr><td>Change the action</td><td>Three-second delay, add space, let them pass, apology gesture, if-then plans (Modules 12–14)</td></tr>
+<tr><td>Disengage from others' aggression</td><td>Do not engage, avoid eye contact, give room, drive to a safe public place and call 911 when safe if threatened (Module 8)</td></tr>
+</table>
+<h4>Part 5: Self-monitoring</h4>
+<p>Self-monitoring means keeping track of your own behavior. It works partly because it makes you aware, and awareness alone often changes behavior. For the next several weeks, after each drive (never while driving), record a few facts: the date, the trip, your highest tension number, what triggered it, which strategy you used, and how it turned out. Once a week, take five minutes to review the log. Look for patterns, such as which situations still push your number up, which strategies work best, and whether your peak numbers are dropping.</p>
+<table>
+<tr><th>Date</th><th>Trip</th><th>Peak tension (0–10)</th><th>Trigger</th><th>Strategy used</th><th>Outcome</th></tr>
+<tr><td>Mon</td><td>Home to work</td><td>6</td><td>Car merged close in front</td><td>"Hold," breathing, added space</td><td>Down to 3 in a minute</td></tr>
+<tr><td>Wed</td><td>Work to store</td><td>7</td><td>Left late; slow driver</td><td>Reframe; did not pass</td><td>Arrived 4 min late; fine</td></tr>
+<tr><td>Fri</td><td>Pickup at school</td><td>3</td><td>Parking lot congestion</td><td>Transition routine first</td><td>Calm all trip</td></tr>
+</table>
+<h4>Part 6: Support and accountability</h4>
+<p>Change is easier with support. Consider telling one trusted person, such as a partner, friend or family member who often rides with you, about your plan. Ask them to help in a specific way: "If you see me tailgating, just say 'space.'" Choose someone who will help calm you, not someone who will argue with you or join in criticizing other drivers. Also think about which people make your driving worse, and how you will handle that, such as by asking them not to comment on other drivers while you are at the wheel.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Parts 4–6 — My strategies, monitoring and support. For each high-risk situation you listed, write at least one prevention strategy and one in-the-moment strategy. Then write how you will track your driving for the next four weeks and who, if anyone, you will ask for support.</label><textarea></textarea></div>
+
+<div class="scenario"><h4>Scenario: The Passenger Who Keeps Score</h4><p>Consider a driver we'll call Chris, who usually drives to work with a coworker. The coworker comments on every driver around them: "Look at this guy, don't let him in," or "She cut you off, are you going to take that?" Chris notices that his tension numbers are always higher on days they ride together, and that most of his entries in his driving log come from those trips.</p><details><summary>What should happen here?</summary><p>Chris's log has revealed a high-risk situation he had not listed: a passenger who rewards aggression. His plan needs a strategy for it. Before the next trip, at a calm moment, he tells his coworker about the course and asks for help: "I'm working on staying calm when I drive. It would really help if you didn't point out other drivers. If I start to tailgate, just say 'space.'" Most people respond well to a direct, friendly request. If the coworker keeps it up, Chris can change the arrangement, for example by taking turns driving or riding separately on some days. Chris adds this to Part 6 of his plan, under people who make his driving worse, and adds an if-then plan: "If a passenger urges me to block or chase someone, then I will say 'Not worth my license' and add space."</p></details></div>
+
+<h3>Slips Happen: Lapse Versus Relapse</h3>
+<p>Here is an honest truth about behavior change: almost everyone slips. You will probably have a day when you honk in frustration, close a gap to block someone, or feel the old urge to speed past a driver who annoyed you. That does not mean the course failed or that you cannot change. It means you are a human being learning a new habit in a high-pressure environment.</p>
+<p>Relapse prevention, a well-established approach in psychology, makes an important distinction:</p>
+<ul>
+<li>A <strong>lapse</strong> (or slip) is a single return to the old behavior, such as one angry honk or one moment of tailgating.</li>
+<li>A <strong>relapse</strong> is a return to the old pattern, where the old behavior becomes your normal way of driving again.</li>
+</ul>
+<p>It also helps to know that change is rarely a straight line. Most people move forward, slide back a little, and move forward again. If you graphed your peak tension numbers over several months, you would expect a line that trends downward with bumps along the way, not a smooth slope. A bump is part of the normal shape of change. What matters is the overall direction, and that you keep using your plan after each bump instead of abandoning it.</p>
+<p>A lapse does not have to become a relapse. What decides it, more than the slip itself, is how you think about the slip afterward.</p>
+<h4>The all-or-nothing trap</h4>
+<p>After a slip, many people think in all-or-nothing terms: "I blew it. I'm just an angry driver. This stuff doesn't work for me." This is sometimes called the "what-the-heck effect": once the perfect record is broken, the person gives up on the goal entirely and goes back to the old behavior full force. It is the same thinking that turns one cookie into a whole box. On the road, it turns one angry honk into a commute full of tailgating and lane weaving, which is exactly the "continuous conduct" pattern that defines aggressive driving in Delaware.</p>
+<p>The healthier way to think about a slip is the way a coach thinks about a missed shot: it is information. It tells you something about a situation your plan has not handled well yet. Notice that this is the same cognitive restructuring you practiced in Module 11, now applied to your own behavior instead of another driver's.</p>
+<table>
+<tr><th>All-or-nothing thought after a slip</th><th>Balanced replacement</th></tr>
+<tr><td>"I'm hopeless. I'll never change."</td><td>"I had one bad moment. I had many good ones this week."</td></tr>
+<tr><td>"The course didn't work."</td><td>"My plan didn't cover this situation yet. I can fix that."</td></tr>
+<tr><td>"I already lost my temper, so it doesn't matter now."</td><td>"The next choice still matters. I can calm down right now."</td></tr>
+<tr><td>"That driver made me do it."</td><td>"That driver was a trigger. My reaction was my choice, and next time I'll choose differently."</td></tr>
+</table>
+
+<div class="myth"><p><strong>Myth:</strong> If I really changed, I would never feel the urge to drive aggressively again.</p><p><strong>Fact:</strong> Urges usually fade gradually with practice; they rarely disappear overnight. Change means the urge has less power over your actions, not that it never shows up. Feeling an urge and choosing a calm response is a success, not a failure.</p></div>
+
+<h3>Small Decisions That Lead to Big Problems</h3>
+<p>Slips rarely come out of nowhere. Often they follow a chain of small decisions that each seem harmless at the time, but together steer you into a high-risk situation. Relapse prevention calls these <em>seemingly irrelevant decisions</em>. Learning to spot them gives you a chance to change course long before you are angry behind the wheel.</p>
+<p>Examples of small decisions that lead toward trouble:</p>
+<ul>
+<li>"I'll check one more email before I leave," which turns into leaving 15 minutes late.</li>
+<li>"I don't need to look at the route; I sort of know where it is," which leads to last-second lane changes.</li>
+<li>"I'll skip the transition routine today; I'm fine," on a day when you are not fine.</li>
+<li>"I'll just drive the old way through that interchange," when you know it always raises your number.</li>
+<li>"I'll have one more drink; I'm only driving a few miles." Alcohol lowers self-control and is never compatible with safe driving. In Delaware, a BAC of 0.08 or more is per se DUI (21 Del.C. §4177).</li>
+<li>"I'll keep the phone in my lap in case someone calls," which invites distraction and is illegal to hold and use while the vehicle is in motion (§4176C).</li>
+</ul>
+<p>When you notice one of these decisions, use it as an early warning sign. Ask: "Where is this choice taking me?" Then choose the option that keeps you out of the high-risk situation.</p>
+
+<div class="scenario"><h4>Scenario: The Chain of Small Choices</h4><p>Consider a driver we'll call Tony, three weeks after finishing his course. He has been doing well. On Thursday he decides to finish a project before leaving work, skips his transition routine because he "doesn't have time," and takes the route he knows is congested because it is the one he is used to. He hits heavy traffic, feels his number climb to 7, and when a car merges in front of him, he leans on the horn and rides that car's bumper for a mile before catching himself.</p><details><summary>What should happen here?</summary><p>Tony's slip did not begin with the merging car. It began with three small decisions: staying late, skipping the routine, and choosing the congested route. Once he catches himself, the first step is to stop the slip: drop back, breathe, and reset. The second step is to avoid the all-or-nothing trap. Tony tells himself, "I slipped. I had three good weeks. This is information." Later, parked at home, he reviews what happened and adds to his plan: "If I'm going to leave work late, then I will still do the two-minute routine and take the alternate route." The slip becomes a stronger plan instead of a return to old habits.</p></details></div>
+
+<h3>Recovering From a Slip: Step by Step</h3>
+<p>When a slip happens, follow these steps. Practice them in your mind now so you know them when you need them.</p>
+<ol>
+<li><strong>Stop the behavior immediately.</strong> The moment you realize what you are doing, stop. Drop back, ease off the accelerator, take your hand off the horn. The sooner you stop, the smaller the slip.</li>
+<li><strong>Get safe.</strong> Make sure you are not still engaged with the other driver. Add space. If the other driver is now aggressive toward you, use the disengagement skills from Module 8: do not respond, let them go, and if you feel threatened, drive to a safe public place and call 911 when it is safe to do so.</li>
+<li><strong>Calm your body.</strong> Use 4-4-6 breathing and the grip-shoulders-jaw release. If your number is 7 or above, find a safe, legal place to stop and reset.</li>
+<li><strong>Talk to yourself like a coach.</strong> Replace all-or-nothing thoughts with balanced ones: "One slip. I can get back on track right now."</li>
+<li><strong>Review later, not now.</strong> When you are parked and calm, look back at what happened. What was the trigger? What small decisions came first? What warning signs did you miss? What could you do differently?</li>
+<li><strong>Update your plan.</strong> Add a new if-then plan or strategy for the situation. Your plan should get stronger every time a slip teaches you something.</li>
+<li><strong>Recommit.</strong> Read your reasons for change again. Remind yourself why this matters to you.</li>
+</ol>
+<div class="warning"><strong>Delaware Reminder:</strong> A slip that becomes a pattern can lead to new charges. Continuous conduct that violates three or more of the sections listed in 21 Del.C. §4175A, such as speeding, following too closely, improper lane use and failing to signal, is aggressive driving. Stopping a slip early is not only good for your plan; it protects your license and your freedom.</div>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Slip review practice. Think of the last time you lost your temper while driving. Walk through the seven recovery steps: what you could have done at each step, what small decisions came before it, and what you would add to your plan as a result.</label><textarea></textarea></div>
+
+<div class="scenario"><h4>Scenario: The Honk That Came Back</h4><p>Consider a driver we'll call Maya, who completed her plan and has been tracking her drives for six weeks. Her peak numbers have dropped from 7s and 8s to mostly 3s and 4s. One morning on I-95, a driver tailgates her and flashes his lights. Maya brakes sharply in front of him to "make a point." He swerves around her, and both drivers gesture at each other.</p><details><summary>What should happen here?</summary><p>Brake-checking is dangerous: it can cause a rear-end collision and invites escalation. Maya recognizes the slip within seconds, eases off, moves right when safe to put distance between them, and breathes. She does not follow the other car. When she arrives, she reviews it: the trigger was being tailgated and the hostile thought was "He thinks he can push me around." She writes a new if-then plan: "If someone tailgates me, then I will move right when safe and let them go. Their hurry is not my problem." She also notices that her log shows six weeks of real progress. One slip does not erase that. Her plan is now stronger than before.</p></details></div>
+
+<h3>Keeping the Change: Maintenance and Rewards</h3>
+<p>Behavior change does not end when the course ends. The first weeks and months are when new habits are most fragile. Build in a few maintenance steps:</p>
+<ul>
+<li><strong>Review your plan regularly.</strong> Read it every week for the first month, then every month. Set calendar reminders at 30 days, 90 days, 12 months and 24 months after your course, which lines up with the 24-month period in which Delaware counts your points.</li>
+<li><strong>Keep using the tools on good days.</strong> Do your transition routine and breathing even when you feel fine. That keeps the skills sharp for bad days.</li>
+<li><strong>Notice and reward progress.</strong> When you handle a hard situation well, acknowledge it. Rewards do not have to be big: telling someone about it, marking a "calm week" in your log, or simply taking a moment of pride. Rewarding a behavior makes it more likely to happen again.</li>
+<li><strong>Watch for new high-risk situations.</strong> A new job, a new commute, a move, a new baby, or a stressful life event can bring new triggers. Update your plan when your life changes.</li>
+<li><strong>Get help if you need it.</strong> If anger is causing problems in other parts of your life as well, or if you find you cannot control it despite your efforts, consider talking to a health care provider or a licensed counselor. Anger that spills across many areas of life is a common and treatable problem.</li>
+</ul>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Personal change plan</dt><dd>A specific, written plan naming your reasons for change, high-risk situations, warning signs, strategies, monitoring and support.</dd>
+<dt>High-risk situation</dt><dd>A situation in which you are more likely than usual to fall back into aggressive driving, such as time pressure, fatigue or a known trigger location.</dd>
+<dt>Lapse (slip)</dt><dd>A single return to an old behavior, such as one angry honk.</dd>
+<dt>Relapse</dt><dd>A return to the old pattern, where aggressive driving becomes your normal behavior again.</dd>
+<dt>All-or-nothing thinking</dt><dd>Seeing a single slip as total failure ("I blew it, so it doesn't matter"), which can turn a lapse into a relapse.</dd>
+<dt>Seemingly irrelevant decisions</dt><dd>Small choices that seem harmless but lead step by step toward a high-risk situation.</dd>
+<dt>Maintenance</dt><dd>Ongoing steps, such as plan reviews, practice and rewards, that keep a new habit in place over time.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>General intentions rarely survive real driving. A specific, written, personal plan that you monitor and revise is far more effective.</li>
+<li>Your plan has six parts: reasons for change, high-risk situations, warning signs, strategies, self-monitoring, and support.</li>
+<li>Delaware points count at full value for 12 months and half value for the next 12, so the next two years are when one more violation is most costly. Aggressive driving carries 6 points, and a repeat conviction within 3 years adds a 30-day suspension.</li>
+<li>Self-monitoring after each drive (never while driving) shows patterns and progress.</li>
+<li>Almost everyone slips. A lapse is one incident; a relapse is a return to the old pattern. All-or-nothing thinking is what turns one into the other.</li>
+<li>Watch for seemingly irrelevant decisions, such as leaving late, skipping your routine, or keeping your phone in your lap, that lead toward high-risk situations.</li>
+<li>To recover from a slip: stop, get safe, calm your body, coach yourself, review later, update your plan, and recommit.</li>
+<li>Maintain change by reviewing your plan at set intervals, practicing on good days, rewarding progress, and getting help if anger affects other areas of your life.</li>
+</ul>
+<p>When the timer for this module reaches 00:00, return to the course and continue to Module 16, Final Review and Commitment.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 15 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 16.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m15-remaining', DONE='de-bmc-m15-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 15. Return to your course and continue to Module 16.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

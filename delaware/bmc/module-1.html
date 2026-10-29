@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 1: Course Orientation and Delaware's Aggressive Driving Law | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 1 of 16 &middot; 30 minutes</span>Module 1: Course Orientation and Delaware's Aggressive Driving Law</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course under 21 Del.C. §4175A(d) and 2 DE Admin. Code 1202; also used at 12 points under DMV Policy Reg. 2208 §4.6). Module B1: why you are here (§4175A conviction or 12-point action); 90-day completion rule, one 90-day extension and non-compliance consequences (Reg 1202 §3.1.3–3.1.5); points (Reg 2208 §4.1, §4.6, §4.13); §4175A fines and penalties; how the course works. -->
+
+<p>Welcome to the Delaware Behavior Modification Course for aggressive driving. Most people who open this first module did not plan to be here. Some of you were convicted of aggressive driving and the court ordered this course. Others built up enough points on your Delaware driving record that the Division of Motor Vehicles (DMV) told you to complete a behavior modification course or face a suspension. Either way, you probably have mixed feelings: irritation about the ticket, worry about your license, maybe a sense that the officer or the system was unfair. Those feelings are normal. What this course asks is that you take an honest look at how you drive, why you make the choices you make on the road, and what you can do differently starting with your very next trip. This first module explains why you are here, what Delaware law requires of you, what happens if you do not finish on time, and how the next eight hours will work.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain the two ways a Delaware driver is directed to a behavior modification course: a conviction under 21 Del.C. §4175A or a point-system action under DMV Policy Regulation 2208.</li>
+<li>Describe Delaware's legal definition of aggressive driving and the penalties for a first and a subsequent offense.</li>
+<li>State the 90-day completion rule, the one-time extension, and the consequences of not completing the course under Regulation 1202.</li>
+<li>Explain how Delaware assigns points, how points age over 24 months, and what happens at the 8-, 12- and 14-point levels.</li>
+<li>Describe how this course is organized, how completion is reported, and how to get help.</li>
+<li>Complete a first honest self-assessment of your own driving habits.</li>
+</ul></div>
+
+<h3>Why You Are Here: Two Roads Into This Course</h3>
+<p>Delaware sends drivers to a behavior modification, or "attitudinal driving," course through two separate legal paths.</p>
+
+<h4>Path 1: A conviction for aggressive driving</h4>
+<p>Delaware's aggressive driving law is 21 Del.C. §4175A. Subsection (d) of that law says: "In addition to the penalties imposed pursuant to subsection (c) of this section, whoever violates this section shall be ordered to complete a course of instruction established by the Secretary to address behavior modification or attitudinal driving." Notice the word "shall." The course is not optional and it is not a bargain you struck with the court. It is part of the sentence for every person convicted under §4175A, on top of any fine, jail time, or license suspension.</p>
+
+<h4>Path 2: The point system</h4>
+<p>The DMV runs a "Driver Improvement Problem Driver Program" under DMV Policy Regulation 2208. When a driver reaches 12 points, the DMV requires the driver to complete a behavior modification/attitudinal driving course within 90 days of notice. If the driver does not complete it, or chooses not to, the result is a mandatory two-month suspension. The same course comes up in other point-system situations as well. At 14 points or more, a driver who is suspended must show completion of a behavior modification course within the past two years, plus pay a reinstatement fee, before the license is reinstated. And a driver caught going 25 to 29 mph over the limit may be allowed to take a course instead of serving the suspension that would otherwise apply.</p>
+
+<div class="highlight"><strong>Key Point:</strong> Whether you arrived through a court order under §4175A or through the DMV point system, the purpose of this course is the same: to help you understand and change the attitudes and habits that led to risky driving, so you do not end up back here.</div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which path brought you to this course? In one or two sentences, describe the driving event or events that led here, in your own words.</label><textarea></textarea></div>
+
+<h3>Delaware's Aggressive Driving Law: The Definition</h3>
+<p>Many people assume "aggressive driving" means yelling, honking, or making rude gestures. Delaware's legal definition is more specific than that, and it is built around conduct, not mood. Under 21 Del.C. §4175A, aggressive driving is "continuous conduct which violates 3 or more of" twelve listed sections of the Delaware traffic code. In other words, one mistake is not aggressive driving under this law. The offense is a pattern: a connected stretch of driving in which a person breaks three or more of the listed rules.</p>
+
+<table>
+<tr><th>Section (21 Del.C.)</th><th>What it covers, in plain terms</th></tr>
+<tr><td>§4107</td><td>Obeying traffic-control devices (signs, signals and markings)</td></tr>
+<tr><td>§4108</td><td>Traffic-control signals (for example, red and green lights)</td></tr>
+<tr><td>§4117</td><td>Passing on the right</td></tr>
+<tr><td>§4122</td><td>Driving on roadways laned for traffic (staying in and changing lanes properly)</td></tr>
+<tr><td>§4123</td><td>Following too closely</td></tr>
+<tr><td>§4132</td><td>Yielding when turning left</td></tr>
+<tr><td>§4133</td><td>Yielding when entering a roadway (for example, from a driveway)</td></tr>
+<tr><td>§4155</td><td>Turn signals</td></tr>
+<tr><td>§4164</td><td>Stop signs and yield signs</td></tr>
+<tr><td>§4166(d)</td><td>Stopping for a school bus</td></tr>
+<tr><td>§4168</td><td>Speed restrictions (the "reasonable and prudent" basic speed rule)</td></tr>
+<tr><td>§4169</td><td>Speed limits</td></tr>
+</table>
+
+<p>You may recognize your own habits here. Speeding, tailgating, rolling through a stop sign, cutting across lanes without a signal, passing on the right: each one, done alone, is an ordinary traffic violation. Strung together in a single burst of impatient driving, they become a criminal offense with a mandatory course attached. Module B2 looks at each of these offenses in detail and at how aggressive driving differs from road rage. The key idea: the law targets a <em>pattern</em>, and a pattern can be changed.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "I wasn't angry, so I couldn't have been driving aggressively."</p><p><strong>Fact:</strong> Delaware's definition in §4175A is based on what you did, not on how you felt. A driver who is calm but in a hurry, and who speeds, follows too closely and changes lanes without signaling in one continuous stretch, can meet the definition just as easily as a driver who is furious.</p></div>
+
+<h3>Penalties for Aggressive Driving in Delaware</h3>
+<p>Section 4175A(c) sets the penalties. They increase sharply for a second offense within three years.</p>
+
+<table>
+<tr><th>Offense</th><th>Fine</th><th>Jail</th><th>Other</th></tr>
+<tr><td>First offense</td><td>$100 to $300</td><td>10 to 30 days (fine, jail, or both)</td><td>Mandatory behavior modification course (§4175A(d)); 6 points (Reg 2208)</td></tr>
+<tr><td>Subsequent offense within 3 years</td><td>$300 to $1,000</td><td>30 to 60 days (fine, jail, or both)</td><td>30-day license suspension; mandatory course; 6 points</td></tr>
+</table>
+
+<p>Notice that jail is possible even for a first offense. Also, the six points assigned to aggressive driving under Regulation 2208 are among the heaviest in the Delaware point system. Six points is the same value Regulation 2208 assigns to reckless driving and to operating a vehicle in a way that causes a death. Reg 2208 also marks aggressive driving with an asterisk, meaning it may lead to further DMV action, including suspension.</p>
+
+<div class="warning"><strong>Delaware Law:</strong> A second aggressive driving conviction within three years brings a fine of $300 to $1,000, 30 to 60 days in jail, or both, plus a 30-day license suspension, plus another mandatory behavior modification course. The time to change the pattern is now, after the first one.</div>
+
+<p>Section 4175A(d) also deals with the cost of the course itself. It directs that the fee schedule for these courses "shall not exceed the maximum fine imposed pursuant to subsection (c)."</p>
+
+<h3>The 90-Day Rule and What Happens If You Miss It</h3>
+<p>This is the most practical section of the module, so read it carefully. The deadline rules for court-ordered drivers come from Delaware Regulation 1202, "Aggressive Drivers," which governs the behavior modification program.</p>
+
+<h4>For Delaware drivers convicted under §4175A (Reg 1202 §3.1.4)</h4>
+<ol>
+<li>After your conviction, the court sends the order for the course to the DMV Driver Improvement Section.</li>
+<li>You must contact the Division and finish the course within <strong>90 days after conviction</strong>.</li>
+<li>If you fail to do so, the court is notified and holds a <strong>non-compliance hearing</strong>.</li>
+<li>At that hearing, the court may issue a failure-to-comply order, or it may allow you to re-enter the program. Any suspension follows the court's direction.</li>
+<li>If your license is suspended for non-compliance, reinstatement requires that you complete the course and pay the required fees. <strong>No occupational license is issued during that suspension.</strong></li>
+<li>One 90-day extension may be granted if you make a <strong>written request</strong>.</li>
+</ol>
+<p>When you finish, the Driver Improvement Section notifies the court of your completion (Reg 1202 §3.1.5). The DMV describes the rule this way: "Offenders are required to complete a behavioral modification/attitudinal-driving course within 90 days," and "Failure to attend the course may result in suspension of the individuals driving privilege."</p>
+
+<h4>For out-of-state drivers (Reg 1202 §3.1.3)</h4>
+<p>If you hold a license from another state but were convicted in Delaware, you may attend a Delaware course, or a similar course in your home state that has been reviewed by Delaware's Aggressive Driving Committee. The same 90-day rule applies. If you do not comply, the matter may be forwarded to your home state.</p>
+
+<h4>For drivers sent here by the point system (Reg 2208)</h4>
+<p>At 12 points, you must complete the course within 90 days of the DMV's notice, or you face a mandatory two-month suspension. Regulation 2208 (§4.17.1) also allows a driver to request an extra 90 days.</p>
+
+<div class="warning"><strong>Do Not Let the Clock Run Out:</strong> The single most avoidable consequence in this entire course is a suspension for simply not finishing on time. Note your deadline today. If something serious will keep you from finishing, put your extension request in writing before the deadline passes, not after.</div>
+
+<p>This course gives general information about Delaware law. It is not legal advice. If you have questions about your specific court order, your deadline, a pending charge, or whether this course satisfies your particular requirement, contact the court or the DMV Driver Improvement Section, and consider talking with an attorney.</p>
+
+<div class="scenario"><h4>Scenario: The Deadline That Slipped</h4><p>A driver we'll call Marcus was convicted of aggressive driving in Kent County. He paid his fine the same week and figured he would "get to the course eventually." Work got busy. Two and a half months later, he realized he had not started. His deadline is about two weeks away, and he is leaving for a family emergency out of state.</p><details><summary>What should happen here?</summary><p>Marcus still has time to act, but he needs to act now. He can start the course immediately and finish modules on the days he is available, since an eight-hour course can be completed well within two weeks. If the family emergency truly prevents that, he should submit a written request for the one 90-day extension allowed under Regulation 1202 before the deadline. What he should not do is ignore the deadline. If 90 days pass without completion, the court is notified and holds a non-compliance hearing, and any resulting suspension comes with no occupational license.</p></details></div>
+
+<h3>How the Delaware Point System Works</h3>
+<p>Even if you came here through a court conviction, the point system affects you, because an aggressive driving conviction adds six points to your record. Understanding how points work helps you see how close you are to the next consequence.</p>
+
+<h4>Point values (Reg 2208 §4.1)</h4>
+<table>
+<tr><th>Violation</th><th>Points</th></tr>
+<tr><td>Speeding 1–9 mph over</td><td>2</td></tr>
+<tr><td>Speeding 10–14 mph over</td><td>4</td></tr>
+<tr><td>Speeding 15–19 mph over</td><td>5</td></tr>
+<tr><td>Speeding 20 or more mph over</td><td>5 (may lead to more action, including suspension)</td></tr>
+<tr><td>Disregarding a stop sign or red light</td><td>3</td></tr>
+<tr><td>Passing a stopped school bus</td><td>6 (may lead to more action)</td></tr>
+<tr><td>Reckless driving</td><td>6</td></tr>
+<tr><td>Aggressive driving</td><td>6 (may lead to more action under Reg 2208)</td></tr>
+<tr><td>Operation of a vehicle causing death</td><td>6 (may lead to more action)</td></tr>
+<tr><td>Any other moving violation in 21 Del.C. Chapters 27, 41 or 42</td><td>2</td></tr>
+</table>
+
+<h4>Point thresholds (Reg 2208 §4.6)</h4>
+<table>
+<tr><th>Points</th><th>DMV action</th></tr>
+<tr><td>8</td><td>Advisory letter</td></tr>
+<tr><td>12</td><td>Complete a behavior modification/attitudinal driving course within 90 days of notice, or a mandatory 2-month suspension</td></tr>
+<tr><td>14</td><td>4-month suspension</td></tr>
+<tr><td>16</td><td>6-month suspension</td></tr>
+<tr><td>18</td><td>8-month suspension</td></tr>
+<tr><td>20</td><td>10-month suspension</td></tr>
+<tr><td>22</td><td>12-month suspension</td></tr>
+</table>
+<p>At 14 points or more, reinstatement requires a behavior modification course completed within the past two years, plus a reinstatement fee.</p>
+
+<h4>How points age (Reg 2208 §4.13)</h4>
+<p>Points do not stay at full value forever, but they do not disappear quickly either. A violation counts at <strong>full value for 12 months</strong> from the violation date, then at <strong>half value for the next 12 months</strong>. DMV action is based on convictions within that 24-month period. So a 4-point speeding ticket counts as 4 points for its first year and as 2 points during its second year.</p>
+
+<h4>A worked example</h4>
+<p>Consider a driver we'll call Dana. In January, Dana is ticketed for going 12 mph over the limit: 4 points. In May, Dana goes 17 mph over: 5 points. Dana now has 9 points, which is past the 8-point mark, so the DMV sends an advisory letter. In September, Dana rolls through a red light while trying to beat it: 3 more points, for a total of 12. Because all three violations happened within 12 months of each other, each counts at full value. Dana has reached the 12-point level and must finish a behavior modification course within 90 days of the DMV's notice or face a two-month suspension.</p>
+<p>Now imagine the next January. Dana's first ticket is now more than 12 months old, so it counts at half value: 2 points instead of 4. Dana's total drops to 10. But notice how little room there is. One more 4-point speeding ticket would put Dana back at 14 points, which means a four-month suspension. Points age slowly, and a driver who keeps getting tickets can stay near the top of the scale for years.</p>
+
+<div class="highlight"><strong>Key Fact:</strong> Delaware's Defensive Driving Course credit does not change the 8-point advisory letter (Reg 2208 §4.6), and DMV says that credit "does not lower total points used for employment and insurance reviews." The most reliable way to lower your risk of suspension is to stop adding new points.</div>
+
+<div class="scenario"><h4>Scenario: "I'll Just Take Another Class"</h4><p>A driver we'll call Terrell is at 11 points. He has heard that classes can help and assumes that once he finishes this behavior modification course, his points will be wiped clean, so another ticket or two will not matter.</p><details><summary>What should happen here?</summary><p>Terrell has the wrong idea. Nothing in the Delaware rules says finishing this course erases points; points age on their own schedule. If Terrell adds a 4-point ticket, he reaches 15 points, which is past the 14-point level for a four-month suspension. This course is a tool for change, not an eraser. Terrell should also not assume this course brings the insurance discount or point credit associated with Delaware's voluntary Defensive Driving Course. If he wants to know about those, he should ask the DMV or his insurer directly.</p></details></div>
+
+<h3>How This Course Works</h3>
+<p>Delaware's rules require that the behavior modification course provide a minimum of eight hours of instruction. The DMV describes the course as "a minimum of 8 hours long." This course meets that requirement through sixteen modules, each built to take 30 minutes.</p>
+
+<h4>The structure</h4>
+<ul>
+<li><strong>Modules B1–B4</strong> cover the law and the behaviors: why you are here, what aggressive driving and road rage are, speed and following distance, and risky maneuvers.</li>
+<li><strong>Modules B5–B9</strong> cover the psychology: driving anger, triggers and thinking patterns, emotions and stress, other aggressive drivers, and factors that make aggression worse.</li>
+<li><strong>Module B10</strong> covers the full range of consequences in Delaware.</li>
+<li><strong>Modules B11–B15</strong> are about change: rethinking situations, calming skills, planning ahead, courtesy and empathy, and building a personal change and relapse-prevention plan.</li>
+<li><strong>Module B16</strong> reviews the whole course and prepares you for the final exam.</li>
+</ul>
+
+<h4>Timers and pacing</h4>
+<p>Each module has a timer. You cannot move forward until the timer reaches 00:00. Use the time to read each section, open each scenario, and work through the reflection prompts. The reflection boxes are for you only; they are not submitted or graded. They are there because writing down your own answers is one of the most effective ways to turn information into actual change.</p>
+
+<h4>The final exam</h4>
+<p>At the end of the course you will take a final exam drawn from material in all sixteen modules. You need a score of 80% to pass. Questions come directly from the content, so careful reading in each module is the best preparation.</p>
+
+<h4>Completion and reporting</h4>
+<p>Regulation 1202 requires the course provider to notify the Division of Motor Vehicles of each student's successful completion. The DMV states that "the provider will send the notification of completion electronically to DMV within 48 hours." For court-ordered drivers, the DMV Driver Improvement Section then notifies the court that you have completed the course.</p>
+
+<h4>Getting help</h4>
+<p>If you have a technical problem, a question about your account, or a question about the course, call our help line at [TOLL-FREE NUMBER].</p>
+
+<h3>What This Course Is, and What It Is Not</h3>
+<p>This is an attitudinal course. Delaware's regulation asks behavior modification providers to explain how their course changes attitudes and behavior, including the psychological principles it uses. Here is the honest version of how we approach that.</p>
+
+<h4>This course is built on a simple model of behavior</h4>
+<p>Psychologists who work on anger and habits often use a cognitive-behavioral model. It breaks a reaction into links in a chain:</p>
+<ol>
+<li><strong>Trigger:</strong> something happens. A car cuts in front of you. The light turns red. You are running late.</li>
+<li><strong>Thought:</strong> you interpret it. "That idiot did that on purpose." "I can't be late again."</li>
+<li><strong>Emotion and body:</strong> you feel something. Anger, anxiety, a hot face, a tight grip.</li>
+<li><strong>Action:</strong> you do something. Speed up, tailgate, honk, weave.</li>
+<li><strong>Consequence:</strong> something follows. A ticket, a near miss, a crash, a conviction, or just a worse mood for the rest of the day.</li>
+</ol>
+<p>Every link in that chain is a place where you can step in. Later modules teach specific tools for each link: noticing triggers, reappraising thoughts, calming the body, delaying the action, and planning ahead so fewer triggers happen at all. You will also practice self-monitoring, implementation intentions ("If this happens, then I will do that"), and relapse prevention.</p>
+
+<h4>This course is not</h4>
+<ul>
+<li><strong>Therapy.</strong> If you are dealing with anger, stress or other problems that go well beyond driving, a licensed professional can help in ways a course cannot.</li>
+<li><strong>A defensive driving course.</strong> It is a separate program with a separate legal basis.</li>
+<li><strong>Legal advice.</strong> As noted above, talk with the court, the DMV, or an attorney about your specific case.</li>
+</ul>
+
+<div class="myth"><p><strong>Myth:</strong> "I'm a skilled driver. The problem is everyone else."</p><p><strong>Fact:</strong> Skill and attitude are different things. Research on driver self-ratings consistently finds that most drivers rate themselves as better than average, which cannot be true for everyone. A highly skilled driver who speeds, tailgates and weaves is still creating danger, and skill does not change the laws of physics. This course focuses on the choices you make, because choices are where crashes and convictions begin.</p></div>
+
+<div class="scenario"><h4>Scenario: The Skeptic</h4><p>A driver we'll call Renee was convicted of aggressive driving after a morning commute on I-95 near Wilmington. She tells a friend, "This course is a waste of eight hours. I know how to drive. I was late, the traffic was terrible, and the cop picked me out of a hundred people doing the same thing."</p><details><summary>What should happen here?</summary><p>Renee's feelings are understandable, and other drivers may have been speeding too. But her explanation puts all the responsibility on the traffic, the clock and the officer, none of which she can change. What she can change is how she plans her commute and how she handles the pressure of running late. If she treats this course as a punishment to sit through, she will likely keep the habits that led to the ticket. If she uses it to figure out what was going on in her head that morning, she has a real chance of never facing a second offense, with its higher fines, possible jail and 30-day suspension.</p></details></div>
+
+<div class="highlight"><strong>Course Principle:</strong> Research on driving anger, covered in Module B5, found that structured programs using relaxation skills and changes in thinking reduced driving anger, with gains largely maintained about a year later. You will not leave as a person who never feels frustrated in traffic. The goal is to widen the gap between the feeling and the action.</div>
+
+<h3>Your Starting Point: A Self-Assessment</h3>
+<p>Before you learn new tools, it helps to know where you are starting. Read each statement below and ask yourself honestly how often it describes you: never, sometimes, often, or almost always. This is not scored or graded. It is a snapshot you can compare against at the end of the course.</p>
+<ul>
+<li>I drive faster than the limit when I am running late.</li>
+<li>I follow closely so other drivers cannot cut in front of me.</li>
+<li>I change lanes frequently to find the fastest one.</li>
+<li>I speed up when someone tries to merge in front of me.</li>
+<li>I go through yellow lights that are about to turn red.</li>
+<li>I feel my heart rate jump or my grip tighten when another driver does something I don't like.</li>
+<li>I honk, flash my lights, or gesture at other drivers.</li>
+<li>I think about another driver's mistake long after it happened.</li>
+<li>I feel like other drivers are deliberately in my way.</li>
+<li>I arrive at my destination feeling more stressed than when I left.</li>
+</ul>
+<p>If you answered "often" or "almost always" to several of these, you are not alone, and you are in the right place. Each item connects to a later module: speed and following distance in B3, lane changes and yellow lights in B4, and the physical reactions and replaying of events in B5 through B7.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Look back at the list. Which two statements describe you most often? For each, write one situation where it typically happens (time of day, road, who is with you, what you were feeling).</label><textarea></textarea></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>What would it cost you to lose your license for two months, or for four? Think about work, family, money and independence. Write down the specific things that would be hardest.</label><textarea></textarea></div>
+
+<div class="scenario"><h4>Scenario: The Point-System Arrival</h4><p>A driver we'll call Luis drives for work across New Castle and Kent counties. Over the past year he picked up two speeding tickets and one stop-sign violation and just received a DMV notice that he has reached 12 points. He has never been charged with aggressive driving and does not think of himself as an aggressive driver. He wonders why he has to take a course "for angry people."</p><details><summary>What should happen here?</summary><p>Luis was directed here by the point system, not by a §4175A conviction, but the course still applies to him. Under Regulation 2208, the 12-point level requires a behavior modification/attitudinal driving course within 90 days of notice, or a mandatory two-month suspension. Luis may not feel angry, but his record shows a pattern of speed and rushing through controls, some of the same behaviors on the §4175A list. The course is less about labeling him than about finding out why the pattern keeps happening, perhaps tight schedules or a habit of making up time, and building a plan that keeps him well below 14 points.</p></details></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Aggressive driving (21 Del.C. §4175A)</dt><dd>Continuous conduct that violates three or more of twelve listed Delaware traffic sections, including speeding, following too closely, improper lane use, passing on the right, and failing to obey signals, signs or school buses.</dd>
+<dt>Behavior modification / attitudinal driving course</dt><dd>The course required by §4175A(d) for anyone convicted of aggressive driving and by Reg 2208 at the 12-point level; it focuses on changing attitudes and behavior.</dd>
+<dt>Regulation 1202</dt><dd>Delaware's "Aggressive Drivers" regulation, which sets the 90-day completion rule, the one-time extension, and the course standards.</dd>
+<dt>Regulation 2208</dt><dd>DMV Policy Regulation for the Driver Improvement Problem Driver Program, which sets point values, thresholds and how points age.</dd>
+<dt>Non-compliance hearing</dt><dd>A court hearing held when a court-ordered driver does not contact the Division or finish the course within 90 days after conviction.</dd>
+<dt>Occupational license</dt><dd>A limited license for work-related driving; Reg 1202 states that none is issued during a suspension for failing to complete this course.</dd>
+<dt>Aggressive Driving Committee</dt><dd>The committee, organized and managed by the Office of Highway Safety, that certifies behavior modification courses under Reg 1202 and Reg 2208 §4.5.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>You are here either because of an aggressive driving conviction under 21 Del.C. §4175A, which makes the course mandatory, or because you reached 12 points under DMV Policy Regulation 2208.</li>
+<li>Delaware defines aggressive driving as continuous conduct that violates three or more of twelve listed traffic sections. It is about a pattern of conduct, not about whether you felt angry.</li>
+<li>A first offense carries a $100–$300 fine, 10–30 days in jail, or both. A subsequent offense within three years carries $300–$1,000, 30–60 days, or both, plus a 30-day license suspension.</li>
+<li>Aggressive driving adds 6 points to your Delaware record.</li>
+<li>Court-ordered drivers must contact the Division and finish within 90 days after conviction. One 90-day extension may be granted on written request. Missing the deadline leads to a non-compliance hearing, and no occupational license is issued during a resulting suspension.</li>
+<li>At 12 points, the course must be completed within 90 days of notice or a mandatory two-month suspension follows; 14 points brings a four-month suspension, rising to 12 months at 22 points.</li>
+<li>Points count at full value for 12 months and half value for the next 12 months.</li>
+<li>This course is at least eight hours long, delivered in sixteen 30-minute modules, and ends with a final exam that requires 80% to pass. The provider reports completion to the DMV.</li>
+<li>The course uses a trigger-thought-emotion-action-consequence model. Every link in that chain is a place where you can make a different choice.</li>
+</ul>
+
+<p>When the timer reaches 00:00, return to the course and continue to Module B2, where you will look closely at each behavior on Delaware's aggressive driving list and learn how aggressive driving differs from road rage.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 1 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 2.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m1-remaining', DONE='de-bmc-m1-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 1. Return to your course and continue to Module 2.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 5: The Psychology of Driving Anger | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 5 of 16 &middot; 30 minutes</span>Module 5: The Psychology of Driving Anger</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course under 21 Del.C. §4175A(d) and 2 DE Admin. Code 1202; Reg 1202 §5.1.1–5.1.3 psychological principles). Module B5: the psychology of driving anger — anger vs aggression; why driving provokes anger (Monash RAD triggers preview); Jerry Deffenbacher's research on high-anger drivers and interventions; physiological arousal and its effects on driving; the cognitive-behavioral anger chain (trigger, thought, emotion, action, consequence); venting and rumination; self-monitoring (anger log); implementation intentions. -->
+
+<p>The first four modules of this course focused on what aggressive driving looks like: the law, the behaviors, the physics and the consequences. This module turns inward. It asks why. Why does a driver who is calm at work and patient with their kids find themselves gripping the wheel and shouting at a stranger over a lane change? Why do some people seem to get angry in traffic every day while others shrug the same events off? And what is actually happening in your body and brain in the seconds when anger takes over? Understanding the psychology of driving anger is not about excusing aggressive driving. It is about seeing the machinery clearly enough to change it. Once you know how anger builds, you can learn where to interrupt it.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Distinguish anger, which is an emotion, from aggression, which is a behavior.</li>
+<li>Explain why the driving environment makes anger especially likely.</li>
+<li>Summarize the research of psychologist Jerry Deffenbacher on high-anger drivers and on interventions that reduce driving anger.</li>
+<li>Describe how physical arousal affects attention, judgment and driving.</li>
+<li>Map a driving incident onto the anger chain: trigger, thought, emotion, action and consequence.</li>
+<li>Begin self-monitoring your driving anger with a simple anger log.</li>
+</ul></div>
+
+<h3>Anger Is a Feeling; Aggression Is a Choice</h3>
+<p>Let us start with an important distinction. <strong>Anger</strong> is an emotion. It is a normal human reaction, usually to a sense that something is unfair, that someone has wronged you, or that something is blocking a goal you care about. Everyone feels anger. It is not a character flaw, and it is not illegal.</p>
+<p><strong>Aggression</strong> is behavior. It is what a person does, often while angry, that is meant to pressure, punish, intimidate or harm. Tailgating to "teach someone a lesson," cutting someone off in return, honking repeatedly, chasing, brake-checking: these are aggressive acts. Delaware's aggressive driving law punishes behavior, not feelings.</p>
+<p>The two are connected but not the same. You can feel angry and still drive safely. You can also drive aggressively without feeling much anger at all, as when a driver weaves and speeds simply because they are late. This course works on both: reducing how often and how intensely you feel driving anger, and widening the gap between feeling angry and acting aggressively.</p>
+
+<div class="highlight"><strong>Key Idea:</strong> You do not have to stop feeling anger to stop driving aggressively. You have to stop letting the feeling make the decision.</div>
+
+<div class="myth"><p><strong>Myth:</strong> "When I'm angry, I can't control what I do."</p><p><strong>Fact:</strong> Anger can make control harder, but it does not remove choice. Many people who drive aggressively in traffic would not behave the same way toward a police officer, an employer, or a person much larger than they are. That shows the choice is still there. The skills in this course are about making that choice easier and more automatic.</p></div>
+
+<h3>Why Driving Makes Anger So Easy</h3>
+<p>Driving brings together almost every condition that makes people angry. It is worth naming them, because once you see them, many incidents that felt personal start to look predictable.</p>
+
+<h4>Constant goal-blocking</h4>
+<p>Every trip has a goal: get there. Traffic is full of things that block that goal, such as slow vehicles, red lights, congestion, construction and merges. Psychologists have long observed that being blocked from a goal is one of the most reliable sources of frustration, and frustration easily turns into anger. Researchers at Monash University's Accident Research Centre, who developed the Reducing Aggressive Driving (RAD) program, identified obstruction as one of the most common triggers for driver aggression.</p>
+
+<h4>Feeling disrespected</h4>
+<p>Being cut off, tailgated or ignored at a merge can feel like a personal insult, even though the other driver may not have noticed you at all. The RAD program found that feeling disrespected, for example by being cut off or tailgated, is another common trigger.</p>
+
+<h4>Time pressure</h4>
+<p>When you are running late, every delay costs you something you care about, and your tolerance drops. Time pressure is a third RAD trigger, and it is the one most drivers in this course recognize immediately.</p>
+
+<h4>Stress carried in from elsewhere</h4>
+<p>You do not leave the rest of your life at the curb when you get in the car. A bad day at work, a family argument, money worries or poor sleep all come along for the ride. The RAD program called this displaced stress: tension from other parts of life that gets released on other drivers. Module B7 covers it in depth.</p>
+
+<h4>Anonymity and no way to talk</h4>
+<p>Inside your car, you are partly hidden, and you cannot communicate with other drivers except through crude signals like horns and lights. You cannot hear the other driver say "Sorry, I didn't see you." All you have is the action, and without information, the mind tends to fill in the worst explanation.</p>
+
+<h4>Loss of control</h4>
+<p>On the road, you depend on dozens of strangers to behave predictably, and you have no control over what they do. For people who like to be in control, this can be a constant low-level source of stress that makes every surprise feel bigger.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Of the conditions above (goal-blocking, feeling disrespected, time pressure, stress from elsewhere, anonymity, loss of control), which two most often set you off behind the wheel? Give an example of each.</label><textarea></textarea></div>
+
+<h3>What the Research Shows: Jerry Deffenbacher and High-Anger Drivers</h3>
+<p>Some of the most important research on driving anger comes from psychologist Jerry Deffenbacher of Colorado State University. Over many years, Deffenbacher and his colleagues studied drivers who reported high levels of anger behind the wheel and compared them with drivers who reported low levels of driving anger.</p>
+
+<h4>What high-anger drivers do differently</h4>
+<p>Deffenbacher's research found that high-anger drivers:</p>
+<ul>
+<li><strong>Get angry faster and more intensely</strong> in the same traffic situations that low-anger drivers experience.</li>
+<li><strong>Think more hostile and aggressive thoughts</strong> about other drivers, such as assuming bad intent or imagining ways to get even.</li>
+<li><strong>Take more risks</strong>, including speeding 10 to 20 mph over the limit, making rapid lane changes, tailgating, and entering intersections on red.</li>
+<li><strong>Crash more in driving simulations.</strong> In simulator studies, high-anger drivers had about twice as many crashes as low-anger drivers.</li>
+</ul>
+<p>Look at that list of risky behaviors again. Speeding, rapid lane changes, tailgating and running red lights are almost a direct match for the behaviors on Delaware's §4175A list. The research shows how driving anger turns into exactly the kinds of conduct that lead to aggressive driving convictions.</p>
+
+<div class="highlight"><strong>Research Finding (Deffenbacher, Colorado State University):</strong> High-anger drivers became angry more quickly, had more hostile and aggressive thoughts, took more risks such as speeding 10–20 mph over, rapid lane changes, tailgating and entering intersections on red, and had about twice as many crashes as low-anger drivers in driving simulations.</div>
+
+<h4>The hopeful finding</h4>
+<p>Deffenbacher's work did not stop at describing the problem. His research also tested ways to reduce driving anger. Programs that taught relaxation skills, and programs that combined relaxation with changing angry thinking (cognitive-relaxation interventions), reduced driving anger. Just as important, the gains were largely maintained about a year later. In other words, driving anger is not a fixed personality trait you are stuck with. It responds to training, and the improvements can last.</p>
+<p>This course is built on that finding. Modules B11 and B12 teach the same kinds of skills: rethinking situations and calming your body. This module lays the groundwork by helping you understand what you are working with.</p>
+
+<div class="scenario"><h4>Scenario: Same Road, Two Drivers</h4><p>Two drivers, whom we'll call Ray and Lena, are in neighboring lanes on SR 1 heading toward Dover during a busy afternoon. A car merges abruptly in front of each of them, forcing both to brake. Ray's heart pounds; he thinks, "Unbelievable. He saw me and did it anyway," and he speeds up to tailgate the car and flash his lights. Lena also feels a jolt of anger, but she thinks, "Wow, that was close. He must have misjudged the gap," and she eases back to reopen her following distance.</p><details><summary>What should happen here?</summary><p>Ray and Lena faced the same trigger and both felt anger at first. The difference came in the next step: what each one told themselves. Ray's thought assumed deliberate disrespect, which is a hostile interpretation, and it fueled more anger and an aggressive response. Lena's thought allowed for an honest mistake, so her anger faded quickly and she acted to protect herself. Ray now has an elevated heart rate, a narrower focus, and a car he is following too closely, all of which raise his crash risk. This is Deffenbacher's research playing out in real time. The good news for Ray is that the thought is the part he can learn to change.</p></details></div>
+
+<h3>Arousal: What Anger Does to Your Body</h3>
+<p>Anger is not only a thought or a feeling. It is a full-body event. When your brain perceives a threat or an insult, it triggers the body's stress response, often called the fight-or-flight response. Stress hormones such as adrenaline are released, and within seconds:</p>
+<ul>
+<li>Your heart beats faster and harder.</li>
+<li>Your breathing speeds up and becomes shallower.</li>
+<li>Your muscles tense, especially in the jaw, shoulders, arms and hands.</li>
+<li>You may feel hot, flushed or shaky.</li>
+<li>Your attention narrows onto the perceived threat.</li>
+</ul>
+<p>This response evolved to help people survive physical danger. It is very good at preparing you to fight or run. It is not good at helping you drive a vehicle safely in traffic.</p>
+
+<h4>How arousal affects driving</h4>
+<p><strong>Tunnel vision.</strong> When you are angry, your attention locks onto the target of your anger: the car that cut you off, the driver who will not move over. That means less attention for everything else: the pedestrian stepping off the curb, the brake lights two cars ahead, the motorcycle in your blind spot. Driving safely requires broad scanning, and anger shrinks it.</p>
+<p><strong>Faster but worse decisions.</strong> High arousal pushes you to act quickly, and the actions it favors are the ones the body is primed for: confront, push, chase. Careful judgment, such as weighing the risk of a pass or accepting a delay, takes the kind of slower thinking that arousal crowds out.</p>
+<p><strong>Rougher control.</strong> Tense muscles and a strong urge to act tend to show up as harder acceleration, later and harder braking, and jerkier steering. Smooth driving is safer driving, and anger works against it.</p>
+<p><strong>Lingering effects.</strong> The body does not reset the moment the trigger is gone. The physical arousal of anger takes time to fade. That means a driver who was angered a few minutes ago is often still primed, more likely to react strongly to the next small annoyance. Incidents can stack: each one starts from a higher baseline, until a trivial event produces an explosive reaction.</p>
+
+<div class="warning"><strong>Safety Warning:</strong> The physical changes of anger, including tunnel vision, rushed decisions and rougher control, directly reduce your ability to see hazards and respond in time. Anger behind the wheel is not just an emotional problem. It is a performance problem, in the same way fatigue or distraction is.</div>
+
+<h4>Learning your early warning signs</h4>
+<p>Because arousal shows up in the body before you fully realize you are angry, your body can be your early warning system. Many drivers notice one or more of these first: a tight grip on the wheel, a clenched jaw, a hot face, leaning forward in the seat, holding your breath, a pounding heart, or muttering. If you learn to notice your own first signal, you can step in early, while you still have the most control. Module B7 goes deeper into body signals, and Module B12 teaches specific calming techniques.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think back to the last time you were truly angry behind the wheel. What was the very first physical sign you noticed? Where in your body did you feel it?</label><textarea></textarea></div>
+
+<h3>The Anger Chain</h3>
+<p>Psychologists who use cognitive-behavioral approaches describe anger as a chain of linked steps. You were introduced to this chain in Module B1. Now let us look at each link closely, because every later module in this course works on one or more of them.</p>
+<ol>
+<li><strong>Trigger:</strong> an event happens. Another driver cuts in, a light changes, traffic stops.</li>
+<li><strong>Thought (appraisal):</strong> you interpret the event. "He did that on purpose." "This always happens to me." "I'm going to be late, and it's going to be a disaster."</li>
+<li><strong>Emotion and body:</strong> the interpretation produces a feeling and a physical reaction. Anger, frustration, anxiety; a racing heart, tight muscles.</li>
+<li><strong>Action:</strong> you do something. Tailgate, honk, speed, weave, or, alternatively, back off, breathe, and let it go.</li>
+<li><strong>Consequence:</strong> the action leads to results. A near miss, a ticket, a confrontation, a crash, a conviction, or a calmer drive.</li>
+</ol>
+
+<h4>The thought is the hinge</h4>
+<p>Notice that the trigger does not lead directly to the emotion. The thought comes in between. That is why two drivers can face the same trigger and react completely differently, as Ray and Lena did. Psychologists call the process of reinterpreting a situation <em>cognitive reappraisal</em>, and research shows that reinterpreting another driver's behavior as a mistake rather than as an intentional insult reduces aggressive responses.</p>
+<p>Here is the same trigger with two different thoughts:</p>
+<table>
+<tr><th>Link</th><th>Path A</th><th>Path B</th></tr>
+<tr><td>Trigger</td><td>A car pulls out of a driveway in front of you, making you brake.</td><td>A car pulls out of a driveway in front of you, making you brake.</td></tr>
+<tr><td>Thought</td><td>"What a jerk. He thinks he owns the road."</td><td>"He probably didn't see me past the parked van."</td></tr>
+<tr><td>Emotion and body</td><td>Intense anger; heart pounding; tight grip</td><td>Brief startle; mild irritation that fades</td></tr>
+<tr><td>Action</td><td>Tailgate, honk, pass aggressively</td><td>Ease off, reopen following distance</td></tr>
+<tr><td>Consequence</td><td>Higher crash risk; possible §4175A pattern; stays angry for miles</td><td>Safe distance; calm drive; incident forgotten</td></tr>
+</table>
+<p>The other driver may well have broken the rule; Delaware's §4133 requires a driver entering from a driveway to yield to all traffic on the roadway. Path B does not excuse that. It simply refuses to let someone else's mistake become your crash or your conviction.</p>
+
+<h4>Every link is a chance to step in</h4>
+<ul>
+<li>At the <strong>trigger</strong> link, planning can reduce how many triggers you meet (Module B13).</li>
+<li>At the <strong>thought</strong> link, reappraisal changes how you interpret what happens (Modules B6 and B11).</li>
+<li>At the <strong>emotion and body</strong> link, calming skills lower arousal (Modules B7 and B12).</li>
+<li>At the <strong>action</strong> link, a deliberate delay and pre-planned responses replace automatic reactions (Module B12).</li>
+<li>At the <strong>consequence</strong> link, honest reflection on what happened helps prevent the next one (Module B15).</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Stacked Morning</h4><p>A driver we'll call Jamal oversleeps, argues with his partner on the way out, and spills coffee getting into the car. On Route 202 he hits every red light. When a delivery van stops in the lane ahead to unload, Jamal leans on his horn for several seconds, swings around it with barely a glance, and speeds through the next yellow.</p><details><summary>What should happen here?</summary><p>The van was the trigger, but it was not the cause. Jamal's arousal had been building all morning: lack of sleep, an argument, a spill, a string of red lights. Each event started from a higher baseline, so by the time the van stopped, a small delay produced a huge reaction. This is the stacking effect of lingering arousal, combined with displaced stress from home. Jamal could have interrupted the chain at several points: noticing in the driveway that he was already wound up, taking a minute to breathe before pulling out, or reminding himself at the first red light that being a few minutes late would not change his day as much as a crash or a ticket would. His swing around the van without checking and his speeding through a yellow light were not about the van at all.</p></details></div>
+
+<h3>Venting and Rumination: Two Traps</h3>
+<h4>Venting does not release anger</h4>
+<p>A common belief is that anger is like steam in a pressure cooker: if you do not let it out, it will build until you explode. Based on that belief, many drivers think honking, yelling, gesturing or "showing" the other driver is healthy. Research on anger suggests the opposite. Venting tends to <em>increase</em> anger rather than release it. Each angry action keeps the body aroused and rehearses the angry response, making it more likely next time. In traffic, venting has an added danger: it is often directed at a stranger whose reaction you cannot predict, and it can push both of you up the escalation ladder.</p>
+
+<h4>Rumination keeps anger alive</h4>
+<p>Rumination is replaying an event over and over: "I can't believe he did that. Who does he think he is? Next time someone does that, I'm going to…" Each replay re-triggers the anger and the body's arousal. A driver who ruminates about one cut-off can stay angry for the rest of the trip, and that lingering arousal raises the chance of overreacting to the next event. Rumination can also follow you out of the car, into your workplace or home.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "Yelling at the other driver makes me feel better."</p><p><strong>Fact:</strong> Venting may bring a moment of satisfaction, but research suggests it tends to increase anger and keep your body aroused. It also rehearses the aggressive response, so it becomes your default. Calming the body and reinterpreting the event are what actually bring anger down.</p></div>
+
+<div class="scenario"><h4>Scenario: The Replay</h4><p>A driver we'll call Corinne is cut off in a parking lot near Christiana. Nothing happens; she brakes in time. But for the next twenty minutes on the highway she keeps replaying it, imagining what she should have said, and she notices she is driving faster and closer to other cars than usual.</p><details><summary>What should happen here?</summary><p>Corinne is ruminating, and it is affecting her driving long after the trigger. The original event lasted seconds; the replay has lasted twenty minutes and pushed her into speeding and following too closely, two behaviors on the §4175A list. The first step is noticing: "I'm still replaying that." The next step is to deliberately shift attention, for example to her breathing, to scanning the road ahead, or to something neutral like the radio. She might also try a quick reappraisal: "That driver was probably distracted. It's over, and I'm fine." Letting the event end where it actually ended is a skill, and it gets easier with practice.</p></details></div>
+
+<h3>Starting Change: Self-Monitoring and If-Then Plans</h3>
+<p>Change begins with noticing. Self-monitoring, keeping track of your own reactions, is a basic tool in cognitive-behavioral approaches because it turns automatic reactions into things you can see and examine. Many people are surprised by what they find: that their anger follows a pattern of certain roads, certain times of day, or certain moods.</p>
+
+<h4>Your driving anger log</h4>
+<p>For the next week, after any drive in which you feel angry, take a minute once you are safely parked to note the following. Never write while driving.</p>
+<table>
+<tr><th>Item</th><th>What to note</th></tr>
+<tr><td>Situation</td><td>Where, when, and what happened (the trigger)</td></tr>
+<tr><td>Thought</td><td>What you told yourself about it</td></tr>
+<tr><td>Body and emotion</td><td>What you felt, and how strongly, on a scale of 1 (mild) to 10 (extreme)</td></tr>
+<tr><td>Action</td><td>What you did</td></tr>
+<tr><td>Outcome</td><td>What happened next, and how long the anger lasted</td></tr>
+<tr><td>Other thought</td><td>One other way you could have interpreted the situation</td></tr>
+</table>
+<p>The 1–10 rating is just for your own tracking; it is not a test or a diagnosis. Over time, the log shows you your personal triggers and your most common angry thoughts, which you will work on directly in Module B6.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Fill in the anger log for one recent driving incident: situation, thought, body and emotion (1–10), action, outcome, and one other way you could have interpreted it.</label><textarea></textarea></div>
+
+<h4>Your first if-then plan for anger</h4>
+<p>In Module B3, you wrote "if-then" plans for speed and following distance. Psychologists call these implementation intentions, and they work because they link a specific cue to a specific response, so you do not have to decide in the heat of the moment. Here are examples for driving anger:</p>
+<ul>
+<li><strong>If</strong> I notice my grip tightening on the wheel, <strong>then</strong> I will loosen my hands and take one slow breath.</li>
+<li><strong>If</strong> another driver cuts me off, <strong>then</strong> I will say to myself, "Mistake, not a message," and back off.</li>
+<li><strong>If</strong> I catch myself replaying an incident, <strong>then</strong> I will shift my attention to scanning the road ahead.</li>
+<li><strong>If</strong> I get in the car already upset, <strong>then</strong> I will take one minute to settle before I start the engine.</li>
+</ul>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Write one if-then plan for your most common driving anger trigger. Make the "if" a specific cue you can notice (a situation or a body signal) and the "then" a specific, safe action.</label><textarea></textarea></div>
+
+<h3>Self-Check: Putting It Together</h3>
+<p>Before moving on, test yourself on the core ideas of this module. Answer each question in your head, then check the answer in parentheses.</p>
+<ol>
+<li>Is it against Delaware law to feel angry while driving? (No. The law addresses behavior, such as the listed violations in §4175A, not feelings.)</li>
+<li>In the anger chain, which link explains why two drivers react differently to the same trigger? (The thought, or appraisal, of what happened.)</li>
+<li>What did Deffenbacher's research find about relaxation and cognitive-relaxation programs? (They reduced driving anger, and the gains were largely maintained about a year later.)</li>
+<li>Why might a driver who was angered ten minutes ago overreact to a small annoyance now? (Physical arousal lingers, so the next trigger starts from a higher baseline.)</li>
+<li>Does honking at another driver help your anger fade? (No. Venting tends to increase anger and rehearse the aggressive response.)</li>
+<li>What makes an if-then plan effective? (It links a specific cue you can notice to a specific safe response, decided in advance.)</li>
+</ol>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Anger</dt><dd>A normal emotion, usually in response to perceived unfairness, insult or a blocked goal.</dd>
+<dt>Aggression</dt><dd>Behavior intended to pressure, punish, intimidate or harm; in driving, actions such as tailgating, cutting off, brake-checking or chasing.</dd>
+<dt>High-anger driver</dt><dd>In Deffenbacher's research, a driver who reports frequent, intense driving anger; such drivers became angry faster, took more risks and crashed more in simulations.</dd>
+<dt>Arousal</dt><dd>The body's state of physical activation during stress or anger, including faster heart rate and breathing, muscle tension and narrowed attention.</dd>
+<dt>Cognitive reappraisal</dt><dd>Reinterpreting a situation, for example seeing another driver's action as a mistake rather than an intentional insult, which reduces anger and aggressive responses.</dd>
+<dt>Venting</dt><dd>Expressing anger through actions like yelling or honking; it tends to increase anger rather than release it.</dd>
+<dt>Rumination</dt><dd>Repeatedly replaying an upsetting event, which keeps anger and arousal going.</dd>
+<dt>Self-monitoring</dt><dd>Deliberately tracking your own reactions, such as in an anger log, to reveal patterns you can change.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Anger is a normal emotion; aggression is a behavior. You can feel angry and still choose to drive safely.</li>
+<li>Driving combines goal-blocking, feeling disrespected, time pressure, stress carried from elsewhere, anonymity and loss of control, so anger comes easily. The Monash RAD program identified obstruction, disrespect, time pressure and displaced stress as common triggers.</li>
+<li>Jerry Deffenbacher's research found that high-anger drivers get angrier faster, think more hostile thoughts, take more risks such as speeding 10–20 mph over, rapid lane changes, tailgating and entering on red, and had about twice as many simulator crashes.</li>
+<li>Relaxation and cognitive-relaxation interventions reduced driving anger, and the gains were largely maintained about a year later. Driving anger can be changed.</li>
+<li>Anger triggers a fight-or-flight response that narrows attention, rushes decisions and roughens vehicle control. Arousal lingers, so incidents can stack.</li>
+<li>The anger chain runs trigger, thought, emotion and body, action, consequence. The thought is the hinge, and cognitive reappraisal can change the outcome.</li>
+<li>Venting tends to increase anger, and rumination keeps it alive.</li>
+<li>Self-monitoring with an anger log and if-then plans are your first practical tools for change.</li>
+</ul>
+
+<p>When the timer reaches 00:00, return to the course and continue to Module B6, where you will identify your personal triggers and the specific thinking patterns that turn ordinary traffic events into anger.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 5 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 6.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m5-remaining', DONE='de-bmc-m5-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 5. Return to your course and continue to Module 6.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

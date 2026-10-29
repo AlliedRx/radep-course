@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 16: Final Review and Commitment | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 16 of 16 &middot; 30 minutes</span>Module 16: Final Review and Commitment</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course, 21 Del.C. §4175A(d); 2 DE Admin. Code 1202) | Module B16: Final Review and Commitment | Reviews B1–B15; integrated scenarios; commitment statement; final exam information -->
+<p>You have reached the final module of the Behavior Modification Course. Over the past fifteen modules you have studied Delaware's aggressive driving law and its consequences, the risky behaviors that make up aggressive driving, the psychology of driving anger, and a full set of skills for changing how you think, feel and act behind the wheel. This module brings it all together. You will review the key points from each module, work through integrated scenarios that require you to use several skills at once, and write a personal commitment statement. The module ends with information about the Final Exam. Take your time with the review. It is your best preparation for the exam, and more importantly, for the drives ahead.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Summarize Delaware's aggressive driving law, its penalties, and the course completion requirements.</li>
+<li>Review the risky behaviors and aggravating factors that make up and amplify aggressive driving.</li>
+<li>Explain the trigger–thought–emotion–action chain and the psychological principles behind driving anger.</li>
+<li>Combine calming, reappraisal, planning, courtesy and relapse-prevention skills in realistic situations.</li>
+<li>Write a personal commitment statement for how you will drive from now on.</li>
+<li>Describe how the Final Exam works and how course completion is reported.</li>
+</ul></div>
+
+<h3>Review: Why You Are Here and What the Law Says (Modules 1, 2 and 10)</h3>
+<p><strong>Module 1, Course Orientation and Delaware's Aggressive Driving Law,</strong> explained why drivers take this course. Under 21 Del.C. §4175A(d), anyone convicted of aggressive driving "shall be ordered to complete a course of instruction" that addresses "behavior modification or attitudinal driving." The same type of course is also required under DMV Policy Regulation 2208 when a driver reaches 12 points: the driver must complete it within 90 days of notice or face a mandatory 2-month suspension. At 14 points or more, reinstatement requires a behavior modification course completed within the past 2 years.</p>
+<p>For drivers ordered to take the course after an aggressive driving conviction, 2 DE Admin. Code 1202 sets the timeline. If the driver fails to contact the Division or finish the course within 90 days after conviction, the court is notified and holds a non-compliance hearing. The court may issue a failure-to-comply order or allow re-entry, and any suspension follows the court's direction. One 90-day extension may be granted on written request. Reinstatement after such a suspension requires completing the course and paying fees, and no occupational license is issued during the suspension.</p>
+<p><strong>Module 2, What Aggressive Driving and Road Rage Really Are,</strong> covered the legal definition. Delaware defines aggressive driving as "continuous conduct which violates 3 or more of" twelve listed sections of the traffic code:</p>
+<table>
+<tr><th>Section</th><th>Subject</th><th>Section</th><th>Subject</th></tr>
+<tr><td>§4107</td><td>Obedience to traffic-control devices</td><td>§4133</td><td>Entering a roadway (yielding)</td></tr>
+<tr><td>§4108</td><td>Traffic-control signals</td><td>§4155</td><td>Turn signals</td></tr>
+<tr><td>§4117</td><td>Passing on the right</td><td>§4164</td><td>Stop and yield signs</td></tr>
+<tr><td>§4122</td><td>Lane use</td><td>§4166(d)</td><td>Passing a stopped school bus</td></tr>
+<tr><td>§4123</td><td>Following too closely</td><td>§4168</td><td>Speed restrictions (reasonable and prudent)</td></tr>
+<tr><td>§4132</td><td>Left-turn yield</td><td>§4169</td><td>Speed limits</td></tr>
+</table>
+<p>The key word is <em>continuous</em>: aggressive driving is a pattern of violations in one course of driving, not a single mistake. Module 2 also explained the difference between aggressive driving, which is a pattern of risky, rule-breaking driving, and road rage, which goes further: deliberate intimidation, threats or violence aimed at another road user. Aggressive driving can escalate into road rage, which is why stopping the pattern early matters.</p>
+<p><strong>Module 10, Consequences in Delaware,</strong> laid out the costs. A first aggressive driving offense carries a fine of $100 to $300, 10 to 30 days in jail, or both. A subsequent offense within 3 years carries $300 to $1,000, 30 to 60 days, or both, plus a 30-day license suspension. Every conviction adds 6 points. Points count at full value for 12 months and half value for the next 12. Beyond the legal penalties are the costs you cannot pay off: insurance consequences, civil liability for damage and injuries, and above all the harm to people hurt in crashes, including the aggressive driver's own passengers and family.</p>
+<div class="highlight"><strong>Key Fact:</strong> Aggressive driving under 21 Del.C. §4175A is continuous conduct violating 3 or more of 12 listed sections. It carries 6 points (Reg 2208), fines and possible jail, a 30-day suspension for a repeat offense within 3 years, and a required behavior modification course.</div>
+
+<h3>Review: The Behaviors and What Makes Them Worse (Modules 3, 4 and 9)</h3>
+<p><strong>Module 3, Speed, Space and Aggression,</strong> showed that speeding and tailgating are forms of aggression because they take away other people's margin for error. The physics are unforgiving. At 60 mph you travel about 88 feet per second, and with a typical perception-reaction time of about 1.5 seconds, you cover roughly 132 feet before your foot reaches the brake. Braking distance roughly quadruples when speed doubles, and crash energy rises with the square of speed, so a crash at 50 mph carries about 56 percent more energy than one at 40 mph. Meanwhile, the time saved by speeding is small: about 1 minute 26 seconds over 10 miles at 70 instead of 60 mph. Delaware's basic speed rule (§4168(a)) prohibits driving faster than "is reasonable and prudent under the conditions," and §4123(a) prohibits following "more closely than is reasonable and prudent."</p>
+<p><strong>Module 4, Risky Maneuvers,</strong> covered lane weaving, running red lights and stop signs, failing to yield, and improper passing. Each of these takes a risk on behalf of other people who never agreed to it. Running a stop sign or red light carries 3 points under Reg 2208. Delaware law prohibits driving left of center near curves, hill crests, intersections and railroad crossings with an obstructed view (§4119), and passing is allowed only when the road is "clearly visible and is free of oncoming traffic for a sufficient distance ahead" (§4118). Improper passing is a leading path to head-on collisions.</p>
+<p><strong>Module 9, Aggravating Factors,</strong> explained how distraction, fatigue, alcohol and drugs make aggression more likely and more dangerous. They reduce self-control, slow reaction time, and narrow attention. Delaware's hand-held law (§4176C) prohibits using an electronic communication device while the vehicle is in motion, with a $100 fine for a first offense. Driving with a blood alcohol concentration of 0.08 or more, or with an illicit or recreational drug in the blood within 4 hours of driving, is per se DUI under §4177. According to DelDOT, 21 of the 117 traffic deaths on Delaware roads in 2025 were DUI-related.</p>
+
+<h3>Review: The Psychology of Driving Anger (Modules 5, 6, 7 and 8)</h3>
+<p><strong>Module 5, The Psychology of Driving Anger,</strong> introduced the research of psychologist Jerry Deffenbacher of Colorado State University. High-anger drivers get angry faster, think more hostile and aggressive thoughts, and take more risks, such as speeding 10 to 20 mph over, making rapid lane changes, tailgating and entering intersections on red. In driving simulations they had about twice as many crashes as low-anger drivers. The good news from the same research: relaxation and cognitive-relaxation training reduced driving anger, and the gains were largely maintained about a year later.</p>
+<p><strong>Module 6, Triggers and Thinking Patterns,</strong> described the chain at the center of this course: <strong>trigger → thought → emotion → action</strong>. The Monash University Accident Research Centre's Reducing Aggressive Driving (RAD) program identified common triggers: obstruction, feeling disrespected (being cut off or tailgated), time pressure, and displaced stress. Thinking patterns that pour fuel on those triggers include hostile attribution ("They did it on purpose"), personalization ("They're doing it to me"), "should" statements ("People should know how to merge"), and catastrophizing ("This will ruin my whole day").</p>
+<p><strong>Module 7, Emotions, Body Signals and Stress,</strong> taught you to recognize early warning signs, such as a tight grip, clenched jaw, hot face, fast breathing and creeping closer to the car ahead, and to notice displaced aggression, when stress from work, home or money is aimed at an unrelated driver.</p>
+<p><strong>Module 8, When Someone Else Is Aggressive,</strong> covered how to protect yourself: do not engage, avoid eye contact and gestures, give the other driver room and let them pass, never stop to confront them, and if you feel threatened, keep your doors locked and drive to a safe public place, such as a police station or busy, well-lit business, and call 911 when it is safe to do so. Do not drive home if you are being followed.</p>
+
+<h3>Review: The Skills for Change (Modules 11 through 15)</h3>
+<table>
+<tr><th>Module</th><th>Core skill</th><th>In one sentence</th></tr>
+<tr><td>11. Rethinking the Situation</td><td>Cognitive restructuring and reappraisal</td><td>Catch the hostile first thought and replace it with a more accurate, calmer one, such as "Maybe they didn't see me."</td></tr>
+<tr><td>12. Calming Skills</td><td>4-4-6 breathing, muscle release, physical reset, three-second delay</td><td>Lower your body's alarm and block the impulse to retaliate.</td></tr>
+<tr><td>13. Planning Ahead</td><td>Trip planning, time buffers, transition routine, if-then plans</td><td>Remove time pressure and displaced stress before you start the engine.</td></tr>
+<tr><td>14. Courtesy, Empathy and Sharing the Road</td><td>Perspective-taking, cooperation, zipper merging, protecting vulnerable users</td><td>Treat the road as a shared space and other users as people, not opponents.</td></tr>
+<tr><td>15. Personal Change Plan and Relapse Prevention</td><td>Written plan, self-monitoring, handling slips</td><td>Use a specific plan, track your progress, and treat a slip as information, not failure.</td></tr>
+</table>
+<p>These skills work best together. Planning reduces how often you are triggered. Calming skills keep your body from taking over when you are. Reappraisal changes the meaning of the event. Courtesy keeps conflicts small and prevents new ones. Your personal plan ties it all together and keeps you going after the course ends.</p>
+
+<p>It helps to see where each skill fits on the trigger–thought–emotion–action chain. <strong>Before the trigger</strong>, planning ahead and your pre-drive transition routine reduce how often triggers happen and how tense you are when they do. <strong>At the thought</strong>, reappraisal and perspective-taking replace "He did that on purpose" with "He probably didn't see me." <strong>At the emotion</strong>, your tension rating, 4-4-6 breathing and the grip-shoulders-jaw release bring your body back down. <strong>At the action</strong>, the three-second delay, adding space, letting others pass, and the apology gesture keep your behavior safe and lawful even when you still feel some anger. <strong>After the event</strong>, the physical reset and a closing phrase stop rumination, and your driving log turns the experience into information for your plan. You do not need every skill every time. You need at least one link in the chain where you reliably step in.</p>
+
+<div class="myth"><p><strong>Myth:</strong> Aggressive driving is just part of my personality. Some people are calm drivers and some aren't.</p><p><strong>Fact:</strong> Driving anger is a learned pattern, and learned patterns can change. Deffenbacher's research found that high-anger drivers who learned relaxation and cognitive skills reduced their driving anger, with gains largely maintained about a year later. Your personality does not decide your next move. Your choices do.</p></div>
+
+<h3>Integrated Scenarios: Putting It All Together</h3>
+<p>Real situations rarely call for just one skill. Work through each scenario below, decide what you would do, and then open the answer to compare.</p>
+
+<div class="scenario"><h4>Scenario: The Late Start and the Tailgater</h4><p>Consider a driver we'll call Jordan, who left home 15 minutes late after an argument with a family member and skipped the pre-drive routine. On SR 1, Jordan is driving 12 mph over the limit in the left lane. A car comes up close behind and flashes its high beams. Jordan feels a surge of anger and thinks, "Who does this guy think he is? I'm not moving." Jordan's foot lifts off the gas to slow down and "teach him."</p><details><summary>What should happen here?</summary><p>Several skills apply. First, the three-second delay: Jordan says "Hold" and does nothing for three seconds except drive steadily. Second, calm the body: 4-4-6 breathing and loosening the grip. Third, reappraise: "His hurry is not my problem, and I'm not here to police him." Fourth, courtesy and disengagement: Jordan signals and moves right when it is safe, letting the other car pass, and avoids eye contact. Slowing down to "teach him" would be a brake check that could cause a rear-end crash and escalate into road rage. Jordan also recognizes the setup: displaced stress from the argument and time pressure from leaving late, plus speeding 12 mph over, which by itself would carry 4 points under Reg 2208. Afterward, Jordan logs the event as a near-slip and adds an if-then plan: "If I've just had an argument, then I do the full transition routine before I drive, no matter how late I am."</p></details></div>
+
+<div class="scenario"><h4>Scenario: The Pedestrian and the Honk Behind You</h4><p>Consider a driver we'll call Priya, waiting to turn right at a busy intersection in Wilmington. An older man is crossing slowly in the crosswalk. The driver behind Priya honks twice. Priya feels pressure from both sides and starts to roll forward to show the driver behind her that she is trying.</p><details><summary>What should happen here?</summary><p>Priya must stay stopped. Delaware law requires drivers turning at a crosswalk to "yield the right-of-way, slowing down or stopping if need be to so yield" to pedestrians (§4142(a)), and to use due care toward pedestrians (§4144). If the man were using a white cane or guide dog, the White Cane Law would require her to take all necessary precautions to avoid injuring him. Priya uses perspective-taking for both people: the pedestrian may need more time, and the driver behind her may not be able to see him. She breathes, keeps her foot on the brake, and turns only when the crosswalk is clear. She does not respond to the honking. The honk is the other driver's problem, not an instruction she must follow.</p></details></div>
+
+<div class="scenario"><h4>Scenario: The Lane Closure, the Worker and the Merge</h4><p>Consider a driver we'll call Sam, traveling on a highway posted at 55 mph that narrows to one lane in a work zone. Sam merged early. Cars keep using the closing lane and squeezing in near the merge point. Sam is annoyed and wants to ride close to the car ahead so no one can get in. Just past the merge, a DelDOT truck with flashing lights is parked on the shoulder with a crew working nearby.</p><details><summary>What should happen here?</summary><p>Sam uses zipper courtesy: in slow, heavy traffic, taking turns at the merge point is reasonable, so Sam leaves a gap and lets one car in. Riding close to block others would be following too closely, one of the offenses listed in §4175A, inside a work zone where fines for many violations are at least doubled (§4105(f)). Past the merge, the Move Over law (§4134) applies to the DelDOT truck showing warning lights. If Sam cannot safely move to a lane not next to it, Sam must slow to a safe speed at least 20 mph below the posted limit, so 35 mph or less on this road. Sam uses a reframe ("Everyone's stuck in the same work zone") and stays focused on the workers, who have no protection but drivers' attention.</p></details></div>
+
+<div class="scenario"><h4>Scenario: Three Months Later</h4><p>Consider a driver we'll call Alex, who finished this course three months ago and has had no tickets since. Alex has stopped keeping a driving log and has not looked at the change plan in weeks. Lately, Alex notices old habits returning: creeping up on slow drivers, an occasional long honk, a little more speed when running late.</p><details><summary>What should happen here?</summary><p>Alex is in the danger zone between a lapse and a relapse. The warning signs are clear, and so is the cause: the maintenance steps from Module 15 have stopped. Alex should not conclude "the course didn't work." Instead, Alex rereads the reasons for change, restarts the driving log for two weeks, and resumes the pre-drive transition routine. Alex also remembers that points from the original conviction still count at half value until 24 months after the violation, so one more speeding ticket now would be costly. Alex sets calendar reminders to review the plan monthly. Change is maintained, not achieved once.</p></details></div>
+
+<h3>Self-Check: Are You Ready?</h3>
+<p>Before the Final Exam, see whether you can answer these questions from memory. If any of them is difficult, go back to the review above or to that module's summary.</p>
+<ol>
+<li>How many of the twelve listed sections must a driver's continuous conduct violate to meet Delaware's definition of aggressive driving?</li>
+<li>How many points does an aggressive driving conviction carry under Reg 2208?</li>
+<li>Within how many days after conviction must this course be completed under Reg 1202, and how many extensions may be granted?</li>
+<li>What are the four common triggers identified by the Monash RAD program?</li>
+<li>What does the 4-4-6 breathing pattern stand for, and which part matters most?</li>
+<li>What is the difference between a lapse and a relapse?</li>
+<li>What should you do if another driver's aggression makes you feel threatened?</li>
+<li>What score is needed to pass the Final Exam?</li>
+</ol>
+<p><strong>Answers:</strong> (1) three or more; (2) 6 points; (3) 90 days, with one 90-day extension on written request; (4) obstruction, feeling disrespected, time pressure and displaced stress; (5) breathe in for 4, hold for 4, out for 6, with the long exhale mattering most; (6) a lapse is a single slip, while a relapse is a return to the old pattern; (7) do not engage, keep your doors locked, drive to a safe public place and call 911 when it is safe; (8) 80% or better.</p>
+
+<h3>Delaware's Roads: Why This Matters</h3>
+<p>Behind every statistic is a person who did not come home. According to DelDOT, Delaware recorded 130 traffic deaths in 2024 and 117 in 2025, about 10 percent fewer. Fifty of the 2025 deaths involved vehicles leaving the roadway, and 21 were DUI-related. National data compiled by IIHS from federal fatality records show that in 2024, 31 Delaware traffic deaths, about 25 percent, were speed-related. (State and federal counts for 2024 differ slightly because they are compiled differently; the figures above name their sources.)</p>
+<p>These numbers can feel distant, but the behaviors behind many of them are the ones this course has focused on: speed, impatience, risky passing, distraction and impairment. Every driver who chooses patience over aggression makes those numbers a little smaller. Your choices on the road are part of Delaware's safety record.</p>
+<div class="highlight"><strong>Delaware Data (DelDOT, 2025):</strong> 117 traffic deaths, about 10% fewer than the 130 recorded in 2024; 50 involved roadway departures and 21 were DUI-related. <strong>IIHS (2024, from federal FARS data):</strong> 31 speed-related deaths, about 25% of Delaware's total.</div>
+
+<h3>Your Commitment Statement</h3>
+<p>A commitment statement is a short, personal promise about how you will drive from now on. Psychologists find that a clear, specific commitment, especially one that is written and connected to your own values, makes it more likely that you will follow through. Your statement pulls together your reasons for change, your main strategies, and what you will do if you slip.</p>
+<p>A strong commitment statement:</p>
+<ul>
+<li>Is written in the first person ("I will…").</li>
+<li>Names your main reason for change.</li>
+<li>Names two or three specific behaviors you will practice, such as leaving a time buffer, using the three-second delay, or letting tailgaters pass.</li>
+<li>Names what you will do if you slip.</li>
+<li>Is short enough to remember and reread.</li>
+</ul>
+<p>Here is an example: "I will drive like the calm, careful person my kids think I am. I will leave ten minutes early, do my two-minute routine before every drive, and use 'Hold' and three breaths whenever someone cuts me off. If I slip, I will stop, reset, and update my plan, not give up. My license, my freedom and other people's lives are worth more than any few minutes."</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Write your personal commitment statement. Include your main reason for change, two or three specific behaviors you will practice, and what you will do if you slip. Consider copying it somewhere you will see it before you drive.</label><textarea></textarea></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Looking back over all sixteen modules, what is the single most important thing you learned about yourself as a driver? What is the first change you will make on your very next drive?</label><textarea></textarea></div>
+
+<h3>The Final Exam and Course Completion</h3>
+<p>After this module, you will take the Final Exam. Here is what to expect:</p>
+<ul>
+<li><strong>Content:</strong> the exam covers material from all sixteen modules, including Delaware's aggressive driving law and its consequences, risky driving behaviors, the psychology of driving anger, and the skills for change. The review in this module and the summaries at the end of each module are good preparation.</li>
+<li><strong>Passing score:</strong> you must score <strong>80% or better</strong> to pass.</li>
+<li><strong>Take your time:</strong> read each question carefully. Questions are straightforward and are based on the course content. There are no trick questions.</li>
+<li><strong>Help:</strong> if you have a technical problem or a question about the course or exam, call our help line at [TOLL-FREE NUMBER].</li>
+</ul>
+<h4>After you pass</h4>
+<p>When you successfully complete the course, your completion is reported to the Delaware Division of Motor Vehicles. DMV states that the provider sends the notification of completion electronically to DMV within 48 hours. For drivers ordered to take the course after an aggressive driving conviction, Reg 1202 provides that DMV's Driver Improvement Section notifies the court of completion. Your certificate of completion will include your name, date of birth, driver license number and address, the class date, the provider's name, the course title, and an authorized signature. Keep a copy of your certificate for your records.</p>
+<div class="warning"><strong>Delaware Reminder:</strong> Completion must happen within the required time. After an aggressive driving conviction, that is 90 days after conviction under Reg 1202, with one 90-day extension possible on written request. For a 12-point notice, it is within 90 days of the notice under Reg 2208. If you have questions about your own deadline, suspension, or reinstatement, contact the Delaware Division of Motor Vehicles. This course does not provide legal advice; for questions about a court order or your specific case, consult an attorney.</div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Aggressive driving (21 Del.C. §4175A)</dt><dd>Continuous conduct that violates 3 or more of 12 listed sections of the Delaware traffic code, such as speeding, following too closely, improper lane use and failing to signal.</dd>
+<dt>Road rage</dt><dd>Deliberate intimidation, threats or violence aimed at another road user; aggressive driving can escalate into road rage.</dd>
+<dt>Trigger–thought–emotion–action chain</dt><dd>The sequence by which a driving event leads, through your interpretation and feelings, to your behavior; each link is a place where you can intervene.</dd>
+<dt>Behavior modification / attitudinal driving course</dt><dd>The course required by §4175A(d) after an aggressive driving conviction, and by Reg 2208 at 12 points and for reinstatement at 14 or more points.</dd>
+<dt>Commitment statement</dt><dd>A short, written, first-person promise about how you will drive, connected to your reasons for change and your main strategies.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Delaware's aggressive driving law (§4175A) covers continuous conduct violating 3 or more of 12 listed sections and requires a behavior modification course in addition to fines, possible jail and 6 points.</li>
+<li>After an aggressive driving conviction, Reg 1202 requires completion within 90 days, with one 90-day extension on written request; non-compliance leads to a court hearing and possible suspension. At 12 points, Reg 2208 requires the course within 90 days of notice or a 2-month suspension.</li>
+<li>Speeding and tailgating are aggression: they remove others' margin for error, and the time saved is small.</li>
+<li>Distraction, fatigue, alcohol and drugs amplify aggression and crash risk.</li>
+<li>Driving anger follows a trigger–thought–emotion–action chain; common triggers are obstruction, disrespect, time pressure and displaced stress.</li>
+<li>When someone else is aggressive, do not engage; give room, and if threatened, drive to a safe public place and call 911 when safe.</li>
+<li>Your toolkit: reappraisal, calming skills, planning ahead, courtesy and empathy, and a written plan with relapse prevention.</li>
+<li>A slip is information, not failure. Maintenance, through plan reviews, practice and self-monitoring, keeps change in place.</li>
+<li>Your written commitment statement connects your reasons for change to specific actions.</li>
+</ul>
+<p>Congratulations on completing the final module. When the timer reaches 00:00, return to the course and continue to the Final Exam. You must score 80% or better to pass. Good luck, and drive with the calm, patient habits you have built in this course.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 16 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to the Final Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m16-remaining', DONE='de-bmc-m16-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 16. Return to your course and continue to the Final Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 13: Planning Ahead | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 13 of 16 &middot; 30 minutes</span>Module 13: Planning Ahead</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course, 21 Del.C. §4175A(d); 2 DE Admin. Code 1202) | Module B13: Planning Ahead | Principles: stimulus control, time-pressure reduction, implementation intentions (if-then plans), pre-drive transition routines -->
+<p>The calming skills in Module 12 help you recover once anger starts. This module is about making anger less likely to start at all. Many aggressive driving incidents are decided before the driver ever turns the key: they left late, they are carrying stress from home or work, they do not know the route, or they have no plan for what to do when traffic stops. Planning ahead removes the pressure that turns ordinary delays into personal battles. You will learn how to plan trips, build time buffers, use a short pre-drive transition routine, choose routes that lower stress, and write "if-then" plans for the situations that usually set you off.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain how time pressure acts as a trigger for aggressive driving and why speeding saves much less time than it feels like it does.</li>
+<li>Plan a trip using a backward schedule and a realistic time buffer.</li>
+<li>Check route, weather, work zone and seasonal hazards before leaving, using Delaware examples.</li>
+<li>Use a pre-drive transition routine to leave work or home stress behind before driving.</li>
+<li>Write if-then plans (implementation intentions) for your most common driving triggers.</li>
+<li>Respond calmly when you are running late despite planning.</li>
+</ul></div>
+
+<h3>Time Pressure: The Trigger You Bring With You</h3>
+<p>In Module 6 you learned the common triggers for aggressive driving identified by the Monash University Accident Research Centre's Reducing Aggressive Driving (RAD) program: being obstructed, feeling disrespected, time pressure, and stress carried in from other parts of life. Notice that two of those four, time pressure and displaced stress, usually start before you get in the car. That is good news. Triggers you bring with you are triggers you can plan away.</p>
+<p>Time pressure changes how you see everything on the road. When you have plenty of time, a slow driver ahead is a minor fact. When you are ten minutes late, that same driver becomes an obstacle standing between you and trouble with your boss. Every red light feels like an insult. Every car that merges ahead of you feels like it is stealing your time. The road has not changed. Your interpretation has, because your goal of arriving on time feels threatened.</p>
+<p>Time pressure also pushes you toward exactly the behaviors listed in Delaware's aggressive driving law, 21 Del.C. §4175A: speeding (§4168 and §4169), following too closely (§4123), improper lane use (§4122), passing on the right (§4117), running signals and stop signs (§4107, §4164), and failing to signal (§4155). A hurried driver often commits three or more of these in a few minutes without ever feeling "angry." That continuous pattern of three or more violations is what the statute defines as aggressive driving.</p>
+<div class="highlight"><strong>Key Idea:</strong> You do not have to feel angry to drive aggressively. A rushed driver who speeds, tailgates and weaves to save time can meet Delaware's definition of aggressive driving just as surely as a furious one.</div>
+
+<h3>The Math of Hurrying</h3>
+<p>Psychologists describe a bias called <em>time discounting</em>: people give much more weight to a small, immediate payoff than to a larger, delayed cost. Speeding is a perfect example. The payoff, getting there a little sooner, feels immediate and certain. The costs, a crash, a ticket, points, a suspension, feel distant and unlikely. The problem is that the payoff is far smaller than most drivers believe.</p>
+<p>Here is how to calculate time saved. Time equals distance divided by speed. To get minutes, divide the miles by the speed and multiply by 60.</p>
+<table>
+<tr><th>Trip</th><th>At the lower speed</th><th>At the higher speed</th><th>Time saved</th></tr>
+<tr><td>10 miles, 60 vs. 70 mph</td><td>10 minutes</td><td>about 8 minutes 34 seconds</td><td>about 1 minute 26 seconds</td></tr>
+<tr><td>20 miles, 55 vs. 65 mph</td><td>about 21 minutes 49 seconds</td><td>about 18 minutes 28 seconds</td><td>about 3 minutes 21 seconds</td></tr>
+<tr><td>5 miles, 25 vs. 35 mph</td><td>12 minutes</td><td>about 8 minutes 34 seconds</td><td>about 3 minutes 26 seconds (in theory)</td></tr>
+</table>
+<p>Even those numbers overstate the real savings. They assume you could hold the higher speed for the entire trip. In real traffic, especially on local roads, traffic signals, turning vehicles and congestion keep pulling everyone back to the same pace. The driver who weaves past you on a local road is often sitting next to you at the next red light. On that 5-mile local trip, the "three minutes" mostly disappears.</p>
+<p>Now compare the possible costs. Under Delaware's point system (DMV Policy Regulation 2208), speeding 10 to 14 mph over the limit adds 4 points, and 15 or more over adds 5. Points count at full value for 12 months and half value for the next 12. Delaware speeding fines add a per-mile-per-hour amount on top of a base fine (21 Del.C. §4169(c)), and in a highway work zone marked by traffic-control devices, fines are at least doubled (§4105(f)). If you already have points from an aggressive driving conviction, a few speeding tickets can push you to 14 points, which brings a 4-month suspension.</p>
+<div class="myth"><p><strong>Myth:</strong> When I'm late, speeding is the only way to make up the time.</p><p><strong>Fact:</strong> On most trips, speeding recovers only a minute or two, and often less on local roads. The only reliable way to arrive on time is to leave earlier. If you are already late, a short call made before you leave, or a hands-free call, does more to fix the problem than any amount of speeding.</p></div>
+
+<h3>Trip Planning: Know Before You Go</h3>
+<p>A few minutes of planning before a trip removes most of the surprises that lead to frustration. Good trip planning answers five questions.</p>
+<h4>1. Where exactly am I going?</h4>
+<p>Uncertainty about the route is a hidden source of stress. Drivers who are unsure of their exit tend to make late lane changes, sudden braking moves and last-second turns, all of which irritate other drivers and invite conflict. Enter the destination into your navigation system before you start moving. Look at the last mile in particular: Which side of the road is the entrance on? Is there a left turn across busy traffic? Where will you park?</p>
+<h4>2. How long will it really take?</h4>
+<p>Use your typical travel time at that time of day, not the best time you ever made. A trip that takes 25 minutes on a Sunday morning may take much longer on a weekday at 5 p.m. If your navigation app shows an estimate, treat it as the minimum, not the promise.</p>
+<h4>3. What is happening on the route today?</h4>
+<p>Check for road work, crashes and closures before you leave. Work zones deserve special attention because they combine reduced speeds, narrowed or shifted lanes, workers near traffic, and higher penalties. In Delaware, fines are at least doubled for many violations, including speeding, disregarding traffic-control devices and stop signs, and reckless or careless driving, within a highway construction or maintenance area marked by traffic-control devices (21 Del.C. §4105(f)). The work zone runs from the first warning device to the last sign showing restrictions are removed, and missing signs are no defense. Electronic speed enforcement in work zones is handled by Delaware State Police, and a violation requires going 11 or more mph over the limit (§4170A). The 2024 data are a reminder of the stakes: by October 18, 2024, Delaware had recorded 54 incidents of vehicles striking DelDOT equipment or personnel that year, a near-record number, and 11 of them injured employees.</p>
+<h4>4. What will the weather and light be like?</h4>
+<p>Rain, fog, snow and sun glare all slow traffic and raise tension. Plan extra time when the forecast is bad. In Delaware, your headlights must be on whenever your wipers are in use because of weather (21 Del.C. §4331). In winter, you must clear ice and snow from your vehicle before driving (§4186A), so build that time into your departure. For sun glare, the Delaware Office of Highway Safety (OHS) recommends slowing down, increasing your following distance and wearing polarized sunglasses. Glare is worst when the sun is low, which often lines up with morning and evening commutes.</p>
+<h4>5. Are there seasonal hazards?</h4>
+<p>Some hazards follow the calendar. Deer are a major one in Delaware. According to OHS, there were 8,401 deer-related crashes in Delaware from 2021 through 2025, with 312 injuries, 20 of them serious. Forty-seven percent of those crashes happened from October through December, and the peak times were 5 to 7 a.m. and 5 p.m. to midnight. OHS advises drivers not to swerve, but to brake and stay in their lane. A driver who is rushing at dusk in November is combining time pressure with one of the state's most predictable hazards.</p>
+<div class="highlight"><strong>Delaware Data (OHS, 2021–2025):</strong> 8,401 deer-related crashes; 47% occurred October through December; peak times 5–7 a.m. and 5 p.m. to midnight. If a deer appears, brake and stay in your lane. Do not swerve.</div>
+
+<div class="scenario"><h4>Scenario: Dusk in November</h4><p>Consider a driver we'll call Paul, who leaves his job in Dover at 5:15 p.m. on a November evening to pick up his son from practice in a rural part of Kent County. He told the coach he would be there by 5:40, which is the time the trip takes in midsummer with no traffic. Ten minutes into the drive he is behind schedule and pushing 15 mph over the limit on a two-lane road through farm fields.</p><details><summary>What should happen here?</summary><p>Paul's problem began with planning. He used his best-case time, ignored the season, and is now driving fast at the exact time of year and day when deer crashes peak in Delaware. The better plan was to tell the coach 5:50, leave at 5:15, and drive at the limit with high beams when appropriate and extra attention to the roadside. If he realizes he is late, he should accept it: a few extra minutes waiting is unpleasant for his son, but a deer strike at 15 mph over could injure them both and leave his son waiting much longer. At 15 mph over, a speeding conviction alone would add 5 points under Reg 2208. Paul eases back to the limit and, at the next safe stop, sends a text saying he will be a few minutes late.</p></details></div>
+
+<h3>Time Buffers and Backward Planning</h3>
+<p>Planning tells you what the trip will involve. A time buffer protects you when something goes wrong anyway. A buffer is extra time added on top of your realistic travel time. It changes how delays feel. With a buffer, a crash on the highway costs you some of your cushion, not your job interview. You can let the merging truck in, wait behind the school bus, and stop for the pedestrian without feeling that your day is falling apart.</p>
+<p>A practical guideline for most everyday trips is to add about 25 percent to your realistic travel time, with a minimum of 10 minutes. For important appointments, such as court dates, medical appointments, job interviews, or flights, add more. If you arrive early, you have time to breathe, review your notes, or simply sit quietly. That is a better start than rushing in tense and sweaty.</p>
+<h4>Backward planning</h4>
+<p>Most people plan forward: "I'll get ready and then go." Backward planning starts with the time you need to arrive and works back to the time you must start getting ready. Here is an example for a 9:00 a.m. appointment in Wilmington:</p>
+<table>
+<tr><th>Step</th><th>Time needed</th><th>Clock time</th></tr>
+<tr><td>Be in the waiting room</td><td>—</td><td>8:50 a.m.</td></tr>
+<tr><td>Park and walk in</td><td>10 minutes</td><td>8:40 a.m.</td></tr>
+<tr><td>Realistic weekday drive</td><td>30 minutes</td><td>8:10 a.m.</td></tr>
+<tr><td>Buffer (about 25%)</td><td>10 minutes</td><td>8:00 a.m.</td></tr>
+<tr><td>Pre-drive transition routine</td><td>3 minutes</td><td>7:57 a.m.</td></tr>
+<tr><td>Leave the house</td><td>—</td><td><strong>7:55 a.m.</strong></td></tr>
+</table>
+<p>The result, leaving at 7:55, may surprise you. Many people would have left at 8:20 and spent the drive stressed. Backward planning makes the real deadline visible early, when it is still easy to meet. The same method works for the evening: if you must be home by 6:00 for a family commitment, plan your departure from work accordingly, and set a reminder 15 minutes before it so you can wrap up instead of rushing out the door.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Pick a trip you make every week where you often feel rushed. Fill in a backward plan: arrival time, parking/walking time, realistic drive time, buffer, transition routine, and departure time. What would you need to change in your day to leave at that time?</label><textarea></textarea></div>
+
+<h3>The Pre-Drive Transition Routine</h3>
+<p>Time pressure is one trigger you bring into the car. Displaced stress is the other. An argument at home, a frustrating meeting, a worrying phone call: the feelings do not stay behind when you close the car door. They ride along and attach themselves to whatever happens on the road. Psychologists call this displaced aggression, anger aimed at a target that did not cause it. The other driver who merges in front of you after a bad day at work receives anger that was really meant for someone else.</p>
+<p>A transition routine is a short, fixed set of steps you do every time before you start driving. Its job is to mark a clear boundary: what happened before is over for now, and driving gets your full attention. Athletes and pilots use pre-performance routines for the same reason. The routine takes about two to three minutes.</p>
+<ol>
+<li><strong>Sit and settle.</strong> Before starting the engine, sit back, put your hands in your lap, and take three rounds of 4-4-6 breathing from Module 12.</li>
+<li><strong>Rate yourself.</strong> Check your 0-to-10 tension number. If you are above a 5, take another minute of breathing or a short muscle release before you go. If you are at a 9 or 10, do not drive yet.</li>
+<li><strong>Park the problem.</strong> Name the stress you are carrying in one sentence, such as "I'm upset about the meeting," and then tell yourself when you will deal with it: "I'll think about it after dinner." This is not ignoring the problem. It is scheduling it for a time when you can actually do something about it.</li>
+<li><strong>Set up the car.</strong> Adjust your seat and mirrors. Set your navigation. Choose your music or audio. Put your phone in a mount or out of reach and set it to a driving or do-not-disturb mode. Delaware's hand-held law (21 Del.C. §4176C) prohibits using an electronic communication device while the vehicle is in motion, including holding it to talk, text or browse. Hands-free use is allowed, but setting up the phone before you move removes the temptation.</li>
+<li><strong>Check the conditions.</strong> In bad weather, turn on headlights with your wipers. In winter, make sure snow and ice are cleared from the windows, lights and roof.</li>
+<li><strong>Set your intention.</strong> Say a short sentence to yourself about how you plan to drive, such as "I'm going to drive like the calm person I want to be," "Plenty of time, no battles," or "Let them go."</li>
+</ol>
+<p>The routine works best when it never changes. After a few weeks it becomes automatic, like fastening your seat belt, and simply starting it begins to calm you.</p>
+
+<div class="scenario"><h4>Scenario: Straight From the Argument</h4><p>Consider a driver we'll call Keisha. She has just had a heated phone call with her landlord in the parking lot outside her job in Newark. She jumps in the car, starts the engine immediately, and pulls out. Within a mile she is riding the bumper of a driver who is going the speed limit, and she honks when the light turns green and the driver ahead does not move instantly.</p><details><summary>What should happen here?</summary><p>Keisha is displacing anger from the phone call onto drivers who did nothing to her. The fix is her transition routine. Before starting the engine, she sits for two minutes, breathes, and rates herself at an 8. She waits until she reaches a 5, names the problem ("I'm angry at my landlord"), and parks it ("I'll write him an email tonight"). She sets her phone to do-not-disturb so the landlord cannot call while she is driving. Only then does she pull out. Her drive is no shorter, but it is safer, and she is no longer about to commit three violations in a row because of a conversation that had nothing to do with traffic.</p></details></div>
+
+<h3>Choosing Routes That Lower Stress</h3>
+<p>The fastest route on paper is not always the best route for you. If a certain highway interchange, merge or intersection reliably raises your tension, consider whether a different route would be calmer even if it takes a few more minutes. A route with fewer merges, fewer lane drops and more predictable traffic can bring you to your destination in a better state, and that may matter more than the minutes.</p>
+<p>Think about the main types of roads you use in Delaware and what each asks of you:</p>
+<ul>
+<li><strong>Interstates and expressways</strong> such as I-95, I-495 and SR 1: higher speeds, frequent merging and lane changes, and heavy truck traffic. On the section of SR 1 between Red Lion Creek and the Appoquinimink River, the statutory limit is 65 mph (21 Del.C. §4169(d)). Plan your exit early and move to the correct lane well before you need it. Keep out of other drivers' blind spots.</li>
+<li><strong>Multilane highways</strong> such as US 13 and US 113: traffic signals, business entrances and turning traffic mixed with higher speeds. Expect sudden slowdowns near shopping areas. Under Delaware law, the statutory limit on four-lane and divided roadways is 55 mph unless otherwise posted (§4169(a)).</li>
+<li><strong>Two-lane rural roads:</strong> slow farm vehicles, few passing opportunities, deer, and limited lighting. The statutory limit on two-lane roadways is 50 mph unless otherwise posted. Passing is prohibited near curves, hill crests, intersections and railroad crossings with limited view (§4119), and in marked no-passing zones (§4120). Patience on these roads is a safety skill.</li>
+<li><strong>Towns and business districts:</strong> the statutory limit in a business district is 25 mph, and residence districts are 20 or 25 mph. Expect pedestrians, cyclists, delivery vehicles and parking maneuvers.</li>
+</ul>
+<p>Knowing what each road demands lets you match your expectations to reality. Much frustration comes from expecting highway flow on a road that is built for slower, mixed traffic.</p>
+
+<h3>If-Then Plans: Deciding in Advance</h3>
+<p>One of the most useful findings in behavior-change psychology is the power of <em>implementation intentions</em>, often called if-then plans. Instead of a general goal ("I'll stay calm"), you decide exactly what you will do in a specific situation: "<strong>If</strong> X happens, <strong>then</strong> I will do Y." Specific plans work because they hand the decision to your earlier, calmer self. When the situation arrives, you do not have to think; you follow the plan you already made. General intentions tend to collapse under pressure. Specific ones are much more likely to hold.</p>
+<p>Good if-then plans have three features: the "if" is a situation you can clearly recognize, the "then" is a concrete action you can actually do while driving safely, and the plan is short enough to remember.</p>
+<table>
+<tr><th>If…</th><th>Then I will…</th></tr>
+<tr><td>traffic stops on I-95 and I'm going to be late</td><td>accept the new arrival time, and at my next safe stop, let the person know</td></tr>
+<tr><td>someone cuts in front of me</td><td>say "Hold," use the three-second delay, and add space</td></tr>
+<tr><td>someone tailgates me</td><td>check that I am not blocking the left lane, and move right when it is safe to let them pass</td></tr>
+<tr><td>I feel the urge to speed because I left late</td><td>tell myself "Leaving late is the problem; speeding won't fix it," and set cruise control at the limit where appropriate</td></tr>
+<tr><td>I get stuck behind a slow vehicle on a two-lane road</td><td>drop back to a safe distance and wait for a legal passing zone</td></tr>
+<tr><td>I'm still at a 7 or higher after breathing</td><td>pull into the next safe parking lot and reset</td></tr>
+</table>
+<p>Write your own if-then plans for the three situations that most often set you off. Read them before you drive for the next few weeks. Rehearse them in your mind: picture the situation, picture yourself doing the "then" part, and notice how it feels to stay in control. Mental rehearsal makes the plan easier to recall when the real situation arrives.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Write three if-then plans for your own most common triggers. Make each "if" specific (a place, a situation, a behavior) and each "then" a concrete, safe action.</label><textarea></textarea></div>
+
+<h3>When You Are Late Anyway</h3>
+<p>Even good planning fails sometimes. A crash blocks the road, the car will not start, a child gets sick at the last minute. The question is not whether you will ever run late. It is what you will do when you do.</p>
+<ul>
+<li><strong>Accept the new reality quickly.</strong> The moment you realize you will be late, say it plainly to yourself: "I'm going to be about fifteen minutes late." Accepting it ends the internal fight against the clock, which is what drives speeding and weaving.</li>
+<li><strong>Communicate safely.</strong> Let the person know before you leave, through a hands-free call, or at a safe stop. Never hold a phone to text while the vehicle is moving. Most people are far more understanding about lateness when they hear about it in advance.</li>
+<li><strong>Use a "late script."</strong> Prepare a short sentence you can use: "I'm running about fifteen minutes behind because of traffic. I'm on my way and will be there as soon as I safely can." Having the words ready reduces the dread.</li>
+<li><strong>Keep perspective.</strong> Ask yourself: "Will this matter in a week?" Usually the honest answer is no. A conviction, a crash or a suspension will still matter a year from now.</li>
+<li><strong>Do not let lateness become a license.</strong> Many drivers who would never speed for fun will speed when they are late, because the lateness feels like a justification. The law and the physics do not care why you are speeding.</li>
+</ul>
+<div class="warning"><strong>Delaware Reminder:</strong> If you are attending this course because of a §4175A conviction, a second aggressive driving offense within 3 years brings a fine of $300 to $1,000, 30 to 60 days in jail, or both, plus a 30-day license suspension. No appointment is worth that risk.</div>
+
+<div class="scenario"><h4>Scenario: The Court Date</h4><p>Consider a driver we'll call Luis, who has a court date in Georgetown at 9:00 a.m. He planned well: he used backward planning, added a 20-minute buffer, and did his transition routine. But a crash on his route stops traffic completely for 25 minutes. He feels panic rising. He is tempted to drive on the shoulder to reach the next exit.</p><details><summary>What should happen here?</summary><p>Luis uses his if-then plan: "If traffic stops and I'll be late, then I accept it and notify." He does 4-4-6 breathing to bring his panic down. He does not drive on the shoulder, which is unsafe and could put him in the path of emergency responders heading to the crash. Using a hands-free call, or once he can pull safely off the road, he calls the court office to explain the delay. Luis also notes that his buffer worked: without it, he would have been about 25 minutes late instead of about 5. Next time, for a court date, he will add even more time. This is not legal advice about his case; anyone in a similar situation should follow the instructions on their court notice and ask the court or an attorney about missed or delayed appearances.</p></details></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Time pressure</dt><dd>The feeling of not having enough time to reach a goal. A major trigger for aggressive driving identified in the Monash RAD program.</dd>
+<dt>Time discounting</dt><dd>The tendency to value a small, immediate payoff (arriving a little sooner) more than a larger, delayed cost (a crash, points or suspension).</dd>
+<dt>Time buffer</dt><dd>Extra time added to a realistic travel estimate so that delays reduce your cushion instead of making you late.</dd>
+<dt>Backward planning</dt><dd>Scheduling from your required arrival time back to the time you must leave and start getting ready.</dd>
+<dt>Pre-drive transition routine</dt><dd>A short, fixed set of steps before driving that settles your body, parks outside stress, sets up the car and sets your intention.</dd>
+<dt>Displaced aggression</dt><dd>Anger caused by one source (work, home) aimed at an unrelated target, such as another driver.</dd>
+<dt>Implementation intention (if-then plan)</dt><dd>A specific plan linking a recognizable situation to a concrete action, made in advance.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Time pressure and displaced stress are triggers you usually bring into the car, which means you can plan them away.</li>
+<li>A rushed driver who speeds, tailgates and weaves can meet Delaware's definition of aggressive driving (three or more listed violations in continuous conduct) without ever feeling angry.</li>
+<li>Speeding saves little time: about 1 minute 26 seconds over 10 miles at 70 instead of 60 mph, and often less in real traffic. Speeding points and fines, doubled in work zones, cost far more.</li>
+<li>Before each trip, check the route, typical travel time, work zones, weather and seasonal hazards such as deer, which OHS data show peak from October through December.</li>
+<li>Add a time buffer of about 25 percent (minimum 10 minutes) and use backward planning to find your real departure time.</li>
+<li>Use a pre-drive transition routine: settle, rate yourself, park the problem, set up the car and phone, check conditions, and set your intention.</li>
+<li>Choose routes that lower your stress and match your expectations to the type of road.</li>
+<li>Write specific if-then plans for your most common triggers and rehearse them.</li>
+<li>When you are late anyway, accept it quickly, communicate safely, and never let lateness become a reason to drive aggressively.</li>
+</ul>
+<p>When the timer for this module reaches 00:00, return to the course and continue to Module 14, Courtesy, Empathy and Sharing the Road.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 13 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 14.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m13-remaining', DONE='de-bmc-m13-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 13. Return to your course and continue to Module 14.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

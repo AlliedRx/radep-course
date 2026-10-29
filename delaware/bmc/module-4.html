@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 4: Risky Maneuvers | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 4 of 16 &middot; 30 minutes</span>Module 4: Risky Maneuvers</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course under 21 Del.C. §4175A(d) and 2 DE Admin. Code 1202). Module B4: risky maneuvers on the §4175A list — lane weaving (§§4122, 4155, 4117); red lights and stop signs (§§4107, 4108, 4164, 4130; Reg 2208 3 points); failing to yield (§§4131, 4132, 4133, 4142, 4144; 16 Del.C. §9503); improper passing (§§4116, 4118, 4119, 4120, 4121, 4166); consequences for others (§4176E, §4176A, §4134; 2024 IIHS/FARS and 2025 DelDOT data); risk biases; personal risk inventory. -->
+
+<p>Speed and following distance, which you studied in Module B3, are the foundation of most aggressive driving. This module looks at what aggressive drivers do with that speed: the maneuvers. Weaving from lane to lane, pushing through red lights and stop signs, forcing a left turn or a merge, passing where it is not safe. Every one of these is on Delaware's aggressive driving list or closely connected to it. Each one usually feels small and controlled to the driver doing it. What makes them dangerous is that they depend on <em>other people</em> reacting correctly and quickly to something they did not expect. As you read, keep one question in mind: when I make this move, who else is being asked to pay for my few seconds?</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Describe Delaware's rules on lane use, turn signals and passing on the right, and explain why lane weaving is dangerous.</li>
+<li>Explain Delaware's rules on stop signs, signals and blocking intersections, and the point value for disregarding a stop sign or red light.</li>
+<li>Apply Delaware's right-of-way rules for intersections, left turns, driveways, pedestrians and blind pedestrians.</li>
+<li>Identify Delaware's restrictions on passing, including curves, hills, intersections, bicycles and school buses.</li>
+<li>Explain how risky maneuvers affect pedestrians, cyclists, motorcyclists, passengers and workers, using dated Delaware data and Delaware law.</li>
+<li>Recognize the thinking biases that make risky maneuvers feel safe, and complete a personal risk inventory.</li>
+</ul></div>
+
+<h3>Lane Weaving and Unsafe Lane Changes</h3>
+<p>Lane weaving is the habit of moving from lane to lane to get ahead of traffic, often without signaling and often into gaps barely larger than the car. It touches three sections on the §4175A list at once:</p>
+<ul>
+<li><strong>§4122, lanes.</strong> On roadways laned for traffic, a driver must stay within a lane and leave it only when it is safe.</li>
+<li><strong>§4155, turn signals.</strong> Delaware requires a signal "continuously during not less than the last 300 feet" before turning. Signals are how other drivers learn what you are about to do.</li>
+<li><strong>§4117, passing on the right.</strong> Delaware allows passing on the right only when it is safe to do so.</li>
+</ul>
+
+<h4>Why weaving is so dangerous</h4>
+<p>Every lane change is a moment of risk. You move into space that another driver may be about to use, and you depend on your mirrors and a quick head check to catch anything in your blind spot. A driver who changes lanes once on a trip takes that risk once. A driver who weaves may take it a dozen times in a few miles, often at higher speed and with less time to check.</p>
+<p>Weaving also disrupts everyone around you. When you cut into a short gap, the driver behind you has to brake to restore their following distance. The driver behind them brakes too. On a busy road like I-95 or SR 1, a single cut-in can send a ripple of braking backward through traffic, and the drivers at the back of that ripple may have no idea why they suddenly have to stop. Weaving may get one driver ahead by a few car-lengths, but it makes traffic less predictable and less safe for everyone.</p>
+
+<h4>The gap illusion</h4>
+<p>Weaving drivers often believe they are gaining a lot of time. In heavy traffic, the lane that looks faster now is often slower a minute later. The weaver is constantly reacting to short-term differences, and each change uses up a little margin of safety. Even when weaving does gain ground, the gain is usually measured in seconds, which, as you saw in B3, is a poor trade for the risk.</p>
+
+<div class="scenario"><h4>Scenario: Weaving Through Wilmington</h4><p>A driver we'll call Chris is heading north on I-95 through Wilmington in moderate traffic. He moves from the right lane to the center lane without signaling, then into the left lane as a gap opens, then back across two lanes to take an exit he nearly missed. A driver in the center lane has to brake hard when Chris cuts across in front of her.</p><details><summary>What should happen here?</summary><p>Chris has likely violated the lane-use rule (§4122) and the signal rule (§4155) several times in a single stretch, which alone can approach the three-offense pattern in §4175A, especially if he was speeding or following too closely. The near miss shows the real cost: another driver had to absorb his decision. The better approach is to pick a lane and stay in it, plan exits well ahead so lane changes happen early and one at a time, signal every change, check mirrors and blind spots, and, if an exit is missed, take the next one. A missed exit costs a few minutes; a cut across two lanes can cost a life.</p></details></div>
+
+<h3>Red Lights and Stop Signs</h3>
+<p>Four sections on or connected to the §4175A list deal with the signs and signals that decide who goes when:</p>
+<ul>
+<li><strong>§4107</strong> requires drivers to obey traffic-control devices, including signs, signals and pavement markings.</li>
+<li><strong>§4108</strong> covers traffic-control signals such as red, yellow and green lights.</li>
+<li><strong>§4164</strong> covers stop and yield signs. At a stop sign, you must stop at the marked stop line and then yield.</li>
+<li><strong>§4130</strong> (not on the list, but closely related) says not to enter an intersection, crosswalk or railroad crossing unless there is room to clear it on the other side.</li>
+</ul>
+<p>Under Reg 2208, disregarding a stop sign or red light carries <strong>3 points</strong>. That is more than many other moving violations, which carry 2, and it reflects how dangerous these violations are. Intersections are where vehicles moving in different directions meet, and a crash there often means one vehicle striking another from the side, where there is far less structure to protect the people inside.</p>
+
+<h4>The yellow-light decision</h4>
+<p>Many red-light violations begin as yellow-light decisions. A driver sees the light change and has a split second to decide: stop or go. That decision is much easier, and safer, at the speed limit with a proper following distance. A speeding driver reaches the "too close to stop" point sooner and is more likely to push through as the light turns red. Aggressive drivers also tend to treat yellow as a signal to speed up rather than to prepare to stop. If you find yourself accelerating at a yellow light, that is a sign that time pressure, not judgment, is driving.</p>
+
+<h4>The rolling stop</h4>
+<p>Rolling through a stop sign at a few miles per hour feels harmless, especially at a quiet intersection. But the stop is not a formality. Stopping at the line gives you time to look in every direction, including for pedestrians and cyclists who are easy to miss. A rolling stop shortens that look. It also teaches you, one intersection at a time, that rules are optional when you are in a hurry, which is exactly the attitude this course is trying to change.</p>
+
+<h4>Blocking the box</h4>
+<p>In heavy traffic, aggressive drivers sometimes push into an intersection on a green light even though traffic ahead is stopped, and end up stuck in the middle when the light changes. Section 4130 forbids this. Blocking an intersection or crosswalk traps cross traffic, forces pedestrians to walk around vehicles, and can lead to crashes as drivers try to squeeze past.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "A rolling stop is fine if I can see that nobody is coming."</p><p><strong>Fact:</strong> Section 4164 requires you to stop at the marked stop line and then yield. The full stop exists because drivers routinely miss pedestrians, cyclists and fast-approaching vehicles during a quick rolling look. Disregarding a stop sign carries 3 points in Delaware.</p></div>
+
+<h3>Failing to Yield</h3>
+<p>Right-of-way rules tell drivers who must wait. Aggressive drivers often treat them as negotiations to win. Delaware's rules include:</p>
+<ul>
+<li><strong>§4131(a):</strong> yield to a vehicle already in the intersection.</li>
+<li><strong>§4131(b):</strong> when two vehicles arrive at about the same time, the driver on the left yields to the vehicle on the right.</li>
+<li><strong>§4132 (on the §4175A list):</strong> a driver turning left yields to oncoming traffic.</li>
+<li><strong>§4133 (on the §4175A list):</strong> a driver entering from a driveway or other non-roadway yields to all traffic on the roadway.</li>
+</ul>
+
+<h4>The forced left turn</h4>
+<p>One of the most dangerous aggressive maneuvers is turning left across oncoming traffic into a gap that is too small, on the assumption that the oncoming driver will slow down. If that driver is distracted, speeding or simply does not expect it, the result is a crash in which the turning vehicle is struck on its side. Oncoming motorcycles are especially at risk because they are smaller and harder to judge for speed and distance.</p>
+
+<h4>Pedestrians and the White Cane Law</h4>
+<p>Yielding is not only about vehicles. At crosswalks without working signals, or when turning, Delaware drivers must "yield the right-of-way, slowing down or stopping if need be to so yield" to pedestrians (§4142(a)), and must use due care toward pedestrians, especially children (§4144). Delaware's White Cane Law adds a specific duty: "The driver of a vehicle approaching a pedestrian who is totally or partially blind ... shall take all necessary precautions to avoid injury" (16 Del.C. §9503). This applies when the person carries a predominantly white or metallic cane or uses a guide dog. A driver who fails to do so is liable for damages and faces a fine of $100 per violation (§9506).</p>
+<p>An aggressive driver turning right on a green light often focuses on the gap in traffic and not on the crosswalk. That is when pedestrians get hurt. Yielding means looking for them first.</p>
+
+<div class="scenario"><h4>Scenario: The Left Turn on a Green Ball</h4><p>A driver we'll call Vanessa is waiting to turn left on a green light (no arrow) on a busy road in Dover. She has been waiting through two cycles. Oncoming traffic thins, and she sees a motorcycle approaching. She decides it is far enough away and turns. The rider has to brake and swerve.</p><details><summary>What should happen here?</summary><p>Vanessa did not yield to oncoming traffic as §4132 requires. Her frustration from waiting two cycles pushed her to accept a gap she would normally reject. Motorcycles are harder to judge: their small size can make them seem farther away and slower than they really are. The rider escaped, but in 2024, according to IIHS figures compiled from FARS, 22 motorcyclists died on Delaware roads. The better choice is to wait for a gap that leaves no doubt, even if it means another cycle. If she is stuck in the intersection when the light turns red, she should complete the turn only when oncoming traffic has stopped and it is safe.</p></details></div>
+
+<h3>Improper Passing</h3>
+<p>Passing is one of the few maneuvers that puts you in the path of oncoming traffic on purpose. Delaware law sets clear limits:</p>
+<ul>
+<li><strong>§4118:</strong> when you move left of center to pass, the road ahead must be "clearly visible and is free of oncoming traffic for a sufficient distance ahead" to pass safely.</li>
+<li><strong>§4119:</strong> no driving left of center near the crest of a hill or on a curve where your view is obstructed, or within 100 feet of an intersection, railroad crossing, or an obstructed bridge, viaduct or tunnel.</li>
+<li><strong>§4120:</strong> no passing in marked no-passing zones.</li>
+<li><strong>§4121:</strong> pass rotary islands, such as the center of a roundabout, only on the right.</li>
+<li><strong>§4117 (on the §4175A list):</strong> passing on the right is allowed only when it is safe.</li>
+</ul>
+
+<h4>Passing bicycles</h4>
+<p>When passing a bicycle in a single lane, Delaware requires a "reasonable and prudent distance, which shall in any case never be less than 3 feet." Where there are two lanes going your direction, you must "move completely into the lane to the left before passing" (§4116). Impatient drivers often squeeze past cyclists to avoid waiting a few seconds for a safe opportunity. A bicycle ridden on the roadway has the same rights and duties as other drivers (§4193).</p>
+
+<h4>School buses</h4>
+<p>Passing a stopped school bus is one of the most serious passing violations. Under §4166(d), drivers approaching from the front or rear must stop before passing the bus, except that drivers approaching from the front on roadways with four or more lanes do not have to stop. The penalties: a first offense brings a $115 to $230 fine, 30 to 60 days in jail, or both, plus a license suspension of one month to one year, and Reg 2208 assigns 6 points.</p>
+
+<h4>Head-on risk</h4>
+<p>A failed pass on a two-lane road can produce a head-on collision, in which the speeds of both vehicles combine. Remember from B3 that crash energy rises with the square of speed. Related risks show up in the data: in 2025, according to DelDOT, 50 of Delaware's 117 traffic deaths involved vehicles leaving the roadway. A driver who pulls out to pass, sees an oncoming car, and swerves back or off the road is exactly the kind of driver who ends up in those numbers.</p>
+
+<div class="warning"><strong>Delaware Law:</strong> Passing a stopped school bus carries 6 points, a fine of $115 to $230, up to 60 days in jail, and a license suspension of one month to one year for a first offense. A subsequent offense within three years brings $115 to $575 and 60 days to 6 months in jail. No schedule is worth that risk.</div>
+
+<div class="scenario"><h4>Scenario: The Hill on Route 9</h4><p>A driver we'll call Owen is behind a slow farm tractor on a two-lane road in Sussex County. A double yellow line marks a no-passing zone as the road climbs a small hill. Owen has been behind the tractor for two minutes and is getting angry. He pulls out to pass just before the crest.</p><details><summary>What should happen here?</summary><p>Owen is breaking several rules at once: passing in a marked no-passing zone (§4120), and driving left of center near the crest of a hill where he cannot see oncoming traffic (§4119). If a car comes over the hill, there is no escape: the tractor is on his right and the oncoming car is in front of him. The right choice is to stay behind the tractor until a legal passing zone with a clear view ahead. Two minutes of patience, or even five, is nothing compared with the risk of a head-on crash. Owen can use the time to take a slow breath and remind himself that the tractor driver is doing a job, not trying to block him.</p></details></div>
+
+<h3>Who Pays the Price: Consequences for Others</h3>
+<p>A driver who makes a risky maneuver often thinks only about their own car: "I can make it." But the people most likely to be hurt are frequently someone else.</p>
+
+<h4>Vulnerable road users</h4>
+<p>Pedestrians, cyclists and motorcyclists have no steel frame, no airbags and no crumple zones. According to IIHS figures compiled from FARS, in 2024 Delaware lost 28 pedestrians, 22 motorcyclists and 4 bicyclists in traffic crashes. Delaware's vulnerable user law (§4176E) recognizes this. It covers pedestrians; highway, utility and emergency workers; animal riders; and people on bicycles, e-bikes, mopeds, motorcycles, scooters, skateboards, skates, wheelchairs and similar devices. A driver who causes "serious physical injury" to a vulnerable user while violating Chapter 41 faces a $550 fine, a suspension of up to one year, a DMV-approved traffic safety course, and 10 to 100 hours of community service.</p>
+
+<h4>Workers and responders</h4>
+<p>Delaware's Move Over law (§4134(b)) requires drivers approaching a stationary emergency, DOT, tow, utility or other vehicle showing warning signals to change into a lane not adjacent to it when it is safe, or, if that is not possible, to slow down; where the limit is 50 mph or more, to "a safe speed at least 20 miles per hour less than the posted speed limit." Fines run up to $250 for a first offense, up to $500 for a second, and up to $1,000 after that. Striking an emergency responder and causing injury while violating this rule is a class F felony (§4134(d)). An aggressive driver who weaves around slower cars near a roadside stop puts the people working there at serious risk.</p>
+
+<h4>When someone dies</h4>
+<p>Under §4176A, operation of a vehicle causing the death of another person is an unclassified misdemeanor. A first offense carries up to $1,150 in fines and up to 30 months in prison; a subsequent offense carries up to $2,300 and up to 60 months. It also carries 6 points. Beyond any penalty is the permanent fact of a life lost, and a family changed, because of a maneuver that was meant to save a few seconds.</p>
+
+<h4>Your own passengers</h4>
+<p>The people in your car did not choose your maneuvers. Children, partners, friends and coworkers trust you with their safety. When you run a light or force a pass, you make that choice for them.</p>
+
+<div class="scenario"><h4>Scenario: The Right Turn and the White Cane</h4><p>A driver we'll call Nadia is waiting to turn right at a busy Newark intersection. Traffic from the left finally opens a gap, and she starts to accelerate into it while still looking left. A man with a white cane has just stepped into the crosswalk on her right.</p><details><summary>What should happen here?</summary><p>Nadia's attention was locked on the gap in traffic, which is exactly how pedestrians get hit during turns. Delaware law requires her to yield to the pedestrian in the crosswalk (§4142(a)), to use due care (§4144), and, because he carries a white cane, to "take all necessary precautions to avoid injury" under the White Cane Law (16 Del.C. §9503). Failing to do so can bring a $100 fine and liability for damages, and, if he is seriously injured, the penalties of the vulnerable user law (§4176E). The habit that prevents this is simple: before turning, check the crosswalk first, then the traffic, then the crosswalk again just before moving. Losing the gap costs a few seconds. A blind pedestrian cannot see her car coming and depends entirely on her attention.</p></details></div>
+
+<div class="highlight"><strong>Key Idea:</strong> Every risky maneuver transfers risk from you to someone else: the driver who has to brake, the pedestrian in the crosswalk, the cyclist you squeeze past, the worker on the shoulder, or the passenger beside you. Aggressive driving is not a private choice.</div>
+
+<h3>Why Risky Maneuvers Feel Safe</h3>
+<p>If these maneuvers are so dangerous, why do ordinary people do them? Because the mind is very good at convincing us that our own risks are under control. Several well-known thinking patterns are at work.</p>
+<ul>
+<li><strong>Optimism bias.</strong> Most drivers rate themselves as above average. That belief leads drivers to assume that other people's crashes happen because those people lacked skill, and that the same maneuver is safe when "I" do it.</li>
+<li><strong>Time discounting.</strong> The reward of a risky maneuver, getting ahead now, is immediate and certain. The cost, a possible crash or ticket, is delayed and uncertain. People tend to overweight the immediate reward.</li>
+<li><strong>"Getting away with it."</strong> Each time a risky pass or red-light run works out, the brain records it as proof that the move is safe. But a maneuver that works ninety-nine times can still kill on the hundredth.</li>
+<li><strong>Social proof.</strong> When other drivers weave, speed or roll stop signs, it feels normal. But a common behavior is not a safe one; it just means more people are taking the same risk.</li>
+<li><strong>Hostile attribution.</strong> When you believe another driver is blocking you on purpose, a risky pass feels justified. You will study this bias in depth in Module B6.</li>
+</ul>
+
+<div class="myth"><p><strong>Myth:</strong> "I've made that pass a hundred times. I know what I'm doing."</p><p><strong>Fact:</strong> Past success measures luck as much as skill. A pass that has always worked depended on no oncoming car appearing, no deer stepping out, and no other driver doing something unexpected. The one time those conditions change, experience will not create space that is not there.</p></div>
+
+<h3>Your Personal Risk Inventory</h3>
+<p>Self-monitoring, paying deliberate attention to your own behavior, is one of the most effective first steps in changing a habit. You cannot change what you do not notice. Use the worksheet below to take an honest inventory of the maneuvers in this module.</p>
+<table>
+<tr><th>Maneuver</th><th>Ask yourself</th></tr>
+<tr><td>Lane weaving</td><td>Do I change lanes several times on a trip to get ahead? Do I always signal?</td></tr>
+<tr><td>Yellow and red lights</td><td>Do I speed up when a light turns yellow? Have I entered on red in the past year?</td></tr>
+<tr><td>Stop signs</td><td>Do I stop fully at the line, or roll through when it looks clear?</td></tr>
+<tr><td>Left turns and merges</td><td>Do I accept tight gaps when I have been waiting a while?</td></tr>
+<tr><td>Passing</td><td>Do I pass on the right, near hills or curves, or close to cyclists?</td></tr>
+<tr><td>Pedestrians</td><td>When turning, do I check the crosswalk before the gap in traffic?</td></tr>
+</table>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Choose the one maneuver from the table that you do most often. Describe when it happens (road, time of day, mood), what you tell yourself in that moment, and one "if-then" plan to replace it. Example: "If I've waited through one full light cycle to turn left, then I will wait for a gap with no doubt, even if it means another cycle."</label><textarea></textarea></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think of a person you care about who walks, bikes or rides a motorcycle on Delaware roads. How would you want other drivers to behave around them? Does your own driving match that standard?</label><textarea></textarea></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Lane weaving</dt><dd>Repeatedly changing lanes to get ahead of traffic, often without signaling and into small gaps.</dd>
+<dt>Right-of-way</dt><dd>The rules that decide which road user must wait; under Delaware law it is something you yield, not something you take.</dd>
+<dt>Blocking the box</dt><dd>Entering an intersection or crosswalk without room to clear it, prohibited by §4130.</dd>
+<dt>No-passing zone</dt><dd>A marked area where passing is prohibited (§4120), often near hills, curves or intersections.</dd>
+<dt>White Cane Law</dt><dd>Delaware's law (16 Del.C. Ch. 95) requiring drivers to take all necessary precautions to avoid injuring a blind or partially blind pedestrian using a white or metallic cane or a guide dog.</dd>
+<dt>Vulnerable user</dt><dd>Under §4176E, road users such as pedestrians, workers, cyclists, motorcyclists and wheelchair users who face higher risk of serious injury.</dd>
+<dt>Self-monitoring</dt><dd>Deliberately paying attention to and recording your own behavior, a key first step in changing a habit.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Lane weaving touches three §4175A sections: lanes (§4122), turn signals (§4155) and passing on the right (§4117). It creates repeated risk and disrupts traffic for little gain.</li>
+<li>Disregarding a stop sign or red light carries 3 points; §4164 requires stopping at the line and then yielding, and §4130 prohibits entering an intersection without room to clear it.</li>
+<li>Drivers turning left yield to oncoming traffic (§4132); drivers entering from a driveway yield to all traffic (§4133); drivers must yield to pedestrians in crosswalks and take all necessary precautions for blind pedestrians under the White Cane Law.</li>
+<li>Passing on two-lane roads requires a clear view and no oncoming traffic; it is prohibited near crests, curves, intersections and railroad crossings, and cyclists must be given at least 3 feet.</li>
+<li>Passing a stopped school bus brings 6 points, fines, possible jail and a suspension of one month to one year.</li>
+<li>In 2024 (IIHS/FARS), Delaware lost 28 pedestrians, 22 motorcyclists and 4 bicyclists; in 2025 (DelDOT), 50 of 117 deaths involved roadway departures.</li>
+<li>Risky maneuvers transfer risk to others. Laws such as §4176E (vulnerable users), §4134 (Move Over) and §4176A (vehicle causing death) reflect that harm.</li>
+<li>Optimism bias, time discounting, social proof and "getting away with it" make risky maneuvers feel safer than they are. Self-monitoring and "if-then" plans help break the pattern.</li>
+</ul>
+
+<p>When the timer reaches 00:00, return to the course and continue to Module B5, where you will begin exploring the psychology of driving anger and why some drivers become angry faster and more intensely than others.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 4 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 5.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m4-remaining', DONE='de-bmc-m4-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 4. Return to your course and continue to Module 5.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 8: When Someone Else Is Aggressive | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 8 of 16 &middot; 30 minutes</span>Module 8: When Someone Else Is Aggressive</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (21 Del.C. §4175A(d); Reg 1202 behavior modification/attitudinal driving) – identifying an aggressive driver vs road rage, de-escalation, not engaging, being tailgated, being followed, safe places, calling 911 when safe (§4176C emergency exception), what not to do, meeting responding officers -->
+<p>So far, this course has focused on your own driving: your triggers, your thoughts and your body's warning signs. But you share the road with thousands of other drivers, and some of them will drive aggressively no matter what you do. How you respond in those moments matters a great deal. A calm, defensive response usually ends the encounter within seconds. An angry response can turn a stranger's bad driving into a two-person conflict, and many serious road rage incidents begin exactly that way: with two drivers who each decided not to back down. In this module you will learn how to recognize an aggressive driver, how to tell aggressive driving from road rage, and what to do, and not do, to protect yourself and everyone else on the road. You will also see that your own reaction to someone else's aggression can put you on the wrong side of Delaware's aggressive driving law.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Distinguish aggressive driving, as defined in 21 Del.C. §4175A, from road rage.</li>
+<li>Apply de-escalation techniques that end an encounter rather than extend it.</li>
+<li>Respond safely when you are tailgated, cut off, blocked or followed.</li>
+<li>Identify safe places to go and explain when and how to call 911 safely and legally.</li>
+<li>List the actions that make an encounter more dangerous and explain why to avoid them.</li>
+</ul></div>
+
+<h3>Aggressive Driving vs. Road Rage</h3>
+<p>The terms "aggressive driving" and "road rage" are often used as if they mean the same thing. They do not, and the difference affects how you should respond.</p>
+<h4>Aggressive driving</h4>
+<p>In Delaware, aggressive driving has a legal definition. Under 21 Del.C. §4175A, it is "continuous conduct which violates 3 or more of" twelve listed sections of the traffic code. The list includes disobeying traffic-control devices and signals, passing on the right, improper lane use, following too closely, failing to yield when turning left or entering the roadway, failing to signal, running stop or yield signs, illegally passing a stopped school bus, and speeding. Aggressive driving is a pattern of dangerous traffic violations. The driver may be rushed, impatient or angry, but the behavior is aimed mainly at getting somewhere faster, not at hurting a particular person.</p>
+<p>Signs that another driver is driving aggressively include:</p>
+<ul>
+<li>Speeding well above the flow of traffic</li>
+<li>Weaving from lane to lane, often without signals</li>
+<li>Tailgating vehicle after vehicle</li>
+<li>Passing on the right or on the shoulder</li>
+<li>Running red lights or stop signs</li>
+<li>Flashing headlights or honking to make others move</li>
+</ul>
+<h4>Road rage</h4>
+<p>Road rage is different. The term is not defined in the aggressive driving statute, but it generally describes an angry, deliberate attempt to intimidate, threaten or harm a specific person. Road rage is personal. It is aimed at <em>someone</em>. It may involve:</p>
+<ul>
+<li>Following a particular vehicle, sometimes for miles</li>
+<li>Deliberately blocking, boxing in or running another vehicle off the road</li>
+<li>Brake-checking a vehicle on purpose</li>
+<li>Pulling alongside to yell, gesture or throw objects</li>
+<li>Getting out of the vehicle to confront another driver</li>
+<li>Threats or use of a weapon, including the vehicle itself</li>
+</ul>
+<p>Aggressive driving can quickly turn into road rage when two drivers engage. Road rage can involve serious criminal charges well beyond traffic violations. The lesson for you is simple: an aggressive driver is a hazard to avoid; a driver showing road rage is a threat to get away from.</p>
+
+<table>
+<tr><th></th><th>Aggressive driving</th><th>Road rage</th></tr>
+<tr><td>Main target</td><td>The traffic in the way</td><td>A specific person</td></tr>
+<tr><td>Typical behavior</td><td>Speeding, weaving, tailgating, running lights</td><td>Chasing, blocking, threats, confrontations, violence</td></tr>
+<tr><td>Delaware law</td><td>Defined in 21 Del.C. §4175A</td><td>Not defined in §4175A; may lead to criminal charges</td></tr>
+<tr><td>Your best response</td><td>Give space, let them go</td><td>Disengage, get to a safe place, call 911 when safe</td></tr>
+</table>
+
+<h3>The Core Rule: Don't Engage</h3>
+<p>The single most important principle in this module is <strong>do not engage</strong>. Engaging means responding to the other driver in any way that continues the interaction: eye contact, gestures, horn, headlight flashes, speeding up, slowing down to block them, or following them. Every one of these keeps the contest alive.</p>
+<p>The reason is simple. An aggressive driver is already in a high-arousal state. As you learned in Module 7, high arousal narrows attention, weakens judgment and makes risky moves feel acceptable. When you respond, you give that driver a new trigger. Their anger rises, and so does yours. Within seconds, two people with tunnel vision are making decisions at highway speed.</p>
+<p>Disengaging is not losing. It is the strongest move available to you, because it is the only one that reliably ends the encounter. Many drivers find it helpful to think of themselves as a professional driver on the job: a professional's goal is to arrive safely, not to win arguments.</p>
+
+<div class="highlight"><strong>Key Idea:</strong> Every encounter with an aggressive driver ends sooner and safer when one driver chooses not to play. Make that driver you.</div>
+
+<h4>Techniques for not engaging</h4>
+<ul>
+<li><strong>Avoid eye contact.</strong> Looking at an angry driver can be read as a challenge. Keep your eyes on the road and your mirrors.</li>
+<li><strong>Keep your hands on the wheel.</strong> No gestures of any kind, including ones you think are harmless.</li>
+<li><strong>Stay off the horn</strong> unless you need it to warn of immediate danger.</li>
+<li><strong>Keep a steady, predictable speed.</strong> Sudden changes can surprise the other driver and provoke them.</li>
+<li><strong>Make room.</strong> Increase your following distance, change lanes when it is safe, or let them pass.</li>
+<li><strong>Use a calming phrase.</strong> "Not my problem." "Let them go." "I'm getting home safe."</li>
+</ul>
+<h4>When you made the mistake</h4>
+<p>Sometimes the other driver is angry because you did something wrong, such as drifting into their lane or pulling out too close. If that happens, a simple apology gesture, such as a raised open hand, can lower the temperature. Then give them space. Do not argue your case through the windshield.</p>
+
+<h3>Handling Common Situations</h3>
+<h4>When you are being tailgated</h4>
+<p>Being tailgated is one of the most common and stressful experiences on the road. The safest response is to remove yourself from the tailgater's path, not to "teach them a lesson."</p>
+<ol>
+<li><strong>Do not speed up.</strong> Going faster to satisfy a tailgater only puts you in violation of the speed limit while they stay on your bumper.</li>
+<li><strong>Do not brake-check.</strong> Tapping or slamming your brakes to scare the driver behind you invites a rear-end crash and can turn the encounter into road rage.</li>
+<li><strong>Increase the space ahead of you.</strong> If someone is too close behind, leave extra room in front. That gives you more time to slow gradually if traffic ahead stops, which reduces the chance the tailgater hits you.</li>
+<li><strong>Move over when it is safe.</strong> On a multi-lane road, signal, check your blind spot, and move right so they can pass.</li>
+<li><strong>On a two-lane road,</strong> continue at a steady, legal speed, and if the tailgater stays on you, pull into a safe spot such as a parking lot or a wide shoulder area where it is legal to stop, and let them go by.</li>
+</ol>
+<h4>When you are cut off</h4>
+<p>Being cut off produces a sudden jolt of fear that often turns into anger. First, handle the hazard: ease off the gas or brake smoothly, and re-create a safe following distance of at least 3 to 4 seconds. Then handle your mind: name the fear ("That startled me"), take a slow breath out, and let the driver go. Remember that the other driver may simply not have seen you.</p>
+<h4>When someone will not let you merge</h4>
+<p>If a driver closes a gap so you cannot merge, slow slightly and merge behind them. Do not race them for the space. There will be another gap, and the time lost is usually a few seconds.</p>
+<h4>When an aggressive driver is weaving through traffic</h4>
+<p>Give a weaving driver as much room as you can. Stay out of their path, keep a steady speed, and do not move into a gap they appear to be aiming for. Expect them to make sudden moves, and keep scanning so you are not surprised.</p>
+<p>You may well pull up next to the same driver at the next red light, after all their weaving. Resist the urge to look over, comment or "prove" anything. Stay in your lane, keep your eyes forward, and if they are still beside you when the light changes, let them pull away first. Their risky driving gained them nothing, and your calm driving cost you nothing. That is worth noticing, but not worth pointing out.</p>
+
+<div class="scenario"><h4>Scenario: The Tailgater on a Two-Lane Road</h4><p>Consider a driver we'll call Lena. She is driving at the posted limit of 50 mph on a two-lane road in Kent County. A pickup truck comes up behind her and stays a few feet off her bumper, flashing its lights. Lena's first impulse is to tap her brakes "to back him off."</p><details><summary>What should happen here?</summary><p>Brake-checking is exactly the wrong move. It could cause the truck to rear-end her, and it could convert an impatient driver into an enraged one. Lena should keep a steady speed, increase the space ahead of her so she can slow gradually if needed, and avoid eye contact in the mirror. When she reaches a safe place to pull off, such as a parking lot, she can pull in and let the truck pass. Her goal is to get the truck in front of her or out of her life, not to win. She should also remember that tailgating (§4123) and speeding (§4169) are the truck driver's violations; if she speeds up to escape or retaliates with her own violations, she risks becoming part of the problem.</p></details></div>
+
+<h3>When You Are Being Followed or Threatened</h3>
+<p>Occasionally, an encounter goes beyond bad driving. The other driver follows you after you turn, pulls alongside to shout, tries to block you in, or appears ready to get out of their vehicle. At that point, your priority is personal safety.</p>
+<h4>What to do</h4>
+<ul>
+<li><strong>Keep your doors locked and windows up.</strong> Many drivers make it a habit to lock their doors every time they drive.</li>
+<li><strong>Do not drive home.</strong> You do not want the other driver to learn where you live.</li>
+<li><strong>Drive to a safe, public place.</strong> Good choices are a police station, a fire station, or a busy, well-lit business such as a gas station or shopping center where there are people and, often, cameras.</li>
+<li><strong>Stay in your vehicle.</strong> If you stop and the other driver approaches, stay inside with the doors locked. If you feel threatened, you can use your horn to attract attention.</li>
+<li><strong>Leave yourself a way out.</strong> When you stop, try to leave enough room in front of your vehicle to drive away if needed, rather than pulling in tightly behind another car.</li>
+<li><strong>Call 911 when you can do so safely</strong> (see the next section).</li>
+</ul>
+<h4>What not to do</h4>
+<ul>
+<li>Do not stop on the side of the road to "have it out."</li>
+<li>Do not get out of your vehicle to confront the other driver.</li>
+<li>Do not follow the other driver to get their plate number, to make a point or to "make sure they get caught."</li>
+<li>Do not try to block, box in or "trap" the other vehicle until police arrive. That is a job for officers.</li>
+<li>Do not throw anything, display anything threatening or try to match their behavior.</li>
+<li>Do not film the other driver while you are driving. Your full attention belongs on the road.</li>
+</ul>
+
+<div class="warning"><strong>Delaware Law:</strong> Responding to an aggressive driver with your own violations, such as speeding to get away, following them closely, passing on the right or running a light to keep up, can make you an aggressive driver under 21 Del.C. §4175A. Reckless driving under §4175, driving with "wilful or wanton disregard for the safety of persons or property," carries a fine of $100 to $300, 10 to 30 days in jail, or both, for a first offense. The other driver's behavior is not a defense to your own.</div>
+
+<h3>Calling 911 Safely and Legally</h3>
+<p>If another driver's behavior is a real danger to you or others, reporting it is the right thing to do. It brings in trained officers and keeps you from trying to handle the situation yourself. But it must be done safely.</p>
+<h4>Delaware's handheld device law and emergencies</h4>
+<p>Delaware law, 21 Del.C. §4176C, prohibits using a handheld electronic communication device while the vehicle is in motion. "Using" includes holding a device to talk, text, browse or play games. Hands-free use is allowed. The law contains exceptions, including using a device to report an emergency or a crime. Even so, the safest options, in order, are:</p>
+<ol>
+<li><strong>Have a passenger make the call.</strong></li>
+<li><strong>Use hands-free calling or voice commands</strong> if your vehicle or phone supports it.</li>
+<li><strong>Pull into a safe, public place and stop</strong> before calling, if the situation allows.</li>
+</ol>
+<p>Using the emergency exception should never mean taking your eyes off the road at a dangerous moment. A crash while dialing helps no one.</p>
+<h4>What to tell the dispatcher</h4>
+<ul>
+<li>Your location: road name or route number, direction of travel, nearest exit, cross street or landmark</li>
+<li>A description of the vehicle: color, make, type and, only if you can see it safely, the plate number</li>
+<li>What the driver is doing, in plain terms: "weaving across all lanes at high speed," "has followed me for three miles"</li>
+<li>Whether you are being followed or threatened, and where you are headed</li>
+</ul>
+<p>Follow the dispatcher's instructions. If you have driven to a police station or public place, tell them where you are and stay in your locked vehicle until help arrives.</p>
+<h4>When officers arrive</h4>
+<p>When police respond, follow Delaware DMV guidance for interacting with officers: stay calm, keep your hands visible, stay in the vehicle unless told to get out, and do not reach for documents until the officer asks. If documents are out of reach, say where they are first. Tell the officer at first contact about any weapons in the vehicle. Officers arriving at a road rage call may not know at first which driver is the victim, so calm, cooperative behavior helps them sort out the situation quickly.</p>
+
+<div class="scenario"><h4>Scenario: Followed Off the Exit</h4><p>Consider a driver we'll call Sam. After Sam changed lanes in front of an SUV on the highway, the SUV driver honked and gestured. Sam exits the highway, and the SUV exits right behind him, staying close through two turns. Sam's home is five minutes away. He is tempted to go home and "deal with it in the driveway."</p><details><summary>What should happen here?</summary><p>Sam should not go home or confront the driver. He should keep his doors locked, stay calm, and drive to a busy, well-lit public place or a police station. If he has a passenger, the passenger should call 911; otherwise Sam should use hands-free calling or stop in a safe public place to call. He should report his location, his direction, the SUV's description and the fact that he is being followed. He should stay in his vehicle until officers arrive or the SUV leaves, and he should not try to follow it if it drives away.</p></details></div>
+
+<h3>Why People Escalate, and How to Avoid It</h3>
+<p>If disengaging is so clearly safer, why do so many drivers escalate instead? The answer brings together everything from Modules 6 and 7.</p>
+<ul>
+<li><strong>Hostile attribution:</strong> "He's doing this to me on purpose" turns bad driving into a personal attack.</li>
+<li><strong>Personalization:</strong> "If I let him get away with this, I'm weak" turns the road into a contest.</li>
+<li><strong>"Should" statements:</strong> "Someone should teach him a lesson" leads drivers to appoint themselves as enforcers.</li>
+<li><strong>High arousal:</strong> fear from the near miss becomes anger, and tunnel vision locks onto the other driver.</li>
+<li><strong>Venting:</strong> honking and yelling feel like a release but actually fuel the conflict.</li>
+</ul>
+<p>The fix is to recognize these patterns in yourself in real time. When you notice the urge to respond, ask three questions:</p>
+<ol>
+<li><strong>What happens if I respond?</strong> Usually, the encounter gets longer and more dangerous.</li>
+<li><strong>What happens if I let it go?</strong> Usually, it is over in seconds.</li>
+<li><strong>What do I want most right now?</strong> For almost everyone, the answer is to get where they are going safely.</li>
+</ol>
+
+<div class="myth"><p><strong>Myth:</strong> "If I don't stand up to aggressive drivers, they'll keep doing it to everyone."</p><p><strong>Fact:</strong> Correcting other drivers is the job of law enforcement, not yours. Confronting an aggressive driver does not teach them anything; it usually makes them angrier and more dangerous to everyone nearby. If their driving is truly dangerous, the right response is a safe, accurate call to 911.</p></div>
+
+<div class="myth"><p><strong>Myth:</strong> "Following the driver to get the license plate is helping the police."</p><p><strong>Fact:</strong> Chasing another vehicle puts you, the other driver and everyone around you at risk, and it can lead you to commit violations of your own. Report what you can see safely from where you are. Officers can work with partial information.</p></div>
+
+<h3>Preparing in Advance</h3>
+<p>The best time to decide how you will handle an aggressive driver is before you meet one. When you are calm, you can think clearly about what you will do. In the moment, your high-arousal brain will reach for whatever response is most practiced, so practice the right one in advance.</p>
+<p>Use the "when, then" format of implementation intentions from Module 7:</p>
+<ul>
+<li>"<strong>When</strong> someone tailgates me, <strong>then</strong> I will keep a steady speed, add space ahead and move right when safe."</li>
+<li>"<strong>When</strong> someone cuts me off, <strong>then</strong> I will ease off, breathe out slowly and say 'Let them go.'"</li>
+<li>"<strong>When</strong> someone gestures or yells at me, <strong>then</strong> I will keep my eyes on the road and my hands on the wheel."</li>
+<li>"<strong>When</strong> someone follows me, <strong>then</strong> I will lock my doors, drive to a public place and call 911 safely."</li>
+</ul>
+<p>Some drivers also mentally rehearse these situations, picturing the trigger and then picturing themselves calmly following their plan. Mental rehearsal is a common technique in sports and performance training, and it helps make a new response feel natural.</p>
+
+<div class="scenario"><h4>Scenario: The Passenger Who Wants Payback</h4><p>Consider a driver we'll call Keisha. A car swerves in front of her on a busy road and the driver yells out the window. Her passenger shouts, "Go after him! Don't let him talk to you like that!"</p><details><summary>What should happen here?</summary><p>Keisha is the driver, and she is the one responsible for the vehicle, her license and everyone's safety. She can say calmly, "It's not worth it. We're getting there safe." She should let the other car go, increase her space and refocus on the road. If the other driver's behavior continues to be dangerous, her passenger can help by calling 911 and describing the vehicle. Passengers can be a strong source of pressure to escalate, and a driver who plans for this in advance is far better prepared to say no.</p></details></div>
+
+<h3>After the Encounter: Getting Back to Calm</h3>
+<p>Even when you handle an aggressive driver perfectly, the encounter can leave you shaken. Your heart may still be pounding a mile later. Your mind may keep replaying what happened. As you learned in Module 7, stress hormones take time to clear, and rumination keeps anger alive. A driver who has just been tailgated, honked at or followed is at higher risk of overreacting to the next small trigger, so the minutes after an encounter deserve as much care as the encounter itself.</p>
+<p>Use a short recovery routine:</p>
+<ol>
+<li><strong>Check your number.</strong> Rate yourself on the 1-to-10 anger scale. If you are at 7 or higher, plan to pull into a safe, public place and take a few minutes before continuing.</li>
+<li><strong>Breathe out slowly.</strong> Make each breath out longer than the breath in. This tells your body that the threat has passed.</li>
+<li><strong>Loosen up.</strong> Relax your grip, drop your shoulders, unclench your jaw and sit back in the seat.</li>
+<li><strong>Name what happened.</strong> "That was scary, and it's over. I handled it." Naming the fear is more honest and more calming than replaying the other driver's insults.</li>
+<li><strong>Re-focus on driving tasks.</strong> Rebuild your space cushion, scan well ahead and check your mirrors. Driving tasks give your mind something useful to do.</li>
+<li><strong>Give yourself credit.</strong> Choosing not to engage is a skill. Each time you use it, you strengthen the new habit you are building in this course.</li>
+</ol>
+<p>Later, once you are parked and calm, you can add the encounter to your anger log. Note what the other driver did, what you thought and felt, and what you did instead of engaging. Over time, those entries become proof that you can handle difficult drivers without putting yourself or your license at risk.</p>
+
+<div class="scenario"><h4>Scenario: The Horn That Started It</h4><p>Consider a driver we'll call Victor. At a busy intersection, the car ahead of him waits a few seconds after the light turns green. Victor gives a long blast of the horn. The other driver responds with a gesture, then slows down to a crawl in front of him. Victor pulls alongside to yell, and the two cars race side by side toward the next light.</p><details><summary>What should happen here?</summary><p>In this case, Victor was the one who started the engagement, and the other driver responded by escalating. Once that happened, both drivers were in a contest that put everyone at the intersection at risk. Victor's best move at any point was to stop engaging: no more horn, no pulling alongside, no racing. He could have dropped back, let the other car go well ahead, or turned onto another street. A short, light tap of the horn is meant to warn of danger, not to express impatience. If Victor had treated the few-second delay as an honest pause, perhaps a driver checking for a red-light runner, none of this would have happened.</p></details></div>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Write your personal plan for three situations: being tailgated, being cut off, and being followed. For each, write one "When..., then I will..." statement. Then list two safe, public places along a route you drive often where you could go if you were followed.</label><textarea></textarea></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Aggressive driving</dt><dd>Under 21 Del.C. §4175A, continuous conduct violating 3 or more of the twelve listed traffic sections.</dd>
+<dt>Road rage</dt><dd>A general term for angry, deliberate attempts to intimidate, threaten or harm a specific person on the road.</dd>
+<dt>Engaging</dt><dd>Any response that continues an interaction with another driver, such as eye contact, gestures, honking or following.</dd>
+<dt>Brake-checking</dt><dd>Braking suddenly on purpose to scare a following driver; dangerous and likely to escalate a conflict.</dd>
+<dt>Safe, public place</dt><dd>A police station, fire station or busy, well-lit business where help and witnesses are available.</dd>
+<dt>Mental rehearsal</dt><dd>Picturing a difficult situation and your planned calm response so the response feels natural when needed.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Aggressive driving is defined in Delaware as continuous conduct violating 3 or more of the sections listed in §4175A; road rage is a deliberate attempt to intimidate or harm a specific person.</li>
+<li>An aggressive driver is a hazard to avoid; a driver showing road rage is a threat to get away from.</li>
+<li>The core rule is do not engage: no eye contact, gestures, horn, speed games or following.</li>
+<li>When tailgated, do not speed up or brake-check; add space ahead and move over or pull off safely to let them pass.</li>
+<li>When followed, keep doors locked, do not go home, drive to a safe, public place, stay in your vehicle and call 911 when safe.</li>
+<li>Delaware's handheld law (§4176C) includes an exception for reporting emergencies or crimes, but a passenger, hands-free calling or a safe stop is always the safer choice.</li>
+<li>Responding with your own violations can make you an aggressive or reckless driver under Delaware law; the other driver's behavior is no defense.</li>
+<li>Plan your responses in advance with "when, then" statements and mental rehearsal.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module, where you will learn how distraction, fatigue, alcohol and drugs make aggression more likely and more dangerous.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 8 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 9.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m8-remaining', DONE='de-bmc-m8-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 8. Return to your course and continue to Module 9.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

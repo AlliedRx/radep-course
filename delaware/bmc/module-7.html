@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 7: Emotions, Body Signals and Stress | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 7 of 16 &middot; 30 minutes</span>Module 7: Emotions, Body Signals and Stress</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (21 Del.C. §4175A(d); Reg 1202 behavior modification/attitudinal driving) – emotions and arousal, early warning signs (body, thoughts, driving behavior), anger scale, displaced aggression, stress outside the car, venting and rumination, self-monitoring check-ins -->
+<p>In Module 6 you traced the chain that leads from a trigger to an aggressive act, and you focused on the thoughts that drive it. This module looks at the next link: emotion, and the body signals that come with it. Anger does not switch on all at once. It builds, and your body announces it well before you lose control, if you know what to listen for. Many drivers in aggressive-driving programs say that by the time they realized they were angry, they were already tailgating, speeding or honking. The skill you will build here is early detection: noticing the first signs of rising anger and stress while you still have plenty of room to choose a safer response. You will also look at the stress you carry into the car from the rest of your life, because for many drivers that is where the real problem starts.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain how anger and stress affect the body and why high arousal makes driving more dangerous.</li>
+<li>Identify early physical, mental and behavioral warning signs that anger is building behind the wheel.</li>
+<li>Use a 1-to-10 anger scale to rate your arousal and decide when to act on it.</li>
+<li>Describe displaced aggression and how stress from work, home, money or health shows up on the road.</li>
+<li>Explain why venting and rumination tend to increase anger rather than release it.</li>
+<li>Create a personal early-warning list and a pre-drive stress check.</li>
+</ul></div>
+
+<h3>What Anger Does to Your Body</h3>
+<p>Anger is a normal human emotion. It exists for a reason: it prepares the body to deal with a threat. When your brain decides that something is threatening or unfair, it sets off what is often called the <strong>fight-or-flight response</strong>. Stress hormones such as adrenaline are released. Your heart beats faster. Your breathing becomes quicker and shallower. Blood flows toward your large muscles. Your muscles tense, ready for action. Your senses sharpen on whatever your brain has decided is the threat.</p>
+<p>This response was useful for our ancestors facing a predator. It is far less useful in a car. Behind the wheel, you cannot fight the other driver or run away from them, at least not safely. The energy has nowhere appropriate to go, and it tends to come out through the gas pedal, the horn, the steering wheel and your hands.</p>
+<h4>Arousal and driving performance</h4>
+<p>Psychologists use the word <strong>arousal</strong> to describe how activated your body and mind are. Low arousal is drowsy. Moderate arousal is alert and focused, which is ideal for driving. High arousal is keyed up, tense and reactive. As arousal climbs past the moderate range, several things happen that make driving more dangerous:</p>
+<ul>
+<li><strong>Tunnel vision.</strong> Your attention narrows onto the "threat," usually the other driver. You scan less and miss hazards such as a pedestrian stepping off a curb, a car entering from a side street, or brake lights two vehicles ahead.</li>
+<li><strong>Faster, rougher control.</strong> Tense muscles produce jerky steering, harder braking and heavier acceleration.</li>
+<li><strong>Riskier choices.</strong> High arousal makes risky moves feel more acceptable. Gaps look bigger than they are. Speeds feel slower than they are.</li>
+<li><strong>Poorer judgment.</strong> The thinking part of the brain has less influence on decisions. You become more impulsive and less able to consider consequences.</li>
+<li><strong>Slower calming.</strong> Once stress hormones are released, they take time to clear. Even after the incident is over, you remain on edge and quicker to react to the next trigger.</li>
+</ul>
+<p>This is why the research on high-anger drivers matters. Psychologist Jerry Deffenbacher at Colorado State University found that high-anger drivers became angry faster and more intensely, took more risks, such as speeding 10 to 20 mph over the limit, rapid lane changes, tailgating and entering intersections on red, and in driving simulations had about twice as many crashes as low-anger drivers. High arousal is not just unpleasant. It is a measurable safety risk.</p>
+
+<div class="highlight"><strong>Key Idea:</strong> The ideal driving state is calm alertness. When anger pushes you past that point, your vision narrows, your control gets rougher, and your judgment gets worse, all at the moment you most need them.</div>
+
+<h4>Anger as a "cover" emotion</h4>
+<p>Anger often sits on top of other feelings. Counselors sometimes call it a secondary or cover emotion. Underneath the anger, there may be:</p>
+<ul>
+<li><strong>Fear:</strong> the jolt of a near miss. Your body floods with alarm, and within seconds that alarm turns into anger at the driver who caused it.</li>
+<li><strong>Embarrassment:</strong> being honked at for a mistake, or feeling foolish in front of a passenger.</li>
+<li><strong>Helplessness:</strong> being stuck in traffic with no control over when it will clear.</li>
+<li><strong>Hurt pride:</strong> feeling dismissed or disrespected by another driver.</li>
+<li><strong>Worry:</strong> concern about being late, losing a job or letting someone down.</li>
+</ul>
+<p>Naming the feeling underneath can take some of the heat out of the anger. "I'm not really furious at that driver. I'm scared because that was close." Or: "I'm worried my boss will be upset if I'm late." Those feelings are easier to handle honestly than anger, and none of them is solved by driving aggressively.</p>
+
+<h3>Your Early Warning Signs</h3>
+<p>Every person has a personal set of early warning signs that anger is building. They fall into three groups: body signals, thought signals and driving-behavior signals. The earlier in the chain you notice them, the easier it is to calm down.</p>
+<h4>Body signals</h4>
+<ul>
+<li>Tight grip on the steering wheel, or white knuckles</li>
+<li>Clenched jaw or grinding teeth</li>
+<li>Shoulders raised toward your ears</li>
+<li>Heat in your face, neck or chest</li>
+<li>Faster heartbeat or pounding in your chest</li>
+<li>Quick, shallow breathing, or holding your breath</li>
+<li>Leaning forward in the seat, toward the car ahead</li>
+<li>A knot in your stomach or tension in your forehead</li>
+</ul>
+<h4>Thought signals</h4>
+<ul>
+<li>Insulting labels for other drivers running through your head</li>
+<li>Replaying the incident over and over</li>
+<li>Thinking about getting even or "teaching a lesson"</li>
+<li>Words such as "always," "never," "on purpose," "should" and "can't stand it"</li>
+<li>Imagining arguments or confrontations</li>
+<li>Focusing on one driver while ignoring everything else on the road</li>
+</ul>
+<h4>Driving-behavior signals</h4>
+<ul>
+<li>Your speed creeping up without a conscious decision</li>
+<li>Closing the gap with the vehicle ahead</li>
+<li>Changing lanes more often than you need to</li>
+<li>Using the horn, flashing headlights or gesturing</li>
+<li>Accelerating to block someone from merging</li>
+<li>Braking harder or later than usual</li>
+<li>Talking or yelling at other drivers who cannot hear you</li>
+</ul>
+<p>Notice that many of the driving-behavior signals match the offenses in Delaware's aggressive driving law, 21 Del.C. §4175A. Speeding, following too closely and improper lane use all appear on the statute's list. In other words, by the time your anger shows up in your driving, you may already be committing violations. That is why it pays to catch the body and thought signals first.</p>
+
+<div class="scenario"><h4>Scenario: The Creeping Speedometer</h4><p>Consider a driver we'll call Dana. She is driving on a two-lane road in Sussex County where the limit is 50 mph. A car pulled out in front of her a mile back, and she has been stuck behind it ever since. She does not feel especially angry. But when she glances down, she sees she is about a car length behind the other vehicle, her hands are tight on the wheel, and she has been muttering for several minutes.</p><details><summary>What should happen here?</summary><p>Dana's body and behavior noticed her anger before her conscious mind did. Her tight grip, muttering and shrinking following distance are all early warning signs. The right move is to treat those signals as an alarm: ease off the gas, let the gap grow back to a safe following distance of at least 3 to 4 seconds, loosen her grip, drop her shoulders and take a slow breath. She can also remind herself that she is not actually losing much time; she is simply going the same speed as the car ahead. Following too closely (§4123) is one of the offenses listed in the aggressive driving statute, and closing the gap gives her no benefit at all.</p></details></div>
+
+<div class="myth"><p><strong>Myth:</strong> "Calm drivers just don't feel anger. I'm not built that way."</p><p><strong>Fact:</strong> Calm drivers feel irritation too. The difference is that they notice it early and do something about it before it reaches their hands and feet. Noticing is a skill, and like any driving skill, it improves with practice. The first few times you catch a tight grip or a clenched jaw, it may feel strange. After a few weeks of deliberate attention, many drivers find they spot their warning signs almost automatically.</p></div>
+
+<h4>Recovering after a near miss</h4>
+<p>A near miss is one of the most common sparks for road rage, because it produces a sudden surge of fear that quickly turns into anger. After a close call, expect your heart to pound and your hands to shake for a while. That is normal. Give yourself extra following distance, keep your speed steady, and avoid any quick decisions for the next few minutes while your body settles. If you are badly shaken, pull into a safe, public place and wait until you feel steady again.</p>
+
+<h3>The Anger Scale: Rating Your Arousal</h3>
+<p>A simple tool used in many anger management programs is the <strong>anger scale</strong>, sometimes called an anger thermometer. It helps you put a number on how activated you are, which makes it easier to decide what to do. Use it during drives (in your head, never on a device) and in your anger log after you park.</p>
+<table>
+<tr><th>Rating</th><th>What it feels like</th><th>What to do</th></tr>
+<tr><td>1–2 Calm</td><td>Relaxed, alert, focused on the road</td><td>Keep scanning and keep your space cushion.</td></tr>
+<tr><td>3–4 Irritated</td><td>Mild annoyance, a sigh, a frown</td><td>Notice it. Loosen your grip, breathe out slowly, check your thoughts.</td></tr>
+<tr><td>5–6 Angry</td><td>Heat in the face, tight jaw, insulting thoughts</td><td>Actively calm down. Increase following distance, slow slightly, use a calming phrase, change your focus.</td></tr>
+<tr><td>7–8 Very angry</td><td>Pounding heart, urge to retaliate, fixed on one driver</td><td>Get space now: change lanes when safe, let the other driver go, turn off at the next safe place if needed.</td></tr>
+<tr><td>9–10 Out of control</td><td>Rage, urge to chase or confront</td><td>Do not keep driving in this state. Pull into a safe, public place, stop, and calm down before continuing.</td></tr>
+</table>
+<p>The most important zone on the scale is 3 to 6. That is where you still have plenty of control, and where calming strategies work best. By 8 or 9, your body is flooded with stress hormones and your thinking is narrowed, which makes it much harder to choose wisely. The goal is not to never reach 4. It is to catch a 4 before it becomes an 8.</p>
+
+<div class="highlight"><strong>Practice Tip:</strong> For the next week, rate your anger at three points on every drive: as you start the car, halfway through, and when you park. You will quickly learn your normal range and notice the situations that push you higher.</div>
+
+<h3>Displaced Aggression: When the Road Is Not the Problem</h3>
+<p><strong>Displaced aggression</strong> is anger that comes from one source but gets aimed at another, safer or more convenient target. A person who is angry at a boss, but cannot safely show it, may snap at a family member that night. A person who is upset about a phone call may take it out on the next driver who gets in the way.</p>
+<p>Cars make displaced aggression especially easy. You are separated from other drivers by glass and metal. You will probably never see them again. They cannot easily respond. And you have a powerful machine under your control. Those conditions make the road a convenient place to unload feelings that really belong somewhere else.</p>
+<p>The research behind the RAD program from Monash University identified displaced stress as one of the common triggers for aggressive driving. Participants often recognized, after the fact, that their worst road incidents happened on days when something else was already wrong.</p>
+<h4>Signs that your anger may be displaced</h4>
+<ul>
+<li>Your reaction is much bigger than the event. A minor delay produces major rage.</li>
+<li>You were already tense, irritable or upset before you started the car.</li>
+<li>You keep thinking about something other than the road, such as an argument or a problem at work.</li>
+<li>You feel a sense of relief or satisfaction when you honk or yell, and then feel worse afterward.</li>
+<li>Many different, small things bother you on the same drive.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Phone Call Before the Drive</h4><p>Consider a driver we'll call Andre. Just before leaving work, he gets a call from his landlord about a rent problem. He hangs up angry and starts his drive home. A few minutes later, a driver waiting to turn left hesitates at a green light. Andre leans on the horn, swings around him on the right, and speeds through the intersection. Later, he realizes he does not even remember what the other car looked like.</p><details><summary>What should happen here?</summary><p>Andre's anger was displaced. The real source was the call with his landlord; the hesitating driver was simply the first available target. His actions included passing on the right (§4117) and speeding (§4169), two of the sections listed in §4175A, and his horn and swerve could have provoked the other driver or caused a crash. A better plan: Andre could have taken a few minutes before starting the car to notice how upset he was, take some slow breaths, and decide to deal with the rent problem later at home. Simply naming it, "I'm angry about the rent, not about traffic," can lower the risk of taking it out on the road.</p></details></div>
+
+<h3>Stress Outside the Car</h3>
+<p>Stress is the body's response to demands that feel greater than your ability to cope. It builds up over hours, days and weeks. When you are already carrying a heavy load, your "anger threshold" drops. The same trigger that you would ignore on a relaxed day can set you off on a stressful one.</p>
+<h4>Common sources of outside stress</h4>
+<ul>
+<li><strong>Work:</strong> deadlines, conflicts with coworkers or supervisors, job insecurity, long shifts.</li>
+<li><strong>Home and family:</strong> arguments, caregiving, children's problems, relationship strain.</li>
+<li><strong>Money:</strong> bills, debt, unexpected expenses, and, for many people taking this course, fines, court costs and possible insurance increases.</li>
+<li><strong>Health:</strong> pain, illness, poor sleep, or worry about a loved one's health.</li>
+<li><strong>Legal matters:</strong> a court date, a license problem or the deadline to finish this course.</li>
+<li><strong>Daily hassles:</strong> small irritations that pile up, such as lost keys, spilled coffee or a dead phone battery.</li>
+</ul>
+<p>It is worth being honest that a traffic conviction itself can add stress. You may be worried about points, your insurance, your job or your license. That stress can make you more reactive on the road, which raises the risk of another incident. Recognizing this cycle is part of breaking it. Delaware gives court-ordered drivers 90 days from conviction to complete this course under Regulation 1202, and one 90-day extension may be granted on written request (point-system drivers have 90 days from the DMV notice and may request an extra 90 days), so you do not need to let this particular deadline add to your pressure behind the wheel.</p>
+<h4>The stress bucket</h4>
+<p>A useful way to picture stress is as a bucket. Every source of stress pours a little water in. Rest, sleep, exercise, good relationships and time to unwind let water drain out. If the bucket is nearly full when you get in the car, it takes only a small splash, one rude driver or one red light, to make it overflow. The answer is not only to avoid splashes on the road. It is also to keep the bucket from getting so full in the first place.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>What is currently filling your "stress bucket"? List the main sources, then note one thing you could do this week to let some of that pressure out that has nothing to do with driving.</label><textarea></textarea></div>
+
+<h3>Why Venting and Rumination Backfire</h3>
+<p>Many people believe that anger is like steam in a pressure cooker: if you let some out by yelling, honking or pounding the steering wheel, you will feel better. This idea is common, but research does not support it. Studies on anger have found that <strong>venting tends to increase anger rather than release it</strong>. When you yell or honk, you rehearse the angry response. Your body stays in fight-or-flight mode, and you become more likely to act aggressively, not less.</p>
+<p>A related problem is <strong>rumination</strong>, which means replaying an incident over and over in your mind. "I can't believe he did that. Who does he think he is? If I see him again..." Rumination keeps the trigger alive long after it is gone. Research shows that rumination prolongs anger. A driver who ruminates for twenty minutes after being cut off is driving those twenty minutes with high arousal, narrowed attention and a lower threshold for the next trigger.</p>
+
+<div class="myth"><p><strong>Myth:</strong> "I have to let it out. If I don't honk or yell, I'll explode."</p><p><strong>Fact:</strong> Venting rehearses anger and keeps your body stirred up. Calming strategies, such as slow breathing, loosening your muscles and redirecting your attention, lower arousal far more effectively. You do not need to "let it out." You need to let it settle.</p></div>
+
+<h4>What helps instead</h4>
+<ul>
+<li><strong>Slow your breath.</strong> A long, slow breath out signals the body to calm down. You will learn a full breathing technique in Module 12.</li>
+<li><strong>Release your muscles.</strong> Loosen your grip, drop your shoulders and unclench your jaw. A relaxed body sends a calm message back to the brain.</li>
+<li><strong>Redirect your attention.</strong> Shift your focus back to the road: scan ahead, check mirrors, notice your following distance. Attention on driving tasks crowds out rumination.</li>
+<li><strong>Use a short calming phrase.</strong> "Let it go." "Not worth it." "Get home safe." Repeat it when the replay starts.</li>
+<li><strong>Increase your space.</strong> Physical distance from the other driver is one of the fastest ways to lower arousal.</li>
+<li><strong>Talk it through later.</strong> If you need to discuss the incident, do it once you are parked and calm, and focus on what you could do differently.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: Twenty Minutes of Replay</h4><p>Consider a driver we'll call Priya. On the way to a family event, a driver cuts in front of her on a busy road and she has to brake hard. No one is hurt. For the next twenty minutes, she replays the moment, tells her passenger about it three times, and honks at two other drivers who make small mistakes. She arrives tense and snaps at a relative.</p><details><summary>What should happen here?</summary><p>Priya's anger did not end when the incident did. Rumination kept her arousal high, which made her more reactive to later triggers and carried the anger into the family event. A better approach: once the immediate danger passed, she could take a slow breath, acknowledge the fear ("that scared me"), say a calming phrase, and deliberately turn her attention back to the road ahead. Telling the story repeatedly is a form of venting that keeps the anger going.</p></details></div>
+
+<h3>Building a Pre-Drive Stress Check</h3>
+<p>One of the most practical habits you can build is a quick stress check before you start the car. It takes less than a minute and can prevent many incidents. Think of it as a mirror check for your mind. Before you put the car in gear, ask yourself:</p>
+<ol>
+<li><strong>How am I feeling right now?</strong> Rate yourself on the anger scale from 1 to 10.</li>
+<li><strong>Am I carrying anything in with me?</strong> An argument, a worry or a bad day?</li>
+<li><strong>Am I rushed?</strong> Do I have enough time, or am I already late?</li>
+<li><strong>Am I tired, hungry or unwell?</strong> These lower your threshold for anger (Module 9 explores them in detail).</li>
+<li><strong>What is one thing I can do to make this drive calmer?</strong> Call ahead, put on calming audio, take three slow breaths, or wait five minutes before leaving.</li>
+</ol>
+<p>If your rating is 6 or higher before you even leave, that is a signal to pause. You may need a few minutes to calm down before driving. A short walk, a few slow breaths, a glass of water or a brief conversation with someone supportive can bring your number down. Starting a drive at a 7 means one small trigger can push you to a 9.</p>
+
+<div class="highlight"><strong>Self-monitoring link:</strong> Add your pre-drive rating to the anger log you started in Module 6. Over time you will see how often a high starting number leads to a bad drive, which gives you a strong reason to keep doing the check.</div>
+
+<h3>Your Personal Early-Warning List</h3>
+<p>Now pull together what you have learned about yourself. Your personal early-warning list is a short set of signals that tell you, specifically, that your anger is rising. It is personal because everyone's signals differ. One driver's first sign is a clenched jaw; another's is muttering; another's is a creeping speedometer.</p>
+<p>To build your list, think back to the incident that brought you to this course and to other times you have felt angry while driving. What did you notice first in your body? What thoughts started? What did your driving start to look like? Choose the two or three earliest signs from each category. Those become your personal alarms.</p>
+<p>Then pair each alarm with a response. For example:</p>
+<ul>
+<li>"When I notice my hands tightening on the wheel, I will loosen my grip and drop my shoulders."</li>
+<li>"When I catch myself calling another driver a name, I will say 'Let it go' and look farther down the road."</li>
+<li>"When I see my following distance shrinking, I will ease off the gas until I have at least 3 to 4 seconds."</li>
+</ul>
+<p>These "when, then" pairings are called <strong>implementation intentions</strong>. Research in behavior change shows that deciding in advance exactly what you will do in a specific situation makes you much more likely to follow through, because the decision is already made when the moment arrives. You will use this approach throughout the rest of the course.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>My early-warning list: write my top two body signals, my top two thought signals, and my top two driving-behavior signals. For each one, write a "When I notice..., I will..." response.</label><textarea></textarea></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Fight-or-flight response</dt><dd>The body's automatic reaction to a perceived threat, including stress hormones, faster heart rate and muscle tension.</dd>
+<dt>Arousal</dt><dd>How activated your body and mind are; moderate arousal supports good driving, while high arousal impairs it.</dd>
+<dt>Cover emotion</dt><dd>Anger that sits on top of another feeling, such as fear, embarrassment or worry.</dd>
+<dt>Anger scale</dt><dd>A 1-to-10 rating of how angry or activated you feel, used to decide when to take calming action.</dd>
+<dt>Displaced aggression</dt><dd>Anger from one source directed at another, more convenient target, such as another driver.</dd>
+<dt>Venting</dt><dd>Expressing anger through yelling, honking or gestures; it tends to increase anger rather than release it.</dd>
+<dt>Rumination</dt><dd>Replaying an upsetting event over and over, which prolongs anger.</dd>
+<dt>Implementation intention</dt><dd>A specific "when X happens, I will do Y" plan made in advance.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Anger triggers the fight-or-flight response: stress hormones, a faster heart rate, rapid breathing and tense muscles.</li>
+<li>High arousal causes tunnel vision, rougher vehicle control, riskier choices and poorer judgment, which is why high-anger drivers crash more often.</li>
+<li>Anger often covers other feelings such as fear, embarrassment, helplessness or worry; naming them can reduce the anger.</li>
+<li>Early warning signs come in three types: body signals, thought signals and driving-behavior signals. Catch the body and thought signals before they show up in your driving.</li>
+<li>The anger scale helps you act early. The 3-to-6 zone is where calming strategies work best; at 9 or 10, stop in a safe, public place before continuing.</li>
+<li>Displaced aggression is anger from outside the car aimed at other drivers; a reaction much bigger than the event is a clue.</li>
+<li>Outside stress fills your "stress bucket" and lowers your anger threshold on the road.</li>
+<li>Venting and rumination increase and prolong anger; breathing, muscle release, attention shifts and space work better.</li>
+<li>A pre-drive stress check and a personal early-warning list with "when, then" responses help you stop anger before it becomes aggressive driving.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module, where you will learn how to respond safely when someone else is the aggressive driver.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 7 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 8.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m7-remaining', DONE='de-bmc-m7-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 7. Return to your course and continue to Module 8.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

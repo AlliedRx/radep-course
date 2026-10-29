@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 12: Calming Skills | DMV Courses – Delaware Aggressive Driving Behavior Modification Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Aggressive Driving Behavior Modification Course &middot; Module 12 of 16 &middot; 30 minutes</span>Module 12: Calming Skills</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: BMC (Behavior Modification / Attitudinal Driving Course, 21 Del.C. §4175A(d); 2 DE Admin. Code 1202) | Module B12: Calming Skills | Principles: arousal reduction, relaxation training, response delay, self-monitoring -->
+<p>In the last module you practiced rethinking a situation: catching the hostile first thought and replacing it with a more accurate one. That skill works best when your body is calm enough to let you think. When your heart is pounding, your grip is tight and your jaw is locked, your brain is in a state built for fighting or running, not for careful judgment. This module teaches four calming skills you can use in the car, before you get in the car, and after a hard moment on the road: paced breathing using a 4-4-6 count, progressive muscle relaxation, a physical reset, and a three-second delay. None of them requires you to take your eyes off the road or your hands off the wheel.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain why physical arousal makes aggressive driving more likely and why lowering arousal is a core part of changing driving behavior.</li>
+<li>Perform 4-4-6 breathing safely while driving and explain why the long exhale matters.</li>
+<li>Practice progressive muscle relaxation before driving and use a shortened, driving-safe version behind the wheel.</li>
+<li>Use a physical reset to break the build-up of tension during a drive or after a stressful event.</li>
+<li>Apply the three-second delay to prevent impulsive reactions such as honking, tailgating, or speeding up to block another driver.</li>
+<li>Build a personal calming routine and a plan to practice it until it becomes automatic.</li>
+</ul></div>
+
+<h3>Why Your Body Comes First</h3>
+<p>Earlier modules described driving anger as a chain: a trigger happens, you have a thought about it, the thought produces an emotion, the emotion shows up in your body, and then you act. The chain also runs in the other direction. When your body is already tense and keyed up, every trigger feels bigger and every hostile thought feels more believable.</p>
+<p>Psychologists use the word <em>arousal</em> to describe how activated your nervous system is. Some arousal is useful: it sharpens your attention when something dangerous happens. The problem comes when arousal stays high, or keeps climbing, long after the danger has passed. At high levels your attention narrows, your patience shrinks, and your body is primed for quick, forceful action. That is exactly the state in which drivers tailgate, lay on the horn, cut back in front of someone, or chase another car.</p>
+<p>The research you learned about in Module 5 supports this focus on the body. Psychologist Jerry Deffenbacher of Colorado State University found that high-anger drivers get angry faster and take more risks behind the wheel. He then tested ways to help them. Relaxation training, and relaxation combined with cognitive techniques like the ones in Module 11, both reduced driving anger, and the improvements were largely maintained about a year later. Calming your body is a method with real evidence behind it.</p>
+<div class="highlight"><strong>Key Idea:</strong> You cannot think your way out of anger while your body is in full alarm. Lower the alarm first, then use the reframing skills from Module 11. Calm body, clear mind, safe choice.</div>
+
+<h3>Know Your Starting Point: Rating Your Arousal</h3>
+<p>Before you can lower your arousal, you have to notice it. In Module 7 you identified your early warning signs, such as a tight jaw, raised shoulders, a hot face, a faster pulse, a clenched grip, or talking out loud to other drivers. This module adds a simple tool: a 0-to-10 tension scale. Zero means completely relaxed. Ten means the most furious you have ever been in a car. Precision does not matter; honesty does.</p>
+<table>
+<tr><th>Rating</th><th>What it usually feels like</th><th>What to do</th></tr>
+<tr><td>0–2</td><td>Loose, patient, attention spread across the road</td><td>Keep driving normally; enjoy it</td></tr>
+<tr><td>3–4</td><td>Mild irritation, slight tightness, sighing</td><td>One or two rounds of 4-4-6 breathing; loosen your grip</td></tr>
+<tr><td>5–6</td><td>Clear anger, muttering, pulse up, urge to "show" someone</td><td>Three-second delay, physical reset, several rounds of breathing, add following distance</td></tr>
+<tr><td>7–8</td><td>Strong anger, hostile thoughts racing, wanting to retaliate</td><td>Back off from the other vehicle, breathe, consider a safe stop to reset</td></tr>
+<tr><td>9–10</td><td>Rage, feeling out of control</td><td>Do not keep driving in this state; get to a safe, legal place to stop and calm down</td></tr>
+</table>
+<p>Try checking your number at predictable points: when you start the car, at a long red light, when you merge onto a highway like I-95 or SR 1, and when you arrive. After a week you will see patterns, such as starting most trips at a 4 because you are already late. The rating is itself a calming skill. Putting a number on your tension shifts you from being inside the emotion to observing it. Psychologists call this self-monitoring, and it creates a small gap between feeling and acting where better decisions happen.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think about the drive that led to your aggressive driving charge or your points (or another tense drive you remember). What number do you think you were at when you started the trip? What number were you at when you made the choice you regret? What happened in between?</label><textarea></textarea></div>
+
+<h3>Skill 1: 4-4-6 Breathing</h3>
+<p>Breathing is the one part of your stress response you can control directly and immediately. When you are angry or anxious, breathing tends to become fast and shallow, high in the chest. That pattern feeds the alarm. Slow breathing with a longer exhale does the opposite: it activates the part of the nervous system that slows the heart and settles the body.</p>
+<p>The 4-4-6 pattern is easy to remember and safe to use while driving:</p>
+<ol>
+<li><strong>Breathe in through your nose for a count of 4.</strong> Let your belly expand, not just your chest. Your shoulders should stay down.</li>
+<li><strong>Hold gently for a count of 4.</strong> Do not strain. If holding is uncomfortable, shorten the hold.</li>
+<li><strong>Breathe out slowly through your mouth for a count of 6.</strong> Let the air go as if you were blowing gently through a straw.</li>
+<li><strong>Repeat three to five times.</strong> Keep your eyes on the road and your hands on the wheel the entire time.</li>
+</ol>
+<p>The long exhale is the most important part. Making the out-breath longer than the in-breath is what tells your body the threat has passed. If you only remember one thing, remember "out longer than in."</p>
+<div class="warning"><strong>Safety Rule:</strong> Never close your eyes, look away from the road, or take your hands off the wheel to do a breathing exercise while driving. Breathing is a background activity. Your full attention stays on traffic. If you need to focus fully on calming down, get to a safe, legal place to stop first.</div>
+<p>Practice 4-4-6 breathing when you are not angry, several times a day for a week: at your desk, while waiting in line, before bed. Skills learned only under stress are hard to use under stress. Link practice to a daily cue, such as buckling your seat belt.</p>
+<p>If your mind keeps returning to the driver who annoyed you, do not argue with the thought. Just go back to counting. Counting gives your mind a simple job that competes with rumination, the replaying of an event that keeps anger alive.</p>
+
+<div class="scenario"><h4>Scenario: Stuck Behind the Tractor</h4><p>Consider a driver we'll call Marcus, heading south on a two-lane road in Sussex County to a job interview. A farm vehicle pulls out ahead of him and travels well below the speed limit. A long double yellow line means he cannot legally pass. Marcus feels his pulse climb. He catches himself creeping closer to the farm vehicle's back end and starting to think, "This guy is doing this on purpose." His tension number is about a 6.</p><details><summary>What should happen here?</summary><p>Marcus first recognizes the signs: closing the gap, hostile thought, pulse up. He drops back to a safe following distance, because tailgating a slow vehicle only reduces his own ability to react. He does three rounds of 4-4-6 breathing with his eyes on the road. As his body settles, he reframes: the farm driver is doing a job and cannot go faster. Marcus reminds himself that passing across a solid line, near a curve or crest, or within 100 feet of an intersection is illegal in Delaware (21 Del.C. §§4119, 4120), and that an improper pass is exactly the kind of choice that leads to head-on collisions. He waits for a legal, clearly visible passing zone, or for the farm vehicle to turn off. A few minutes late can be explained. A crash or a charge cannot.</p></details></div>
+
+<h3>Skill 2: Progressive Muscle Relaxation</h3>
+<p>Anger and stress live in the muscles. When you are tense, you hold tightness in your hands, forearms, shoulders, neck, jaw and forehead, often without noticing. Progressive muscle relaxation (PMR) teaches you to notice that tension by deliberately creating it and then releasing it. The contrast between "tight" and "loose" trains your body to recognize tension early and let it go on purpose.</p>
+<h4>The full version (before driving or when safely parked)</h4>
+<p>Do the full version at home, or in a parked car with the engine off, never while the vehicle is moving. For each muscle group, tense the muscles firmly but not painfully for about five seconds, notice what the tension feels like, then release all at once and notice the difference for about fifteen to twenty seconds.</p>
+<ol>
+<li><strong>Hands and forearms:</strong> make tight fists, then open and let your fingers go limp.</li>
+<li><strong>Upper arms:</strong> bend your elbows and tighten your biceps, then let your arms drop.</li>
+<li><strong>Shoulders:</strong> lift them toward your ears, hold, then let them fall.</li>
+<li><strong>Neck:</strong> gently press your head back against the headrest, then release.</li>
+<li><strong>Face and jaw:</strong> squeeze your eyes and clench your teeth, then let your jaw hang slightly open and your forehead smooth out.</li>
+<li><strong>Chest and stomach:</strong> take a breath and tighten your stomach, then exhale slowly and let it soften.</li>
+<li><strong>Legs and feet:</strong> press your heels down and tighten your thighs, then release.</li>
+</ol>
+<p>When you finish, sit for a minute and breathe with the 4-4-6 count. Rate your tension again. With practice you will notice tightness before it builds into anger.</p>
+<h4>The driving-safe version</h4>
+<p>While driving, you can only use the parts of PMR that do not affect control of the vehicle. Your hands must stay on the wheel, your feet must stay ready on the pedals, and your eyes must stay on the road. Within those limits, three areas carry most of the anger tension and can be released safely:</p>
+<ul>
+<li><strong>Grip:</strong> notice whether your knuckles are white. Keep both hands on the wheel but loosen your grip to the firmness you would use to hold a steering wheel in a parking lot. A death grip does not improve control.</li>
+<li><strong>Shoulders:</strong> at a red light or in stopped traffic, lift your shoulders slightly, hold for a breath, and let them drop. While moving, simply notice whether they have crept up and let them settle.</li>
+<li><strong>Jaw:</strong> unclench your teeth and let a small gap form between them. A relaxed jaw is hard to combine with a furious thought. Try it and notice.</li>
+</ul>
+<p>Pairing these releases with the exhale of your 4-4-6 breathing makes both work better: breathe in, hold, and on the long breath out, loosen your grip, drop your shoulders, and unclench your jaw.</p>
+
+<div class="myth"><p><strong>Myth:</strong> If I relax while driving, I will lose my edge and react more slowly to danger.</p><p><strong>Fact:</strong> Calming skills reduce excess tension, not alertness. A driver at a 3 on the tension scale is still fully alert, with attention spread across the road and mirrors. A driver at an 8 has narrowed attention locked on one other car, which makes it easier to miss the pedestrian, the brake lights two cars ahead, or the vehicle merging from the side. Calm is not the same as sleepy. If you feel drowsy, that is a fatigue problem: stop and rest.</p></div>
+
+<h3>Skill 3: The Physical Reset</h3>
+<p>Sometimes tension builds slowly over a long drive, or a single event, like a near miss or an angry exchange of horns, leaves you shaken. A physical reset is a short sequence of actions that tells your body the moment is over. You are not ignoring what happened. You are clearing it out so it does not ride along for the rest of the trip.</p>
+<h4>While still driving</h4>
+<ol>
+<li><strong>Create space.</strong> Ease off the accelerator and increase your following distance. Distance removes the threat from your immediate view.</li>
+<li><strong>Breathe.</strong> Do three rounds of 4-4-6 breathing.</li>
+<li><strong>Release.</strong> Loosen your grip, drop your shoulders, unclench your jaw.</li>
+<li><strong>Reset your posture.</strong> Sit back against the seat. Leaning toward the windshield is the posture of pursuit.</li>
+<li><strong>Change the input.</strong> If it is safe to do so without looking away from the road, lower the volume of loud or aggressive music, or switch to something calm. Adjust the temperature if you are hot. Heat and loud noise both increase irritability.</li>
+<li><strong>Name it and close it.</strong> Say a short closing phrase to yourself, such as "That's done," "Not my problem anymore," or "Let it go by." This marks the end of the event and helps stop rumination.</li>
+</ol>
+<h4>When you can stop</h4>
+<p>If your tension number is at a 7 or above, or you notice you keep replaying the event, a short stop is the strongest reset available. Pull into a safe, legal location such as a gas station, a store parking lot, or a rest area. Turn off the engine. Then:</p>
+<ul>
+<li>Get out and walk for two or three minutes if the location is safe. Movement helps burn off the stress chemicals your body released.</li>
+<li>Do one round of the full PMR sequence or several minutes of 4-4-6 breathing.</li>
+<li>Rate yourself again. Do not return to the road until you are at a 4 or below.</li>
+</ul>
+<p>A five-minute stop can feel like lost time when you are already frustrated. Compare it honestly to what an angry choice can cost. In Delaware, a conviction for aggressive driving under 21 Del.C. §4175A carries 6 points, a fine of $100 to $300 or 10 to 30 days in jail or both for a first offense, and this course. A second offense within 3 years raises the fine to $300 to $1,000, the jail range to 30 to 60 days, and adds a 30-day license suspension. Five minutes in a parking lot is a bargain.</p>
+
+<div class="scenario"><h4>Scenario: The Horn War on Route 13</h4><p>Consider a driver we'll call Renée. On US 13 near Dover, another driver merges into her lane with very little room. Renée brakes and leans on her horn. The other driver honks back and gestures. For the next two miles Renée finds herself staying right behind that car, and her thoughts are racing: "Who does he think he is?" She realizes she is at about an 8.</p><details><summary>What should happen here?</summary><p>Renée uses the physical reset. She eases off the gas and lets a large gap open, which removes the other car from the center of her attention. She breathes with the 4-4-6 count, loosens her grip, drops her shoulders, and sits back. She tells herself, "That's done." Because her number is still high and she keeps replaying the exchange, she pulls into a store parking lot, turns off the engine, walks for a few minutes, and waits until she is at a 4. By following the other car, Renée had been drifting toward the "continuous conduct" pattern the aggressive driving law describes, such as following too closely (§4123) and speeding (§4168, §4169). Her reset stopped the chain before it became a crash or a charge.</p></details></div>
+
+<h3>Skill 4: The Three-Second Delay</h3>
+<p>Most aggressive acts on the road happen in the first second or two after a trigger. The horn, the gesture, the sudden acceleration to close a gap: these are impulses, not decisions. The three-second delay is a rule you set for yourself in advance: when something on the road makes you angry, you will not do anything except drive safely for three seconds. No horn, no gesture, no speeding up, no braking to "teach a lesson," no lane change to get even. Just hold your lane, keep your speed steady or ease off, and breathe.</p>
+<p>Why three seconds? Because the surge of anger is strongest right after the trigger and starts to fade if you do not feed it. Three seconds is long enough for the first wave to pass and for the thinking part of your brain to catch up. Almost anyone can wait three seconds.</p>
+<h4>How to use it</h4>
+<ol>
+<li><strong>Trigger:</strong> something happens, such as being cut off, a slow driver ahead, or a horn behind you.</li>
+<li><strong>Signal word:</strong> say a cue word to yourself, such as "Wait," "Three," or "Hold."</li>
+<li><strong>Count and breathe:</strong> "one, two, three" while starting a slow exhale. Keep your hands steady and your foot light.</li>
+<li><strong>Check:</strong> after three seconds, ask: "Is there a real safety problem I need to handle?" If yes, handle it calmly, for example by slowing, adding space, or changing lanes when safe. If no, let it go.</li>
+<li><strong>Reframe:</strong> use one of your Module 11 reframes: "Maybe they didn't see me," "Maybe they're lost," "Not worth my license."</li>
+</ol>
+<p>There is an important exception. The three-second delay applies to <em>reactions aimed at another driver</em>. It does not mean waiting three seconds to brake when a hazard appears. Defensive actions like braking, steering away from danger, or using the horn as a short warning to prevent a collision should happen immediately. The delay is for the urge to retaliate, not the need to stay safe.</p>
+<h4>Three seconds on the road</h4>
+<p>At 60 mph you travel about 88 feet every second, so in three seconds you cover about 264 feet, which is close to the length of a football field. That is also why maintaining a following gap of at least three to four seconds in good conditions, and more in bad weather, is standard defensive-driving advice. Never use your delay to close in on someone. If you are angry and also right on another car's bumper, your typical perception-reaction time of about 1.5 seconds means you would travel roughly 132 feet at 60 mph before your foot even reaches the brake.</p>
+<div class="highlight"><strong>Key Fact:</strong> Delaware law does not set a following-distance number. 21 Del.C. §4123(a) says a driver "shall not follow another vehicle more closely than is reasonable and prudent." Following too closely is one of the twelve offenses listed in the aggressive driving law, §4175A. Using your three-second delay to drop back, rather than close in, keeps you on the right side of that law.</div>
+
+
+<div class="myth"><p><strong>Myth:</strong> Letting off steam by yelling or honking helps me calm down faster.</p><p><strong>Fact:</strong> Research on anger finds that venting tends to increase anger, not release it. Yelling, honking and gesturing keep your body in fight mode and keep your attention fixed on the other driver. They can also provoke the other driver, turning a brief annoyance into a dangerous confrontation. Slow breathing and muscle release are what actually bring your body down.</p></div>
+
+<h3>Putting the Skills Together: Your Calming Sequence</h3>
+<p>Each skill is useful on its own, but they work best as a sequence you know by heart. Here is a simple order that matches how anger builds and fades:</p>
+<table>
+<tr><th>Moment</th><th>Skill</th><th>What it does</th></tr>
+<tr><td>Right after a trigger (first seconds)</td><td>Three-second delay with cue word</td><td>Blocks the impulsive reaction</td></tr>
+<tr><td>Next 30 seconds</td><td>4-4-6 breathing, three rounds</td><td>Lowers heart rate and arousal</td></tr>
+<tr><td>Next minute</td><td>Driving-safe muscle release: grip, shoulders, jaw</td><td>Clears physical tension</td></tr>
+<tr><td>Next few minutes</td><td>Reframe (Module 11) and closing phrase</td><td>Changes the meaning of the event and stops rumination</td></tr>
+<tr><td>If still at 7 or higher</td><td>Physical reset with a safe stop</td><td>Full recovery before driving on</td></tr>
+<tr><td>Before every drive</td><td>Quick tension rating; short PMR if needed</td><td>Starts the trip at a low number</td></tr>
+</table>
+<p>Many people find it helpful to give their sequence a short name they will remember under pressure, such as "Hold, Breathe, Loosen, Let go." Write your version on a card you can review before you drive, never while moving.</p>
+
+<div class="reflect plan"><h4>Reflection (for your own use — not submitted)</h4><label>Write your personal calming sequence. Include: your cue word for the three-second delay, the closing phrase you will use, the three body areas where you carry the most tension, and the tension number at which you will stop to reset.</label><textarea></textarea></div>
+
+<h3>Practice Plan: Making the Skills Automatic</h3>
+<p>Reading about calming skills is not enough. Deffenbacher's participants kept their gains because they practiced until the skills became habits. Your goal is a calming sequence your body reaches for without thinking.</p>
+<h4>Week 1: Practice while calm</h4>
+<ul>
+<li>Do 4-4-6 breathing for five rounds, three times a day, at times that have nothing to do with driving.</li>
+<li>Do the full PMR sequence once a day, ideally at the same time, such as before bed.</li>
+<li>Each time you get in the car, rate your tension before starting the engine.</li>
+</ul>
+<h4>Week 2: Practice in easy driving</h4>
+<ul>
+<li>Use the driving-safe muscle release at every red light: grip, shoulders, jaw.</li>
+<li>Practice the three-second delay on small annoyances, such as a slow car pulling out of a parking space or a driver who doesn't go right away when the light turns green.</li>
+</ul>
+<h4>Week 3 and beyond: Practice in hard driving</h4>
+<ul>
+<li>Use the full sequence during your most stressful regular drive, such as a rush-hour commute or a trip you dread.</li>
+<li>After each drive, take thirty seconds to note what triggered you, your peak number, which skill you used, and how quickly your number came down.</li>
+</ul>
+<p>Write your notes only after you park. Delaware's hand-held law, 21 Del.C. §4176C, prohibits using an electronic communication device while the vehicle is in motion, including holding it to text or browse.</p>
+
+<div class="scenario"><h4>Scenario: The Commute That Starts Angry</h4><p>Consider a driver we'll call Devon. Every weekday morning he argues with his teenager about getting out the door on time. By the time he backs out of the driveway he is already at a 6, and his commute up SR 1 is full of tailgating and sudden lane changes. He has started this course after reaching 12 points.</p><details><summary>What should happen here?</summary><p>Devon's tension is not coming from the road. It is displaced stress, carried into the car from home, which is one of the common triggers identified in the Monash University Reducing Aggressive Driving research. His first step is to rate himself before starting the engine. When he sees a 6, he stays parked for two minutes and does a short PMR sequence and five rounds of 4-4-6 breathing. He gets down to a 4 before backing out, then uses the driving-safe release at every light and the three-second delay whenever he feels the urge to close a gap. Module 13 will help him with the morning conflict itself. Devon knows that at 12 points, Delaware requires him to complete this course within 90 days of notice or face a mandatory 2-month suspension (Reg 2208), and that reaching 14 points would mean a 4-month suspension. Two minutes in the driveway is a small price.</p></details></div>
+
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Arousal</dt><dd>How activated your nervous system is, from relaxed to full alarm. High arousal narrows attention and makes impulsive, aggressive actions more likely.</dd>
+<dt>Tension scale</dt><dd>A quick 0-to-10 self-rating of how tense or angry you feel, used to decide which calming skill to use.</dd>
+<dt>4-4-6 breathing</dt><dd>A paced breathing pattern: in for 4 counts, hold for 4, out for 6. The longer exhale helps slow the heart and calm the body.</dd>
+<dt>Progressive muscle relaxation (PMR)</dt><dd>Tensing and then releasing muscle groups to learn to recognize and let go of physical tension. The full version is done before driving or while parked.</dd>
+<dt>Physical reset</dt><dd>A short sequence of actions, such as adding space, breathing, releasing muscles, sitting back and using a closing phrase, that ends the stress response after an upsetting event.</dd>
+<dt>Three-second delay</dt><dd>A personal rule to take no action toward another driver for three seconds after a trigger, other than driving safely, so the first surge of anger can pass.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Anger is a body state as well as a thought. High arousal narrows attention and pushes you toward impulsive, aggressive actions, so lowering arousal is a core change skill.</li>
+<li>Deffenbacher's research found that relaxation and cognitive-relaxation training reduced driving anger, with gains largely maintained about a year later.</li>
+<li>Use a 0-to-10 tension scale to check yourself at regular points and to decide what to do. At 9 or 10, do not keep driving; get to a safe, legal place to stop.</li>
+<li>4-4-6 breathing (in 4, hold 4, out 6) calms the body. Keep your eyes on the road and hands on the wheel; the long exhale is the key.</li>
+<li>Do full progressive muscle relaxation before driving or while parked. While driving, release only your grip, shoulders and jaw.</li>
+<li>The physical reset (space, breathe, release, sit back, change the input, closing phrase) ends the stress response after a hard moment. A short, safe stop is the strongest reset.</li>
+<li>The three-second delay blocks retaliation. It never delays defensive actions like braking or steering away from danger.</li>
+<li>Following too closely and speeding are among the offenses listed in Delaware's aggressive driving law; calming skills help you drop back instead of closing in.</li>
+<li>Venting increases anger. Practice your calming sequence daily, first while calm and then in traffic, until it becomes automatic.</li>
+</ul>
+<p>When the timer for this module reaches 00:00, return to the course and continue to Module 13, Planning Ahead, where you will learn how to remove time pressure and stress before you ever start the engine.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 12 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 13.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-bmc-m12-remaining', DONE='de-bmc-m12-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 12. Return to your course and continue to Module 13.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>
