@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 4: School Buses, Emergency Vehicles, Move Over, and Motorcycles | DMV Courses – Delaware Refresher Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Refresher Defensive Driving Course &middot; Module 4 of 6 &middot; 30 minutes</span>Module 4: School Buses, Emergency Vehicles, Move Over, and Motorcycles</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.6, 6.1.6.1, 6.1.6.2, 6.1.7, 6.1.7.1, 6.1.7.2, 6.1.7.3 -->
+<p>You already know the basic rules for school buses, emergency vehicles, and motorcycles from your earlier defensive driving course. This refresher module is about sharpening that knowledge, catching habits that may have slipped, and checking what has changed in Delaware law since you last sat through a course. Some of it has changed: Delaware strengthened its Move Over Law in 2024, and the penalty structure is now tougher than many drivers realize. Each of the situations in this module has one thing in common. Another road user is either very vulnerable, very busy, or very hard to see, and the burden of preventing a crash falls mostly on you, the driver of the car. </p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Restate Delaware's school bus stopping rule under 21 Del.C. §4166, including the four-lane exception and the penalties for passing a stopped bus.</li>
+<li>Explain what Delaware law requires when an emergency vehicle approaches with its signals on, and what the Move Over Law (§4134(b)) requires for stationary vehicles.</li>
+<li>Describe the 2024 changes to the Move Over Law, including the "20 mph below the posted limit" rule and the fine schedule.</li>
+<li>Identify the reasons motorcyclists are hard to see and the scanning habits that reduce that risk.</li>
+<li>Calculate an increased following distance behind a motorcycle and explain why a motorcycle may stop in a shorter distance than a larger vehicle.</li>
+</ul></div>
+
+<h3>Why These Situations Still Matter for Experienced Drivers</h3>
+<p>Experience is a mixed blessing. After years of driving, most of what you do behind the wheel becomes automatic, and automatic habits are fast and efficient. The problem is that automatic habits are built from what usually happens, not from what occasionally happens. Most days, the school bus ahead of you does not stop. Most days, there is no trooper on the shoulder. Most days, the motorcycle in the next lane stays in its lane. Your brain learns to stop paying close attention to things that rarely require action, and that is exactly when these situations become dangerous.</p>
+<p>The numbers in Delaware show why this matters. According to a State of Delaware release dated January 12, 2024, the state recorded 137 traffic fatalities in 2023, down 16% from the year before, and motorcyclist deaths fell 32%. That improvement is real, but it does not mean the danger is gone. Data compiled by the Insurance Institute for Highway Safety (IIHS) from the federal Fatality Analysis Reporting System show 126 traffic deaths in Delaware in 2024, and 22 of those people were motorcyclists. In other words, in 2024 motorcyclists made up roughly one in every six people killed on Delaware roads, even though motorcycles are a small share of the vehicles on the road.</p>
+<div class="highlight"><strong>2024 Delaware data (IIHS, compiled from NHTSA FARS):</strong> 126 traffic deaths statewide, including 22 motorcyclists. Motorcycle riders are heavily overrepresented among the people who die in Delaware crashes.</div>
+<p>As you review each topic, think of it as a reset of your automatic habits: the goal is to notice each situation early enough to handle it smoothly.</p>
+
+<h3>Topic 6.1.6.1: School Buses and Delaware's Stopping Rule</h3>
+<p>Delaware's school bus law is found at 21 Del.C. §4166. The core rule in §4166(d)(1) is short and absolute: "the driver of any vehicle approaching the school bus from the front or from the rear shall stop before passing the bus" when the bus is stopped and displaying its red signal lamps. Notice that the law covers both directions. It is not enough to stop when you are behind a bus. On most Delaware roads, oncoming drivers must stop too.</p>
+<h4>The four-lane exception</h4>
+<p>There is one exception written into the statute. On a roadway with four or more lanes, drivers approaching the bus from the front are not required to stop. Drivers approaching from the rear must still stop no matter how many lanes the road has. Be careful with this exception. It applies only to drivers coming toward the front of the bus on a road with at least four lanes. If you are traveling in the same direction as the bus, you stop. If you are on a two-lane or three-lane road, everyone stops. When in doubt, stop.</p>
+<h4>Reading the bus's signals</h4>
+<p>Delaware school buses use a two-stage warning system. Under §4166(b), the amber (yellow) lamps come on about 10 seconds before the red lamps. The red lamps are on only when the bus is actually stopped. That 10-second amber warning is your cue to prepare. Ease off the accelerator, check your mirrors, and plan a smooth stop. Do not treat amber lights on a bus the way some drivers treat a yellow traffic light, as a signal to speed up and get past. A driver who accelerates around a bus with flashing amber lights is gambling that the bus will not stop and that no child is already moving toward the road.</p>
+<p>Once the red lamps are flashing, stop and stay stopped. Do not creep forward. Wait until the red lamps go off, the bus begins to move, and you can see that every child has finished crossing and is clear of the road.</p>
+<div class="warning"><strong>Delaware penalties for passing a stopped school bus (§4166):</strong> A first offense carries a fine of $115 to $230, or 30 to 60 days in jail, or both. A subsequent offense within 3 years carries a fine of $115 to $575 and 60 days to 6 months in jail. The license may be suspended for 1 month to 1 year (§4166(i)). Under DMV Regulation 2208, passing a stopped school bus also adds 6 points to your record, and it is one of the violations marked as possibly leading to further action, including suspension.</div>
+<p>Six points is significant: 8 points brings an advisory letter, and 12 points requires a behavior modification course within 90 days or a mandatory suspension.</p>
+
+<h3>School Bus Techniques: Seeing the Situation Before It Happens</h3>
+<p>Knowing the rule is the easy part. The harder part is recognizing school bus situations early, especially on routes you drive every day. Use these techniques to stay ahead of the situation.</p>
+<ul>
+<li><strong>Watch for clusters of children and parents.</strong> A group of children standing at the end of a driveway or a corner is a bus stop, even if there is no bus in sight yet. Slow down as you pass.</li>
+<li><strong>Increase your following distance behind a bus.</strong> A school bus stops frequently, and it may stop at places that do not look like stops to you. Staying well back gives you room to stop smoothly and lets you see the amber lights early.</li>
+<li><strong>Remember the danger zone around the bus.</strong> The area right around a school bus is the hardest for the bus driver to see. Small children can walk in front of the bus or behind it without the driver noticing them. A child who drops a paper or a toy may dart back to get it without looking.</li>
+<li><strong>Expect children to be unpredictable.</strong> Children judge speed and distance poorly, and they often assume that if they can see a car, the driver can see them. Do not count on a child to wait for you.</li>
+</ul>
+<div class="scenario"><h4>Scenario: The Four-Lane Road</h4><p>Consider a driver we'll call Renee. She is driving north on a four-lane road with two lanes in each direction and no physical median. A school bus heading south, on the opposite side of the road, stops and turns on its red lamps. Renee slows down, unsure whether she must stop. The driver behind her honks.</p><details><summary>What should happen here?</summary><p>Under §4166(d)(1), drivers approaching a stopped school bus from the front on a roadway with four or more lanes are not required to stop. Renee is approaching from the front on a four-lane road, so the law does not require her to stop. However, she was right to slow down and watch carefully, because children may still be near the road, and a child could misjudge the situation and try to cross. If Renee had been traveling south behind the bus, she would be required to stop. The honking driver behind her is not her concern; her concern is the children near that bus.</p></details></div>
+
+<h3>Topic 6.1.6.2: Emergency Vehicles and Right of Way</h3>
+<p>The second part of topic 6.1.6.2 covers what you must do when an emergency vehicle approaches you with its lights and siren on. Delaware's rule is in 21 Del.C. §4134(a). When an emergency vehicle approaches using its signals, you must "immediately drive to a position parallel to, and as close as possible to, the right-hand edge or curb" of the roadway, and let it pass. This is a yielding rule. The emergency vehicle has the right of way, and your job is to clear a path for it as quickly and predictably as possible.</p>
+<h4>Practical techniques for yielding</h4>
+<ul>
+<li><strong>Locate the emergency vehicle first.</strong> Sirens can be hard to place, especially with windows closed or music playing. Turn down the audio and check all mirrors before reacting.</li>
+<li><strong>Signal and move right smoothly.</strong> Use your turn signal so the emergency driver and other drivers know what you are doing. Do not slam on the brakes in the middle of your lane.</li>
+<li><strong>Do not block an intersection.</strong> If you are stopped at a red light when an emergency vehicle approaches from behind, do not pull into the intersection unless you can do so safely and it is necessary to clear a path. Remember the general rule from §4130: do not enter an intersection without room to clear it.</li>
+<li><strong>Never follow closely behind an emergency vehicle.</strong> Some drivers try to "draft" behind an ambulance to get through traffic faster. This is dangerous, because emergency vehicles brake and turn suddenly, and other drivers who have just yielded may pull back out into your path.</li>
+</ul>
+
+<h3>Topic 6.1.6.2: Delaware's Move Over Law</h3>
+<p>The Move Over Law covers a different situation: a vehicle that is stopped, not one that is moving toward you. Under 21 Del.C. §4134(b), the rule applies when you approach a stationary emergency vehicle, a DOT vehicle, a tow truck, a utility vehicle, or <em>any</em> vehicle that is displaying warning signals such as hazard lights, flares, or cones. That last part matters. The law is not just about police cars and ambulances. It also protects a stranded driver with flashers on, a road crew, and a tow operator working on the shoulder.</p>
+<h4>What the law requires</h4>
+<ol>
+<li><strong>Change lanes if you can do it safely.</strong> On a roadway with four or more lanes, including at least two in your direction, you must move into "a lane not adjacent to that of a stationary vehicle," if it is safe to do so.</li>
+<li><strong>If you cannot change lanes safely, slow down.</strong> Where the posted speed limit is 50 mph or more, you must slow to "a safe speed at least 20 miles per hour less than the posted speed limit." On lower-speed roads, slow to a speed that is safe for the conditions and the people working on the shoulder.</li>
+</ol>
+<p>The 20-mph rule was added by House Bill 329, which was signed on September 19, 2024. HB 329 also increased Move Over penalties. If you took your Basic course before late 2024, this is new information for you.</p>
+<div class="warning"><strong>Move Over penalties (21 Del.C. §4134(e) and (d)):</strong> A first offense carries a fine of up to $250, a second offense up to $500, and any subsequent offense up to $1,000. The court may allow community service of equal value. If you violate §4134(b) and strike an emergency responder, causing physical injury, the offense is a class F felony.</div>
+<h4>Worked example: the 20 mph rule</h4>
+<p>Suppose you are traveling on a road posted at 55 mph, and a tow truck with flashing lights is stopped on the right shoulder. Traffic in the left lane is heavy, and you cannot safely move over. Under §4134(b), you must slow to a safe speed that is at least 20 mph below the posted limit, so no faster than 35 mph. On a stretch of SR 1 posted at 65 mph, the same rule means no faster than 45 mph. If the posted limit is 50 mph, you must be at 30 mph or less.</p>
+<table>
+<tr><th>Posted speed limit</th><th>Lane change possible and safe?</th><th>What Delaware requires</th></tr>
+<tr><td>65 mph</td><td>Yes</td><td>Move to a lane not adjacent to the stationary vehicle</td></tr>
+<tr><td>65 mph</td><td>No</td><td>Slow to a safe speed of 45 mph or less</td></tr>
+<tr><td>55 mph</td><td>No</td><td>Slow to a safe speed of 35 mph or less</td></tr>
+<tr><td>50 mph</td><td>No</td><td>Slow to a safe speed of 30 mph or less</td></tr>
+<tr><td>Under 50 mph</td><td>No</td><td>Slow down to a speed that is safe for the conditions</td></tr>
+</table>
+<h4>Why Delaware tightened the law</h4>
+<p>The state's own data explain the change. In an October 18, 2024 release marking National Slow Down Move Over Day, the State of Delaware reported 54 incidents during 2024 (as of that date) in which vehicles struck DelDOT equipment or personnel, a near-record number. Eleven of those incidents caused employee injuries. Every one of those incidents involved a worker who was doing a job a few feet from passing traffic.</p>
+<div class="scenario"><h4>Scenario: The Flashers on the Shoulder</h4><p>Consider a driver we'll call Malik. He is driving at the posted 55 mph on a four-lane divided highway when he sees an ordinary passenger car on the right shoulder with its hazard lights flashing. Nobody is standing outside the car. Malik thinks, "It's not a police car, so the Move Over Law doesn't apply," and stays in the right lane at full speed.</p><details><summary>What should happen here?</summary><p>Malik is wrong about the law. Section 4134(b) covers any vehicle displaying warning signals, including hazard lights. Because Malik is on a road with two lanes in his direction, he should check his mirrors and blind spot and move to the left lane if it is safe. If he cannot move over safely, he must slow to a safe speed at least 20 mph below the 55 mph limit, so 35 mph or less. A driver may be inside that car, or may step out at any moment to check a tire.</p></details></div>
+
+<h3>Topic 6.1.7.1: Reduced Visibility of Motorcyclists</h3>
+<p>The most common thing drivers say after a crash with a motorcycle is some version of "I never saw it." In many cases, that is literally true. The driver looked, but did not see. Understanding why this happens is the first step to preventing it.</p>
+<h4>Why motorcycles are hard to see</h4>
+<ul>
+<li><strong>Small profile.</strong> A motorcycle is much narrower than a car. From the front, it can be hidden by a roof pillar, a mirror, a sign post, or another vehicle.</li>
+<li><strong>Expectation.</strong> Drivers scan for cars and trucks, because that is what they usually see. The brain is less likely to register an object it is not expecting, even when the eyes pass over it.</li>
+<li><strong>Speed and distance are hard to judge.</strong> Because a motorcycle is small, it can appear farther away and slower than it really is. A driver turning left may believe there is plenty of time, when the motorcycle is actually close.</li>
+<li><strong>Blind spots.</strong> A motorcycle fits easily into the blind spots beside and behind your vehicle, where a car would be at least partly visible.</li>
+</ul>
+<h4>Techniques that work</h4>
+<p>The fix for reduced visibility is a deliberate change in how you look. Instead of glancing to confirm that the road is clear, look specifically for motorcycles. Before turning left at an intersection or pulling out of a driveway, look twice, and on the second look, ask yourself, "Is there a motorcycle?" Before changing lanes, turn your head to check your blind spot, every time. Move your head slightly forward and back at intersections to look around the roof pillars. On highways, scan your mirrors every few seconds so you know what is around you before you need to move.</p>
+<p>Remember the right-of-way rule from §4132: a driver turning left must yield to oncoming traffic. That includes motorcycles. One of the most dangerous crash types for riders is a car turning left across the path of an oncoming motorcycle.</p>
+<h4>What Delaware requires of riders</h4>
+<p>Riders have their own legal duties, which help explain what you may see on the road. Under 21 Del.C. §4185, anyone up to 19 years of age who is operating or riding as a passenger on a motorcycle must wear a safety helmet and eye protection. Newly endorsed riders must wear a helmet for their first 2 years. All riders must wear approved eye protection and must carry a helmet. The penalty is a $25 to $50 assessment. These rules protect riders, but no helmet can make up for a driver who turns into a motorcycle's path. Delaware's vulnerable user law, §4176E, lists motorcyclists among the vulnerable road users. A driver who causes serious physical injury to a vulnerable user while violating Chapter 41 faces a $550 fine, a license suspension of up to 1 year, a DMV-approved traffic safety course, and 10 to 100 hours of community service.</p>
+<div class="scenario"><h4>Scenario: The Left Turn at Dusk</h4><p>Consider a driver we'll call Gloria. She is waiting to turn left at a green light at dusk. She sees an oncoming pickup truck well down the road and a gap behind it. She glances once, sees what looks like clear space, and starts her turn. A motorcycle that was following the pickup at a distance swerves and brakes hard.</p><details><summary>What should happen here?</summary><p>Gloria had a duty under §4132 to yield to oncoming traffic before turning left. The motorcycle was there the whole time, but low light and the bulk of the pickup made it easy to miss. Gloria should have taken a second, deliberate look specifically for a motorcycle, and waited for the gap to be truly empty. If she was unsure how far away a single headlight was, the safe choice was to wait for it to pass.</p></details></div>
+
+<h3>Topic 6.1.7.2: Increasing Following Distance Behind a Motorcycle</h3>
+<p>Your Basic course taught you to keep at least 3 to 4 seconds of following distance in good conditions, and more in bad weather. Delaware's statute (§4123(a)) does not set a number of seconds. It says you "shall not follow another vehicle more closely than is reasonable and prudent." Behind a motorcycle, "reasonable and prudent" means more space than usual.</p>
+<h4>Why you need more space</h4>
+<ul>
+<li><strong>Motorcycles can slow quickly without using brakes.</strong> A rider can downshift or roll off the throttle and slow sharply, and the brake light may not come on.</li>
+<li><strong>Riders adjust position for road hazards.</strong> Gravel, potholes, wet leaves, and pavement seams are a much bigger threat to a two-wheeled vehicle. A rider may slow or move within the lane to avoid something you would drive over without noticing.</li>
+<li><strong>A rider who falls is directly in your path.</strong> If a motorcycle goes down, the rider may be on the road in front of you. Extra space gives you time to stop or steer around the rider safely.</li>
+</ul>
+<h4>Worked example: following distance in feet</h4>
+<p>To turn seconds into distance, multiply your speed in miles per hour by about 1.47 to get feet per second. At 60 mph, you are covering about 88 feet every second. At 50 mph, you are covering about 73 feet every second.</p>
+<p>At 50 mph, a 4-second following distance equals about 4 × 73 = 292 feet. If you increase that to 5 seconds behind a motorcycle, you are about 365 feet back. That extra second gives you roughly another 73 feet to react. Since the average perception-reaction time is about 1.5 seconds, at 50 mph you will travel about 110 feet before your foot even reaches the brake pedal. Extra space is what keeps that reaction distance from turning into a collision.</p>
+<div class="myth"><p><strong>Myth:</strong> A motorcycle is small, so I can follow it more closely than I would follow a car.</p><p><strong>Fact:</strong> The opposite is true. Because motorcycles can slow quickly, adjust for small hazards, and leave a rider exposed if they go down, you should give a motorcycle more following distance than you would give a car.</p></div>
+
+<h3>Topic 6.1.7.3: Stopping Distance Versus a Larger Vehicle</h3>
+<p>Stopping distance has two parts: reaction distance (how far you travel before you start braking) and braking distance (how far you travel once the brakes are working). Reaction distance depends on you. Braking distance depends on your speed, your vehicle, your tires, and the road surface. Remember from your Basic course that braking distance roughly quadruples when your speed doubles.</p>
+<h4>How a motorcycle compares</h4>
+<p>A motorcycle is much lighter than a car, and a skilled rider on a dry, clean road can often bring a motorcycle to a stop in a shorter distance than a passenger car traveling at the same speed. That is the key point of topic 6.1.7.3. If you are following a motorcycle at the same gap you would leave behind a car, and the rider makes a hard stop, the motorcycle may stop well before you can. The result is a rear-end crash where the person in front has almost no protection.</p>
+<p>The comparison works the other way, too. A large truck or bus needs much more distance to stop than a car. When a motorcyclist is riding in front of you and a heavy truck is behind you, you are in the middle of a chain of very different stopping distances. Your best protection is space on both sides: keep extra room ahead of you so you can brake gently, and avoid sudden stops that the heavy vehicle behind you cannot match.</p>
+<table>
+<tr><th>Situation</th><th>What it means for you</th></tr>
+<tr><td>You are following a motorcycle</td><td>The motorcycle may stop shorter than you can. Increase your following distance beyond your normal 3 to 4 seconds.</td></tr>
+<tr><td>A motorcycle is following you</td><td>Brake early and gradually, and signal well in advance so the rider has time to react.</td></tr>
+<tr><td>A large truck is following you</td><td>The truck needs much more distance to stop. Avoid sudden braking and cutting in front of it.</td></tr>
+</table>
+<div class="scenario"><h4>Scenario: The Sudden Stop</h4><p>Consider a driver we'll call Tom. He is following a motorcycle at about 2 seconds on a busy suburban road at 40 mph. A car ahead of the motorcycle stops suddenly to turn into a shopping center. The rider brakes hard and stops quickly. Tom brakes too, but his car slides closer than he expected.</p><details><summary>What should happen here?</summary><p>Tom's gap was too short for any vehicle, and especially for a motorcycle that can stop in a shorter distance than his car. At 40 mph he covers about 59 feet per second, so his 2-second gap gave him about 118 feet. That is barely more than his reaction distance alone. If Tom had kept 4 to 5 seconds of space, he would have had roughly 235 to 295 feet, which is enough to react and brake without coming close to the rider. Tom should have also been scanning past the motorcycle to the traffic ahead, which would have warned him of the stop sooner.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think about the roads you drive most often. Where do you regularly encounter school buses, roadside workers, or motorcycles? Which one habit from this module will you change first?</label><textarea></textarea></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Amber warning lamps</dt><dd>The yellow lights a Delaware school bus turns on about 10 seconds before its red lamps, signaling that it is about to stop.</dd>
+<dt>Red signal lamps</dt><dd>The flashing red lights on a school bus, used only when the bus is stopped. Drivers approaching from the front or rear must stop, except front-approaching drivers on roadways with four or more lanes.</dd>
+<dt>Move Over Law</dt><dd>21 Del.C. §4134(b). Requires drivers to change to a non-adjacent lane when passing a stationary vehicle showing warning signals, or, if that is not safe, to slow down (at least 20 mph below the posted limit where the limit is 50 mph or more).</dd>
+<dt>Yielding to emergency vehicles</dt><dd>21 Del.C. §4134(a). Moving immediately to a position parallel to, and as close as possible to, the right-hand edge or curb when an emergency vehicle approaches with signals on.</dd>
+<dt>Stopping distance</dt><dd>Reaction distance plus braking distance. A motorcycle may stop in a shorter distance than a car; a large truck needs a longer distance.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Under §4166(d)(1), drivers approaching a stopped school bus with red lamps on must stop, whether approaching from the front or the rear.</li>
+<li>The only exception: on roadways with four or more lanes, drivers approaching from the front do not have to stop. Drivers behind the bus always stop.</li>
+<li>Amber lamps come on about 10 seconds before the red lamps. Treat amber as your signal to prepare to stop.</li>
+<li>Passing a stopped school bus carries fines of $115 to $230 (first offense), possible jail, a 1-month to 1-year suspension, and 6 points.</li>
+<li>When an emergency vehicle approaches with signals on, move immediately as close as possible to the right-hand edge or curb.</li>
+<li>The Move Over Law covers any stationary vehicle with warning signals. Move to a non-adjacent lane if safe; otherwise slow to at least 20 mph below a posted limit of 50 mph or more (HB 329, 2024).</li>
+<li>Move Over fines run up to $250, $500, and $1,000; injuring an emergency responder while violating the law is a class F felony.</li>
+<li>Motorcycles are hard to see because of their size, driver expectations, and blind spots. Look twice, and look specifically for motorcycles.</li>
+<li>Give motorcycles more than your normal 3 to 4 seconds of following distance, because a motorcycle may stop in a shorter distance than your car.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 4 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 5.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-refresher-m4-remaining', DONE='de-refresher-m4-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 4. Return to your course and continue to Module 5.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

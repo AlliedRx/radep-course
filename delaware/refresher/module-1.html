@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 1: Refresher Welcome and Interaction with Law Enforcement | DMV Courses – Delaware Refresher Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Refresher Defensive Driving Course &middot; Module 1 of 6 &middot; 30 minutes</span>Module 1: Refresher Welcome and Interaction with Law Enforcement</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 4.4.1, 4.4.2, 4.4.3, 4.4.3.1, 4.4.3.2, 4.4.4, 6.1.1, 6.1.1.1, 6.1.1.2, 6.1.1.3, 6.1.1.4, 6.1.1.5 -->
+<p>Welcome back. You have taken a Delaware defensive driving course before, so this three-hour Refresher Course is built for you: it is shorter than the Basic Course, it moves faster, and it focuses on what experienced drivers tend to forget, what has changed in Delaware law in recent years, and the habits that quietly slip after a few years behind the wheel. This first module covers two things. First, it explains exactly what you earn by completing the refresher on time, including the 15% insurance discount and the administrative 3-point credit. Second, it reviews one of the most important topics in the course: how to handle a traffic stop safely and respectfully, what your rights are, what the officer is doing and why, and how to give feedback about an officer afterward.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain when a refresher must be completed to earn the 15% insurance premium discount and what happens if you finish late.</li>
+<li>Describe how the administrative 3-point credit is applied on a Delaware driving record and what it does not do.</li>
+<li>Recall how and when you receive your certificate, how the Division of Motor Vehicles is notified, and where to find the DMV Participant Letter.</li>
+<li>Summarize Delaware point values, point thresholds, and how points age.</li>
+<li>Identify your legal rights and obligations during a traffic stop, including identification, questioning, detention, and searches.</li>
+<li>Describe what officers do during a stop, what you should do and expect, and how to file a compliment or a complaint.</li>
+</ul></div>
+
+<h3>Course Basics and Your Benefits</h3>
+<h4>How This Refresher Works</h4>
+<p>The course is made of six modules. Each one is a timed page designed to take about 30 minutes, for a total of three hours of instruction. A timer runs at the top of the page. You cannot move ahead until the timer reaches 00:00. The reflection boxes are for your own use and are not submitted or graded.</p>
+<p>At the end of the course you will take a final exam of at least 25 questions. At least two of those questions cover interaction with law enforcement, which is why this module spends so much time on that topic. You need a score of 80% or better to pass. After you pass, you complete a short online affidavit confirming that you are the person who took the course and that you are the person receiving the certificate. The affidavit also confirms that you understand that making an unsworn falsification is a violation of 11 Del.C. § 1233 of the Delaware Crimes Code, which can bring a fine, imprisonment, or both. In plain terms: the course must be taken by the licensed driver whose name is on the certificate, and nobody else.</p>
+<p>If you have questions at any point, our customer service line is staffed by people who know the course and Delaware's requirements. Call [TOLL-FREE NUMBER].</p>
+
+<h4>The 15% Refresher Discount</h4>
+<p>Delaware law requires insurers to give a rate reduction for a three-year period to any person who voluntarily attends and successfully completes a motor vehicle accident prevention course approved by the Division of Motor Vehicles (18 Del.C. § 2503(a)(6)). The statute does not name a percentage. The percentages come from Department of Insurance Regulation 607, which took effect March 11, 2015.</p>
+<p>You probably remember the first tier from your Basic Course: completing an approved course earns a 10% discount per vehicle when all named operators on the policy have completed it. If only some operators completed it, the discount is prorated by the share of operators who did. The discount applies to a portion of your premium, not the whole bill: bodily injury liability, property damage liability, and personal injury protection (PIP) coverage on private passenger autos, motor homes, and motorcycles.</p>
+<p>The refresher tier is where timing matters. Under Regulation 607, a refresher course completed within 180 days before your three-year discount expires earns a <strong>15%</strong> discount. That is a reward for staying current. If you let the three years run out, you have not lost the opportunity entirely: if you complete the refresher after the expiration date but within two years of it, the discount is restored at 15% starting from your completion date. The gap between the expiration and your completion, however, is a period without the discount.</p>
+<div class="highlight"><strong>Timing rule in plain terms:</strong> The DMV advises taking the refresher no sooner than two years and six months after your initial course and no later than five years after it. Finishing inside the 180-day window before your three-year discount ends keeps the discount continuous at 15%.</div>
+<p>Two practical notes. First, the discount lasts until the policy renewal following three years from completion, and your insurer must notify you before it expires. Watch for that notice; it is your cue to schedule your next refresher. Second, your certificate is "conclusive evidence" of eligibility under Regulation 607, so send a copy to your insurance company once you receive it. Questions about the discount itself are handled by the Delaware Department of Insurance at 1-800-282-8611.</p>
+
+<div class="scenario"><h4>Scenario: Marcus Watches the Calendar</h4><p>Consider a driver we'll call Marcus. He finished a Basic Course almost three years ago, and his insurer applied the 10% discount. He receives a notice that the three-year discount will expire in about four months. He wonders whether to take the refresher now or wait until after renewal.</p><details><summary>What should happen here?</summary><p>Marcus should complete the refresher now, inside the 180-day window before his three-year discount expires. That earns the 15% refresher discount with no gap. If he waits until after the expiration, he can still restore the discount at 15% as long as he finishes within two years of expiration, but he will pay full price on that portion of his premium during the gap. Once he passes, he should send a copy of his certificate to his insurer.</p></details></div>
+
+<h4>The Administrative 3-Point Credit</h4>
+<p>The second benefit is the administrative 3-point credit. It does not come from a statute; it comes from DMV Policy Regulation 2208, section 4.2.2. When you satisfactorily complete a course recognized by the DMV and approved by the Insurance Commissioner's Office, a 3-point credit is entered on your driving record. The credit is effective on your completion date.</p>
+<p>Many drivers misunderstand this benefit, so it is worth reviewing carefully:</p>
+<ul>
+<li><strong>It works on future violations only.</strong> The credit does not erase or reduce points that are already on your record. It is not applied retroactively once an action item, such as a suspension, is already in effect.</li>
+<li><strong>It is not an automatic deduction.</strong> The DMV FAQ states that the credit is "not automatically deducted from your record." Instead, DMV uses it "in calculating DMV penalties" in certain circumstances.</li>
+<li><strong>It does not change insurance or employment reviews.</strong> According to the DMV, the credit "does not lower total points used for employment and insurance reviews."</li>
+<li><strong>It does not stop the 8-point advisory letter.</strong> Under Regulation 2208, defensive driving credits do not affect issuance of the advisory letter sent at 8 points.</li>
+<li><strong>It has a time limit.</strong> The DMV states that "the course is valid for 3 years from the completion date."</li>
+</ul>
+<p>Questions about your 3-point credit or a lost certificate can go to DMV Driver Improvement at 302-744-2509.</p>
+
+<div class="myth"><p><strong>Myth:</strong> Completing this refresher will take three points off my record right away.</p><p><strong>Fact:</strong> The credit is entered on your record but is not automatically deducted from your existing points. DMV applies it only when calculating penalties for future violations, in certain circumstances, and it does not lower the point totals used for insurance or employment reviews.</p></div>
+
+<h4>Your Certificate, DMV Notification, and the Participant Letter</h4>
+<p>Here is exactly how completion works in this course. After you pass the final exam with 80% or better and complete the affidavit, your certificate becomes available in your student portal. It is free for students who present a valid Delaware driver license or identification card. Your certificate shows your full name, your date of completion, the name of the course provider, the name of the course you completed, and the provider's authorized signature. Keep a digital copy and a printed copy. The DMV does not issue certificates; it comes from your course provider.</p>
+<p>You do not have to notify the DMV yourself. We collected your driver license number when you registered, before you could open any course material, so we can report your completion. Delaware Regulation 2224 requires providers to notify the Division of each student's successful completion within fourteen days of completion, and we report completions electronically. Your insurer, on the other hand, does not receive anything automatically, so send the certificate to your insurance company yourself.</p>
+<p>The Delaware Division of Motor Vehicles also requires every provider to give each student a copy of the <strong>DMV Participant Letter</strong>. A copy is provided in this course. The letter describes the three-point credit toward future violations and the possible insurance discount, explains that the DMV does not issue certificates, and gives the program's contact email, DMV-DefensiveDriving@delaware.gov. Please read it before you finish the course.</p>
+
+<h3>Point System Recap</h3>
+<p>Because the 3-point credit only matters in relation to points, here is a brief refresher on Delaware's point system under DMV Policy Regulation 2208. The table shows common violations and their point values.</p>
+<table>
+<tr><th>Violation</th><th>Points</th></tr>
+<tr><td>Speeding 1–9 mph over the limit</td><td>2</td></tr>
+<tr><td>Speeding 10–14 mph over</td><td>4</td></tr>
+<tr><td>Speeding 15–19 mph over</td><td>5</td></tr>
+<tr><td>Speeding 20 or more mph over</td><td>5 (may lead to further action, including suspension)</td></tr>
+<tr><td>Disregarding a stop sign or red light</td><td>3</td></tr>
+<tr><td>Passing a stopped school bus</td><td>6 (may lead to further action)</td></tr>
+<tr><td>Reckless driving</td><td>6</td></tr>
+<tr><td>Aggressive driving</td><td>6</td></tr>
+<tr><td>Operation of a vehicle causing death</td><td>6 (may lead to further action)</td></tr>
+<tr><td>Any other moving violation under 21 Del.C. Chapters 27, 41, or 42</td><td>2</td></tr>
+</table>
+<p>Points count at full value for 12 months from the violation date, then at half value for the next 12 months. DMV action is based on convictions within that 24-month period. The thresholds are:</p>
+<ul>
+<li><strong>8 points:</strong> advisory letter.</li>
+<li><strong>12 points:</strong> you must complete a behavior modification/attitudinal driving course within 90 days of notice; otherwise, or by your choice, a mandatory 2-month suspension.</li>
+<li><strong>14 points:</strong> 4-month suspension; 16 points, 6 months; 18 points, 8 months; 20 points, 10 months; 22 points, 12 months. At 14 or more points, reinstatement requires a behavior modification course completed within the past two years plus a reinstatement fee.</li>
+</ul>
+<div class="highlight"><strong>Delaware data (DelDOT, state data):</strong> Delaware recorded 117 traffic deaths in 2025, compared with 130 in 2024, about 10% fewer. Progress is real, but 117 families lost someone in a single year. The rest of this course is about keeping you out of that count.</div>
+
+
+<h3>6.1.1 Interaction with Law Enforcement During a Traffic Stop</h3>
+<p>In 2018 Delaware passed Senate Bill 168, "Driver Education on Traffic Stop Procedures." It requires the driver license exam to test knowledge of traffic stops and directed the Department of Education, the DMV, the Department of Justice, and the Office of Defense Services to produce educational material on the subject. Defensive driving courses must teach it as well. The goal is simple: a traffic stop should end with everyone, driver, passengers, and officer, going home safely, and with the driver understanding both their rights and their obligations.</p>
+<p>The rest of this module covers five required areas. Each has its own section below. A note before we start: this course gives general information, not legal advice. If you have a question about a specific situation, a ticket, or a charge, consult an attorney.</p>
+
+<h3>6.1.1.1 Your Constitutional and Other Legal Rights During a Traffic Stop</h3>
+<p>A traffic stop is a temporary detention, and the U.S. Constitution protects everyone against unreasonable searches and seizures. That protection does not disappear when you are behind the wheel, but it works alongside the officer's legal authority to stop vehicles and investigate. Delaware's DMV guidance on traffic stops, developed with the agencies named in SB 168, summarizes the practical rights drivers should know:</p>
+<ul>
+<li><strong>You may ask for the officer's name and agency.</strong> Asking politely is your right, and the information is also printed on any ticket you receive.</li>
+<li><strong>Searches have limits.</strong> A vehicle may be searched with your consent, when the officer has probable cause, or as an inventory search when the vehicle is towed. If you are asked for consent, the decision is yours to make; if you decline, say so calmly and clearly. If the officer proceeds anyway on another legal basis, do not physically resist. Any disagreement belongs in court, not on the roadside.</li>
+<li><strong>A detention is not an arrest.</strong> Under Delaware law, a detention for questioning may not exceed two hours, and it is not recorded as an arrest in any official record.</li>
+<li><strong>There is no right to an attorney during roadside questioning.</strong> That does not mean you lose access to legal help later; it means the roadside conversation does not pause while you call a lawyer.</li>
+<li><strong>Accepting a ticket is not an admission of guilt.</strong> You have the right to contest a citation in court. The roadside is not the place to argue it.</li>
+</ul>
+<p>Passengers have rights too, and obligations. Under DMV guidance, passengers must give their information or get out of the vehicle if the officer asks.</p>
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Detention</dt><dd>A temporary stop and holding of a person for investigation. In Delaware it may not exceed two hours and is not an arrest.</dd>
+<dt>Probable cause</dt><dd>A reasonable basis, supported by facts, to believe a crime has occurred or that evidence is present. It is one of the legal grounds for searching a vehicle without consent.</dd>
+<dt>Consent search</dt><dd>A search that happens because the person in control of the vehicle agrees to it.</dd>
+<dt>Inventory search</dt><dd>A routine listing of a vehicle's contents when the vehicle is towed or impounded.</dd>
+</dl></div>
+
+<h3>6.1.1.2 Questioning, Detention, Proof of Identity, and Consequences for Failure to Comply</h3>
+<p>Delaware's law on questioning and detaining suspects is 11 Del.C. § 1902. It allows a peace officer to stop a person the officer reasonably suspects of a crime and to "demand the person's name, address, business abroad and destination." A person who "fails to give identification or explain the person's actions to the satisfaction of the officer may be detained and further questioned and investigated." The total period of detention under that section "shall not exceed 2 hours," and the detention "is not an arrest."</p>
+<p>For a driver, proof of identity is straightforward. When asked, you must produce three documents:</p>
+<ol>
+<li>Your driver license.</li>
+<li>Proof of insurance.</li>
+<li>The vehicle's registration.</li>
+</ol>
+<p>What happens if you do not comply? Under § 1902, failing to identify yourself or explain your actions can lead to being held longer and investigated further. Refusing to stop for an officer's signal, refusing to produce your documents, or arguing and escalating the encounter all extend the stop and can bring additional consequences. Delaware's implied consent law (21 Del.C. § 2740) adds another consequence specific to drivers: anyone who drives or is in physical control of a vehicle is deemed to have consented to breath, blood, or urine testing when impaired driving is suspected. Refusing that test in an adult DUI case brings a license revocation of 1 year with no prior offense, 18 months with one prior, and 24 months with two or more priors. You will review impaired-driving law in detail in Module 2.</p>
+<div class="warning"><strong>Delaware legal warning:</strong> Failing to give identification or explain your actions when lawfully stopped can lead to further detention and investigation under 11 Del.C. § 1902, and refusing a chemical test under implied consent leads to license revocation. Cooperation with lawful instructions is required; disputes are resolved in court.</div>
+
+<h3>6.1.1.3 The Role and Procedures of a Law Enforcement Officer</h3>
+<p>Officers in Delaware, whether with the Delaware State Police, a county, or a municipal department, share a basic role: to enforce the law, investigate crashes and crimes, help people in trouble, and keep roads safe. Traffic enforcement is part of that role because the behaviors officers stop drivers for, such as speeding, running signals, and impaired or distracted driving, are the same behaviors that cause serious crashes.</p>
+<p>Understanding what an officer is doing during a stop makes the stop less stressful. A typical stop follows a pattern:</p>
+<ul>
+<li><strong>Signaling the stop.</strong> The officer activates emergency lights and sometimes a siren, then follows you to a safe stopping spot.</li>
+<li><strong>Checking before approaching.</strong> The officer may stay in the patrol car for a moment to radio the location and check your plate. This is routine.</li>
+<li><strong>Approaching with caution.</strong> The officer may approach from the driver's side or the passenger's side and may use a flashlight at night. The officer does not know who is in the car or what they intend, so watching your hands is a basic safety step, not an accusation.</li>
+<li><strong>Explaining and requesting documents.</strong> Most officers will tell you why you were stopped and ask for your license, registration, and insurance.</li>
+<li><strong>Running checks and deciding.</strong> The officer returns to the patrol car to check your documents and decide whether to issue a warning or a citation, or to investigate further.</li>
+<li><strong>Concluding the stop.</strong> The officer returns your documents, explains any paperwork, and tells you that you are free to go.</li>
+</ul>
+<p>Why the caution? Traffic stops place officers on the shoulder of moving traffic, often at night, approaching strangers in vehicles they cannot see into. Delaware's Move Over law (21 Del.C. § 4134) exists in part because officers and other responders are struck by passing vehicles. When you see a stop in progress, give the officer room: move to a lane not next to the stopped vehicles if it is safe, or slow down. Module 4 covers this law in depth.</p>
+
+<h3>6.1.1.4 What to Do and What to Expect When Stopped</h3>
+<p>The steps below follow Delaware DMV guidance. You learned them in your Basic Course; treat this as a checklist you can rehearse mentally so the steps are automatic if lights ever appear in your mirror.</p>
+<ol>
+<li><strong>Stay calm, signal, and pull over to the side as soon as it is safe.</strong> Do not stop in a travel lane, on a bridge, or in a curve if you can reach a safer spot ahead.</li>
+<li><strong>Turn off the ignition and the radio.</strong> At night, turn on your interior lights so the officer can see inside the vehicle.</li>
+<li><strong>Keep both hands on top of the steering wheel.</strong> Passengers should stay calm, stay in the vehicle, and keep their hands visible.</li>
+<li><strong>Do not reach for documents until the officer asks.</strong> If your documents are in a glove box, bag, or console, tell the officer where they are before you reach.</li>
+<li><strong>Tell the officer about any weapons in the vehicle at first contact.</strong> Say it calmly and clearly, and follow the officer's instructions about it.</li>
+<li><strong>Stay in the vehicle unless you are told to get out.</strong> If you are asked to step out, stay away from traffic and keep your hands visible.</li>
+<li><strong>Ask politely if you do not understand something.</strong> Clarifying questions are reasonable, and many officers will explain.</li>
+<li><strong>If you receive a ticket, accept it.</strong> Signing or accepting a ticket is not an admission of guilt. You contest it in court.</li>
+</ol>
+<p>What should you expect? Expect to be asked for documents and possibly a few questions about where you are going or whether you know why you were stopped. Expect a wait while the officer runs checks. Expect to be told clearly when the stop is over. If more officers arrive, that is common and does not necessarily mean the stop has become more serious.</p>
+
+<div class="scenario"><h4>Scenario: Dana's Documents Are in Her Bag</h4><p>Consider a driver we'll call Dana. She is stopped at night on a four-lane road for a broken taillight. Her license is in her purse on the back seat, and her registration is in the glove box. As the officer approaches, she starts twisting around to grab her purse so she can be ready and save time.</p><details><summary>What should happen here?</summary><p>Dana should stop reaching, turn on her interior light, and put both hands on the steering wheel. When the officer asks for documents, she should say where each one is, "My license is in my purse on the back seat and my registration is in the glove box," and then reach for them only when the officer says it is okay. Reaching into a hidden area before being asked can alarm an officer who cannot see what she is reaching for.</p></details></div>
+
+<div class="scenario"><h4>Scenario: Jordan Disagrees with the Ticket</h4><p>A driver we'll call Jordan is stopped for speeding in a 25 mph business district. Jordan is certain the speed was lower and starts arguing, saying he will not sign anything and wants the officer's badge number "for the lawsuit."</p><details><summary>What should happen here?</summary><p>Jordan may politely ask for the officer's name and agency; that is his right, and it will be on the ticket. But arguing at the roadside will not change the outcome and can extend the stop. Accepting the ticket is not an admission of guilt. Jordan should take the ticket, leave safely, write down what he remembers, and contest it in court if he believes it is wrong. If he believes the officer acted improperly, he can file a complaint with the officer's agency later.</p></details></div>
+
+<div class="scenario"><h4>Scenario: Priya and the Passenger</h4><p>A driver we'll call Priya is stopped for an expired registration. Her adult passenger, annoyed, opens the passenger door and starts to get out to "talk to the officer."</p><details><summary>What should happen here?</summary><p>The passenger should stay in the vehicle with hands visible, unless the officer gives other instructions. Getting out unexpectedly creates a safety risk for everyone, including the passenger, who is now standing near traffic. If the officer asks the passenger for information or to step out, the passenger must comply under DMV guidance.</p></details></div>
+
+<div class="myth"><p><strong>Myth:</strong> If I get out of the car and walk back to the officer, it shows I'm being cooperative.</p><p><strong>Fact:</strong> Delaware DMV guidance is to stay in the vehicle unless told to get out. Walking toward an officer unexpectedly is a safety concern, and it puts you close to passing traffic.</p></div>
+
+<h3>6.1.1.5 How and Where to File a Compliment or a Complaint</h3>
+<p>Most traffic stops end without conflict, and many drivers leave with a sense that the officer was fair and professional. Agencies want to hear about good work as well as problems. Sometimes, though, a driver believes an officer acted unprofessionally or improperly. Delaware's guidance treats both kinds of feedback the same way: go to the officer's agency.</p>
+<ul>
+<li><strong>Identify the officer and agency.</strong> The officer's name and agency appear on any ticket or warning. If you did not receive paperwork, you may ask the officer for their name and agency during the stop.</li>
+<li><strong>Document what happened.</strong> As soon as you are safely stopped or home, write down the date, time, location, what was said, and what was done. Note any witnesses.</li>
+<li><strong>Contact the agency using the method it specifies.</strong> Each law enforcement agency has its own process for compliments and complaints. The Delaware State Police, county police, and municipal departments each handle feedback about their own officers.</li>
+<li><strong>Report promptly.</strong> Details fade quickly, and agencies can review a report more effectively when it is recent.</li>
+</ul>
+<p>Filing a complaint is separate from contesting a ticket. A complaint is about the officer's conduct; contesting a ticket is about whether you committed the violation, and that is decided in court. You can do one, both, or neither. Either way, the time to raise concerns is after the stop, through the proper channels, not during it.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think about the last time you saw emergency lights in your mirror, or imagine it now. Which step on the checklist would be hardest for you to remember under stress, and how could you make it automatic?</label><textarea></textarea></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>A refresher completed within 180 days before your three-year discount expires earns a 15% discount on a portion of your auto insurance premium; finishing after expiration but within two years restores 15% from your completion date.</li>
+<li>The 3-point credit is entered on your record on your completion date, applies only to future violations in calculating DMV penalties, is not an automatic deduction, and the course is valid for 3 years.</li>
+<li>Your free certificate is available in your student portal after you pass with 80% and complete the affidavit; we report your completion to DMV within fourteen days, and you send the certificate to your insurer.</li>
+<li>A copy of the DMV Participant Letter is provided in this course.</li>
+<li>Points count fully for 12 months and at half value for the next 12; 8 points brings an advisory letter, 12 points requires a behavior modification course, and 14 or more brings suspension.</li>
+<li>During a stop you may ask for the officer's name and agency; searches require consent, probable cause, or an inventory of a towed vehicle; detention may not exceed two hours and is not an arrest.</li>
+<li>Produce your license, insurance, and registration when asked; failing to identify yourself can lead to further detention under 11 Del.C. § 1902.</li>
+<li>Pull over safely, turn off the engine and radio, use interior lights at night, keep hands on the wheel, disclose weapons, and stay in the vehicle unless told otherwise.</li>
+<li>Compliments and complaints go to the officer's agency, using its process, documented and reported promptly; contest tickets in court, not at the roadside.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 2: Traffic Laws, Patterns, and Impaired Driving.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 1 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 2.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-refresher-m1-remaining', DONE='de-refresher-m1-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 1. Return to your course and continue to Module 2.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

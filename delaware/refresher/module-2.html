@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 2: Traffic Laws, Patterns, and Impaired Driving | DMV Courses – Delaware Refresher Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Refresher Defensive Driving Course &middot; Module 2 of 6 &middot; 30 minutes</span>Module 2: Traffic Laws, Patterns, and Impaired Driving</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.2, 6.1.2.1, 6.1.2.2, 6.1.2.3, 6.1.2.4, 6.1.2.4.1, 6.1.3, 6.1.3.1, 6.1.3.2 -->
+<p>Experienced drivers rarely forget the big rules, like stopping at a red light. What fades over time are the details: who goes first when two cars reach a four-way stop together, how far from the rails you must stop at a railroad crossing, what a dark pedestrian signal with a red bar on top means, or exactly how Delaware's impaired-driving penalties escalate. Delaware has also added newer road designs, such as multilane roundabouts and a diverging diamond interchange, that many drivers learned before these designs existed. This module refreshes Delaware's traffic laws and patterns, then reviews how alcohol and drugs impair a driver, what Delaware law says about impaired driving, and what to do when you share the road with someone who may be impaired.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Apply Delaware's right-of-way rules at intersections, left turns, driveways, and stop signs.</li>
+<li>Navigate a roundabout using DelDOT's steps and drive through a diverging diamond interchange correctly.</li>
+<li>State where to stop at an active railroad crossing and when Delaware law requires a stop.</li>
+<li>Respond correctly to traffic devices, including HAWK signals and rectangular rapid flashing beacons.</li>
+<li>Summarize Delaware's impaired-driving law, including per se limits, penalties, implied consent, and the under-21 rule.</li>
+<li>Recognize signs of a potentially impaired driver and use safe techniques to protect yourself and report it.</li>
+</ul></div>
+
+<h3>6.1.2.1 Intersections and Right of Way</h3>
+<p>Intersections are where traffic paths cross, so they are where many serious crashes happen. Right-of-way rules exist so that every driver can predict what the others will do. One principle frames all of them: the law tells you who must yield, but it never gives anyone the right to force their way through. If another driver fails to yield, you still need to avoid the crash.</p>
+<p>Delaware's core rules, from Title 21, Chapter 41, Subchapter IV:</p>
+<ul>
+<li><strong>A vehicle already in the intersection goes first.</strong> Under § 4131(a), you yield to a vehicle that has already entered the intersection.</li>
+<li><strong>Arriving at the same time: yield to the right.</strong> Under § 4131(b), when two vehicles from different roads enter at about the same time, the driver on the left yields to the driver on the right.</li>
+<li><strong>Left turns yield to oncoming traffic.</strong> Under § 4132, a driver turning left yields to oncoming traffic.</li>
+<li><strong>Driveways and parking lots yield to the road.</strong> Under § 4133, a driver entering a roadway from a driveway, alley, or other place that is not a roadway yields to all traffic on the roadway.</li>
+<li><strong>Do not block the box.</strong> Under § 4130, do not enter an intersection, crosswalk, or railroad crossing unless there is room on the other side to clear it completely.</li>
+<li><strong>Stop signs mean a full stop, then yield.</strong> Under § 4164, stop at the marked stop line, then yield. Where there is no line, the general practice is to stop before the crosswalk, or where you can see approaching traffic before entering.</li>
+</ul>
+<p>At a four-way stop, the general practice is that the first vehicle to stop is the first to go. If two arrive together, the driver on the left yields to the driver on the right, which is the § 4131(b) rule at work. If you are ever unsure, a brief pause and eye contact are better than a guess.</p>
+<p>One more right-of-way duty deserves a reminder because it is easy to overlook while you concentrate on cars: when you turn at an intersection, Delaware law (§ 4142(a)) requires you to yield to pedestrians, slowing down or stopping if needed. A pedestrian crossing the street you are turning onto is directly in your path, often in the spot your eyes reach last. Before you turn, look into the crosswalk on the street you are entering, not just at oncoming cars.</p>
+<div class="warning"><strong>Delaware penalty reminder:</strong> Disregarding a stop sign or red light carries 3 points under DMV Regulation 2208. Failing to yield on a left turn (§ 4132) and failing to yield when entering a roadway (§ 4133) are two of the twelve offenses that can combine into an aggressive driving charge under § 4175A.</div>
+
+<div class="scenario"><h4>Scenario: The Unprotected Left</h4><p>Consider a driver we'll call Tomas. He is waiting to turn left at a green light (no arrow) on a busy road in Newark. An oncoming SUV is approaching, and the driver behind Tomas honks. Tomas thinks he can probably make it.</p><details><summary>What should happen here?</summary><p>Under § 4132, Tomas must yield to oncoming traffic, and "probably" is not a safe gap. He should keep his wheels pointed straight while waiting, so that if he is rear-ended he will not be pushed into oncoming traffic, and turn only when there is a safe gap. The honking driver behind him does not change the law or the risk.</p></details></div>
+
+<h3>6.1.2.2 Traffic Patterns: Roundabouts and the Diverging Diamond</h3>
+<h4>Roundabouts</h4>
+<p>Roundabouts reduce the kinds of crashes that cause the worst injuries at signalized intersections, especially right-angle "T-bone" crashes and head-on left-turn crashes, because all traffic moves in the same direction at low speed. Delaware law requires drivers to pass rotary islands only on the right (21 Del.C. § 4121), which is why traffic in a Delaware roundabout always flows counterclockwise. DelDOT teaches these steps:</p>
+<ol>
+<li><strong>Choose your lane before you enter.</strong> At a multilane roundabout, use the right lane to turn right, the left lane to turn left or make a U-turn, and either lane to go straight, unless signs or pavement arrows say otherwise.</li>
+<li><strong>Slow down</strong> to about 10–15 mph as you approach.</li>
+<li><strong>Watch for bicyclists and pedestrians.</strong> Let bicyclists merge into the lane, and yield to pedestrians in the crosswalk at the entry.</li>
+<li><strong>Yield to traffic already in the roundabout.</strong> Enter when there is a safe gap.</li>
+<li><strong>Keep moving counterclockwise and do not pass</strong> inside the roundabout.</li>
+<li><strong>Yield to pedestrians and cyclists as you exit.</strong> Signal your exit so others know your plan.</li>
+</ol>
+<p>Two common mistakes among experienced drivers are stopping inside the roundabout to let someone in (which confuses everyone behind you) and changing lanes inside a multilane roundabout. Choose the right lane on the approach and stay in it.</p>
+<h4>The Diverging Diamond Interchange</h4>
+<p>A diverging diamond interchange (DDI) is a highway interchange design in which traffic on the crossing road briefly shifts to the left side of the road between two signalized crossovers. That shift lets drivers turn left onto the highway ramp without crossing in front of oncoming traffic, which allows free-flowing left turns. Delaware's SR 1/SR 72 interchange is a diverging diamond; DelDOT's project cost $9.3 million and also added a shared-use path.</p>
+<p>How to drive one:</p>
+<ul>
+<li><strong>Follow the lane lines and signs, not your instincts.</strong> At the first crossover, a traffic signal stops cross traffic and you are guided to the left side of the road. It feels unusual, but oncoming traffic is separated from you.</li>
+<li><strong>Obey each crossover signal.</strong> Signals at the crossovers control the switch; do not try to beat a yellow.</li>
+<li><strong>To turn left onto the highway,</strong> stay in your lane while on the left side; the ramp entrance is on your left and you will not cross oncoming traffic.</li>
+<li><strong>To turn right,</strong> you usually turn before the first crossover, much like any interchange.</li>
+<li><strong>Do not change lanes</strong> between crossovers, and keep your speed at or below the posted limit.</li>
+<li><strong>Watch for people on the shared-use path</strong> where pedestrian crossings are marked.</li>
+</ul>
+
+<div class="myth"><p><strong>Myth:</strong> In a roundabout, the driver entering has the right of way because they are on the "main road."</p><p><strong>Fact:</strong> DelDOT's rule is to yield to traffic already in the roundabout. Entering drivers wait for a safe gap.</p></div>
+
+<h3>6.1.2.3 Railroad Crossings</h3>
+<p>A train cannot swerve, and it can take a very long distance to stop. A driver who misjudges a crossing almost never gets a second chance, which is why Delaware's railroad rules are strict. Under 21 Del.C. § 4161(a), you must stop <strong>within 50 feet but not less than 15 feet from the nearest rail</strong> when any of these is true:</p>
+<ul>
+<li>A clearly visible electric or mechanical signal device warns of an approaching train.</li>
+<li>A crossing gate is lowered, or a flagger signals that a train is approaching.</li>
+<li>A train approaching within about 1,500 feet of the crossing gives an audible signal.</li>
+<li>A train is plainly visible and in hazardous proximity to the crossing.</li>
+</ul>
+<p>Stay stopped until it is safe to proceed. Never drive around a lowered gate, and remember that a second train may be coming from the other direction after the first one passes; wait for the gates to rise and the lights to stop.</p>
+<p>Two other Delaware rules apply here. Under § 4130, do not enter a railroad crossing unless there is room on the other side for your whole vehicle; traffic backing up across the tracks is how many drivers get trapped. And under § 4119, you may not drive left of center within 100 feet of a railroad crossing.</p>
+<div class="highlight"><strong>If your vehicle stalls or is trapped on the tracks:</strong> Get everyone out immediately and move away from the tracks, walking toward the direction the train is coming from and away at an angle, so that debris from a collision is less likely to strike you. Then call for help. Do not stay in the vehicle trying to restart it.</div>
+
+<div class="scenario"><h4>Scenario: Backed Up at the Tracks</h4><p>A driver we'll call Renee approaches a crossing with no train in sight. Traffic on the far side of the tracks is backed up from a red light, and there is room for only half of her car beyond the rails. The car behind her is close.</p><details><summary>What should happen here?</summary><p>Renee should stop before the crossing, at least 15 feet from the nearest rail, and wait until there is room for her entire vehicle on the other side, as § 4130 requires. Stopping on or straddling the tracks is never safe, even if no train is visible.</p></details></div>
+
+<h3>6.1.2.4 Traffic Devices</h3>
+<p>Traffic-control devices include signals, signs, and pavement markings. Under 21 Del.C. § 4107, drivers must obey them, and disobeying a traffic-control device is one of the offenses listed in Delaware's aggressive driving law. Quick review of what experienced drivers sometimes blur:</p>
+<table>
+<tr><th>Device</th><th>What it means</th></tr>
+<tr><td>Steady red signal</td><td>Stop at the stop line and remain stopped.</td></tr>
+<tr><td>Steady yellow signal</td><td>The signal is about to turn red. Stop if you can do so safely; do not speed up to beat it.</td></tr>
+<tr><td>Flashing red signal</td><td>Treat it like a stop sign: full stop, then yield.</td></tr>
+<tr><td>Flashing yellow signal</td><td>Proceed with caution, slowing and watching for conflicts.</td></tr>
+<tr><td>Flashing yellow arrow</td><td>You may turn left, but you must yield to oncoming traffic and pedestrians.</td></tr>
+<tr><td>Dark (non-working) signal</td><td>Approach with great caution, be prepared to stop, and proceed only when you are sure it is safe.</td></tr>
+<tr><td>Octagon (stop), triangle (yield)</td><td>Regulatory signs: you must obey them.</td></tr>
+<tr><td>Diamond, usually yellow</td><td>Warning signs about conditions ahead, such as curves or crossings.</td></tr>
+<tr><td>Orange signs</td><td>Work zone signs; fines double in Delaware work zones (Module 3).</td></tr>
+</table>
+<p>Signals and signs work together with pavement markings. When a police officer or flagger is directing traffic, follow their directions.</p>
+
+<h3>6.1.2.4.1 Active Pedestrian Crossing Devices: HAWK Signals and RRFBs</h3>
+<p>Delaware has added devices that pedestrians activate to help them cross busy roads where a full traffic signal is not used. These devices are called "active" because they are dark or quiet until someone pushes the button. Many drivers who learned to drive before these were common are unsure what to do. Here is how both work.</p>
+<h4>HAWK signals (pedestrian hybrid beacons)</h4>
+<p>A HAWK signal has two red lights side by side on top and one yellow light centered below them. It looks unlike any other signal, and the sequence matters:</p>
+<ol>
+<li><strong>Dark:</strong> no one has pushed the button. Proceed normally, watching for pedestrians.</li>
+<li><strong>Flashing yellow:</strong> a pedestrian has pushed the button. Slow down and prepare to stop.</li>
+<li><strong>Steady yellow:</strong> stop if you can do so safely; the signal is about to turn red.</li>
+<li><strong>Steady red (both lights):</strong> stop at the stop line and stay stopped. Pedestrians are crossing.</li>
+<li><strong>Alternating flashing red ("wig-wag"):</strong> stop, then proceed with caution only when the pedestrian has finished crossing and the crosswalk is clear, as you would at a stop sign.</li>
+<li><strong>Dark again:</strong> normal driving resumes.</li>
+</ol>
+<p>The most common error is treating the dark signal as a malfunction and stopping, or treating the alternating red as a green and driving off while someone is still in the crosswalk.</p>
+<h4>Rectangular rapid flashing beacons (RRFBs)</h4>
+<p>An RRFB is a pair of rectangular yellow lights mounted below a pedestrian or school crossing sign. When a pedestrian pushes the button, the lights flash in a rapid, irregular pattern designed to catch your eye. When you see an RRFB flashing, a pedestrian is crossing or about to cross. Slow down, stop before the crosswalk if needed, and let the pedestrian cross. Delaware law already requires drivers at crosswalks without working traffic signals to yield to pedestrians, "slowing down or stopping if need be to so yield" (§ 4142(a)); the beacon simply makes that duty impossible to miss.</p>
+<div class="warning"><strong>Multilane roads:</strong> If a vehicle in the lane next to you has stopped at a crosswalk with an RRFB or HAWK signal active, assume a pedestrian is crossing in front of it. Never pass a vehicle stopped for a pedestrian at a crosswalk.</div>
+
+<div class="scenario"><h4>Scenario: The Wig-Wag</h4><p>A driver we'll call Lena approaches a HAWK signal on a four-lane road. The two red lights are flashing alternately. A pedestrian with a stroller is halfway across, now in the far lanes. Drivers on the other side of the road are still stopped.</p><details><summary>What should happen here?</summary><p>Alternating flashing red means stop, then proceed only when it is safe. Lena should stay stopped until the pedestrian has completely cleared the crosswalk. Moving forward while the pedestrian is still crossing, even in the far lanes, puts the pedestrian at risk if they stumble or turn back.</p></details></div>
+
+<h3>6.1.3 How Alcohol and Drugs Impair a Driver</h3>
+<p>Impairment does not begin at the legal limit. Alcohol is a depressant that affects the brain in a predictable order. Judgment and self-control are affected first, which is why impaired drivers so often believe they are fine. Then reaction time slows, vision and the ability to track moving objects weaken, coordination declines, and the ability to handle two tasks at once, such as steering while watching for hazards, breaks down. A driver traveling at 60 mph covers about 88 feet every second, so even a fraction of a second added to the normal perception-reaction time of about 1.5 seconds means many more feet before braking begins.</p>
+<p>Only time removes alcohol from the body. Coffee, cold showers, food, or fresh air may make a person feel more alert, but they do not lower blood alcohol concentration (BAC).</p>
+<p>Drugs impair driving too, and not only illegal ones. Cannabis can slow reaction time and affect attention and lane-keeping. Opioids, sleep aids, some allergy medications, muscle relaxants, and anti-anxiety medications can cause drowsiness and slowed thinking. Combining alcohol with other drugs, including some prescription and over-the-counter medicines, can multiply the effects. Read medication labels, ask your pharmacist about driving, and do not drive until you know how a new medication affects you.</p>
+<div class="highlight"><strong>Delaware data (IIHS, compiled from NHTSA FARS, 2024):</strong> An estimated 33% of drivers killed in Delaware crashes in 2024 (15 drivers) had a BAC of 0.08 or higher. DelDOT state data counted 21 DUI-related deaths in 2025.</div>
+
+<h3>6.1.3.1 Delaware Law on Impaired Driving</h3>
+<p>Delaware's driving under the influence (DUI) law is 21 Del.C. § 4177. Key points:</p>
+<ul>
+<li><strong>Per se limits.</strong> It is a violation to drive with a BAC of 0.08 or more, or with an illicit or recreational drug in your blood, measured within four hours of driving.</li>
+<li><strong>Criminal penalties.</strong> First offense: a fine of $500 to $1,500, up to 12 months in jail, or both. Second offense within 10 years: $750 to $2,500 and 60 days to 18 months. A third offense is a class G felony.</li>
+<li><strong>Evaluation and treatment.</strong> The court must order an alcohol evaluation and a rehabilitation program (§ 4177D).</li>
+<li><strong>License revocation (§ 4177A).</strong> First offense: 12 months; 18 months with a BAC of .15 to .20; 24 months with a BAC of .20 or higher or for refusing a test.</li>
+<li><strong>Ignition interlock (§ 4177C).</strong> Minimum periods for a first offense are 12 months (BAC under .15), 17 months (.15 to .20), and 23 months (.20 or higher); for a second offense, 16, 22, or 28 months in the same BAC bands. A First Offender Election carries a 4-month interlock minimum.</li>
+<li><strong>First Offender Election (§ 4177B).</strong> Available only with no prior offense, fewer than three moving violations in two years, no injury crash, and a BAC under .15. It brings a 1-year revocation.</li>
+</ul>
+<h4>Implied consent</h4>
+<p>Under § 2740, anyone who drives or is in physical control of a vehicle in Delaware is deemed to consent to a breath, blood, or urine test. Refusing a test in an adult DUI case (§ 2742) leads to revocation of 1 year with no prior offense, 18 months with one prior, and 24 months with two or more priors.</p>
+<h4>Drivers under 21</h4>
+<p>Under § 4177L, for a driver under 21, a BAC of .02 or more is per se evidence of having consumed alcohol. A first offense brings a 2-month revocation; a subsequent offense, 6 to 12 months. Refusing a test in such a case brings revocation of 2, 6, or 12 months. If you have younger drivers in your household, this is worth discussing with them.</p>
+<h4>Drinking while driving</h4>
+<p>Delaware's § 4177J prohibits drinking alcohol while driving: $25 to $200 for a first offense and $50 to $400 for a subsequent offense within one year. And a reckless driving charge reduced from DUI still requires a court-ordered rehabilitation course and is noted as alcohol- or drug-related on your record.</p>
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>BAC (blood alcohol concentration)</dt><dd>The amount of alcohol in the blood. In Delaware, 0.08 or more is a per se violation for adult drivers.</dd>
+<dt>Per se</dt><dd>"By itself." A per se limit means reaching that level is a violation without other proof of impairment.</dd>
+<dt>Implied consent</dt><dd>The rule that by driving in Delaware you are deemed to agree to breath, blood, or urine testing when impaired driving is suspected.</dd>
+<dt>Ignition interlock</dt><dd>A breath-testing device connected to a vehicle's ignition that prevents the engine from starting if alcohol is detected.</dd>
+<dt>First Offender Election</dt><dd>A Delaware option for some first-time DUI offenders who meet strict eligibility rules; it still brings a 1-year revocation.</dd>
+</dl></div>
+
+<div class="warning"><strong>Delaware legal warning:</strong> DUI penalties, revocation, ignition interlock, and refusal penalties stack on top of one another. A single impaired trip can bring a criminal record, the loss of your license for a year or more, and an interlock device on your vehicle afterward.</div>
+
+<div class="myth"><p><strong>Myth:</strong> If I feel fine and stay under 0.08, I can't be charged in Delaware.</p><p><strong>Fact:</strong> 0.08 is the per se limit for adults, but impairment begins well below it, and the per se rule also covers any illicit or recreational drug in your blood within four hours of driving. For drivers under 21, .02 is per se evidence of drinking.</p></div>
+
+<h3>6.1.3.2 Techniques When Encountering a Potentially Impaired Driver</h3>
+<p>You cannot control another driver's choices, but you can recognize warning signs early and create distance. Common signs that a driver may be impaired include:</p>
+<ul>
+<li>Weaving, drifting, or straddling the lane line; swerving back sharply.</li>
+<li>Driving well below the speed limit, or speed that changes for no reason.</li>
+<li>Very wide turns, or turns that cut across the curb.</li>
+<li>Braking erratically or stopping in a travel lane without cause.</li>
+<li>Following too closely, or responding slowly to signals.</li>
+<li>Driving at night without headlights, or driving on the wrong side of the road.</li>
+</ul>
+<p>When you see these signs, use these techniques:</p>
+<ol>
+<li><strong>Increase your distance.</strong> If the driver is ahead of you, drop back well beyond your normal following distance. If the driver is behind you, change lanes when safe or turn onto another road and let them go by.</li>
+<li><strong>Do not pass unless you are certain it is safe.</strong> An impaired driver may drift into your lane as you go by. If you must pass, do it quickly, with a wide margin, and only on a clear stretch of road.</li>
+<li><strong>Watch oncoming traffic.</strong> If a vehicle is drifting toward your lane, slow down, move right, and be ready to steer onto the shoulder. Avoid a head-on collision even if it means leaving the road.</li>
+<li><strong>Be extra careful at intersections.</strong> Do not assume an impaired driver will stop for a signal or sign.</li>
+<li><strong>Report it safely.</strong> Pull over somewhere safe and call 911, or have a passenger call. Delaware's handheld-device law (§ 4176C) includes an exception for reporting emergencies or crimes, but the safest choice is still to call when stopped or hands-free. Give the location, direction of travel, a description of the vehicle, and the license plate if you can read it safely.</li>
+<li><strong>Never try to stop the driver yourself.</strong> Do not follow aggressively, block the vehicle, or confront the driver. Leave that to law enforcement.</li>
+</ol>
+<p>The same thinking applies to your own passengers and friends. Offer a ride, arrange a rideshare, or offer a place to stay. Preventing an impaired trip is the most effective technique of all.</p>
+
+<div class="scenario"><h4>Scenario: Drifting on Route 13</h4><p>Consider a driver we'll call Andre, driving home on a four-lane divided highway late on a Saturday night. The pickup ahead of him drifts onto the shoulder, jerks back into the lane, then slows to well under the limit before speeding up again. Andre's first thought is to pass it quickly and get away from it.</p><details><summary>What should happen here?</summary><p>Andre should drop back and give the pickup far more space than usual. Passing a driver who is drifting is risky, because the pickup could swerve into him as he goes by. If the left lane is clear for a long stretch and he must pass, he should do so with a wide margin and without lingering beside the truck. Otherwise, he can stay well back, or take the next exit. As soon as he can stop somewhere safe, or with a passenger making the call, he should call 911 with the location, direction of travel, a description of the pickup, and the plate if he could read it safely. He should not follow closely to read the plate or try to get the driver's attention.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Before your next event where alcohol will be served, what is your plan for getting home? Write it down, including a backup if your first plan falls through.</label><textarea></textarea></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Yield to vehicles already in an intersection, yield to the right when arriving together, yield to oncoming traffic when turning left, and yield to all roadway traffic when leaving a driveway.</li>
+<li>Do not enter an intersection, crosswalk, or railroad crossing without room to clear it; at a stop sign, stop at the stop line, then yield.</li>
+<li>In a roundabout, choose your lane early, slow to about 10–15 mph, yield to traffic already circulating and to pedestrians, and do not pass inside.</li>
+<li>In a diverging diamond, follow the lane lines and crossover signals; the left-side crossover lets you turn left without crossing oncoming traffic.</li>
+<li>At an active railroad crossing, stop within 50 feet but not less than 15 feet from the nearest rail, and never drive around lowered gates.</li>
+<li>At a HAWK signal, stop on steady red and proceed on alternating flashing red only after the crosswalk is clear; at a flashing RRFB, yield to the pedestrian.</li>
+<li>Delaware's per se DUI limits are 0.08 BAC or any illicit or recreational drug within four hours; for drivers under 21, .02 is per se evidence of drinking.</li>
+<li>Implied consent means refusing a test brings its own revocation, from 1 to 2 years for adults depending on prior offenses.</li>
+<li>Give a suspected impaired driver lots of space, do not engage, and report from a safe place by calling 911.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 3: Work Zones and Vulnerable Road Users.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 2 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 3.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-refresher-m2-remaining', DONE='de-refresher-m2-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 2. Return to your course and continue to Module 3.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

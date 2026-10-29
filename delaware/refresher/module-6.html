@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 6: Defensive Practices, Safety Devices, Road Hazards, Head-On Collisions, and Review | DMV Courses – Delaware Refresher Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Refresher Defensive Driving Course &middot; Module 6 of 6 &middot; 30 minutes</span>Module 6: Defensive Practices, Safety Devices, Road Hazards, Head-On Collisions, and Review</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.11.1, 6.1.11.1.1, 6.1.11.1.2, 6.1.11.2, 6.1.11.2.1, 6.1.11.2.2, 6.1.11.3, 6.1.11.4, 6.1.11.5, 6.1.12.1, 6.1.12.2, 6.1.12.2.1, 6.1.12.2.2, 6.1.12.3, 6.1.12.4, 6.1.15.1, 6.1.15.2, 6.1.15.3, 6.1.17, 4.2.2.2, 4.4.2, 4.4.3 -->
+<p>This is the final module of your Delaware Refresher Course. It covers the everyday skills that prevent most crashes: reading pavement markings, managing blind spots, keeping enough space, choosing the right speed, and passing safely. It then reviews the safety devices that protect you when a crash cannot be avoided, the hazards of vehicles stopped along the road, and how to avoid the most deadly crash type of all, the head-on collision. The module ends with a short review of the whole course and what to expect on the final exam. As you work through it, compare each technique with how you actually drive today. Refresher courses work best when you treat them as a tune-up: find the habits that have drifted and reset them.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Use pavement markings correctly, including median crossings and shared center turn lanes, and manage blind spots on both sides of the equation.</li>
+<li>Calculate following and stopping distances and apply Delaware's speed laws, including statutory limits for unmarked areas.</li>
+<li>Pass and be passed safely under Delaware's passing rules.</li>
+<li>Explain Delaware's seat belt and child restraint laws, safe airbag positioning, and the difference between anti-lock and standard braking.</li>
+<li>Handle stationary roadside vehicles, lane changes, and speed reductions safely, and use techniques that prevent head-on collisions.</li>
+<li>Describe the final exam requirements and how your completion is reported and used.</li>
+</ul></div>
+
+<h3>Topic 6.1.11.1: Pavement Line Markings</h3>
+<p>Pavement markings are a continuous set of instructions painted on the road. As a refresher: <strong>yellow lines</strong> separate traffic moving in opposite directions, and <strong>white lines</strong> separate lanes moving in the same direction and mark the right edge of the road. A <strong>broken</strong> line means you may cross it when safe; a <strong>solid</strong> line on your side means stay in your lane and do not pass. A double solid yellow line means no passing in either direction. These markings support Delaware's passing rules: §4120 sets no-passing zones, and §4119 prohibits driving left of center near a curve or hill crest with an obstructed view, or within 100 feet of an intersection, a railroad crossing, or an obstructed bridge, viaduct, or tunnel.</p>
+<h4>6.1.11.1.1 Median crossing</h4>
+<p>A median separates opposing traffic on a divided highway. It may be a grass strip, a barrier, or a wide painted area. Cross a median only at a designated opening or crossover where turns are allowed. Never drive across a grass or painted median to make a turn, and never use a crossover signed for authorized or emergency vehicles only. At a median opening, treat the turn in two parts: cross the first set of lanes when clear, stop within the median opening if it is wide enough to hold your entire vehicle, and then wait for a safe gap in the second set of lanes. If the opening is too narrow for your vehicle, wait until both directions are clear so your car does not stick out into a travel lane.</p>
+<h4>6.1.11.1.2 Shared center turn lanes</h4>
+<p>A shared center turn lane, sometimes called a two-way left-turn lane, runs down the middle of a road and is marked on each side by a solid yellow line with a broken yellow line inside it. Drivers going in both directions use it to make left turns. Use it only to turn left into a driveway or side street, or to turn left out of one and wait for a gap. Enter it just before your turn, not hundreds of feet early, and never use it as a passing lane or a travel lane. Watch for an oncoming driver who may be using the same space to turn, and signal early so others know your plan.</p>
+<div class="scenario"><h4>Scenario: The Long Ride in the Center Lane</h4><p>Consider a driver we'll call Denise. She wants to turn left into a pharmacy about a quarter mile ahead on a busy four-lane road with a shared center turn lane. To get out of slow traffic, she moves into the center lane right away and drives in it until she reaches the pharmacy.</p><details><summary>What should happen here?</summary><p>Denise is using the center turn lane as a travel lane. Drivers coming the other way may enter the same lane to turn left, and she could meet one of them nose to nose, a setup for a head-on crash. She should stay in her travel lane, signal, check her mirrors, and enter the center lane only a short distance before the pharmacy entrance. Then she should stop, wait for a safe gap in oncoming traffic, and complete the turn.</p></details></div>
+
+<h3>Topic 6.1.11.2: Blind Spots</h3>
+<h4>6.1.11.2.1 Avoiding other vehicles' blind spots</h4>
+<p>Every vehicle has blind spots, and large trucks and buses have very large ones, beside the cab, directly behind the trailer, and right in front of the hood. A simple test: if you cannot see the other driver's face in their side mirror, they probably cannot see you. Do not linger beside another vehicle. Either pass steadily or drop back. When passing a large truck, do not cut back in until you can see the truck's entire front in your rear-view mirror.</p>
+<h4>6.1.11.2.2 Checking your blind spots</h4>
+<p>Adjust your mirrors before you move. Many drivers set their side mirrors so they can just barely see the side of their own car; turning the mirrors slightly outward reduces the overlap with the rear-view mirror and shrinks the blind spot. But no mirror setting removes the blind spot entirely. Before every lane change or merge, turn your head and look over your shoulder. Blind spot monitoring systems help, but as you reviewed in the last module, they are a backup, not a replacement for your own check.</p>
+
+<h3>Topic 6.1.11.3: How to Calculate Following and Stopping Distances</h3>
+<p>Delaware's following law, §4123(a), says you "shall not follow another vehicle more closely than is reasonable and prudent." Trucks and vehicles towing outside business or residence districts must keep at least 300 feet (§4123(b)). For everyone else, the statute sets no specific number, so you need a method. The standard defensive driving guideline is at least 3 to 4 seconds in good conditions, and more in bad weather, at night, or behind motorcycles and large vehicles.</p>
+<h4>Step 1: Convert speed to feet per second</h4>
+<p>Multiply miles per hour by about 1.47. At 30 mph you travel about 44 feet per second; at 50 mph, about 73; at 60 mph, about 88.</p>
+<h4>Step 2: Following distance</h4>
+<p>Multiply feet per second by your following time. At 60 mph, a 4-second gap is about 4 × 88 = 352 feet. To check it on the road, note when the vehicle ahead passes a fixed object and count seconds until you reach it.</p>
+<h4>Step 3: Stopping distance</h4>
+<p>Total stopping distance = reaction distance + braking distance. With an average perception-reaction time of about 1.5 seconds, reaction distance at 60 mph is about 1.5 × 88 = 132 feet before your brakes even start working. Braking distance depends on speed, tires, and surface, and it grows much faster than speed: when speed doubles, braking distance roughly quadruples.</p>
+<table>
+<tr><th>Speed</th><th>Feet per second</th><th>4-second following distance</th><th>Reaction distance (1.5 s)</th></tr>
+<tr><td>30 mph</td><td>about 44</td><td>about 176 feet</td><td>about 66 feet</td></tr>
+<tr><td>50 mph</td><td>about 73</td><td>about 293 feet</td><td>about 110 feet</td></tr>
+<tr><td>60 mph</td><td>about 88</td><td>about 352 feet</td><td>about 132 feet</td></tr>
+</table>
+<h4>Step 4: Adjust for conditions</h4>
+<p>Three to four seconds is a starting point for dry roads in daylight. Add time when the pavement is wet or icy, at night, in fog or glare, when you are tired, when you are following a motorcycle or a large truck that blocks your view, and when a vehicle is tailgating you. That last one surprises many drivers: if someone is too close behind you, increasing the gap in front of you lets you brake more gently, which gives the tailgater more time to react too.</p>
+<p>The lesson: if your braking distance at 30 mph is some distance X, then at 60 mph it is roughly 4X. Your following gap must be large enough to cover your reaction distance plus any difference between your braking and the braking of the vehicle ahead.</p>
+
+<h3>Topic 6.1.11.4: Speed Limits and Recommendations for Unmarked Areas</h3>
+<p>Delaware's speed law starts with a basic rule. Under §4168(a), "No person shall drive a vehicle on a highway at a speed greater than is reasonable and prudent under the conditions." A posted limit is the maximum under ideal conditions, not a target. When there is no sign, §4169(a) sets these statutory limits:</p>
+<table>
+<tr><th>Type of road or area</th><th>Statutory limit</th></tr>
+<tr><td>Business district</td><td>25 mph</td></tr>
+<tr><td>Residence district</td><td>20 or 25 mph (set by the road owner)</td></tr>
+<tr><td>School zone (where posted with times or conditions)</td><td>20 mph</td></tr>
+<tr><td>Two-lane roadways</td><td>50 mph</td></tr>
+<tr><td>Four-lane and divided roadways</td><td>55 mph</td></tr>
+</table>
+<p>The statute itself sets a 65 mph limit only for SR 1 between Red Lion Creek and the Appoquinimink River (§4169(d)). Do not assume a 65 mph limit anywhere else unless it is posted. Driving too slowly can also be a problem: under §4171(a), you may not drive "at such a slow speed as to impede the normal and reasonable movement of traffic."</p>
+<p>For unmarked areas, a good working approach is: identify the road type, apply the statutory default, then reduce your speed for curves, hills, intersections, driveways, pedestrians, darkness, and weather. Speeding points under DMV Regulation 2208 are 2 points for 1 to 9 mph over, 4 for 10 to 14 over, and 5 for 15 or more over (20 or more over may also lead to further action, including suspension).</p>
+<div class="highlight"><strong>2024 Delaware data (IIHS, compiled from NHTSA FARS):</strong> 31 of Delaware's 126 traffic deaths in 2024, about 25%, were speed-related.</div>
+
+<h3>Topic 6.1.11.5: Passing and Being Passed</h3>
+<h4>When you pass</h4>
+<p>Under §4118, you may pass on the left only when the road is "clearly visible and is free of oncoming traffic for a sufficient distance ahead." Passing on the right is allowed only when it is safe (§4117). Before passing, ask: Is passing legal here (no solid line on my side, no curve, crest, or intersection)? Can I see far enough ahead? Is the gain worth the risk? Then check mirrors and blind spot, signal, accelerate steadily, and return to your lane only when you can see the passed vehicle in your rear-view mirror. When passing a bicycle, §4116 requires at least 3 feet, and where there are two lanes in your direction, you must move completely into the left lane.</p>
+<div class="myth"><p><strong>Myth:</strong> If the line is broken on my side, passing is always legal and safe.</p><p><strong>Fact:</strong> A broken line only means passing may be permitted. Delaware law still prohibits driving left of center near curves or hill crests with an obstructed view and within 100 feet of an intersection, railroad crossing, or obstructed bridge or tunnel (§4119), and requires a clearly visible road free of oncoming traffic (§4118).</p></div>
+<h4>When you are passed</h4>
+<p>Stay in your lane, keep a steady speed, and do not speed up. If the passing driver is running out of room because of oncoming traffic, ease off to let them back in. Being passed is not a contest; making space for a driver who misjudged a pass can prevent a head-on crash.</p>
+<div class="scenario"><h4>Scenario: The Slow Truck on a Two-Lane Road</h4><p>Consider a driver we'll call Kevin. On a rural two-lane road posted at 50 mph, Kevin has been behind a slow farm vehicle for several miles. He sees a broken yellow line, but the road rises toward a hill crest about a quarter mile ahead. He decides to pass.</p><details><summary>What should happen here?</summary><p>Even though the line is broken, §4119 prohibits driving left of center when approaching the crest of a hill where the view is obstructed, and §4118 requires the road ahead to be clearly visible and free of oncoming traffic for a sufficient distance. Kevin cannot see what is coming over the crest. He should wait for a long, clear, legal passing zone. A few more minutes behind the slow vehicle cost far less than a head-on collision.</p></details></div>
+
+<h3>Topic 6.1.12: Vehicle Safety Devices</h3>
+<h4>6.1.12.1 Use of seat belts</h4>
+<p>Under 21 Del.C. §4802, the driver must wear a seat belt and must make sure occupants 16 and older are secured. Officers may stop a vehicle on "reasonable and articulable suspicion" of a seat belt violation, so in practice it is enforced as a primary offense. The civil penalty is $25 when it is the only violation, with no points. Under DMV Regulation 2208, if all occupants were belted at the time of an arrest, the driver can receive a 1-point seat belt credit lasting 1 year.</p>
+<div class="highlight"><strong>Seat belts in Delaware:</strong> Observed seat belt use was 92.3% in the June 2024 statewide survey (OHS FY2024 Annual Report). Yet IIHS data for 2024 show that 36 of the 62 people killed inside vehicles in Delaware were unbelted, which IIHS reports as 58% of occupant deaths. The small minority who skip the belt make up more than half of those who die.</div>
+<h4>6.1.12.2 Child restraint systems</h4>
+<p><strong>6.1.12.2.1 In relation to a child's age and size.</strong> Delaware's child restraint law, §4803, follows a child's growth:</p>
+<table>
+<tr><th>Child</th><th>Required restraint</th></tr>
+<tr><td>Under age 2 and under 30 lb</td><td>Rear-facing seat with a 5-point harness</td></tr>
+<tr><td>Under age 4 and under 40 lb</td><td>Seat with a 5-point harness</td></tr>
+<tr><td>After outgrowing the harness</td><td>Booster seat until the child reaches the seat's limits</td></tr>
+<tr><td>After the booster</td><td>Seat belt until age 16 (and every ride after that)</td></tr>
+</table>
+<p><strong>6.1.12.2.2 Correct placement of a child in a vehicle.</strong> No child who is 5 feet 5 inches or shorter and under 12 may ride in a front seat with an active passenger airbag (a secondary offense). The back seat is the safest place for children. Never place a rear-facing seat in front of an active airbag. Install the seat tightly following the vehicle and seat manuals, and keep harness straps snug. A $25 fine applies for a second or later violation of §4803.</p>
+<h4>6.1.12.3 Vehicle airbag systems and driver safety</h4>
+<p>Airbags inflate with great force in a fraction of a second. They are designed to work with seat belts, not replace them. To protect yourself as the driver: sit upright with your seat moved back so there are at least 10 inches between your breastbone and the steering wheel; tilt the wheel so the airbag points at your chest, not your face; hold the wheel at about the 9 and 3 o'clock positions, so your arms are not across the airbag cover; and never ride with your arms, feet, or objects in front of an airbag.</p>
+<h4>6.1.12.4 Anti-lock brakes versus standard brakes</h4>
+<p>With an <strong>anti-lock braking system (ABS)</strong>, in an emergency you press the brake hard and keep firm pressure while you steer around the hazard. You may feel pulsing in the pedal and hear grinding; that is normal. Do not pump ABS brakes. With <strong>standard (non-ABS) brakes</strong>, hard braking can lock the wheels, and locked front wheels cannot steer. Use threshold braking: press firmly just short of lockup. If the wheels lock, ease off enough to let them roll, then reapply. Check your owner's manual if you are not sure which system your vehicle has.</p>
+<div class="myth"><p><strong>Myth:</strong> Anti-lock brakes always stop a car in a shorter distance.</p><p><strong>Fact:</strong> The main benefit of ABS is that it lets you keep steering while braking hard. On some surfaces, such as gravel or fresh snow, an ABS-equipped car may need as much or more distance to stop. Your following distance still matters.</p></div>
+
+<h3>Topic 6.1.15: Other Road Hazards</h3>
+<h4>6.1.15.1 Vehicles stationary on the side of the road</h4>
+<p>A vehicle stopped on the shoulder can pull out without warning, a door can open into traffic, and people may be walking around it. Delaware's Move Over Law, §4134(b), applies to any stationary vehicle showing warning signals such as hazards, flares, or cones: move to a lane not adjacent to it if you safely can, or, if not, slow down. Where the limit is 50 mph or more, slow to a safe speed at least 20 mph below the posted limit. Fines run up to $250, $500, and $1,000 for first, second, and later offenses.</p>
+<h4>6.1.15.2 Changing lanes when safe to do so</h4>
+<p>Every lane change should follow the same routine: check mirrors, signal early, look over your shoulder into the blind spot, confirm there is a gap large enough that no one has to brake for you, and then move gradually. Change one lane at a time. Delaware requires a turn signal "continuously during not less than the last 300 feet" before turning (§4155(b)), and an early signal before any lane change gives others the same warning. Remember that "when safe to do so" means you may not always be able to move over; that is why the Move Over Law gives slowing down as the alternative.</p>
+<h4>6.1.15.3 Speed reduction</h4>
+<p>Slowing down is often the best hazard response, but it must be done smoothly. Check your mirror before braking, brake early and gradually, and tap the pedal to flash your brake lights if you need to slow sharply on a highway. Reduce speed before a curve, not in it. Slow for work zones, where §4105(f) doubles the fines for many violations, and for stopped vehicles, crashes, weather, and wildlife. Avoid sudden stops that the drivers behind you cannot anticipate.</p>
+
+<h3>Topic 6.1.17: Head-On Collisions and Avoidance Techniques</h3>
+<p>Head-on collisions are among the most deadly crashes because the speeds of both vehicles combine. Many begin as a lane departure: a driver drifts across the center line because of distraction, fatigue, impairment, excessive speed on a curve, or a bad pass. According to DelDOT, 50 deaths in Delaware in 2025 involved vehicles leaving the roadway, the one crash category with a significant increase that year.</p>
+<h4>Preventing a head-on crash</h4>
+<ul>
+<li>Pass only where §4118 to §4120 allow it and the road is clearly visible far ahead.</li>
+<li>Keep right on two-lane roads, especially on curves and hill crests.</li>
+<li>Scan 12 to 15 seconds ahead so you notice an oncoming vehicle drifting toward the center early.</li>
+<li>Slow down before curves so you stay in your lane.</li>
+<li>Treat rumble strips as a warning that you are leaving your lane, and recover gently.</li>
+</ul>
+<h4>If a vehicle is coming at you in your lane</h4>
+<ol>
+<li><strong>Brake</strong> to reduce your speed; every mph you shed reduces crash force.</li>
+<li><strong>Sound your horn and flash your lights</strong> to alert the other driver.</li>
+<li><strong>Steer right</strong>, toward the shoulder or off the road if necessary. Never steer left into the oncoming lane, because the other driver may correct back into it.</li>
+<li><strong>If you cannot avoid a collision</strong>, choose the least harmful option: a glancing blow is better than a full frontal impact, and a soft object such as brush is better than a tree or pole.</li>
+<li>If your right wheels drop off the pavement, ease off the gas, hold the wheel firmly, and steer back gently when your speed is under control.</li>
+</ol>
+<div class="scenario"><h4>Scenario: The Drifting Headlights</h4><p>Consider a driver we'll call Ana. At night on a two-lane rural road, she notices oncoming headlights slowly drifting over the center line toward her lane.</p><details><summary>What should happen here?</summary><p>Ana should immediately brake, sound her horn, flash her lights, and steer toward the right edge of the road, including the shoulder if needed. She should not steer left, because the oncoming driver may suddenly wake up or notice and jerk back into their own lane. Her early scanning gave her the extra seconds she needed.</p></details></div>
+<div class="scenario"><h4>Scenario: The Flat Tire Ahead</h4><p>Consider a driver we'll call Luis. On a four-lane highway posted at 55 mph, he sees a car with hazard lights on the right shoulder and a person changing a tire. A car is beside him in the left lane.</p><details><summary>What should happen here?</summary><p>Luis cannot change lanes safely, so §4134(b) requires him to slow to a safe speed at least 20 mph below the posted limit, so 35 mph or less. He should check his mirror, brake early and gradually, and keep his eyes on his own lane, not on the person by the car.</p></details></div>
+
+<h3>Course Review and Final Exam</h3>
+<p>Here is a brief look back at the whole Refresher Course:</p>
+<ul>
+<li><strong>Module 1:</strong> course benefits, the point system, and your rights and responsibilities during a traffic stop.</li>
+<li><strong>Module 2:</strong> intersections, roundabouts, diverging diamonds, railroad crossings, pedestrian signals, and impaired driving.</li>
+<li><strong>Module 3:</strong> work zones and vulnerable road users, including cyclists, pedestrians, and the White Cane Law.</li>
+<li><strong>Module 4:</strong> school buses, emergency vehicles, the Move Over Law, and motorcycles.</li>
+<li><strong>Module 5:</strong> vehicle technology, distractions, the driver's condition, weather, and aggressive driving.</li>
+<li><strong>Module 6:</strong> defensive driving practices, safety devices, roadside hazards, and head-on collisions.</li>
+</ul>
+<h4>About the final exam</h4>
+<p>The final exam has at least 25 questions, including at least two on interaction with law enforcement during traffic stops. You must score 80% or better to receive credit for the course. If you do not pass, you may retake the exam. After you pass, you will complete an online affidavit confirming that you are the person who completed the course and are receiving the certificate, and that you understand that making an unsworn falsification violates 11 Del.C. §1233, subjecting a violator to a fine, imprisonment, or both.</p>
+<h4>Your certificate and benefits</h4>
+<p>Your free completion certificate, showing your full name, completion date, the provider's name, the course name, and the provider's authorized signature, will be available in your student portal after you pass. We report your completion electronically to the Delaware DMV within 14 days, as Regulation 2224 requires. Completing this Refresher Course gives you a 3-point credit under DMV Regulation 2208, used in calculating DMV penalties for future violations; it is not automatically deducted from your record and does not remove existing points. Under Insurance Regulation 607, a refresher completed within 180 days before your 3-year discount expires qualifies for a 15% discount, and one completed after expiration but within 2 years restores the discount at 15% from the completion date. For discount questions, contact the Department of Insurance at 1-800-282-8611. For course help, call [TOLL-FREE NUMBER].</p>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Shared center turn lane</dt><dd>A center lane bordered by solid and broken yellow lines, used by both directions only for left turns.</dd>
+<dt>Reaction distance</dt><dd>The distance traveled during your perception-reaction time, about 1.5 seconds, before braking begins.</dd>
+<dt>Statutory speed limit</dt><dd>A limit set by §4169(a) that applies when no other limit is posted, such as 50 mph on two-lane roadways.</dd>
+<dt>Threshold braking</dt><dd>Firm braking just short of wheel lockup, used with standard (non-ABS) brakes.</dd>
+<dt>Lane departure</dt><dd>A vehicle leaving its lane or the roadway, a common cause of head-on and run-off-road crashes.</dd>
+</dl></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which two habits from this course will you commit to improving over the next three years, before you are eligible for your next refresher?</label><textarea></textarea></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Cross medians only at designated openings, and use shared center turn lanes only for left turns, never for passing or travel.</li>
+<li>Stay out of other drivers' blind spots and turn your head to check your own before every lane change.</li>
+<li>Keep at least 3 to 4 seconds of following distance; at 60 mph you travel about 88 feet per second, and braking distance roughly quadruples when speed doubles.</li>
+<li>Without signs, Delaware's statutory limits are 25 mph in business districts, 20 or 25 in residence districts, 50 on two-lane roads, and 55 on four-lane and divided roads.</li>
+<li>Pass only when the road ahead is clearly visible and free of oncoming traffic, and never near curves, crests, or intersections.</li>
+<li>Delaware requires belts for the driver and occupants 16 and older, and age- and size-appropriate child restraints under §4803.</li>
+<li>With ABS, press hard, hold, and steer; with standard brakes, use threshold braking.</li>
+<li>Move over or slow down for stationary vehicles showing warning signals, and reduce speed early and smoothly.</li>
+<li>To avoid a head-on collision, brake, warn, and steer right, never left.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the Final Exam. You must score 80% or better to pass.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 6 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to the Final Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-refresher-m6-remaining', DONE='de-refresher-m6-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 6. Return to your course and continue to the Final Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>
