@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 4: Alcohol, Drugs and Impaired Driving | DMV Courses – Delaware Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Basic Defensive Driving Course &middot; Module 4 of 12 &middot; 30 minutes</span>Module 4: Alcohol, Drugs and Impaired Driving</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.3, 6.1.3.1, 6.1.3.2 -->
+<p>Impaired driving is one of the most preventable causes of death on Delaware roads, and one of the most persistent. Every impaired-driving crash begins with a choice: to drive after drinking, to drive after using a drug, or to ride with someone who has. This module explains how alcohol and legal and illegal drugs affect the skills you need to drive, what Delaware law says about impaired driving and the serious penalties that follow a conviction, how Delaware's implied consent and under-21 laws work, and what to do when you share the road with a driver who may be impaired. The goal is not only to help you avoid a DUI. It is to help you recognize danger early and keep yourself and others alive.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain how alcohol and legal and illegal drugs impair judgment, vision, reaction time, and coordination.</li>
+<li>State Delaware's per se impaired-driving standards under 21 Del.C. § 4177, including the 0.08 BAC limit and the drug standard.</li>
+<li>Describe the penalties for impaired driving in Delaware, including fines, jail, license revocation, and ignition interlock requirements.</li>
+<li>Explain Delaware's implied consent law, test refusal penalties, and the under-21 standard of § 4177L.</li>
+<li>Recognize common signs of a potentially impaired driver and apply safe techniques when you encounter one.</li>
+</ul></div>
+
+<h3>The Scope of the Problem in Delaware</h3>
+<p>Delaware's recent crash data shows that impaired driving remains a leading cause of death on our roads. All figures below include the year they were compiled, as Delaware's course regulation requires.</p>
+<table>
+<tr><th>Year and Source</th><th>Impaired-Driving Finding</th></tr>
+<tr><td>2024 (IIHS, compiled from federal FARS data)</td><td>An estimated 33% of drivers killed in Delaware crashes (15 drivers) had a blood alcohol concentration of 0.08 or higher.</td></tr>
+<tr><td>2025 (DelDOT state data)</td><td>21 of Delaware's 117 traffic deaths were DUI-related.</td></tr>
+<tr><td>2025 and 2026, January 1 to October 28 (OHS tally; 2026 is unofficial)</td><td>15 alcohol- or drug-related fatalities in that period of 2025; 4 in the same period of 2026.</td></tr>
+</table>
+<p>The 2026 figure is encouraging, but it is preliminary, and every one of these deaths was preventable. Behind each number are families, coworkers, and communities, and often a driver who has to live with having caused the crash.</p>
+<div class="highlight"><strong>Key Fact:</strong> In 2024, about one in three Delaware drivers killed in crashes had a BAC of 0.08 or higher (IIHS estimate). Alcohol remains one of the deadliest factors on Delaware roads.</div>
+
+<h3>How Alcohol Impairs a Driver</h3>
+<p>Alcohol is a depressant. It slows the central nervous system, which controls everything you do behind the wheel: seeing, thinking, deciding, and moving. Alcohol passes from the stomach and small intestine into the bloodstream and reaches the brain quickly. The amount of alcohol in your blood is measured as blood alcohol concentration, or BAC.</p>
+<h4>Skills Alcohol Affects</h4>
+<ul>
+<li><strong>Judgment.</strong> Judgment is often the first skill affected, and the most dangerous to lose, because it is the skill you need to recognize that you are impaired. Drinkers commonly feel more confident and more willing to take risks, such as speeding, following closely, or passing unsafely.</li>
+<li><strong>Reaction time.</strong> Alcohol slows the time it takes to notice a hazard and respond. A sober driver needs about 1.5 seconds to perceive and react to a hazard. Any added delay means more distance traveled before braking begins. At 60 mph, every extra second adds about 88 feet.</li>
+<li><strong>Vision.</strong> Alcohol reduces your ability to focus, to judge distance and speed, and to see clearly at night. It can narrow your field of vision, so you notice less of what is happening at the sides of the road.</li>
+<li><strong>Coordination.</strong> Steering, braking, and staying in your lane all require fine motor control, which alcohol reduces.</li>
+<li><strong>Divided attention.</strong> Driving requires you to track many things at once. Alcohol makes it harder to split your attention between steering, speed, signals, mirrors, and other road users.</li>
+</ul>
+<h4>What Determines BAC</h4>
+<p>Your BAC depends on how much alcohol you drink, how quickly you drink it, your body size and composition, whether you have eaten, and other individual factors. Two people who drink the same amount can have very different BACs. A standard drink of beer, wine, or liquor contains roughly the same amount of alcohol, but drinks poured at home or in restaurants are often larger than standard. You cannot reliably estimate your own BAC by how you feel.</p>
+<h4>Only Time Lowers BAC</h4>
+<p>Your liver breaks down alcohol at a fairly steady rate, and nothing you do can speed it up. Coffee, cold showers, food after drinking, and fresh air do not lower your BAC. Coffee may make you feel more awake, but an alert drunk driver is still a drunk driver.</p>
+<div class="myth"><p><strong>Myth:</strong> A cup of strong coffee will sober me up enough to drive.</p><p><strong>Fact:</strong> Only time lowers your blood alcohol concentration. Caffeine may make you feel more alert, but it does not reduce your BAC or restore your judgment and reaction time.</p></div>
+<div class="myth"><p><strong>Myth:</strong> Beer is safer than liquor.</p><p><strong>Fact:</strong> A standard beer, a standard glass of wine, and a standard shot of liquor contain about the same amount of alcohol. What matters is how much alcohol you consume, not what form it comes in.</p></div>
+
+<h3>How Legal and Illegal Drugs Impair a Driver</h3>
+<p>Alcohol is not the only substance that impairs driving. Many drugs, both legal and illegal, affect the same skills: attention, judgment, reaction time, vision, and coordination. Delaware law treats drug-impaired driving as seriously as alcohol-impaired driving.</p>
+<h4>Prescription and Over-the-Counter Medications</h4>
+<p>Many common medications can cause drowsiness, dizziness, blurred vision, or slowed reactions. These include some pain medications, sleep aids, anxiety medications, muscle relaxants, antihistamines, and cold and allergy remedies. A prescription from your doctor does not make it safe or legal to drive while impaired.</p>
+<ul>
+<li>Read the warning labels on every medication. Labels that warn about drowsiness or operating machinery apply to driving.</li>
+<li>Ask your doctor or pharmacist how a new medication may affect your driving, especially when you first start it or change the dose.</li>
+<li>Never combine medications with alcohol unless your doctor has told you it is safe. Combinations can multiply the effects of each.</li>
+<li>If a medication makes you drowsy, do not drive. Arrange another way to get where you need to go.</li>
+</ul>
+<h4>Cannabis</h4>
+<p>Cannabis can slow reaction time, impair judgment of time and distance, reduce coordination, and make it harder to stay in your lane. Whether a substance is legal to possess or use does not make it legal to drive under its influence. Under Delaware law, having a recreational drug in your blood within four hours of driving can be a DUI by itself.</p>
+<h4>Illegal Drugs</h4>
+<p>Stimulants can lead to aggressive driving, speeding, and poor judgment, and when they wear off they can leave a driver exhausted. Depressants and opioids can slow reactions and cause drowsiness or unconsciousness. Hallucinogens distort perception of the road and surroundings. Delaware law makes it illegal to drive with an illicit drug in your blood within four hours of driving.</p>
+<h4>Mixing Substances</h4>
+<p>Combining alcohol with drugs, or one drug with another, can be far more dangerous than either alone. The effects can multiply in ways that are hard to predict, even for experienced users.</p>
+<div class="highlight"><strong>Bottom Line:</strong> If any substance, legal or illegal, affects how you feel, think, or move, it affects how you drive. If you feel different, you drive different.</div>
+
+<div class="scenario"><h4>Scenario: The New Prescription</h4><p>A driver we'll call Gloria starts a new prescription for back pain. The label warns that it may cause drowsiness. She feels fine after the first dose and plans to drive to work.</p><details><summary>What should happen here?</summary><p>Gloria should take the warning seriously. Medications can affect people differently, and impairment is not always obvious to the person experiencing it. Before driving, she should ask her doctor or pharmacist how the medication may affect her driving and wait until she knows how it affects her. A prescription does not make impaired driving legal. Delaware's DUI law covers impairment from drugs as well as alcohol. Until she is sure, she should arrange another ride.</p></details></div>
+
+<h3>6.1.3.1 Delaware Law on Impaired Driving</h3>
+<p>Delaware's driving-under-the-influence law is found in 21 Del.C. § 4177. It is one of the most serious traffic laws in the state, and its penalties go far beyond a typical ticket.</p>
+<h4>Per Se Standards</h4>
+<p>Under § 4177, a driver is guilty of DUI if, among other things, they have:</p>
+<ul>
+<li>A blood alcohol concentration of <strong>0.08 or more</strong>, or</li>
+<li>An <strong>illicit or recreational drug</strong> in their blood within <strong>four hours</strong> of driving.</li>
+</ul>
+<p>"Per se" means that meeting the standard itself is the offense. A driver at 0.08 or above does not have to be visibly drunk or weaving to be guilty. Impairment from alcohol or drugs below these levels can still lead to a DUI charge if it affects your ability to drive safely.</p>
+<h4>Criminal Penalties</h4>
+<table>
+<tr><th>Offense</th><th>Fine</th><th>Jail</th></tr>
+<tr><td>First offense</td><td>$500 to $1,500</td><td>Up to 12 months (fine, jail, or both)</td></tr>
+<tr><td>Second offense within 10 years</td><td>$750 to $2,500</td><td>60 days to 18 months</td></tr>
+<tr><td>Third offense</td><td>Class G felony</td><td>Felony sentencing applies</td></tr>
+</table>
+<p>In every DUI case, the court must also order an alcohol evaluation and a rehabilitation program (§ 4177D).</p>
+<h4>License Revocation</h4>
+<p>Under § 4177A, a DUI conviction brings license revocation:</p>
+<table>
+<tr><th>Situation</th><th>Revocation Period</th></tr>
+<tr><td>First offense</td><td>12 months</td></tr>
+<tr><td>BAC of 0.15 to 0.20</td><td>18 months</td></tr>
+<tr><td>BAC of 0.20 or higher, or refusal to take a test</td><td>24 months</td></tr>
+</table>
+<h4>Ignition Interlock</h4>
+<p>An ignition interlock device is a breath-testing device installed in a vehicle. The driver must blow into it, and the vehicle will not start if alcohol is detected. Delaware sets minimum interlock periods under § 4177C(d)(4):</p>
+<table>
+<tr><th>Situation</th><th>BAC under 0.15</th><th>BAC 0.15 to 0.20</th><th>BAC 0.20 or higher</th></tr>
+<tr><td>First Offender Election</td><td>4 months</td><td>Not eligible (BAC must be under 0.15)</td><td>Not eligible (BAC must be under 0.15)</td></tr>
+<tr><td>First offense</td><td>12 months</td><td>17 months</td><td>23 months</td></tr>
+<tr><td>Second offense</td><td>16 months</td><td>22 months</td><td>28 months</td></tr>
+</table>
+<h4>The First Offender Election</h4>
+<p>Delaware offers a First Offender Election under § 4177B for some first-time DUI defendants. To be eligible, the driver must have no prior offense, fewer than three moving violations in the past two years, no injury crash, and a BAC under 0.15. The election brings a one-year license revocation and a four-month minimum interlock period. It is not a free pass. It still carries significant consequences.</p>
+<h4>Reckless Driving Reduced From DUI</h4>
+<p>Sometimes a DUI charge is reduced to reckless driving. Under § 4175, when that happens, the court orders a rehabilitation course, and the offense is noted as alcohol- or drug-related on the driving record. Reckless driving carries 6 points under DMV Regulation 2208.</p>
+<h4>Drinking While Driving</h4>
+<p>Delaware law, § 4177J, prohibits drinking alcohol while driving. The fine is $25 to $200 for a first offense and $50 to $400 for a subsequent offense within one year. This is separate from DUI: a driver can violate § 4177J even with a BAC below 0.08.</p>
+<div class="warning"><strong>Delaware Warning:</strong> A third DUI offense in Delaware is a class G felony. Even a first offense can bring up to 12 months in jail, a fine of up to $1,500, a 12- to 24-month license revocation, a mandatory alcohol evaluation and rehabilitation program, and a required ignition interlock.</div>
+
+<h3>Implied Consent and Under-21 Drivers</h3>
+<h4>Implied Consent</h4>
+<p>Under Delaware's implied consent law, 21 Del.C. § 2740, anyone who drives or is in physical control of a vehicle in Delaware is deemed to have consented to breath, blood, or urine testing. Refusing a test does not avoid consequences. It brings its own license revocation:</p>
+<table>
+<tr><th>Refusal in a DUI (§ 4177) Case</th><th>Revocation (§ 2742)</th></tr>
+<tr><td>No prior offense</td><td>1 year</td></tr>
+<tr><td>One prior offense</td><td>18 months</td></tr>
+<tr><td>Two or more prior offenses</td><td>24 months</td></tr>
+</table>
+<h4>Drivers Under 21: § 4177L</h4>
+<p>Delaware sets a much stricter standard for drivers under 21. Section 4177L applies to anyone under the age of 21 who drives after drinking. A BAC of 0.02 or more is per se evidence that the person consumed alcohol. That is a level that can be reached with very little alcohol.</p>
+<ul>
+<li>First offense: 2-month license revocation.</li>
+<li>Subsequent offense: 6 to 12 months revocation.</li>
+<li>Refusal to test in a § 4177L case: 2, 6, or 12 months revocation.</li>
+</ul>
+<p>Under-21 drivers can also be charged under the regular DUI law, § 4177, if their BAC is 0.08 or higher or they are otherwise impaired.</p>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Blood alcohol concentration (BAC)</dt><dd>The amount of alcohol in a person's blood, used to measure intoxication.</dd>
+<dt>Per se</dt><dd>A legal standard under which meeting a set level, such as 0.08 BAC, is itself the offense.</dd>
+<dt>Implied consent</dt><dd>The rule under 21 Del.C. § 2740 that anyone who drives or is in physical control of a vehicle in Delaware is deemed to consent to chemical testing.</dd>
+<dt>Ignition interlock</dt><dd>A breath-testing device that prevents a vehicle from starting if it detects alcohol.</dd>
+<dt>First Offender Election</dt><dd>A Delaware option under § 4177B for eligible first-time DUI defendants that brings a 1-year revocation and a 4-month minimum interlock period.</dd>
+<dt>Zero tolerance (§ 4177L)</dt><dd>Delaware's under-21 standard, under which a BAC of 0.02 or more is per se evidence of drinking.</dd>
+</dl></div>
+
+<div class="scenario"><h4>Scenario: "I Only Had Two"</h4><p>A driver we'll call Derek has two large glasses of wine at a dinner party over about an hour and a half. He feels relaxed but not drunk and decides he is fine to drive the 15 minutes home.</p><details><summary>What should happen here?</summary><p>Derek cannot reliably judge his BAC by how he feels, and large glasses may each contain more than one standard drink. Alcohol affects judgment first, which is exactly the skill he is using to decide he is fine. If his BAC is 0.08 or higher, he is guilty of DUI under § 4177 whether or not he feels impaired, and he faces fines of $500 to $1,500, possible jail, a 12-month or longer license revocation, mandatory evaluation and rehabilitation, and an ignition interlock. The safe choice is to plan ahead: use a designated driver, a rideshare, a taxi, or stay where he is.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think about the next event you will attend where alcohol may be served. What is your plan for getting home, and who could you call if that plan falls through?</label><textarea></textarea></div>
+
+<h3>The Real Cost of One Bad Decision</h3>
+<p>The penalties in the tables above are only part of the cost of impaired driving. Consider what a single DUI arrest can set in motion. A license revocation of a year or more can make it hard to get to work, take children to school, or keep medical appointments. An ignition interlock must be installed and used for months. The court-ordered evaluation and rehabilitation program takes time and money. Insurance companies review driving records, and a DUI conviction can make coverage far more expensive or harder to find. Some jobs that involve driving may be lost.</p>
+<p>The cost climbs even higher when someone is hurt. Under 21 Del.C. § 4176A, operating a vehicle in a way that causes the death of another person is an unclassified misdemeanor punishable by a fine of up to $1,150 and up to 30 months in prison for a first offense, and it carries 6 points. Under Delaware's vulnerable user law, § 4176E, causing serious physical injury to a pedestrian, cyclist, motorcyclist, highway worker, or other vulnerable road user while violating Chapter 41 brings a $550 fine, a suspension of up to one year, a traffic safety course, and 10 to 100 hours of community service. A DUI crash can also bring far more serious criminal charges and civil lawsuits. None of these consequences can undo the harm to the people involved, or to the driver who has to live with it.</p>
+<div class="myth"><p><strong>Myth:</strong> If I take back roads and drive slowly, I can get home safely after a few drinks.</p><p><strong>Fact:</strong> Back roads often have curves, no shoulders, poor lighting, and deer, all of which demand sharp judgment and quick reactions. Driving well below the speed limit is itself one of the warning signs of impairment described later in this module. Impairment travels with you on every road.</p></div>
+
+<h3>Planning Ahead: Never Drive Impaired</h3>
+<p>The only sure way to avoid an impaired-driving crash or arrest is to separate drinking or drug use from driving completely. That takes planning before the first drink, because impaired judgment makes good decisions harder later.</p>
+<ul>
+<li><strong>Choose a sober designated driver</strong> before you go out, and make sure that person truly stays sober.</li>
+<li><strong>Use a rideshare, taxi, or public transportation.</strong> Save the numbers or apps in your phone ahead of time.</li>
+<li><strong>Stay overnight</strong> if you are at a friend's or family member's home.</li>
+<li><strong>Be a responsible host.</strong> Offer food and non-alcoholic drinks, stop serving alcohol well before the event ends, and help guests who have been drinking find a safe way home.</li>
+<li><strong>Speak up for friends.</strong> If someone you know is about to drive impaired, offer a ride, call a ride for them, or take their keys. An awkward conversation is far better than a funeral.</li>
+<li><strong>Never ride with an impaired driver.</strong> Find another way home.</li>
+</ul>
+<div class="highlight"><strong>Plan Before You Go:</strong> The time to decide how you will get home is before you start drinking, while your judgment is still clear.</div>
+
+<h3>6.1.3.2 Techniques When Encountering a Potentially Impaired Driver</h3>
+<p>Even if you never drive impaired, you share the road with people who do. Impaired drivers can be on the road at any hour, so stay alert day and night. Learning to recognize the warning signs, and knowing what to do, can save your life.</p>
+<h4>Warning Signs of a Potentially Impaired Driver</h4>
+<ul>
+<li>Weaving, swerving, drifting, or straddling the center line or lane markings</li>
+<li>Making extremely wide turns or turning abruptly or illegally</li>
+<li>Nearly striking objects, curbs, or other vehicles</li>
+<li>Driving well below or well above the speed limit, or speeding up and slowing down for no reason</li>
+<li>Stopping without cause or braking erratically</li>
+<li>Responding slowly to traffic signals, or not at all</li>
+<li>Driving at night without headlights</li>
+<li>Following too closely</li>
+<li>Driving on the wrong side of the road or the wrong way on a one-way street or ramp</li>
+</ul>
+<p>Any of these could have another cause, such as a distracted, drowsy, or ill driver. You do not need to know why a driver is behaving dangerously in order to protect yourself. Treat any driver showing these signs as a serious hazard.</p>
+<h4>What to Do</h4>
+<ol>
+<li><strong>Create distance.</strong> If the driver is ahead of you, slow down and increase your following distance well beyond the usual 3 to 4 seconds. If you can, turn onto another road.</li>
+<li><strong>Do not try to pass</strong> unless it is clearly safe and you can get well away quickly. An impaired driver may swerve into your lane as you go by.</li>
+<li><strong>If the driver is behind you,</strong> move to the right when it is safe and let them pass. Do not speed up or brake suddenly to "teach them a lesson."</li>
+<li><strong>If the driver is coming toward you,</strong> slow down, move as far right as you safely can, and be prepared to leave the road onto a shoulder if necessary. Do not swerve left into the oncoming lane.</li>
+<li><strong>Never try to stop or confront the driver.</strong> Do not follow closely, box them in, or try to force them off the road. That puts you at risk and is a job for law enforcement.</li>
+<li><strong>Note details from a safe distance.</strong> Remember the vehicle's description, license plate if you can see it safely, location, and direction of travel.</li>
+<li><strong>Call 911 when it is safe.</strong> Pull over to a safe place first, or have a passenger make the call. Delaware's hand-held device law includes an exception for reporting emergencies or crimes, but your first job is still to drive safely. Using a hands-free option or a passenger is the best choice.</li>
+</ol>
+<div class="warning"><strong>Stay Out of It:</strong> Do not attempt to stop, block, follow closely, or confront a suspected impaired driver. Your role is to protect yourself and report what you see to 911 when it is safe. Officers are trained to make the stop.</div>
+<h4>Wrong-Way Drivers</h4>
+<p>A driver going the wrong way on a divided highway or ramp may be impaired, confused, or lost, and a wrong-way crash is a head-on crash. If you see headlights coming toward you in your lanes, slow down, move to the right as far as safely possible, and be ready to use the shoulder. Call 911 as soon as you can do so safely.</p>
+<h4>When You Are Driving at High-Risk Times</h4>
+<ul>
+<li>Wear your seat belt on every trip. In 2024, more than half of the occupants killed in Delaware crashes were unbelted (IIHS).</li>
+<li>Pause and look both ways before entering an intersection on a green light, especially late at night.</li>
+<li>Increase your following distance and scan farther ahead for erratic movement.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Weaving Car</h4><p>A driver we'll call Nia is driving home on a two-lane road at 11 p.m. The car ahead of her drifts onto the shoulder, jerks back, and then crosses the center line before returning to its lane. It is traveling well below the speed limit, then suddenly speeds up.</p><details><summary>What should happen here?</summary><p>The car is showing several warning signs of an impaired driver: weaving, crossing the center line, and inconsistent speed. Nia should drop back and leave a lot of space, well beyond 3 to 4 seconds. She should not try to pass on a two-lane road with an unpredictable driver. When it is safe, she should pull over to a safe spot, or use hands-free calling, and call 911 with the car's description, location, and direction. She should never follow closely, flash her lights repeatedly, or try to stop the driver herself.</p></details></div>
+
+<div class="scenario"><h4>Scenario: The Friend With the Keys</h4><p>A driver we'll call Chris is leaving a cookout when his friend Pat, who has been drinking all afternoon, picks up his keys and says he is fine to drive the short distance home.</p><details><summary>What should happen here?</summary><p>Chris should step in calmly. He can offer to drive Pat home if Chris is sober, call a rideshare or taxi for him, or suggest Pat stay over. If necessary, he can enlist other friends or the host to help hold onto the keys. Pat's judgment is already affected by alcohol, so his claim that he is fine is not reliable. If Pat drives off anyway, Chris should call 911 with a description of the vehicle and its direction of travel.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Have you ever seen a driver you thought might be impaired? Looking back, what did you do, and what would you do now?</label><textarea></textarea></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Alcohol and many legal and illegal drugs impair judgment, reaction time, vision, coordination, and divided attention; judgment is often affected first.</li>
+<li>Only time lowers BAC; coffee, cold showers, and fresh air do not.</li>
+<li>A prescription or legal status does not make it safe or lawful to drive impaired; read labels and ask your doctor or pharmacist.</li>
+<li>Under 21 Del.C. § 4177, a BAC of 0.08 or more, or an illicit or recreational drug in the blood within four hours of driving, is DUI.</li>
+<li>A first DUI brings a $500 to $1,500 fine, up to 12 months in jail, or both, plus a 12- to 24-month revocation, a mandatory evaluation and rehabilitation program, and an ignition interlock; a third offense is a class G felony.</li>
+<li>Under implied consent (§ 2740), refusing a test in a DUI case brings revocation of 1 year, 18 months, or 24 months depending on prior offenses.</li>
+<li>For drivers under 21 (§ 4177L), 0.02 BAC is per se evidence of drinking; a first offense brings a 2-month revocation.</li>
+<li>In 2024, an estimated 33% of Delaware drivers killed had a BAC of 0.08 or higher (IIHS), and in 2025, 21 Delaware traffic deaths were DUI-related (DelDOT).</li>
+<li>When you see a potentially impaired driver: create distance, do not pass unless clearly safe, move right for oncoming or following drivers, never confront them, and call 911 when it is safe.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 5: Work Zones and Other Road Hazards.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 4 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 5.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-basic-m4-remaining', DONE='de-basic-m4-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 4. Return to your course and continue to Module 5.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

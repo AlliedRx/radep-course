@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 2: Interaction with Law Enforcement During Traffic Stops | DMV Courses – Delaware Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Basic Defensive Driving Course &middot; Module 2 of 12 &middot; 30 minutes</span>Module 2: Interaction with Law Enforcement During Traffic Stops</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.1, 6.1.1.1, 6.1.1.2, 6.1.1.3, 6.1.1.4, 6.1.1.5 -->
+<p>Almost every driver will be pulled over at some point. For many people, the sight of flashing lights in the rearview mirror brings a rush of stress: a racing heart, worry about a ticket, and uncertainty about what to say or do. For the officer walking up to your car, the stop carries its own uncertainty, because the officer does not know who is inside or what will happen next. A traffic stop goes best when both people understand the process, respect each other's rights and safety, and stay calm. This module explains your rights during a traffic stop, the Delaware laws on questioning, detention, and proof of identity, the role of a law enforcement officer, what to do and expect when you are stopped, and how to compliment or complain about an officer afterward. Delaware considers this topic so important that your final exam must include at least two questions about it.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Describe your constitutional and other legal rights during a Delaware traffic stop, including how vehicle searches may occur.</li>
+<li>Explain Delaware law on questioning and detention (11 Del.C. § 1902), proof of identity, and the consequences of failing to comply.</li>
+<li>Describe the role of a law enforcement officer in general and the procedures officers follow during a traffic stop.</li>
+<li>List the steps Delaware DMV recommends for drivers and passengers when stopped by law enforcement, and what to expect during the stop.</li>
+<li>Explain how and where to file a compliment on behalf of, or a complaint against, a law enforcement officer.</li>
+</ul></div>
+
+<h3>Why Delaware Requires This Lesson</h3>
+<p>In 2018, the Delaware General Assembly passed Senate Bill 168, titled "Driver Education on Traffic Stop Procedures." It was signed on July 23, 2018, and took effect August 1, 2019. The law added a requirement to 21 Del.C. § 2713(e) that the DMV license exam test knowledge of traffic stops, including rights during searches, detention, and questioning, how to interact with officers, and how to file a complaint or compliment, with at least two questions on the topic. It also directed the Department of Education, the DMV, the Department of Justice, and the Office of Defense Services to produce educational material on traffic stops. The bill's synopsis explains that DMV-approved defensive driving courses must teach traffic stops and test them with at least two questions.</p>
+<p>The DMV published a traffic stop resource page in response, with guides in English and Spanish, a law enforcement support statement, and videos. The guidance in this module follows that DMV material and the Delaware laws it cites.</p>
+<div class="highlight"><strong>The Goal:</strong> A safe traffic stop protects everyone involved. Knowing your rights and knowing what officers need to do their job safely are not opposites. Both make the encounter calmer, shorter, and safer.</div>
+<div class="warning"><strong>Not Legal Advice:</strong> This module provides general educational information about Delaware traffic stops. It is not legal advice. Laws are applied to specific facts, and every situation is different. If you have questions about your own situation, such as a ticket, a search, or an arrest, consult a licensed attorney.</div>
+
+<h3>6.1.1.1 Your Constitutional and Other Legal Rights During a Traffic Stop</h3>
+<p>A traffic stop is a legal encounter. Both the driver and the officer have rights and responsibilities. The United States Constitution protects people against unreasonable searches and seizures. A traffic stop is a temporary seizure, which is why an officer needs a legal reason to make one, such as observing a traffic violation. The Constitution also protects you from being forced to be a witness against yourself. At the same time, the law requires drivers to cooperate in specific ways, such as producing a license, registration, and proof of insurance. Understanding where your rights begin and end helps you protect them without creating conflict.</p>
+<h4>Rights Identified in Delaware DMV Guidance</h4>
+<ul>
+<li><strong>You may ask for the officer's name and agency.</strong> You are entitled to know who stopped you and which department the officer works for. The officer's name and agency also appear on any ticket you receive.</li>
+<li><strong>You may ask questions if you do not understand something.</strong> DMV guidance encourages you to ask politely if you are unsure what the officer is asking or why.</li>
+<li><strong>Vehicle searches are limited.</strong> According to DMV guidance, a vehicle may be searched in three situations: with your consent, when the officer has probable cause, or as an inventory search of a vehicle that is being towed.</li>
+<li><strong>A detention is not an arrest.</strong> A detention is temporary and may not exceed two hours. It is not recorded as an arrest.</li>
+<li><strong>Accepting a ticket is not an admission of guilt.</strong> You have the right to contest a ticket. The place to do that is in court, not at the roadside.</li>
+</ul>
+<h4>Searches and Consent</h4>
+<p>Consent is one of the three bases for a vehicle search. If an officer asks, "Do you mind if I look in your car?" the officer is asking for consent. How you respond is your decision. If you choose not to consent, say so calmly and clearly, and do not physically resist. Physically interfering with an officer is never the right response, even if you believe a search is improper. If an officer has probable cause or is conducting an inventory search of a towed vehicle, the search may go forward without your consent. If you believe a search violated your rights, the proper place to raise it is in court, with an attorney's help.</p>
+<h4>What Is Not a Right at the Roadside</h4>
+<p>Some drivers believe they can refuse to say anything until a lawyer arrives. DMV guidance is clear: there is no right to an attorney during roadside questioning. Your rights are protected afterward through the court process, where you can be represented. Passengers also have obligations. DMV guidance states that passengers must give their information or get out of the vehicle if the officer asks.</p>
+
+<div class="myth"><p><strong>Myth:</strong> If I sign or accept a traffic ticket, I am admitting I am guilty.</p><p><strong>Fact:</strong> Delaware DMV guidance states that accepting a ticket is not an admission of guilt. If you disagree with the ticket, you contest it in court, not at the roadside.</p></div>
+
+<div class="scenario"><h4>Scenario: The Request to Look Inside</h4><p>A driver we'll call Andre is stopped for a broken taillight. After checking his license, the officer asks whether Andre would mind if the officer looked through the car. Andre feels nervous and is unsure whether he has to agree.</p><details><summary>What should happen here?</summary><p>The officer is asking for consent, which is one of the three bases for a vehicle search under DMV guidance. Andre may decide whether to give it. If he chooses not to, he should say so calmly and politely, keep his hands visible, and not argue or physically resist. If the officer has probable cause, a search may go forward anyway, and Andre should not interfere. If Andre believes his rights were violated, he can raise that later in court, where he may want the help of an attorney.</p></details></div>
+
+<h3>6.1.1.2 Laws on Questioning, Detention, Proof of Identity, and Failure to Comply</h3>
+<h4>Questioning and Detaining: 11 Del.C. § 1902</h4>
+<p>Delaware's main law on questioning and detaining people is found in Title 11, section 1902 of the Delaware Code. It has three key parts:</p>
+<ol>
+<li><strong>Stop and questioning (subsection a).</strong> A peace officer may stop a person the officer reasonably suspects of committing, having committed, or being about to commit a crime, "and may demand the person's name, address, business abroad and destination."</li>
+<li><strong>Further detention (subsection b).</strong> A person "who fails to give identification or explain the person's actions to the satisfaction of the officer may be detained and further questioned and investigated."</li>
+<li><strong>Time limit (subsection c).</strong> "The total period of detention provided for by this section shall not exceed 2 hours. The detention is not an arrest and shall not be recorded as an arrest in any official record."</li>
+</ol>
+<p>In plain terms, Delaware law allows an officer who has reasonable suspicion to ask who you are and what you are doing. If you refuse to identify yourself or explain your actions, the officer may hold you longer to investigate, up to a total of two hours. That detention is not an arrest. If the officer develops probable cause during that time, an arrest is a separate legal step.</p>
+<h4>Proof of Identity and Required Documents</h4>
+<p>When you are stopped while driving, DMV guidance lists three documents you should be ready to produce:</p>
+<table>
+<tr><th>Document</th><th>Why It Is Needed</th></tr>
+<tr><td>Driver license</td><td>Proves your identity and that you are licensed to drive</td></tr>
+<tr><td>Proof of insurance</td><td>Shows the vehicle is insured</td></tr>
+<tr><td>Vehicle registration</td><td>Shows the vehicle is properly registered</td></tr>
+</table>
+<p>Keep these documents together in a place you can reach easily, such as a visor holder or the glove compartment. Knowing exactly where they are will make the stop shorter and calmer.</p>
+<h4>Passengers</h4>
+<p>Passengers are not driving, but they are still part of the stop. According to DMV guidance, passengers must give their information or get out of the vehicle if the officer asks. Passengers should stay calm, stay in the vehicle unless directed otherwise, and keep their hands visible.</p>
+<h4>Consequences for Failure to Comply</h4>
+<p>Refusing to cooperate rarely ends a stop sooner. Under Delaware law, failure to comply can bring real consequences:</p>
+<ul>
+<li><strong>Longer detention.</strong> Under § 1902(b), a person who fails to give identification or explain their actions may be detained and further questioned and investigated, for up to two hours in total.</li>
+<li><strong>Chemical testing.</strong> Under Delaware's implied consent law, 21 Del.C. § 2740, anyone who drives or is in physical control of a vehicle is deemed to have consented to breath, blood, or urine testing. Refusing a test in a driving-under-the-influence case brings license revocation of 1 year with no prior offense, 18 months with one prior, and 24 months with two or more priors (§ 2742). You will study impaired driving in detail in Module 4.</li>
+<li><strong>Escalation.</strong> Arguing, refusing documents, or physically resisting can turn a routine stop into a dangerous one and can lead to additional charges.</li>
+</ul>
+<div class="warning"><strong>Delaware Implied Consent:</strong> By driving in Delaware, you are deemed to consent to chemical testing. Refusing a test is not a way to avoid consequences. In a DUI case, refusal alone carries license revocation of 1 to 2 years depending on prior offenses.</div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Traffic stop</dt><dd>A temporary detention of a driver and vehicle by a law enforcement officer, usually because of a suspected traffic violation.</dd>
+<dt>Reasonable suspicion</dt><dd>The standard under 11 Del.C. § 1902(a) that allows an officer to stop and question a person suspected of a crime.</dd>
+<dt>Probable cause</dt><dd>A higher standard of evidence; one of the three bases for searching a vehicle under DMV guidance.</dd>
+<dt>Detention</dt><dd>A temporary hold for questioning and investigation that, under § 1902, may not exceed two hours and is not an arrest.</dd>
+<dt>Consent search</dt><dd>A search that takes place because the person in control of the vehicle agreed to it.</dd>
+<dt>Inventory search</dt><dd>A search of a vehicle that is being towed, used to record its contents.</dd>
+<dt>Implied consent</dt><dd>The Delaware rule (21 Del.C. § 2740) that drivers are deemed to consent to breath, blood, or urine testing.</dd>
+</dl></div>
+
+<h3>6.1.1.3 The Role and Procedures of a Law Enforcement Officer</h3>
+<h4>The Officer's Role in General</h4>
+<p>Law enforcement officers in Delaware work for state, county, and municipal agencies, such as the Delaware State Police and city and town police departments. Their role is to protect public safety, enforce the law, investigate crimes and crashes, and help people in need. On the road, that includes enforcing traffic laws, responding to crashes, assisting stranded motorists, directing traffic, and removing impaired and dangerous drivers from the road.</p>
+<p>Traffic enforcement is not about collecting money. Speed, impairment, unbelted occupants, and distraction are leading factors in Delaware's traffic deaths, as you saw in Module 1. When an officer stops a speeding or weaving driver, the stop may prevent the next crash.</p>
+<h4>Why Traffic Stops Carry Risk for Officers</h4>
+<p>From the officer's point of view, every traffic stop involves unknowns. The officer usually cannot see clearly into the car, does not know who is inside, and does not know whether anyone in the vehicle is armed. The officer is also standing near moving traffic. Many of the steps officers follow, and many of the steps drivers are asked to take, are designed to reduce these risks.</p>
+<h4>Common Procedures During a Traffic Stop</h4>
+<ol>
+<li><strong>Signaling the stop.</strong> The officer activates emergency lights, and sometimes a siren, to direct you to pull over.</li>
+<li><strong>Positioning.</strong> The officer parks behind your vehicle, often offset, to create a protected space from passing traffic.</li>
+<li><strong>Checking the vehicle.</strong> Before approaching, the officer may check the license plate and radio the location to a dispatcher.</li>
+<li><strong>Approaching.</strong> The officer may approach from either side of your vehicle. At night, the officer may use a spotlight or flashlight so they can see inside.</li>
+<li><strong>Explaining the stop and requesting documents.</strong> The officer typically identifies themselves, explains the reason for the stop, and asks for your license, registration, and proof of insurance.</li>
+<li><strong>Returning to the patrol car.</strong> The officer may return to check your documents and driving record and to prepare a warning or a ticket.</li>
+<li><strong>Concluding the stop.</strong> The officer returns your documents, explains any ticket or warning, and tells you when you may leave.</li>
+</ol>
+<p>Officers may also ask you to step out of the car, call for another officer, or ask questions about where you are going. These are normal parts of many stops and do not by themselves mean you are under arrest.</p>
+<div class="highlight"><strong>Officer Safety Is Driver Safety:</strong> When an officer asks you to keep your hands visible, turn off the engine, or stay in the car, the purpose is to keep the encounter predictable. Predictable is safe for everyone, including you.</div>
+
+<div class="scenario"><h4>Scenario: The Second Patrol Car</h4><p>A driver we'll call Lena is stopped late at night on a rural road. While the first officer is checking her license, a second patrol car arrives and parks behind the first. Lena begins to worry that she is in serious trouble.</p><details><summary>What should happen here?</summary><p>A second officer often arrives as backup, especially at night or in isolated areas, for the safety of everyone at the scene. It does not necessarily mean Lena is suspected of anything serious. Lena should stay calm, keep her hands visible, remain in the vehicle unless told otherwise, and ask politely if she does not understand what is happening. She may ask each officer for their name and agency.</p></details></div>
+
+<h3>6.1.1.4 What to Do and Expect When Stopped by Law Enforcement</h3>
+<p>The Delaware DMV traffic stop guidance gives clear, practical steps for drivers. Following them helps the officer recognize quickly that you are cooperating, and it helps keep the stop short and safe.</p>
+<h4>Step-by-Step: When You See Emergency Lights Behind You</h4>
+<ol>
+<li><strong>Stay calm, signal, and pull over.</strong> Turn on your signal and pull to the side of the road as soon as it is safe. Avoid stopping on a bridge, in a curve, or in a spot with no shoulder if a safer spot is just ahead.</li>
+<li><strong>Turn off the ignition and radio.</strong> This lets you hear the officer and shows you are not about to drive away.</li>
+<li><strong>Turn on your interior lights at night.</strong> This lets the officer see inside your vehicle and reduces uncertainty.</li>
+<li><strong>Keep both hands on top of the steering wheel.</strong> Your hands are the first thing an officer looks for. Passengers should stay calm, stay in the vehicle, and keep their hands visible too.</li>
+<li><strong>Wait before reaching.</strong> Do not reach for your documents until the officer tells you to. If your documents are in the glove compartment, a bag, or under a seat, tell the officer where they are before you reach for them.</li>
+<li><strong>Tell the officer about any weapons.</strong> At first contact, inform the officer of any weapons in the vehicle. Do not reach for or touch them.</li>
+<li><strong>Stay in the vehicle unless told to get out.</strong> If you are asked to step out, stay away from traffic and keep your hands visible.</li>
+<li><strong>Ask politely if you do not understand.</strong> You may ask the officer's name and agency and ask questions about the reason for the stop.</li>
+<li><strong>Do not argue the ticket at the roadside.</strong> Accepting a ticket is not an admission of guilt. If you disagree, you can contest it in court.</li>
+</ol>
+<div class="highlight"><strong>Remember the Order:</strong> Hands visible first. Tell before you reach. Contest it in court, not on the shoulder.</div>
+<h4>What to Expect</h4>
+<p>Most traffic stops are short. The officer will usually tell you why you were stopped, ask for your documents, and return to the patrol car. You may wait several minutes. When the officer returns, you may receive a verbal warning, a written warning, or a ticket. The officer will explain what to do next, such as how to pay or how to appear in court. Then the officer will tell you that you may go. Before pulling away, check your mirrors, signal, and merge back into traffic carefully. Being stopped is stressful, so take a moment to settle yourself before you drive on.</p>
+<h4>When Things Feel Tense</h4>
+<p>If you feel the officer is being unfair, the roadside is not the place to resolve it. Stay calm and cooperative, remember the officer's name and agency, and note the time and location. Afterward, you can file a complaint, contest the ticket in court, or consult an attorney. These paths protect your rights far better than an argument on the side of a highway.</p>
+
+<div class="scenario"><h4>Scenario: Documents in the Glove Box</h4><p>A driver we'll call Sam is stopped for speeding. Sam's registration and insurance card are in the glove compartment, and there is a legally owned handgun in the center console. As the officer approaches, Sam starts to lean over to open the glove box.</p><details><summary>What should happen here?</summary><p>Sam should stop and keep both hands on the steering wheel. DMV guidance says not to reach for documents until the officer asks and to say where they are first. Sam should also tell the officer at first contact that there is a weapon in the center console, and should not reach toward it. A calm statement such as, "Officer, my registration is in the glove box, and I want you to know there is a handgun in the center console," followed by waiting for instructions, keeps everyone safe.</p></details></div>
+
+<div class="scenario"><h4>Scenario: The Talkative Passenger</h4><p>A driver we'll call Jordan is pulled over with a friend in the passenger seat. When the officer asks the passenger for identification, the friend says, "I'm not driving, so I don't have to tell you anything," and reaches into a backpack on the floor.</p><details><summary>What should happen here?</summary><p>DMV guidance states that passengers must give their information or get out of the vehicle if the officer asks, and that passengers should stay calm, stay in the vehicle, and keep their hands visible. Reaching into a bag without warning creates exactly the kind of uncertainty that makes stops dangerous. The passenger should keep their hands visible, provide their information, and tell the officer before reaching for anything.</p></details></div>
+
+<div class="myth"><p><strong>Myth:</strong> The best move is to jump out of the car and walk back to the officer to save time.</p><p><strong>Fact:</strong> DMV guidance says to stay in the vehicle unless the officer tells you to get out. Leaving the car without being asked puts you near traffic and may be seen as a threat.</p></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Where are your license, registration, and proof of insurance right now? What would you need to change so you could tell an officer exactly where they are?</label><textarea></textarea></div>
+
+<h3>6.1.1.5 How and Where to File a Compliment or a Complaint About an Officer</h3>
+<p>Most officers do their jobs professionally, and many go well beyond what is required. Just as you have the right to raise concerns about an officer's conduct, you can also recognize an officer who did excellent work. Both kinds of feedback help law enforcement agencies maintain standards and recognize good service.</p>
+<h4>Where to File</h4>
+<p>Compliments and complaints go to the <strong>officer's own agency</strong>, the department the officer works for, such as the Delaware State Police or a specific city or town police department. Each agency sets its own method for receiving compliments and complaints. Contact that agency and use the method it specifies.</p>
+<h4>How to File</h4>
+<ol>
+<li><strong>Identify the officer and agency.</strong> The officer's name and agency appear on your ticket. If you did not receive a ticket, you may ask the officer for their name and agency during the stop.</li>
+<li><strong>Document what happened.</strong> As soon as you can, write down the date, time, and location of the stop, what was said and done, and the names of any witnesses. Describe the officer's behavior factually.</li>
+<li><strong>Contact the agency.</strong> Reach out to the officer's agency and follow its process for compliments or complaints.</li>
+<li><strong>Report promptly.</strong> File your compliment or complaint as soon as possible while the details are fresh.</li>
+</ol>
+<div class="highlight"><strong>A Complaint Is Not a Court Case:</strong> Filing a complaint about an officer's conduct is separate from contesting a ticket. If you believe a ticket was wrong, you contest it in court. A complaint addresses how the officer behaved. You may do one, both, or neither.</div>
+<h4>Writing an Effective Compliment or Complaint</h4>
+<ul>
+<li>Stick to facts: what you saw and heard, not guesses about the officer's motives.</li>
+<li>Be specific: "The officer explained the ticket clearly and helped me merge back into traffic safely" is more useful than "The officer was nice."</li>
+<li>Stay respectful, even if you are upset. A calm, clear account is taken more seriously.</li>
+<li>Keep copies of anything you submit and any response you receive.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: Saying Thank You</h4><p>A driver we'll call Rosa has a tire blow out on a highway at night. An officer stops behind her, sets out flares, and waits until a tow truck arrives. Rosa wants to thank the officer but did not get a ticket and does not know the officer's name.</p><details><summary>What should happen here?</summary><p>Rosa could have asked the officer for their name and agency at the scene. Even without the name, she should contact the agency as soon as possible and follow its process for compliments, giving the date, time, location, and details such as the patrol car and the help she received. Prompt, specific information makes it easier for the agency to identify the officer and recognize the good work.</p></details></div>
+
+<h3>Putting It All Together</h3>
+<p>A traffic stop has a predictable structure, and you can prepare for it before it ever happens. Keep your documents organized. Know the steps: signal, pull over safely, engine and radio off, interior light on at night, hands on the wheel, tell before you reach, disclose weapons at first contact, stay in the vehicle unless asked to step out. Know your rights: you may ask for the officer's name and agency, searches occur only by consent, probable cause, or inventory of a towed vehicle, a detention is not an arrest and cannot exceed two hours, and a ticket is contested in court. Know the limits: there is no right to an attorney during roadside questioning, passengers must give their information if asked, and refusing identification or chemical testing has consequences. And know what comes after: compliments and complaints go to the officer's agency, and disputes about the ticket go to court.</p>
+<p>If you remember just one idea, let it be this: the roadside is for safety, and the courthouse is for disagreements.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think about the last time you saw emergency lights behind you, or imagine it. Which of the DMV's recommended steps would be hardest for you to follow, and how could you prepare for it?</label><textarea></textarea></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Delaware's SB 168, effective August 1, 2019, requires driver education on traffic stop procedures, and DMV-approved defensive driving courses must test the topic with at least two questions.</li>
+<li>You may ask an officer's name and agency, and you may ask questions if you do not understand something.</li>
+<li>According to DMV guidance, a vehicle may be searched with consent, with probable cause, or as an inventory search of a towed vehicle.</li>
+<li>Under 11 Del.C. § 1902, an officer with reasonable suspicion may demand your name, address, business, and destination; failing to identify yourself may lead to further detention, which may not exceed two hours and is not an arrest.</li>
+<li>There is no right to an attorney during roadside questioning, and passengers must give their information or get out of the vehicle if asked.</li>
+<li>Be ready to produce your driver license, proof of insurance, and vehicle registration.</li>
+<li>Under implied consent (21 Del.C. § 2740), refusing a chemical test in a DUI case brings license revocation of 1 year to 24 months depending on prior offenses.</li>
+<li>When stopped: signal and pull over safely, turn off the engine and radio, turn on interior lights at night, keep hands on the wheel, tell before you reach, disclose weapons at first contact, and stay in the vehicle unless told to get out.</li>
+<li>Accepting a ticket is not an admission of guilt; contest it in court, not at the roadside.</li>
+<li>File compliments and complaints with the officer's agency using its specified method, document what happened, and report promptly.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 3: Traffic Laws and Patterns.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 2 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 3.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-basic-m2-remaining', DONE='de-basic-m2-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 2. Return to your course and continue to Module 3.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

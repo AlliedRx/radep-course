@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 5: Work Zones and Other Road Hazards | DMV Courses – Delaware Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Basic Defensive Driving Course &middot; Module 5 of 12 &middot; 30 minutes</span>Module 5: Work Zones and Other Road Hazards</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.4, 6.1.4.1, 6.1.4.2, 6.1.4.3, 6.1.15, 6.1.15.1, 6.1.15.2, 6.1.15.3 -->
+<p>Every Delaware driver eventually meets the orange barrels. Road crews rebuild bridges on I-95, repave state routes, replace drainage pipes on county roads, and repair utility lines along neighborhood streets. In each of those places, people are working on foot a few feet from moving traffic, and the road itself may be narrower, rougher, or shaped differently than you expect. Work zones are only one kind of road hazard, though. Vehicles stopped on the shoulder, lanes that need to be changed in heavy traffic, and situations that call for a sudden drop in speed all test the same skills: seeing early, planning ahead, and controlling your speed. This module covers Delaware's work zone rules and the defensive techniques that keep you, the workers, and the people around you safe, and then applies those same skills to other everyday road hazards.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain how Delaware defines a work zone, how far it extends, and why fines are at least doubled for many violations inside one.</li>
+<li>Describe safe speed choices in an active work zone, including how Delaware's work zone speed enforcement operates.</li>
+<li>Follow flagger instructions correctly and know what to do when a flagger's signal conflicts with a sign or signal.</li>
+<li>Handle shifting, merging, and narrowing lanes smoothly and predictably.</li>
+<li>Respond safely to vehicles stopped on the side of the road, change lanes only when it is safe, and reduce speed early and smoothly when hazards appear.</li>
+</ul></div>
+
+<h3>Why Work Zones Demand Extra Care</h3>
+<p>A work zone changes almost everything a driver relies on. Your normal lane may be closed. Lane lines may be ground off or replaced with temporary markings that are hard to see at night or in rain. The shoulder may be full of equipment, trucks may be entering and leaving at low speed, and the pavement may have drop-offs, steel plates, or milled sections. Above all, people are working on foot close to the travel lane, often with their backs to traffic.</p>
+<p>Workers have no steel frame around them. A driver who drifts a few feet out of the lane, or looks at a phone for two seconds, can strike a person who had no chance to move.</p>
+<div class="highlight"><strong>Delaware data (2024):</strong> As of October 18, 2024, the State of Delaware reported 54 incidents that year of vehicles striking DelDOT equipment or personnel, which the State called "a near-record number." Eleven of those incidents caused injuries to DelDOT employees. (Source: State of Delaware news release, October 18, 2024.)</div>
+<p>Behind every one of those incidents is a driver who was going too fast, following too closely, not paying attention, or forcing a last-second lane change. Each of those mistakes is preventable.</p>
+
+<h3>Topic 6.1.4.1: Speed Requirements Through an Active Work Zone</h3>
+<h4>Where a work zone begins and ends</h4>
+<p>Delaware law does not leave you guessing about where a work zone starts. Under 21 Del.C. §4105(f)(2), a highway construction or maintenance area runs from the first warning device to the last device showing that the restrictions are removed. In practice, that means the zone starts at the first sign such as "Road Work Ahead," and it ends at the sign or device telling you the work area is over, such as "End Road Work." Everything in between counts, even if you do not see workers or equipment at that moment.</p>
+<p>Missing or improper signs are no defense (§4105(f)(3)). If traffic-control devices indicate a work zone, you are expected to see them and adjust.</p>
+<h4>Fines are at least doubled</h4>
+<p>Under §4105(f)(1), a driver who commits certain violations "within any highway construction or maintenance area indicated by traffic-control devices" "shall be fined not less than double the enumerated amount for a first offense." The covered violations include obeying traffic-control devices (§4107), basic speed rules (§4168), speed limits (§4169), stop and yield signs (§4164), reckless driving (§4175), careless or inattentive driving (§4176), DUI (§4177), and others. The doubling applies to the fine. It does not shorten any jail term or reduce any points that would apply anyway.</p>
+<div class="warning"><strong>Delaware law:</strong> Inside a highway construction or maintenance area marked by traffic-control devices, fines for speeding and many other violations are not less than double the normal first-offense amount (21 Del.C. §4105(f)). The zone runs from the first warning device to the last device showing restrictions are removed, and missing or improper signs are no defense.</div>
+<h4>Electronic speed enforcement</h4>
+<p>Delaware also uses electronic speed enforcement in work zones. Under 21 Del.C. §4170A, this enforcement is handled by the Delaware State Police, and a violation requires traveling 11 or more miles per hour over the speed limit. Do not treat that number as a "free" cushion. The 11 mph figure is the trigger for the electronic system only. An officer can still stop you for any speed over the limit, and the basic speed rule always applies.</p>
+<h4>The limit is the most you may drive, not the target</h4>
+<p>Delaware's basic speed rule, §4168(a), says: "No person shall drive a vehicle on a highway at a speed greater than is reasonable and prudent under the conditions." This rule matters more in a work zone than almost anywhere else. A reduced work zone limit is set for normal conditions in that zone. If there are workers right at the edge of your lane, if the lanes are narrow and lined with concrete barriers, if a dump truck is backing out, or if it is raining at night, the reasonable and prudent speed may be well below the posted number.</p>
+<p>Here is why that matters in physical terms. At 60 mph you travel about 88 feet every second. Typical perception-reaction time is about 1.5 seconds, so before your foot even reaches the brake, you have covered roughly 132 feet. At 45 mph, you travel about 66 feet per second and cover about 99 feet in that same reaction time. Braking distance rises even faster than speed: when speed doubles, braking distance roughly quadruples. Cutting your speed through a work zone does not just help a little. It sharply shortens the distance you need to stop for a worker who steps out or a vehicle that stops suddenly.</p>
+<table>
+<tr><th>Speed</th><th>Approx. feet per second</th><th>Distance covered during a 1.5-second reaction</th></tr>
+<tr><td>30 mph</td><td>44 ft</td><td>about 66 ft</td></tr>
+<tr><td>45 mph</td><td>66 ft</td><td>about 99 ft</td></tr>
+<tr><td>55 mph</td><td>81 ft</td><td>about 121 ft</td></tr>
+<tr><td>60 mph</td><td>88 ft</td><td>about 132 ft</td></tr>
+</table>
+<h4>Active work zone techniques</h4>
+<ul>
+<li><strong>Slow at the first sign.</strong> Ease off the accelerator as soon as you see "Road Work Ahead." Smooth, early slowing prevents the chain-reaction braking that causes rear-end crashes.</li>
+<li><strong>Increase following distance.</strong> In good conditions, keep at least 3 to 4 seconds behind the vehicle ahead. In a work zone, add more. Traffic ahead may stop with little warning.</li>
+<li><strong>Put the phone away and turn down distractions.</strong> A work zone is a place for both hands and full attention.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Empty Work Zone</h4><p>Consider a driver we'll call Marcus, heading home late on a weeknight. He passes a "Road Work Ahead" sign and a reduced speed limit sign, but he sees no workers and no equipment, just cones along the right shoulder. He decides the reduced limit "doesn't really apply" when nobody is working and keeps going at his normal speed. A mile later, around a curve, a crew is setting up lights for overnight paving, and a pickup truck is pulling out of the closed lane.</p><details><summary>What should happen here?</summary><p>Marcus should have slowed at the first warning sign. Under §4105(f)(2), the work zone runs from the first warning device to the last device showing restrictions are removed, whether or not workers are visible at a given moment. Crews often start, move, or finish work at night, and equipment can enter traffic without warning. Driving at the reduced limit and leaving extra following distance would have given Marcus the time and space to react to the pickup and the workers ahead. If he had been cited for speeding inside the zone, the fine would have been at least double the normal first-offense amount.</p></details></div>
+
+<div class="myth"><p><strong>Myth:</strong> If no one is working, the work zone speed limit and doubled fines don't apply.</p><p><strong>Fact:</strong> Delaware defines the work zone by its traffic-control devices: it runs from the first warning device to the last device showing restrictions are removed (§4105(f)(2)). Drivers should obey posted work zone limits and drive at a speed that is reasonable and prudent for the conditions the whole way through, because hazards such as drop-offs, narrow lanes, and equipment remain even when no one is visible.</p></div>
+
+<h3>Topic 6.1.4.2: Following Flagger Instructions</h3>
+<p>A flagger is a trained worker who controls traffic through a work zone by hand. Flaggers are common where only one lane is open on a two-lane road and traffic from each direction must take turns, where trucks need to cross or enter the road, and where crews are working in or next to an intersection. In some situations a police officer directs traffic instead of, or along with, a flagger.</p>
+<h4>Common flagger signals</h4>
+<p>Most flaggers use a STOP/SLOW paddle on a pole. You may also see a flag or, at night, a lighted wand. The meaning is straightforward:</p>
+<table>
+<tr><th>What you see</th><th>What it means</th><th>What you do</th></tr>
+<tr><td>STOP side of the paddle facing you, often with the flagger's free arm raised, palm toward you</td><td>Traffic in your direction must stop</td><td>Stop at the flagger's stop point or a reasonable distance back. Stay stopped until the flagger signals you to go.</td></tr>
+<tr><td>SLOW side of the paddle facing you, sometimes with a motion waving you forward</td><td>You may proceed with caution</td><td>Move ahead slowly, watching for workers, equipment, and lane changes. Be ready to stop.</td></tr>
+</table>
+<h4>Rules for working with flaggers</h4>
+<ul>
+<li><strong>Treat the flagger as you would a traffic signal.</strong> Flaggers are placed in work zones as part of the temporary traffic control for the area. Their instructions carry the same weight as the signs and signals around them.</li>
+<li><strong>Stop where you are told.</strong> Do not creep forward while you wait. Leave room in case a truck needs to turn or a worker needs to cross.</li>
+<li><strong>Do not go until you are told.</strong> Seeing the road ahead look empty is not permission. On a one-lane section, traffic from the other direction may be coming around a curve or over a hill out of your view.</li>
+</ul>
+<h4>When instructions seem to conflict</h4>
+<p>If a flagger or an officer directing traffic gives an instruction that seems to conflict with a sign or signal, follow the person directing traffic. They are responding to conditions you may not be able to see. The same principle applies at railroad crossings: under 21 Del.C. §4161(a), when a flagger signals the approach of a train, you must stop within 50 feet but not less than 15 feet from the nearest rail.</p>
+
+<div class="scenario"><h4>Scenario: The Long Wait</h4><p>A driver we'll call Priya is stopped by a flagger on a two-lane road in Kent County where one lane is closed. After about two minutes, she can see clearly that no cars are coming in the open lane ahead of her. The flagger is still showing STOP and talking on a radio. The driver behind Priya honks and gestures for her to go.</p><details><summary>What should happen here?</summary><p>Priya should stay stopped until the flagger turns the paddle to SLOW or otherwise signals her to proceed. The flagger's radio call is likely coordinating with a second flagger at the far end of the closure, where oncoming traffic may already be released into the single open lane. Going early could put Priya head-on with oncoming vehicles in a lane bordered by barrels. The honking driver behind her does not control the work zone. Staying calm, keeping her foot on the brake, and waiting for the signal is the correct and safe choice.</p></details></div>
+
+<h3>Topic 6.1.4.3: Shifting or Narrowing of Lanes</h3>
+<p>Many work zones change the shape of the road. A lane may end and force a merge, lanes may shift sideways onto the shoulder or across the median, or barriers may narrow the lanes. Each change is announced by signs well ahead, so the job is to read them early and act smoothly.</p>
+<h4>Reading the advance signs</h4>
+<p>Work zone warning signs are usually orange. Watch for signs such as "Right Lane Closed Ahead," "Lane Ends Merge Left," arrows showing a lane shift, or symbols showing the road narrowing. A flashing arrow board on a trailer or truck tells you which way traffic must move. The earlier you see these, the more time you have to pick a gap and change lanes calmly.</p>
+<h4>Merging when a lane closes</h4>
+<p>When a lane is closing, the goal is a smooth, predictable merge with no sudden braking. Two habits make the biggest difference:</p>
+<ol>
+<li><strong>Follow the signs and the flow.</strong> When traffic is light and moving well, it is usually best to move over early, as soon as you see the lane-closed sign and a safe gap. When traffic is heavy and slow, some work zones are designed for drivers to use both lanes up to the merge point and then take turns, often called a zipper merge. If signs direct you to use both lanes and merge at a marked point, do so.</li>
+<li><strong>Take turns and keep the space.</strong> At the merge point, let one vehicle in and then go. Do not speed up to block someone, and do not straddle the lanes to keep others from passing. Blocking and racing at a merge cause sudden braking and side-swipe crashes.</li>
+</ol>
+<h4>Driving through narrowed and shifted lanes</h4>
+<ul>
+<li><strong>Slow down before the narrow section.</strong> A narrower lane leaves less room to correct a drift. Lower speed gives you more time.</li>
+<li><strong>Center your vehicle.</strong> Look well down the lane, not at the barrier next to you. Drivers tend to steer toward what they stare at.</li>
+<li><strong>Do not ride beside large trucks.</strong> In a narrowed lane, a truck may need part of your lane to stay off the barrier. Either drop back or, if it is safe and legal, pass steadily without lingering beside it.</li>
+<li><strong>Watch for edge drop-offs.</strong> If your tire drops off a pavement edge, do not jerk the wheel. Ease off the gas, hold the wheel firmly, and steer back gently once you have slowed.</li>
+<li><strong>Do not change lanes inside a narrowed section unless it is necessary.</strong> Many work zones mark these areas as no lane change. Stay put until the lanes return to normal.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Last-Second Merge</h4><p>On a three-lane stretch of highway near Wilmington, signs announce that the right lane will close in one mile. Traffic is moving at a steady speed and there are plenty of gaps. A driver we'll call Theo stays in the right lane until he can see the arrow board and the first barrels, then signals and pushes into the middle lane, forcing the driver beside him to brake hard.</p><details><summary>What should happen here?</summary><p>With traffic moving and gaps available, Theo should have moved over soon after seeing the advance sign, signaling, checking his mirrors and blind spot, and choosing a gap without forcing anyone to brake. Waiting until the barrels left him with one choice and no margin. The zipper method is meant for heavy, slow traffic where signs direct it, and even then it requires taking turns rather than cutting in. Forcing another driver to brake suddenly in a work zone can set off a chain of rear-end crashes, and inside the zone a resulting citation for a covered violation carries at least a doubled fine.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think of a work zone on a road you drive often. Where does it start, where are the lane shifts, and what one change will you make next time you drive through it?</label><textarea></textarea></div>
+
+<h3>Topic 6.1.15.1: Vehicles Stationary on the Side of the Road</h3>
+<p>A stopped vehicle on the shoulder might be a police car on a traffic stop, an ambulance at a crash, a tow truck, a DelDOT truck, a utility crew, or a driver with a flat tire. Expect people standing beside it, sometimes on the traffic side; doors opening into the lane; someone walking around the vehicle without looking; the vehicle pulling back into traffic; and other drivers slowing suddenly or swerving into your lane.</p>
+<h4>What Delaware law requires</h4>
+<p>Delaware's Move Over law, 21 Del.C. §4134(b), applies when you approach a stationary emergency vehicle, DelDOT vehicle, tow vehicle, utility vehicle, or <em>any vehicle showing warning signals</em>, such as hazard lights, flares, or cones. That last category means the law covers a regular car with its hazard lights on, not only official vehicles.</p>
+<ul>
+<li>On a roadway with four or more lanes, with at least two lanes in your direction, you must change into a lane not adjacent to the stationary vehicle, if it is safe to do so.</li>
+<li>If changing lanes is not possible or not safe, you must slow down. Where the speed limit is 50 mph or more, you must slow to a safe speed at least 20 miles per hour less than the posted speed limit.</li>
+</ul>
+<div class="warning"><strong>Delaware law (Move Over, §4134):</strong> Fines are up to $250 for a first offense, up to $500 for a second offense, and up to $1,000 for subsequent offenses. Striking an emergency responder and causing physical injury while violating the Move Over rule is a class F felony. HB 329, signed September 19, 2024, increased these penalties and added the "at least 20 mph below the posted limit" rule.</div>
+<p>Module 7 covers emergency vehicles and the Move Over law in more detail. For this module, the key skill is spotting the stopped vehicle early. Scan well ahead, at least 12 to 15 seconds down the road, so you notice flashing lights, hazard lights, flares, or a vehicle on the shoulder while you still have time to check your mirrors, signal, and move over smoothly or begin slowing down.</p>
+
+<div class="scenario"><h4>Scenario: Hazards on the Shoulder</h4><p>A driver we'll call Renee is traveling at the 55 mph limit on a four-lane divided highway, in the right lane. Ahead on the shoulder she sees a minivan with its hazard lights flashing and a person kneeling beside the rear tire. The left lane next to her has a steady stream of cars.</p><details><summary>What should happen here?</summary><p>The minivan is "a vehicle showing warning signals," so §4134(b) applies. Renee should check her mirror and blind spot and move into the left lane if a safe gap opens. If she cannot change lanes safely because of the traffic beside her, she must slow down. Because the limit is 50 mph or more, she must slow to a safe speed at least 20 mph below the posted limit, which here means 35 mph or less, and she should begin slowing early and gently so the driver behind her has time to react. She should also watch the person by the tire, who could stand up or step toward the lane.</p></details></div>
+
+<h3>Topic 6.1.15.2: Changing Lanes When Safe to Do So</h3>
+<p>Lane changes go wrong when a driver moves into an occupied space, moves without warning, or changes lanes where the law or conditions make it unsafe. Delaware's traffic code includes rules on driving within lanes (§4122) and on signaling (§4155), and "continuous conduct" that violates three or more of the sections listed in §4175A, which include these two, can amount to aggressive driving.</p>
+<h4>The safe lane change routine</h4>
+<ol>
+<li><strong>Decide early.</strong> Plan for an exit, closure, or slower vehicle well ahead rather than at the last moment.</li>
+<li><strong>Check your mirrors.</strong> Look in your inside mirror and the side mirror on the side you are moving toward. Note any vehicles approaching quickly.</li>
+<li><strong>Signal.</strong> Turn on your signal early enough that others can see your intent before you move. A signal is a request, not a right of way.</li>
+<li><strong>Check your blind spot.</strong> Quickly turn your head to look over your shoulder toward the lane you are entering. Mirrors do not show everything, especially motorcycles, bicycles, and small cars right beside you.</li>
+<li><strong>Confirm the gap.</strong> Make sure there is enough space in front of and behind the spot you are moving into. You should not force the vehicle behind you in the new lane to brake.</li>
+<li><strong>Move smoothly.</strong> Keep your speed steady or increase it slightly to match the new lane, and steer gradually into the center of the lane.</li>
+<li><strong>Cancel your signal.</strong> Once you are settled in the new lane, make sure your signal is off so you do not mislead other drivers.</li>
+</ol>
+<h4>When not to change lanes</h4>
+<ul>
+<li>Inside a work zone section marked for no lane changes, or in a narrowed section with barriers on both sides.</li>
+<li>In an intersection, or as you approach a crosswalk where a vehicle in the next lane may be stopping for a pedestrian you cannot see.</li>
+<li>Where solid lines or signs prohibit it.</li>
+<li>Across several lanes at once. Move one lane at a time, repeating the full routine for each lane.</li>
+</ul>
+
+
+<h3>Topic 6.1.15.3: Speed Reduction</h3>
+<p>Knowing when and how to slow down is one of the most protective skills you can have. Delaware's basic speed rule, §4168(a), already requires a speed that is "reasonable and prudent under the conditions." This section is about putting that rule to work.</p>
+<h4>When to reduce speed</h4>
+<p>Reduce speed whenever conditions change in a way that takes away time or space. Common examples include:</p>
+<ul>
+<li>Entering a work zone, or seeing flashing lights, hazard lights, or a stopped vehicle ahead.</li>
+<li>Approaching a curve, hill crest, or intersection where your view is limited.</li>
+<li>Rain, fog, snow, ice, or glare that reduces visibility or traction.</li>
+<li>School zones, neighborhoods, and areas with pedestrians, bicycles, or parked cars. Delaware's statutory limits include 20 mph in school zones where posted with times or conditions, and 25 mph in business districts (§4169(a)).</li>
+</ul>
+<h4>How to reduce speed safely</h4>
+<ol>
+<li><strong>Look far ahead.</strong> Scanning 12 to 15 seconds ahead lets you spot problems early, so you can slow gradually.</li>
+<li><strong>Check your mirror.</strong> Before slowing significantly, glance in your mirror to see how close the vehicle behind you is.</li>
+<li><strong>Ease off the accelerator first.</strong> Simply lifting off the gas starts slowing you down and gives the driver behind you a gentle cue.</li>
+<li><strong>Brake early and smoothly.</strong> Tap the brakes lightly to flash your brake lights, then apply steady pressure. Early, gradual braking is easier on the drivers behind you than a single hard stop.</li>
+<li><strong>Keep a space cushion.</strong> As you slow, maintain or increase the gap ahead so you still have room to stop or steer around a problem.</li>
+</ol>
+<h4>Slowing down without becoming a hazard</h4>
+<p>Speed reduction should match the hazard. Delaware's minimum speed rule, §4171(a), says no one should drive "at such a slow speed as to impede the normal and reasonable movement of traffic." Slowing for a work zone, a stopped vehicle, bad weather, or a Move Over situation is required and appropriate. Crawling along for no reason on an open highway is not. The goal is a speed that fits the conditions, reached smoothly enough that the drivers around you can adjust too.</p>
+<h4>A worked example: how much time does slowing really cost?</h4>
+<p>Many drivers resist slowing down because they believe it will make them late. Consider a 2-mile work zone. At 55 mph, you would cover 2 miles in about 2 minutes and 11 seconds. At 45 mph, the same 2 miles take about 2 minutes and 40 seconds. The difference is roughly 29 seconds. In exchange, at 45 mph you travel about 15 fewer feet every second, you cover about 22 fewer feet during a typical 1.5-second reaction time, and your braking distance is significantly shorter. Half a minute is a very small price for that much extra safety margin around people working in the road.</p>
+
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Highway construction or maintenance area (work zone)</dt><dd>The area indicated by traffic-control devices, running from the first warning device to the last device showing restrictions are removed (21 Del.C. §4105(f)(2)).</dd>
+<dt>Doubled fines</dt><dd>For many violations inside a work zone, the fine is not less than double the normal first-offense amount (§4105(f)(1)).</dd>
+<dt>Move Over law</dt><dd>21 Del.C. §4134(b): move to a non-adjacent lane when safe, or slow down (at least 20 mph below the limit where it is 50 mph or more), for stationary vehicles showing warning signals.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>A Delaware work zone runs from the first warning device to the last device showing restrictions are removed, and missing or improper signs are no defense (§4105(f)).</li>
+<li>Fines for speeding and many other violations in a work zone are not less than double the normal first-offense amount.</li>
+<li>Delaware State Police handle electronic speed enforcement in work zones, which applies at 11 or more mph over the limit (§4170A). You can still be cited for any speed over the limit.</li>
+<li>Slow at the first warning sign, increase following distance, and remove distractions throughout the work zone.</li>
+<li>Treat a flagger's signal like a traffic signal: stop where directed and do not proceed until signaled, even if the road looks clear.</li>
+<li>For lane closures and shifts, read signs early, merge smoothly and take turns, center your vehicle, and avoid riding beside large trucks in narrowed lanes.</li>
+<li>For stationary vehicles showing warning signals, move to a non-adjacent lane when safe, or slow down to at least 20 mph below the posted limit where it is 50 mph or more (§4134(b)).</li>
+<li>Change lanes using mirror, signal, blind spot, gap, smooth move, signal off, and change one lane at a time.</li>
+<li>Reduce speed early and smoothly when hazards appear, and always drive at a speed that is reasonable and prudent for conditions (§4168(a)).</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module, Sharing the Road with Vulnerable Users.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 5 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 6.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-basic-m5-remaining', DONE='de-basic-m5-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 5. Return to your course and continue to Module 6.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>
