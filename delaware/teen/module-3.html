@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 3: Traffic Laws and Patterns | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 3 of 14 &middot; 30 minutes</span>Module 3: Traffic Laws and Patterns</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.2, 6.1.2.1, 6.1.2.2, 6.1.2.3, 6.1.2.4, 6.1.2.4.1 -->
+<p>Every trip you take is a series of decisions about who goes first. At a four-way stop, at a green light with oncoming traffic, at a roundabout, at a railroad crossing, or at a crosswalk with flashing yellow lights, Delaware law sets out who must yield and who may proceed. Many serious crashes happen at these points where paths cross. This module reviews Delaware's right-of-way laws at intersections, explains how to drive through two road designs that confuse many drivers, the roundabout and the diverging diamond interchange, covers the rules and dangers of railroad crossings, and walks through traffic control devices, including two newer pedestrian crossing devices you may see more often: the HAWK signal and the rectangular rapid flashing beacon.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Apply Delaware's right-of-way rules at intersections, including vehicles already in the intersection, simultaneous arrivals, left turns, and entering from a driveway.</li>
+<li>Drive through a roundabout using DelDOT's recommended steps.</li>
+<li>Explain how a diverging diamond interchange works and how to navigate one safely.</li>
+<li>State Delaware's railroad crossing stopping rule and the conditions that require a stop.</li>
+<li>Identify common traffic control devices and respond correctly to HAWK signals and rectangular rapid flashing beacons.</li>
+</ul></div>
+
+<h3>Why Intersections Demand Your Full Attention</h3>
+<p>An intersection is any place where two or more roads meet and traffic paths cross. That makes it the most complex environment most drivers face on a routine basis. In just a few seconds you may need to watch for cross traffic, oncoming left-turners, pedestrians stepping off a curb, a cyclist in a bike lane, a signal about to change, and a driver behind you who is following too closely. Each of these is a possible conflict.</p>
+<p>Right-of-way laws exist to resolve those conflicts in a predictable way. They tell drivers who must yield. Notice the wording: the law does not "give" anyone the right of way so much as it requires others to yield it. A defensive driver never insists on the right of way. If another driver fails to yield, you yield anyway, because being legally right does not prevent a crash.</p>
+<div class="highlight"><strong>Defensive Rule:</strong> Right of way is something you give, not something you take. When in doubt, yield.</div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Right of way</dt><dd>The legal requirement that one road user yield to another so that traffic moves in a predictable order. The law tells drivers when they must yield; it never entitles anyone to force their way through.</dd>
+<dt>Uncontrolled intersection</dt><dd>An intersection with no stop sign, yield sign, or traffic signal, where the basic right-of-way rules of § 4131 decide who yields.</dd>
+<dt>Roundabout</dt><dd>A circular intersection in which traffic travels counterclockwise around a central island and entering vehicles yield to traffic already circulating.</dd>
+<dt>Diverging diamond interchange (DDI)</dt><dd>An interchange design that briefly shifts traffic to the left side of the road so drivers can turn left onto highway ramps without crossing oncoming traffic.</dd>
+<dt>HAWK signal</dt><dd>A pedestrian hybrid beacon that stays dark until a pedestrian activates it, then displays yellow and red lights to stop traffic.</dd>
+<dt>Rectangular rapid flashing beacon (RRFB)</dt><dd>A pair of rectangular yellow lights at a crosswalk that flash rapidly when a pedestrian or cyclist activates them.</dd>
+</dl></div>
+
+<h3>6.1.2.1 Intersections and Right of Way</h3>
+<p>Delaware's right-of-way rules are found in Title 21, Chapter 41, Subchapter IV of the Delaware Code. These are the core rules every driver must know.</p>
+<h4>Vehicles Already in the Intersection</h4>
+<p>Under 21 Del.C. § 4131(a), you must yield to a vehicle that is already in the intersection. Arriving at an intersection does not entitle you to push in front of someone who has already entered it.</p>
+<h4>Two Vehicles Arriving at About the Same Time</h4>
+<p>Under § 4131(b), when two vehicles arrive at an intersection from different roads at about the same time, the driver on the left yields to the vehicle on the right. This rule is especially important at four-way stops and at uncontrolled intersections with no signs or signals, which are common on rural and residential roads.</p>
+<h4>Turning Left</h4>
+<p>Under § 4132, a driver turning left must yield to oncoming traffic. Left turns are one of the most dangerous maneuvers in driving because the turning driver must judge the speed and distance of oncoming vehicles while also watching for pedestrians in the crosswalk on the street they are turning into. A green light does not mean it is safe to turn left. It means you may turn left after yielding.</p>
+<h4>Entering From a Driveway or Other Non-Roadway</h4>
+<p>Under § 4133, a driver entering a roadway from a driveway, parking lot, alley, or other place that is not a roadway must yield to all traffic on the roadway. That includes vehicles, cyclists, and pedestrians on the sidewalk you cross.</p>
+<h4>Do Not Block the Box</h4>
+<p>Under § 4130, you must not enter an intersection, crosswalk, or railroad crossing unless there is room to clear it on the other side. If traffic is backed up, wait behind the stop line until there is room. A driver stuck in the middle of an intersection when the light changes blocks cross traffic and pedestrians.</p>
+<h4>Stop Signs</h4>
+<p>Under § 4164, at a stop sign you must stop at the marked stop line, then yield. After stopping, you may proceed only when it is safe and you have yielded to vehicles and pedestrians with the right of way.</p>
+<table>
+<tr><th>Situation</th><th>Who Must Yield (Delaware law)</th></tr>
+<tr><td>A vehicle is already in the intersection</td><td>Arriving drivers yield to it (§ 4131(a))</td></tr>
+<tr><td>Two vehicles arrive at about the same time</td><td>Driver on the left yields to the vehicle on the right (§ 4131(b))</td></tr>
+<tr><td>Turning left</td><td>Turning driver yields to oncoming traffic (§ 4132)</td></tr>
+<tr><td>Entering from a driveway or parking lot</td><td>Entering driver yields to all traffic on the roadway (§ 4133)</td></tr>
+<tr><td>Stop sign</td><td>Stop at the line, then yield (§ 4164)</td></tr>
+<tr><td>No room on the far side</td><td>Do not enter the intersection, crosswalk, or crossing (§ 4130)</td></tr>
+</table>
+<h4>Defensive Techniques at Intersections</h4>
+<ul>
+<li><strong>Cover the brake.</strong> As you approach an intersection, take your foot off the accelerator and hold it over the brake pedal. This shortens your reaction time if someone pulls out.</li>
+<li><strong>Look left, right, and left again.</strong> The traffic closest to you comes from the left, so check it last before you go.</li>
+<li><strong>Pause when the light turns green.</strong> Look both ways before entering. A driver running a late red light is one of the most dangerous intersection hazards.</li>
+<li><strong>Keep your wheels straight while waiting to turn left.</strong> If you are struck from behind while your wheels are turned left, you can be pushed into oncoming traffic.</li>
+<li><strong>Make eye contact.</strong> When a pedestrian or driver is waiting, try to make eye contact to confirm they have seen you.</li>
+</ul>
+<div class="warning"><strong>Delaware Points:</strong> Disregarding a stop sign or red light adds 3 points to your Delaware driving record under DMV Regulation 2208. Failing to yield and other moving violations add 2 points.</div>
+
+<div class="scenario"><h4>Scenario: The Four-Way Stop Standoff</h4><p>A driver we'll call Kendra arrives at a four-way stop at the same moment as a pickup truck on the cross street to her right. Both drivers stop. The pickup driver hesitates and waves her on.</p><details><summary>What should happen here?</summary><p>Under § 4131(b), when two vehicles arrive at about the same time, the driver on the left yields to the vehicle on the right. Kendra is on the left, so the pickup legally goes first. The wave creates confusion. Kendra should make sure the pickup driver is truly waiting, check for pedestrians and other traffic, and proceed carefully if it is clearly safe, or wait if the situation is unclear. Clear communication and patience matter more than who technically goes first.</p></details></div>
+
+<div class="scenario"><h4>Scenario: The Green-Light Left Turn</h4><p>A driver we'll call Omar is waiting to turn left at a green light on a busy four-lane road. An oncoming bus stops in the far lane, and its driver flashes the headlights at Omar. Omar cannot see past the bus.</p><details><summary>What should happen here?</summary><p>Under § 4132, Omar must yield to oncoming traffic. The bus may be blocking his view of a car or motorcycle approaching in the next lane. The flash of headlights is a courtesy, not a guarantee that the way is clear. Omar should wait until he can see that every oncoming lane is clear and that no pedestrians are in the crosswalk he will cross, keeping his wheels straight until he begins the turn.</p></details></div>
+
+<h3>6.1.2.2 Traffic Patterns: Roundabouts</h3>
+<p>A roundabout is a circular intersection where traffic flows counterclockwise around a central island. Roundabouts replace traffic signals or stop signs at many Delaware intersections. Because vehicles move in the same direction at low speeds, roundabouts eliminate the high-speed right-angle and head-on conflicts that make ordinary intersections dangerous. Delaware law requires drivers to pass rotary islands only on the right (21 Del.C. § 4121), which means you always travel counterclockwise.</p>
+<h4>DelDOT's Steps for Driving a Roundabout</h4>
+<ol>
+<li><strong>Choose your lane before you enter.</strong> At a multi-lane roundabout, use the right lane to turn right, the left lane to turn left or make a U-turn, and either lane to go straight. Watch the signs and pavement arrows as you approach.</li>
+<li><strong>Slow down.</strong> Reduce your speed to about 10 to 15 mph as you approach.</li>
+<li><strong>Watch for bicyclists and pedestrians.</strong> Let bicyclists merge into traffic, and yield to pedestrians in the crosswalk.</li>
+<li><strong>Yield to traffic already in the roundabout.</strong> Look to your left. Enter only when there is a safe gap.</li>
+<li><strong>Keep moving and do not pass.</strong> Once inside, continue counterclockwise. Do not stop inside the roundabout except to avoid a crash, and do not pass other vehicles.</li>
+<li><strong>Exit carefully.</strong> Signal right before your exit, and yield to pedestrians and cyclists as you leave the roundabout.</li>
+</ol>
+<div class="highlight"><strong>Large Vehicles:</strong> Trucks and buses often need extra room in a roundabout and may use the raised apron around the central island. Do not drive beside a large vehicle in a roundabout. Give it space.</div>
+<div class="myth"><p><strong>Myth:</strong> In a roundabout, cars entering have the right of way because they are coming from the right.</p><p><strong>Fact:</strong> DelDOT's guidance is to yield to traffic already in the roundabout. Entering drivers wait for a safe gap.</p></div>
+
+<div class="scenario"><h4>Scenario: The Wrong Lane</h4><p>A driver we'll call Bea enters a two-lane roundabout in the right lane, planning to go straight. Halfway around, she realizes she actually needs the next exit after that, which is a left turn. The car in the left lane beside her is heading for that exit.</p><details><summary>What should happen here?</summary><p>Bea should not cut across the left lane or stop inside the roundabout. DelDOT's guidance is to keep moving and not pass. The safest choice is to exit where her lane allows, then turn around safely or find another route. Missing an exit costs a minute. Forcing a lane change in a roundabout can cause a sideswipe.</p></details></div>
+
+<h3>6.1.2.2 Traffic Patterns: The Diverging Diamond Interchange</h3>
+<p>A diverging diamond interchange, or DDI, is a design used where a local road crosses a highway. In a traditional diamond interchange, drivers turning left onto a highway ramp must wait for a gap in oncoming traffic, which can cause backups and dangerous left-turn crashes. A diverging diamond solves this by temporarily moving traffic to the left side of the road.</p>
+<h4>How a Diverging Diamond Works</h4>
+<ol>
+<li>As you approach the interchange, a traffic signal controls a crossover. When it is green, your lanes cross to the <strong>left side</strong> of the road, so you are driving on the opposite side from what you are used to.</li>
+<li>Between the two crossovers, you are on the left side, separated from oncoming traffic by barriers or medians. Because of this, left turns onto the highway ramps can be made without crossing oncoming traffic.</li>
+<li>At the second crossover, another signal returns you to the right side of the road.</li>
+</ol>
+<p>Delaware has a diverging diamond at the SR 1 and SR 72 interchange. DelDOT's $9.3 million project allows free-flowing left turns and added a shared-use path for pedestrians and bicyclists. Trade press has reported it as the state's first DDI.</p>
+<h4>Tips for Driving a Diverging Diamond</h4>
+<ul>
+<li><strong>Follow your lane.</strong> The pavement markings and barriers guide you through the crossovers. Stay in your lane and do not change lanes in the crossover area.</li>
+<li><strong>Obey the signals at each crossover.</strong> Stop on red, even if you do not see opposing traffic right away.</li>
+<li><strong>Read the overhead signs early.</strong> Know whether you are turning onto the highway or continuing straight before you reach the first crossover.</li>
+<li><strong>Do not panic when you find yourself on the left.</strong> Being on the left side of the road is how the design works. Follow the markings and you will be returned to the right.</li>
+<li><strong>Watch for pedestrians and cyclists</strong> using the shared-use path and crosswalks.</li>
+<li><strong>Keep your speed down.</strong> The curves leading into the crossovers are designed for moderate speeds.</li>
+</ul>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think of a roundabout or unusual interchange you drive through. Which step from this module do you most often skip, and what will you do differently next time?</label><textarea></textarea></div>
+
+<h3>6.1.2.3 Railroad Crossings</h3>
+<p>A train cannot swerve, and it cannot stop quickly. A moving train needs a very long distance to stop, far longer than any car or truck. When a vehicle and a train collide, the vehicle loses every time. Railroad crossings call for complete attention and patience.</p>
+<h4>Delaware's Stopping Rule</h4>
+<p>Under 21 Del.C. § 4161(a), you must stop "within 50 feet but not less than 15 feet from the nearest rail" when any of the following occur:</p>
+<ul>
+<li>A signal device is warning of an approaching train (for example, flashing red lights).</li>
+<li>A crossing gate is lowered, or a flagger is signaling the approach of a train.</li>
+<li>A train is audible from about 1,500 feet away.</li>
+<li>A train is plainly visible and is close enough to be an immediate hazard.</li>
+</ul>
+<p>Stop between 15 and 50 feet from the nearest rail and stay stopped until it is safe to proceed. Never drive around or under a lowered gate.</p>
+<div class="warning"><strong>Delaware Law:</strong> Under § 4130, you may not enter a railroad crossing unless there is room to clear it on the other side. Never stop on the tracks. If traffic ahead is backed up, wait behind the crossing until there is space for your entire vehicle beyond the tracks.</div>
+<h4>Safe Practices at Every Crossing</h4>
+<ul>
+<li><strong>Look and listen.</strong> Slow down, turn down the radio, and look both ways, even at crossings with gates and signals. Signals can fail.</li>
+<li><strong>Expect a second train.</strong> After one train passes, wait until you can see clearly in both directions on all tracks. A second train can be hidden behind the first.</li>
+<li><strong>Judge speed carefully.</strong> Trains are large, and large objects appear to move more slowly than they actually do. A train is almost always closer and faster than it looks.</li>
+<li><strong>Do not shift gears on the tracks</strong> if you drive a manual transmission. Cross in a gear that will get you all the way over.</li>
+<li><strong>Expect certain vehicles to stop.</strong> Some vehicles, such as school buses and trucks carrying hazardous materials, routinely stop at crossings. Be prepared to stop behind them and keep extra following distance.</li>
+</ul>
+<h4>If Your Vehicle Stalls on the Tracks</h4>
+<ol>
+<li>Get everyone out of the vehicle immediately, even if you do not see a train.</li>
+<li>Move away from the tracks at an angle, toward the direction the train is coming from. This helps you avoid being hit by flying debris if the train strikes your vehicle.</li>
+<li>Look for an emergency notification sign posted at the crossing with a phone number and crossing identification number, and call that number. If none is posted, or in any emergency, call 911.</li>
+</ol>
+
+<div class="scenario"><h4>Scenario: The Stuck Gate</h4><p>A driver we'll call Victor approaches a crossing where the lights are flashing and the gates are down, but he cannot see or hear a train. After waiting a short time, he notices a gap where he could drive around the gate.</p><details><summary>What should happen here?</summary><p>Victor must stay stopped between 15 and 50 feet from the nearest rail, as § 4161(a) requires when a signal is active or a gate is lowered. A train may be approaching faster than he realizes or may be hidden by a curve. Driving around a gate is extremely dangerous. If the gates appear stuck, he should report it using the emergency number on the crossing's posted sign, or call 911, and take another route if needed.</p></details></div>
+
+<h3>6.1.2.4 Traffic Control Devices</h3>
+<p>Traffic control devices include signs, signals, pavement markings, and other devices placed by public authorities to regulate, warn, or guide traffic. Delaware law requires drivers to obey official traffic control devices (21 Del.C. § 4107), and disobeying them is one of the violations that can form part of an aggressive driving charge. In work zones, fines for violating traffic control devices are doubled.</p>
+<h4>Traffic Signals</h4>
+<table>
+<tr><th>Signal</th><th>What It Means</th></tr>
+<tr><td>Steady red</td><td>Stop at the stop line and remain stopped until the signal changes.</td></tr>
+<tr><td>Flashing red</td><td>Treat it like a stop sign: stop, yield, and proceed when safe.</td></tr>
+<tr><td>Steady yellow</td><td>The signal is about to turn red. Stop if you can do so safely.</td></tr>
+<tr><td>Flashing yellow</td><td>Proceed with caution, slowing and watching for cross traffic and pedestrians.</td></tr>
+<tr><td>Steady green</td><td>Proceed if the intersection is clear, yielding to vehicles and pedestrians already in it.</td></tr>
+<tr><td>Green arrow</td><td>You may turn in the direction of the arrow, yielding to pedestrians.</td></tr>
+<tr><td>Flashing yellow arrow</td><td>Turns are permitted, but you must yield to oncoming traffic and pedestrians.</td></tr>
+<tr><td>Signal not working</td><td>Treat the intersection as an all-way stop.</td></tr>
+</table>
+<h4>Signs</h4>
+<p>The shape and color of a sign tell you what kind of message it carries, even before you can read it. An eight-sided red sign is always a stop sign. A downward-pointing triangle is a yield sign. A round yellow sign warns of a railroad crossing ahead. Diamond-shaped yellow signs warn of hazards such as curves, merges, or deer. Rectangular white signs give regulatory information such as speed limits. Orange signs mark work zones, and a pentagon-shaped sign marks a school zone or school crossing.</p>
+<h4>Pedestrian Signals</h4>
+<p>Pedestrian signals show a walking person when pedestrians may cross, a flashing or steady hand when they should not start crossing, and often a countdown showing how many seconds remain. When you turn at a signalized intersection, watch for pedestrians crossing with a walk signal. Delaware law requires drivers turning at an intersection to yield to pedestrians, slowing or stopping if needed (§ 4142(a)).</p>
+
+<h3>6.1.2.4.1 Active Pedestrian Crossing Devices: HAWK Signals and RRFBs</h3>
+<p>Some crosswalks are in places without a full traffic signal, such as mid-block crossings on busy roads or trail crossings. To make these crossings safer, traffic engineers use active devices that light up only when a pedestrian is crossing. Delaware's defensive driving regulation specifically requires this course to cover two of them: HAWK signals and rectangular rapid flashing beacons.</p>
+<h4>HAWK Signals (Pedestrian Hybrid Beacons)</h4>
+<p>A HAWK signal (short for High-intensity Activated crossWalK) is also called a pedestrian hybrid beacon. It looks unusual: two red lights side by side on top and one yellow light centered below them. Most of the time it is completely dark, and drivers may proceed normally. When a pedestrian presses the button, the signal runs through a sequence:</p>
+<table>
+<tr><th>HAWK Display</th><th>What Drivers Must Do</th></tr>
+<tr><td>Dark (no lights)</td><td>Proceed normally, watching for pedestrians.</td></tr>
+<tr><td>Flashing yellow</td><td>A pedestrian has pushed the button. Slow down and prepare to stop.</td></tr>
+<tr><td>Steady yellow</td><td>The signal is about to turn red. Stop if you can do so safely.</td></tr>
+<tr><td>Steady red (both lights)</td><td>Stop at the stop line and remain stopped. Pedestrians are crossing.</td></tr>
+<tr><td>Alternating flashing red</td><td>Stop, then proceed only if the crosswalk is clear, as you would at a stop sign. Pedestrians still crossing have the right of way.</td></tr>
+</table>
+<div class="highlight"><strong>Remember:</strong> A dark HAWK signal does not mean the signal is broken. Do not treat it as an all-way stop. It is dark when no pedestrian has requested to cross.</div>
+<h4>Rectangular Rapid Flashing Beacons (RRFBs)</h4>
+<p>A rectangular rapid flashing beacon, or RRFB, is a pair of bright, rectangular yellow lights mounted below a pedestrian or bicycle crossing sign at a crosswalk. When a pedestrian or cyclist pushes the button, the lights flash rapidly in an irregular, alternating pattern, similar to the lights on emergency vehicles, to catch drivers' attention.</p>
+<p>When an RRFB is flashing, someone is about to cross or is crossing. At a crosswalk without a working traffic signal, Delaware law requires drivers to yield the right of way to pedestrians, "slowing down or stopping if need be to so yield" (§ 4142(a)). Slow down and stop before the crosswalk, then wait until the pedestrian has completely crossed your half of the road and is safely out of your path before proceeding. Be especially careful on multi-lane roads: if a car in the next lane has stopped, a pedestrian may be crossing in front of it, hidden from your view. Never pass a vehicle that is stopped at a crosswalk.</p>
+<div class="myth"><p><strong>Myth:</strong> Flashing yellow lights at a crosswalk just mean "caution," so I can keep going if I don't see anyone.</p><p><strong>Fact:</strong> A flashing RRFB means a pedestrian has activated the crossing. Delaware law requires you to yield to pedestrians in a crosswalk without a working signal, stopping if needed.</p></div>
+
+<div class="scenario"><h4>Scenario: The Hidden Pedestrian</h4><p>A driver we'll call Hannah is driving in the right lane of a four-lane road. Ahead, the RRFB at a mid-block crosswalk is flashing, and the car in the left lane has stopped. Hannah does not see anyone in the crosswalk and thinks the other driver is being overly cautious.</p><details><summary>What should happen here?</summary><p>Hannah must slow down and stop before the crosswalk. The flashing beacon means a pedestrian activated the crossing, and the stopped car may be hiding a pedestrian who is about to step into Hannah's lane. Under § 4142(a), she must yield to pedestrians in the crosswalk, stopping if needed. She should wait until the pedestrian has completely cleared her path. In 2024, according to IIHS data compiled from federal crash records, 28 pedestrians were killed on Delaware roads.</p></details></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Yield to vehicles already in an intersection (§ 4131(a)); when two vehicles arrive at about the same time, the driver on the left yields to the vehicle on the right (§ 4131(b)).</li>
+<li>Drivers turning left yield to oncoming traffic (§ 4132), and drivers entering from a driveway yield to all traffic on the roadway (§ 4133).</li>
+<li>Do not enter an intersection, crosswalk, or railroad crossing without room to clear it (§ 4130), and stop at the stop line at a stop sign, then yield (§ 4164).</li>
+<li>At roundabouts, choose your lane, slow to about 10 to 15 mph, yield to pedestrians and traffic already inside, keep moving counterclockwise without passing, and yield to pedestrians and cyclists when exiting.</li>
+<li>A diverging diamond interchange moves traffic to the left side of the road between two signalized crossovers so left turns onto ramps do not cross oncoming traffic; Delaware's SR 1/SR 72 DDI is an example.</li>
+<li>At an active railroad crossing, stop between 15 and 50 feet from the nearest rail (§ 4161(a)), never go around a gate, and never stop on the tracks.</li>
+<li>Obey all official traffic control devices (§ 4107); a flashing red signal means stop, then proceed when safe, and a regular traffic signal that is not working is treated as an all-way stop.</li>
+<li>A HAWK signal is dark until activated; drivers slow on flashing yellow, stop on steady red, and may proceed on alternating flashing red only after stopping and when the crosswalk is clear.</li>
+<li>A flashing RRFB means a pedestrian is crossing; yield and stop if needed, and never pass a vehicle stopped at a crosswalk.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 4: Alcohol, Drugs and Impaired Driving.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 3 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 4.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m3-remaining', DONE='de-teen-m3-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 3. Return to your course and continue to Module 4.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

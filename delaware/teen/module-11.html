@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 11: Vehicle Safety Devices and Vehicle Condition | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 11 of 14 &middot; 30 minutes</span>Module 11: Vehicle Safety Devices and Vehicle Condition</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.12, 6.1.12.1, 6.1.12.2, 6.1.12.2.1, 6.1.12.2.2, 6.1.12.3, 6.1.12.4, 6.1.13, 6.1.13.1, 6.1.13.2, 6.1.13.3, 6.1.13.4, 6.1.13.5, 6.1.13.6, 6.1.13.7 -->
+<p>Even the best defensive driver cannot prevent every crash. When a crash happens, the safety devices in your vehicle decide whether you walk away or not. And long before any crash, the condition of your tires, glass, mirrors, lights, and signals decides whether you can see hazards, be seen, and stop in time. This module covers both: the devices that protect you and your passengers, including seat belts, child restraints, airbags, and anti-lock brakes, and the everyday vehicle condition checks and techniques, including tires, windshield, mirrors, horn, headlights, turn signals, and safe turning, that keep you out of trouble in the first place.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>State Delaware's seat belt law and explain how belts protect occupants in a crash.</li>
+<li>Choose the correct child restraint for a child's age and size under Delaware law, and place it correctly in the vehicle.</li>
+<li>Explain how airbags work with seat belts and how drivers and passengers should sit to reduce airbag injury.</li>
+<li>Describe the proper way to brake in an emergency with anti-lock brakes versus standard brakes.</li>
+<li>Inspect and correctly use tires, windshield, mirrors, horn, headlights, and turn signals, and make safe turns that follow Delaware law.</li>
+</ul></div>
+
+<h3>Seat Belts (6.1.12.1)</h3>
+<p>A seat belt is the single most effective safety device in your vehicle. To understand why, think of a crash as a series of collisions. First, the vehicle hits something and stops. Second, unless you are restrained, your body keeps moving at the vehicle's original speed until it hits the steering wheel, dashboard, windshield, or another person, or is thrown from the vehicle. Third, your internal organs keep moving inside your body until they strike your ribs and skull. A seat belt ties you to the vehicle so you slow down with it, spreading the crash forces across the strongest parts of your body: the hips, pelvis, chest, and shoulders.</p>
+<h4>Delaware's seat belt law</h4>
+<div class="warning"><strong>Delaware seat belt law (21 Del.C. §4802):</strong> The driver must wear a seat belt and must make sure that occupants 16 and older are secured. Children under 16 are covered by the child restraint law (§4803). An officer may stop a vehicle on "reasonable and articulable suspicion" of a seat belt violation (§4802(j)), so you can be stopped for this reason alone. The civil penalty is $25 when it is the only violation, and it carries no points.</div>
+<div class="highlight"><strong>A point credit for buckling up:</strong> Under DMV Regulation 2208 §4.2.4, if all occupants were belted at the time of an arrest for a moving violation, you receive a 1-point credit on your record lasting 1 year.</div>
+<h4>The Delaware picture</h4>
+<p>Most Delaware drivers buckle up. A June 2024 statewide survey observed 92.3% seat belt use (OHS FY2024 Annual Report). Yet unbelted occupants still make up a large share of those who die. In 2024, 36 of the 62 vehicle occupants killed in Delaware crashes were not wearing seat belts (IIHS, compiled from NHTSA FARS data for 2024). In other words, a small minority of people who skip the belt account for more than half of occupant deaths.</p>
+<h4>How to wear a belt correctly</h4>
+<ul>
+<li><strong>Lap belt low and snug</strong> across the hips and upper thighs, not across the stomach.</li>
+<li><strong>Shoulder belt across the middle of the chest and collarbone,</strong> away from the neck. Never put it under your arm or behind your back; that removes upper-body protection and can cause serious internal injuries.</li>
+<li><strong>Remove slack.</strong> A loose belt lets your body build up speed before it catches you.</li>
+<li><strong>Pregnant drivers and passengers</strong> should wear the lap belt below the belly, across the hips, with the shoulder belt between the breasts and to the side of the belly.</li>
+<li><strong>Buckle up on every trip,</strong> including short ones close to home and in the back seat. An unbelted rear passenger can be thrown forward into the people in front.</li>
+</ul>
+<div class="myth"><p><strong>Myth:</strong> It is better to be thrown clear of a crash than trapped by a belt.</p><p><strong>Fact:</strong> Being thrown from a vehicle is one of the deadliest things that can happen in a crash. You can hit the pavement, a fixed object, or be struck by your own or another vehicle. Staying inside, restrained, gives you far better odds. A belt also gives you the best chance of staying conscious and able to escape in the rare event of a fire or submersion.</p></div>
+
+<h3>Child Restraint Systems (6.1.12.2)</h3>
+<p>Children are not small adults. Their bones are still developing, their heads are large relative to their bodies, and an adult seat belt does not fit them correctly until they are tall enough. A child restraint system positions the child so crash forces go to the strongest parts of the body.</p>
+<h4>In Relation to a Child's Age and Size (6.1.12.2.1)</h4>
+<p>Delaware's child restraint law (21 Del.C. §4803) sets the minimum requirements by both age and weight:</p>
+<table>
+<tr><th>Child</th><th>Delaware requirement (§4803)</th></tr>
+<tr><td>Under age 2 and under 30 pounds</td><td>Rear-facing seat with a 5-point harness</td></tr>
+<tr><td>Under age 4 and under 40 pounds</td><td>Seat with a 5-point harness</td></tr>
+<tr><td>After outgrowing the harness seat</td><td>Booster seat until the child reaches the booster seat's limits</td></tr>
+<tr><td>After outgrowing the booster</td><td>Seat belt, until age 16 (then §4802 applies)</td></tr>
+</table>
+<p>Two principles help you apply this table:</p>
+<ul>
+<li><strong>Each step is a step down in protection.</strong> Rear-facing seats spread crash forces across a small child's whole back, head, and neck. A forward-facing harness holds the child at five points. A booster only raises the child so the adult belt fits. Keep a child in each stage until he or she reaches the seat manufacturer's height or weight limit, rather than moving up early.</li>
+<li><strong>The belt must fit before a child leaves the booster.</strong> A child is ready for the adult belt alone when he or she can sit all the way back with knees bent at the seat edge, the lap belt lies low on the hips, and the shoulder belt crosses the chest and collarbone, and can stay seated that way for the whole trip.</li>
+</ul>
+<h4>Correct Placement of a Child in a Vehicle (6.1.12.2.2)</h4>
+<ul>
+<li><strong>The back seat is the safest place</strong> for children. It is farther from the most common point of impact, the front, and away from front airbags.</li>
+<li><strong>Never place a rear-facing seat in front of an active passenger airbag.</strong> A deploying airbag strikes the back of the seat right where the child's head is.</li>
+<li><strong>Delaware front-seat rule:</strong> no child who is 5 feet 5 inches or shorter and under age 12 may ride in a front seat with an active passenger airbag (§4803). This front-seat rule is a secondary offense, but the risk is primary.</li>
+<li><strong>Install the seat tightly.</strong> Use either the vehicle seat belt or the lower anchors, following both the car seat and vehicle manuals, and attach the top tether on forward-facing seats when available. A correctly installed seat should not move more than about an inch side to side or front to back at the belt path.</li>
+<li><strong>Harness snug, clip at armpit level.</strong> Straps should lie flat with no slack, and the chest clip should sit at armpit level. Bulky winter coats under the harness create hidden slack; place a blanket or coat over the buckled harness instead.</li>
+<li><strong>Check the seat's label</strong> for expiration and recall information, and replace any seat that was in a moderate or severe crash, following the manufacturer's guidance.</li>
+</ul>
+<div class="warning"><strong>Penalty:</strong> Under §4803, a second or later child restraint violation carries a $25 fine. The real cost of an unrestrained or poorly restrained child is far greater.</div>
+<div class="scenario"><h4>Scenario: Grandma's Quick Trip</h4><p>Consider a driver we'll call Ruth, taking her 3-year-old grandson, who weighs about 34 pounds, to a store a mile away. Her car has no car seat in it, so she plans to buckle him into the front passenger seat with the regular belt "just this once" so she can keep an eye on him.</p><details><summary>What should happen here?</summary><p>Under Delaware law, a child under 4 and under 40 pounds must ride in a seat with a 5-point harness, and a child under 12 who is 5 feet 5 inches or shorter may not ride in a front seat with an active passenger airbag. Ruth should not make the trip until she has the right harness seat installed in the back seat. Short, local trips are not safer by default; many crashes happen close to home. If she needs help, she can ask the child's parents to lend the correct seat or use the manuals to install one correctly.</p></details></div>
+
+<h3>Airbags and Driver Safety (6.1.12.3)</h3>
+<p>Airbags are a <em>supplemental</em> restraint system. That word matters: airbags are designed to work <strong>with</strong> seat belts, not instead of them. In a moderate to severe frontal crash, sensors trigger the front airbags, which inflate in a fraction of a second and then deflate. Many vehicles also have side airbags, curtain airbags that protect heads in side impacts and rollovers, and knee airbags.</p>
+<p>Because airbags inflate with great force, how you sit matters. An unbelted occupant can slide forward during the moments before a crash and be struck by the airbag while it is still inflating. That is how most airbag injuries occur.</p>
+<h4>Special attention to driver safety</h4>
+<ul>
+<li><strong>Sit back from the steering wheel.</strong> A widely used safety guideline is to keep about 10 inches between the center of your breastbone and the center of the steering wheel. Move your seat back as far as you can while still reaching the pedals comfortably, and recline slightly if needed.</li>
+<li><strong>Tilt the steering wheel</strong> (if adjustable) so the airbag points toward your chest, not your head or neck.</li>
+<li><strong>Hold the wheel on the sides.</strong> Many safety experts recommend hand positions around "9 and 3" or slightly lower, rather than "10 and 2" or at the top, so your arms are not in the path of the deploying airbag and are not thrown into your face.</li>
+<li><strong>Keep the steering wheel area clear.</strong> Do not attach phone mounts, cups, or decorations to the steering wheel hub or the dashboard where the passenger airbag deploys.</li>
+<li><strong>Passengers</strong> should sit back, upright, and belted, with feet on the floor, not on the dashboard. Children belong in the back seat, as covered above.</li>
+<li><strong>Watch the warning light.</strong> If the airbag light stays on after starting the car, the system may not work. Have it checked promptly.</li>
+</ul>
+
+<h3>Anti-Lock Brakes vs. Standard Brakes (6.1.12.4)</h3>
+<p>When you brake too hard, especially on a slippery road, the wheels can stop turning while the car is still moving. This is called <em>lockup</em>. A sliding tire has less grip than a rolling one, and, critically, <strong>you cannot steer a car whose front wheels are locked.</strong> The car will continue in the direction it was moving no matter how you turn the wheel.</p>
+<h4>Anti-lock braking systems (ABS)</h4>
+<p>ABS uses sensors to detect when a wheel is about to lock and rapidly releases and reapplies brake pressure on that wheel, many times per second. This lets the tires keep rolling and lets you steer while braking hard. Most modern cars have ABS; a dashboard light labeled "ABS" comes on briefly when you start the car.</p>
+<p><strong>How to brake in an emergency with ABS: Stomp, Stay, Steer.</strong></p>
+<ol>
+<li><strong>Stomp:</strong> press the brake pedal firmly and quickly.</li>
+<li><strong>Stay:</strong> keep firm, continuous pressure. Do not pump the pedal. You may feel the pedal pulse or vibrate and hear a grinding or buzzing sound. That is normal; it means ABS is working.</li>
+<li><strong>Steer:</strong> look and steer around the hazard toward open space.</li>
+</ol>
+<h4>Standard (non-ABS) brakes</h4>
+<p>Without ABS, hard braking can lock the wheels. The driver must control brake pressure.</p>
+<ul>
+<li><strong>Threshold braking:</strong> press firmly up to the point just before the wheels lock, and hold that pressure. If you feel or hear the wheels lock and the car start to slide, ease off slightly until they roll again, then reapply.</li>
+<li><strong>If you need to steer,</strong> release enough brake pressure to let the wheels roll, steer, and then brake again.</li>
+<li><strong>On ice or snow,</strong> a gentle, rhythmic squeeze-and-release can help keep the wheels from locking.</li>
+</ul>
+<table>
+<tr><th></th><th>With ABS</th><th>Without ABS</th></tr>
+<tr><td>Emergency pedal technique</td><td>Firm, continuous pressure; do not pump</td><td>Threshold braking; ease off if wheels lock</td></tr>
+<tr><td>Steering while braking</td><td>Possible, because wheels keep rolling</td><td>Lost if front wheels lock; release to steer</td></tr>
+<tr><td>Normal feel</td><td>Pedal may pulse and system may buzz</td><td>Skidding or squealing tires warn of lockup</td></tr>
+</table>
+<div class="myth"><p><strong>Myth:</strong> ABS makes my car stop shorter on every surface, so I can follow closer.</p><p><strong>Fact:</strong> ABS mainly helps you <em>keep steering control</em> while braking hard. On loose gravel or fresh snow, stopping distances can even be longer. ABS does not change the physics from Module 10. Keep your following distance.</p></div>
+<div class="scenario"><h4>Scenario: The Deer on a Wet Night</h4><p>Consider a driver we'll call Tasha, driving a newer car with ABS on a wet two-lane road at night. A deer steps onto the road ahead. She brakes hard, the pedal starts buzzing and pulsing under her foot, and she panics and lifts her foot off.</p><details><summary>What should happen here?</summary><p>The pulsing meant ABS was working. Tasha should have kept firm, steady pressure on the pedal. Delaware safety officials advise drivers facing a deer: "Don't swerve," brake and stay in your lane. Swerving sharply can send a car off the road or into oncoming traffic. With ABS, she can make a small steering correction if there is a clear path, but her main job is to keep firm braking and hold her lane.</p></details></div>
+
+<h3>Vehicle Condition: Tire Tread, Windshield, and Mirrors (6.1.13, 6.1.13.1–6.1.13.3)</h3>
+<p>A vehicle in poor condition cancels out good driving. Many problems give warning signs long before they cause a crash, so a quick routine check, a "walk-around," pays off.</p>
+<h4>Tire Tread (6.1.13.1)</h4>
+<p>Your tires are the only parts of the car that touch the road; each contact patch is roughly the size of your hand. Tread grooves channel water out from under the tire. As tread wears down, the tire cannot clear water as well, and the risk of hydroplaning (Module 9) and longer stopping distances rises sharply.</p>
+<ul>
+<li><strong>Check tread depth.</strong> Many tires have tread-wear bars molded into the grooves; when the tread is level with the bars, the tire is worn out. A common at-home check is the penny test: insert a penny into a groove with Lincoln's head upside down. If you can see all of his head, the tread is very shallow and the tire should be replaced. A widely used replacement point is 2/32 of an inch, and many experts recommend replacing sooner for wet-weather driving.</li>
+<li><strong>Check tire pressure monthly</strong> when tires are cold, using the pressure listed on the sticker inside the driver's door jamb, not the maximum on the tire sidewall. Underinflated tires overheat, wear quickly, and handle poorly. Do not ignore a tire pressure warning light.</li>
+<li><strong>Look for damage:</strong> bulges, cuts, cracks, exposed cords, or uneven wear, which can signal alignment or suspension problems.</li>
+<li><strong>Rotate tires</strong> as the owner's manual recommends, and check the spare.</li>
+</ul>
+<h4>Windshield (6.1.13.2)</h4>
+<p>You see nearly everything through the windshield. It also supports the roof in a rollover and helps the passenger airbag deploy correctly, so its condition matters for both vision and crash protection.</p>
+<ul>
+<li><strong>Repair chips and cracks early.</strong> Small chips can spread with temperature changes and road vibration. A crack in your line of sight distorts your view.</li>
+<li><strong>Keep it clean inside and out.</strong> A dirty film multiplies sun glare and headlight glare (Module 9).</li>
+<li><strong>Replace wiper blades</strong> when they streak, skip, or chatter, and keep washer fluid full, with a winter blend in cold weather.</li>
+<li><strong>Clear it completely</strong> before driving. Delaware requires clearing ice and snow from your vehicle (§4186A). Use the defroster and defogger so glass stays clear.</li>
+<li><strong>Do not hang or mount items</strong> where they block your view.</li>
+</ul>
+<h4>Mirrors (6.1.13.3)</h4>
+<ul>
+<li><strong>Keep mirrors clean</strong> and free of cracks, ice, and fog.</li>
+<li><strong>Adjust all three mirrors</strong> each time you drive a vehicle someone else has used, using the method in Module 10.</li>
+<li><strong>Check mirrors often:</strong> about every 5 to 8 seconds in normal driving, and always before slowing, stopping, turning, or changing lanes.</li>
+<li><strong>Remember the limits.</strong> Convex passenger-side mirrors make objects look farther away than they are, and no mirror setting removes blind spots. Always add a head check.</li>
+</ul>
+
+<h3>Horn, Headlights, and Turn Signals (6.1.13.4–6.1.13.6)</h3>
+<h4>Horn (6.1.13.4)</h4>
+<p>Your horn is a warning device, not a way to express frustration. Test it periodically to make sure it works.</p>
+<ul>
+<li><strong>Use a light tap</strong> to let someone know you are there, such as a driver starting to back out of a parking space or drifting toward your lane.</li>
+<li><strong>Use a firm blast</strong> only when there is immediate danger of a collision.</li>
+<li><strong>Do not rely on the horn</strong> instead of braking or steering. Pedestrians with hearing loss, drivers with music playing, and cyclists in wind may not hear it.</li>
+<li><strong>Avoid angry honking.</strong> As Module 9 explained, venting with the horn tends to increase anger and can provoke road rage. Be especially gentle near horses, cyclists, and pedestrians, who can be startled into danger.</li>
+</ul>
+<h4>Proper Use of Headlights (6.1.13.5)</h4>
+<div class="warning"><strong>Delaware headlight law (21 Del.C. §4331):</strong> Headlights are required from sunset to sunrise; whenever people and vehicles are "not clearly discernible at a distance of 1,000 feet ahead"; and whenever windshield wipers are in use because of weather. The wiper rule is a secondary offense.</div>
+<ul>
+<li><strong>Headlights help you be seen,</strong> not just see. Turn them on at dawn, dusk, in rain, fog, and snow, and whenever visibility is reduced. Daytime running lights alone often do not turn on your taillights.</li>
+<li><strong>Use high beams</strong> on dark roads with no other traffic, to see farther.</li>
+<li><strong>Dim to low beams</strong> when approaching oncoming vehicles and when following another vehicle, so you do not blind other drivers. Also use low beams in fog, rain, and snow, where high beams reflect back.</li>
+<li><strong>If oncoming high beams blind you,</strong> look toward the right edge line of your lane until the vehicle passes, and slow if needed.</li>
+<li><strong>Do not overdrive your headlights.</strong> At night, drive at a speed that lets you stop within the distance your headlights show. If your low beams light only a few hundred feet, compare that with the stopping distances you calculated in Module 10.</li>
+<li><strong>Keep lenses clean and aimed correctly,</strong> and replace burned-out bulbs, including brake lights and taillights. Walk around the car with lights on, or ask someone to check your brake lights.</li>
+</ul>
+<h4>Usage of Turn Signals (6.1.13.6)</h4>
+<p>Turn signals let other drivers, cyclists, and pedestrians predict what you will do. Failing to signal is one of the twelve violations that can count toward aggressive driving under §4175A.</p>
+<div class="highlight"><strong>Delaware turn signal rule:</strong> Signal "continuously during not less than the last 300 feet" before turning (21 Del.C. §4155(b)). Use your signal before lane changes, merging, and pulling to or from the curb as well.</div>
+<ul>
+<li><strong>Signal early, but not too early.</strong> Signaling too far ahead, before an earlier driveway, can make others think you are turning sooner.</li>
+<li><strong>Make sure the signal cancels</strong> after a turn or lane change. A blinking signal you forgot about can lead another driver to pull out in front of you.</li>
+<li><strong>Signaling does not give you the right-of-way.</strong> Check mirrors and blind spots and wait for a safe gap.</li>
+<li><strong>Know hand signals</strong> in case your lights fail: left arm straight out for a left turn, bent upward for a right turn, and bent downward for slowing or stopping.</li>
+</ul>
+
+<h3>Safe Turning Techniques (6.1.13.7)</h3>
+<p>Turns combine nearly everything in this module: mirrors, signals, speed control, and yielding. Many intersection crashes and pedestrian injuries happen during turns.</p>
+<h4>Right turns</h4>
+<ol>
+<li>Check mirrors and your right blind spot for cyclists and motorcyclists.</li>
+<li>Signal at least 300 feet before the turn (§4155(b)).</li>
+<li>Move into position early. Delaware requires right turns to be made "as close as practicable to the right-hand curb or edge of the roadway" (§4152).</li>
+<li>Slow before the turn, not during it. Brake while the wheels are straight.</li>
+<li>Yield to pedestrians in the crosswalk and to cyclists going straight.</li>
+<li>Turn into the nearest lane, then accelerate smoothly.</li>
+</ol>
+<h4>Left turns</h4>
+<ol>
+<li>Signal at least 300 feet ahead and move to the left-most lane or center turn lane for your direction.</li>
+<li>Keep your wheels straight while waiting. If you are hit from behind with wheels turned, you could be pushed into oncoming traffic.</li>
+<li>Yield to oncoming traffic (§4132), including motorcycles that are hard to judge (Module 7), and to pedestrians in the crosswalk you will cross.</li>
+<li>Do not enter an intersection unless you have room to clear it (§4130).</li>
+<li>Turn into the nearest available lane for your direction, without cutting the corner.</li>
+</ol>
+<h4>Turning tips</h4>
+<ul>
+<li><strong>Hand-to-hand (push-pull) steering</strong> keeps both hands on the wheel and away from the airbag cover during turns.</li>
+<li><strong>Look through the turn</strong> to where you want to go.</li>
+<li><strong>Watch for large vehicles</strong> making wide turns, and never squeeze into the space on their right.</li>
+<li><strong>U-turns</strong> are prohibited where approaching drivers cannot see your vehicle from 500 feet in either direction (§4153).</li>
+</ul>
+<div class="scenario"><h4>Scenario: The Left Turn with Wheels Turned</h4><p>Consider a driver we'll call Kevin, waiting to turn left at a busy intersection in Wilmington. He has already turned his steering wheel to the left so he can go quickly when a gap opens. A motorcycle is approaching in the oncoming lane, partly hidden behind a pickup truck.</p><details><summary>What should happen here?</summary><p>Kevin should keep his wheels straight while he waits. If a vehicle rear-ends him, straight wheels keep him in his lane instead of pushing him into oncoming traffic. He must yield to all oncoming traffic, including the motorcycle, which is harder to see and harder to judge for speed. He should look carefully past the pickup, check the crosswalk he will cross, and turn only when there is a clear gap.</p></details></div>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>When did you last check your tire pressure, tread, wipers, and all of your lights? Write a simple monthly checklist you will use for your own vehicle.</label><textarea></textarea></div>
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Supplemental restraint system</dt><dd>Airbags, which are designed to work together with seat belts, not replace them.</dd>
+<dt>Lockup</dt><dd>When braking stops a wheel from turning while the vehicle is still moving, causing loss of steering control.</dd>
+<dt>ABS (anti-lock braking system)</dt><dd>A system that rapidly pumps brake pressure automatically to keep wheels rolling during hard braking.</dd>
+<dt>Threshold braking</dt><dd>Braking firmly up to the point just before the wheels lock, used without ABS.</dd>
+<dt>Tread-wear bar</dt><dd>A raised bar in a tire groove that shows when the tread is worn out.</dd>
+<dt>Overdriving your headlights</dt><dd>Driving so fast at night that you cannot stop within the distance your headlights illuminate.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Delaware law requires the driver to wear a seat belt and secure occupants 16 and older; officers can stop you for a belt violation alone ($25, no points).</li>
+<li>In 2024, 36 of 62 occupants killed in Delaware crashes were unbelted (IIHS/NHTSA FARS, 2024), even though observed belt use was 92.3% (June 2024).</li>
+<li>Delaware child restraints: under 2 and under 30 lb rear-facing with a 5-point harness; under 4 and under 40 lb a 5-point harness; then a booster to its limits; then a seat belt until 16.</li>
+<li>Children ride safest in the back. No rear-facing seat in front of an active airbag, and no child under 12 who is 5'5" or shorter in a front seat with an active passenger airbag.</li>
+<li>Airbags supplement seat belts. Sit about 10 inches from the wheel, aim the wheel at your chest, and hold the wheel on the sides.</li>
+<li>With ABS: stomp, stay, steer, and do not pump. Without ABS: use threshold braking and release to steer.</li>
+<li>Check tire tread and pressure, keep the windshield and mirrors clean and clear, and use the horn only as a warning.</li>
+<li>Headlights are required sunset to sunrise, when visibility is under 1,000 feet, and when wipers are in use for weather (§4331). Signal at least 300 feet before turning (§4155(b)).</li>
+<li>Turn safely: slow before the turn, keep wheels straight while waiting, yield to oncoming traffic and pedestrians, and keep right turns close to the right curb (§4152).</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 12, Road Conditions, Driving Environments, Head-On Collisions, and Course Review.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 11 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 12.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m11-remaining', DONE='de-teen-m11-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 11. Return to your course and continue to Module 12.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

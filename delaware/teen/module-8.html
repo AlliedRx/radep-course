@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 8: Distractions and Vehicle Technology | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 8 of 14 &middot; 30 minutes</span>Module 8: Distractions and Vehicle Technology</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.8, 6.1.9, 6.1.9.1, 6.1.9.2, 6.1.9.3, 6.1.9.4, 6.1.9.5, 6.1.9.6, 6.1.9.7, 6.1.9.8 -->
+<p>Driving asks for your eyes, your hands, and your mind at the same time. Anything that pulls one of them away from the road, even for a moment, raises your risk of a crash. Some distractions are obvious, like a phone in your hand. Others are easy to overlook: a conversation with a passenger, a sandwich, a billboard, a deer at the edge of the road, or a crash on the other side of the highway. At the same time, today's vehicles are packed with technology that can help prevent crashes, or create new distractions and false confidence if drivers misunderstand it. This module covers the eight kinds of distraction Delaware requires every defensive driving course to address, Delaware's hand-held device law, and how to use vehicle safety technology wisely.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Describe the three types of distraction and explain how a two-second glance away translates into distance traveled.</li>
+<li>State what Delaware's hand-held device law prohibits, its exceptions, and its penalties.</li>
+<li>Manage passengers, reading, eating, and roadside sights such as billboards so they do not take your attention from driving.</li>
+<li>Respond safely to animals in the road, crash scenes, and disabled vehicles.</li>
+<li>Explain the benefits and limits of driver assistance technology and the danger of over-relying on it.</li>
+</ul></div>
+
+<h3>Understanding Distraction</h3>
+<p>Safety researchers usually describe three types of distraction:</p>
+<ul>
+<li><strong>Visual:</strong> taking your eyes off the road, such as looking at a screen, a map, or something outside.</li>
+<li><strong>Manual:</strong> taking your hands off the wheel, such as reaching for a drink or adjusting a device.</li>
+<li><strong>Cognitive:</strong> taking your mind off driving, such as a heated phone call, a stressful thought, or daydreaming.</li>
+</ul>
+<p>Texting is especially dangerous because it involves all three at once. But any one type can be enough to cause a crash. A driver can have both hands on the wheel and eyes pointed forward and still fail to notice a stopped car because their mind is somewhere else. This is sometimes called "looking but not seeing."</p>
+<h4>What two seconds really means</h4>
+<p>At 55 mph you travel about 81 feet every second. A two-second glance at a phone means about 162 feet driven with no one watching the road, which is more than half the length of a football field. At 60 mph, that same glance covers about 176 feet. And when you look back up, you still need about 1.5 seconds of perception-reaction time before you begin to brake. A distraction does not just cost the time you are looking away. It wipes out the warning time you need to respond.</p>
+<h4>A quick self-check</h4>
+<p>Ask yourself a few honest questions about your last week of driving. Did you read or send a message while the car was moving? Did you eat a meal behind the wheel? Did you miss a turn or exit because you were deep in thought or conversation? Did you arrive somewhere with little memory of the drive? A "yes" to any of these is common, and it is a sign that distraction is part of your driving routine. The rest of this module gives you specific tools to change that routine, one distraction at a time.</p>
+<div class="warning"><strong>Delaware law (careless and inattentive driving, §4176):</strong> Inattentive driving means failing to give full attention to driving or to keep a proper lookout. Careless driving means driving in a "careless or imprudent manner." The fines are $25 to $75 for a first offense and $50 to $95 for a subsequent offense within 3 years. Many kinds of distraction, not only phone use, can lead to this charge.</div>
+
+<h3>Topic 6.1.9.1: Electronic Devices</h3>
+<h4>Delaware's hand-held device law</h4>
+<p>Under 21 Del.C. §4176C, you may not use an electronic communication device while your vehicle "is in motion." "Using" includes holding the device to talk, text, browse, or play games. Hands-free use is allowed for licensed drivers who are not in the GDL permit stage.</p>
+<ul>
+<li><strong>Exceptions</strong> include reporting an emergency or a crime, on-duty emergency responders, and amateur radio operators.</li>
+<li><strong>Penalties:</strong> $100 for a first offense, and $200 to $300 for a subsequent offense within 2 years. The violation carries no motor vehicle points.</li>
+</ul>
+<div class="warning"><strong>Delaware law (teen permit holders):</strong> Drivers holding a Graduated Driver License learner's permit may not use any cell phone or texting device while driving, including hands-free (21 Del.C. §2710(c)(8)).</div>
+<h4>Hands-free is legal, not risk-free</h4>
+<p>A hands-free call removes the manual distraction and part of the visual one, but the cognitive distraction remains. A complicated or emotional conversation can pull your attention away from the road as much as a hand-held one. Voice-to-text features still invite glances at the screen to check what the phone heard. The law sets the minimum. Defensive driving goes further.</p>
+<h4>Why phones are so hard to ignore</h4>
+<p>Phones are built to grab attention. A buzz or chime creates a strong urge to check, and once you look, it is easy to keep reading or start replying. Many drivers also overestimate their own ability to multitask, believing they can handle a quick glance safely even if other drivers cannot. In reality, the brain cannot give full attention to two demanding tasks at once. It switches back and forth, and each switch leaves a gap in which a hazard can go unnoticed. The most reliable solution is to remove the temptation before you start driving, rather than relying on willpower once the phone lights up.</p>
+<h4>Other screens and devices</h4>
+<p>Electronic distraction includes more than phones. Touchscreen climate and audio controls, navigation systems, smartwatches, and music apps can all draw your eyes down for longer than you realize. Built-in screens are not automatically safe because the manufacturer installed them.</p>
+<h4>Practical habits</h4>
+<ol>
+<li><strong>Set up before you go.</strong> Enter your destination, choose your music or podcast, and adjust climate controls while parked.</li>
+<li><strong>Put the phone out of reach or use a driving mode</strong> that silences notifications and sends automatic replies.</li>
+<li><strong>Mount navigation devices</strong> where you can see them with a quick glance, and rely on voice directions.</li>
+<li><strong>Pull over to a safe place</strong> if you must make a call, read a message, or change a route. A parking lot is safer than a highway shoulder.</li>
+<li><strong>Keep calls short and simple.</strong> If you use hands-free, end the call when traffic gets heavy or conditions get difficult.</li>
+</ol>
+<div class="myth"><p><strong>Myth:</strong> Checking a text at a red light is fine because the car isn't moving.</p><p><strong>Fact:</strong> Delaware's §4176C applies while the vehicle "is in motion," but defensive driving looks beyond the bare legal line. Drivers looking down at a red light miss pedestrians stepping into the crosswalk, an emergency vehicle approaching, and the light turning green, and the reading often continues after the car starts moving, which is illegal and dangerous.</p></div>
+
+<div class="scenario"><h4>Scenario: Just One Text</h4><p>A driver we'll call Nadia is on SR 1 at about 55 mph when her phone buzzes. It is her daughter, and Nadia picks up the phone to read the message, thinking she will glance for only a second. Traffic ahead begins to slow for a merge.</p><details><summary>What should happen here?</summary><p>Holding the phone to read a text while the vehicle is in motion violates §4176C, with a $100 fine for a first offense. More importantly, at 55 mph Nadia covers about 81 feet every second her eyes are down. If she looks at the message for two seconds, she drives about 162 feet without seeing the slowing traffic, and then still needs reaction time before braking. Nadia should leave the phone alone and, if the message might be urgent, take the next exit or pull into a safe parking area to read it. Setting her phone to a driving mode before the trip would remove the temptation.</p></details></div>
+
+<h3>Topic 6.1.9.2: Interacting with a Passenger</h3>
+<p>Passengers can be helpful. A good passenger can watch for signs, handle navigation, and point out hazards. But passengers can also be a major source of cognitive and visual distraction, especially when the conversation gets intense, when children need attention, or when several friends are in the car together.</p>
+<h4>Common passenger distractions</h4>
+<ul>
+<li>Turning your head to look at the person you are talking to.</li>
+<li>Arguments or emotional conversations that take your mind off the road.</li>
+<li>Children who are crying, fighting, or asking for things.</li>
+<li>Passengers who show you something on their phone or ask you to look at something outside.</li>
+<li>Group energy, such as loud music, joking, or encouragement to speed or show off. Delaware's GDL rules also limit how many passengers new teen drivers may carry.</li>
+<li>Pets moving around the vehicle or climbing into the driver's lap.</li>
+</ul>
+<h4>Managing passengers</h4>
+<ol>
+<li><strong>Set expectations before you start.</strong> Let passengers know you need to focus, especially in heavy traffic, bad weather, or unfamiliar areas.</li>
+<li><strong>Delegate.</strong> Ask a passenger to handle navigation, music, and phone calls.</li>
+<li><strong>Keep your eyes forward during conversations.</strong> You do not need to look at someone to listen.</li>
+<li><strong>Pause the conversation</strong> when driving gets demanding, such as merging, turning across traffic, or passing through a work zone.</li>
+<li><strong>Pull over for children's needs.</strong> Handing items into the back seat or turning around to settle a dispute takes your eyes and hands away for far too long. Find a safe place to stop.</li>
+<li><strong>Secure pets</strong> in a carrier or with a restraint so they cannot move into your space.</li>
+</ol>
+<div class="scenario"><h4>Scenario: The Back-Seat Argument</h4><p>A parent we'll call Devon is driving two children home on a busy road in Dover. The children start fighting over a tablet, and one of them begins to cry. Devon reaches back with one hand to take the tablet while glancing over his shoulder.</p><details><summary>What should happen here?</summary><p>Reaching back and looking over his shoulder combines manual, visual, and cognitive distraction. Even a few seconds of this at city speeds means many feet traveled without watching for pedestrians, stopped traffic, or signals. Devon should keep both hands on the wheel and eyes forward, use a calm voice to tell the children he will handle it when the car is stopped, and then pull into a safe place such as a parking lot to settle the problem. Planning ahead, such as packing one device per child or setting rules before the trip, can prevent the situation next time.</p></details></div>
+
+<h3>Topics 6.1.9.3 and 6.1.9.4: Reading and Eating</h3>
+<h4>Topic 6.1.9.3: Reading</h4>
+<p>Reading anything while driving takes your eyes off the road for long, repeated stretches. Reading is not limited to phones. It includes:</p>
+<ul>
+<li>paper maps, printed directions, or notes;</li>
+<li>a work document, a mail item, or a receipt;</li>
+<li>long text on a navigation or vehicle screen;</li>
+<li>detailed signs, menus, or addresses while trying to find a location.</li>
+</ul>
+<p>Reading demands the eyes to focus up close, then refocus on the distant road. Each switch takes time. If you need to read directions, review them before you leave and use audio navigation while driving. If you are searching for an address, slow down only if it is safe, or better, have a passenger look, or park and check. Do not hunt for a house number while driving at traffic speed.</p>
+<h4>Topic 6.1.9.4: Eating</h4>
+<p>Eating and drinking are some of the most common distractions because they feel harmless. They are not. Unwrapping food, reaching for a drink, and dealing with a spill all take your hands and eyes away. A hot drink that spills can make a driver react suddenly and lose control.</p>
+<ul>
+<li><strong>Eat before or after the trip.</strong> Build time into longer trips for a short stop.</li>
+<li><strong>Choose easy items</strong> if you must have something, such as a covered drink in a secure cup holder.</li>
+<li><strong>Avoid messy or hot foods</strong> that require two hands, napkins, or careful attention.</li>
+<li><strong>Let a spill go.</strong> If something falls or spills, leave it until you can stop safely. Never reach for a dropped item on the floor while driving, especially near the pedals.</li>
+</ul>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>List the distractions you deal with most often while driving, such as phone, food, passengers, or screens. Choose one and write a specific plan for handling it on your next trip.</label><textarea></textarea></div>
+
+<h3>Topics 6.1.9.5 and 6.1.9.6: Billboards and Animals</h3>
+<h4>Topic 6.1.9.5: Billboards</h4>
+<p>Billboards and roadside signs are designed to catch your eye. Bright digital billboards that change images, large signs with lots of text, and unusual displays can hold your gaze longer than you intend. They also compete with traffic signs and signals for your attention.</p>
+<ul>
+<li><strong>Keep glances brief.</strong> If something catches your eye, look back to the road quickly. Do not try to read a phone number, website, or long message.</li>
+<li><strong>Prioritize traffic signs.</strong> A crowded commercial strip may have dozens of signs. Your job is to find the stop signs, speed limits, lane-use signs, and signals among them.</li>
+<li><strong>Be extra alert near busy commercial areas,</strong> where billboards and business signs combine with driveways, turning traffic, and pedestrians.</li>
+</ul>
+<h4>Topic 6.1.9.6: Animals</h4>
+<p>Animals cause distraction in two ways: animals inside the vehicle and animals on or near the road.</p>
+<p><strong>Inside the vehicle:</strong> A loose dog or cat can climb into your lap, block your view, or get under the pedals. Restrain pets in a carrier or with a harness, and never drive with a pet on your lap.</p>
+<p><strong>On the road:</strong> In Delaware, deer are the most common animal hazard.</p>
+<div class="highlight"><strong>Delaware data (2025):</strong> Delaware State Police investigated 2,067 animal-related crashes in 2025, and 96% of them involved deer. The Delaware Office of Highway Safety's October 2026 safety message identifies the peak times for deer crashes as 5 to 7 a.m. and 5 p.m. to midnight and notes that the fall months bring the most deer crashes. (Source: State of Delaware news release, October 13, 2026.)</div>
+<p>Defensive techniques for deer and other animals:</p>
+<ol>
+<li><strong>Slow down and scan the road edges</strong> at dawn, dusk, and night, especially near woods and fields.</li>
+<li><strong>Use high beams</strong> on dark roads when no one is approaching, to spot the reflection of an animal's eyes sooner.</li>
+<li><strong>Expect more than one.</strong> Deer often travel in groups. If one crosses, others may follow.</li>
+<li><strong>"Don't swerve."</strong> The State's advice is to brake and stay in your lane. Swerving can send you into oncoming traffic, a tree, or a ditch, which is often far more dangerous than striking the animal.</li>
+<li><strong>Stay buckled,</strong> and if you do hit an animal, pull off the road safely, turn on your hazard lights, and call for help if there are injuries or the vehicle cannot be driven safely.</li>
+</ol>
+<div class="scenario"><h4>Scenario: Deer at Dusk</h4><p>A driver we'll call Gabe is on a two-lane rural road in Sussex County at about 6 p.m. in November. A deer leaps from the right shoulder into his lane about 100 feet ahead. An oncoming pickup is approaching in the other lane.</p><details><summary>What should happen here?</summary><p>Gabe should brake firmly and stay in his lane, following Delaware's "Don't swerve" advice. Swerving left could put him head-on with the pickup, and swerving right could send him off the road. He should also watch for a second or third deer following the first. Because this is a peak time and season for deer crashes, the best defense would have started earlier: slowing down, scanning the road edges, and leaving more space to stop.</p></details></div>
+
+<h3>Topics 6.1.9.7 and 6.1.9.8: Car Accidents and Disabled Vehicles</h3>
+<h4>Topic 6.1.9.7: Car accidents and "rubbernecking"</h4>
+<p>A crash scene is one of the strongest distractions on the road. Drivers slow down to look, take their eyes off the traffic in front of them, or even take photos. This behavior, called rubbernecking, causes traffic backups and can lead to secondary crashes, often rear-end collisions in the slowing traffic behind the scene, or crashes on the opposite side of a divided highway where there was no crash to begin with.</p>
+<ul>
+<li><strong>Keep your eyes on the vehicle ahead.</strong> Watch for brake lights as other drivers slow to look.</li>
+<li><strong>Do not take photos or video</strong> while driving. That is phone use while in motion under §4176C, and it takes your attention completely off the road.</li>
+<li><strong>Obey the Move Over law.</strong> Crash scenes usually include police, fire, EMS, and tow vehicles. Move to a lane not adjacent to them if safe, or slow down, at least 20 mph below the limit where it is 50 mph or more (§4134(b)).</li>
+<li><strong>Follow directions</strong> from police and responders at the scene.</li>
+<li><strong>Increase following distance</strong> as you approach, because traffic may stop suddenly.</li>
+</ul>
+<h4>Topic 6.1.9.8: Disabled vehicles</h4>
+<p>A disabled vehicle can appear anywhere: stalled in a travel lane, partly on the shoulder, or stopped just past a curve. Like a crash scene, it pulls drivers' attention and creates a physical hazard. Under §4134(b), a stationary vehicle showing warning signals, such as hazard lights, flares, or cones, is covered by the Move Over law, even when it is an ordinary passenger car.</p>
+<ul>
+<li><strong>Spot it early</strong> by scanning 12 to 15 seconds ahead and watching for hazard lights or a vehicle that is not moving.</li>
+<li><strong>Watch for people</strong> standing near the vehicle, changing a tire, or walking along the shoulder.</li>
+<li><strong>Move over or slow down</strong> as the law requires.</li>
+<li><strong>Do not stop unless it is safe</strong> and you are prepared to help. If you want to help, call 911 and report the location instead of stopping on a busy highway.</li>
+</ul>
+<p>If your own vehicle breaks down, get as far off the road as you can, turn on your hazard lights, and stay buckled inside or move well away from traffic. Your hazard lights also tell approaching drivers that the Move Over law applies to you.</p>
+
+<div class="scenario"><h4>Scenario: The Crash Across the Median</h4><p>A driver we'll call Isabel is traveling on I-95. On the other side of the median, several police cars and a fire truck are at a crash. Traffic on Isabel's side starts slowing sharply as drivers look across. The driver ahead of her suddenly brakes hard.</p><details><summary>What should happen here?</summary><p>Isabel should keep her eyes on the traffic ahead, not on the crash. Because she had been watching ahead and keeping a following distance of at least 3 to 4 seconds, she has room to brake smoothly instead of crashing into the car in front of her. She should not take photos or slow down just to look. The responders are on the other side of the median, so the Move Over law does not apply to her, but she should still expect sudden slowdowns until she is past the scene.</p></details></div>
+
+<h3>Topic 6.1.8: Vehicle Technology and Driver Safety</h3>
+<p>Many vehicles now include advanced driver assistance systems, often called ADAS. These systems use cameras, radar, and other sensors to watch the road and the space around the vehicle. When used correctly, they can warn you of hazards and sometimes act on their own to reduce the chance or severity of a crash. But none of them make a vehicle self-driving, and every one of them has limits.</p>
+<table>
+<tr><th>Technology</th><th>What it does</th><th>Key limits</th></tr>
+<tr><td>Automatic emergency braking (AEB) and forward collision warning</td><td>Warns of a possible crash with a vehicle or object ahead and can apply the brakes if you do not respond</td><td>May not detect every object, pedestrian, or cyclist, and may not prevent a crash at higher speeds or in poor visibility</td></tr>
+<tr><td>Lane departure warning and lane-keeping assist</td><td>Alerts you or gently steers if you drift out of your lane</td><td>Needs visible lane markings; may not work on faded lines, in work zones, or in rain or snow</td></tr>
+<tr><td>Blind spot monitoring</td><td>Lights or sounds a warning when a vehicle is in your blind spot</td><td>May miss fast-approaching vehicles, motorcycles, or cyclists; does not replace a head check</td></tr>
+<tr><td>Backup camera and rear sensors</td><td>Shows the area behind the vehicle and warns of objects when reversing</td><td>Has a limited field of view; can be blocked by dirt, rain, or snow; may not show children or objects to the sides</td></tr>
+<tr><td>Adaptive cruise control</td><td>Keeps a set speed and following gap behind the vehicle ahead</td><td>May not react to stopped vehicles, sudden cut-ins, or work zone changes; the driver must stay ready to brake</td></tr>
+</table>
+<h4>Technology that informs you</h4>
+<p>Not every system acts on its own. Some vehicles offer driver attention or drowsiness alerts that suggest a break after signs of fatigue, rear cross-traffic alerts that warn of vehicles approaching while you back out of a parking space, and head-up displays that place speed and navigation information near your line of sight. These can help, but each one is another source of lights, sounds, and messages. Learn what each alert means before you need it, so a sudden chime prompts a quick, correct response rather than confusion.</p>
+<h4>Benefits</h4>
+<p>Driver assistance systems give you an extra layer of protection. A forward collision warning can catch a moment of inattention. A blind spot monitor can remind you to check again. A backup camera can reveal an object directly behind your bumper that you would not see in the mirrors. These are real safety advantages when the driver stays fully engaged.</p>
+<h4>Limits and over-reliance</h4>
+<p>The biggest danger with vehicle technology is over-reliance: trusting the system to handle situations it was never designed for. Drivers who expect lane-keeping to steer for them may stop paying attention. Drivers who trust a blind spot light may skip the head check and miss a motorcycle. Drivers using adaptive cruise control may stop watching the traffic ahead. And drivers switching between vehicles may assume a feature is present when it is not.</p>
+<ul>
+<li><strong>Read your owner's manual</strong> to learn exactly what each system does and when it may not work.</li>
+<li><strong>Keep sensors and cameras clean.</strong> Snow, ice, mud, and even bugs can block them.</li>
+<li><strong>Treat warnings as reminders,</strong> not replacements for mirrors, head checks, and scanning.</li>
+<li><strong>Stay hands-on and eyes-on.</strong> You are responsible for the vehicle at all times, no matter what technology is turned on.</li>
+<li><strong>Avoid fiddling with settings</strong> while driving. Adjusting technology menus is itself a distraction.</li>
+</ul>
+<div class="myth"><p><strong>Myth:</strong> If my car has automatic emergency braking, I can follow more closely because the car will stop for me.</p><p><strong>Fact:</strong> AEB is designed as a backup, not a replacement for a safe following distance. It may not detect every hazard and may not stop the car in time at higher speeds or on wet roads. Keep at least 3 to 4 seconds of following distance in good conditions, and more in bad weather.</p></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Visual, manual, and cognitive distraction</dt><dd>Taking your eyes off the road, your hands off the wheel, or your mind off driving.</dd>
+<dt>Hand-held device law</dt><dd>21 Del.C. §4176C: no using an electronic communication device while the vehicle is in motion, including holding it to talk, text, browse, or play games; hands-free use allowed.</dd>
+<dt>Rubbernecking</dt><dd>Slowing down or looking away from the road to watch a crash or other scene, often causing secondary crashes.</dd>
+<dt>ADAS</dt><dd>Advanced driver assistance systems, such as automatic emergency braking, lane-keeping assist, blind spot monitoring, and adaptive cruise control.</dd>
+<dt>Over-reliance</dt><dd>Trusting vehicle technology to handle situations it cannot, leading drivers to relax their own attention.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Distraction can be visual, manual, or cognitive. At 55 mph, a two-second glance away means about 162 feet driven blind.</li>
+<li>Delaware's §4176C bans using a hand-held electronic device while the vehicle is in motion; hands-free use is allowed. Fines are $100 for a first offense and $200 to $300 for a subsequent offense within 2 years.</li>
+<li>GDL permit holders may not use any cell phone, even hands-free (§2710(c)(8)).</li>
+<li>Manage passengers by setting expectations, delegating tasks, keeping your eyes forward, and pulling over for children's needs.</li>
+<li>Do not read while driving, and eat before or after the trip rather than behind the wheel.</li>
+<li>Keep glances at billboards brief and prioritize traffic signs in busy commercial areas.</li>
+<li>Delaware State Police investigated 2,067 animal-related crashes in 2025, 96% involving deer. For deer, "Don't swerve": brake and stay in your lane.</li>
+<li>Avoid rubbernecking at crash scenes and give disabled vehicles room, moving over or slowing down as §4134(b) requires.</li>
+<li>Vehicle technology helps, but it has limits. Never let it replace your own attention, mirrors, head checks, and safe following distance.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module, The Driver's Condition, Environment, and Aggressive Driving.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 8 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 9.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m8-remaining', DONE='de-teen-m8-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 8. Return to your course and continue to Module 9.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

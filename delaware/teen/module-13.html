@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 13: Delaware's Graduated Driver License and Zero Tolerance | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 13 of 14 &middot; 30 minutes</span>Module 13: Delaware's Graduated Driver License and Zero Tolerance</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 4.1.3.2, 4.1.3.1 -->
+<p>You have finished the core lessons that every Delaware defensive driving student takes. This module and the next one are written specifically for you as a teen driver, and for the parent, guardian, or sponsor who is helping you learn. Delaware gives new drivers a license in stages, through a system called the Graduated Driver License, or GDL. It also has a Zero Tolerance law that treats any drinking and driving by a person under 21 very seriously. Some of these rules may feel strict. They exist because the first months of driving are the most dangerous time in most people's driving lives, and the rules are designed to let you build experience while the risks are kept as low as possible. Read this module carefully. Breaking a GDL rule can cost you your driving privileges, and a Zero Tolerance violation can follow you well beyond your teen years.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain why new and teen drivers face higher crash risk, and interpret recent, dated Delaware impaired-driving data.</li>
+<li>Describe each stage of Delaware's Graduated Driver License system, including supervised driving hours and who may supervise.</li>
+<li>State Delaware's GDL night-driving, passenger, cell phone, and seat belt restrictions.</li>
+<li>Identify the penalties for violating GDL restrictions and for serious driving violations by a minor.</li>
+<li>Explain Delaware's Zero Tolerance law for drivers under 21, the 0.02 standard, the penalties, and how implied consent applies.</li>
+</ul></div>
+
+<h3>Why New Drivers Face Special Rules</h3>
+<p>Learning to drive is a lot like learning any complex skill. At first, everything takes conscious effort: checking the mirrors, judging a gap in traffic, deciding when to brake. Experienced drivers do many of these things automatically, which frees up their attention to notice hazards. New drivers have not built those automatic skills yet, so their attention is stretched thin. A situation an experienced driver handles without thinking, such as a car pulling out of a driveway while a pedestrian waits at the corner, can overload a new driver.</p>
+<p>Inexperience is not the only factor. Teen drivers are more likely to underestimate dangerous situations, to drive faster, to follow too closely, and to be influenced by friends in the car. Night driving is harder because hazards are harder to see. And any amount of alcohol or drugs makes every one of these problems worse.</p>
+<div class="highlight"><strong>Why this matters:</strong> New drivers are at their highest crash risk in their first months behind the wheel. Inexperience, speed, passengers, night driving and impairment are the factors that turn that risk into tragedies. Every rule in this module exists to cut that risk while you build experience.</div>
+<p>The good news is that most of the risk for new drivers comes from things you can control: speed, distraction, passengers, night driving, seat belt use, and impairment. Delaware's GDL rules target exactly those risks. As you gain experience under safer conditions, your skills improve, and the restrictions come off.</p>
+
+<h3>Topic 4.1.3.2: Delaware's Graduated Driver License System</h3>
+<p>Delaware's GDL law is found in 21 Del.C. §2710. Instead of handing a brand-new driver full privileges on day one, Delaware gives you a Level 1 Learner's Permit with restrictions and then a full Class D license once you have held the permit long enough and met the age requirement. Your Delaware Driver Manual (the edition with a July 2026 cover date) covers GDL on pages 28 to 30, and Zero Tolerance and Implied Consent on page 54. It is worth reading those pages alongside this module.</p>
+<h4>Who can get a Level 1 Learner's Permit</h4>
+<ul>
+<li><strong>Age:</strong> 16 to under 18, or 16 to under 22 for a student with an active Individualized Education Program (IEP).</li>
+<li><strong>Requirements (§2710(b)):</strong> completed driver education, passing the required tests, and the signature of a sponsor.</li>
+</ul>
+<h4>The sponsor's role</h4>
+<p>Your sponsor, usually a parent or guardian, signs for your permit and takes on real legal responsibility. Under Delaware law, the sponsor is jointly liable for your driving and can withdraw the endorsement, which ends your permit. This means the adult who signed for you has both a duty and the power to decide whether you are ready to keep driving. Parents: your signature is not a formality. Teens: your sponsor's trust is part of what keeps you on the road.</p>
+<table>
+<tr><th>GDL stage</th><th>Timing</th><th>Key rules</th></tr>
+<tr><td>Level 1 Learner's Permit: supervised period</td><td>First 6 months of the permit</td><td>Must always be supervised; 50 hours of practice (10 at night) certified by a parent or guardian</td></tr>
+<tr><td>Level 1 Learner's Permit: unsupervised period</td><td>After the first 6 months, until the permit has been held 12 months</td><td>Unsupervised driving only from 6:00 a.m. to 10:00 p.m., with listed exceptions; passenger limits apply</td></tr>
+<tr><td>Class D license</td><td>Age 17 or older, after holding the permit for 12 months</td><td>The permit converts automatically after 12 full months</td></tr>
+</table>
+
+<h3>The First Six Months: Supervised Driving</h3>
+<p>For the first 6 months of your permit, you must always be supervised when you drive. During this time, a parent or guardian certifies that you have completed <strong>50 hours</strong> of driving practice, including <strong>10 hours at night</strong> (§2710(c)(3)).</p>
+<h4>Who may supervise you</h4>
+<p>Your supervisor must be either:</p>
+<ul>
+<li>a licensed parent or guardian, or</li>
+<li>a licensed driver who is <strong>at least 25 years old and has held a Class D license for at least 5 years</strong>.</li>
+</ul>
+<p>The supervisor sits in the front passenger seat, and no one else may ride in the front. That rule keeps the supervisor focused on coaching you and keeps other passengers from distracting either of you.</p>
+<h4>Making the 50 hours count</h4>
+<p>Fifty hours is a minimum, not a goal. The best way to use your supervised time is to practice a wide range of situations, starting easy and building up:</p>
+<ol>
+<li><strong>Start in quiet places.</strong> Empty parking lots and quiet neighborhood streets are good for practicing basic control, smooth braking, turning, and backing.</li>
+<li><strong>Move to light traffic.</strong> Practice intersections, stop signs, traffic signals, and left turns with a gap in oncoming traffic.</li>
+<li><strong>Add busier roads.</strong> Practice lane changes, merging, and keeping a safe following distance on multi-lane roads.</li>
+<li><strong>Practice highways.</strong> Entering and exiting, maintaining speed, and passing safely.</li>
+<li><strong>Use your night hours well.</strong> Night driving is required for a reason. Practice using headlights correctly, handling oncoming glare, and spotting pedestrians and animals in low light.</li>
+<li><strong>Drive in bad weather with your supervisor.</strong> Rain, fog, and, when it is safe to do so, light snow are conditions you will face alone soon. Practice them with an experienced adult first.</li>
+</ol>
+<p>Parents and supervisors: keep a simple log of each session with the date, time, length, conditions, and skills practiced. It helps you certify the hours honestly, and it shows you which situations your teen still needs to practice. Delaware's GDL Parent Orientation Program (GDL POP), highlighted by the Office of Highway Safety, is another resource for parents of new drivers.</p>
+<div class="scenario"><h4>Scenario: The Willing Cousin</h4><p>Consider a new permit holder we'll call Aiden. He is three months into his permit. His parents are working late, so his 21-year-old cousin, who has had a license for four years, offers to ride with him to practice. Aiden's friend also wants to sit up front so the cousin can sit in the back.</p><details><summary>What should happen here?</summary><p>Aiden's cousin does not qualify as a supervisor. A supervisor who is not a parent or guardian must be at least 25 and must have held a Class D license for at least 5 years. Also, the supervisor must sit in the front seat, and no one else may sit in front. Because Aiden is still in his first 6 months, he may not drive at all without a qualified supervisor. Driving in violation of permit restrictions is treated as driving without a license, which can bring a 2-month suspension for a first offense. Aiden should wait until a qualified supervisor is available.</p></details></div>
+
+<h3>Night Driving Limits After Six Months</h3>
+<p>After your first 6 months, you may drive without a supervisor, but only during certain hours. Under §2710(c)(6), unsupervised driving is allowed only between <strong>6:00 a.m. and 10:00 p.m.</strong> Outside those hours, you need a qualified supervisor with you.</p>
+<p>The law includes exceptions for travel to and from <strong>church, work, or school activities</strong>. For example, if your shift at work ends after 10:00 p.m., you may drive home from work. If a school play rehearsal runs late, you may drive home from it. The exception covers the trip to or from that activity. It does not cover stopping at a friend's house or driving around afterward.</p>
+<p>Why the night limit? Driving at night is harder for everyone. Your headlights show you less of the road, glare from oncoming vehicles reduces your vision, and you are more likely to encounter tired or impaired drivers. For a new driver who is still learning to read the road, darkness removes a lot of the information they rely on. The night limit keeps you out of the most difficult conditions until you have more experience.</p>
+<div class="myth"><p><strong>Myth:</strong> Once I've had my permit for six months, I can drive any time, as long as I'm careful.</p><p><strong>Fact:</strong> After six months, unsupervised driving is allowed only from 6:00 a.m. to 10:00 p.m., except for travel to and from church, work, or school activities. At other times, you need a qualified supervisor in the front seat.</p></div>
+
+<h3>Passenger, Phone, and Seat Belt Restrictions</h3>
+<h4>Passenger limits</h4>
+<p>Passengers, especially other teens, are one of the biggest sources of distraction and risk for new drivers. Friends can pull your attention away from the road, encourage risky choices, or simply make the car louder and more chaotic. Delaware limits passengers during your permit period:</p>
+<ul>
+<li><strong>During the first 12 months:</strong> only your supervisor plus 1 other passenger. Immediate family members are exempt from this limit when your supervisor is in the car.</li>
+<li><strong>During the second 6-month (unsupervised) period:</strong> only 1 passenger besides you, the driver.</li>
+</ul>
+<p>In practice, this means that when you are driving on your own, you may have one passenger, not a carload of friends. Saying "the law only lets me take one person" is also an easy, honest way to handle pressure from friends who want a ride.</p>
+<h4>No cell phones at all</h4>
+<p>Under §2710(c)(8), a permit holder may not use any cell phone or texting device while driving. This is stricter than the rule for adult drivers. Adults in Delaware may use hands-free devices, but GDL permit holders may not use a phone even hands-free. You will review phones in much more detail in the next module.</p>
+<h4>Everyone buckles up</h4>
+<p>Under §2710(c)(7), you and every passenger must be wearing a seat belt. As the driver, you are responsible for making sure that happens before you move the car. A simple routine helps: no one gets a ride until everyone is buckled. Seat belts are your best protection in a crash, and the GDL rule makes buckling up a non-negotiable part of every trip.</p>
+<div class="scenario"><h4>Scenario: The Family Road Trip</h4><p>Consider a permit holder we'll call Sofia. She is four months into her permit and wants to drive her family to her grandmother's house. Her mother, a licensed driver, sits in the front passenger seat. Sofia's two younger brothers and her older sister ride in the back. Sofia's phone is in her pocket, and her navigation app is set to speak directions out loud from her mother's phone.</p><details><summary>What should happen here?</summary><p>This trip follows the GDL rules. Sofia is supervised by a licensed parent in the front seat, with no one else in front. During the first 12 months the general limit is the supervisor plus 1 other passenger, but immediate family members are exempt when the supervisor is in the car, so her brothers and sister may ride along. Sofia is not using a phone herself; her mother is handling navigation. The one thing Sofia must check before moving is that every passenger is buckled, because §2710(c)(7) requires all occupants to wear seat belts.</p></details></div>
+<div class="warning"><strong>GDL restrictions in brief (21 Del.C. §2710):</strong> First 6 months: always supervised. After 6 months: unsupervised only from 6:00 a.m. to 10:00 p.m., except to and from church, work, or school activities. Passenger limits apply. No cell phone or texting device use, including hands-free. All occupants belted.</div>
+
+<h3>Earning Your License and the Penalties for GDL Violations</h3>
+<h4>Moving to a Class D license</h4>
+<p>You may move to a full Class D license at age 17 or older, after you have held your permit for 12 months. The permit converts automatically after 12 full months. That automatic step is a reward for 12 months of following the rules. A suspension along the way takes your driving privileges away for its full length.</p>
+<h4>Penalties</h4>
+<p>Delaware takes GDL violations seriously, because the rules exist to protect you and everyone around you:</p>
+<ul>
+<li><strong>Breaking permit restrictions</strong> (for example, driving unsupervised during the first 6 months, driving after 10:00 p.m. without a valid exception or supervisor, carrying too many passengers, or using a phone) is treated as driving without a license. The penalty is a <strong>2-month suspension</strong> for a first offense and <strong>4 months</strong> for a later offense (§2710(h), §2701).</li>
+<li><strong>Reckless or negligent driving, or a serious moving violation</strong>, can lead DMV to immediately suspend a minor's driving privileges: <strong>1 month</strong> for the first time and <strong>3 months</strong> after that (§2710(j)).</li>
+</ul>
+<p>Those suspensions are in addition to any fines or points that come with the underlying traffic violation. Remember also that the sponsor who signed for your permit can withdraw that endorsement. In other words, you can lose your driving privileges through the court, through DMV, or through the adult who trusted you.</p>
+<div class="scenario"><h4>Scenario: The Late Ride Home</h4><p>Consider a permit holder we'll call Maya. She has had her permit for 8 months and is driving alone. After a basketball game ends at 9:30 p.m., she drives two teammates to get food and then home, arriving at 11:15 p.m.</p><details><summary>What should happen here?</summary><p>Maya has two GDL problems. First, during her unsupervised period she may carry only 1 passenger besides herself, and she had two. Second, the school activity exception covers travel to and from the activity, not a stop for food with friends afterward. Driving after 10:00 p.m. without a supervisor and outside an exception violates her restrictions. These violations are treated as driving without a license, with a 2-month suspension for a first offense. Maya should have driven straight home with no more than one passenger, or arranged for a qualified supervisor.</p></details></div>
+
+<h3>Topic 4.1.3.1: Delaware's Zero Tolerance Law</h3>
+<p>For adult drivers, Delaware's general DUI law, 21 Del.C. §4177, sets the familiar 0.08 blood alcohol concentration (BAC) standard, and it also covers drivers with an illicit or recreational drug in their blood within 4 hours of driving. For drivers under 21, Delaware has an additional law with a much lower limit: the Zero Tolerance law, 21 Del.C. §4177L.</p>
+<h4>What the law says</h4>
+<p>Section 4177L applies to "[w]hoever, being under the age of 21 years" drives after drinking. A BAC of <strong>.02 or more</strong> is "per se evidence that the person had consumed alcoholic liquor." In plain English, if you are under 21 and a test shows 0.02 or higher, that alone is proof that you were drinking. It does not matter whether you felt fine, whether you were driving well, or whether you only had "one drink." A BAC of 0.02 can be reached with very little alcohol.</p>
+<div class="warning"><strong>Zero Tolerance penalties (21 Del.C. §4177L):</strong> A first offense brings a <strong>2-month license revocation</strong>. A subsequent offense brings a revocation of <strong>6 to 12 months</strong>.</div>
+<h4>Zero Tolerance is not the only law that applies</h4>
+<p>Zero Tolerance does not replace the general DUI law. Delaware's DUI statute, §4177, is not limited by age. A driver under 21 who is at 0.08 or higher, or who has an illicit or recreational drug in their blood within 4 hours of driving, can face the full DUI penalties that adults face. Under §4177, a first offense brings a fine of $500 to $1,500, or up to 12 months in jail, or both, and a 12-month license revocation under §4177A. The court must also order an alcohol evaluation and rehabilitation program. Separately, §4177J prohibits drinking alcohol while driving, with a fine of $25 to $200 for a first offense.</p>
+<h4>How alcohol affects a new driver</h4>
+<p>Alcohol slows your reaction time, blurs and narrows your vision, reduces coordination, and, most dangerously, weakens judgment. That last effect means a driver who has been drinking is often the last to realize they are impaired. For a new driver who is still building basic skills, even a small amount of alcohol takes away attention and judgment that are already in short supply. Only time lowers your BAC. Coffee, a cold shower, food, or fresh air may make you feel more alert, but they do not remove alcohol from your blood.</p>
+<h4>Drugs count, too</h4>
+<p>Zero Tolerance is about alcohol, but impairment is not. Under §4177, having an illicit or recreational drug in your blood within 4 hours of driving is a per se DUI violation at any age. Marijuana, for example, can slow reaction time, distort your sense of time and distance, and make it harder to stay in your lane. Mixing alcohol with other drugs can make the effects of both worse. Even legal medicines, including some cold, allergy, and sleep medicines, can cause drowsiness. Read the label, ask a pharmacist or doctor, and if a medicine warns against driving, do not drive.</p>
+<div class="highlight"><strong>Recent Delaware impaired-driving data:</strong> Data compiled by IIHS from NHTSA FARS show that in 2024, an estimated 33% of drivers killed in Delaware crashes (15 drivers) had a BAC of 0.08 or higher. DelDOT reports that 21 of Delaware's 117 traffic deaths in 2025 were DUI-related.</div>
+
+<h3>Implied Consent and Testing</h3>
+<p>Under Delaware's implied consent law, 21 Del.C. §2740, anyone who drives or is in physical control of a vehicle in Delaware is deemed to have consented to breath, blood, or urine testing. You agreed to this rule when you started driving.</p>
+<p>Refusing a test does not help you avoid consequences. For a driver under 21 in a Zero Tolerance (§4177L) case, refusing a test brings a license revocation of <strong>2, 6, or 12 months</strong>, depending on prior history. In a general DUI (§4177) case, refusal brings a revocation of 1 year with no prior offense, 18 months with one prior, and 24 months with two or more priors (§2742).</p>
+<table>
+<tr><th>Situation (driver under 21)</th><th>Possible license consequence</th></tr>
+<tr><td>Zero Tolerance, first offense (BAC .02 or more)</td><td>2-month revocation</td></tr>
+<tr><td>Zero Tolerance, subsequent offense</td><td>6 to 12 months revocation</td></tr>
+<tr><td>Refusing a test in a Zero Tolerance case</td><td>2, 6, or 12 months revocation</td></tr>
+<tr><td>DUI under §4177, first offense (BAC .08 or more, or drugs)</td><td>12-month revocation, plus fines or jail, and a required evaluation and rehabilitation program</td></tr>
+</table>
+<div class="scenario"><h4>Scenario: "Just One Beer"</h4><p>Consider an 18-year-old driver we'll call Chris. At a friend's house, Chris drinks one beer early in the evening. Two hours later, feeling fine, Chris drives home. An officer stops Chris for a burned-out taillight, notices the smell of alcohol, and asks for a breath test.</p><details><summary>What should happen here?</summary><p>Because Chris is under 21, the Zero Tolerance law applies. If the test shows .02 or more, that is per se evidence that Chris consumed alcohol, and a first offense brings a 2-month license revocation. If Chris refuses the test, implied consent means refusal also brings a revocation of 2, 6, or 12 months. Chris "felt fine," but that does not matter under the law. The safe choice would have been not to drink at all before driving, or to get a ride from a sober driver or a parent.</p></details></div>
+<div class="myth"><p><strong>Myth:</strong> If I'm under 21, I'm only in trouble if I'm actually drunk.</p><p><strong>Fact:</strong> Delaware's Zero Tolerance law makes a BAC of .02 or more per se evidence of drinking for drivers under 21. That level is far below the 0.08 adult standard and can be reached with very little alcohol.</p></div>
+
+<div class="myth"><p><strong>Myth:</strong> If I refuse the breath test, they cannot prove anything, so I will keep my license.</p><p><strong>Fact:</strong> Under implied consent (§2740), driving in Delaware means you have already agreed to testing. Refusal in a Zero Tolerance case brings its own revocation of 2, 6, or 12 months, so refusing does not protect your license.</p></div>
+<h3>For Teens and Parents: Making a Plan Together</h3>
+<p>The most effective way to use the GDL system is for teens and parents to treat it as a shared plan, not just a list of rules. Here are some steps families can take together:</p>
+<ul>
+<li><strong>Write down your family's driving rules.</strong> Start with the GDL restrictions, then add your own, such as where the car may go, when you must check in, and what happens if a rule is broken.</li>
+<li><strong>Agree on a "no questions asked" ride.</strong> Teens: if you or your driver have been drinking or using drugs, call home for a ride. Parents: agree in advance to come get your teen safely and have the conversation later, calmly.</li>
+<li><strong>Plan for night driving and passengers.</strong> Discuss how your teen will get home from late activities, and who may ride with them.</li>
+<li><strong>Review progress regularly.</strong> Parents can ride along even after the supervised period to see how skills are developing and to coach specific situations.</li>
+<li><strong>Use DMV and OHS resources.</strong> Read the GDL and Zero Tolerance pages of the Delaware Driver Manual together, and consider the GDL Parent Orientation Program.</li>
+</ul>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which GDL restriction do you expect to be hardest for you to follow, and what is your plan for handling it? If you are a parent, what rule will you add for your family?</label><textarea></textarea></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Graduated Driver License (GDL)</dt><dd>Delaware's system (21 Del.C. §2710) that gives new drivers privileges in stages, starting with a restricted Level 1 Learner's Permit.</dd>
+<dt>Sponsor</dt><dd>The adult, usually a parent or guardian, who signs for a permit, is jointly liable for the permit holder's driving, and can withdraw the endorsement.</dd>
+<dt>Qualified supervisor</dt><dd>A licensed parent or guardian, or a licensed driver at least 25 who has held a Class D license for at least 5 years, seated in the front seat.</dd>
+<dt>Zero Tolerance law</dt><dd>21 Del.C. §4177L, under which a BAC of .02 or more is per se evidence of drinking for a driver under 21.</dd>
+<dt>Per se evidence</dt><dd>Evidence that by itself proves a fact; here, a .02 test result proves the under-21 driver consumed alcohol.</dd>
+<dt>Implied consent</dt><dd>21 Del.C. §2740: by driving in Delaware, you are deemed to consent to breath, blood, or urine testing.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>New drivers face their highest crash risk early on; inexperience, speed, passengers, night driving, and impairment drive that risk.</li>
+<li>A Level 1 Learner's Permit is available from age 16 to under 18 (under 22 with an active IEP) and requires driver education, passing tests, and a sponsor's signature.</li>
+<li>For the first 6 months you must always be supervised, and a parent or guardian certifies 50 hours of practice, including 10 at night.</li>
+<li>A supervisor must be a licensed parent or guardian, or a licensed driver at least 25 with 5 years on a Class D license, sitting in the front seat with no one else in front.</li>
+<li>After 6 months, unsupervised driving is allowed only from 6:00 a.m. to 10:00 p.m., except to and from church, work, or school activities.</li>
+<li>Passenger limits apply, permit holders may not use any phone (even hands-free), and everyone must be belted.</li>
+<li>Violating permit restrictions brings a 2-month suspension (4 months for a later offense); serious violations can bring an immediate 1- or 3-month suspension.</li>
+<li>Under Zero Tolerance, a BAC of .02 or more is per se evidence of drinking for drivers under 21; a first offense means a 2-month revocation.</li>
+<li>Refusing a test in a Zero Tolerance case brings a 2-, 6-, or 12-month revocation, and the full DUI law still applies at 0.08 or with drugs.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 13 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 14.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m13-remaining', DONE='de-teen-m13-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 13. Return to your course and continue to Module 14.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

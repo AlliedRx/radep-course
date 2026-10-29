@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 1: Welcome to Delaware Defensive Driving | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 1 of 14 &middot; 30 minutes</span>Module 1: Welcome to Delaware Defensive Driving</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: intro, 4.4.1, 4.4.2, 4.4.3, 4.4.3.1, 4.4.3.2, 4.4.4 -->
+<p>Welcome to the DMV Courses Delaware Defensive Driving Course. Whether you enrolled to lower your auto insurance premium, to earn a point credit on your Delaware driving record, or simply to become a safer driver, you are in the right place. This course is built on State of Delaware traffic laws, defensive driving, and collision prevention techniques. Over the next seven hours you will review the rules that govern Delaware roads, learn why crashes happen, and practice the habits that keep you, your passengers, and everyone around you out of harm's way. This first module explains how the course works, what you earn when you finish, how your completion reaches the Delaware Division of Motor Vehicles (DMV), how Delaware's point system works, what recent crash data tells us about our roads, and the mindset that ties every later lesson together.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Describe how this online course is organized, including timed modules and the final exam requirements.</li>
+<li>Explain the 10% and 15% insurance premium discounts and the timing rules that apply to each.</li>
+<li>Explain how the administrative 3-point credit is applied to a Delaware driving record and what it does not do.</li>
+<li>Describe how and when you will receive your completion certificate and how the DMV is notified, and locate your copy of the DMV Participant Letter.</li>
+<li>Summarize Delaware's point values, point thresholds, and how points age over time.</li>
+<li>Interpret recent, dated Delaware crash statistics and apply the defensive-driving mindset to everyday driving.</li>
+</ul></div>
+
+<h3>Course Purpose and Who This Course Is For</h3>
+<p>A defensive driving course is not a driver's license test, and it is not a punishment. It is a structured review designed for licensed adult drivers who want to sharpen their knowledge and judgment. Experience is valuable, but it also builds habits, and not all habits are good ones. This course asks you to look at yours honestly.</p>
+<p>Delaware regulation requires every approved defensive driving course to cover a specific list of topics. You will study traffic stops, intersections and roundabouts, impairment, work zones, vulnerable road users, school buses and emergency vehicles, motorcycles, distractions, vehicle technology, your own condition, weather, aggressive driving, following distance, safety devices, vehicle and road condition, driving environments, and head-on collisions.</p>
+<p>Every topic connects to one goal: arriving safely, every trip, without harming anyone else.</p>
+
+<div class="highlight"><strong>Our Promise:</strong> DMV Courses is the online brand of Virginia Commonwealth Driving Improvement Clinic, which has served drivers for 13 years. Every Delaware law, number, and statistic in this course is drawn from Delaware statutes, regulations, and official state sources. If you have a question at any point, call our help line at [TOLL-FREE NUMBER].</div>
+
+<h3>How This Course Works</h3>
+<p>This course is delivered online and is completely self-paced within each module. The Teen Basic Course is seven hours long and is divided into fourteen modules. Each module is a timed page that requires 30 minutes. A timer on the course page counts down while you study. You can read at your own speed, re-read sections, open the scenario answers, and complete the reflection prompts. When the timer reaches 00:00, you may continue to the next module.</p>
+<h4>Your Path Through the Course</h4>
+<ol>
+<li><strong>Registration.</strong> Before you could open any course material, you gave us your Delaware driver license number. Delaware regulation requires providers to collect it during registration so that your completion can be matched to your driving record.</li>
+<li><strong>Fourteen 30-minute modules.</strong> You will move through the modules in order. Each one begins with learning objectives and ends with a summary of key takeaways.</li>
+<li><strong>Activities.</strong> Scenarios, myth-versus-fact boxes, key terms, and reflection prompts appear throughout. The reflections are for your own use and are not submitted or graded.</li>
+<li><strong>Final exam.</strong> After Module 14 you will take a final exam of at least 25 questions. At least two of those questions will cover interaction with law enforcement during traffic stops. You must score 80% or better to receive credit for the course.</li>
+<li><strong>Affidavit.</strong> After passing, you will complete an online affidavit verifying that you are the person who completed the course and who is receiving the completion certificate.</li>
+<li><strong>Certificate and reporting.</strong> Your certificate becomes available, and your completion is reported to the DMV.</li>
+</ol>
+<div class="warning"><strong>Delaware Affidavit Warning:</strong> The online affidavit asks you to verify that you personally completed the course, that you are the person receiving the certificate, and that you understand that making an unsworn falsification is a violation of 11 Del.C. § 1233 of the Delaware Crimes Code. A violation can bring a fine, imprisonment, or both. Never let another person take this course for you, and never take it for someone else.</div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Defensive Driving Course (DDC)</dt><dd>A DMV-approved course based on Delaware traffic laws, defensive driving, and collision prevention techniques.</dd>
+<dt>Basic Course</dt><dd>The six-hour course that covers every required topic. This is the course you are taking now.</dd>
+<dt>Refresher Course</dt><dd>A three-hour course for drivers who have already completed a Basic Course and want to renew their benefits.</dd>
+<dt>Administrative 3-point credit</dt><dd>A credit entered on your Delaware driving record after you complete an approved course, used by the DMV when calculating penalties for future violations.</dd>
+<dt>DMV Participant Letter</dt><dd>A letter from the Delaware Division of Motor Vehicles explaining what the course does and does not do for your record and insurance. A copy is provided in this course.</dd>
+<dt>Advisory letter</dt><dd>A warning letter the DMV sends when a driver's record reaches 8 points.</dd>
+</dl></div>
+
+<h3>The Benefits of Completing This Course</h3>
+<p>Delaware offers two kinds of benefits to drivers who complete an approved defensive driving course: a reduction in a portion of your auto insurance premium, and an administrative point credit on your driving record. Each one has its own rules. Many drivers misunderstand them, so read this section carefully.</p>
+
+<h4>The 10% Insurance Premium Discount</h4>
+<p>Delaware law, 18 Del.C. § 2503(a)(6), directs the Insurance Commissioner to require a reduction in rates for a three-year period for any person who voluntarily attends and successfully completes a motor vehicle accident prevention course approved by the Division of Motor Vehicles. The details come from Department of Insurance Regulation 607.</p>
+<ul>
+<li><strong>Amount:</strong> 10% per vehicle when all named operators of the vehicle have completed the course. If only some of the operators complete it, the discount is prorated according to the share of operators who completed it.</li>
+<li><strong>What it applies to:</strong> the discount applies to a portion of your premium, specifically bodily injury liability, property damage liability, and personal injury protection (PIP) coverage. It covers private passenger autos, motor homes, and motorcycles owned by an individual, by spouses, or by members of the same household.</li>
+<li><strong>Eligibility:</strong> the driver who customarily operates the vehicle must have completed a Division-approved course within the 36 months before applying. Your completion certificate is conclusive evidence of eligibility.</li>
+<li><strong>How long it lasts:</strong> the discount continues until the policy renewal following three years from your completion date. Your insurer must send you notice before the discount expires.</li>
+</ul>
+<div class="highlight"><strong>Important:</strong> The discount is 10% off a <em>portion</em> of your premium, not 10% off your entire bill. Collision and comprehensive coverage, for example, are not part of the required discount. Questions about how your insurer applies it should go to your insurance company or the Delaware Department of Insurance at 1-800-282-8611.</div>
+
+<h4>The 15% Refresher Discount Rule</h4>
+<p>Regulation 607 rewards drivers who keep their skills current. If you complete a Refresher Course within the 180 days before your three-year discount expires, your discount increases to 15%. If you miss that window and your discount expires, you can still restore it: completing a Refresher Course after expiration, but within two years, restores the discount at 15% from the date you complete the refresher.</p>
+<p>The DMV's own guidance puts the timing another way: take the refresher no sooner than two years and six months after your initial course, and no later than five years after it. Both descriptions lead to the same practical advice. Mark your calendar for about two and a half years after today.</p>
+<table>
+<tr><th>Situation</th><th>Insurance Result (Regulation 607)</th></tr>
+<tr><td>Complete this Basic Course (all named operators)</td><td>10% off the covered portion of the premium until the renewal following 3 years from completion</td></tr>
+<tr><td>Complete this Basic Course (only some operators)</td><td>Discount prorated by the share of operators who completed the course</td></tr>
+<tr><td>Complete a Refresher within 180 days before the 3-year expiration</td><td>15% discount</td></tr>
+<tr><td>Complete a Refresher after expiration but within 2 years</td><td>Discount restored at 15% from the refresher completion date</td></tr>
+</table>
+
+<div class="scenario"><h4>Scenario: The Household Policy</h4><p>Consider a driver we'll call Dana. Dana and her husband are both named operators on the family car. Dana completes this course and sends her certificate to her insurer, expecting a 10% discount. Her husband has not taken any course.</p><details><summary>What should happen here?</summary><p>Under Regulation 607, the full 10% discount applies when all named operators complete the course. Because only one of the two operators completed it, Dana's discount is prorated by the share of operators who finished. If her husband also completes an approved course, the vehicle can qualify for the full 10%. In either case, the discount applies to the bodily injury liability, property damage liability, and PIP portions of the premium.</p></details></div>
+
+<h4>The Administrative 3-Point Credit</h4>
+<p>The second benefit is a 3-point credit on your Delaware driving record. This credit comes from DMV Policy Regulation 2208, section 4.2.2, not from a statute. Under that regulation, when you satisfactorily complete a course that is recognized by the DMV and approved by the Insurance Commissioner's Office, a 3-point credit is entered on your driving record.</p>
+<p>Here is exactly how the credit is applied:</p>
+<ul>
+<li><strong>It works on future violations only.</strong> The credit is effective on your completion date. It does not remove or reduce points you already have, and it is not applied retroactively once an action item, such as a suspension, is already in effect.</li>
+<li><strong>It is not an automatic deduction.</strong> The DMV FAQ states that the credit is "not automatically deducted from your record." Instead, the DMV uses it "in calculating DMV penalties" if you receive future violations, in certain circumstances.</li>
+<li><strong>It does not change the totals others see.</strong> The credit "does not lower total points used for employment and insurance reviews." An employer or insurer reviewing your record will still see your full point total.</li>
+<li><strong>The course is valid for three years.</strong> According to the DMV, "The course is valid for 3 years from the completion date."</li>
+<li><strong>It has limits.</strong> Course credits do not affect whether the DMV sends the 8-point advisory letter, and they do not count toward school bus operator eligibility.</li>
+</ul>
+<p>Questions about the 3-point credit or a lost certificate can be directed to the DMV Driver Improvement office at 302-744-2509.</p>
+
+<div class="myth"><p><strong>Myth:</strong> Taking this course will erase the 3 points from the ticket I got last month.</p><p><strong>Fact:</strong> The credit does not remove or reduce existing points. It is entered on your record on your completion date and is used by the DMV when calculating penalties for future violations, in certain circumstances. The DMV states the course is valid for 3 years from completion.</p></div>
+
+<div class="scenario"><h4>Scenario: Taking the Course After the Letter Arrives</h4><p>A driver we'll call Marcus already has a suspension in effect because of points on his record. He enrolls in this course hoping the 3-point credit will end the suspension early.</p><details><summary>What should happen here?</summary><p>Regulation 2208 says the credit is effective on the completion date and is not applied retroactively once an action item is in effect. Marcus will still benefit from the safety knowledge, and the credit can help with future violations, but it will not undo the suspension that is already in place. The best time to take a defensive driving course is before problems build up, not after.</p></details></div>
+
+<h3>Your Certificate, DMV Notification, and the Participant Letter</h3>
+<p>Delaware requires every provider to tell you how and when you will receive your completion certificate and how the DMV will be notified. Here is how it works in this course.</p>
+<h4>How and When You Receive Your Certificate</h4>
+<p>Your certificate is free. As soon as you pass the final exam with a score of 80% or better and complete the online affidavit, your certificate becomes available in your student portal. You can view it, download it, and print it. It includes, at a minimum:</p>
+<ul>
+<li>Your full name</li>
+<li>The date you completed the course</li>
+<li>The name of the course provider</li>
+<li>The name of the course you completed</li>
+<li>The provider's authorized signature</li>
+</ul>
+<p>Keep your certificate in a safe place. Your insurance company may ask for a copy to apply your premium discount, and the certificate is conclusive evidence of your eligibility under Regulation 607. Note that the DMV itself does not issue certificates; your certificate comes from us, the course provider.</p>
+<h4>How the DMV Is Notified</h4>
+<p>You do not need to mail anything to the DMV. We report your successful completion to the Delaware Division of Motor Vehicles electronically. Delaware regulation requires providers to notify the DMV of each student's successful completion within fourteen days of course completion. This is why the driver license number you provided at registration matters. It allows your completion to be matched to the correct driving record.</p>
+<h4>Telling Your Insurer</h4>
+<p>The DMV record and your insurance policy are separate. To receive your premium discount, contact your insurance company and provide a copy of your certificate. Ask your agent which coverages the discount applies to and when it will take effect.</p>
+<h4>The DMV Participant Letter</h4>
+<p>Delaware requires every provider to give each student a copy of the DMV Participant Letter. A copy is provided in this course. The letter, from the Delaware Division of Motor Vehicles, explains the three-point credit toward future violations and the possible insurance discount, notes that the DMV does not issue certificates, and lists the DMV's defensive driving program contact, DMV-DefensiveDriving@delaware.gov. Please read it before you continue to Module 2.</p>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which benefit matters most to you right now: the insurance discount, the point credit, or improving your driving? Why?</label><textarea></textarea></div>
+
+<h3>Delaware's Point System</h3>
+<p>The DMV tracks moving violations through a point system set out in DMV Policy Regulation 2208, known as the Driver Improvement Problem Driver Program. Each conviction for a moving violation adds points to your record. When your total reaches certain levels, the DMV takes action.</p>
+<h4>Point Values</h4>
+<table>
+<tr><th>Violation</th><th>Points</th></tr>
+<tr><td>Speeding 1–9 mph over the limit</td><td>2</td></tr>
+<tr><td>Speeding 10–14 mph over the limit</td><td>4</td></tr>
+<tr><td>Speeding 15–19 mph over the limit</td><td>5</td></tr>
+<tr><td>Speeding 20 or more mph over the limit</td><td>5*</td></tr>
+<tr><td>Disregarding a stop sign or red light</td><td>3</td></tr>
+<tr><td>Passing a stopped school bus</td><td>6*</td></tr>
+<tr><td>Reckless driving</td><td>6</td></tr>
+<tr><td>Aggressive driving</td><td>6*</td></tr>
+<tr><td>Operation of a vehicle causing death</td><td>6*</td></tr>
+<tr><td>Any other moving violation in Title 21, Chapters 27, 41, or 42</td><td>2</td></tr>
+</table>
+<p>* These violations may lead to more action by the DMV, including suspension.</p>
+<h4>Point Thresholds</h4>
+<table>
+<tr><th>Points</th><th>DMV Action</th></tr>
+<tr><td>8</td><td>Advisory letter</td></tr>
+<tr><td>12</td><td>Complete a behavior modification/attitudinal driving course within 90 days of notice, or a mandatory 2-month suspension</td></tr>
+<tr><td>14</td><td>4-month suspension</td></tr>
+<tr><td>16</td><td>6-month suspension</td></tr>
+<tr><td>18</td><td>8-month suspension</td></tr>
+<tr><td>20</td><td>10-month suspension</td></tr>
+<tr><td>22</td><td>12-month suspension</td></tr>
+</table>
+<p>At 14 points or more, reinstatement requires completion of a behavior modification course within the past two years, plus a reinstatement fee.</p>
+<h4>How Points Age</h4>
+<p>Points do not count the same forever. Under Regulation 2208, points count at full value for 12 months from the date of the violation, then at half value for the next 12 months. The DMV bases its actions on convictions within that 24-month period. In addition, Delaware law generally prevents the DMV from suspending a license based on a driving record more than two years old.</p>
+<h4>Serious Speeding</h4>
+<p>Very high speeds bring action on their own, regardless of your point total. According to the DMV, driving 20–24 mph over the limit brings an advisory letter. Driving 25 or more mph over brings a one-month suspension plus one additional month for each additional 5 mph; at 25–29 mph over, the driver may take a course instead, but at 30 or more mph over the suspension is mandatory. Driving 50 or more mph over the limit, or 100 mph on a highway, brings a one-year suspension.</p>
+<h4>Other Credits</h4>
+<ul>
+<li><strong>No-point speeding credit:</strong> a first ticket in three years for 1–14 mph over carries no points if it is paid through the Voluntary Assessment Center, as a guilty mail-in in Alderman's Court, or online. This applies to Class D license holders only, not CDL holders.</li>
+<li><strong>Seat belt credit:</strong> a 1-point credit, lasting one year, if all occupants were wearing seat belts at the time of the arrest.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: Adding Up the Points</h4><p>A driver we'll call Terrell is convicted of driving 12 mph over the limit in March. In August, he is convicted of running a red light. The following January, he is convicted of driving 16 mph over the limit.</p><details><summary>What should happen here?</summary><p>Using Regulation 2208: 12 mph over is 4 points, running a red light is 3 points, and 16 mph over is 5 points, for 12 points within about ten months. All of these violations are less than 12 months old, so they count at full value. At 12 points, Terrell must complete a behavior modification/attitudinal driving course within 90 days of notice or face a mandatory two-month suspension. That same conviction also carried him past the 8-point advisory-letter level. A defensive driving course completed before these violations could have given him a credit the DMV uses when calculating penalties. The bigger lesson is that a few "small" tickets can add up quickly.</p></details></div>
+
+<div class="warning"><strong>Delaware Warning:</strong> The 3-point credit from this course does not prevent the 8-point advisory letter, and it does not lower the point total that employers and insurers see. The only reliable way to protect your record is to avoid violations in the first place.</div>
+
+<h3>Delaware Crash Statistics</h3>
+<p>Numbers can feel distant, but every one in this section represents a person who left home and did not return. Delaware regulation requires that any statistics in this course be no more than three years old and that each one state the year it was compiled. The figures below come from 2023 through 2025 data published by the State of Delaware, the Delaware Department of Transportation (DelDOT), the Delaware Office of Highway Safety (OHS), and the Insurance Institute for Highway Safety (IIHS).</p>
+<h4>Traffic Deaths by Year</h4>
+<table>
+<tr><th>Year</th><th>Traffic Deaths</th><th>Source</th></tr>
+<tr><td>2023</td><td>137</td><td>State of Delaware, January 2024 release</td></tr>
+<tr><td>2024</td><td>130</td><td>DelDOT state data</td></tr>
+<tr><td>2025</td><td>117 (about 10% fewer than 2024)</td><td>DelDOT state data</td></tr>
+</table>
+<p>The trend is moving in the right direction, but 117 deaths in a single year is still far too many for a state of Delaware's size. DelDOT also reported that in 2025, 50 Delaware deaths involved vehicles leaving the roadway, the one category with a significant increase, and 21 deaths were DUI-related.</p>
+<h4>A Closer Look at 2024</h4>
+<p>The IIHS compiles state data from the federal Fatality Analysis Reporting System (FARS). Federal and state counts are gathered differently, so the IIHS total for 2024 (126 deaths) differs slightly from the DelDOT total (130). The IIHS breakdown for 2024 shows where the risks lie:</p>
+<ul>
+<li>126 deaths, or 12.0 per 100,000 population and 1.27 per 100 million vehicle miles traveled.</li>
+<li>Speed-related crashes accounted for 31 deaths, or 25%.</li>
+<li>An estimated 33% of drivers killed (15 drivers) had a blood alcohol concentration of 0.08 or higher.</li>
+<li>36 of 62 occupants killed were unbelted.</li>
+<li>22 motorcyclists, 28 pedestrians, and 4 bicyclists were killed.</li>
+</ul>
+<div class="highlight"><strong>Seat Belts Work:</strong> In a June 2024 statewide survey reported in the OHS FY2024 Annual Report, observed seat belt use in Delaware was 92.3%. Yet in 2024 (IIHS), more than half of the occupants killed were not wearing a belt. The small share of people who skip the belt make up a large share of the deaths.</div>
+<p>You will see these categories again throughout this course, and each one is something a driver can influence.</p>
+
+<div class="myth"><p><strong>Myth:</strong> Most serious crashes are freak accidents that no one could have prevented.</p><p><strong>Fact:</strong> The leading categories in Delaware's recent data are speed, alcohol impairment, unbelted occupants, and vehicles leaving the roadway. Each of these involves choices that drivers make, which means each one can be reduced by better choices.</p></div>
+
+<h3>The Defensive-Driving Mindset</h3>
+<p>Knowing the law is important, but laws alone do not prevent crashes. A defensive driver goes beyond the minimum. Defensive driving means driving to prevent collisions in spite of the actions of others and in spite of conditions around you. You cannot control the driver who runs a red light, the deer that leaps from the tree line, or the sudden downpour. You can control your speed, your space, your attention, and your reactions.</p>
+<h4>Five Habits of a Defensive Driver</h4>
+<ol>
+<li><strong>Look ahead.</strong> Scan the road 12 to 15 seconds ahead of your vehicle, not just the bumper in front of you. Looking far ahead gives you time to spot brake lights, merging traffic, pedestrians, and hazards before they become emergencies.</li>
+<li><strong>Keep your eyes moving.</strong> Check your mirrors every few seconds and before you slow, stop, or change lanes. Look left, right, and left again at intersections.</li>
+<li><strong>Leave yourself space.</strong> Keep a following distance of at least 3 to 4 seconds in good conditions and more in bad weather, at night, or behind large vehicles. Space is time, and time lets you react.</li>
+<li><strong>Make yourself seen.</strong> Signal early, use your headlights when required and whenever visibility is reduced, and avoid lingering in other drivers' blind spots.</li>
+<li><strong>Have an escape route.</strong> Always know where you would go if the vehicle ahead stopped suddenly or a car drifted into your lane. A shoulder, an open lane, or extra space can be the difference between a close call and a collision.</li>
+</ol>
+<h4>Why Reaction Time Matters</h4>
+<p>A typical driver needs about 1.5 seconds to perceive a hazard and begin to react. At 60 mph, your car travels about 88 feet every second. That means you cover roughly 132 feet before your foot even touches the brake pedal. And braking distance roughly quadruples when your speed doubles. These simple facts explain why speed and following distance appear again and again in this course.</p>
+<h4>Attitude Is a Safety Device</h4>
+<p>Your attitude affects your driving as much as your skill. A driver who treats the road as a competition, who takes other drivers' mistakes personally, or who is always running late takes more risks. A defensive driver expects mistakes from others, forgives them, and leaves room for them. Being right is not the goal. Being safe is.</p>
+
+<div class="scenario"><h4>Scenario: The Familiar Route</h4><p>A driver we'll call Priya has driven the same route to work for eight years. She knows every curve and traffic light. Lately she has been checking messages at red lights and sometimes drifts into "autopilot," arriving at work without remembering parts of the drive.</p><details><summary>What should happen here?</summary><p>Familiarity can breed complacency. Priya's experience is an asset only if she stays engaged. A defensive driver treats every trip as new: a child could run into the street, a driver could run a red light, a work zone could appear overnight. Priya should put her phone away before she starts the car, keep scanning 12 to 15 seconds ahead, and notice when her attention drifts. Delaware's hand-held device law, covered in Module 8, prohibits using a hand-held device while the vehicle is in motion, and safe habits at red lights help her stay focused when traffic moves again.</p></details></div>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Name one driving habit you have developed over the years that you suspect is not a safe one. What would it take to change it?</label><textarea></textarea></div>
+
+<h3>Looking Ahead</h3>
+<p>Module 2 covers a topic Delaware considers so important that it must appear on your final exam: how to interact with law enforcement during a traffic stop. As you study, keep three questions in mind: What does Delaware law require here? What can go wrong? And what can I do, starting today, to make it less likely?</p>
+
+<h3>Module Summary</h3>
+<ul>
+<li>This seven-hour Teen Basic Course has fourteen 30-minute timed modules, followed by a final exam of at least 25 questions that requires 80% or better to pass, and an online affidavit.</li>
+<li>Completing the course can earn a 10% discount on the bodily injury, property damage, and PIP portions of your insurance premium until the renewal following three years from completion, prorated if not all named operators complete it.</li>
+<li>A Refresher Course completed within 180 days before the three-year expiration raises the discount to 15%; one completed after expiration but within two years restores it at 15%.</li>
+<li>The administrative 3-point credit is entered on your record on your completion date, applies only to future violations in certain circumstances, is not automatically deducted, does not lower the totals seen by employers and insurers, and the DMV states the course is valid for 3 years from completion.</li>
+<li>Your free certificate is available in your student portal after you pass and complete the affidavit, and we notify the DMV electronically within 14 days of completion, as Delaware regulation requires.</li>
+<li>A copy of the DMV Participant Letter is provided in this course; read it before continuing.</li>
+<li>Delaware points range from 2 to 6 per violation; 8 points brings an advisory letter, 12 points requires a behavior modification course within 90 days or a 2-month suspension, and 14 or more points brings suspensions of 4 to 12 months.</li>
+<li>Points count at full value for 12 months and half value for the next 12 months.</li>
+<li>Delaware recorded 137 traffic deaths in 2023, 130 in 2024, and 117 in 2025 (DelDOT), with speed, alcohol, unbelted occupants, and roadway departure among the leading factors.</li>
+<li>The defensive-driving mindset means looking ahead, keeping space, staying visible, planning an escape route, and choosing safety over being right.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 2: Interaction with Law Enforcement During Traffic Stops.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 1 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 2.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m1-remaining', DONE='de-teen-m1-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 1. Return to your course and continue to Module 2.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

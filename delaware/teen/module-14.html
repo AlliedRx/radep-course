@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 14: Phones, Speed, Backing, and In-Car Distractions | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 14 of 14 &middot; 30 minutes</span>Module 14: Phones, Speed, Backing, and In-Car Distractions</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 4.1.3.3, 4.1.3.4, 4.1.3.5, 4.1.3.6, 4.1.3.6.1, 4.1.3.6.2, 4.1.3.6.3, 4.2.2.2 -->
+<p>This is the last module of your Teen Basic Course. It focuses on four things that cause a large share of new-driver crashes: phones and other technology, speed, backing up, and distractions inside the car, such as passengers, the radio, and food. None of these topics is complicated on paper. Everyone knows texting while driving is dangerous and that speed makes crashes worse. The challenge is that these risks show up in ordinary moments: a notification during a quiet drive, a friend asking you to go a little faster, a quick reverse out of a crowded parking space. This module is about building habits that hold up in those moments. Parents, read along too. Teens learn far more from what they see adults do behind the wheel than from what they are told.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>State Delaware's hand-held device law for all drivers and the stricter GDL phone ban, and build a personal plan for managing your phone.</li>
+<li>Explain how speed affects reaction distance, braking distance, and crash energy, using worked examples.</li>
+<li>Apply Delaware speed limits and understand the points and suspensions that speeding can bring.</li>
+<li>Back a vehicle safely, including the limits of backup cameras and the danger to small children in blind zones.</li>
+<li>Manage passengers, the radio, and eating so they do not pull your attention from the road.</li>
+<li>Describe the Teen Basic Course final exam requirements.</li>
+</ul></div>
+
+<h3>Topic 4.1.3.3: Cell Phones and Other Technology While Driving</h3>
+<p>Your phone is designed to get your attention. Notifications, sounds, and vibrations are built to make you look, and when you are driving, every look is time without your eyes on the road. At 60 mph, your car travels about 88 feet every second. If you glance down for 3 seconds to read a message, you travel about 264 feet, close to the length of a football field, without seeing what is in front of you. Texting combines all three types of distraction: it takes your eyes off the road (visual), your hands off the wheel (manual), and your mind off driving (cognitive).</p>
+<h4>Delaware law for all drivers</h4>
+<p>Delaware's hand-held device law, 21 Del.C. §4176C, applies to every driver. It prohibits using an electronic communication device while the vehicle is in motion. "Using" includes holding the device to talk, text, browse, or play games. Adult drivers may use hands-free features. Exceptions include reporting an emergency or a crime. A first offense carries a $100 fine, and a subsequent offense within 2 years carries a fine of $200 to $300.</p>
+<h4>The stricter rule for permit holders</h4>
+<p>As you reviewed in the last module, Delaware's GDL law is stricter. Under §2710(c)(8), a permit holder may not use <em>any</em> cell phone or texting device while driving, and that includes hands-free use. No calls through the car's speakers, no voice-to-text, no quick replies. Breaking a permit restriction is treated as driving without a license and can bring a 2-month suspension for a first offense.</p>
+<div class="warning"><strong>Phones and the law in Delaware:</strong> All drivers: no holding a device to talk, text, browse, or play games while moving (§4176C; $100 first offense, $200 to $300 for a repeat within 2 years). GDL permit holders: no cell phone or texting device use at all while driving, including hands-free (§2710(c)(8)).</div>
+<h4>Other technology</h4>
+<p>Phones are not the only source of technology distraction. In-car touchscreens, navigation apps, music apps, and smartwatches can all pull your eyes and attention away from the road. Hands-free does not mean mind-free: a demanding conversation or task can take your mind off the road even when your eyes are pointed forward. The safest approach is to set everything up before you move: enter your destination, choose your music or playlist, adjust the climate controls, and put your phone away.</p>
+<h4>Your phone plan</h4>
+<ol>
+<li><strong>Before you start the car:</strong> set your navigation and audio, then put the phone where you cannot reach it, such as the glove box or a bag in the back seat.</li>
+<li><strong>Turn on a driving focus or do-not-disturb mode</strong> that silences notifications and sends an automatic reply.</li>
+<li><strong>Tell people your plan.</strong> Let friends and family know you do not answer while driving. Parents: do not call or text your teen when you know they are on the road.</li>
+<li><strong>If something truly cannot wait,</strong> pull into a safe, legal parking spot, put the car in park, and then use your phone.</li>
+<li><strong>Let a passenger handle it.</strong> If you are a licensed driver with a passenger, they can navigate or respond to messages for you.</li>
+</ol>
+<p>Parents and sponsors play a big part here. Teens notice when an adult checks a phone at a red light or answers a call while driving. Following the same phone plan you expect your teen to follow is one of the most effective lessons you can give.</p>
+<div class="scenario"><h4>Scenario: The Group Chat</h4><p>Consider a permit holder we'll call Elijah. He is eight months into his permit, driving alone to practice after school. His phone, sitting in the cup holder, keeps buzzing with messages from a group chat about plans for the weekend. At a long red light, he picks it up to read the messages.</p><details><summary>What should happen here?</summary><p>As a permit holder, Elijah may not use any cell phone or texting device while driving. Even at a red light, he is still in traffic and responsible for watching the signal, pedestrians, and other vehicles. Picking up the phone also builds a habit of reaching for it while the car is in motion. Elijah should have put the phone out of reach and turned on do-not-disturb mode before starting the car, then checked messages after parking at practice.</p></details></div>
+
+<h3>Topic 4.1.3.4: Speed and How It Impacts Driving Performance</h3>
+<p>Speed affects every part of your driving. The faster you go, the less time you have to notice a hazard, the farther you travel before you react, the longer it takes to stop, and the harder you hit if you cannot stop. It also narrows your field of vision, because at higher speeds your eyes focus farther ahead and you notice less at the sides of the road, where children, pedestrians, cyclists, and cars pulling out are found.</p>
+<div class="highlight"><strong>2024 Delaware data (IIHS, compiled from NHTSA FARS):</strong> Of the 126 people killed in Delaware traffic crashes in 2024, 31, or about 25%, died in speed-related crashes.</div>
+<h4>The physics of speed</h4>
+<p>Three rules explain why speed is so dangerous:</p>
+<ul>
+<li><strong>Reaction distance grows with speed.</strong> The average driver takes about 1.5 seconds to see a hazard and get a foot on the brake. During that time, the car keeps moving at full speed.</li>
+<li><strong>Braking distance grows with the square of speed.</strong> When speed doubles, braking distance roughly quadruples.</li>
+<li><strong>Crash energy also grows with the square of speed.</strong> A crash at 50 mph carries about 56% more energy than a crash at 40 mph, even though the speed is only 25% higher.</li>
+</ul>
+<h4>Worked example 1: reaction distance</h4>
+<p>To convert miles per hour to feet per second, multiply by about 1.47. At 30 mph, you travel about 44 feet per second. With a 1.5-second reaction time, you travel about 66 feet before braking. At 45 mph (about 66 feet per second), you travel about 99 feet before braking. At 60 mph (about 88 feet per second), you travel about 132 feet before braking. In each case, the brakes have not even started to work yet.</p>
+<h4>Worked example 2: braking distance</h4>
+<p>Suppose your car needs a certain braking distance to stop from 30 mph on dry pavement. Call it X. At 60 mph, twice the speed, the braking distance is roughly 4X. For illustration, if X were 45 feet, your braking distance from 60 mph would be roughly 180 feet. Add the 132 feet of reaction distance, and your total stopping distance from 60 mph is over 300 feet, the length of a football field, compared with roughly 110 feet from 30 mph.</p>
+<h4>Worked example 3: the time-saved myth</h4>
+<p>Many drivers speed because they believe it saves a lot of time. On a 10-mile trip, driving at 60 mph takes 10 minutes. Driving at 70 mph takes about 8 minutes and 34 seconds. The difference is about 1 minute and 26 seconds, and that assumes you never hit a red light or slow traffic, which would erase most of that gain. A minute and a half is not worth the added reaction distance, braking distance, and crash energy.</p>
+<table>
+<tr><th>Speed</th><th>Feet per second</th><th>Reaction distance (1.5 s)</th><th>Relative braking distance</th></tr>
+<tr><td>30 mph</td><td>about 44</td><td>about 66 feet</td><td>1X</td></tr>
+<tr><td>45 mph</td><td>about 66</td><td>about 99 feet</td><td>about 2.25X</td></tr>
+<tr><td>60 mph</td><td>about 88</td><td>about 132 feet</td><td>about 4X</td></tr>
+</table>
+
+<h3>Delaware Speed Laws, Points, and Teen Consequences</h3>
+<p>Delaware's basic speed rule, §4168(a), says "No person shall drive a vehicle on a highway at a speed greater than is reasonable and prudent under the conditions." A posted limit is the maximum in good conditions. In rain, fog, darkness, or heavy traffic, the safe speed may be well below it. When no limit is posted, §4169(a) sets statutory limits: 25 mph in business districts, 20 or 25 mph in residence districts, 20 mph in school zones where posted with times or conditions, 50 mph on two-lane roadways, and 55 mph on four-lane and divided roadways.</p>
+<h4>Points and suspensions</h4>
+<table>
+<tr><th>Speed over the limit</th><th>Points (DMV Regulation 2208)</th></tr>
+<tr><td>1 to 9 mph over</td><td>2 points</td></tr>
+<tr><td>10 to 14 mph over</td><td>4 points</td></tr>
+<tr><td>15 to 19 mph over</td><td>5 points</td></tr>
+<tr><td>20 or more mph over</td><td>5 points, and possible further action including suspension</td></tr>
+</table>
+<p>DMV also takes direct action for serious speeding. At 20 to 24 mph over, you receive an advisory letter. At 25 or more over, the penalty is a 1-month suspension plus 1 more month for each additional 5 mph. At 50 or more over, or 100 mph on a highway, the suspension is 1 year. For teen drivers there is an extra layer: DMV may immediately suspend a minor for reckless or negligent driving or a serious moving violation, for 1 month the first time and 3 months after that (§2710(j)). In Delaware, driving 90 mph or more is reckless driving under §4175, which carries 6 points and possible jail time.</p>
+<h4>Why teens feel the pull to speed</h4>
+<p>Speeding is often about feelings, not schedules: excitement, wanting to keep up with traffic, pressure from friends, or frustration at being late. Recognize those feelings when they show up. Leave earlier so you are not rushed. If a friend urges you to go faster, you can say, "If I get a ticket, I could lose my license." That is a real risk for a teen driver, and it ends the conversation.</p>
+<div class="myth"><p><strong>Myth:</strong> Going 10 mph over the limit is no big deal, because everyone does it.</p><p><strong>Fact:</strong> At 10 to 14 mph over, Delaware assigns 4 points. Speed also increases your reaction distance, braking distance, and crash energy. What other drivers do does not change the physics.</p></div>
+
+<h3>Managing Your Speed: Skills for New Drivers</h3>
+<p>Knowing the limits is only part of speed management. The other part is choosing the right speed for what is in front of you, moment to moment. These habits help:</p>
+<ul>
+<li><strong>Slow before curves, not in them.</strong> Braking in the middle of a curve can upset the car's balance. Reduce speed on the straight section before the curve, then hold a steady speed through it.</li>
+<li><strong>Watch for school zones and neighborhoods.</strong> Where a 20 mph school zone is posted with times or conditions, slow down during those times, and expect children who may not look before crossing.</li>
+<li><strong>Do not out-drive your headlights.</strong> At night, if you cannot stop within the distance your headlights show you, you are going too fast for the conditions, even if you are under the limit.</li>
+<li><strong>Adjust for weather.</strong> Wet, icy, or snowy roads increase braking distance. Slow down and increase your following distance well beyond the usual 3 to 4 seconds.</li>
+<li><strong>Check your speedometer often.</strong> New drivers frequently drift above the limit without noticing, especially on downhill stretches and highways.</li>
+</ul>
+<div class="scenario"><h4>Scenario: Keeping Up With Traffic</h4><p>Consider a newly licensed driver we'll call Noah. On a four-lane divided road with no posted sign for several miles, the traffic around him is moving about 65 mph. Noah figures that if everyone else is going that fast, it must be fine, and keeps pace.</p><details><summary>What should happen here?</summary><p>On an unposted four-lane or divided roadway, Delaware's statutory limit is 55 mph (§4169(a)), unless a different limit is posted. At 65 mph, Noah is 10 mph over, which carries 4 points, and those points count at full value for 12 months under DMV Regulation 2208. Other drivers' speed does not change the law or the physics. Noah should move to the right lane, drive at a legal and safe speed, and let faster traffic pass.</p></details></div>
+
+<h3>Topic 4.1.3.5: Backing the Vehicle Safely</h3>
+<p>Backing up is one of the most common sources of low-speed crashes, especially in driveways and parking lots. When you back up, you are steering a vehicle in a direction you cannot fully see, with large blind areas behind and beside you. Many vehicles also handle differently in reverse, and small steering movements can swing the front of the car wide.</p>
+<h4>Before you back up</h4>
+<ul>
+<li><strong>Walk around the vehicle</strong> before getting in, especially at home, where children, pets, bikes, and toys may be behind the car.</li>
+<li><strong>Plan your path.</strong> Know where you will go before you shift into reverse.</li>
+<li><strong>Look before you move.</strong> Check all mirrors and turn your body to look over your right shoulder through the rear window.</li>
+</ul>
+<h4>While you back up</h4>
+<ol>
+<li>Place your left hand at the top of the steering wheel and turn your body to look back over your right shoulder through the rear window.</li>
+<li>Move slowly. Keep your foot ready on the brake and use gentle pressure; in most vehicles, idle speed is enough.</li>
+<li>Turn the top of the wheel in the direction you want the rear of the vehicle to go.</li>
+<li>Glance forward and to the sides periodically, because the front of the car swings out when you turn while backing.</li>
+<li>Stop if anything enters your path, and do not start again until it is clear.</li>
+</ol>
+<h4>Backing out of a parking space</h4>
+<p>Parking lots are full of hazards moving in every direction: cars backing out, drivers looking for spaces, shopping carts, and pedestrians walking behind parked cars. Back out slowly, a little at a time, so drivers and pedestrians have time to see you. If a large vehicle is parked next to you and blocks your view, creep out especially slowly. When you can, choose a pull-through space or back into a space when the lot is quiet, so you can drive forward when you leave, when traffic is heavier.</p>
+
+<h3>Backup Cameras, Blind Zones, and Children</h3>
+<h4>What backup cameras can and cannot do</h4>
+<p>Backup cameras are a valuable tool, but they have real limits:</p>
+<ul>
+<li>They show only a narrow area directly behind the car. A child or car approaching from the side may not appear until it is very close.</li>
+<li>The wide-angle lens can make objects look farther away than they are.</li>
+<li>Rain, snow, mud, and darkness can blur or block the image.</li>
+<li>A camera cannot see what is beside your rear fenders.</li>
+</ul>
+<p>Use the camera <em>along with</em> your mirrors and a look over your shoulder, never instead of them. Rear cross-traffic alerts and parking sensors help too, but they may not detect every small object or person.</p>
+<div class="myth"><p><strong>Myth:</strong> If my backup camera shows nothing behind me, it is safe to back up at normal speed.</p><p><strong>Fact:</strong> The camera shows only a narrow strip behind the car and cannot see beside the rear fenders. A child, cyclist, or car can enter your path from the side after you look. Back slowly, look over your shoulder, and use the camera as one of several checks.</p></div>
+<h4>Children and blind zones</h4>
+<p>The area directly behind a vehicle, the rear blind zone, can be large enough to hide a small child completely, especially behind a taller vehicle like an SUV or pickup. Small children move quickly and unpredictably, do not understand that a driver cannot see them, and may run behind a car to retrieve a ball or follow a pet. Before backing out of any driveway, know where every child is. If children are playing nearby, have an adult hold their hands or keep them well away while you back out. Delaware law requires drivers to use due care toward pedestrians, especially children (§4144).</p>
+<div class="scenario"><h4>Scenario: The Driveway</h4><p>Consider a newly licensed driver we'll call Taylor. Taylor is backing out of the driveway at a family friend's house. Several young children are playing in the front yard. Taylor checks the backup camera, sees an empty driveway, and starts to reverse at a normal speed.</p><details><summary>What should happen here?</summary><p>The camera shows only a narrow area behind the car. A child could step behind the car from the side after Taylor looked at the screen. Before backing out, Taylor should know where every child is, ideally asking an adult to keep the children out of the driveway. Then Taylor should check the mirrors, turn to look over the right shoulder, use the camera as an extra check, and back out very slowly, ready to stop.</p></details></div>
+
+<h3>Topic 4.1.3.6: Vehicle Distractions</h3>
+<h4>4.1.3.6.1 Passengers</h4>
+<p>Passengers, especially other teens, can be one of the biggest risks for new drivers. Friends may talk loudly, show you videos, encourage you to speed, or simply make the car feel like a social event instead of a driving task. That is why Delaware's GDL rules limit passengers. During your first 12 months, you may carry only your supervisor plus 1 other passenger, with immediate family exempt when the supervisor is present; during the unsupervised period, only 1 passenger besides you. Even after you are licensed, set ground rules: seat belts on before you move, no distracting behavior, and quiet when traffic is complicated. Ask your passenger to help instead of distract, by watching for signs or handling navigation. And if a passenger is pressuring you to drive in a way you are not comfortable with, you have the right to say no. You are the driver.</p>
+<h4>4.1.3.6.2 Radio</h4>
+<p>Music can make driving more enjoyable, but adjusting the radio, scrolling through playlists, and choosing songs on a touchscreen take your eyes and hands off the road. Loud music can also keep you from hearing sirens, horns, or trains. Pick your music before you start, keep the volume low enough to hear what is happening outside the car, and use steering-wheel controls if your vehicle has them. If a song or station needs adjusting in heavy traffic, let it go until you stop. Permit holders: remember that using a phone to play or change music while driving counts as using a phone under the GDL ban.</p>
+<h4>4.1.3.6.3 Eating</h4>
+<p>Eating while driving often seems harmless, but it combines visual, manual, and cognitive distraction. You look down to unwrap food, take a hand off the wheel to hold it, and react without thinking when something spills. Messy foods and hot drinks are the worst, because a spill can cause a sudden reaction. The best plan is to eat before or after you drive. If you are on a long trip, stop and take a break to eat. If you do have a drink, use a cup with a secure lid in the cup holder, and never reach to the floor for something you dropped while the car is moving.</p>
+<div class="scenario"><h4>Scenario: The Drive-Through</h4><p>Consider a licensed 17-year-old driver we'll call Jasmine. After picking up a friend and grabbing dinner at a drive-through, she is eating fries with one hand and steering with the other while her friend changes the music on the car's touchscreen. A car ahead stops suddenly.</p><details><summary>What should happen here?</summary><p>Jasmine has stacked three distractions: eating, a busy passenger, and changing music. Her hands, eyes, and attention are all divided, which slows her reaction to the stopping car. She should have parked to eat, or waited until she got home, and agreed with her friend to set the music before leaving. With both hands on the wheel and full attention, she would have had the time she needed to brake safely.</p></details></div>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which of the distractions in this module (phone, speed pressure, passengers, radio, eating) is the biggest risk for you? Write one specific rule you will follow on every trip.</label><textarea></textarea></div>
+
+<h3>The Teen Basic Course Final Exam</h3>
+<p>You have now completed all of the material for the Teen Basic Course: the twelve core modules required for every Delaware defensive driving student, plus these two teen modules on the GDL, Zero Tolerance, phones, speed, backing, and in-car distractions.</p>
+<h4>What to expect</h4>
+<ul>
+<li>The final exam has at least 25 questions, covering material from the entire course.</li>
+<li>At least two questions relate to interaction with law enforcement during traffic stops.</li>
+<li>You must score <strong>80% or better</strong> to receive credit for the course. If you do not pass, you may retake the exam.</li>
+<li>After passing, you will complete an online affidavit verifying that you are the person who completed the course and are receiving the completion certificate, and that you understand that making an unsworn falsification violates 11 Del.C. §1233 and can lead to a fine, imprisonment, or both.</li>
+</ul>
+<h4>Your certificate</h4>
+<p>After you pass and complete the affidavit, your free completion certificate will be available in your student portal. It shows your full name, the date of completion, the provider's name, the name of the course, and the provider's authorized signature. We report your completion electronically to the Delaware DMV within 14 days. If you have questions about your course or certificate, call [TOLL-FREE NUMBER].</p>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Hand-held device law</dt><dd>21 Del.C. §4176C, which bans holding a device to talk, text, browse, or play games while the vehicle is in motion.</dd>
+<dt>GDL phone ban</dt><dd>21 Del.C. §2710(c)(8), which bars permit holders from using any cell phone or texting device while driving, including hands-free.</dd>
+<dt>Reaction distance</dt><dd>The distance traveled during the roughly 1.5 seconds it takes to see a hazard and begin braking.</dd>
+<dt>Crash energy</dt><dd>The force involved in a crash, which rises with the square of speed.</dd>
+<dt>Rear blind zone</dt><dd>The area behind a vehicle that the driver cannot see, large enough to hide a small child.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>All Delaware drivers are barred from holding a device to talk, text, browse, or play games while moving; GDL permit holders may not use any phone, even hands-free.</li>
+<li>Set up navigation and music before you move, and put your phone out of reach.</li>
+<li>At 60 mph you travel about 88 feet per second; with a 1.5-second reaction time, that is about 132 feet before you even begin to brake.</li>
+<li>Braking distance roughly quadruples when speed doubles, and a 50 mph crash carries about 56% more energy than a 40 mph crash.</li>
+<li>Speeding on a 10-mile trip at 70 instead of 60 mph saves only about 1 minute and 26 seconds.</li>
+<li>Speeding brings 2 to 5 points, and serious speeding or a serious moving violation can bring a suspension for a teen driver.</li>
+<li>Before backing, walk around the car and know where children are; back slowly while looking over your shoulder, and use the camera as an extra check only.</li>
+<li>Follow GDL passenger limits, keep the radio set and low, and eat before or after you drive.</li>
+<li>The final exam has at least 25 questions, including at least two on traffic stops, and requires 80% or better to pass.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the Final Exam. You must score 80% or better to pass.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 14 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to the Final Exam.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m14-remaining', DONE='de-teen-m14-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 14. Return to your course and continue to the Final Exam.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

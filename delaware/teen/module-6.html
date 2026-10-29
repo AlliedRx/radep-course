@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 6: Sharing the Road with Vulnerable Users | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 6 of 14 &middot; 30 minutes</span>Module 6: Sharing the Road with Vulnerable Users</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.5, 6.1.5.1, 6.1.5.1.1, 6.1.5.1.2, 6.1.5.1.3, 6.1.5.1.4, 6.1.5.1.5, 6.1.5.2, 6.1.5.2.1, 6.1.5.2.2, 6.1.5.2.3 -->
+<p>When two cars collide, both drivers are surrounded by steel, glass, seat belts, and airbags. When a car strikes a person walking or riding a bicycle, only one side of the crash has any protection at all. That is why pedestrians and cyclists are called vulnerable road users. They have the same right to use Delaware's roads as you do, and in many places they depend on drivers to notice them, give them space, and yield when the law requires it. This module covers Delaware's rules for sharing the road with bicycles and pedestrians, including the White Cane Law that protects people who are blind or visually impaired, and the defensive habits that prevent the most common crashes.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Explain when drivers must yield to bicycles and why cyclists have the same rights and duties as other drivers in Delaware.</li>
+<li>Pass a cyclist safely using Delaware's 3-foot minimum and full lane change rule.</li>
+<li>Describe how the rules change when a cyclist walks a bicycle versus rides it on the roadway.</li>
+<li>Anticipate the most common conflicts between motor vehicles and cyclists.</li>
+<li>Apply Delaware's pedestrian right-of-way rules and the Delaware White Cane Law.</li>
+</ul></div>
+
+<h3>Why Vulnerable Road Users Need Your Attention</h3>
+<p>Pedestrians and cyclists make up a meaningful share of the people killed on Delaware roads every year, even though they account for a small share of the traffic. The numbers below come from three sources, so each is labeled with its year and source.</p>
+<table>
+<tr><th>Measure</th><th>Figure</th><th>Year and source</th></tr>
+<tr><td>Pedestrians killed in Delaware</td><td>28 (of 126 total traffic deaths)</td><td>2024, IIHS, compiled from NHTSA FARS</td></tr>
+<tr><td>Bicyclists killed in Delaware</td><td>4</td><td>2024, IIHS, compiled from NHTSA FARS</td></tr>
+<tr><td>Change in pedestrian and bicyclist deaths</td><td>Pedestrian deaths fell 13%; bicyclist deaths fell 29%, compared with the previous year</td><td>2023, State of Delaware release (Jan. 12, 2024)</td></tr>
+<tr><td>Pedestrian deaths, Jan. 1 to Oct. 28</td><td>21 in 2025; 21 in 2026 (unofficial)</td><td>2025–2026, Delaware Office of Highway Safety</td></tr>
+</table>
+<p>In 2024, pedestrians alone accounted for more than one in five Delaware traffic deaths. Each of those numbers represents a person who was walking to work, crossing to a bus stop, or riding home. Most of these crashes happen in ordinary places: crossing a suburban arterial road, at an intersection while a driver turns, or along a dark road at night.</p>
+<div class="warning"><strong>Delaware's vulnerable user law (21 Del.C. §4176E):</strong> If you cause "serious physical injury" to a vulnerable user while violating Chapter 41 of the traffic code, the penalties include a $550 fine, license suspension of up to 1 year, a DMV-approved traffic safety course, and 10 to 100 hours of community service. Covered persons include pedestrians; highway, utility, and emergency workers; animal riders; and people on bicycles, e-bikes, mopeds, motorcycles, scooters, skateboards, skates, wheelchairs, and similar devices.</div>
+
+<h3>Topic 6.1.5.1.1: Yielding to Bicycles</h3>
+<p>The starting point for every bicycle rule in Delaware is 21 Del.C. §4193: a person riding a bicycle has the same rights and duties as other drivers. That means the normal right-of-way rules apply between you and a cyclist exactly as they would between you and another car.</p>
+<ul>
+<li><strong>Turning left:</strong> A driver turning left must yield to oncoming traffic (§4132). An oncoming cyclist is oncoming traffic. Cyclists are smaller and harder to judge, so look carefully before turning across their path.</li>
+<li><strong>Already in the intersection:</strong> You must yield to a vehicle already in the intersection (§4131(a)), including a bicycle.</li>
+<li><strong>Arriving at the same time:</strong> When two vehicles arrive at about the same time, the driver on the left yields to the one on the right (§4131(b)). A cyclist on your right gets the same treatment.</li>
+<li><strong>Leaving a driveway or parking lot:</strong> A driver entering the road from a driveway or other place that is not a roadway must yield to all traffic on the roadway (§4133). That includes cyclists in the road, and you should also watch for cyclists riding on the sidewalk across the driveway.</li>
+<li><strong>Roundabouts:</strong> DelDOT's roundabout guidance tells drivers to let bicyclists merge as they enter and to yield to pedestrians and cyclists as they exit.</li>
+</ul>
+<h4>The "Delaware Yield"</h4>
+<p>Delaware has a special stop-sign rule for cyclists, often called the "Delaware Yield" (§4196A). At a stop sign on a roadway with two or fewer lanes, a cyclist may slow down, yield to traffic that has the right of way, and then proceed without coming to a full stop. On a roadway with three or more lanes, the cyclist must make a full stop. As a driver, expect cyclists to roll slowly through stop signs on smaller roads. That is legal when they yield. If you have the right of way, proceed predictably. If the cyclist is already in the intersection, yield to them as you would to any vehicle.</p>
+<div class="myth"><p><strong>Myth:</strong> Cars always have the right of way over bicycles because cars are bigger and faster.</p><p><strong>Fact:</strong> Size and speed do not decide right of way in Delaware. Under §4193, cyclists have the same rights and duties as other drivers, so the usual rules about left turns, intersections, and driveways protect cyclists too.</p></div>
+
+<h3>Topic 6.1.5.1.2: Space Needed for Passing and Bicycle Safety</h3>
+<h4>Delaware's passing rule</h4>
+<p>Delaware law is specific about how to pass a cyclist. Under 21 Del.C. §4116:</p>
+<ul>
+<li>When passing a bicycle in a single lane, you must leave "a reasonable and prudent distance, which shall in any case never be less than 3 feet."</li>
+<li>Where there are two lanes going in the same direction, you must "move completely into the lane to the left before passing." Moving half into the next lane is not enough.</li>
+</ul>
+<p>Three feet is the minimum, not the goal. At higher speeds, the air pushed by a passing vehicle can unsettle a rider, so give more space whenever you can. If you cannot give at least 3 feet because of oncoming traffic, a curve, or a narrow bridge, slow down and wait behind the cyclist until it is safe. Passing rules that protect against head-on crashes still apply: you may not drive left of center near a curve or hill crest where your view is blocked, or within 100 feet of an intersection or railroad crossing (§4119), and you must obey no-passing zones (§4120).</p>
+<h4>A worked example</h4>
+<p>Consider a two-lane road with a 50 mph limit and a cyclist riding near the right edge. Your car is about 6 feet wide. If the cyclist occupies about 2 feet of the lane's right side and you must leave at least 3 feet, you need at least 11 feet of road from the right edge to your car's left side. Many two-lane travel lanes are about 10 to 12 feet wide, so in practice you will usually need to move partly or fully into the opposite lane to pass legally. That is only allowed when the road is clear of oncoming traffic far enough ahead and you are not in a no-passing zone. If those conditions are not met, the answer is to wait. Following a cyclist for 20 seconds at a lower speed costs you very little time.</p>
+<h4>After you pass</h4>
+<p>Do not cut back in quickly. Wait until you can see the cyclist in your inside rearview mirror before returning to the lane, and never slow down or turn right immediately after passing a cyclist. That move, the "right hook," is covered below.</p>
+<h4>What Delaware requires of cyclists</h4>
+<p>Knowing the cyclist's duties helps you predict what they will do:</p>
+<ul>
+<li>Cyclists generally ride in the right half of the roadway, with exceptions listed in the law (§4196(a)). Expect them to move left to avoid debris, potholes, parked car doors, or to prepare for a left turn.</li>
+<li>Riders and passengers under 18 must wear a helmet. The parent is fined $25 for a first offense and $50 after that (§4198K(a)).</li>
+<li>At night, a bicycle must have a front lamp and a red rear reflector (§4198F). Even so, cyclists can be hard to see at night, so use your headlights and scan the road edges.</li>
+<li>Riding on sidewalks is allowed unless signs prohibit it, and cyclists on sidewalks must yield to pedestrians (§4198B).</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: Stuck Behind a Cyclist</h4><p>A driver we'll call Andre is on a two-lane road in Sussex County behind a cyclist riding near the edge at about 15 mph. There is a double yellow line, and a curve ahead blocks his view of oncoming traffic. Andre is running late and is tempted to squeeze past while staying mostly in his own lane.</p><details><summary>What should happen here?</summary><p>Andre must give the cyclist at least 3 feet when passing (§4116), and he cannot drive left of center where a curve blocks his view (§4119) or in a no-passing zone (§4120). Squeezing past would likely violate the 3-foot rule and would put the cyclist at serious risk. He should slow down, stay a safe distance behind, and wait until the road straightens, the view is clear, and passing is permitted. Then he should move over fully, pass steadily, and return only when the cyclist appears in his rearview mirror.</p></details></div>
+
+<h3>Topic 6.1.5.1.3: A Bicycle Pushed by Its Rider</h3>
+<p>Delaware's defensive driving standards require drivers to understand this rule: <strong>a bicycle being pushed by the rider has the same rights and responsibilities as a pedestrian.</strong> Once a cyclist gets off and walks the bicycle, they are a pedestrian for traffic purposes.</p>
+<p>For drivers, this means:</p>
+<ul>
+<li>A person walking a bicycle across a crosswalk gets the same protection as any other pedestrian. Where there are no working signals, or when you are turning, you must yield to them, slowing down or stopping if needed (§4142(a)).</li>
+<li>A person walking a bicycle along the edge of a road is owed the same due care as any other pedestrian (§4144).</li>
+<li>A person walking a bicycle must also follow the rules that apply to pedestrians, such as obeying pedestrian signals.</li>
+</ul>
+<p>Cyclists often dismount to cross busy roads, to use a crosswalk at a large intersection, or because a bicycle has a flat tire or broken chain. A walking cyclist moves at walking speed, and the bicycle makes the person wider and slower to clear your lane than a pedestrian alone. Allow extra time.</p>
+
+<h3>Topic 6.1.5.1.4: A Bicycle Ridden on the Roadway</h3>
+<p>The opposite is also true: <strong>a bicycle ridden on the roadway has the same rights and responsibilities as other motor vehicles.</strong> This principle reflects §4193, which gives cyclists the same rights and duties as other drivers.</p>
+<p><strong>The cyclist's responsibilities:</strong> A cyclist riding on the road must obey traffic signals, signs, and lane markings, ride with traffic (not against it), signal turns, and yield when the law requires. The Delaware Yield at stop signs on smaller roads is a specific exception written into the law, not a general license to ignore traffic controls.</p>
+<p><strong>The cyclist's rights:</strong> A cyclist riding on the road is entitled to be there. Drivers may not crowd, cut off, or intimidate a cyclist, and the normal right-of-way rules protect them.</p>
+<p><strong>What this means for you:</strong></p>
+<ul>
+<li>Treat a cyclist in your lane as a slow-moving vehicle. Keep a following distance of at least 3 to 4 seconds, just as you would behind a car, and more in bad weather.</li>
+<li>Do not honk to "warn" a cyclist unless there is a real emergency. A sudden horn can startle a rider into swerving.</li>
+<li>A cyclist using a turn lane or taking the center of a lane before a left turn is behaving as a vehicle, as the law expects.</li>
+<li>Do not pass a cyclist and then turn across their path. You must yield as you would to any vehicle traveling straight.</li>
+</ul>
+<table>
+<tr><th>Situation</th><th>The person is treated as</th><th>What you must do</th></tr>
+<tr><td>Walking a bicycle across a crosswalk</td><td>A pedestrian</td><td>Yield in the crosswalk, slowing or stopping if needed (§4142(a))</td></tr>
+<tr><td>Riding a bicycle on the roadway</td><td>A vehicle driver (§4193)</td><td>Follow normal right-of-way rules; pass with at least 3 feet or a full lane change (§4116)</td></tr>
+<tr><td>Riding a bicycle on a sidewalk (where allowed)</td><td>A rider who must yield to pedestrians (§4198B)</td><td>Watch for the rider at driveways and where the sidewalk meets a crosswalk</td></tr>
+</table>
+
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think about the last time you passed a cyclist. How much space did you give, and would it have met Delaware's 3-foot minimum? What would you do differently?</label><textarea></textarea></div>
+
+<h3>Topic 6.1.5.1.5: Anticipating Conflicts and Hazards with Cyclists</h3>
+<p>Most car-bicycle crashes follow a few predictable patterns. When you know them, you can watch for the warning signs before the conflict happens.</p>
+<ol>
+<li><strong>The right hook.</strong> A driver passes a cyclist and then turns right across the cyclist's path, or turns right at an intersection without seeing a cyclist coming up on the right. <em>Prevention:</em> Before any right turn, check your right mirror and look over your right shoulder. If a cyclist is near, slow down and let them go first, then turn behind them.</li>
+<li><strong>The left cross.</strong> A driver turning left misjudges the speed of an oncoming cyclist, or does not see them at all behind a larger vehicle. <em>Prevention:</em> Look specifically for cyclists before turning left, and remember that some bicycles, including e-bikes, can be moving faster than they appear.</li>
+<li><strong>Dooring.</strong> A parked driver or passenger opens a door into a cyclist's path. <em>Prevention:</em> Before opening your door on the street side, check your mirror and look over your shoulder. A useful habit is to open the door with your far hand, which turns your body and head toward the road behind you.</li>
+<li><strong>Driveway and side-street pull-outs.</strong> A driver leaving a driveway looks left for cars and does not notice a cyclist coming from the right, especially one riding on the sidewalk. <em>Prevention:</em> Stop before the sidewalk, look both ways for people walking and riding, then edge forward and look again for road traffic.</li>
+<li><strong>Overtaking crashes.</strong> A driver comes up behind a cyclist too fast or too close, especially at night or on a curve. <em>Prevention:</em> Scan the road edges, use your headlights, slow down on dark rural roads, and pass only with proper space.</li>
+</ol>
+<h4>Other cues to watch for</h4>
+<ul>
+<li><strong>Children on bicycles</strong> may ride unpredictably, cross without looking, or come out from between parked cars. Slow down in neighborhoods and near schools and parks.</li>
+<li><strong>Road surface hazards</strong> such as debris, potholes, drain grates, and sand can force a cyclist to swerve without warning. If you see a hazard ahead of a cyclist, expect them to move left.</li>
+<li><strong>A cyclist looking over their shoulder</strong> often means they are about to move left or turn. Give them room.</li>
+<li><strong>Weather and wind</strong> can push a rider sideways. Give more space on windy days and when the road is wet.</li>
+</ul>
+
+<div class="scenario"><h4>Scenario: The Right Turn at the Shopping Center</h4><p>A driver we'll call Carmen is heading into a shopping center entrance on her right. A few seconds earlier, she passed a cyclist riding along the right edge of the road. She signals and starts to slow for the turn.</p><details><summary>What should happen here?</summary><p>This is the classic right-hook setup. Because Carmen just passed the cyclist, the rider is now behind and to her right, closing on the spot where she will turn. She should check her right mirror and look over her right shoulder before turning. If the cyclist is approaching, she should slow down, let the cyclist pass the entrance, and then turn behind them. A cyclist riding straight on the roadway is traffic with the same rights as other drivers, and Carmen must not turn across their path.</p></details></div>
+
+<h3>Topic 6.1.5.2.1: Pedestrian Safety</h3>
+<p>Delaware law requires drivers to use due care toward pedestrians, especially children (§4144). In practice, pedestrian safety comes down to three things: looking for people, controlling your speed where they are likely to be, and never assuming they have seen you.</p>
+<h4>Where and when pedestrians are at risk</h4>
+<ul>
+<li><strong>At night.</strong> People in dark clothing are very hard to see beyond the reach of your headlights. Use your high beams on dark roads when no one is approaching, and slow down near bus stops, shopping areas, and residential streets after dark.</li>
+<li><strong>On multi-lane roads.</strong> When a vehicle in the lane next to you stops or slows near a crosswalk, it may be stopping for a pedestrian you cannot see. Slow down and be ready to stop. Driving past a stopped car at a crosswalk is how many "multiple threat" crashes happen.</li>
+<li><strong>At intersections while turning.</strong> Turning drivers often look for gaps in car traffic and miss the pedestrian stepping off the curb. Look in the direction you are turning before you start the turn.</li>
+<li><strong>Near schools, parks, and neighborhoods.</strong> Children are small, quick, and may not understand traffic. Delaware sets a 20 mph limit in school zones where posted with times or conditions (§4169(a)).</li>
+<li><strong>In parking lots.</strong> People walk between parked cars, and drivers backing out often cannot see them. Back slowly and check all around.</li>
+<li><strong>Near active pedestrian signals.</strong> Module 3 covered HAWK signals and rectangular rapid flashing beacons, which are activated by pedestrians. When they flash, someone is crossing or about to cross.</li>
+</ul>
+<h4>Speed matters most</h4>
+<p>Speed affects every part of a pedestrian crash. At 30 mph you travel about 44 feet every second. In a typical 1.5-second perception-reaction time, you cover about 66 feet before your foot even reaches the brake. Because braking distance roughly quadruples when speed doubles, even a small reduction in speed in busy pedestrian areas can turn a crash into a near miss. And if a crash does happen, a lower speed means far less force on the person struck.</p>
+
+<h3>Topic 6.1.5.2.2: Yielding to Pedestrians</h3>
+<p>Delaware's crosswalk rule, 21 Del.C. §4142(a), requires drivers to "yield the right-of-way, slowing down or stopping if need be to so yield" to pedestrians at crosswalks where signals are not in place or not working, and when turning. Yielding means more than not hitting the person. It means letting them cross without having to hurry or dodge your vehicle.</p>
+<ul>
+<li><strong>Stop before the crosswalk, not in it.</strong> Leave room so other drivers can see the pedestrian and the pedestrian can see the other lanes.</li>
+<li><strong>Wait until the pedestrian is clear of your path.</strong> On a wider road, a pedestrian may still be in danger from vehicles in other lanes. Do not wave them across, since you cannot control other drivers.</li>
+<li><strong>When turning on a green light,</strong> yield to pedestrians crossing the street you are turning onto. Look for them before you begin the turn.</li>
+<li><strong>Do not block the crosswalk.</strong> Do not enter an intersection or crosswalk unless there is room to clear it (§4130).</li>
+<li><strong>Even when a pedestrian is crossing where they should not,</strong> you still have a duty of due care (§4144). Slow down, give them time, and do not use your vehicle to make a point.</li>
+</ul>
+<div class="scenario"><h4>Scenario: The Stopped Car in the Next Lane</h4><p>A driver we'll call Lena is in the left lane of a four-lane road in Newark. Ahead, the car in the right lane stops just before a marked crosswalk with no signal. Lena's lane is clear, and she is going the speed limit.</p><details><summary>What should happen here?</summary><p>Lena should slow down and be prepared to stop. The other car may be stopping for a pedestrian who is hidden from Lena's view by that car. If a pedestrian steps out from in front of the stopped car, Lena will have very little time to react at full speed. Under §4142(a), drivers must yield to pedestrians in the crosswalk, slowing down or stopping as needed. Lena should stop before the crosswalk if anyone is crossing and wait until they have safely cleared her lane.</p></details></div>
+
+<h3>Topic 6.1.5.2.3: The Delaware White Cane Law</h3>
+<p>Delaware gives special protection to people who are blind or visually impaired. The Delaware White Cane Law is found in 16 Del.C. Chapter 95.</p>
+<div class="warning"><strong>Delaware White Cane Law (16 Del.C. §9503):</strong> "The driver of a vehicle approaching a pedestrian who is totally or partially blind ... shall take all necessary precautions to avoid injury." This applies when the person is carrying a predominantly white or metallic cane or is using a guide dog. A driver who fails to take these precautions is liable for damages. The fine is $100 per violation (§9506). Related protections appear in 21 Del.C. §4144 and §4150.</div>
+<h4>What "all necessary precautions" means in practice</h4>
+<ul>
+<li><strong>Stop.</strong> When you see a person with a white or metallic cane or a guide dog at or near the roadway, slow down and be prepared to stop, even if you would normally have the right of way.</li>
+<li><strong>Give extra time and space.</strong> A person who cannot see your vehicle relies on sound and on the cane or guide dog to judge traffic. Do not creep forward into the crosswalk while they cross.</li>
+<li><strong>Do not honk or shout directions.</strong> Unexpected noise can be confusing and makes it harder for the person to listen for traffic.</li>
+<li><strong>Be especially careful with quiet vehicles.</strong> Hybrid and electric vehicles can be hard to hear at low speeds. If you drive one, assume the person may not know you are there.</li>
+<li><strong>Wait until the person is fully across</strong> and on the curb before moving, and watch for any other vehicle that might not stop.</li>
+<li><strong>Do not distract a guide dog.</strong> Pulling up close, revving the engine, or calling to the dog can interfere with its work.</li>
+</ul>
+<p>The White Cane Law is a clear example of a broader principle in this module: the more vulnerable the road user, the more responsibility falls on the driver to avoid a crash.</p>
+<div class="scenario"><h4>Scenario: The White Cane at the Corner</h4><p>A driver we'll call Sam is waiting to turn right on a green light. A person carrying a white cane is standing at the corner and begins tapping into the crosswalk across the street Sam is turning onto. The driver behind Sam is close and impatient.</p><details><summary>What should happen here?</summary><p>Sam must take all necessary precautions to avoid injury under the Delaware White Cane Law (§9503). That means staying stopped, not inching forward, not honking, and waiting until the person has fully crossed and reached the curb. Sam also has a duty to yield to pedestrians when turning (§4142(a)). The impatient driver behind him does not change that duty. Failing to take these precautions can bring a $100 fine per violation and liability for any damages.</p></details></div>
+
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Vulnerable road user</dt><dd>A person outside the protection of a motor vehicle, such as a pedestrian, cyclist, or highway worker. Delaware's §4176E lists the covered persons.</dd>
+<dt>Delaware Yield</dt><dd>Under §4196A, at a stop sign on a road with two or fewer lanes, a cyclist may slow, yield, and proceed without a full stop.</dd>
+<dt>3-foot rule</dt><dd>Under §4116, a driver passing a bicycle in a single lane must leave a reasonable and prudent distance, never less than 3 feet, or move completely into the next lane where two same-direction lanes exist.</dd>
+<dt>Right hook / left cross</dt><dd>Common crash types where a driver turns right across a cyclist traveling straight, or turns left in front of an oncoming cyclist.</dd>
+<dt>Dooring</dt><dd>A crash where a vehicle door is opened into the path of a cyclist.</dd>
+<dt>White Cane Law</dt><dd>16 Del.C. Ch. 95; drivers must take all necessary precautions when approaching a blind or partially blind pedestrian carrying a white or metallic cane or using a guide dog.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Pedestrians and cyclists have no protection in a crash. In 2024, 28 pedestrians and 4 bicyclists were killed on Delaware roads (IIHS, from NHTSA FARS).</li>
+<li>Cyclists have the same rights and duties as other drivers (§4193), so normal right-of-way rules protect them at intersections, left turns, and driveways.</li>
+<li>Expect the "Delaware Yield": cyclists may slow, yield, and proceed at stop signs on roads with two or fewer lanes (§4196A).</li>
+<li>Pass a cyclist with at least 3 feet in a single lane, or move completely into the next lane where two same-direction lanes exist (§4116). If you cannot, wait.</li>
+<li>A bicycle being pushed by its rider has the same rights and responsibilities as a pedestrian; a bicycle ridden on the roadway has the same rights and responsibilities as other vehicles.</li>
+<li>Prevent right hooks, left crosses, dooring, and driveway crashes by checking mirrors and blind spots and looking specifically for cyclists.</li>
+<li>Yield to pedestrians at crosswalks without working signals and when turning, slowing or stopping as needed (§4142(a)), and use due care, especially around children (§4144).</li>
+<li>Under the Delaware White Cane Law, take all necessary precautions for a pedestrian with a white or metallic cane or guide dog; the fine is $100 per violation (§9503, §9506).</li>
+<li>Causing serious physical injury to a vulnerable user while violating the traffic code brings a $550 fine, possible suspension, a course, and community service (§4176E).</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to the next module, School Buses, Emergency Vehicles, Move Over, and Motorcycles.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 6 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 7.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m6-remaining', DONE='de-teen-m6-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 6. Return to your course and continue to Module 7.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

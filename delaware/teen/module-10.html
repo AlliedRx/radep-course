@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 10: Defensive Driving Practices | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 10 of 14 &middot; 30 minutes</span>Module 10: Defensive Driving Practices</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.11, 6.1.11.1, 6.1.11.1.1, 6.1.11.1.2, 6.1.11.2, 6.1.11.2.1, 6.1.11.2.2, 6.1.11.3, 6.1.11.4, 6.1.11.5 -->
+<p>Defensive driving is not one skill but a set of habits you repeat thousands of times: reading the lines on the road, knowing where other drivers cannot see you, keeping enough space to stop, choosing a safe speed, and passing only when it is truly safe. Each habit is simple. Together they prevent the crashes that happen most often, such as rear-end collisions, sideswipes during lane changes, and head-on crashes during passing. This module walks through each of these practices with Delaware law and worked examples, so you can see not just what to do but why the numbers demand it.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Read pavement line markings correctly, including rules for crossing medians and using shared center turn lanes.</li>
+<li>Avoid other vehicles' blind spots and check your own blind spots correctly before moving laterally.</li>
+<li>Calculate reaction, braking, and total stopping distance, and apply a time-based following-distance method.</li>
+<li>State Delaware's statutory speed limits for roads without posted signs and explain the "reasonable and prudent" rule.</li>
+<li>Pass other vehicles legally and safely, and respond correctly when you are being passed.</li>
+</ul></div>
+
+<h3>Pavement Line Markings (6.1.11.1)</h3>
+<p>Pavement markings are a language painted on the road. They tell you which direction traffic is moving, where you may change lanes or pass, and where you must stop. Learning to read them at a glance frees your attention for scanning hazards.</p>
+<h4>The basic code: color and pattern</h4>
+<table>
+<tr><th>Marking</th><th>What it means</th></tr>
+<tr><td>Yellow lines</td><td>Separate traffic moving in <em>opposite</em> directions. If a yellow line is on your left, oncoming traffic is on the other side.</td></tr>
+<tr><td>White lines</td><td>Separate lanes of traffic moving in the <em>same</em> direction, and mark the right edge of the roadway.</td></tr>
+<tr><td>Broken (dashed) line</td><td>You may cross it to change lanes or pass when it is safe and legal.</td></tr>
+<tr><td>Solid line</td><td>Crossing is discouraged or prohibited. A solid yellow line on your side of the center means no passing.</td></tr>
+<tr><td>Double solid yellow</td><td>No passing in either direction. Cross only to turn left into or out of a driveway or side road when safe.</td></tr>
+<tr><td>Solid and broken yellow together</td><td>Passing is allowed only for traffic on the side with the broken line.</td></tr>
+<tr><td>Stop line (white bar across the lane)</td><td>Where you must stop for a stop sign or signal. Delaware law requires stopping at the marked stop line (§4164).</td></tr>
+<tr><td>Crosswalk lines</td><td>Where pedestrians cross; yield as required (Module 6).</td></tr>
+<tr><td>Arrows and words</td><td>Lane-use controls, such as "left turn only" arrows or "ONLY" markings.</td></tr>
+</table>
+<p>Edge lines also do a quiet but important safety job: at night and in fog they show you where the road ends. In Module 9 you learned to use the right edge line as a guide in fog. Edge lines and center lines also help keep you away from oncoming traffic and off the shoulder, which matters because leaving the roadway is a leading crash type in Delaware. In 2025, 50 deaths on Delaware roads involved vehicles leaving the roadway (DelDOT, 2025 data).</p>
+
+<h4>Median Crossing (6.1.11.1.1)</h4>
+<p>A median is the area that separates opposite directions of traffic on a divided highway. It may be a grass strip, a concrete barrier, a raised curb, or a wide painted area. Medians exist because head-on collisions are among the deadliest crashes, and physical separation prevents them.</p>
+<ul>
+<li><strong>Do not drive on or across a median</strong> except at an opening or crossover intended for public use. Grass medians can hide ditches and soft ground, and a vehicle crossing one may enter oncoming traffic moving at highway speed.</li>
+<li><strong>Treat painted medians and painted islands as barriers.</strong> Areas filled with diagonal or chevron stripes are not travel lanes. Do not use them to pass, to bypass a line of traffic, or to start a turn early.</li>
+<li><strong>Crossovers marked "Authorized Vehicles Only" or "Emergency Vehicles Only"</strong> are for police, emergency, and maintenance vehicles. Using one to turn around is dangerous because you must stop or slow sharply in a high-speed lane.</li>
+<li><strong>At a legal median opening,</strong> treat the crossing as two separate roadways when the median is wide enough to hold your vehicle: cross the first set of lanes, stop fully inside the median opening, then yield to traffic coming from the other direction before completing the move. If your vehicle would stick out into a travel lane, wait until both directions are clear.</li>
+<li><strong>U-turns:</strong> Delaware prohibits a U-turn where your vehicle cannot be seen by approaching drivers from 500 feet in either direction (§4153). Even where a U-turn is legal, make sure you have a large gap.</li>
+</ul>
+<div class="warning"><strong>Missed your exit?</strong> Never cross a median, back up on a shoulder or ramp, or stop in a travel lane. Continue to the next exit or legal turnaround. A few extra minutes is always cheaper than a crash.</div>
+
+<h4>Shared Center Turn Lanes (6.1.11.1.2)</h4>
+<p>A shared center turn lane, sometimes called a two-way left-turn lane, is a center lane bordered on each side by a solid yellow line on the outside and a broken yellow line on the inside, often marked with pairs of left-turn arrows pointing in opposite directions. Drivers traveling in <em>both</em> directions share this one lane to make left turns. You will find them on many commercial corridors with frequent driveways and shopping centers.</p>
+<p><strong>How to use a shared center turn lane correctly:</strong></p>
+<ol>
+<li><strong>Use it only for left turns.</strong> Enter it to begin a left turn into a driveway or side street. It is never a passing lane, a travel lane, or a place to wait out traffic.</li>
+<li><strong>Signal and check mirrors before entering.</strong> Delaware requires your turn signal "continuously during not less than the last 300 feet" before turning (§4155(b)).</li>
+<li><strong>Enter close to your turn.</strong> Do not travel a long distance in the center lane. The longer you are in it, the more likely you will meet a driver coming the other way who wants to use the same space.</li>
+<li><strong>Watch for oncoming left-turners in the same lane.</strong> Drivers headed toward you may enter the lane at the same time. Be ready to stop.</li>
+<li><strong>Stop with your wheels straight</strong> while you wait for a gap. If you are hit from behind with your wheels turned left, you could be pushed into oncoming traffic.</li>
+<li><strong>Yield to oncoming traffic</strong> before completing the turn (§4132), and watch for pedestrians and cyclists on the sidewalk or shoulder you are crossing.</li>
+</ol>
+<div class="myth"><p><strong>Myth:</strong> The center turn lane is a handy place to get around slow traffic or to accelerate before merging back.</p><p><strong>Fact:</strong> The center lane is for left turns only. Using it to pass puts you head-to-head with drivers from the other direction who are using it as intended.</p></div>
+
+<h3>Blind Spots (6.1.11.2)</h3>
+<p>A blind spot is any area around a vehicle that the driver cannot see in the mirrors or through the windows without turning his or her head. Every vehicle has them. Larger vehicles have larger ones. Many sideswipe crashes happen because a driver changed lanes into a car that was sitting quietly in a blind spot.</p>
+<h4>Avoiding Other Vehicles' Blind Spots (6.1.11.2.1)</h4>
+<p>The safest place to be is where other drivers can see you. Common blind spots for a passenger car are beside the rear corners, just behind and to the side. For large trucks and buses, blind spots, sometimes called "No-Zones," are much larger:</p>
+<ul>
+<li><strong>Directly in front:</strong> a truck driver sits high and cannot see a car that cuts in close in front of the cab.</li>
+<li><strong>Directly behind:</strong> a truck has no rear-view mirror view straight back. If you follow closely, the driver cannot see you, and you cannot see the road ahead.</li>
+<li><strong>Along both sides:</strong> especially the right side, which can extend across more than one lane.</li>
+</ul>
+<p><strong>Habits that keep you visible:</strong></p>
+<ul>
+<li><strong>Don't linger beside another vehicle.</strong> When passing, move through the side zone steadily rather than riding alongside.</li>
+<li><strong>Use the mirror test:</strong> if you cannot see a truck driver's face in his or her side mirror, that driver cannot see you.</li>
+<li><strong>Stay back:</strong> Delaware requires trucks and vehicles towing others outside business or residence districts to keep at least 300 feet behind another vehicle (§4123(b)). That rule reflects how much space heavy vehicles need. Give them generous space too.</li>
+<li><strong>After passing,</strong> do not cut in until you can see the entire front of the vehicle you passed in your inside rear-view mirror.</li>
+<li><strong>Watch wide turns:</strong> trucks and buses often swing left before turning right. Never squeeze into the gap on their right.</li>
+<li><strong>Remember motorcycles and bicycles</strong> are small enough to disappear in your blind spots, and yours in theirs (Modules 6 and 7).</li>
+</ul>
+<h4>Checking Your Own Blind Spots (6.1.11.2.2)</h4>
+<p>Mirrors reduce blind spots but never eliminate them. The only way to know a space is empty is to look.</p>
+<ol>
+<li><strong>Adjust your mirrors before you drive.</strong> Set the inside mirror to frame the full rear window. For side mirrors, many drivers use the wider setting: lean your head toward the driver's window and set the left mirror so you just see the side of your car, then lean toward the center and set the right mirror the same way. When seated normally, a car leaving your inside mirror should appear in a side mirror.</li>
+<li><strong>Before any lateral move</strong> (lane change, merge, pulling from a curb, turning across a bike lane), check the inside mirror, then the side mirror, then turn your head and look over your shoulder into the blind spot.</li>
+<li><strong>Make the head check quick,</strong> about a glance, so your eyes return to the road ahead promptly.</li>
+<li><strong>Signal before you move,</strong> giving others time to react, then check once more.</li>
+<li><strong>Use blind-spot warning systems as a backup only.</strong> Module 8 explained that driver-assistance technology has limits. A warning light may miss a fast-approaching motorcycle or work poorly in rain or snow.</li>
+</ol>
+<div class="scenario"><h4>Scenario: The Quiet Car in the Right Lane</h4><p>Consider a driver we'll call Lena, on a four-lane divided road near Newark. She needs to move right for her turn. She glances in her right mirror, sees nothing, signals, and begins to move over. A horn blasts. A compact car was beside her rear bumper the whole time.</p><details><summary>What should happen here?</summary><p>Lena relied on her mirror alone. The compact car was in her blind spot, where mirrors cannot show it. She should have signaled early, checked the inside mirror and side mirror, then turned her head for a quick over-the-shoulder look before moving. Now that she has been warned, she should steer back smoothly into her lane, let the other car pass or drop back, and try again when the space is truly clear. The other driver also had a role: lingering beside another vehicle's rear corner is a habit to avoid.</p></details></div>
+
+<h3>Calculating Stopping and Following Distances (6.1.11.3)</h3>
+<p>Stopping a car takes two steps, and each takes distance:</p>
+<ol>
+<li><strong>Reaction distance:</strong> how far you travel between seeing a hazard and starting to brake. A typical alert driver needs about 1.5 seconds.</li>
+<li><strong>Braking distance:</strong> how far the car travels after the brakes are applied until it stops.</li>
+</ol>
+<p><strong>Total stopping distance = reaction distance + braking distance.</strong></p>
+<h4>Step 1: Convert speed to feet per second</h4>
+<p>To work with distance, convert miles per hour to feet per second. One mile per hour is about 1.47 feet per second. So multiply mph by 1.47. For example, 60 mph × 1.47 ≈ 88 feet per second; 30 mph × 1.47 ≈ 44 feet per second; 50 mph × 1.47 ≈ 73.5 feet per second.</p>
+<h4>Step 2: Calculate reaction distance</h4>
+<p>Multiply feet per second by your reaction time.</p>
+<table>
+<tr><th>Speed</th><th>Feet per second</th><th>Reaction distance (1.5 s)</th></tr>
+<tr><td>25 mph</td><td>about 37</td><td>about 55 feet</td></tr>
+<tr><td>30 mph</td><td>about 44</td><td>about 66 feet</td></tr>
+<tr><td>50 mph</td><td>about 73.5</td><td>about 110 feet</td></tr>
+<tr><td>55 mph</td><td>about 81</td><td>about 121 feet</td></tr>
+<tr><td>60 mph</td><td>about 88</td><td>about 132 feet</td></tr>
+</table>
+<p>Notice that reaction distance grows in direct proportion to speed: double the speed, double the reaction distance. If you are distracted or tired and your reaction time stretches to 3 seconds, the reaction distance at 60 mph becomes about 264 feet, nearly the length of a football field, before your brakes even engage.</p>
+<h4>Step 3: Understand braking distance</h4>
+<p>Braking distance depends on the vehicle, tires, brakes, slope, and road surface, so there is no single correct number. What does not change is the physics: <strong>braking distance increases with the square of speed.</strong> When speed doubles, braking distance roughly quadruples. Crash energy rises the same way; a crash at 50 mph carries about 56% more energy than one at 40 mph.</p>
+<p><em>Worked example (illustrative numbers only):</em> Suppose a particular car on dry pavement needs about 45 feet to brake to a stop from 30 mph. At 60 mph, twice the speed, it would need about four times as far: about 180 feet.</p>
+<table>
+<tr><th></th><th>30 mph</th><th>60 mph</th></tr>
+<tr><td>Reaction distance (1.5 s)</td><td>about 66 ft</td><td>about 132 ft</td></tr>
+<tr><td>Braking distance (illustrative)</td><td>about 45 ft</td><td>about 180 ft (4×)</td></tr>
+<tr><td><strong>Total stopping distance</strong></td><td><strong>about 111 ft</strong></td><td><strong>about 312 ft</strong></td></tr>
+</table>
+<p>Doubling your speed in this example nearly triples your total stopping distance. On wet, snowy, or icy pavement, braking distances can be several times longer still, which is why Module 9 stressed slowing down in bad weather.</p>
+<h4>Step 4: Following distance — the time-gap method</h4>
+<p>Delaware law says a driver "shall not follow another vehicle more closely than is reasonable and prudent" (§4123(a)). The statute does not set a number of seconds, so you must judge it. Because distance needed grows with speed, the easiest method uses <em>time</em>, which automatically scales with speed. A widely recommended minimum is <strong>3 to 4 seconds in good conditions, and more in bad weather,</strong> at night, behind motorcycles or large trucks, or when you are being tailgated.</p>
+<p><strong>How to count:</strong></p>
+<ol>
+<li>Pick a fixed object ahead, such as a sign, pole, or overpass.</li>
+<li>When the rear of the vehicle ahead passes it, begin counting: "one-thousand-one, one-thousand-two, one-thousand-three…"</li>
+<li>If the front of your vehicle reaches the object before you finish counting, you are too close. Ease off and count again.</li>
+</ol>
+<p><em>Worked example:</em> At 55 mph you travel about 81 feet per second. A 3-second gap is about 81 × 3 ≈ 243 feet; a 4-second gap is about 324 feet. That may look like a lot of empty road, but compare it with the stopping distances above. A 1-second gap at 55 mph is only about 81 feet, less than your reaction distance alone. If the car ahead stops suddenly, for example by hitting something, you would strike it before your foot even reached the brake.</p>
+<div class="highlight"><strong>Why following distance works:</strong> You will rarely need to stop in a space as short as your following distance, because the car ahead usually brakes too. But when the vehicle ahead stops abruptly, the time gap gives you your reaction time plus a margin to brake or steer. Without it, a rear-end crash is almost certain.</div>
+<div class="scenario"><h4>Scenario: Counting on a Wet Morning</h4><p>Consider a driver we'll call Sam, traveling 50 mph on a divided road in light rain. He counts two seconds behind the SUV ahead. "That's plenty," he thinks, "I'm paying attention."</p><details><summary>What should happen here?</summary><p>Two seconds at 50 mph is about 147 feet, barely more than his reaction distance of about 110 feet, leaving almost nothing for braking, which takes longer on wet pavement. Sam should drop back to well beyond 4 seconds, turn his headlights on with his wipers (Delaware law), and keep extra space for drivers changing lanes. Paying attention does not shorten the physics of braking.</p></details></div>
+
+<h3>Speed Limits and Unmarked Areas (6.1.11.4)</h3>
+<p>Delaware's speed laws work in two layers. First, the basic rule: "No person shall drive a vehicle on a highway at a speed greater than is reasonable and prudent under the conditions" (§4168(a)). Second, statutory maximum limits that apply when no different limit is posted.</p>
+<h4>Delaware statutory limits (§4169(a))</h4>
+<table>
+<tr><th>Type of area or road</th><th>Statutory limit</th></tr>
+<tr><td>Business district</td><td>25 mph</td></tr>
+<tr><td>Residence district</td><td>20 or 25 mph (set by the road owner)</td></tr>
+<tr><td>School zone, where posted with times or conditions</td><td>20 mph</td></tr>
+<tr><td>Two-lane roadways</td><td>50 mph</td></tr>
+<tr><td>Four-lane and divided roadways</td><td>55 mph</td></tr>
+</table>
+<p>The statute itself sets 65 mph only for SR 1 between Red Lion Creek and the Appoquinimink River (§4169(d)). Elsewhere, obey the limit posted on signs.</p>
+<h4>Recommendations for unmarked areas</h4>
+<p>If you are on a road where you have not seen a speed limit sign, use these guidelines:</p>
+<ul>
+<li><strong>Identify the road type</strong> and apply the matching statutory limit: shops and offices along the road suggest a business district (25); homes suggest a residence district (20 or 25); an open two-lane road means 50; a four-lane or divided road means 55.</li>
+<li><strong>When in doubt, choose the lower limit.</strong> If you cannot tell whether an area is business or residential, drive as if it is residential.</li>
+<li><strong>The limit is a maximum, not a target.</strong> Curves, hills, narrow shoulders, driveways, farm equipment, deer, pedestrians, and weather all call for less. The reasonable-and-prudent rule applies even when you are under the limit.</li>
+<li><strong>Do not drive so slowly that you block traffic.</strong> Delaware prohibits driving "at such a slow speed as to impede the normal and reasonable movement of traffic" (§4171(a)), except when slower speed is needed for safety.</li>
+<li><strong>Watch for changes</strong> as you enter towns, school zones, and work zones, where fines double (Module 5).</li>
+</ul>
+<h4>Why speed choice matters in Delaware</h4>
+<p>Speed remains a major factor in Delaware's deadliest crashes. In 2024, 31 of Delaware's 126 traffic deaths, or 25%, were speed-related (IIHS, compiled from NHTSA FARS data for 2024).</p>
+<div class="warning"><strong>Delaware speeding consequences:</strong> Fines under §4169(c) start at $20 for a first offense ($25 for a subsequent offense within 24 months) plus per-mph add-ons that rise as speed over the limit rises. Points under DMV Regulation 2208: 1–9 mph over = 2 points; 10–14 over = 4; 15–19 over = 5; 20 or more over = 5 and possible further action. At 25 mph or more over the limit, DMV suspends the license (at 25–29 over a course may be taken instead); 30 or more over brings a mandatory suspension.</div>
+<div class="myth"><p><strong>Myth:</strong> If no sign is posted, there is no speed limit.</p><p><strong>Fact:</strong> Delaware's statutory limits apply on every road where no other limit is posted, and the reasonable-and-prudent rule applies everywhere, all the time.</p></div>
+
+<h3>Passing and Being Passed (6.1.11.5)</h3>
+<p>Passing on a two-lane road is one of the most dangerous maneuvers in driving, because for several seconds you are in the lane of oncoming traffic. At a combined closing speed of 100 mph or more, a misjudgment leaves no time to recover. Ask first: <em>Is this pass necessary?</em> Passing a vehicle going only a few mph below the limit gains very little time and carries a large risk.</p>
+<h4>When passing is prohibited in Delaware</h4>
+<ul>
+<li><strong>No-passing zones (§4120).</strong> These are typically marked with signs and a solid yellow line on your side of the center.</li>
+<li><strong>Left of center near hazards (§4119):</strong> when approaching a curve or the crest of a hill where your view is obstructed, or within 100 feet of an intersection, railroad crossing, or an obstructed bridge, viaduct, or tunnel.</li>
+<li><strong>Without a clear view:</strong> you may pass on the left only when the road is "clearly visible and is free of oncoming traffic for a sufficient distance ahead" to complete the pass safely (§4118).</li>
+<li><strong>On the right,</strong> except when it can be done safely (§4117). Passing on the right is one of the violations that can count toward aggressive driving (§4175A).</li>
+<li><strong>Around rotary islands,</strong> pass only to the right (§4121).</li>
+</ul>
+<h4>How to pass safely</h4>
+<ol>
+<li><strong>Check that passing is legal</strong> (markings and signs) and that you can see far enough ahead.</li>
+<li><strong>Keep a normal following distance</strong> while preparing, so you can see past the vehicle.</li>
+<li><strong>Check mirrors and your blind spot,</strong> and make sure no one is already passing you.</li>
+<li><strong>Signal</strong> your intention to move left.</li>
+<li><strong>Move left and accelerate smoothly</strong> without exceeding the speed limit. If you must break the limit to complete a pass, the pass is not safe.</li>
+<li><strong>Abort if in doubt.</strong> If oncoming traffic appears or the vehicle speeds up, brake and drop back in behind it.</li>
+<li><strong>Return to your lane</strong> only when you can see the entire front of the passed vehicle in your rear-view mirror, then signal right and move back.</li>
+</ol>
+<p><strong>Passing bicycles:</strong> In a single lane, leave "a reasonable and prudent distance, which shall in any case never be less than 3 feet." Where two lanes go in your direction, move completely into the left lane to pass (§4116).</p>
+<h4>Being passed</h4>
+<p>When someone passes you, your job is to make the pass short and safe:</p>
+<ul>
+<li><strong>Stay to the right</strong> in your lane and hold a steady speed.</li>
+<li><strong>Do not speed up.</strong> Speeding up traps the passing driver in the oncoming lane. If the passer is in trouble, easing off slightly helps them return sooner.</li>
+<li><strong>Keep right except to pass</strong> on multi-lane roads, so faster traffic does not stack up behind you.</li>
+<li><strong>After the pass,</strong> re-establish your following distance behind the vehicle that moved in front of you.</li>
+<li><strong>Do not take it personally.</strong> As Module 9 explained, treating another driver's pass as an insult is the start of aggressive driving.</li>
+</ul>
+<div class="scenario"><h4>Scenario: The Farm Truck on a Sussex County Road</h4><p>Consider a driver we'll call Jordan, on a two-lane road posted 50 mph, behind a slow farm truck. There is a broken yellow line, but a hill crest is coming up about a quarter mile ahead. Jordan is running late and thinks he can make it if he goes 70.</p><details><summary>What should happen here?</summary><p>Jordan should not pass. Delaware prohibits driving left of center when approaching the crest of a hill where the view is obstructed (§4119), and passing requires the road to be clearly visible and free of oncoming traffic for a sufficient distance (§4118). Needing to go 20 mph over the limit is itself a sign the pass is unsafe and would add points and fines. He should stay back at a safe following distance, which also gives him a better view, and wait for a long, clear straightaway with a broken line on his side, or simply accept a short delay.</p></details></div>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Count your following distance on your next drive. Was it 3 to 4 seconds? In what situations do you tend to follow too closely, and what will you do differently?</label><textarea></textarea></div>
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Shared center turn lane</dt><dd>A center lane used by traffic from both directions only to make left turns.</dd>
+<dt>Median</dt><dd>The area separating opposite directions of traffic on a divided road; not to be crossed except at legal openings.</dd>
+<dt>Blind spot</dt><dd>An area around a vehicle the driver cannot see in mirrors without turning his or her head.</dd>
+<dt>Reaction distance</dt><dd>Distance traveled between seeing a hazard and beginning to brake.</dd>
+<dt>Braking distance</dt><dd>Distance traveled from when the brakes are applied until the vehicle stops; it grows with the square of speed.</dd>
+<dt>Reasonable and prudent</dt><dd>The Delaware standard (§4168(a), §4123(a)) for speed and following distance that must fit actual conditions.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Yellow lines separate opposite directions; white lines separate same-direction lanes. Broken lines may be crossed when safe; solid lines restrict crossing.</li>
+<li>Cross a median only at a legal opening, never on painted islands or authorized-vehicle crossovers; continue to the next exit if you miss one.</li>
+<li>Use a shared center turn lane only for left turns, enter it close to your turn, and stop with wheels straight.</li>
+<li>Stay out of other vehicles' blind spots, especially trucks' No-Zones, and always look over your shoulder before moving laterally.</li>
+<li>Total stopping distance = reaction distance + braking distance. Reaction distance doubles with speed; braking distance roughly quadruples.</li>
+<li>Keep at least 3 to 4 seconds of following distance in good conditions, more in bad weather; Delaware requires following no closer than reasonable and prudent (§4123).</li>
+<li>Where no limit is posted, Delaware's statutory limits apply: 25 business, 20 or 25 residential, 50 two-lane, 55 four-lane or divided, and 20 in posted school zones.</li>
+<li>Pass only when legal and the road ahead is clearly visible and free of oncoming traffic; never left of center near curves, crests, or within 100 feet of intersections or railroad crossings.</li>
+<li>When being passed, stay right and do not speed up.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 11, Vehicle Safety Devices and Vehicle Condition.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 10 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 11.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m10-remaining', DONE='de-teen-m10-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 10. Return to your course and continue to Module 11.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>

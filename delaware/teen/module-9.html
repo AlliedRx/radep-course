@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 9: The Driver's Condition, Environment, and Aggressive Driving | DMV Courses – Delaware Teen Basic Defensive Driving Course</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0d47a1;--navy-2:#1565c0;--navy-3:#1e88e5;
+ --gold:#2196f3;--gold-2:#bbdefb;--gold-soft:#e3f2fd;
+ --bg:#eef4fc;--card:#ffffff;--text:#1b2433;--light:#5b6678;--border:#dfe4ec;
+ --success:#1f8a5b;--success-soft:#e7f5ee;--danger:#c0392b;--danger-soft:#fdecea;
+ --primary:var(--navy);--accent:var(--gold);--warning:var(--gold-2);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px}
+h1,h2,h3,h4,.brand-name{font-family:'Poppins','Inter',sans-serif}
+
+/* ---------- Site header ---------- */
+.site-header{background:var(--navy);border-bottom:4px solid var(--gold)}
+.site-header .in{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.brand svg{flex:none}
+.brand-name{font-weight:700;font-size:1rem;line-height:1.2;letter-spacing:.2px}
+.brand-sub{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--gold-2);text-transform:uppercase;letter-spacing:1.4px;margin-top:3px}
+.badge{font-size:.72rem;font-weight:600;color:var(--navy);background:#fff;padding:6px 12px;border-radius:999px;white-space:nowrap}
+
+/* ---------- Progress strip ---------- */
+.progress{background:var(--navy-2)}
+.progress .in{max-width:960px;margin:0 auto;padding:10px 20px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.progress .in::-webkit-scrollbar{display:none}
+.progress a{flex:none;font-size:.75rem;font-weight:600;color:#c9d4e5;text-decoration:none;padding:5px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.15)}
+.progress a.done{color:#fff;border-color:rgba(187,222,251,.6)}
+.progress a.current{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- Course card ---------- */
+.wrap{max-width:960px;margin:28px auto;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;padding:22px 28px;border-radius:14px 14px 0 0;position:relative;overflow:hidden}
+.bar:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+.bar h1{font-size:1.3rem;font-weight:700;line-height:1.3;max-width:640px}
+.bar .eyebrow{display:block;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-2);margin-bottom:4px}
+.timer{background:rgba(255,255,255,.1);border:1px solid rgba(187,222,251,.6);padding:8px 18px;border-radius:10px;text-align:center}
+.timer small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold-2)}
+.timer span{font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.warn{border-color:var(--danger);background:rgba(192,57,43,.25)}
+.timer.warn span{color:#ffd1cc}
+.card{background:var(--card);padding:36px;border-radius:0 0 14px 14px;box-shadow:0 6px 24px rgba(13,71,161,.10)}
+h2{color:var(--navy);font-size:1.45rem;margin-bottom:20px;padding-bottom:12px;border-bottom:3px solid var(--gold)}
+h3{color:var(--navy);margin:30px 0 12px;font-size:1.2rem;font-weight:600;padding-left:14px;border-left:4px solid var(--gold)}
+h4{color:var(--navy-3);margin:20px 0 10px;font-size:1.02rem;font-weight:600}
+p{margin-bottom:16px}
+ul,ol{margin:12px 0 20px 24px}
+li{margin-bottom:8px}
+li::marker{color:var(--navy-3);font-weight:700}
+strong{color:var(--navy)}
+code{background:var(--gold-soft);padding:2px 6px;border-radius:4px;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:var(--navy);color:#fff;font-weight:600;border-bottom:3px solid var(--gold)}
+tr:nth-child(even) td{background:#f3f8fe}
+.highlight,.intro{background:#e3f2fd;border-left:5px solid var(--navy-3);padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.warning{background:#fff4e5;border-left:5px solid #f57c00;padding:18px 22px;border-radius:0 10px 10px 0;margin:22px 0}
+.intro ul{margin-bottom:0}
+
+/* reflection / plan worksheets */
+.reflect,.plan{background:#f5faff;border:2px dashed var(--gold);padding:22px;border-radius:12px;margin:22px 0}
+.reflect h4,.plan h4{color:var(--navy);margin:0 0 12px}
+.reflect label,.plan label{display:block;margin-top:12px;font-weight:600;font-size:.9rem;color:var(--navy)}
+.reflect textarea,.plan textarea{width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;font-family:inherit;font-size:.95rem;margin-top:6px;resize:vertical}
+.reflect textarea:focus,.plan textarea:focus{outline:none;border-color:var(--navy-3);box-shadow:0 0 0 3px rgba(30,136,229,.18)}
+
+/* quiz */
+.quiz{margin-top:36px;border-top:2px dashed var(--border);padding-top:26px}
+.quiz h3{color:var(--navy);border-left-color:var(--navy)}
+.qblock{background:#f7f9fc;border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.qtext{font-weight:600;margin-bottom:14px;color:var(--navy)}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;margin:8px 0;background:#fff;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--navy-3);background:#f2f6fb}
+.opt.selected{border-color:var(--navy);background:#e9eff8}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.incorrect{border-color:var(--danger);background:var(--danger-soft)}
+.opt input{margin:5px 0 0;accent-color:var(--navy);flex:none}
+.fb{margin-top:12px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.fb.show{display:block}
+.fb.ok{background:var(--success-soft);border-left:4px solid var(--success)}
+.fb.no{background:var(--danger-soft);border-left:4px solid var(--danger)}
+.submit{margin-top:16px;padding:14px 32px;background:var(--navy-3);color:#fff;border:none;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;box-shadow:0 3px 0 #0d47a1}
+.submit:hover:not(:disabled){background:var(--navy-2)}
+.submit:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 #0d47a1}
+.submit:disabled{background:#e3e7ee;color:#8a94a6;box-shadow:none;cursor:not-allowed}
+#startBtn,#testBlock .submit{width:100%}
+.results{text-align:center;padding:40px 20px}
+.results .score{font-family:'Poppins',sans-serif;font-size:4.2rem;font-weight:700;line-height:1.1}
+.results.pass .score{color:var(--success)}
+.results.fail .score{color:var(--danger)}
+.results .label{color:var(--light);font-size:1.1rem}
+.results h2{margin-top:24px;border:none;padding:0}
+.results.pass h2{color:var(--success)}
+.results.fail h2{color:var(--danger)}
+.hidden{display:none}
+
+/* module nav */
+.module-nav{max-width:960px;margin:0 auto 28px;padding:0 20px;display:flex;justify-content:space-between;gap:12px}
+.module-nav a{flex:1;max-width:48%;display:block;text-decoration:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--navy);font-weight:600;transition:border-color .15s}
+.module-nav a:hover{border-color:var(--gold)}
+.module-nav a small{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--light);font-weight:600}
+.module-nav a.next{text-align:right;margin-left:auto}
+
+/* footer */
+.site-footer{background:var(--navy);color:#c9d4e5;border-top:4px solid var(--gold);font-size:.85rem}
+.site-footer .in{max-width:960px;margin:0 auto;padding:24px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-footer a{color:var(--gold-2);text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer .fname{color:#fff;font-weight:600}
+
+@media (max-width:600px){
+ .wrap{margin:16px auto;padding:0 12px}
+ .bar{padding:18px}
+ .bar h1{font-size:1.1rem}
+ .card{padding:22px 18px}
+ .site-header .in{padding:12px 16px}
+ .brand-name{font-size:.9rem}
+ .badge{display:none}
+ .module-nav{flex-direction:column;padding:0 12px}
+ .module-nav a{max-width:100%}
+}
+@media print{.site-header,.progress,.module-nav,.timer{display:none}.card{box-shadow:none}}
+
+
+.objectives{background:#fff;border:2px solid var(--gold-2);border-radius:12px;padding:18px 22px;margin:22px 0}
+.objectives h4{margin:0 0 8px;color:var(--navy)}
+.objectives ul{margin-bottom:0}
+.scenario{background:#f5faff;border:1px solid var(--gold-2);border-left:5px solid var(--navy-3);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0}
+.scenario h4{margin:0 0 10px;color:var(--navy)}
+.scenario details{margin-top:6px;background:#fff;border:1px solid var(--border);border-radius:10px}
+.scenario summary{cursor:pointer;padding:12px 16px;font-weight:600;color:var(--navy-3);list-style:none}
+.scenario summary::-webkit-details-marker{display:none}
+.scenario summary:before{content:"\25B6";display:inline-block;margin-right:8px;font-size:.75em}
+.scenario details[open] summary:before{content:"\25BC"}
+.scenario details > *:not(summary){padding:0 16px}
+.scenario details > *:last-child{padding-bottom:14px;margin-bottom:0}
+.myth{display:grid;gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:22px 0}
+.myth p{margin:0;padding:14px 18px}
+.myth p:first-child{background:var(--danger-soft)}
+.myth p:last-child{background:var(--success-soft)}
+.keyterms{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:22px 0}
+.keyterms h4{margin:0 0 10px;color:var(--navy)}
+.keyterms dt{font-weight:700;color:var(--navy);margin-top:10px}
+.keyterms dd{margin:2px 0 0 0;color:var(--text)}
+/* seat-time gate */
+.gate{margin-top:36px;border-radius:14px;padding:26px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-3) 100%);color:#fff;text-align:center}
+.gate h3{color:#fff;border:none;padding:0;margin:0 0 6px}
+.gate p{color:#dbe9fb;margin-bottom:14px}
+.gate .meter{height:10px;background:rgba(255,255,255,.2);border-radius:999px;overflow:hidden;margin:0 auto 18px;max-width:520px}
+.gate .meter i{display:block;height:100%;width:0;background:#fff;transition:width .5s}
+.gate .go{cursor:default;display:inline-block;padding:14px 32px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:#fff;color:var(--navy)}
+.gate .go.locked{background:rgba(255,255,255,.18);color:#c9dcf5;pointer-events:none;cursor:not-allowed}
+.gate small{display:block;margin-top:12px;color:#bcd3f2;font-size:.8rem}
+.note{font-size:.85rem;color:var(--light);margin-top:10px}
+.locked-msg{text-align:center;padding:30px 10px}
+.btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;padding:13px 26px;border-radius:10px;font-family:'Poppins','Inter',sans-serif;font-weight:700;text-decoration:none;background:var(--navy-3);color:#fff;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--navy);border:2px solid var(--navy-3)}
+.missed{max-width:520px;margin:12px auto 0;color:var(--light);font-size:.95rem}
+
+.reflect.plan{border-color:var(--navy-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="bar">
+    <h1><span class="eyebrow">DMV Courses &middot; Delaware Teen Basic Defensive Driving Course &middot; Module 9 of 14 &middot; 30 minutes</span>Module 9: The Driver's Condition, Environment, and Aggressive Driving</h1>
+    <div class="timer" id="timerBox"><small>Time Remaining</small><span id="clock">30:00</span></div>
+  </div>
+  <div class="card">
+<!-- Reg 2224 topics: 6.1.10, 6.1.10.1, 6.1.10.1.1, 6.1.10.1.2, 6.1.10.1.3, 6.1.10.1.4, 6.1.10.2, 6.1.10.2.1, 6.1.10.2.2, 6.1.10.2.3, 6.1.10.2.4, 6.1.10.2.5, 6.1.10.3, 6.1.10.3.1, 6.1.10.3.2 -->
+<p>Every crash involves three ingredients: a driver, a vehicle, and an environment. Earlier modules covered the rules of the road and the hazards created by other people. This module turns the spotlight on you. How rested, healthy, and calm you are when you start the engine shapes every decision you make on the trip. Weather and light change how much you can see and how quickly you can stop. And the way you react to other drivers, especially aggressive ones, can turn an ordinary commute into a dangerous confrontation. Delaware law expects you to adjust. Under 21 Del.C. §4168(a), "No person shall drive a vehicle on a highway at a speed greater than is reasonable and prudent under the conditions." Your own condition, the weather, and the behavior of others are all "conditions" you must account for.</p>
+
+<div class="objectives"><h4>Learning Objectives</h4><ul>
+<li>Recognize how fatigue, physical conditions, mental conditions, and disabilities affect driving, and describe practical steps for each.</li>
+<li>Explain how sun glare, rain, fog, sleet, hail, and snow change visibility and traction, and apply the right adjustments.</li>
+<li>State Delaware's headlight rule for wiper use and the requirement to clear ice and snow from your vehicle.</li>
+<li>Distinguish aggressive driving, as defined in 21 Del.C. §4175A, from road rage, and identify Delaware's penalties for aggressive driving.</li>
+<li>Use defensive techniques to avoid, de-escalate, and safely report aggressive drivers and road rage.</li>
+</ul></div>
+
+<h3>The Condition of the Driver: Fatigue (6.1.10.1, 6.1.10.1.1)</h3>
+<p>Before you check your mirrors or your fuel gauge, check yourself. Defensive driving depends on three mental jobs happening constantly: seeing hazards, deciding what to do, and acting in time. Anything that slows one of those jobs shrinks your safety margin. An alert driver needs roughly 1.5 seconds to perceive a hazard and begin reacting. At 60 mph you travel about 88 feet per second, so even a normal reaction covers about 132 feet before your foot reaches the brake. When fatigue, illness, emotion, or medication stretches your reaction time, that distance grows.</p>
+<p>The regulation lists four driver conditions: fatigue, physical conditions, mental conditions, and disabilities. They often overlap. A stressed driver may also be sleeping poorly; a driver with a chronic illness may take medicine that causes drowsiness. The goal is not to make you anxious about driving. It is to help you make an honest "fit to drive" decision every time.</p>
+<h4>Fatigue (6.1.10.1.1)</h4>
+<p>Fatigue is one of the most underestimated driving hazards because it builds gradually and because tired people are poor judges of how tired they are. A fatigued driver shows many of the same problems as an impaired driver: slower reactions, narrowed attention, poor judgment, and trouble staying in the lane. The most dangerous result is a <em>microsleep</em>, a lapse of a few seconds in which the brain stops processing what the eyes see. At 60 mph, a three-second microsleep means traveling about 264 feet with no one in control.</p>
+<p>Fatigue comes not only from a short night of sleep but also from long hours awake, night or rotating shifts, driving during the hours you normally sleep, long monotonous roads, heavy meals, and a warm, quiet car. Some medical conditions, such as untreated sleep disorders, also cause daytime sleepiness.</p>
+<p><strong>Warning signs:</strong> frequent yawning or heavy eyelids; not remembering the last few miles; missing an exit or sign; drifting from your lane or hitting a rumble strip; head nodding; and restlessness or trouble holding a steady speed.</p>
+<p><strong>What works:</strong> The only cure for fatigue is sleep. Get a full night's rest before a long trip, plan a break about every two hours, and share the driving when you can. If warning signs appear, get off the road at a safe place such as a rest area or well-lit parking lot and take a short nap. Caffeine helps only for a limited time, takes a while to work, and does not erase sleep debt.</p>
+<div class="myth"><p><strong>Myth:</strong> If I feel sleepy, I can push through by blasting the air conditioning and singing with the radio.</p><p><strong>Fact:</strong> Cold air and loud music may mask drowsiness for a minute while your reaction time and judgment stay impaired. The safe answer is to stop and rest or let a rested driver take over.</p></div>
+
+<h3>Physical Conditions, Mental Conditions, and Disabilities (6.1.10.1.2–6.1.10.1.4)</h3>
+<h4>Physical Conditions (6.1.10.1.2)</h4>
+<p>Your body is part of the vehicle's control system. Your eyes gather nearly all of the information you use to drive, your ears pick up horns and sirens, and your hands, feet, neck, and back carry out every steering and braking command.</p>
+<ul>
+<li><strong>Vision:</strong> Poor distance vision, weaker night vision, glare sensitivity, and narrowed side vision all delay hazard detection. Keep your prescription current and wear corrective lenses if your license requires them. Be honest about whether night driving is still comfortable for you.</li>
+<li><strong>Hearing:</strong> Drivers with reduced hearing can drive safely but should rely more on mirrors and scanning to spot emergency vehicles.</li>
+<li><strong>Illness and injury:</strong> A cold, migraine, or fever reduces concentration. A stiff neck makes blind-spot checks hard. A cast, sling, or recent surgery may keep you from steering or braking with full force.</li>
+<li><strong>Chronic conditions:</strong> Conditions such as diabetes, heart conditions, or seizure disorders can cause sudden symptoms. Follow your health care provider's advice about driving and take medication as directed.</li>
+<li><strong>Medications:</strong> Many prescription and over-the-counter medicines, including some allergy, cold, pain, and sleep products, cause drowsiness or slowed reactions. Read the label, ask your pharmacist, and never combine them with alcohol. As Module 4 explained, Delaware's impaired-driving law covers drugs as well as alcohol.</li>
+</ul>
+<p>Ask yourself before every trip: "Can I see well, move freely, and stay focused for the whole drive?" If not, choose another option: a ride from someone else, a rideshare, transit, or postponing the trip.</p>
+
+<h4>Mental Conditions (6.1.10.1.3)</h4>
+<p>Your mental and emotional state matters as much as your physical health. Anger, grief, fear, and excitement all compete for the limited attention you need for driving. A driver replaying an argument is "looking but not seeing." Stress also makes people more likely to treat other drivers' mistakes as personal insults, which, as you will see later in this module, is a direct path toward aggressive driving.</p>
+<ul>
+<li><strong>Emotional upset:</strong> anger after an argument, sadness after bad news, anxiety before an important event.</li>
+<li><strong>Stress and time pressure:</strong> running late is one of the most common triggers for speeding, tailgating, and risky passing.</li>
+<li><strong>Mental health conditions:</strong> depression, anxiety, and other conditions can affect concentration and energy. Many people with these conditions drive safely, especially when the condition is well managed. Some treatment medications cause drowsiness, so follow your provider's guidance.</li>
+<li><strong>Distraction from within:</strong> daydreaming and "highway hypnosis" on familiar routes.</li>
+</ul>
+<p><strong>Practical steps:</strong> If you are upset, wait a few minutes before driving. Take several slow breaths and let your heart rate settle. Leave extra time so you are not racing the clock. If you become upset while driving, skip phone calls about the problem, add following distance, and pull over somewhere safe if you need a moment.</p>
+<div class="scenario"><h4>Scenario: The Drive After the Bad News</h4><p>Consider a driver we'll call Dana. She has just left a difficult meeting in Wilmington and must pick up her son from practice in 25 minutes. She is replaying the meeting as she merges onto the highway and realizes she cannot remember the last two signs she passed.</p><details><summary>What should happen here?</summary><p>Dana's mental state is reducing her attention. She should add following distance, stay in one lane, and cut other stimulation. If she still cannot focus, she should exit and stop in a safe, well-lit place for a few minutes, then call ahead once parked to say she will be a little late. Arriving five minutes late is far better than arriving at a crash scene. Next time, she could build a buffer between a stressful event and the drive.</p></details></div>
+
+<h4>Disabilities (6.1.10.1.4)</h4>
+<p>Many people with disabilities are safe, skilled drivers. A disability does not by itself make someone unsafe. What matters is whether the driver and vehicle are set up so the driver can control the car reliably in every situation. The key ideas are assessment, adaptation, and honest self-monitoring.</p>
+<ul>
+<li><strong>Professional assessment:</strong> a health care provider or driver rehabilitation specialist can evaluate how a condition affects driving and recommend training or equipment.</li>
+<li><strong>Adaptive equipment:</strong> hand controls, steering knobs, left-foot accelerators, extended mirrors, swivel seats, and wheelchair lifts let many people drive safely. Have equipment installed by qualified technicians and practice in a low-traffic area first.</li>
+<li><strong>Changing abilities:</strong> some conditions change over time. Re-evaluate regularly and adjust, for example by avoiding night driving or rush hour if those become difficult.</li>
+</ul>
+<p>Defensive driving also includes awareness of other road users with disabilities. Module 6 covered Delaware's White Cane Law, and Module 12 reviews disability parking placards and plates.</p>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Think about the last time you drove while tired, sick, or upset. What warning signs did you notice, and what would you do differently next time?</label><textarea></textarea></div>
+
+<h3>Environmental Factors: Sun Glare and Rain (6.1.10.2, 6.1.10.2.1)</h3>
+<p>The environment changes two things that matter most: <em>visibility</em> (how well you see and are seen) and <em>traction</em> (how much grip your tires have). Bad weather usually reduces both. You detect hazards later and need more distance to stop or steer. The defensive answer is always the same: <strong>slow down, add space, and increase your visibility.</strong></p>
+<div class="highlight"><strong>Delaware headlight rule:</strong> Under 21 Del.C. §4331, headlights are required from sunset to sunrise, whenever people and vehicles are "not clearly discernible at a distance of 1,000 feet ahead," and whenever your wipers are in use because of weather. The wiper rule is a secondary offense (no stop for that alone), but it is still the law and it helps others see you.</div>
+<h4>Sun Glare</h4>
+<p>Glare is worst around sunrise and sunset, when the sun is low and shines straight through the windshield. It can hide signals, brake lights, pedestrians, and cyclists completely. Glare also reflects off wet pavement and snow. Many Delaware commuters face the sun in both the morning and evening drives during certain seasons.</p>
+<p>The Delaware Office of Highway Safety (OHS) advises drivers facing sun glare to slow down, increase following distance, and wear polarized sunglasses (OHS, October 2026). Also keep the windshield clean inside and out, because film and dirt scatter light; use your visor; watch the vehicles ahead, since their brake lights may warn you of something you cannot see; and approach intersections slowly when a signal is hard to read. Remember that oncoming drivers with the sun behind you may not see your turn signal.</p>
+<h4>Rain (6.1.10.2.1)</h4>
+<p>Rain reduces both visibility and traction. The first minutes of a shower can be especially slick, because water mixes with oil and dust on the pavement. Heavier rain can cause <strong>hydroplaning</strong>, when a layer of water builds between the tires and the road and steering and braking stop working normally.</p>
+<ul>
+<li>Turn on headlights whenever wipers are on (Delaware law).</li>
+<li>Slow down; hydroplaning becomes more likely with speed, worn tires, and low tire pressure.</li>
+<li>Increase following distance well beyond the 3 to 4 seconds used in good conditions.</li>
+<li>Avoid cruise control on wet roads, so you can ease off the accelerator immediately.</li>
+<li>If you hydroplane, ease off the gas, keep steering where you want to go, and avoid hard braking until the tires grip again.</li>
+<li>Never drive into a flooded road. You cannot judge the depth or whether the road beneath has washed out.</li>
+</ul>
+
+<h3>Fog, Sleet, Hail, and Snow (6.1.10.2.2–6.1.10.2.5)</h3>
+<h4>Fog (6.1.10.2.2)</h4>
+<p>Fog can cut visibility suddenly, sometimes to a few car lengths. It forms often near water and in low-lying areas, and much of Delaware is both. Drivers tend to underestimate their speed when they cannot see their surroundings, and one sudden stop can trigger a chain-reaction crash.</p>
+<ul>
+<li>Slow to a speed that lets you stop within the distance you can see.</li>
+<li>Use low beams and fog lights if equipped. High beams reflect off fog and make it harder to see.</li>
+<li>Follow the right edge line, listen for traffic at intersections, and avoid passing.</li>
+<li>If you cannot see, signal, pull completely off the road into a safe area, turn on your hazard lights, and wait. Never stop in a travel lane.</li>
+</ul>
+<h4>Sleet (6.1.10.2.3)</h4>
+<p>Sleet is rain that freezes into ice pellets before reaching the ground, and it often comes with freezing rain that glazes roads on contact. The result can be "black ice," a thin, hard-to-see layer. Bridges, overpasses, and shaded spots freeze first because cold air reaches them from above and below.</p>
+<ul>
+<li>Reduce speed sharply and make every input gentle: smooth acceleration, gradual braking, slow steering.</li>
+<li>Greatly increase following distance; stopping on ice can take many times the dry-road distance.</li>
+<li>Treat bridges, ramps, and shaded curves as icy even if the rest of the road looks only wet.</li>
+<li>Run the defroster and watch for ice building on your wipers. When roads are icy, the best choice may be to wait until they are treated.</li>
+</ul>
+<h4>Hail (6.1.10.2.4)</h4>
+<p>Hail usually comes with strong thunderstorms. It can crack windshields, dent vehicles, cut visibility, and startle drivers into panic braking. Afterward, pellets on the road can act like ice.</p>
+<ul>
+<li>Slow down, turn on headlights, and look for a safe place to stop if visibility drops.</li>
+<li>If possible, pull into a covered area such as a parking garage or gas station canopy. Do not stop under an overpass on the shoulder or in a travel lane; that blocks traffic and puts you at risk.</li>
+<li>If hail is severe, stay inside with your seat belt on and turn away from the windows. A jacket can shield you from broken glass.</li>
+<li>Afterward, drive cautiously; storms also bring flooding and fallen branches.</li>
+</ul>
+<h4>Snow (6.1.10.2.5)</h4>
+<p>Snow reduces traction and visibility and hides lane markings, curbs, and hazards. Packed snow becomes slick, and slush can pull the vehicle sideways.</p>
+<div class="warning"><strong>Delaware law — clear your vehicle:</strong> Under 21 Del.C. §4186A, you must clear ice and snow from your vehicle before driving. For a noncommercial vehicle, the penalty is $25 to $75, and $200 to $1,000 if ice or snow that comes off your vehicle causes damage or injury. Clear the roof, hood, trunk, lights, mirrors, and all windows.</div>
+<ul>
+<li>Accelerate slowly to avoid spinning the wheels; brake early and gently; avoid sudden lane changes.</li>
+<li>Stay well back from snowplows and salt trucks. They stop often, have large blind spots, and the road ahead of them is usually worse.</li>
+<li>If you skid, ease off the accelerator and steer gently where you want the front of the car to go. Module 11 explains braking with and without anti-lock brakes.</li>
+<li>Keep a winter kit: scraper, blanket, flashlight, phone charger, water, and snacks.</li>
+</ul>
+<table>
+<tr><th>Condition</th><th>Main danger</th><th>Key adjustments</th></tr>
+<tr><td>Sun glare</td><td>Hidden signals, vehicles, pedestrians</td><td>Slow down, more space, polarized sunglasses, clean windshield</td></tr>
+<tr><td>Rain</td><td>Slick first minutes, hydroplaning</td><td>Headlights with wipers, slower speed, no cruise control</td></tr>
+<tr><td>Fog</td><td>Sudden loss of visibility</td><td>Low beams, edge line, stop fully off the road if needed</td></tr>
+<tr><td>Sleet</td><td>Black ice on bridges and in shade</td><td>Major speed cut, gentle inputs, much more space</td></tr>
+<tr><td>Hail</td><td>Broken glass, panic, icy pellets</td><td>Covered shelter off the travel lanes, protect from glass</td></tr>
+<tr><td>Snow</td><td>Low traction, hidden markings</td><td>Clear the whole vehicle (§4186A), slow starts and stops</td></tr>
+</table>
+<div class="scenario"><h4>Scenario: Fog on a Rural Road</h4><p>Consider a driver we'll call Marcus, heading home before dawn on a two-lane Kent County road posted at 50 mph. Near a creek, fog rolls across the road, and he switches on his high beams to see better.</p><details><summary>What should happen here?</summary><p>High beams reflect off fog and make things worse, so Marcus should return to low beams. He should slow to a speed that lets him stop within the distance he can see, even if that is far below 50 mph; under §4168(a), a "reasonable and prudent" speed depends on conditions, not only the sign. He should follow the right edge line and not pass. If the fog becomes too thick, he should pull completely off the road in a safe spot, turn on hazard lights, and wait.</p></details></div>
+
+<h3>Aggressive Driving vs. Road Rage (6.1.10.3, 6.1.10.3.1)</h3>
+<p>People often treat "aggressive driving" and "road rage" as the same thing. They are not, and the difference matters both legally and practically.</p>
+<h4>Aggressive driving: a defined Delaware offense</h4>
+<p>Under 21 Del.C. §4175A, aggressive driving is "continuous conduct which violates 3 or more of" twelve listed traffic laws. In plain terms, it is a pattern of breaking several specific rules during one continuous stretch of driving. The twelve are: §4107 traffic-control devices; §4108 traffic signals; §4117 passing on the right; §4122 driving within lanes; §4123 following too closely; §4132 yielding when turning left; §4133 yielding when entering a roadway; §4155 turn signals; §4164 stop and yield signs; §4166(d) stopping for a school bus; §4168 reasonable and prudent speed; and §4169 speed limits.</p>
+<p>A driver who speeds, tailgates, changes lanes without signaling, and passes on the right during the same stretch may be driving aggressively under this law. Each act is dangerous alone; together they form a pattern the law treats much more seriously.</p>
+<div class="warning"><strong>Delaware penalties for aggressive driving (§4175A):</strong> First offense: $100 to $300 fine, or 10 to 30 days in jail, or both. Subsequent offense within 3 years: $300 to $1,000, or 30 to 60 days, or both, plus a 30-day license suspension. Everyone convicted must also complete a behavior modification/attitudinal driving course (§4175A(d)). Aggressive driving carries 6 points (DMV Regulation 2208).</div>
+<h4>Road rage: anger turned into intent</h4>
+<p>Road rage goes beyond breaking traffic rules. It is an angry, deliberate attempt to intimidate, threaten, or harm another person over something that happened in traffic: following someone to "teach them a lesson," cutting them off or brake-checking on purpose, trying to force them off the road, throwing objects, getting out to confront them, or using a vehicle or weapon to attack. Road rage can lead to serious criminal charges such as assault, and it can end in serious injury or death.</p>
+<p>An easy way to remember the difference: <strong>aggressive driving is about getting ahead; road rage is about getting even.</strong> The aggressive driver focuses on his or her own goal and treats others as obstacles. The road-raging driver focuses on another person and wants to punish them. Aggressive driving can escalate into road rage when one driver reacts angrily and the other reacts back.</p>
+<h4>What research tells us</h4>
+<p>Research on driver anger, including work by psychologist Jerry Deffenbacher of Colorado State University, shows that drivers who anger easily get angrier faster, think more hostile thoughts about other drivers, and take more risks, such as speeding well over the limit, changing lanes rapidly, tailgating, and entering intersections on red. The good news from that same research is that anger is a skill problem, not a personality sentence: drivers who learn relaxation and thinking skills become calmer behind the wheel.</p>
+<p>The Monash University Accident Research Centre's "Reducing Aggressive Driving" program identified common triggers: being obstructed, feeling disrespected (cut off or tailgated), time pressure, and stress carried in from elsewhere. Notice the link to the driver conditions above: a stressed, tired, or late driver is primed to react badly.</p>
+<p>One thinking error drives much of this anger: <strong>hostile attribution bias</strong>, assuming another driver acted on purpose to insult or harm you. Far more often, the other driver did not see you, misjudged a gap, or is lost. Research on <em>cognitive reappraisal</em> shows that deliberately reinterpreting another driver's action as a mistake rather than an attack reduces aggressive responses.</p>
+<div class="myth"><p><strong>Myth:</strong> Honking, yelling, or gesturing at a bad driver lets off steam so you feel better.</p><p><strong>Fact:</strong> Venting tends to increase anger rather than release it, and replaying the incident (rumination) keeps anger going longer. Venting also invites the other driver to respond, which is how many road rage incidents begin.</p></div>
+
+<h3>Handling Aggressive Drivers and Road Rage (6.1.10.3.2)</h3>
+<p>You cannot control how others drive, but you control your response. The strategy is simple: <strong>do not compete, do not engage, and create distance.</strong> An aggressive driver wants to get past you, so let them. A road-raging driver wants a reaction, so do not give one.</p>
+<h4>When you encounter an aggressive driver</h4>
+<ol>
+<li><strong>Get out of the way safely.</strong> If someone is tailgating or weaving toward you, signal and change lanes when safe, or ease off slightly so they can pass. Keep right except to pass.</li>
+<li><strong>Do not speed up or block them.</strong> Trying to "keep them in line" turns their problem into a two-car conflict.</li>
+<li><strong>Never brake-check.</strong> Tapping your brakes at a tailgater can cause a rear-end crash and is itself an aggressive act.</li>
+<li><strong>Widen your space cushion.</strong> Aggressive drivers make sudden moves; stay well back and out of their path.</li>
+<li><strong>Avoid eye contact and gestures,</strong> which can be read as a challenge.</li>
+</ol>
+<h4>When someone directs road rage at you</h4>
+<ol>
+<li><strong>Stay in your car</strong> with doors locked and windows up. Never get out to confront anyone.</li>
+<li><strong>Do not drive home if you are followed.</strong> Drive to a busy, well-lit public place, ideally a police station, fire station, or staffed business with witnesses.</li>
+<li><strong>Keep an escape route.</strong> When stopped, leave room to pull around the vehicle ahead.</li>
+<li><strong>Call 911 when it is safe.</strong> Delaware's hand-held law (§4176C) has an exception for reporting emergencies or crimes, but hands-free calling or a passenger making the call is safer. Give your location, direction, and a description of the other vehicle. Do not chase anyone to read a plate.</li>
+<li><strong>Use your horn only to warn of danger,</strong> never to express anger.</li>
+</ol>
+<p>If you witness a driver putting others in immediate danger, call 911 when you can do so safely and legally, report what you saw and where, and let law enforcement handle it. Do not follow the driver or record video while driving.</p>
+<h4>Do not become the aggressive driver</h4>
+<p>If you are tired, stressed, or late, your own risk of aggressive driving rises. Plan ahead, and remember that speeding saves little time: on a 10-mile trip, 70 mph instead of 60 mph saves only about 1 minute and 26 seconds, and traffic and signals usually erase even that. When another driver makes a mistake, try a reframe: "Maybe they didn't see me," "They might be lost," or "I've made that mistake too." This is not excusing bad driving; it is protecting yourself from your own anger.</p>
+<div class="highlight"><strong>Three-question check:</strong> When anger rises, ask: (1) Will reacting make me safer? (2) What would I think if a friend did this by mistake? (3) Will this matter an hour from now? Then breathe slowly and add following distance.</div>
+<div class="scenario"><h4>Scenario: The Tailgater on SR 1</h4><p>Consider a driver we'll call Priya, in the left lane of a four-lane highway at the speed limit. A pickup closes in, flashes its high beams, and rides a few feet off her bumper. Priya feels her face get hot and thinks, "I'm doing the limit. He can wait." She considers tapping her brakes.</p><details><summary>What should happen here?</summary><p>Priya should not brake-check or hold the lane out of pride; that raises the risk of a rear-end crash and escalation. She should signal, check mirrors and her blind spot, and move right when safe to let the truck pass, avoiding eye contact or gestures and leaving plenty of space afterward. If the driver keeps following or threatening her, she should keep doors locked, head toward a busy public place or police station, and call 911 hands-free when safe.</p></details></div>
+<div class="reflect"><h4>Reflection (for your own use — not submitted)</h4><label>Which trigger (being slowed down, feeling disrespected, time pressure, or stress from elsewhere) most often makes you angry behind the wheel? Write one reframe you could use next time.</label><textarea></textarea></div>
+<div class="keyterms"><h4>Key Terms</h4><dl>
+<dt>Microsleep</dt><dd>A lapse of a few seconds in which a fatigued person's brain stops processing what they see, even with eyes open.</dd>
+<dt>Hydroplaning</dt><dd>Loss of tire contact with the road when water builds up beneath the tires, causing loss of steering and braking control.</dd>
+<dt>Black ice</dt><dd>A thin, nearly invisible glaze of ice, common on bridges, overpasses, and shaded areas.</dd>
+<dt>Aggressive driving (Delaware)</dt><dd>Under 21 Del.C. §4175A, continuous conduct that violates three or more of twelve listed traffic laws.</dd>
+<dt>Road rage</dt><dd>Angry, deliberate behavior meant to intimidate, threaten, or harm another road user over a traffic incident.</dd>
+<dt>Hostile attribution bias</dt><dd>The tendency to assume another person's mistake was intentional and aimed at you.</dd>
+</dl></div>
+
+<h3>Module Summary</h3>
+<ul>
+<li>Delaware's basic speed rule (§4168(a)) requires a reasonable and prudent speed under the conditions, including your own condition and the weather.</li>
+<li>Fatigue mimics impairment, and the only cure is sleep. Stop and rest when warning signs appear.</li>
+<li>Physical conditions, illness, and medications can slow reactions; check labels, follow medical advice, and choose another way to travel when you are not fit to drive.</li>
+<li>Strong emotions and stress steal attention and make aggressive reactions more likely; wait, breathe, and leave extra time.</li>
+<li>Many people with disabilities drive safely with assessment, adaptive equipment, and honest self-monitoring.</li>
+<li>For glare, rain, fog, sleet, hail, and snow: slow down, add space, and increase visibility. Headlights are required when wipers are in use for weather (§4331).</li>
+<li>Clear all ice and snow from your vehicle before driving (§4186A).</li>
+<li>Aggressive driving in Delaware is continuous conduct violating 3 or more of 12 listed laws (§4175A), with fines, possible jail, 6 points, and a required behavior modification course. Road rage is deliberate intimidation or violence.</li>
+<li>Facing an aggressive or raging driver: do not compete or engage, create distance, stay locked in, go to a busy public place rather than home, and call 911 when safe.</li>
+</ul>
+<p>When the timer reaches 00:00, return to the course and continue to Module 10, Defensive Driving Practices.</p>
+
+    <div class="gate" id="gate">
+      <h3>Module 9 Time Requirement</h3>
+      <p id="gateMsg">Keep reading and working through the activities. This module requires the full 30 minutes.</p>
+      <div class="meter"><i id="meter"></i></div>
+      <a class="go locked" id="goExam" aria-disabled="true">&#128274; Time Remaining</a>
+      <small>When the timer reaches 00:00, return to your course and continue to Module 10.</small>
+    </div>
+  </div>
+</main>
+<script>
+var S={get:function(k){try{return window.localStorage.getItem(k);}catch(e){return null;}},set:function(k,v){try{window.localStorage.setItem(k,v);}catch(e){}}};
+(function(){
+  var KEY='de-teen-m9-remaining', DONE='de-teen-m9-done', total=30*60;
+  var saved=parseInt(S.get(KEY),10);
+  var remaining=(S.get(DONE)==='1')?0:(isNaN(saved)?total:Math.min(saved,total));
+  var clock=document.getElementById('clock'), box=document.getElementById('timerBox');
+  var meter=document.getElementById('meter'), go=document.getElementById('goExam'), msg=document.getElementById('gateMsg');
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return String(m).padStart(2,'0')+':'+String(x).padStart(2,'0');}
+  function paint(){
+    clock.textContent=fmt(remaining);
+    meter.style.width=(100*(total-remaining)/total)+'%';
+    if(remaining<300&&remaining>0)box.classList.add('warn'); else box.classList.remove('warn');
+    if(remaining<=0){
+      go.classList.remove('locked');go.removeAttribute('aria-disabled');
+      go.innerHTML='&#10003; Required Time Complete';
+      msg.textContent='You have completed the required time for Module 9. Return to your course and continue to Module 10.';
+      S.set(DONE,'1');
+    }
+  }
+  paint();
+  if(remaining<=0)return;
+  var iv=setInterval(function(){
+    if(document.visibilityState!=='visible')return;
+    remaining--; S.set(KEY,String(remaining));
+    if(remaining<=0){remaining=0;clearInterval(iv);}
+    paint();
+  },1000);
+})();
+</script>
+</body>
+</html>
